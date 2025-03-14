@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manuscript | Dr. Sajid M Choudhury&#39;s Website</title>
+    <link>https://sajidmc.github.io/publication_types/manuscript/</link>
+      <atom:link href="https://sajidmc.github.io/publication_types/manuscript/index.xml" rel="self" type="application/rss+xml" />
+    <description>Manuscript</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://sajidmc.github.io/media/icon_hu_645fa481986063ef.png</url>
+      <title>Manuscript</title>
+      <link>https://sajidmc.github.io/publication_types/manuscript/</link>
+    </image>
+    
+    <item>
+      <title>Design of Dual-Band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring</title>
+      <link>https://sajidmc.github.io/publication/x-03/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sajidmc.github.io/publication/x-03/</guid>
+      <description>&lt;p&gt;Add the &lt;strong&gt;full text&lt;/strong&gt; or &lt;strong&gt;supplementary notes&lt;/strong&gt; for the publication here using Markdown formatting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Design of Silicon-Carbide Based Single-Quantum-Well White LED</title>
+      <link>https://sajidmc.github.io/publication/x-01/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sajidmc.github.io/publication/x-01/</guid>
+      <description>&lt;p&gt;Add the &lt;strong&gt;full text&lt;/strong&gt; or &lt;strong&gt;supplementary notes&lt;/strong&gt; for the publication here using Markdown formatting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Efficiency Enhancement of c-Si/TiO2 Heterojunction Thin Film Solar Cell Using Hybrid Metal-Dielectric Nanostructures</title>
+      <link>https://sajidmc.github.io/publication/x-02/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sajidmc.github.io/publication/x-02/</guid>
+      <description>&lt;p&gt;Add the &lt;strong&gt;full text&lt;/strong&gt; or &lt;strong&gt;supplementary notes&lt;/strong&gt; for the publication here using Markdown formatting.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

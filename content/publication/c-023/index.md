@@ -38,10 +38,7 @@ abstract: ''
 summary: ''
 
 tags:
-- Temperature sensors;Hands;Temperature distribution;Wireless sensor networks;Wireless
-  networks;Humidity;Robot sensing systems;Real-time systems;Sensors;Temperature control;Gesture-based
-  robotic system;Wireless data transmission;Environmental data capture;Real-time monitoring;Remote
-  exploration
+- Temperature sensors;Hands;Gesture
 
 # Display this page in a list of Featured pages?
 featured: false

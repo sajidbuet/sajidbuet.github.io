@@ -37,8 +37,7 @@ abstract: ''
 summary: ''
 
 tags:
-- Absorption;Photovoltaic cells;Microprocessors;Computer architecture;Electric variables;Distance
-  measurement;Nanostructures;Silicon;TFSCs;LSPR;Ag Nanostructure;Absorption;Efficiency
+- Absorption;Photovoltaic cells;
 
 # Display this page in a list of Featured pages?
 featured: false
