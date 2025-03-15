@@ -33,10 +33,8 @@ profiles:
   - icon: at-symbol
     url: 'mailto:sajid@eee.buet.ac.bd'
     label: E-mail Me
-  - icon: brands/instagram
-    url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/sajidmc
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/sajidmc/
   - icon: academicons/google-scholar
