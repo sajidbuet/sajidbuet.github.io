@@ -1,0 +1,50 @@
+
+
+{{/* Left alignment / width is set so that multiple blocks with this view & variable length content all left align. */}}
+
+{{/* Count Publications Dynamically */}}
+{{ $journalCount := 0 }}
+{{ $conferenceCount := 0 }}
+{{ $preprintCount := 0 }}
+{{ $patentCount := 0 }}
+{{ $allCount := 0 }}
+{{ range where site.RegularPages "Section" "publication" }}
+  {{ $folder := path.Base .File.Dir }}
+  {{ $prefix := upper (substr $folder 0 1 ) }}
+  {{ $allCount = add $allCount 1 }}
+
+  {{ if eq $prefix "J" }}
+    {{ $journalCount = add $journalCount 1 }}
+  {{ else if eq $prefix "C" }}
+    {{ $conferenceCount = add $conferenceCount 1 }}
+  {{ else if eq $prefix "X" }}
+    {{ $preprintCount = add $preprintCount 1 }}
+  {{ else if eq $prefix "P" }}
+    {{ $patentCount = add $patentCount 1 }}
+  {{ end }}
+{{ end }}
+
+
+<div class="mt-16 sm:mt-20 container max-w-3xl w-full">
+
+
+  <!-- Filter Buttons -->
+<div class="filter-buttons mb-4">
+  <button class="filter-btn bg-blue-500 text-black  px-4 py-2 rounded" data-filter="all">
+    All ({{ $allCount }})
+  </button>
+  <button class="filter-btn bg-green-500 text-black  px-4 py-2 rounded" data-filter="J">
+    Journal ({{ $journalCount }})
+  </button>
+  <button class="filter-btn bg-red-500 text-black  px-4 py-2 rounded" data-filter="C">
+    Conference ({{ $conferenceCount }})
+  </button>
+  <button class="filter-btn bg-yellow-500 text-black  px-4 py-2 rounded" data-filter="X">
+    Preprint ({{ $preprintCount }})
+  </button>
+  <button class="filter-btn bg-purple-500 text-black  px-4 py-2 rounded" data-filter="P">
+    Patent ({{ $patentCount }})
+  </button>
+</div>
+
+  <div class="flex flex-col space-y-3">

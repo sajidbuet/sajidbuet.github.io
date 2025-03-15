@@ -1,0 +1,30 @@
+</div>
+</div>
+
+<!-- JavaScript for Filtering -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".pub-list-item");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter").toUpperCase(); // Ensure uppercase match
+
+        items.forEach(item => {
+          const category = item.getAttribute("data-category");
+
+          if (filter === "ALL" || category === filter) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Update active button styling
+        buttons.forEach(btn => btn.classList.remove("bg-gray-700", "text-white"));
+        button.classList.add("bg-gray-700", "text-white");
+      });
+    });
+  });
+</script>
