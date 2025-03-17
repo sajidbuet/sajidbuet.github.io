@@ -18,6 +18,7 @@ authors:
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
 author_notes: []
+publication_types: ["article-journal"]
 
 date: '2016-01-01'
 

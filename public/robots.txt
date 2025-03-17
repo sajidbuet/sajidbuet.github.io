@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://sajidmc.github.io/sitemap.xml

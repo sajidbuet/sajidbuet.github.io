@@ -1,15 +1,11 @@
 ---
-title: Teaching
-cms_exclude: true
-#url: talk
+title: Courses Offered
 
-# View
-view: card
+# Listing view
+view: compact
 
-# Optional cover image (relative to `assets/media/` folder).
-image:
+# Optional header image (relative to `assets/media/` folder).
+banner:
   caption: ''
-  filename: ''
+  image: ''
 ---
-
-[Click here](/course-archive) to see the previous courses taught by me.

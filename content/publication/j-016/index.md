@@ -15,7 +15,7 @@ authors:
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list
 author_notes: []
-
+publication_types: ["article-journal"]
 date: '2022-01-01'
 
 # Date to publish webpage (NOT necessarily Bibtex publication's date).
