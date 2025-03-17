@@ -1,18 +1,13 @@
 ---
 title: EECE 6002 - (April 2024)
-event: Postgraduate Course
+
+course_type: Postgraduate
 
 show_date: false
 
-location: EEE 625
-address:
-  street: ECE Building, BUET
-  city: Dhaka
-  postcode: '1205'
-  country: Bangladesh
 
 summary: Selected Topics on Electrical and Electronic Engineering - Quantum Photonics and Quantum Computing 
-abstract: 'This course is on the Quantum Photonics and Quantum Computing'
+syllabus: This course is on the Quantum Photonics and Quantum Computing
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -31,3 +26,4 @@ featured: false
 
 ---
 
+The content of the page is given as a reference only. The updated course content are available in the Course Teams.

@@ -3,12 +3,16 @@
 <div class="pub">
 
   {{ partial "page_header.html" . }}
-
   <div class="article-container">
+    <h4>{{ .Params.summary | markdownify | emojify }}</h4>
 
-    {{ if .Params.abstract }}
-      <h3>{{ i18n "abstract" }}</h3>
-      <p class="pub-abstract">{{ .Params.abstract | markdownify | emojify }}</p>
+    {{ if .Params.course_type }}
+    <b>Offered to:</b> {{ .Params.course_type | markdownify | emojify}}
+    {{ end }}
+
+    {{ if .Params.syllabus }}
+      <h3>Syllabus</h3>
+      <p class="pub-abstract">{{ .Params.syllabus | markdownify | emojify }}</p>
     {{ else }}
       <br>
     {{ end }}

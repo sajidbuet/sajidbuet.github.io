@@ -8,15 +8,25 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        Q-PACER Research Group
       image:
-        filename: welcome.jpg
+        filename: Q-PACER.png
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
-  
+        The   **Q**uantum, **P**hotonics, **A**ntennas, **C**omputing, **E**mbedded systems, and **R**enewables (**Q-PACER**) Research Group  is a hub of innovation in electronics and photonics research at the Department of EEE, BUET, Bangladesh. Founded and led by [Dr. Sajid Muhaimin Choudhury](author/dr.-sajid-muhaimin-choudhury), the group leverages expertise in both experimental and computational photonics to tackle cutting-edge challenges. 
+        
+
+
+  - block: markdown
+    content:
+      title: Our Mission
+      subtitle: 
+      text: Our mission is to advance knowledge in nanophotonics, embedded systems, and quantum computing, and to develop practical technological solutions for society. We aim to solve fundamental and high-impact research questions in photonics and quantum computation while training the next generation of engineers and scientists.
+    design:
+      # See Page Builder docs for all section customization options.
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'  
   - block: collection
     content:
       title: Latest News
