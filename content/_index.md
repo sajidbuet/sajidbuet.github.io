@@ -32,7 +32,7 @@ sections:
       title: Latest News
       subtitle:
       text:
-      count: 5
+      count: 3
       filters:
         author: ''
         category: ''
@@ -41,7 +41,7 @@ sections:
         tag: ''
       offset: 0
       order: desc
-      page_type: post
+      page_type: news
     design:
       view: card
       columns: '1'
@@ -58,6 +58,18 @@ sections:
     design:
       view: citation
       columns: '1'
+  - block: people-admin
+    content:
+      title: Principle Investigator
+      # Choose which groups/teams of users to display.
+      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
+      user_groups:
+          - Principal Investigator
+      sort_ascending: true
+    design:
+      show_interests: true
+      show_role: true
+      show_social: true
 
   - block: markdown
     content:
