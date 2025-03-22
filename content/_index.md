@@ -10,7 +10,7 @@ sections:
       title: |
         Q-PACER 
       image:
-        filename: Q-PACER.png
+        filename: Q-PACER.jpg
       text: |
         <br>
         
