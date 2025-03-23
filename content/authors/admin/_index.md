@@ -21,7 +21,7 @@ organizations:
     url: https://eee.buet.ac.bd
 
 # Short bio (displayed in user profile at end of posts)
-bio: Associate Professor, Dept. of EEE, BUET
+bio: Dept. of EEE, BUET
 
 interests:
   - Nanophotonics
