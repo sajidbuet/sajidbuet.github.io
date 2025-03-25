@@ -28,7 +28,7 @@ organizations:
 bio: 
 
 interests:
-  - Thesis Title _PHASE CHANGE MATERIAL BASED BROADBAND MULTIFUNCTIONAL METASURFACE FOR THE VISIBLE RANGE_ 
+  - ' _Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range_ '
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

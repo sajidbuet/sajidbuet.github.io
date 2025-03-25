@@ -7,7 +7,6 @@ date: '2024-07-07'
 Template: blog
 ---
 
-### Intro
 With microsoft word, it is extremely easy to turn on review mode and add comments, strike out letters and add text, and it is automatically colored. With LaTeX, it is somewhat difficult. My students use two different Overleaf files, one having the edits marked in red and strikeout, and one fresh archive. Doing the same work twice is a hassle, so here I describe a method of LaTeX editing, where you can simply switch between "red-lined" version that journal wants, and your final production version. 
 
 ### Method

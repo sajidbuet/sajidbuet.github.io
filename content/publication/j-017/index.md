@@ -6,7 +6,7 @@ authors:
 - Shamima Akter Mitu
 - Sajid Muhaimin Choudhury
 date: '2022-01-01'
-publishDate: '2025-03-19T08:17:28.960704Z'
+publishDate: '2025-03-23T18:02:57.865119Z'
 publication_types:
 - article-journal
 publication: '*Applied Optics*'

@@ -17,11 +17,31 @@ sections:
     design:
       show_interests: true
       show_role: true
-      show_social: true
+      show_social: false
 
   - block: student_list1
     title: UG Alumni
     student_batches:
+    - batch: "2019"
+      students:
+        - name: "Subhan Zawad Bihan"
+          year: "2025"
+          title: "Performance Analysis of Different Stabilizer Codes in Code Concatenation Approach for One-Way Quantum Repeaters"      
+        - name: "Anindya Kishore Choudhury"
+          year: "2025"
+          title: "-DO-"      
+        - name: "Dipika Rani Nath"
+          year: "2025"
+          title: "A Tunable Polarization-Insensitive Varifocal Metalens Assisted by Phase-Change Material Ge2Sb2Te5 (GST)"      
+        - name: "Md Muidul Alam"
+          year: "2025"
+          title: "Simulation Analysis of Global Horizontal Irridiance (GHI) for Solar Power Plant Optimization in Bangladesh"
+        - name: "Mir Noushad Hussain"
+          year: "2025"
+          title: "Implementation of a Dynamic Adaptive Load Shedding Scheme with Spinning Reserve Support in a PV Penetrated Grid to Mitigate  Cascading Failure"
+        - name: "Shahriyer Hasan"
+          year: "2025"
+          title: "Enhancing grid resiliency by optimum usage of distributed energy resources for service restoration of critical loads"
     - batch: "2018"
       students:
         - name: "Tonmoy Hossain"

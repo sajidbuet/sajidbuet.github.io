@@ -1,37 +1,35 @@
 ---
-title: Polarization insensitive electrically reconfigurable meta-lens for the 2 textmum
-  wavelength
+title: Lithium niobate photonic topological insulator-based multi-wavelength optical
+  demultiplexer with piezoelectric switch-off
 authors:
-- Md. Asif Hossain Bhuiyan
-- Purbayan Das
+- Prithu Mahmud
+- Kaniz Fatema Supti
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2025-03-19T08:17:28.913675Z'
+publishDate: '2025-03-23T18:02:57.817696Z'
 publication_types:
 - article-journal
-publication: '*Opt. Mater. Express*'
-doi: 10.1364/OME.540435
-abstract: The conventional fiber communication band of 1.55 textmum is reaching its
-  limit attributable to the escalation in bandwidth requirements for high-speed and
-  bulk data transmission. Researchers are exploring a 2 textmum waveband for its higher
-  capacity and low attenuation as a solution for the next generation communication
-  technologies. Accordingly, here we report an optically engineered metasurface for
-  this waveband for fiber coupling or lensing. The structure is polarization-insensitive
-  and dynamically tunable between its reflective (OFF) and transmissive (ON) modes.
-  For tunability, we incorporate a novel phase change material In3SbTe2 (IST) for
-  its faster, non-volatile, and reversible metallic-to-insulator phase transition.
-  The integration of indium tin oxide (ITO) as a micro-heater to electrically modulate
-  the light by altering the phase of IST provides the device with additional functionality
-  for point-of-care applications. Using the finite-difference-time-domain (FDTD) technique,
-  we have achieved a modulation depth of 90%. The focusing efficiency is as high as
-  76% and the ON-OFF switching ratio of the optimized lens is 26 dB. The multilayer
-  insertion of thin IST ensures uniform phase transition with switching energy as
-  low as 232.98 nJ/textmum2. Thus, with remarkable performance at 2 textmum and dynamic
-  multifunctionality, our proposed device will revolutionize the upcoming telecommunication
-  technologies and beyond.
+publication: '*Opt. Express*'
+doi: 10.1364/OE.541271
+abstract: Photonic topological insulators provide unidirectional, robust, wavelength-selective
+  transport of light at an interface while keeping it insulated at the bulk of the
+  material. The non-trivial topology results in an immunity to backscattering, sharp
+  turns, and fabrication defects. This work leverages these unique properties to design
+  a 2-channel optical demultiplexer based on a lithium niobate photonic topological
+  insulator with piezoelectric switch-off capabilities. A photonic topological insulator
+  design for the demultiplexer allows for good wavelength selectivity, crosstalk as
+  low as textminus54 dB, and better isolation between output channels. The primary
+  operating wavelengths presented are the telecommunication wavelengths of 1310 nm
+  and 1550 nm, but the use of the lithium niobate material allows operation at multiple
+  operating wavelengths. Furthermore, we propose a post-fabrication method to switch
+  off the topological protection and, thus, optical transmittance via an applied voltage
+  utilizing the inverse piezoelectric effect of lithium niobate. This work will contribute
+  to advancing lithium niobate integrated photonics and developing efficient, multi-wavelength,
+  electrically controlled optical communication systems and integrated photonic circuits.
 tags:
-- Beam splitters; Effective refractive index; Fiber optic communications; Laser sources
+- Arrayed waveguide gratings; Lithium niobate; Material properties; Photonic crystals;
+  Photonic integrated circuits; Thin films
 links:
 - name: URL
-  url: https://opg.optica.org/ome/abstract.cfm?URI=ome-14-12-2830
+  url: https://opg.optica.org/oe/abstract.cfm?URI=oe-32-26-45786
 ---

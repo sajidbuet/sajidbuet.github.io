@@ -28,7 +28,7 @@ organizations:
 bio: 
 
 interests:
-  - Thesis Title _Design Of Silicon-carbide Based Single-quantum-well White LED_ 
+  - _Design Of Silicon-carbide Based Single-quantum-well White LED_ 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

@@ -29,7 +29,7 @@ organizations:
 bio: 
 
 interests:
-  - Thesis Title _DESIGN OF AN ALL-OPTICAL PLASMONIC MODULATOR FOR TWO MICROMETER WAVEBAND_ 
+  -  _Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband_ 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

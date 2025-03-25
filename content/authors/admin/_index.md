@@ -39,6 +39,19 @@ education:
     - course: B.Sc. Eng (EEE) 
       institution: BUET, Dhaka, Bangladesh
       year: 2009
+experience:
+  jobs:
+    - jobtitle: Associate Professor
+      jobdepartment: Department of EEE
+      jobinstitution: Bangladesh University of Engineering and Technology, Dhaka, Bangladesh
+      jobstartdate: 2022-07-01
+      jobenddate: '-'
+
+    - jobtitle: Assistant Professor
+      jobdepartment: Department of EEE
+      jobinstitution: Bangladesh University of Engineering and Technology, Dhaka, Bangladesh
+      jobstartdate: 2013-07-01
+      jobenddate: 2022-07-01
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -75,10 +88,10 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ''
+email: 'sajid@eee.buet.ac.bd'
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.

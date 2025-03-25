@@ -34,7 +34,7 @@ sections:
     design:
       show_interests: true
       show_role: true
-      show_social: true
+      show_social: false
 
   - block: markdown
     content:
