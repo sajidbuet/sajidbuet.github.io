@@ -4,6 +4,11 @@
 $ErrorActionPreference = "Stop"
 
 
+
+# Stop execution if any command fails
+$ErrorActionPreference = "Stop"
+
+
 ## Step 1: Latex Compilation
 Write-Host "** Step 1: Latex Compilation **"
 
@@ -28,6 +33,21 @@ if (-Not (Test-Path $clsFile)) {
     exit 1
 }
 
+# Define source and destination paths
+$sourceFile = $bibFile
+$destinationFolder = "cv"
+$destinationFile = Join-Path $destinationFolder $bibFile
+
+# Ensure the destination folder exists; if not, create it
+if (!(Test-Path $destinationFolder)) {
+    New-Item -ItemType Directory -Path $destinationFolder -Force
+}
+
+# Copy the file and overwrite if it already exists
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
+
+Write-Host "File copied successfully."
+
 # Extract the directory and base name from the TeX file path
 $texDir = [System.IO.Path]::GetDirectoryName($texFile)
 $texBaseName = [System.IO.Path]::GetFileNameWithoutExtension($texFile)
@@ -41,26 +61,34 @@ if ($texDir -and $texDir -ne "") {
     $localTexFile = $texFile
 }
 
-# Run pdflatex (first pass) to generate the .aux file
-Write-Host "Running pdflatex (first pass)..."
-pdflatex $localTexFile
 
-# Run bibtex to process the bibliography
+
+
+# Run pdflatex (first pass) to generate the .aux and .bcf files
+Write-Host "Running pdflatex (first pass)..."
+pdflatex $localTexFile   -interaction nonstopmode 
+
+# Run biber to process the bibliography (instead of bibtex)
 Write-Host "Running bibtex..."
 bibtex $texBaseName
 
+biber $texBaseName 
+
+
+
 # Run pdflatex two more times to resolve references and bibliography
 Write-Host "Running pdflatex (second pass)..."
-pdflatex $localTexFile
+pdflatex $localTexFile   -interaction nonstopmode  
 
 Write-Host "Running pdflatex (third pass)..."
-pdflatex $localTexFile
+pdflatex $localTexFile   -interaction nonstopmode 
 
 Write-Host "Compilation complete."
 
+
 # Clean up auxiliary files (aux, bbl, bcf, log, xml, gz) in the current directory
 Write-Host "Cleaning up auxiliary files..."
-Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg -File | Remove-Item -Force
+Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, *.bib -File | Remove-Item -Force
 
 Write-Host "Cleanup complete."
 
@@ -68,6 +96,23 @@ Write-Host "Cleanup complete."
 if ($texDir -and $texDir -ne "") {
     Pop-Location
 }
+
+
+# Define source and destination paths
+$sourceFile = "cv\dsmc-cv.pdf"
+$destinationFolder = "content\authors\admin"
+$destinationFile = Join-Path $destinationFolder "cv.pdf"
+
+# Ensure the destination folder exists; if not, create it
+if (!(Test-Path $destinationFolder)) {
+    New-Item -ItemType Directory -Path $destinationFolder -Force
+}
+
+# Copy the file and overwrite if it already exists
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
+
+Write-Host "File copied successfully."
+
 
 # Step 2: Export the bib file into folders.
 Write-Host "** Step 2: Export the bib file into folders. **"
@@ -133,6 +178,6 @@ $timestamp = Get-Date -Format "yyyy-MM-dd-HH-mm"
 $zipFileName = "public-$timestamp.zip"
 
 Write-Host "Zipping folder '$folderToZip' into '$zipFileName'..."
-Compress-Archive -Path $folderToZip -DestinationPath $zipFileName
+Compress-Archive -Path $folderToZip -DestinationPath $zipFileName -Force
 
 Write-Host "Folder zipped successfully into '$zipFileName'."

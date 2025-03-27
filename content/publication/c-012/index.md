@@ -8,7 +8,7 @@ authors:
 - M A Awal
 - Sajid Muhaimin Choudhury
 date: '2014-01-01'
-publishDate: '2025-03-25T20:08:16.283559Z'
+publishDate: '2025-03-27T19:18:00.907571Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'
