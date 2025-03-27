@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Huan Jiang | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/huan-jiang/</link>
+      <atom:link href="http://localhost:1313/author/huan-jiang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Huan Jiang</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Huan Jiang</title>
+      <link>http://localhost:1313/author/huan-jiang/</link>
+    </image>
+    
+    <item>
+      <title>Computationally efficient surface conductivity graphene model for tunable graphene-based devices (Conference Presentation)</title>
+      <link>http://localhost:1313/publication/c-017/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enhancing sensitivity to ambient refractive index with tunable few-layer graphene/hBN nanoribbons</title>
+      <link>http://localhost:1313/publication/j-010/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modulating Phase by Metasurfaces with Gated Ultra-thin TiN Films</title>
+      <link>http://localhost:1313/publication/j-011/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-011/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

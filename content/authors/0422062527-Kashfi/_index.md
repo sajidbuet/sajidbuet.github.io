@@ -25,8 +25,6 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  -  
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

@@ -27,8 +27,9 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  - ' _Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range_ '
+thesis:
+    title: 'Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range'
+
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M. A. Zaman | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/m.-a.-zaman/</link>
+      <atom:link href="http://localhost:1313/author/m.-a.-zaman/index.xml" rel="self" type="application/rss+xml" />
+    <description>M. A. Zaman</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>M. A. Zaman</title>
+      <link>http://localhost:1313/author/m.-a.-zaman/</link>
+    </image>
+    
+    <item>
+      <title>A Novel Approach for Changing Bandwidth of FSS Filter Using Gradual Circumferential Variation of Loaded Elements</title>
+      <link>http://localhost:1313/publication/c-004/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-004/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

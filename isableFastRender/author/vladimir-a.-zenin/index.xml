@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vladimir A. Zenin | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/vladimir-a.-zenin/</link>
+      <atom:link href="http://localhost:1313/author/vladimir-a.-zenin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vladimir A. Zenin</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Vladimir A. Zenin</title>
+      <link>http://localhost:1313/author/vladimir-a.-zenin/</link>
+    </image>
+    
+    <item>
+      <title>Hybrid plasmonic waveguides formed by metal coating of dielectric ridges</title>
+      <link>http://localhost:1313/publication/j-006/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-006/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Novel Hard Mask Fabrication Method for Hybrid Plasmonic Waveguide and Metasurfaces</title>
+      <link>http://localhost:1313/publication/c-015/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,9 @@
 // Make page header alignment consistent with widget page header alignment
+
+:root {
+  color-scheme: dark light;
+}
+
 .universal-wrapper h1 {
   text-align: center;
 }
@@ -10,4 +15,17 @@
 
 .home-section  { 
   padding: 20px
+}
+
+/* For light mode */
+.hero-media{
+  color: #4f5368;
+  fill: #4f5368;
+}
+
+/* For dark mode */
+@media (prefers-color-scheme: dark) {
+  .hero-media {
+    color: #ffffff; /* or any color that contrasts with your dark background */
+  }
 }

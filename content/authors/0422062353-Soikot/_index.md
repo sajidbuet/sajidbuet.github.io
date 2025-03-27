@@ -25,8 +25,9 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  - Thesis Title (BPGS Approved) _Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency_ 
+thesis:
+  title: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency
+  status: CASR Approved
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

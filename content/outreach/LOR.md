@@ -2,7 +2,7 @@
 Title: LOR Request
 Placing: 7
 icon: users
-description: Guidelines to get Letter of Recommendation 
+summary: Guidelines to get Letter of Recommendation 
 ---
 
 ### Foreword

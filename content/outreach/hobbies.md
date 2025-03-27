@@ -2,7 +2,7 @@
 Title: Hobbies
 Placing: 7
 icon: file-text
-description: List of my hobbies
+summary: List of my hobbies and link to related pages
 ---
 
 #### Photography

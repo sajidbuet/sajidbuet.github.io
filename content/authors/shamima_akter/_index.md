@@ -28,8 +28,8 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  -  _Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband_ 
+thesis:
+  title: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

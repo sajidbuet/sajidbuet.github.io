@@ -2,7 +2,7 @@
 Title: Poems
 Placing: 8
 icon: users
-description: Some of my poetry
+summary: A collection of some of my poetry
 ---
 
 <link href="https://fonts.googleapis.com/css?family=Galada:400,400i,700,700i&display=swap&subset=bengali" rel="stylesheet"> 

@@ -18,6 +18,7 @@ sections:
       show_interests: true
       show_role: true
       show_social: true
+      show_organizations: true
   - block: people
     content:
       title: 
@@ -35,7 +36,7 @@ sections:
       show_interests: false
       show_role: false
       show_social: false
-
+      show_thesis: false
   - block: markdown
     content:
       text: |

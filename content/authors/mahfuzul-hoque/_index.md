@@ -27,8 +27,9 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  - _Design Of Silicon-carbide Based Single-quantum-well White LED_ 
+thesis:
+
+  title: 'Design Of Silicon-carbide Based Single-quantum-well White LED' 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

@@ -25,8 +25,9 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  - Thesis Title (BPGS Approved) _Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring_ 
+thesis:
+  title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
+  status: CASR Approved
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

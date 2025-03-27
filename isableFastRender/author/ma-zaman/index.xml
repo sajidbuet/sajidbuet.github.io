@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MA Zaman | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/ma-zaman/</link>
+      <atom:link href="http://localhost:1313/author/ma-zaman/index.xml" rel="self" type="application/rss+xml" />
+    <description>MA Zaman</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>MA Zaman</title>
+      <link>http://localhost:1313/author/ma-zaman/</link>
+    </image>
+    
+    <item>
+      <title>Design and optimisation of a novel dual-band circularly polarised microstrip antenna</title>
+      <link>http://localhost:1313/publication/j-002/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-002/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phased Array Synthesis Using Modified Particle Swarm Optimization</title>
+      <link>http://localhost:1313/publication/j-003/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-003/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

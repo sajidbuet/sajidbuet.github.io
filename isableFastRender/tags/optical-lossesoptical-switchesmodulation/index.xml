@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optical Losses;Optical Switches;Modulation | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/tags/optical-lossesoptical-switchesmodulation/</link>
+      <atom:link href="http://localhost:1313/tags/optical-lossesoptical-switchesmodulation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Optical Losses;Optical Switches;Modulation</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Optical Losses;Optical Switches;Modulation</title>
+      <link>http://localhost:1313/tags/optical-lossesoptical-switchesmodulation/</link>
+    </image>
+    
+    <item>
+      <title>VO2-based All-optical Reflection Modulator for 2μm Wave Band</title>
+      <link>http://localhost:1313/publication/c-022/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-022/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

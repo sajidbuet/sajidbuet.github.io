@@ -25,8 +25,10 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  - Thesis Title (CASR Approved) _Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared Waveband_ 
+
+thesis:
+  title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared Waveband
+  status: CASR Approved
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

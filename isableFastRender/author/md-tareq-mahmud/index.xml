@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Md Tareq Mahmud | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/md-tareq-mahmud/</link>
+      <atom:link href="http://localhost:1313/author/md-tareq-mahmud/index.xml" rel="self" type="application/rss+xml" />
+    <description>Md Tareq Mahmud</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Md Tareq Mahmud</title>
+      <link>http://localhost:1313/author/md-tareq-mahmud/</link>
+    </image>
+    
+    <item>
+      <title>Discrete Modulated Continuous-Variable Quantum Key Distribution: Security and Noise Tolerance Enhanced by Decoy States and Effective Error Correction Protocol Integration</title>
+      <link>http://localhost:1313/publication/c-021/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

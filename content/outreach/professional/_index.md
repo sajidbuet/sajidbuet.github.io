@@ -2,14 +2,14 @@
 Title: Professional Activities
 Placing: 6
 icon: users
-description: List of my current and past professional activities
+summary: List of my current and past professional activities
 ---
 
 ### BUET
 
-#### Secretary, IEEE Bangladesh Section
+#### IEEE Bangladesh Section
 ![MeetTheYP](IEEE-BDS-Logo.png)
-I won the election of Secretary-Elect of IEEE Bangladesh Section. I secured highest number of votes among all candidates in the 2021 IEEE Bangladesh Section ExCom election. I was reelected secretary in 2023. 
+I secured highest number of votes among all candidates in the 2021 IEEE Bangladesh Section ExCom election. I was reelected secretary in 2023. I was the Educational Activities Chair of the IEEE BDS in 2024 .
 
 #### Founding President, The Optical Society - OSA Bangladesh Section
 ![MeetTheYP](OSA_BD.png)
@@ -17,7 +17,7 @@ I actively ran the membership drive to increase the number of OSA members in Ban
 
 #### Founding Chair , IEEE Photonics Society Bangladesh Chapter 2021
 ![MeetTheYP](IEEEPhotonicsSociety.jpg)
-I actively ran a membership drive and petitioned for establishing the IEEE Photonics Society Bangladesh Chapter. I became the interim chair of the Photonics Society Bangladesh Chapter. IEEE Photonics Society Bangladesh Chapter started its journey on March 22, 2021. I am currently serving as the vice-chair of the Technical chapter since 2022 January
+I actively ran a membership drive and petitioned for establishing the IEEE Photonics Society Bangladesh Chapter. I became the interim chair of the Photonics Society Bangladesh Chapter. IEEE Photonics Society Bangladesh Chapter started its journey on March 22, 2021. I served as the vice-chair of the Technical chapter 2022-2024.
 
 #### Chair, IEEE YP BDS 2020
 ![MeetTheYP](smc_meettheyp.png)

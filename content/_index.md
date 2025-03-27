@@ -10,7 +10,7 @@ sections:
       title: |
         Q-PACERS 
       image:
-        filename: Q-PACER.webp
+        filename: Q-PACER.svg
       text: |
         <br>
         

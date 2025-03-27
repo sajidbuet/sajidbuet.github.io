@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sajid M. Choudhury | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/sajid-m.-choudhury/</link>
+      <atom:link href="http://localhost:1313/author/sajid-m.-choudhury/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sajid M. Choudhury</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Sajid M. Choudhury</title>
+      <link>http://localhost:1313/author/sajid-m.-choudhury/</link>
+    </image>
+    
+    <item>
+      <title>Experimental Realization of Color Hologram Using Pancharatnam-Berry Phase Manipulating Metasurface</title>
+      <link>http://localhost:1313/publication/c-014/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Color Hologram Generation Using a Pancharatnam-Berry Phase Manipulating Metasurface</title>
+      <link>http://localhost:1313/publication/c-013/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GZO/ZnO Multilayered nanodisk metasurface to engineer the plasma frequency</title>
+      <link>http://localhost:1313/publication/c-010/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nanostructured Transparent Conducting Oxide Films for Polarization Control with Plasmonic Metasurfaces</title>
+      <link>http://localhost:1313/publication/c-011/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-011/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

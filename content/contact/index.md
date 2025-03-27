@@ -29,12 +29,20 @@ sections:
       directions: Enter ECE Building from Palashi and take the stairs to Office 222 on Floor 2
       office_hours:
         - 'Saturday 9:00 to 4:00'
-      #contact_links:
-      #  - icon: comments
-      #    icon_pack: fas
-      #    name: Discuss on Forum
-      #    link: 'https://discourse.gohugo.io'
-    
+      contact_links:
+        - icon: linkedin
+          icon_pack: fab
+          name: linkedin.com/in/sajidmc
+          link: 'https://www.linkedin.com/in/sajidmc/'
+        - icon: google-scholar
+          icon_pack: ai
+          name: scholar.google.com/citations?user=Fu8Hkb4AAAAJ&hl=en
+          link: 'http://scholar.google.com/citations?user=Fu8Hkb4AAAAJ&hl=en'
+        - icon: orcid
+          icon_pack: fab
+          name: "OrCID: 0000-0002-0216-7125"
+          link: 'http://orcid.org/0000-0002-0216-7125'        
+
       # Automatically link email and phone or display as text?
       autolink: true
     

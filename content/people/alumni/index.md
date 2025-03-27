@@ -15,9 +15,10 @@ sections:
       sort_by: Params.graduation_year
       sort_ascending: true
     design:
-      show_interests: true
+      show_interests: false
       show_role: true
       show_social: false
+      show_thesis: true
 
   - block: student_list1
     title: UG Alumni

@@ -2,7 +2,7 @@
 Title: Graphics
 Placing: 7
 icon: file-text
-description: Graphic Logo Collection
+summary: Graphic Logo Collection designed by me - BUET, BUET-EEE
 ---
 
 ### Graphics

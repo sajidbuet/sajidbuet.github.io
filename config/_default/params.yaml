@@ -8,8 +8,8 @@ i_am_a_sponsor: true
 
 appearance:
   mode: system
-  theme_day: minimal
-  theme_night:
+  theme_day: buet
+  theme_night: buet
   font: native
   font_size: L
 
@@ -19,8 +19,8 @@ marketing:
   seo:
     site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
+    org_name: 'Q-PACERS'
+    description: "Dr. Sajid Muhaimin Choudhury's Research Group"
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
@@ -38,7 +38,7 @@ header:
     enable: true
     align: r
     show_logo: true
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: false

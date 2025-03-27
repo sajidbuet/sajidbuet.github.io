@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexander v. Kildishev | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/alexander-v.-kildishev/</link>
+      <atom:link href="http://localhost:1313/author/alexander-v.-kildishev/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alexander v. Kildishev</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Alexander v. Kildishev</title>
+      <link>http://localhost:1313/author/alexander-v.-kildishev/</link>
+    </image>
+    
+    <item>
+      <title>Computationally efficient surface conductivity graphene model for tunable graphene-based devices (Conference Presentation)</title>
+      <link>http://localhost:1313/publication/c-017/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Colors with plasmonic nanostructures: A full-spectrum review</title>
+      <link>http://localhost:1313/publication/j-009/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-009/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System for producing ultra-thin color phase hologram with metasurfaces</title>
+      <link>http://localhost:1313/publication/p-01/</link>
+      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/p-01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bi-anisotropic homogenization for efficient metasurface design (invited)</title>
+      <link>http://localhost:1313/publication/c-016/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pancharatnam–Berry Phase Manipulating Metasurface for Visible Color Hologram Based on Low Loss Silver Thin Film</title>
+      <link>http://localhost:1313/publication/j-007/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-007/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experimental Realization of Color Hologram Using Pancharatnam-Berry Phase Manipulating Metasurface</title>
+      <link>http://localhost:1313/publication/c-014/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Color Hologram Generation Using a Pancharatnam-Berry Phase Manipulating Metasurface</title>
+      <link>http://localhost:1313/publication/c-013/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GZO/ZnO Multilayered nanodisk metasurface to engineer the plasma frequency</title>
+      <link>http://localhost:1313/publication/c-010/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nanostructured Transparent Conducting Oxide Films for Polarization Control with Plasmonic Metasurfaces</title>
+      <link>http://localhost:1313/publication/c-011/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-011/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ayon Sarker | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/ayon-sarker/</link>
+      <atom:link href="http://localhost:1313/author/ayon-sarker/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ayon Sarker</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Ayon Sarker</title>
+      <link>http://localhost:1313/author/ayon-sarker/</link>
+    </image>
+    
+    <item>
+      <title>Design of Dual-Band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring</title>
+      <link>http://localhost:1313/publication/x-01/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/x-01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Structurally Tunable Gear-Shaped Plasmonic Sensor</title>
+      <link>http://localhost:1313/publication/j-013/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-013/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
