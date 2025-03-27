@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vladimir M Shalaev | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/vladimir-m-shalaev/</link>
+      <atom:link href="http://localhost:1313/author/vladimir-m-shalaev/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vladimir M Shalaev</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Vladimir M Shalaev</title>
+      <link>http://localhost:1313/author/vladimir-m-shalaev/</link>
+    </image>
+    
+    <item>
+      <title>Roadmap on metasurfaces</title>
+      <link>http://localhost:1313/publication/j-012/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Material platforms for optical metasurfaces</title>
+      <link>http://localhost:1313/publication/j-008/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-008/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Controlling the Polarization State of Light with Plasmonic Metal Oxide Metasurface</title>
+      <link>http://localhost:1313/publication/j-005/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-005/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

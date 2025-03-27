@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sayed Ashraf Mamun | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/sayed-ashraf-mamun/</link>
+      <atom:link href="http://localhost:1313/author/sayed-ashraf-mamun/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sayed Ashraf Mamun</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Sayed Ashraf Mamun</title>
+      <link>http://localhost:1313/author/sayed-ashraf-mamun/</link>
+    </image>
+    
+    <item>
+      <title>Approximate Closed-Form Expression of the Electric Field of a Conical Horn Antenna</title>
+      <link>http://localhost:1313/publication/j-001/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-001/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

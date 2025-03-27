@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>S. M. Choudhury | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/s.-m.-choudhury/</link>
+      <atom:link href="http://localhost:1313/author/s.-m.-choudhury/index.xml" rel="self" type="application/rss+xml" />
+    <description>S. M. Choudhury</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>S. M. Choudhury</title>
+      <link>http://localhost:1313/author/s.-m.-choudhury/</link>
+    </image>
+    
+    <item>
+      <title>Developing A Low-Cost Multiple Motor Switched Photovoltaic Powered Irrigation System</title>
+      <link>http://localhost:1313/publication/c-008/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-008/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Novel Approach for Changing Bandwidth of FSS Filter Using Gradual Circumferential Variation of Loaded Elements</title>
+      <link>http://localhost:1313/publication/c-004/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-004/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

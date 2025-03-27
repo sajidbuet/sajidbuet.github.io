@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Farhan Sadik Sium | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/farhan-sadik-sium/</link>
+      <atom:link href="http://localhost:1313/author/farhan-sadik-sium/index.xml" rel="self" type="application/rss+xml" />
+    <description>Farhan Sadik Sium</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Farhan Sadik Sium</title>
+      <link>http://localhost:1313/author/farhan-sadik-sium/</link>
+    </image>
+    
+    <item>
+      <title>A Review on Plasmonic Nano-biosensors for Virus Detection with a Focus on Coronavirus</title>
+      <link>http://localhost:1313/publication/j-014/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-014/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Soikot Sarker | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/soikot-sarker/</link>
+      <atom:link href="http://localhost:1313/author/soikot-sarker/index.xml" rel="self" type="application/rss+xml" />
+    <description>Soikot Sarker</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Soikot Sarker</title>
+      <link>http://localhost:1313/author/soikot-sarker/</link>
+    </image>
+    
+    <item>
+      <title>Efficiency Enhancement of c-Si/TiO2 Heterojunction Thin Film Solar Cell Using Hybrid Metal-Dielectric Nanostructures</title>
+      <link>http://localhost:1313/publication/x-03/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/x-03/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

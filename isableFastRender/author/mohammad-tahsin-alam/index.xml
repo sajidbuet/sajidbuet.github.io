@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mohammad Tahsin Alam | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/mohammad-tahsin-alam/</link>
+      <atom:link href="http://localhost:1313/author/mohammad-tahsin-alam/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mohammad Tahsin Alam</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Mohammad Tahsin Alam</title>
+      <link>http://localhost:1313/author/mohammad-tahsin-alam/</link>
+    </image>
+    
+    <item>
+      <title>Gesture Controlled Bot with Temperature &amp; Humidity (TH) Sensing Features</title>
+      <link>http://localhost:1313/publication/c-023/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

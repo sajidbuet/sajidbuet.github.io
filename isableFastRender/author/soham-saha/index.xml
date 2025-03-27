@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Soham Saha | Q-PACERS (DSMC-RG)</title>
+    <link>http://localhost:1313/author/soham-saha/</link>
+      <atom:link href="http://localhost:1313/author/soham-saha/index.xml" rel="self" type="application/rss+xml" />
+    <description>Soham Saha</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_f05efc27037f3153.png</url>
+      <title>Soham Saha</title>
+      <link>http://localhost:1313/author/soham-saha/</link>
+    </image>
+    
+    <item>
+      <title>Roadmap on metasurfaces</title>
+      <link>http://localhost:1313/publication/j-012/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hybrid plasmonic waveguides formed by metal coating of dielectric ridges</title>
+      <link>http://localhost:1313/publication/j-006/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/j-006/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Novel Hard Mask Fabrication Method for Hybrid Plasmonic Waveguide and Metasurfaces</title>
+      <link>http://localhost:1313/publication/c-015/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/c-015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
