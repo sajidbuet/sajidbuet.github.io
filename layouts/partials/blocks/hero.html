@@ -68,7 +68,8 @@
     {{ if $image }}
       {{ $isSVG := eq $image.MediaType.SubType "svg" }}
       {{ if $isSVG -}}
-        <object type="image/svg+xml" data="{{$image.RelPermalink}}"></object>
+      {{ partial "qpacer" . }}
+        <!-- <object type="image/svg+xml" data="{{$image.RelPermalink}}"></object> -->
         <!-- <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}"> -->
       {{- else }}
         {{ $legacy_img := $image.Resize "400x" }}
