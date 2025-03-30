@@ -8,11 +8,12 @@ authors:
 - M A Awal
 - Sajid Muhaimin Choudhury
 date: '2014-01-01'
-publishDate: '2025-03-27T19:18:00.907571Z'
+publishDate: '2025-03-29T20:48:50.439061Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'
 doi: 10.1109/ICECE.2014.7026828
 tags:
-- Cameras;Accuracy;Robot vision systems
+- embedded
+- computing
 ---

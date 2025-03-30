@@ -7,9 +7,11 @@ authors:
 - Alexandra Boltasseva
 - Vladimir M. Shalaev
 date: '2018-04-24'
-publishDate: '2025-03-27T19:18:01.092586Z'
+publishDate: '2025-03-29T20:48:50.618780Z'
 publication_types:
 - patent
+tags:
+- photonics
 links:
 - name: URL
   url: https://patents.google.com/patent/US9952557B2/en

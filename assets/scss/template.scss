@@ -17,15 +17,59 @@
   padding: 20px
 }
 
+.hero-lead {
+  font-size: 1.1rem;
+}
+
 /* For light mode */
 .hero-media{
   color: #4f5368;
   fill: #4f5368;
 }
 
+.article-title a:hover {
+  color: #ac1f24;
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  color: #ac1f24;
+  text-decoration: none;
+}
+
+.wg-hero .hero-lead a{
+  text-decoration: none;
+}
+
+.nav-link span:hover{
+  color: #ac1f24;
+}
+
+
 /* For dark mode */
 @media (prefers-color-scheme: dark) {
   .hero-media {
     color: #ffffff; /* or any color that contrasts with your dark background */
   }
+
+  .article-title a:hover {
+    color: #FF8A80;
+    text-decoration: none;
+  }
+  
+  .nav-link a:hover {
+    color: #FF8A80;
+    text-decoration: none;
+  }
+  
+  .wg-hero .hero-lead a{
+    text-decoration: none;
+  }
+  .nav-link span:hover{
+    color: #FF8A80;
+  }
+
 }
+
+
+

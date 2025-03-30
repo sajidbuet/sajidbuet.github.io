@@ -6,12 +6,12 @@ authors:
 - Fariba Islam
 - Sajid Muhaimin Choudhury
 date: '2021-01-01'
-publishDate: '2025-03-27T19:18:00.543649Z'
+publishDate: '2025-03-29T20:48:50.012117Z'
 publication_types:
 - article-journal
 publication: '*Sensing and Biosensing Research*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://doi.org/10.1016/j.sbsr.2021.100429

@@ -9,11 +9,11 @@ authors:
 - Sajid Muhaimin Choudhury
 - MA Matin
 date: '2011-01-01'
-publishDate: '2025-03-27T19:18:00.717658Z'
+publishDate: '2025-03-29T20:48:50.205270Z'
 publication_types:
 - article-journal
 publication: '*International Journal of Computer and Electrical Engineering*'
 tags:
-- J
+- antenna
 url_pdf: http://ijcee.org/papers/291-E337.pdf
 ---

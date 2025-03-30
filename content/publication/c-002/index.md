@@ -7,12 +7,11 @@ authors:
 - Sajid Muhaimin Choudhury
 - Md. Gaffar
 date: '2009-01-01'
-publishDate: '2025-03-27T19:18:01.060334Z'
+publishDate: '2025-03-29T20:48:50.587801Z'
 publication_types:
 - paper-conference
 publication: '*2009 IEEE Antennas and Propagation Society International Symposium*'
 doi: 10.1109/APS.2009.5171493
 tags:
-- Pattern analysis;K-band;Apertures;Frequency;Reflection;Antenna radiation patterns;Computational
-  modeling;Computer simulation;Corrugated surfaces;Geometry
+- antenna
 ---

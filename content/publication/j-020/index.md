@@ -5,12 +5,13 @@ authors:
 - Md. Ehsanul Karim
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2025-03-27T19:18:00.468751Z'
+publishDate: '2025-03-29T20:48:49.921681Z'
 publication_types:
 - article-journal
 publication: '*RSC Advances*'
 tags:
-- J
+- quantum
+- photonics
 links:
 - name: URL
   url: https://doi.org/10.1039/D4RA03726J

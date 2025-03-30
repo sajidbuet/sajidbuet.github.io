@@ -5,12 +5,13 @@ authors:
 - Soikot Sarkar
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-03-27T19:18:00.768952Z'
+publishDate: '2025-03-29T20:48:50.267833Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
 doi: 10.1109/ICTP60248.2023.10490886
 tags:
-- Absorption;Photovoltaic cells;Microprocessors;Computer architecture
+- photonics
+- renewable
 ---

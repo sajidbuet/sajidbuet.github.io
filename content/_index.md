@@ -8,13 +8,13 @@ sections:
   - block: hero
     content:
       title: |
-        Q-PACERS 
+         
       image:
         filename: Q-PACER.svg
       text: |
         <br>
-        
-        The   **Q**uantum-, **P**hotonic-, **A**ntenna-, **C**omputing-, **E**mbedded- , and **R**enewable-energy **S**ystems (**Q-PACERS**) Research Group  is a hub of innovation in electronics and photonics research at the Department of EEE, BUET, Bangladesh. Founded and led by [Dr. Sajid Muhaimin Choudhury](author/dr.-sajid-muhaimin-choudhury), the group leverages expertise in both experimental and computational tools to tackle cutting-edge research challenges.
+
+        **Q-PACERS** or the   **Q**uantum-, **P**hotonic-, **A**ntenna-, **C**omputing-, **E**mbedded- , and **R**enewable-energy **S**ystems Research Group  is a hub of innovation in electronics and photonics research at the Department of EEE, BUET, Bangladesh. Founded and led by [Dr. Sajid Muhaimin Choudhury](author/dr.-sajid-muhaimin-choudhury), the group leverages expertise in both experimental and computational tools to tackle cutting-edge research challenges.
         
 
 

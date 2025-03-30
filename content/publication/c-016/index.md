@@ -7,12 +7,12 @@ authors:
 - Sajid Choudhury
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2025-03-27T19:18:00.833006Z'
+publishDate: '2025-03-29T20:48:50.342747Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
   (ACES)*'
 doi: 10.23919/ROPACES.2018.8364134
 tags:
-- Dispersion;Computational modeling;Optical refraction
+- photonics
 ---

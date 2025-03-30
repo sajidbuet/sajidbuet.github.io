@@ -6,12 +6,12 @@ authors:
 - Shamima Akter Mitu
 - Sajid Muhaimin Choudhury
 date: '2022-01-01'
-publishDate: '2025-03-27T19:18:00.495689Z'
+publishDate: '2025-03-29T20:48:49.965073Z'
 publication_types:
 - article-journal
 publication: '*Applied Optics*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://doi.org/10.1364/AO.470247

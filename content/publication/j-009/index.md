@@ -12,12 +12,12 @@ authors:
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 date: '2019-01-01'
-publishDate: '2025-03-27T19:18:00.607142Z'
+publishDate: '2025-03-29T20:48:50.087042Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://aip.scitation.org/doi/10.1063/1.5110051

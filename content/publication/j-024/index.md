@@ -6,13 +6,13 @@ authors:
 - Md. Redwanul Karim
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-03-27T19:18:00.437436Z'
+publishDate: '2025-03-29T20:48:49.887059Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'
 doi: https://doi.org/10.1016/j.optlastec.2024.111730
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://www.sciencedirect.com/science/article/pii/S0030399224011885

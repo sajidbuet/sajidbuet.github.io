@@ -13,7 +13,7 @@ sections:
             Associate Professor <br/>
             Department of Electrical and Computer Engineering (EEE) <br/>
             Bangladesh University of Engineering and Technology
-
+      logo: BUET_logo.svg
       email: sajid@eee.buet.ac.bd
       phone: +88-02-55666000 / Ext 6452
       address:

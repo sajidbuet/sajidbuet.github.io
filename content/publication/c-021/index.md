@@ -8,12 +8,12 @@ authors:
 - Sajid Muhaimin Choudhury
 - Md Tareq Mahmud
 date: '2023-01-01'
-publishDate: '2025-03-27T19:18:00.749458Z'
+publishDate: '2025-03-29T20:48:50.252924Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
 doi: 10.1109/ICTP60248.2023.10490525
 tags:
-- Protocols;Quantum computing;Noise;Modulation
+- quantum
 ---

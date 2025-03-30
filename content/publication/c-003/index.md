@@ -7,11 +7,11 @@ authors:
 - Md. Gaffar
 - M. A. Matin
 date: '2009-01-01'
-publishDate: '2025-03-27T19:18:01.039130Z'
+publishDate: '2025-03-29T20:48:50.560293Z'
 publication_types:
 - paper-conference
 publication: '*2009 Loughborough Antennas & Propagation Conference*'
 doi: 10.1109/LAPC.2009.5352533
 tags:
-- Lighting;Reflector antennas
+- antenna
 ---

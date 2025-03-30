@@ -10,12 +10,12 @@ authors:
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2025-03-27T19:18:00.591380Z'
+publishDate: '2025-03-29T20:48:50.057322Z'
 publication_types:
 - article-journal
 publication: '*Nanoscale*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://pubs.rsc.org/en/content/articlehtml/2019/nr/c9nr00205g

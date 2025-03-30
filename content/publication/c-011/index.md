@@ -10,7 +10,7 @@ authors:
 - Andrea Alu
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2025-03-27T19:18:00.891697Z'
+publishDate: '2025-03-29T20:48:50.409201Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
@@ -21,7 +21,7 @@ abstract: Transparent Conducting Oxides (TCOs) enable the realization of practic
   process, we have fabricated GZO plasmonic waveplates, which convert linearly polarized
   light into circularly polarized light.
 tags:
-- Optical materials; Metamaterials; Plasmonics; Electron beam lithography
+- photonics
 links:
 - name: URL
   url: https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2014-FF2C.2

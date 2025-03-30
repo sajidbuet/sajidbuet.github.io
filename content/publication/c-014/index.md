@@ -8,7 +8,7 @@ authors:
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-03-27T19:18:00.859881Z'
+publishDate: '2025-03-29T20:48:50.375252Z'
 publication_types:
 - paper-conference
 publication: '*Conference on Lasers and Electro-Optics*'
@@ -18,8 +18,7 @@ abstract: We design and fabricate a Pancharatnam-Berry phase manipulating metasu
   by illuminating a nanostructured silver metasurface hologram with a white light
   source.
 tags:
-- Berry phase; CCD cameras; Electron beam lithography; Holograms; Light sources; Optical
-  filters
+- photonics
 links:
 - name: URL
   url: https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2016-FF1D.8

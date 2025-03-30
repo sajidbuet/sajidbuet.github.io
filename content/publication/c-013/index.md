@@ -7,7 +7,7 @@ authors:
 - Alexandra Boltasseva
 - Alexander V. Kildishev
 date: '2015-01-01'
-publishDate: '2025-03-27T19:18:00.876007Z'
+publishDate: '2025-03-29T20:48:50.390513Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2015*'
@@ -16,8 +16,7 @@ abstract: We propose a new scheme to generate polychromatic holograms by manipul
   tuning the resonant wavelengths of nanoslits, multicolor holograms can be produced
   for arbitrary RGB images.
 tags:
-- Anisotropy; Berry phase; Diffraction gratings; Electron beam lithography; Phase
-  shift; Subwavelength gratings
+- photonics
 links:
 - name: URL
   url: https://opg.optica.org/abstract.cfm?URI=CLEO_SI-2015-JTu5A.89

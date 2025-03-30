@@ -6,12 +6,12 @@ authors:
 - Zafrin Jahan Nikita
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2025-03-27T19:18:00.728152Z'
+publishDate: '2025-03-29T20:48:50.224436Z'
 publication_types:
 - paper-conference
 publication: '*2024 2nd International Conference on Information and Communication
   Technology (ICICT)*'
 doi: 10.1109/ICICT64387.2024.10839649
 tags:
-- Temperature sensors;Hands;Temperature distribution
+- embedded
 ---

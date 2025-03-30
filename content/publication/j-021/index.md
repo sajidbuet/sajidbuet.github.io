@@ -6,7 +6,7 @@ authors:
 - Kaniz Fatema Supti
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2025-03-27T19:18:00.404759Z'
+publishDate: '2025-03-29T20:48:49.853027Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'
@@ -27,8 +27,7 @@ abstract: Photonic topological insulators provide unidirectional, robust, wavele
   to advancing lithium niobate integrated photonics and developing efficient, multi-wavelength,
   electrically controlled optical communication systems and integrated photonic circuits.
 tags:
-- Arrayed waveguide gratings; Lithium niobate; Material properties; Photonic crystals;
-  Photonic integrated circuits; Thin films
+- photonics
 links:
 - name: URL
   url: https://opg.optica.org/oe/abstract.cfm?URI=oe-32-26-45786

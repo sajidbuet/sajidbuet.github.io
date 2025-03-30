@@ -7,12 +7,12 @@ authors:
 - Mohammad Asif Zaman
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2025-03-27T19:18:01.002563Z'
+publishDate: '2025-03-29T20:48:50.516119Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
 doi: 10.1109/ICELCE.2010.5700751
 tags:
-- Horn antennas;Aperture antennas;Antenna radiation patterns
+- antenna
 ---

@@ -8,12 +8,12 @@ authors:
 - Alexandra Boltasseva
 - Sergey I. Bozhevolnyi
 date: '2017-01-01'
-publishDate: '2025-03-27T19:18:00.638622Z'
+publishDate: '2025-03-29T20:48:50.117436Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: https://doi.org/10.1364/OE.25.012295

@@ -178,6 +178,6 @@ $timestamp = Get-Date -Format "yyyy-MM-dd-HH-mm"
 $zipFileName = "public-$timestamp.zip"
 
 Write-Host "Zipping folder '$folderToZip' into '$zipFileName'..."
-Compress-Archive -Path $folderToZip -DestinationPath $zipFileName -Force
+Compress-Archive -Path "$folderToZip\*" -DestinationPath $zipFileName -Force
 
 Write-Host "Folder zipped successfully into '$zipFileName'."

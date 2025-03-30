@@ -10,12 +10,12 @@ authors:
 - Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-03-27T19:18:00.668676Z'
+publishDate: '2025-03-29T20:48:50.147429Z'
 publication_types:
 - article-journal
 publication: '*ACS Nano*'
 tags:
-- J
+- photonics
 links:
 - name: URL
   url: http://pubs.acs.org/doi/full/10.1021/acsnano.6b03937

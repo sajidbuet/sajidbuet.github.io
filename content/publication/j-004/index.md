@@ -4,12 +4,12 @@ authors:
 - Sajid Choudhury
 - MA Matin
 date: '2013-01-01'
-publishDate: '2025-03-27T19:18:00.672184Z'
+publishDate: '2025-03-29T20:48:50.162647Z'
 publication_types:
 - article-journal
 publication: '*IJECCT*'
 tags:
-- J
+- antenna
 links:
 - name: URL
   url: http://journal.uniten.edu.my/ojs3/index.php/ijecct/article/download/170/132

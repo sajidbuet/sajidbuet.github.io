@@ -8,7 +8,7 @@ authors:
 - Sergei Bozhevolnyi
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2025-03-27T19:18:00.844179Z'
+publishDate: '2025-03-29T20:48:50.361022Z'
 publication_types:
 - paper-conference
 publication: '*Frontiers in Optics 2017*'
@@ -19,7 +19,7 @@ abstract: A hybrid plasmonic waveguide fabrication technique has been developed 
   and metasurfaces with an array of material platforms such as transition metal nitrides
   and epitaxial silver.
 tags:
-- Electron beam lithography; Metasurfaces
+- photonics
 links:
 - name: URL
   url: https://opg.optica.org/abstract.cfm?URI=FiO-2017-JTu2A.12

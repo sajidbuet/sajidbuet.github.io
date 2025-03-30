@@ -7,11 +7,11 @@ authors:
 - S. M. Choudhury
 - A. H. Chowdhury
 date: '2011-01-01'
-publishDate: '2025-03-27T19:18:00.939111Z'
+publishDate: '2025-03-29T20:48:50.467064Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of the 3rd International Conference on Water and Flood
   Management (ICWFM-2011)*'
 tags:
-- Frequency selective surfaces;Patch antennas;Fractals
+- renewable
 ---
