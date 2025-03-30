@@ -14,7 +14,7 @@ Write-Host "** Step 1: Latex Compilation **"
 
 # Define the paths to the main TeX file, bibliography file, and class file
 $texFile = "cv/dsmc-cv.tex"
-$bibFile = "papers.bib"
+$bibFile = "cv/papers.bib"
 $clsFile = "cv/buetcv.cls"
 
 # Verify that the required files exist
@@ -33,20 +33,6 @@ if (-Not (Test-Path $clsFile)) {
     exit 1
 }
 
-# Define source and destination paths
-$sourceFile = $bibFile
-$destinationFolder = "cv"
-$destinationFile = Join-Path $destinationFolder $bibFile
-
-# Ensure the destination folder exists; if not, create it
-if (!(Test-Path $destinationFolder)) {
-    New-Item -ItemType Directory -Path $destinationFolder -Force
-}
-
-# Copy the file and overwrite if it already exists
-Copy-Item -Path $sourceFile -Destination $destinationFile -Force
-
-Write-Host "File copied successfully."
 
 # Extract the directory and base name from the TeX file path
 $texDir = [System.IO.Path]::GetDirectoryName($texFile)
@@ -88,7 +74,7 @@ Write-Host "Compilation complete."
 
 # Clean up auxiliary files (aux, bbl, bcf, log, xml, gz) in the current directory
 Write-Host "Cleaning up auxiliary files..."
-Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, *.bib -File | Remove-Item -Force
+Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, -File | Remove-Item -Force
 
 Write-Host "Cleanup complete."
 
@@ -116,6 +102,16 @@ Write-Host "File copied successfully."
 
 # Step 2: Export the bib file into folders.
 Write-Host "** Step 2: Export the bib file into folders. **"
+
+
+# Define source and destination paths
+$sourceFile = $bibFile
+$destinationFile = "papers.bib"
+
+# Copy the file and overwrite if it already exists
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
+
+Write-Host "Copy bib file to root folder."
 
 # Define file and folder paths
 $bibFile = "papers.bib"
@@ -152,6 +148,8 @@ if (Test-Path $publicFolder) {
 } else {
     Write-Host "Folder '$publicFolder' does not exist. Skipping deletion."
 }
+
+Remove-Item "papers.bib"
 
 # Execute the Hugo command
 Write-Host "Running 'hugo --gc --minify'..."

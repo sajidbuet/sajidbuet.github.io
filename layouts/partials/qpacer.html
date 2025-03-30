@@ -5,6 +5,10 @@
         fill: #4f5368; /* 4f5368 */
       }
 
+      .cls-16 {
+        fill: #fff;
+      }
+
       .cls-2 {
         fill: none;
       }
@@ -15,8 +19,30 @@
     }
     g#Quantum:hover, g#Photonics:hover, g#Antenna:hover, g#Computing:hover, g#Embedded:hover, g#Renewables:hover {
       fill-opacity: 1;
+      cursor: pointer;
     }
 
+  g#Active:hover .Q{
+    fill-opacity: 1;
+    cursor: pointer;
+  }
+   
+    /* Inside #Active, these classes change color on hover */
+    g#Active:hover .cls-1 {
+      fill: #fff; /* example color */
+    }
+    
+    g#Active:hover .cls-16 {
+      fill: #4f5368; /* example color */
+    }
+
+    .dark g#Active:hover .cls-1 {
+      fill: #272934; /* example color */
+    }
+    
+    .dark g#Active:hover .cls-16 {
+      fill: #d1d5db; /* example color */
+    }
 
       .Q {
         fill: #67d0dd;
@@ -61,13 +87,15 @@
 
 
 
+
+
     /* Dark mode styles (new) */
     
     .dark  .cls-1 {
         fill: #d1d5db;
       }
     .dark  .cls-16 {
-        fill: #111827;
+        fill: #272934;
       }
     .dark  .Q {
         fill: #219ebc;
@@ -87,7 +115,7 @@
     .dark  .R, .R-1 {
         fill: #8e79d1;
       }
-    }
+    
     </style>
   </defs>
   <g id="MainLogo">
@@ -333,8 +361,10 @@
     </g>
   </g>
 </a>
+<a xlink:href="/">
   <g id="Active">
-    <circle class="cls-16" cx="197.96" cy="180.79" r="21.64"/>
+    <circle class="cls-16" cx="197.96" cy="180.79" r="22.64"/>
     <circle class="cls-1" cx="197.96" cy="180.79" r="13.4"/>
   </g>
+</a>  
 </svg>

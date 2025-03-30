@@ -9,7 +9,7 @@ Write-Host "** Step 1: Latex Compilation **"
 
 # Define the paths to the main TeX file, bibliography file, and class file
 $texFile = "cv/dsmc-cv.tex"
-$bibFile = "papers.bib"
+$bibFile = "cv/papers.bib"
 $clsFile = "cv/buetcv.cls"
 
 # Verify that the required files exist
@@ -30,8 +30,8 @@ if (-Not (Test-Path $clsFile)) {
 
 # Define source and destination paths
 $sourceFile = $bibFile
-$destinationFolder = "cv"
-$destinationFile = Join-Path $destinationFolder $bibFile
+$destinationFolder = "\"
+$destinationFile = "papers.bib"
 
 # Ensure the destination folder exists; if not, create it
 if (!(Test-Path $destinationFolder)) {
@@ -83,7 +83,7 @@ Write-Host "Compilation complete."
 
 # Clean up auxiliary files (aux, bbl, bcf, log, xml, gz) in the current directory
 Write-Host "Cleaning up auxiliary files..."
-Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, *.bib -File | Remove-Item -Force
+Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, -File | Remove-Item -Force
 
 Write-Host "Cleanup complete."
 
