@@ -133,7 +133,24 @@ if (-not (Test-Path $pubFolder)) {
 Write-Host "Executing academic import command..."
 academic import $bibFile $pubFolder --compact --overwrite
 
+Write-Host "Academic import completed successfully for en."
+
+
+$pubFolder = "content/bn/publication/"
+
+
+# Check if the publication folder exists; if not, create it
+if (-not (Test-Path $pubFolder)) {
+    Write-Host "The folder '$pubFolder' does not exist. Creating it now..."
+    New-Item -ItemType Directory -Path $pubFolder | Out-Null
+}
+
+# Execute the academic import command with the provided parameters
+Write-Host "Executing academic import command..."
+academic import $bibFile $pubFolder --compact --overwrite
+
 Write-Host "Academic import completed successfully."
+
 
 # Step 3: Compile Hugo Site
 Write-Host "** Step 3: Compile Hugo Site **"

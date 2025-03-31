@@ -4,8 +4,9 @@
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
   
   {{ $segments := split (trim $item.RelPermalink "/") "/" }}
-  {{ $code := replaceRE "[-]" "" (index $segments 1) }}
-  {{ $publicationnum := print "[" (upper (substr $code 0 1)) (substr $code 1) "]" }}
+  {{ $lastIndex := sub (len $segments) 1 }}
+{{ $code := replaceRE "[-]" "" (index $segments $lastIndex) }}
+{{ $publicationnum := print "[" (upper (substr $code 0 1)) (substr $code 1) "]" }}
 
   <b>{{print $publicationnum}}</b>
   {{/* APA Style */}}

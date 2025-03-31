@@ -6,8 +6,13 @@
 en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
-
+  contentDir: content
+bn:
+  languageCode: bn
+  contentDir: content/bn
+  title: Q-PACERS 
+  params:
+    description:   "Q-PACERS বা Quantum- (কোয়ান্টাম), Photonic- (ফোটোনিক), Antenna-(এন্টেনা), Computing-(কম্পিউটিং), Embedded-(এম্বেডেড), এবং Renewable-energy (নবায়নযোগ্য শক্তি ) Systems রিসার্চ গ্রুপ বুয়েট-এর (বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়) তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগে (EEE) ইলেকট্রনিক্স ও ফোটোনিক্স গবেষণার এক উদ্ভাবনী কেন্দ্র। ডঃ সাজিদ মুহাইমিন চৌধুরী কর্তৃক প্রতিষ্ঠিত ও পরিচালিত এই দলটি পরীক্ষামূলক ও গণনামূলক (কম্পিউটেশনাল) পদ্ধতির দক্ষতা ব্যবহার করে সর্বাধুনিক গবেষণার চ্যালেঞ্জ মোকাবিলায় অগ্রণী ভূমিকা পালন করছে।"
 # Uncomment the lines below to configure your website in a second language.
 #zh:
 #  languageCode: zh-Hans

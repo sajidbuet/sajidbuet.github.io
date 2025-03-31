@@ -1,3 +1,4 @@
+{{ $localizedBaseURL := .LanguagePrefix }}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.53 356.56" width="100%" height="100%">
   <defs>
     <style>
@@ -12,37 +13,26 @@
       .cls-2 {
         fill: none;
       }
-    g#Quantum, g#Photonics, g#Antenna, g#Computing, g#Embedded, g#Renewables {
+    g#Quantum, g#Photonics, g#Antenna, g#Computing, g#Embedded, g#Renewables, g#Active {
       fill-opacity: 0;
       transition: fill-opacity 0.3s;
       cursor: pointer;
     }
-    g#Quantum:hover, g#Photonics:hover, g#Antenna:hover, g#Computing:hover, g#Embedded:hover, g#Renewables:hover {
+
+    .home-bg {
+      fill: #ac1f24;
+    }
+
+    .home {
+      fill: #fff;
+    }
+
+
+    g#Quantum:hover, g#Photonics:hover, g#Antenna:hover, g#Computing:hover, g#Embedded:hover, g#Renewables:hover, g#Active:hover {
       fill-opacity: 1;
       cursor: pointer;
     }
 
-  g#Active:hover .Q{
-    fill-opacity: 1;
-    cursor: pointer;
-  }
-   
-    /* Inside #Active, these classes change color on hover */
-    g#Active:hover .cls-1 {
-      fill: #fff; /* example color */
-    }
-    
-    g#Active:hover .cls-16 {
-      fill: #4f5368; /* example color */
-    }
-
-    .dark g#Active:hover .cls-1 {
-      fill: #272934; /* example color */
-    }
-    
-    .dark g#Active:hover .cls-16 {
-      fill: #d1d5db; /* example color */
-    }
 
       .Q {
         fill: #67d0dd;
@@ -94,6 +84,10 @@
     .dark  .cls-1 {
         fill: #d1d5db;
       }
+
+    .dark {
+      fill: #d1d5db;
+    }  
     .dark  .cls-16 {
         fill: #272934;
       }
@@ -201,7 +195,7 @@
       <polygon class="cls-1" points="220.87 173.5 220.87 173.94 218.51 173.94 379.87 341.36 307.25 341.36 157.9 182.34 156.44 183.71 306.08 343.04 306.38 343.36 384.57 343.36 220.87 173.5"/>
     </g>
   </g>
-  <a xlink:href="/research/quantum">
+  <a xlink:href={{ "research/quantum" | relLangURL }}>
   <g id="Quantum">
     <g>
       <path class="Q" d="M90.38,153.64H55.9a.71.71,0,0,0-.69.7v34.47h0a.69.69,0,0,0,.69.69H90.39a.69.69,0,0,0,.68-.7V154.34h0A.69.69,0,0,0,90.38,153.64Zm-.69,34.48H56.6V155H89.69Z"/>
@@ -222,7 +216,7 @@
     </g>
   </g>
 </a>
-<a xlink:href="/research/photonics">
+<a xlink:href={{ "research/photonics" | relLangURL }}>
   <g id="Photonics">
     <g>
       <path class="P" d="M93.41,89.57V93.4a6.56,6.56,0,0,0-.77.32L89.93,91,87.3,93.65,90,96.38a4.89,4.89,0,0,0-.3.75H85.85v3.73h3.87a4.6,4.6,0,0,0,.31.72l-2.76,2.76L89.9,107l2.82-2.78a5.38,5.38,0,0,0,.7.28v3.94h3.73v-3.94a6,6,0,0,0,.7-.28l2.78,2.78,2.64-2.64-2.77-2.76a5.78,5.78,0,0,0,.31-.72h3.91V97.13h-3.86a6.21,6.21,0,0,0-.31-.75l2.73-2.73L100.62,91l-2.71,2.72a7.35,7.35,0,0,0-.77-.32V89.57Z"/>
@@ -248,7 +242,7 @@
     </g>
   </g>
 </a>
-<a xlink:href="/research/antenna">
+<a xlink:href={{ "research/antenna" | relLangURL }}>
   <g id="Antenna">
     <g>
       <polygon class="A" points="170 24.36 173.87 44.63 152.69 35.59 170 24.36 137.77 29.22 137.13 30.74 188.14 52.51 188.79 51 170 24.36"/>
@@ -266,7 +260,7 @@
     </g>
   </g>
 </a>
-<a xlink:href="/research/computing">
+<a xlink:href={{ "research/computing" | relLangURL }}>
   <g id="Computing">
     <g>
       <rect class="C" x="227.89" y="40.95" width="24.4" height="25.06" transform="translate(102.13 257.12) rotate(-68.44)"/>
@@ -286,7 +280,7 @@
     </g>
   </g>
 </a>
-<a xlink:href="/research/embedded">
+<a xlink:href={{ "research/embedded" | relLangURL }}>
   <g id="Embedded">
     <g>
       <path class="E" d="M289,110.94a1,1,0,0,0-1.39-.25h0a1,1,0,0,0,1.17,1.65,1,1,0,0,0,.26-1.39Z"/>
@@ -311,7 +305,7 @@
     </g>
   </g>
 </a>
-<a xlink:href="/research/renewable">
+<a xlink:href={{ "research/renewable" | relLangURL }}>
   <g id="Renewables">
     <g>
       <polygon class="R" points="316.94 208.64 313.16 214.22 318.89 220.14 322.19 214.07 316.94 208.64"/>
@@ -361,10 +355,12 @@
     </g>
   </g>
 </a>
-<a xlink:href="/">
+<a xlink:href={{ "/" | relLangURL }}>
   <g id="Active">
-    <circle class="cls-16" cx="197.96" cy="180.79" r="22.64"/>
-    <circle class="cls-1" cx="197.96" cy="180.79" r="13.4"/>
+    <circle class="cls-16" cx="197.96" cy="180.79" r="25.4"/>
+    <circle class="home-bg" cx="197.96" cy="180.79" r="22.64"/>
+    
+    <path class="home" transform="translate(185.96 169.29)" d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"/>
   </g>
 </a>  
 </svg>

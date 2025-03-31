@@ -1,0 +1,8 @@
+# Font style metadata
+name = "noto_sans_bengali"
+[fonts]
+# Define font families for different elements
+heading = "Noto Sans Bengali, sans-serif"
+body = "Noto Sans Bengali, sans-serif"
+nav = "Noto Sans Bengali, sans-serif"
+mono = "Noto Sans Bengali, monospace"

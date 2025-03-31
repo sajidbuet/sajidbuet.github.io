@@ -138,7 +138,7 @@
     <div class="row">
       {{ with $person.experience }}
       <div class="col-md-7">
-        <div class="section-subheading">Professional Experience</div>
+        <div class="section-subheading">{{ i18n "professional_experience" | markdownify }} </div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .jobs }}
           <li>

@@ -29,8 +29,8 @@ sections:
           position: center
           color: '#555'
         link:
-          icon: file-text
-          icon_pack: fas
+          icon: scirate
+          icon_pack: ai
           text: Learn More
           url: quantum          
       - title: 'Photonic Systems'
@@ -44,8 +44,8 @@ sections:
           position: center
           color: '#333'
         link:
-          icon: graduation-cap
-          icon_pack: fas
+          icon: ideas-repec
+          icon_pack: ai
           text: Learn More
           url: photonics
       - title: 'Antennas'
@@ -59,10 +59,10 @@ sections:
           position: center
           color: '#555'
         link:
-          icon: file-text
+          icon: wifi
           icon_pack: fas
           text: Read More
-          url: #                    
+          url: antenna                    
       - title: 'Computing'
         content: 'The field of computer architecture underpins the performance and efficiency of all modern computing systems—from smartphones to supercomputers. Our research explores how to design processors that are faster, more energy-efficient, and capable of handling the demands of AI, scientific computing, and large-scale data analytics. We study microarchitecture components such as instruction pipelines, memory hierarchies, branch predictors, and multicore processors.'
         align: left
@@ -74,10 +74,10 @@ sections:
           position: center
           color: '#555'
         link:
-          icon: file-text
+          icon: laptop
           icon_pack: fas
           text: Read More
-          url: #                
+          url: computing                
       - title: 'Embedded Systems'
         content: 'Embedded systems are specialized computing platforms built into larger systems to perform dedicated tasks, often under real-time constraints. Our research centers on designing energy-efficient, intelligent, and reliable embedded solutions for diverse applications. Embedded systems are specialized computing platforms built into larger systems to perform dedicated tasks, often under real-time constraints. Our research centers on designing energy-efficient, intelligent, and reliable embedded solutions for diverse applications.'
         align: left
@@ -89,10 +89,10 @@ sections:
           position: center
           color: '#555'
         link:
-          icon: file-text
+          icon: microchip
           icon_pack: fas
           text: Read More
-          url: #                
+          url: embedded                
       - title: 'Renewable Systems'
         content: 'We investigate solar cells, the core components that convert sunlight into electricity, aiming to improve their efficiency through novel materials and fabrication techniques. At the system level, we study solar panels, optimizing layout, orientation, and thermal management to enhance power output. Beyond generation, our research extends to grid optimization, ensuring stable integration of renewables into existing power infrastructures. We explore smart grid architectures, energy storage strategies, and predictive control algorithms to balance supply and demand.'
         align: left
@@ -104,10 +104,10 @@ sections:
           position: center
           color: '#555'
         link:
-          icon: file-text
+          icon: plug
           icon_pack: fas
           text: Read More
-          url: #                                   
+          url: renewable                                   
     design:
       # Slide height is automatic unless you force a specific height (e.g. '400px')
       slide_height: ''

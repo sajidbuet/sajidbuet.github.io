@@ -1,5 +1,9 @@
 // Make page header alignment consistent with widget page header alignment
 
+body {
+  font-family: 'Noto Sans Bengali', sans-serif;
+}
+
 :root {
   color-scheme: dark light;
 }
@@ -72,4 +76,46 @@
 }
 
 
+/* Container for all language flags */
+.i18n-flags {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center flags horizontally */
+  gap: 0.2rem; /* Adjust spacing between flags */
+  margin: 0.5rem 0;
+}
 
+/* Style for each flag link */
+.flag-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for the flag images */
+.flag-icon {
+  width: 24px;  /* Adjust the flag size as needed */
+  height: auto;
+  display: block;
+}
+
+/* Hover effect to enlarge the flag slightly */
+.flag-link:hover .flag-icon {
+  transform: scale(1.2);
+}
+
+.theme-toggle:hover #theme-icon {
+  transform: scale(1.2);
+}
+
+/* Mobile Styles: left aligned and scaled 1.5 times */
+@media (max-width: 768px) {
+  .i18n-flags {
+    justify-content: flex-start;
+    padding: 10px 15px !important;
+    gap: 1rem;
+  }
+  .flag-icon {
+    transform: scale(1.5);
+  }
+}

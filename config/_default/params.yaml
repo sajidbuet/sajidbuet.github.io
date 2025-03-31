@@ -10,7 +10,7 @@ appearance:
   mode: system
   theme_day: buet
   theme_night: buet
-  font: native
+  font: noto_sans_bengali
   font_size: L
 
 # SEO
@@ -47,7 +47,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: "footer_notice"
     license:
       enable: true
       allow_derivatives: false
