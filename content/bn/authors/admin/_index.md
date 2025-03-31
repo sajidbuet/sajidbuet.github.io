@@ -1,56 +1,55 @@
 ---
 # Display name
-title: ডঃ সাজিদ মুহাইমিন চৌধুরী
+title: Dr. Sajid Muhaimin Choudhury
 
 # Name pronunciation (optional)
 name_pronunciation: 
 
 # Full name (for SEO)
-first_name: সাজিদ মুহাইমিন 
-last_name: চৌধুরী
+first_name: Sajid Muhaimin
+last_name: Choudhury
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: সহযোগী অধ্যাপক
+role: Associate Professor
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ, বুয়েট 
+  - name: Department of EEE, BUET
     url: https://eee.buet.ac.bd
 
 # Short bio (displayed in user profile at end of posts)
-bio: তঃইঃ কৌশল বিভাগ, বুয়েট
+bio: Dept. of EEE, BUET
 
 interests:
-  -  কোয়ান্টাম কম্পিউটিং 
-  -  ফোটোনিক্স
-  -  এন্টেনা
-  -  কম্পিউটিং ও এম্বেডেড সিস্টেম 
-  -  নবায়নযোগ্য শক্তি 
+  - Nanophotonics
+  - Plasmonics
+  - Renewable Energy
 
 education:
   courses:
-    - course: পিএইচডি, ইলেকট্রিক্যাল ও কম্পিউটার ইঞ্জিনিয়ারিং 
-      institution: পারডু বিশ্ববিদ্যালয়, ওয়েস্ট লাফায়েত, ইন্ডিয়ানা, মার্কিন যুক্তরাষ্ট্র 
-      year: ২০১৯ 
-    - course: এম.এস.সি (প্রকৌশল), তড়িৎ ও ইলেকট্রনিক কৌশল 
-      institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়, ঢাকা, বাংলাদেশ 
-      year: ২০১১
-    - course: ইলেকট্রনিক্স ও ইলেকট্রিক্যাল ইঞ্জিনিয়ারিংয়ে বি.এসসি (প্রকৌশল)
-      institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়, ঢাকা, বাংলাদেশ 
-      year: ২০০৯
+    - course: Ph.D. in ECE 
+      institution: Purdue University, West Lafayette, IN, USA
+      year: 2019
+    - course: M.Sc. Eng (EEE) 
+      institution: BUET, Dhaka, Bangladesh
+      year: 2011
+    - course: B.Sc. Eng (EEE) 
+      institution: BUET, Dhaka, Bangladesh
+      year: 2009
 experience:
   jobs:
-    - jobtitle: সহযোগী অধ্যাপক
-      jobdepartment: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ
-      jobinstitution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়, ঢাকা, বাংলাদেশ
+    - jobtitle: Associate Professor
+      jobdepartment: Department of EEE
+      jobinstitution: Bangladesh University of Engineering and Technology, Dhaka, Bangladesh
       jobstartdate: 2022-07-01
       jobenddate: '-'
-    - jobtitle: সহকারী অধ্যাপক
-      jobdepartment: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ
-      jobinstitution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়, ঢাকা, বাংলাদেশ
+
+    - jobtitle: Assistant Professor
+      jobdepartment: Department of EEE
+      jobinstitution: Bangladesh University of Engineering and Technology, Dhaka, Bangladesh
       jobstartdate: 2013-07-01
       jobenddate: 2022-07-01
 
@@ -97,11 +96,10 @@ highlight_name: true
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Principal Investigator1
+  - Principal Investigator
 ---
 
-## সংক্ষিপ্ত বিবরণ 
+## Short Biography
+Dr. Sajid Choudhury is working as an Associate Professor in the Department of EEE, BUET. Dr. Choudhury completed his Ph.D. from the School of Electrical and Computer Engineering in Purdue University. Dr. Choudhury had the privilege of acquiring skills of both experimental and numerical approaches to solve problems related to photonics. His current research interest is in Photonic Quantum Computing, Flat Optics with Metasurface, Photonic Devices with Phase Change Materials, Embedded Systems Design. He seeks to solve fundamental and high-impact research questions of photonics and quantum computing, as well as to design practical solutions to meet the needs of Bangladesh. Dr. Choudhury is a member of the Department of EEE, BUET Self Assessment Committee, seeking to improve and excel the educational quality of the department. He actively engages and volunteers in Professional societies. Dr. Choudhury is the Educational Activities Chair of IEEE Bangladesh Section, Chair, IEEE Photonics Society Bangladesh Chapter and founding President, The Optica Bangladesh Section. Dr. Choudhury is a senior member of the IEEE and member of Optica. He is a member of the National Young Academy of Bangladesh (NYAB).
 
-ডঃ সাজিদ চৌধুরী বর্তমানে বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট)-এর বৈদ্যুতিক ও ইলেকট্রনিক প্রকৌশল বিভাগে সহযোগী অধ্যাপক হিসেবে কর্মরত আছেন। ডঃ চৌধুরী তাঁর পিএইচডি ইলেকট্রিক্যাল ও কম্পিউটার ইঞ্জিনিয়ারিং স্কুল, পারডু বিশ্ববিদ্যালয়, ওয়েস্ট লাফায়েত, ইন্ডিয়ানা, মার্কিন যুক্তরাষ্ট্র থেকে সম্পন্ন করেছেন। ফোটোনিক্স সম্পর্কিত সমস্যা সমাধানে পরীক্ষামূলক ও সাংখ্যিক পদ্ধতির দক্ষতা অর্জনের সুযোগ তিনি লাভ করেছেন। তাঁর বর্তমান গবেষণার আগ্রহের বিষয়গুলোর মধ্যে রয়েছে ফোটোনিক কোয়ান্টাম কম্পিউটিং, মেটাসারফেস সহ ফ্ল্যাট অপটিক্স, ফেজ পরিবর্তনশীল উপাদানসমৃদ্ধ ফোটোনিক ডিভাইস, এবং এম্বেডেড সিস্টেম ডিজাইন। তিনি ফোটোনিক্স এবং কোয়ান্টাম কম্পিউটেশনের মৌলিক ও উচ্চ-প্রভাবসম্পন্ন গবেষণা প্রশ্নগুলোর সমাধানের পাশাপাশি বাংলাদেশের প্রাসঙ্গিক চাহিদা পূরণের জন্য ব্যবহারিক প্রযুক্তিগত সমাধান ডিজাইন করার লক্ষ্যে কাজ করছেন। ডঃ চৌধুরী BUET-এর বৈদ্যুতিক ও ইলেকট্রনিক প্রকৌশল বিভাগে স্ব-মূল্যায়ন কমিটির সদস্য হিসেবে শিক্ষার গুণগত মান উন্নয়নে অবিরাম প্রচেষ্টা চালাচ্ছেন। তিনি বিভিন্ন পেশাগত সমিতিতে সক্রিয়ভাবে অংশগ্রহণ ও স্বেচ্ছাসেবক হিসেবে কর্মরত আছেন। ডঃ চৌধুরী, IEEE বাংলাদেশ সেকশনের শিক্ষা কার্যক্রমের চেয়ারম্যান, IEEE Photonics Society বাংলাদেশ অধ্যায়ের চেয়ারম্যান এবং Optica বাংলাদেশ সেকশনের প্রতিষ্ঠাতা সভাপতি হিসেবে অবদান রাখছেন। এছাড়াও, ডঃ চৌধুরী IEEE-এর সিনিয়র সদস্য এবং Optica-এর সদস্য এবং National Young Academy of Bangladesh (NYAB)-এর একজন সদস্য।
-
-[এখানে ক্লিক করুন](../../authors/cv.pdf) বিস্তারিত সিভি ডাউনলোড করতে।
+[Click here](cv.pdf) to download the detailed CV.

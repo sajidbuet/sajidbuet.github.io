@@ -5,7 +5,7 @@ authors:
 - Md Asif Hossain Bhuiyan
 - Sajid Muhaimin Choudhury
 date: '2021-01-01'
-publishDate: '2025-03-31T22:01:04.094919Z'
+publishDate: '2025-03-31T22:47:26.723402Z'
 publication_types:
 - article-journal
 publication: '*J. Opt. Soc. Am. B*'

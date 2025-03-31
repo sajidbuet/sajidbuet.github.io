@@ -1,6 +1,7 @@
 ---
 # Display name
 title: Dr. Sajid Muhaimin Choudhury
+slug: dsmc
 
 # Name pronunciation (optional)
 name_pronunciation: 

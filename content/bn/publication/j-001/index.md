@@ -9,7 +9,7 @@ authors:
 - Sajid Muhaimin Choudhury
 - MA Matin
 date: '2011-01-01'
-publishDate: '2025-03-31T22:01:06.436770Z'
+publishDate: '2025-03-31T22:47:29.022721Z'
 publication_types:
 - article-journal
 publication: '*International Journal of Computer and Electrical Engineering*'
