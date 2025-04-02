@@ -144,72 +144,67 @@
           {{ $show_day_night := site.Params.header.navbar.show_day_night | default true }}
           {{ $has_day_night_themes := (and site.Params.appearance.theme_day site.Params.appearance.theme_night) }}
           {{ if and $has_day_night_themes $show_day_night }}
-                <!-- Single icon toggle button -->
-                <li class="nav-item theme-toggle">
-                  <a href="#" class="nav-link js-toggle-theme" aria-label="{{ i18n "theme_selector" | default "Display preferences" }}">
-                    <!-- Default to "auto" icon -->
-                    <i id="theme-icon" class="fas fa-desktop" aria-hidden="true"></i>
-                  </a>
-                </li>
-  
-                <!-- Hugoblox theme items (hidden, but still present) -->
-                <li class="nav-item dropdown theme-dropdown" style="display: none;">
-                  <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item js-set-theme-light">Light</a>
-                    <a href="#" class="dropdown-item js-set-theme-dark">Dark</a>
-                    <a href="#" class="dropdown-item js-set-theme-auto">Auto</a>
-                  </div>
-                </li>
-  
-                <script>
-                  (function() {
-                    var themes = ["auto", "light", "dark"];  // cycle order
-                    var currentTheme = localStorage.getItem("theme") || "auto";
-                    var themeIcon = document.getElementById("theme-icon");
-  
-                    // Update the icon based on current theme
-                    function updateThemeIcon(theme) {
-                      switch (theme) {
-                        case "light":
-                          themeIcon.className = "fas fa-sun";
-                          break;
-                        case "dark":
-                          themeIcon.className = "fas fa-moon";
-                          break;
-                        default: // "auto"
-                          themeIcon.className = "fas fa-desktop";
-                      }
-                    }
-  
-                    // Use the existing Hugoblox theme links to do the actual switching
-                    function applyTheme(theme) {
-                      if (theme === "light") {
-                        document.querySelector(".js-set-theme-light").click();
-                      } else if (theme === "dark") {
-                        document.querySelector(".js-set-theme-dark").click();
-                      } else {
-                        document.querySelector(".js-set-theme-auto").click();
-                      }
-                      // Update our icon to match
-                      updateThemeIcon(theme);
-                      // Keep track of the new theme
-                      currentTheme = theme;
-                    }
-  
-                    // Show correct icon on first load
-                    updateThemeIcon(currentTheme);
-  
-                    // Toggle on click
-                    document.querySelector(".js-toggle-theme").addEventListener("click", function(e) {
-                      e.preventDefault();
-                      var idx = themes.indexOf(currentTheme);
-                      // Cycle to the next
-                      var nextTheme = themes[(idx + 1) % themes.length];
-                      applyTheme(nextTheme);
-                    });
-                  })();
-                </script>
-  
+            <!-- Single icon toggle button -->
+            <li class="nav-item theme-toggle">
+              <a href="#" class="nav-link js-toggle-theme" aria-label="{{ i18n "theme_selector" | default "Display preferences" }}">
+                <!-- The icon will be updated based on the current theme -->
+                <i id="theme-icon" class="fas" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+            <!-- Hugoblox theme items (hidden, but still present) -->
+            <li class="nav-item dropdown theme-dropdown" style="display: none;">
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item js-set-theme-light">Light</a>
+                <a href="#" class="dropdown-item js-set-theme-dark">Dark</a>
+                <a href="#" class="dropdown-item js-set-theme-auto">Auto</a>
+              </div>
+            </li>
+          
+            <script>
+              (function() {
+                // Define toggle themes: only light and dark.
+                var themes = ["light", "dark"];
+          
+                // Determine the system default theme using matchMedia:
+                var systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          
+                // Retrieve current theme from localStorage, falling back to the system default.
+                var currentTheme = localStorage.getItem("theme") || systemTheme;
+                var themeIcon = document.getElementById("theme-icon");
+          
+                // Update the icon based on the current theme.
+                function updateThemeIcon(theme) {
+                  if (theme === "light") {
+                    themeIcon.className = "fas fa-sun";
+                  } else if (theme === "dark") {
+                    themeIcon.className = "fas fa-moon";
+                  }
+                }
+          
+                // Switch theme by programmatically clicking the corresponding Hugoblox theme link.
+                function applyTheme(theme) {
+                  if (theme === "light") {
+                    document.querySelector(".js-set-theme-light").click();
+                  } else if (theme === "dark") {
+                    document.querySelector(".js-set-theme-dark").click();
+                  }
+                  updateThemeIcon(theme);
+                  currentTheme = theme;
+                  localStorage.setItem("theme", theme);
+                }
+          
+                // Set the correct icon on first load.
+                updateThemeIcon(currentTheme);
+          
+                // Toggle theme on click.
+                document.querySelector(".js-toggle-theme").addEventListener("click", function(e) {
+                  e.preventDefault();
+                  var nextTheme = currentTheme === "light" ? "dark" : "light";
+                  applyTheme(nextTheme);
+                });
+              })();
+            </script>
           {{ end }}
 
 

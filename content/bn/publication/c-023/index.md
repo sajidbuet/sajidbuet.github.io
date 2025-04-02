@@ -6,7 +6,7 @@ authors:
 - Zafrin Jahan Nikita
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2025-04-02T22:09:31.431475Z'
+publishDate: '2025-04-02T23:12:14.801254Z'
 publication_types:
 - paper-conference
 publication: '*2024 2nd International Conference on Information and Communication
