@@ -148,18 +148,18 @@
               <p class="institution">{{ .jobinstitution }}</p>
               {{ $job := . }}
               {{ with $job.jobstartdate }}
-                {{ $startdate := time . | dateFormat "Jan 2006" }}
+                {{ $startdate := time . | dateFormat "Jan 2006" | partial "convert_number_bn.html" }}
                 {{ $enddate := "" }}
                 {{ with $job.jobenddate }}
                 
                   {{ if eq . "-" }}
                     {{ $enddate = "-" }}
                   {{ else }}
-                    {{ $enddate = time . | dateFormat "Jan 2006" }}
+                    {{ $enddate = time . | dateFormat "Jan 2006" | partial "convert_number_bn.html" }}
                   {{ end }}
 
                 {{ end }}
-                <p class="institution">{{ $startdate }}{{ if $enddate }} to {{ $enddate }}{{ end }}</p>
+                <p class="institution">{{ $startdate }}{{ if $enddate }} - {{ $enddate }}{{ end }}</p>
               {{ end }}
             </div>
           </li>

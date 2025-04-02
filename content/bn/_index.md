@@ -26,16 +26,6 @@ sections:
     design:
       columns: '1'
 
-  - block: people-admin
-    content:
-      title: প্রধান গবেষক
-      user_groups:
-        - Principal Investigator1
-      sort_ascending: true
-    design:
-      show_interests: true
-      show_role: true
-      show_social: true
   - block: collection
     content:
       title: সম্প্রতি প্রকাশিত গবেষনা  
@@ -47,6 +37,18 @@ sections:
     design:
       view: citation
       columns: '1'
+  - block: people-admin
+    content:
+      title: প্রধান গবেষক
+      user_groups:
+        - Principal Investigator1
+      sort_ascending: true
+    design:
+      show_interests: true
+      show_role: true
+      show_social: true
+
+
   - block: markdown
     content:
       title:
