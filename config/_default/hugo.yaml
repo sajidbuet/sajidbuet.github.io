@@ -39,6 +39,8 @@ imaging:
   resampleFilter: lanczos
   quality: 80
   anchor: smart
+minify:
+  minifyOutput: true
 timeout: 600000
 taxonomies:
   author: authors
