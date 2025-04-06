@@ -7,7 +7,7 @@ title: Shamima Akter Mitu
 first_name: Shamima
 last_name: Akter Mitu
 
-graduation_year: 2024
+graduation_year: 2023
 show_social: false 
 
 # Username (this should match the folder name)

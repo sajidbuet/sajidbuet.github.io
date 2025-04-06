@@ -13,7 +13,7 @@ sections:
       user_groups:
           - Alumni
       sort_by: Params.graduation_year
-      sort_ascending: true
+      sort_ascending: false
     design:
       show_interests: false
       show_role: true

@@ -7,7 +7,7 @@ title: Md. Mahfuzul Haque
 first_name: Md.
 last_name: Mahfuzul Haque
 
-graduation_year: 2024
+graduation_year: 2025
 
 # Username (this should match the folder name)
 authors:

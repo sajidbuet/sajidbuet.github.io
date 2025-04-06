@@ -32,6 +32,7 @@ ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:
   authors: '/author/:slug/'
 disableAliases: true
+disablePathToLower: true
 outputs:
   home: [HTML, RSS, headers, redirects]
   section: [HTML, RSS]
@@ -50,6 +51,16 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+  goldmark:
+    extensions:
+        delete:
+          enable: true
+        insert:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
 security:
   _merge: deep
 sitemap:

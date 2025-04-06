@@ -7,7 +7,7 @@ authors:
 - Alexandra Boltasseva
 - Vladimir M. Shalaev
 date: '2018-04-24'
-publishDate: '2025-04-03T00:05:48.269868Z'
+publishDate: '2025-04-04T19:10:00.536897Z'
 publication_types:
 - patent
 tags:
