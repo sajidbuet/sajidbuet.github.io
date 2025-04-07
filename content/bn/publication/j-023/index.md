@@ -6,7 +6,7 @@ authors:
 - Md. Rasidul Islam
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-06T21:06:32.067974Z'
+publishDate: '2025-04-07T18:12:17.263403Z'
 publication_types:
 - article-journal
 publication: '*Physica B: Condensed Matter*'

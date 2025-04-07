@@ -6,9 +6,12 @@ description: Bulk Add in Microsoft Teams with Powershell
 date: '2025-04-05'
 ---
 
-Adding multiple users to a Microsoft Teams group manually can be tedious and error-prone, especially for large groups. As we use Teams to manage class, we need to add upto 35 students for each sessional class, 65 students for theory and 195 students if we want to add the entire batch in a team. Fortunately, we can automate this task using PowerShell simplifies the task, reducing time and mistakes. I am releasing these two templates to make our lives easier:
-* PowerShellScript
-* Excel Template
+Adding multiple users to a Microsoft Teams group manually can be tedious and error-prone, especially for large groups. As we use Teams to manage class, we need to add upto 35 students for each sessional class, 65 students for theory and 195 students if we want to add the entire batch in a team. Fortunately, we can automate this task using PowerShell simplifies the task, reducing time and mistakes. Also, it is not straight forward to export the list of members from a team to a Excel file.
+
+I am releasing these two templates to make our lives easier:
+* [PowerShellScript for Bulk Adding Team Members](BulkAdd.zip)
+* [Excel Template for Bulk Adding Team Members](BulkAdd.xlsx)
+* [PowerShellScript for Exporting Team Members to Excel](BulkAdd.zip)
 
 
 In this tutorial, you'll learn how to use PowerShell and Excel to bulk-add users to a Microsoft Teams group. You can also download the templates and directly use them:
@@ -52,72 +55,179 @@ Install-Module ImportExcel -Scope CurrentUser
 
 ## Step 3: Prepare Excel Data
 
-Create an Excel file named `BulkAdd.xlsx` with a sheet titled `PowerShellData`:
-
-| Email                   | Role    |
-|-------------------------|---------|
-| user1@example.com       | Member  |
-| user2@example.com       | Owner   |
-| user3@example.com       | Member  |
-
-Ensure you save this file in the same directory as your PowerShell script. 
-
-**[Download Excel Template](#)** *(Replace '#' with your actual download URL.)*
-If you are using the given template, just edit the batch, department and section part in the file. 
+**Download [Excel Template for Bulk Adding Team Members](BulkAdd.xlsx)** 
+In the `Data` sheet, enter Batch, Department and Section. The roll number range should be automatically generated for departments with 195 students, and for other departments, you need to tweak the `Sections` sheet.
+![ExcelScreenshot](ExcelScreenshot.png)
 
 ## Step 4: PowerShell Script
 
 Here's the script that automates the bulk addition of users:
 
-```powershell
-Import-Module MicrosoftTeams
+**[Download PowerShellScript for Bulk Adding Team Members](BulkAdd.zip)**
+Unzip the file and extract the `Teams-bulk-add.ps1` file, keep it in same folder as the excel file.
+
+Modify the `TeamDisplayName` variable as your team's name:
+![TeamCreation](TeamCreation.png)
+
+```powershell {linenos=inline hl_lines=[2] style=emacs}
+# Define Team display name
+$TeamDisplayName = "EEE 416 (Jan 2025) B1 + B2"
+
+# Ensure ImportExcel module is installed
+if (!(Get-Module -ListAvailable -Name ImportExcel)) {
+    Write-Host "ImportExcel module not found, installing..."
+    Install-Module ImportExcel -Scope CurrentUser -Force
+} else {
+    Write-Host "ImportExcel module already installed."
+}
+
+# Ensure MicrosoftTeams module is installed
+if (!(Get-Module -ListAvailable -Name MicrosoftTeams)) {
+    Write-Host "MicrosoftTeams module not found, installing..."
+    Install-Module MicrosoftTeams -Scope CurrentUser -Force
+} else {
+    Write-Host "MicrosoftTeams module already installed."
+}
+
+# Import required modules
 Import-Module ImportExcel
+Import-Module MicrosoftTeams
 
 # Connect to Microsoft Teams
+Write-Host "Connecting to Microsoft Teams..."
 Connect-MicrosoftTeams
 
-# Define your team name
-$TeamDisplayName = "Your Team Display Name"
-
-# Get the Team Group ID
+# Get Team Group ID
 $team = Get-Team -DisplayName $TeamDisplayName
-if (!$team) {
-    Write-Host "Team not found: $TeamDisplayName"
+
+if ($null -eq $team) {
+    Write-Host "No team found with display name '$TeamDisplayName'. Exiting script."
     exit
 }
-$groupId = $team.GroupId
 
-# Load users from Excel
-$excelPath = Join-Path (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent) "BulkAdd.xlsx"
+$groupId = $team.GroupId
+Write-Host "Team '$TeamDisplayName' found. Group ID: $groupId"
+
+# Read data from BulkAdd.xlsx (assuming file is in the same folder as script)
+$scriptPath = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
+$excelPath = Join-Path $scriptPath "BulkAdd.xlsx"
+
+if (!(Test-Path $excelPath)) {
+    Write-Host "File 'BulkAdd.xlsx' not found in script directory. Exiting script."
+    exit
+}
+
+# Read the Excel sheet named "PowerShellData"
 $data = Import-Excel -Path $excelPath -WorksheetName "PowerShellData"
+Write-Host "Debugging imported data:"
+$data | Format-Table
 
 foreach ($row in $data) {
-    $email = $row.Email
-    $role = $row.Role
+    $email = $row | Select-Object -ExpandProperty (Get-Member -InputObject $row -MemberType NoteProperty | Select-Object -First 1 -ExpandProperty Name)
+    $role = $row | Select-Object -ExpandProperty (Get-Member -InputObject $row -MemberType NoteProperty | Select-Object -Skip 1 -First 1 -ExpandProperty Name)
 
-    Write-Host "Adding $email as $role"
+    if ([string]::IsNullOrEmpty($email) -or [string]::IsNullOrEmpty($role)) {
+        Write-Host "Empty email or role found. Skipping..."
+        break
+    }
 
-    # Add users to Team
+    Write-Host "Email: $email, Role: $role"
+
+    #Add users to team (uncomment the following line to add users to the team)
     Add-TeamUser -GroupId $groupId -User $email -Role $role
 }
 
-Write-Host "Bulk addition completed!"
+Write-Host "Process completed."
 ```
 
 Replace `Your Team Display Name` with your actual Microsoft Teams name where you want to add the members.
 
-**[Download Sample PowerShell Script](#)** *(Replace '#' with your actual download URL.)*
 
 ## Step 5: Execute the Script
 
-Save this script as `BulkAddUsers.ps1`. Run it by opening PowerShell and executing:
+Save this script as `Teams-bulk-add.ps1`. Run it by opening PowerShell and executing:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-.\BulkAddUsers.ps1
+.\Teams-bulk-add.ps1
 ```
 
-If prompted about execution policy, type `Y` and hit Enter.
+* If prompted about execution policy, type `Y` and hit Enter.
+
+* Log into Microsoft Teams after Running the script
+![TeamsLogin](TeamsLogin.png)
+
+* Here is a screenshot of the script adding members to the team
+![AddingMembers](AddingMembers.png)
+
+* Here is a screenshot of the teams after all 65 members added.
+![](MembersAdded.png)
+
+## Step 6: Fetch Team Member list
+**Download [PowerShellScript for Exporting Team Members to Excel](BulkAdd.zip)**
+
+Modify the `TeamDisplayName` variable as your team's name.
+
+```powershell{linenos=inline hl_lines=[2] style=emacs}
+# Define Team display name
+$TeamDisplayName = "EEE 416 (Jan 2025) B1 + B2"
+
+# Connect to Microsoft Teams
+Write-Host "Connecting to Microsoft Teams..."
+Connect-MicrosoftTeams
+
+# Get Team Group ID
+$selectedTeam = Get-Team -DisplayName $TeamDisplayName
+
+if ($null -eq $selectedTeam) {
+    Write-Host "No team found with display name '$TeamDisplayName'. Exiting script."
+    exit
+}
+
+
+
+if (-not $selectedTeam) {
+    Write-Error "Team '$teamName' not found. Exiting script."
+    exit
+}
+
+# Get the members of the selected Team
+$members = Get-TeamUser -GroupId $selectedTeam.GroupId
+
+# Sort members by Email Address
+$sortedMembers = $members | Sort-Object User
+
+# Prepare data
+$memberDetails = foreach ($member in $sortedMembers) {
+    [PSCustomObject]@{
+        "Display Name"  = $member.Name
+        "Email Address" = $member.User
+        "Role"          = $member.Role
+    }
+}
+
+# Install ImportExcel Module if not already installed
+if (-not (Get-Module -ListAvailable -Name ImportExcel)) {
+    Install-Module -Name ImportExcel -Scope CurrentUser -Force
+}
+
+# Import the ImportExcel module
+Import-Module ImportExcel
+
+# Define Excel file name
+$excelFileName = ($selectedTeam.DisplayName -replace ' ','_') + "_TeamMembers.xlsx"
+
+# Export to Excel
+$memberDetails | Export-Excel -Path $excelFileName -AutoSize -WorksheetName "Team Members"
+
+Write-Host "Team members exported successfully to $excelFileName" -ForegroundColor Green
+```
+Run the script
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\Teams-getmembers.ps1
+```
+The script would create an excel file with all team members. 
 
 ## Conclusion
 
