@@ -9,7 +9,7 @@ authors:
 - Hossein Mosallaei
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2025-04-04T19:09:58.170523Z'
+publishDate: '2025-04-06T21:06:30.333349Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'

@@ -41,6 +41,7 @@ The website supports multiple languages, with translations managed in the `i18n/
 
 Custom layouts in the `layouts/` directory override default Hugo templates, providing unique designs for various sections of the site. These templates are tailored to enhance the presentation of content such as publications, events, and team profiles.
 - **Custom Layouts (`.html` in `layouts/`):**
+  - **`layouts/authors/list.html`**: updated structure of publication
   - 
 
 ## Deployment
