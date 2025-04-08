@@ -12,11 +12,7 @@
       .cls-2 {
         fill: none;
       }
-    g#Quantum, g#Photonics, g#Antenna, g#Computing, g#Embedded, g#Renewable, g#Active {
-      fill-opacity: 0;
-      transition: fill-opacity 0.3s;
-      cursor: pointer;
-    }
+
 
     .home-bg {
       fill: #ac1f24;
@@ -26,10 +22,16 @@
       fill: #fff;
     }
 
+    g#Quantum, g#Photonics, g#Antenna, g#Computing, g#Embedded, g#Renewable, g#Active {
+      fill-opacity: 0;
+      transition: fill-opacity 0.3s;
+      cursor: pointer;
+    }
 
     g#Quantum:hover, g#Photonics:hover, g#Antenna:hover, g#Computing:hover, g#Embedded:hover, g#Renewable:hover, g#Active:hover {
       fill-opacity: 1;
       cursor: pointer;
+      
     }
 
 
@@ -74,8 +76,35 @@
       fill-opacity: 1;
     }
 
+    .Q:hover{
+    /* Glow effect on hover */
+      filter: drop-shadow(0 0 10px #67d0dd);
+    }
 
+    .P:hover{
+      /* Glow effect on hover */
+        filter: drop-shadow(0 0 10px #9fe481);
+      }
 
+    .A:hover{
+        /* Glow effect on hover */
+          filter: drop-shadow(0 0 10px #f6e785);
+    }
+
+    .C:hover{
+      /* Glow effect on hover */
+        filter: drop-shadow(0 0 10px #faafa5);
+    }
+
+    .E:hover{
+      /* Glow effect on hover */
+        filter: drop-shadow(0 0 10px #dc95dd);
+    }
+
+    .R:hover{
+      /* Glow effect on hover */
+        filter: drop-shadow(0 0 10px #a885ee);
+  }
 
 
     /* Dark mode styles (new) */
