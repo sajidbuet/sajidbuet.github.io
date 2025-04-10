@@ -45,7 +45,9 @@
             {{ range $index, $taxonomy := site.Taxonomies.publication_types }}
               <option value=".pubtype-{{ $index }}">
                 {{ i18n (printf "pub_%s" (strings.Replace $index "-" "_")) | default (strings.Title $index) }}
-                ({{ div (len $taxonomy) 2 }})
+                {{ $localizedCount := partial "convert_number_bn.html" (printf "%d" (div (len $taxonomy) 1)) }}
+
+                ({{ $localizedCount }})
               </option>
             {{ end }}
           </select>
@@ -54,7 +56,7 @@
         {{/* Year filter with halved counts */}}
         <div class="col-auto">
           <select class="pub-filters form-control form-control-sm" data-filter-group="year">
-            <option value="*">{{ i18n "date" }}</option>
+            <option value="*">{{ i18n "year" }}</option>
             {{/* Build and sort keys for the yearCounts map */}}
             {{ $yearKeys := slice }}
             {{ $yearCounts := $.Scratch.Get "yearCounts" }}
@@ -73,7 +75,7 @@
 
             {{ range $year := $yearKeys }}
               <option value=".year-{{ $year }}">
-                {{ $year }} ({{  (index $yearCounts $year)  }})
+                {{ partial "convert_number_bn.html" (printf "%s" $year) }} ({{ partial "convert_number_bn.html" (printf "%d" (index $yearCounts $year)) }})
               </option>
             {{ end }}
           </select>

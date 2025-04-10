@@ -286,3 +286,6 @@
 
 - id: footer_notice
   translation: "© {year} <a href=\"{adminLink}\">{admin}</a>. This work is licensed under {license}"
+
+- id: year  
+  translation: Year

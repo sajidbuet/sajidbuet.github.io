@@ -272,3 +272,6 @@
 
 - id: footer_notice
   translation: "© {year} <a href=\"{adminLink}\">{admin}</a>. এই কাজটি {license} লাইসেন্সের অধীনে প্রকাশিত"
+
+- id: year  
+  translation: সন  
