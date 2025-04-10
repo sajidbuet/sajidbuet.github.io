@@ -8,7 +8,7 @@ authors:
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-04-07T18:12:15.588301Z'
+publishDate: '2025-04-10T04:41:52.213768Z'
 publication_types:
 - paper-conference
 publication: '*Conference on Lasers and Electro-Optics*'

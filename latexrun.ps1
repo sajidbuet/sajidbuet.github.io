@@ -4,6 +4,11 @@
 $ErrorActionPreference = "Stop"
 
 
+
+# Stop execution if any command fails
+$ErrorActionPreference = "Stop"
+
+
 ## Step 1: Latex Compilation
 Write-Host "** Step 1: Latex Compilation **"
 
@@ -28,20 +33,6 @@ if (-Not (Test-Path $clsFile)) {
     exit 1
 }
 
-# Define source and destination paths
-$sourceFile = $bibFile
-$destinationFolder = "\"
-$destinationFile = "papers.bib"
-
-# Ensure the destination folder exists; if not, create it
-if (!(Test-Path $destinationFolder)) {
-    New-Item -ItemType Directory -Path $destinationFolder -Force
-}
-
-# Copy the file and overwrite if it already exists
-Copy-Item -Path $sourceFile -Destination $destinationFile -Force
-
-Write-Host "File copied successfully."
 
 # Extract the directory and base name from the TeX file path
 $texDir = [System.IO.Path]::GetDirectoryName($texFile)
@@ -91,3 +82,71 @@ Write-Host "Cleanup complete."
 if ($texDir -and $texDir -ne "") {
     Pop-Location
 }
+
+
+# Define source and destination paths
+$sourceFile = "cv\dsmc-cv.pdf"
+$destinationFolder = "content\authors\admin"
+$destinationFile = Join-Path $destinationFolder "cv.pdf"
+
+# Ensure the destination folder exists; if not, create it
+if (!(Test-Path $destinationFolder)) {
+    New-Item -ItemType Directory -Path $destinationFolder -Force
+}
+
+# Copy the file and overwrite if it already exists
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
+
+Write-Host "File copied successfully."
+
+
+# Step 2: Export the bib file into folders.
+Write-Host "** Step 2: Export the bib file into folders. **"
+
+
+# Define source and destination paths
+$sourceFile = $bibFile
+$destinationFile = "papers.bib"
+
+# Copy the file and overwrite if it already exists
+Copy-Item -Path $sourceFile -Destination $destinationFile -Force
+
+Write-Host "Copy bib file to root folder."
+
+# Define file and folder paths
+$bibFile = "papers.bib"
+$pubFolder = "content/publication/"
+
+# Check if the bibliography file exists
+if (-not (Test-Path $bibFile)) {
+    Write-Error "Error: The bibliography file '$bibFile' was not found."
+    exit 1
+}
+
+# Check if the publication folder exists; if not, create it
+if (-not (Test-Path $pubFolder)) {
+    Write-Host "The folder '$pubFolder' does not exist. Creating it now..."
+    New-Item -ItemType Directory -Path $pubFolder | Out-Null
+}
+
+# Execute the academic import command with the provided parameters
+Write-Host "Executing academic import command..."
+academic import $bibFile $pubFolder --compact --overwrite
+
+Write-Host "Academic import completed successfully for en."
+
+
+$pubFolder = "content/bn/publication/"
+
+
+# Check if the publication folder exists; if not, create it
+if (-not (Test-Path $pubFolder)) {
+    Write-Host "The folder '$pubFolder' does not exist. Creating it now..."
+    New-Item -ItemType Directory -Path $pubFolder | Out-Null
+}
+
+# Execute the academic import command with the provided parameters
+Write-Host "Executing academic import command..."
+academic import $bibFile $pubFolder --compact --overwrite
+
+Write-Host "Academic import completed successfully."

@@ -1,0 +1,74 @@
+{{- define "main" -}}
+
+{{/* Author profile page. */}}
+
+{{/* If an account has not been created for this user, just display their name as the title. */}}
+{{ if not .File }}
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+</div>
+{{ end }}
+
+<section id="profile-page" class="pt-5">
+  <div class="container">
+    {{/* Show the About block if an account exists for this user. */}}
+    {{/* TODO: remove dependency on v1 blocks. Either migrate to v2 blocks(?) or directly implement layout here. */}}
+    {{ if .File }}
+      {{ $widget := "blocks/v1/about.html" }}
+      {{ $username := (path.Base .File.Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+      {{ $params := dict "wcPage" $ "wcBlock" . "author" $username }}
+      {{ partial $widget $params }}
+    {{end}}
+
+    {{ $query := where .Pages "Section" "publication" }}
+    {{ $count := len $query }}
+    {{ if $count }}
+    <div class="article-widget content-widget-hr">
+      <h3>{{ i18n "user_profile_latest" | default "Latest" }}</h3>
+<ul>
+      {{ range $query }}
+        <li>
+          {{/* Get the directory from .File.Dir, e.g. "publication\j-024\" */}}
+          {{ $dir := .File.Dir }}
+          {{/* Remove the "publication\" prefix */}}
+          {{ $noPrefix := replace $dir "publication\\" "" }}
+          {{/* Remove any remaining backslashes */}}
+          {{ $noBackslashes := replace $noPrefix "\\" "" }}
+          {{/* Remove hyphens to get "j024" */}}
+          {{ $folder := replace $noBackslashes "-" "" }}
+          
+          {{/* Use the folder as the publication code if not set in front matter */}}
+          {{ $code := .Params.publication_code | default $folder }}
+          
+          {{/* Now $code should be "j024" if the folder was "publication\j-024\" */}}
+          
+          {{/* Get the authors, year, and journal from front matter.
+             If year isn’t defined, use the page date (formatted as 2006). */}}
+          {{ $authors := .Params.authors }}
+          {{ $year := .Params.year | default (time .Date | dateFormat "2006") }}
+          {{ $journal := .Params.journal }}
+          
+          {{/* Format the publication string as:
+               [<code>] <authors> (<year>). <Title>. <journal>. 
+          */}}
+          [ {{$code }}]
+
+          <span class="article-metadata li-cite-author">
+            {{ partial "page_metadata_authors" . }}
+          </span>
+          ({{ .Date.Format "2006" }}). 
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>.
+          {{ if .Params.publication_short }}
+            {{ .Params.publication_short | markdownify }}.
+          {{ else if .Params.publication }}
+            {{ .Params.publication | markdownify }}.
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{- end -}}
