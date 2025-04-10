@@ -10,7 +10,7 @@ authors:
 - Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-04-10T04:41:54.121014Z'
+publishDate: '2025-04-10T19:30:29.203741Z'
 publication_types:
 - article-journal
 publication: '*ACS Nano*'

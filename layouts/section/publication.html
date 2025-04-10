@@ -38,20 +38,20 @@
             spellcheck="false">
         </div>
 
-        {{/* Publication types filter with counts */}}
+        {{/* Publication types filter with halved counts, as BN and EN has copy of the same publication */}}
         <div class="col-auto">
           <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
             <option value="*">{{ i18n "publication_type" }}</option>
             {{ range $index, $taxonomy := site.Taxonomies.publication_types }}
               <option value=".pubtype-{{ $index }}">
                 {{ i18n (printf "pub_%s" (strings.Replace $index "-" "_")) | default (strings.Title $index) }}
-                ({{ len $taxonomy }})
+                ({{ div (len $taxonomy) 2 }})
               </option>
             {{ end }}
           </select>
         </div>
 
-        {{/* Year filter with counts */}}
+        {{/* Year filter with halved counts */}}
         <div class="col-auto">
           <select class="pub-filters form-control form-control-sm" data-filter-group="year">
             <option value="*">{{ i18n "date" }}</option>
@@ -61,19 +61,19 @@
             {{ range $year, $count := $yearCounts }}
               {{ $yearKeys = $yearKeys | append $year }}
             {{ end }}
-            {{/* Sort in ascending order then reverse for descending order */}}
 
+            {{/* Sort in ascending order then reverse to get descending order */}}
             {{ $sortedYears := sort $yearKeys }}
-{{ $yearKeysRev := slice }}
-{{ $len := len $sortedYears }}
-{{ range $i, $dummy := $sortedYears }}
-  {{ $yearKeysRev = $yearKeysRev | append (index $sortedYears (sub (sub $len 1) $i)) }}
-{{ end }}
-{{ $yearKeys = $yearKeysRev }}
+            {{ $yearKeysRev := slice }}
+            {{ $len := len $sortedYears }}
+            {{ range $i, $dummy := $sortedYears }}
+              {{ $yearKeysRev = $yearKeysRev | append (index $sortedYears (sub (sub $len 1) $i)) }}
+            {{ end }}
+            {{ $yearKeys = $yearKeysRev }}
 
             {{ range $year := $yearKeys }}
               <option value=".year-{{ $year }}">
-                {{ $year }} ({{ index $yearCounts $year }})
+                {{ $year }} ({{  (index $yearCounts $year)  }})
               </option>
             {{ end }}
           </select>
@@ -82,7 +82,6 @@
 
       <div id="container-publications">
         {{ range $index, $item := .Pages.ByDate.Reverse }}
-
           {{ if .Params.publication_types }}
             {{ $.Scratch.Set "pubtype" (index .Params.publication_types 0) }}
           {{ else }}
@@ -92,7 +91,6 @@
           <div class="grid-sizer col-lg-12 isotope-item pubtype-{{ $.Scratch.Get "pubtype" }} year-{{ .Date.Format "2006" }}">
             {{ partial "functions/render_view" (dict "page" $ "item" . "view" ($.Params.view | default "compact") "index" $index) }}
           </div>
-
         {{ end }}
       </div>
 

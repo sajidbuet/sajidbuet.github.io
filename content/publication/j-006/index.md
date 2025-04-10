@@ -8,7 +8,7 @@ authors:
 - Alexandra Boltasseva
 - Sergey I. Bozhevolnyi
 date: '2017-01-01'
-publishDate: '2025-04-10T04:41:51.960396Z'
+publishDate: '2025-04-10T19:30:26.959396Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'

@@ -6,14 +6,14 @@ authors:
 - Md. Redwanul Karim
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-10T04:41:53.871784Z'
+publishDate: '2025-04-10T19:30:28.934599Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'
 doi: https://doi.org/10.1016/j.optlastec.2024.111730
 abstract: In this article, we report, for the first time, broadband multifunctional
   metasurfaces with more than four distinct functionalities. The constituent meta-atoms
-  combine two different phase change materials,  and  in a multi-stage configuration.
+  combine two different phase change materials, and in a multi-stage configuration.
   Finite-difference time-domain simulations demonstrate a broadband reflection amplitude
   switching between the four states in visible range due to the enhanced cavity length
   modulation effect from the cascaded Fabry–Perot cavities, overcoming the inherent
