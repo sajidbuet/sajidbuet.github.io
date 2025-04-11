@@ -40,13 +40,17 @@
 
         {{/* Publication types filter with halved counts, as BN and EN has copy of the same publication */}}
         <div class="col-auto">
-          <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
+          <select class="pub-filters pubtype-select form-control form-control-sm {{site.Language.Lang}}" data-filter-group="pubtype">
             <option value="*">{{ i18n "publication_type" }}</option>
             {{ range $index, $taxonomy := site.Taxonomies.publication_types }}
               <option value=".pubtype-{{ $index }}">
                 {{ i18n (printf "pub_%s" (strings.Replace $index "-" "_")) | default (strings.Title $index) }}
+                
                 {{ $localizedCount := partial "convert_number_bn.html" (printf "%d" (div (len $taxonomy) 1)) }}
-
+              {{ if eq (site.Language.Lang) "en" }}
+                {{ $localizedCount = partial "convert_number_bn.html" (printf "%d" (div (len $taxonomy) 2)) }}
+              {{ end }}
+              
                 ({{ $localizedCount }})
               </option>
             {{ end }}
