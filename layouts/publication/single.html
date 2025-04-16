@@ -60,6 +60,9 @@
     <a href="https://plu.mx/plum/a/?doi={{ .Params.doi | urlquery }}" class="plumx-details" data-site="plum" data-hide-when-empty="true"></a>
   </div>
   <script type="text/javascript" src="https://cdn.plu.mx/widget-details.js"></script>
+
+  <span class="__dimensions_badge_embed__" data-doi="{{ .Params.doi | urlquery }}" data-hide-zero-citations="true" data-legend="always" data-style="large_circle"></span>
+  <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 {{ end }}
 
     <div class="article-style">{{ .Content }}</div>

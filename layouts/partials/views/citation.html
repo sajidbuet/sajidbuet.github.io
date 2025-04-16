@@ -22,7 +22,11 @@
   {{ else if $item.Params.publication }}
     {{- $item.Params.publication | markdownify -}}.
   {{ end }}
-  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }}</p>
+  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }} 
+    <a class="btn btn-page-header btn-sm" href="{{ $item.Params.doi}}" target="_blank" rel="noopener">
+    <span class="__dimensions_badge_embed__" data-doi="{{ $item.Params.doi}}" data-hide-zero-citations="true" data-legend="hover-bottom" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+  </a>
+  </p>
 
   {{/* MLA Style */}}
   {{ else }}
@@ -41,6 +45,7 @@
   {{ if $has_attachments }}
   <div class="btn-links">
     {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+  
   </div>
   {{ end }}
 
