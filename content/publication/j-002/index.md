@@ -7,10 +7,11 @@ authors:
 - SM Choudhury
 - Md A Matin
 date: '2011-01-01'
-publishDate: '2025-04-10T19:30:27.033518Z'
+publishDate: '2025-04-16T10:44:29.317264Z'
 publication_types:
 - article-journal
 publication: '*IET Microwaves and Antennas & Propagation*'
+doi: 10.1049/iet-map.2010.0050
 tags:
 - antenna
 links:

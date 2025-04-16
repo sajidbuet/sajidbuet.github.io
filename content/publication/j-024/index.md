@@ -6,11 +6,11 @@ authors:
 - Md. Redwanul Karim
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-10T19:30:26.718509Z'
+publishDate: '2025-04-16T10:44:29.111690Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'
-doi: https://doi.org/10.1016/j.optlastec.2024.111730
+doi: 10.1016/j.optlastec.2024.111730
 abstract: In this article, we report, for the first time, broadband multifunctional
   metasurfaces with more than four distinct functionalities. The constituent meta-atoms
   combine two different phase change materials, and in a multi-stage configuration.

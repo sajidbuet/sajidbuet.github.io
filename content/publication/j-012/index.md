@@ -35,13 +35,11 @@ authors:
 - Sergei Tretyakov
 - Christophe Craeye
 date: '2019-01-01'
-publishDate: '2025-04-10T19:30:26.879811Z'
+publishDate: '2025-04-16T10:44:29.222482Z'
 publication_types:
 - article-journal
 publication: '*Journal of Optics*'
+doi: 10.1088/2040-8986/ab161d
 tags:
 - photonics
-links:
-- name: URL
-  url: https://doi.org/10.1088/2040-8986/ab161d
 ---

@@ -8,10 +8,11 @@ authors:
 - Md M Alam
 - Md Matin
 date: '2011-01-01'
-publishDate: '2025-04-10T19:30:27.017511Z'
+publishDate: '2025-04-16T10:44:29.310746Z'
 publication_types:
 - article-journal
 publication: '*Journal of Engineering Science & Technology Review*'
+doi: 10.25103/jestr.041.10
 tags:
 - antenna
 links:

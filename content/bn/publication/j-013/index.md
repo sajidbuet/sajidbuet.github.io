@@ -6,13 +6,11 @@ authors:
 - Purbayan Das
 - Sajid Muhaimin Choudhury
 date: '2020-01-01'
-publishDate: '2025-04-10T19:30:29.076490Z'
+publishDate: '2025-04-16T10:44:30.359140Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
+doi: 10.1364/OE.410123
 tags:
 - photonics
-links:
-- name: URL
-  url: https://doi.org/10.1364/OE.410123
 ---

@@ -9,7 +9,7 @@ authors:
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2025-04-10T19:30:26.970056Z'
+publishDate: '2025-04-16T10:44:29.284836Z'
 publication_types:
 - article-journal
 publication: '*Advanced Optical Materials*'
@@ -17,5 +17,5 @@ tags:
 - photonics
 links:
 - name: URL
-  url: https://doi.org/10.1002/adom.201700196
+  url: 10.1002/adom.201700196
 ---

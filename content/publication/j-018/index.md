@@ -6,10 +6,11 @@ authors:
 - Tanvir Ahmed
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-04-10T19:30:26.786755Z'
+publishDate: '2025-04-16T10:44:29.158581Z'
 publication_types:
 - article-journal
 publication: '*NanoScale Advances*'
+doi: 10.1039/D2NA00571A
 tags:
 - misc
 links:

@@ -7,13 +7,11 @@ authors:
 - Sujoy Mondal
 - Sajid Muhaimin Choudhury
 date: '2022-01-01'
-publishDate: '2025-04-10T19:30:26.822529Z'
+publishDate: '2025-04-16T10:44:29.189764Z'
 publication_types:
 - article-journal
 publication: '*Optics Continuum*'
+doi: 10.1364/OPTCON.473106
 tags:
 - photonics
-links:
-- name: URL
-  url: https://doi.org/10.1364/OPTCON.473106
 ---

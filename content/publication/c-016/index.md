@@ -7,7 +7,7 @@ authors:
 - Sajid Choudhury
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2025-04-10T19:30:27.180900Z'
+publishDate: '2025-04-16T10:44:29.396406Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
