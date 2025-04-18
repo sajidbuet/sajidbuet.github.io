@@ -8,10 +8,21 @@ authors:
 - Alexandra Boltasseva
 - Sergey I. Bozhevolnyi
 date: '2017-01-01'
-publishDate: '2025-04-16T10:44:30.416451Z'
+publishDate: '2025-04-18T09:50:40.132546Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
+abstract: Bound hybrid plasmon-polariton modes supported by waveguides, which are
+  formed by gold coating of ridges etched into a silica substrate, are analyzed using
+  numerical simulations and investigated experimentally using near-field microscopy
+  at telecom wavelengths (1425–1625 nm). Drastic modifications of the fundamental
+  mode profile along with changes in the mode confinement and propagation loss are
+  found when varying the ridge height. The main mode characteristics (effective mode
+  index, propagation length, and mode profile) are determined from the experimental
+  amplitude- and phase-resolved near-field images and compared with the simulations.
+  The possibility of strongly influencing the mode properties along with subwavelength
+  confinement found simultaneously with relatively long propagation can further be
+  exploited in mode shaping and sensing applications.
 tags:
 - photonics
 links:

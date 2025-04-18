@@ -8,7 +8,7 @@ authors:
 - Di Wang
 - Sajid Choudhury
 date: '2020-01-01'
-publishDate: '2025-04-16T10:44:29.387227Z'
+publishDate: '2025-04-18T09:50:38.090913Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of SPIE Volume 11282, SPIE OPTO, 2020, San Francisco, California,

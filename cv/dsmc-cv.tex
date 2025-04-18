@@ -37,34 +37,10 @@
 
     \section{Brief Biography}
         \begin{onecolentry}
-            \href{https://rendercv.com}{RenderCV} is a LaTeX-based CV/resume version-control and maintenance app. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with \textbf{Markdown syntax support} and \textbf{complete control over the LaTeX code}.
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-            The boilerplate content was inspired by \href{https://github.com/dnl-blkv/mcdowell-cv}{Gayle McDowell}.
+            Dr. Sajid Choudhury is working as an Associate Professor in the Department of EEE, BUET. Dr. Choudhury completed his Ph.D. from the School of Electrical and Computer Engineering in Purdue University. Dr. Choudhury had the privilege of acquiring skills of both experimental and numerical approaches to solve problems related to photonics. His current research interest is in Photonic Quantum Computing, Flat Optics with Metasurface, Photonic Devices with Phase Change Materials, Embedded Systems Design. He seeks to solve fundamental and high-impact research questions of photonics and quantum computing, as well as to design practical solutions to meet the needs of Bangladesh. Dr. Choudhury is a member of the Department of EEE, BUET Self Assessment Committee, seeking to improve and excel the educational quality of the department. He actively engages and volunteers in Professional societies. Dr. Choudhury is the Educational Activities Chair of IEEE Bangladesh Section, Chair, IEEE Photonics Society Bangladesh Chapter and founding President, The Optica Bangladesh Section. Dr. Choudhury is a senior member of the IEEE and member of Optica. He is a member of the National Young Academy of Bangladesh (NYAB).
         \end{onecolentry}
 
 
-    
-    \section{Quick Guide}
-
-    \begin{onecolentry}
-        \begin{highlightsforbulletentries}
-
-
-        \item Each section title is arbitrary and each section contains a list of entries.
-
-        \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
-
-        \item Select a section title, pick an entry type, and start writing your section!
-
-        \item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
-
-
-        \end{highlightsforbulletentries}
-    \end{onecolentry}
 
 \section{Education}
         \begin{threecolentry}{\textbf{Ph.D.}}{
@@ -144,8 +120,12 @@
             Lecturer, Institute of Information and Communication Technology (IICT) \\ \textbf{Bangladesh University of Engineering and Technology (BUET)}\\
         \end{twocolentry}        
     
+        
 \section{Publications}
-    
+\vspace{0.2 cm}
+\subsection{Publications Metrics}
+\input{gscholar.tex}
+\vspace{0.2 cm}   
     %\nocite{*}
     %\printbibliography
     %\printbibheading
@@ -154,7 +134,10 @@
 \nocite{*}
 \newrefcontext[labelprefix=J]
 \printbibliography[env=counter,type=article,heading=none]
-\printbibliography[type=article,heading=none]
+
+  \printbibliography[type=article,heading=none]
+
+
 
 \subsection{Conference Proceedings}
 \csnumgdef{entrycount}{0}

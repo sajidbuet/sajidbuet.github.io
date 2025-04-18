@@ -52,12 +52,18 @@
 \RequirePackage{tabularx} % for making tables with fixed width columns
 \RequirePackage{array} % tabularx requires this
 \RequirePackage[dvipsnames]{xcolor} % for coloring text
+\RequirePackage{booktabs}
+\RequirePackage{subcaption}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \definecolor{primaryColor}{RGB}{0, 0, 0} 
 % BUET color
 %\definecolor{primaryColor}{RGB}{172, 31, 24} % define primary color
 \RequirePackage{enumitem} % for customizing lists
+\RequirePackage{fontspec}          % Unicode font loader
 \RequirePackage{fontawesome5} % for using icons
+\RequirePackage{academicons}
 \RequirePackage{amsmath} % for math
 
 
@@ -89,7 +95,7 @@
 \RequirePackage{ifthen} % for conditional statements
 \RequirePackage{needspace} % for avoiding page brake right after the section title
 \RequirePackage{iftex} % check if engine is pdflatex, xetex or luatex
-
+\RequirePackage{fancyhdr}
 %\RequirePackage[default, type1]{sourcesanspro} 
 
 % Some settings:
@@ -102,7 +108,7 @@
 \makeatletter
 \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
 \patchcmd{\ps@customFooterStyle}{\thepage}{
-    \color{gray}\textit{\small CV of \cvauthor - Page \thepage{} of \pageref*{LastPage}}
+    \color{gray}\textit{\small CV of \cvauthor - Page \thepage{} of \pageref{LastPage}}
 }{}{} % replace number by desired string
 \makeatother
 \pagestyle{customFooterStyle}
@@ -202,7 +208,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+        \small\color{gray}\textit{Last updated in \today}\hspace{\widthof{Last updated in \today}}
     }}}%
   }%
 }%
@@ -223,17 +229,28 @@
 \newsavebox\ANDbox
 \sbox\ANDbox{}
 
+%\DeclareSourcemap{
+%  \maps[datatype=bibtex]{
+%    \map{
+%      \step[fieldsource=citationnos]
+%      \step[fieldset=usera, origfieldval]
+%      \step[fieldset=citationnos, null] % optional: remove original
+%    }
+%  }
+%}
 
 \usepackage[
     backend=biber,
-    style=numeric,
+    style=ext-numeric,
     firstinits=true,
     maxcitenames=99,
     maxbibnames=99,
     sorting=ydnt,
     defernumbers=true,
     isbn=false,
+    datamodel=ignore,        % allow unknown fields
 ]{biblatex}
+
 \addbibresource{papers.bib}
 
 \makeatletter
@@ -242,6 +259,9 @@
   {}
   {\csnumgdef{entrycount}{%
       \csuse{entrycount}+1}}
+
+     
+
 \makeatother
 
 % Print the labelnumber as the total number of entries in the
