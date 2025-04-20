@@ -48,8 +48,6 @@ lualatex $localTexFile   -interaction nonstopmode
 
 # Run biber to process the bibliography (instead of bibtex)
 Write-Host "Running bibtex..."
-bibtex $texBaseName
-
 biber $texBaseName 
 
 
@@ -58,15 +56,13 @@ biber $texBaseName
 Write-Host "Running pdflatex (second pass)..."
 lualatex $localTexFile   -interaction nonstopmode  
 
-Write-Host "Running pdflatex (third pass)..."
-lualatex $localTexFile   -interaction nonstopmode 
 
 Write-Host "Compilation complete."
 
 
 # Clean up auxiliary files (aux, bbl, bcf, log, xml, gz) in the current directory
 Write-Host "Cleaning up auxiliary files..."
-Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.log, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, -File | Remove-Item -Force
+Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, -File | Remove-Item -Force
 
 Write-Host "Cleanup complete."
 
