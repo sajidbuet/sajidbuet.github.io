@@ -4,10 +4,10 @@ authors:
 - Zhaxylyk A. Kudyshev
 - Ludmila J. Prokopeva
 - Maowen Song
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2025-04-18T09:50:40.347111Z'
+publishDate: '2025-04-22T03:28:11.838917Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium

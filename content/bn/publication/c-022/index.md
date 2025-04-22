@@ -1,11 +1,11 @@
 ---
-title: VO2-based All-optical Reflection Modulator for 2μm Wave Band
+title: VO2-based All-optical Reflection Modulator for 2$μ$m Wave Band
 authors:
 - Md Asif Hossain Bhuiyan
 - Shamima Akter Mitu
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-04-18T09:50:40.305457Z'
+publishDate: '2025-04-22T03:28:11.823173Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE Photonics Conference (IPC)*'

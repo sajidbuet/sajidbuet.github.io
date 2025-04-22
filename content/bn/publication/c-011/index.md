@@ -5,12 +5,12 @@ authors:
 - Jongbum Kim
 - Yang Zhao
 - Aveek Dutta
-- Sajid M. Choudhury
+- Sajid Muhaimin Choudhury
 - Alexander V. Kildishev
 - Andrea Alu
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2025-04-18T09:50:40.407548Z'
+publishDate: '2025-04-22T03:28:11.870315Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
@@ -22,7 +22,4 @@ abstract: Transparent Conducting Oxides (TCOs) enable the realization of practic
   light into circularly polarized light.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2014-FF2C.2
 ---

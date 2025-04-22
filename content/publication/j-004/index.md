@@ -1,10 +1,10 @@
 ---
 title: Multiport Analysis of Hexagonal Patch Antenna
 authors:
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - MA Matin
 date: '2013-01-01'
-publishDate: '2025-04-18T09:50:37.940944Z'
+publishDate: '2025-04-22T03:28:10.531772Z'
 publication_types:
 - article-journal
 publication: '*IJECCT*'

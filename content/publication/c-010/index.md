@@ -4,12 +4,12 @@ authors:
 - Jongbum Kim
 - Babak Memarzadeh
 - Aveek Dutta
-- Sajid M. Choudhury
+- Sajid Muhaimin Choudhury
 - Alexander V. Kildishev
 - Hossein Mosallaei
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2025-04-18T09:50:38.188785Z'
+publishDate: '2025-04-22T03:28:10.639537Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
@@ -20,7 +20,4 @@ abstract: A metal/dielectric multilayered metasurface can be used to engineer th
   materials offers the design flexibility for tuning the plasmonic resonance.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2014-FW1K.4
 ---

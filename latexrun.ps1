@@ -51,23 +51,21 @@ if ($texDir -and $texDir -ne "") {
 
 
 # Run pdflatex (first pass) to generate the .aux and .bcf files
-Write-Host "Running pdflatex (first pass)..."
-pdflatex $localTexFile   -interaction nonstopmode 
+Write-Host "Running lualatex (first pass)..."
+lualatex $localTexFile   -interaction nonstopmode 
 
 # Run biber to process the bibliography (instead of bibtex)
-Write-Host "Running bibtex..."
-bibtex $texBaseName
-
+Write-Host "Running biber..."
 biber $texBaseName 
 
 
 
 # Run pdflatex two more times to resolve references and bibliography
 Write-Host "Running pdflatex (second pass)..."
-pdflatex $localTexFile   -interaction nonstopmode  
+lualatex $localTexFile   -interaction nonstopmode  
 
 Write-Host "Running pdflatex (third pass)..."
-pdflatex $localTexFile   -interaction nonstopmode 
+lualatex $localTexFile   -interaction nonstopmode 
 
 Write-Host "Compilation complete."
 

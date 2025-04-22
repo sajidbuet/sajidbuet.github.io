@@ -2,13 +2,13 @@
 title: Experimental Realization of Color Hologram Using Pancharatnam-Berry Phase Manipulating
   Metasurface
 authors:
-- Sajid M. Choudhury
+- Sajid Muhaimin Choudhury
 - Amr Shaltout
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-04-18T09:50:38.142421Z'
+publishDate: '2025-04-22T03:28:10.608109Z'
 publication_types:
 - paper-conference
 publication: '*Conference on Lasers and Electro-Optics*'
@@ -19,7 +19,4 @@ abstract: We design and fabricate a Pancharatnam-Berry phase manipulating metasu
   source.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2016-FF1D.8
 ---
