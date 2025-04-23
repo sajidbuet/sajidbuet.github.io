@@ -1,0 +1,37 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.blg'
+[107] biber-MSWIN64:340> INFO - === 
+[146] Biber.pm:420> INFO - Reading 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bcf'
+[249] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[280] Biber.pm:4463> INFO - Processing section 0
+[291] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 0
+[346] bibtex.pm:1713> INFO - LaTeX decoding ...
+[431] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[821] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[822] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[822] Biber.pm:4283> INFO - Sorting list 'ydnt/global/FF44570ACA8241914870AFBC310CDB85/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[822] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[935] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[935] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[935] Biber.pm:4283> INFO - Sorting list 'ydnt/global/0D61F8370CAD1D412F80B84D143E1257/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[935] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1045] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1045] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1045] Biber.pm:4283> INFO - Sorting list 'ydnt/global/44C29EDB103A2872F519AD0C9A0FDAAA/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1045] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1167] Biber.pm:4283> INFO - Sorting list 'ydnt/global/02129BB861061D1A052C592E2DC6B383/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1167] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1281] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1281] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1281] Biber.pm:4283> INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1281] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1349] bbl.pm:676> INFO - Writing 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bbl' with encoding 'UTF-8'
+[1560] bbl.pm:779> INFO - Output to c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bbl
+[1569] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_38ZX\4cba211c7098ce6d56874590d4a06a86_34584.utf8, line 281, warning: 1 characters of junk seen at toplevel
+[1569] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_38ZX\4cba211c7098ce6d56874590d4a06a86_34584.utf8, line 300, warning: 1 characters of junk seen at toplevel
+[1570] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_38ZX\4cba211c7098ce6d56874590d4a06a86_34584.utf8, line 700, warning: 31 characters of junk seen at toplevel
+[1570] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_38ZX\4cba211c7098ce6d56874590d4a06a86_34584.utf8, line 763, warning: 29 characters of junk seen at toplevel
+[1570] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_38ZX\4cba211c7098ce6d56874590d4a06a86_34584.utf8, line 780, warning: 28 characters of junk seen at toplevel
+[1570] Biber.pm:133> INFO - WARNINGS: 5
