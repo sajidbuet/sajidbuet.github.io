@@ -6,7 +6,7 @@ Write-Host " "
 Write-Host "Compile the CV, update publications in bib, compile hugoblox site, and make a zip of the public folder"
 Write-Host " "
 # set updatelatex =1 if you have updated the bib or tex file for CV.
-$updatelatex = 1
+$updatelatex = 0
 if ($updatelatex) {
 
 Write-Host "Executing LaTeX run in /cv/ folder"
@@ -27,6 +27,7 @@ Write-Host "       ** cvupdate-1: Copy $sourceFile into the $destinationFolder *
 if (!(Test-Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder -Force
 }
+
 
 # Copy the file and overwrite if it already exists
 Copy-Item -Path $sourceFile -Destination $destinationFile -Force
@@ -84,6 +85,12 @@ academic import $bibFile $pubFolder --compact --overwrite
 
 Write-Host "          Academic import completed successfully for bn."
 Remove-Item "papers.bib"
+}
+
+else {
+Write-Host "Not updating cv."
+Write-Host "If you have updated the bib or tex file for CV, or want to update the citation numbers, "
+Write-Host "Set updatelatex =1  in the ps1 file"
 }
 
 

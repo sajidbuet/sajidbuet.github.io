@@ -5,7 +5,7 @@ authors:
 - Soikot Sarker
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2025-04-24T19:05:08.240916Z'
+publishDate: '2025-04-24T19:14:21.729636Z'
 publication_types:
 - manuscript
 abstract: The hybrid metal-dielectric nanostructures (HMDN) are promising candidates
