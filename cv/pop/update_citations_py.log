@@ -1,6 +1,0 @@
-2025-04-23 23:33:30,363 - INFO - Loading CSV file: PopCites.csv
-2025-04-23 23:33:30,371 - INFO - Loading BibTeX file: papers.bib
-2025-04-23 23:33:30,507 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
-2025-04-23 23:33:30,509 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
-2025-04-23 23:33:30,509 - INFO - Total entries updated: 0
-2025-04-23 23:33:30,514 - INFO - Successfully wrote updates to BibTeX file: papers.bib

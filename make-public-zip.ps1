@@ -9,7 +9,7 @@ Write-Host " "
 $updatelatex = 1
 if ($updatelatex) {
 
-Write-Host "Executing LaTeX run"
+Write-Host "Executing LaTeX run in /cv/ folder"
 Write-Host "latexrun log is saved as latexmk.log "
 cd cv
 ./latexrun.ps1 > latexmk.log

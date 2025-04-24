@@ -24,9 +24,8 @@ Welcome to the repository for my personal website [sajid.buet.ac.bd](https://saj
 The repository includes several scripts to facilitate various tasks:
 
 - **PowerShell Scripts (`.ps1`):**
-  - `ac-import.ps1`: Automates the import of academic publications into the website.
-  - `full-compile-buet.ps1`: Compiles the site with specific settings for BUET.
-  - `latexrun.ps1`: Processes LaTeX files, converting them to web-friendly formats.
+  - `make-public-zip.ps1`: Runs `latexrun.ps1`, runs academic file converter, hugo and zips public folder.
+  - `latexrun.ps1`: Automatically runs publish or perish to update citations, updates profile metrics and graph and runs latex compiler to create cv.pdf.
 
 - **Batch Scripts (`.BAT`):**
   - `gitcommit.BAT`: Stages all changes, commits with a message, and pushes to the repository.
