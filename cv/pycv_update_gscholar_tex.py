@@ -105,7 +105,7 @@ def main():
     )
 
     # Update bar chart coordinates
-    replacement = "           addplot[fill=gray] coordinates { " + coordinates_str + " };"
+    replacement = "addplot[fill=gray] coordinates { " + coordinates_str + " };"
     content = re.sub(r"addplot\[fill=gray\] coordinates \{[^}]*\};", replacement, content)
 
 

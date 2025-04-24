@@ -1,8 +1,8 @@
-2025-04-25 00:37:18,153 - INFO - Loading CSV file: PopCites.csv
-2025-04-25 00:37:18,169 - INFO - Loading BibTeX file: papers.bib
-2025-04-25 00:37:18,297 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
-2025-04-25 00:37:18,297 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
-2025-04-25 00:37:18,297 - WARNING - Entry 'X02' is missing 'citesurl'. Skipping.
-2025-04-25 00:37:18,297 - WARNING - Entry 'X03' is missing 'citesurl'. Skipping.
-2025-04-25 00:37:18,297 - INFO - Total entries updated: 0
-2025-04-25 00:37:18,313 - INFO - Successfully wrote updates to BibTeX file: papers.bib
+2025-04-25 00:50:07,797 - INFO - Loading CSV file: PopCites.csv
+2025-04-25 00:50:07,797 - INFO - Loading BibTeX file: papers.bib
+2025-04-25 00:50:07,924 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
+2025-04-25 00:50:07,924 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
+2025-04-25 00:50:07,924 - WARNING - Entry 'X02' is missing 'citesurl'. Skipping.
+2025-04-25 00:50:07,924 - WARNING - Entry 'X03' is missing 'citesurl'. Skipping.
+2025-04-25 00:50:07,924 - INFO - Total entries updated: 0
+2025-04-25 00:50:07,940 - INFO - Successfully wrote updates to BibTeX file: papers.bib
