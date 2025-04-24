@@ -13,7 +13,7 @@ authors:
 - Michael Chen
 - Nikolay I Zheludev
 - Nikitas Papasimakis
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Zhaxylyk A Kudyshev
 - Soham Saha
 - Harsha Reddy
@@ -35,7 +35,7 @@ authors:
 - Sergei Tretyakov
 - Christophe Craeye
 date: '2019-01-01'
-publishDate: '2025-04-18T09:50:37.799215Z'
+publishDate: '2025-04-24T18:37:37.480498Z'
 publication_types:
 - article-journal
 publication: '*Journal of Optics*'

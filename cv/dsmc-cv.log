@@ -1,11 +1,7 @@
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  23 APR 2025 23:49
+This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  25 APR 2025 00:37
  restricted system commands enabled.
- file:line:error style messages enabled.
-**c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/ds
-mc-cv
-
-(c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsm
-c-cv.tex
+**dsmc-cv.tex -interaction nonstopmode
+(./dsmc-cv.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
 Lua module: luaotfload 2024-02-14 v3.28 Lua based OpenType font support
@@ -1532,15 +1528,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
 (./gscholar.tex
 LaTeX Font Info:    Trying to load font information for TU+academicons on input
- line 16.
+ line 18.
 
 (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/tuacademico
 ns.fd)
-Package pgfplots info on input line 51: Using 'lua backend=false' for plot 0 (t
-ype 'pgfplothandlerybar'): LUA does not support xtick=data (yet).
+
+Package pgfplots Warning: You have an axis with empty range (in direction x). R
+eplacing it with a default range and clearing all plots. on input line 51.
+
+ [warning /pgfplots/warning/empty range cleared axis]
 )
 
-[2]
+[2
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no d (U+0064) in font nullfont!
+Missing character: There is no d (U+0064) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
+Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no [ (U+005B) in font nullfont!
+Missing character: There is no f (U+0066) in font nullfont!
+Missing character: There is no i (U+0069) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
+Missing character: There is no l (U+006C) in font nullfont!
+Missing character: There is no = (U+003D) in font nullfont!
+Missing character: There is no g (U+0067) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no y (U+0079) in font nullfont!
+Missing character: There is no ] (U+005D) in font nullfont!
+Missing character: There is no c (U+0063) in font nullfont!
+Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no o (U+006F) in font nullfont!
+Missing character: There is no r (U+0072) in font nullfont!
+Missing character: There is no d (U+0064) in font nullfont!
+Missing character: There is no i (U+0069) in font nullfont!
+Missing character: There is no n (U+006E) in font nullfont!
+Missing character: There is no a (U+0061) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no e (U+0065) in font nullfont!
+Missing character: There is no s (U+0073) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 8 (U+0038) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 4 (U+0034) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 9 (U+0039) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 6 (U+0036) in font nullfont!
+Missing character: There is no 7 (U+0037) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 5 (U+0035) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 7 (U+0037) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 7 (U+0037) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 3 (U+0033) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 6 (U+0036) in font nullfont!
+Missing character: There is no 8 (U+0038) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 4 (U+0034) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no 8 (U+0038) in font nullfont!
+Missing character: There is no 4 (U+0034) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ( (U+0028) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 2 (U+0032) in font nullfont!
+Missing character: There is no 5 (U+0035) in font nullfont!
+Missing character: There is no , (U+002C) in font nullfont!
+Missing character: There is no 5 (U+0035) in font nullfont!
+Missing character: There is no 7 (U+0037) in font nullfont!
+Missing character: There is no ) (U+0029) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
 
 [3]
 
@@ -1560,31 +1667,21 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'dsmc-cv.run.xml'.
 
 \openout1 = dsmc-cv.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 49644 strings out of 475684
+ 49542 strings out of 475684
  125165,2848258 words of node,token memory allocated
- 933 words of node memory still in use:
-   7 hlist, 3 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 22 attribute, 110 glue_spe
-c, 22 attribute_list, 2 write, 11 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 2:2787,3:1201,4:222,5:692,6:127,7:12055,8:62,9:756,10:20,11:823
- 71410 multiletter control sequences out of 65536+600000
+ 953 words of node memory still in use:
+   7 hlist, 3 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 24 attribute, 110 glue_spe
+c, 24 attribute_list, 2 write, 13 pdf_action, 2 pdf_colorstack nodes
+   avail lists: 2:2747,3:1150,4:254,5:701,6:125,7:11630,8:62,9:749,10:20,11:812
+ 71308 multiletter control sequences out of 65536+600000
  58 fonts using 4657655 bytes
- 114i,13n,110p,2260b,2425s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,13n,110p,2214b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman7-
 bold.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/
 lmroman7-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentyp
@@ -1604,10 +1701,11 @@ al/programs/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><c:/users/saji
 d/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><C:/
 Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr9.pfb>
-Output written on dsmc-cv.pdf (6 pages, 148772 bytes).
+/cmmi9.pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr9.pfb>
+Output written on dsmc-cv.pdf (6 pages, 157319 bytes).
 
-PDF statistics: 315 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 321 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 131072)
  104 words of extra memory for PDF output out of 10000 (max. 100000000)
 

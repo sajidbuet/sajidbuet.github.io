@@ -4,7 +4,7 @@ authors:
 - Maowen Song
 - Di Wang
 - Samuel Peana
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Piotr Nyga
 - Zhaxylyk A. Kudyshev
 - Honglin Yu
@@ -12,10 +12,11 @@ authors:
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 date: '2019-01-01'
-publishDate: '2025-04-18T09:50:40.101251Z'
+publishDate: '2025-04-24T18:37:39.636990Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'
+doi: 10.1063/1.5110051
 abstract: Since ancient times, plasmonic structural coloring has inspired humanity;
   glassmakers achieved vibrant colors by doping glass with metal nanoparticles to
   craft beautiful objects such as the Roman Lycurgus cup and stained glass. These
@@ -38,7 +39,4 @@ abstract: Since ancient times, plasmonic structural coloring has inspired humani
   research area.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://aip.scitation.org/doi/10.1063/1.5110051
 ---

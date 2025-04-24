@@ -6,7 +6,7 @@ authors:
 - Tanvir Ahmed
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-04-18T09:50:39.930595Z'
+publishDate: '2025-04-24T18:37:39.793531Z'
 publication_types:
 - article-journal
 publication: '*NanoScale Advances*'
@@ -23,7 +23,4 @@ abstract: Biomimicry has been utilized in many branches of science and engineeri
   made in the field of nanotechnology with the integration of biomimicry.
 tags:
 - misc
-links:
-- name: URL
-  url: https://doi.org/10.1039/D2NA00571A
 ---

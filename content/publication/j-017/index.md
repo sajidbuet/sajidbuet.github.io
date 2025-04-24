@@ -1,12 +1,12 @@
 ---
-title: TiN-GST-TiN all-optical reflection modulator for the 2μm wave band reaching
+title: TiN-GST-TiN all-optical reflection modulator for the 2$μ$m wave band reaching
   85% efficiency
 authors:
 - Md Asif Hossain Bhuiyan
 - Shamima Akter Mitu
 - Sajid Muhaimin Choudhury
 date: '2022-01-01'
-publishDate: '2025-04-18T09:50:37.705457Z'
+publishDate: '2025-04-24T18:37:37.575617Z'
 publication_types:
 - article-journal
 publication: '*Applied Optics*'

@@ -1,7 +1,15 @@
+# pycv_update_citations_bib.py
 import pandas as pd
 import bibtexparser
 import logging
 import os
+
+from bibtexparser.bparser import BibTexParser
+from bibtexparser.bwriter import BibTexWriter
+
+# Custom parser that keeps non-standard types like @patent
+parser = BibTexParser(common_strings=True)
+parser.ignore_nonstandard_types = False  # <-- This is critical!
 
 # Configure logging
 logging.basicConfig(
@@ -14,7 +22,7 @@ logging.basicConfig(
 def main():
     csv_path = 'PopCites.csv'
     bib_path = 'papers.bib'
-
+    
     # Check if files exist
     if not os.path.exists(csv_path):
         logging.error(f"CSV file not found: {csv_path}")
@@ -41,7 +49,7 @@ def main():
     logging.info(f"Loading BibTeX file: {bib_path}")
     try:
         with open(bib_path, 'r', encoding='utf-8') as bibtex_file:
-            bib_database = bibtexparser.load(bibtex_file)
+            bib_database = bibtexparser.load(bibtex_file, parser=parser)
     except Exception as e:
         logging.exception(f"Failed to read BibTeX file: {e}")
         return
@@ -71,13 +79,16 @@ def main():
             logging.warning(f"No matching 'CitationURL' found in CSV for entry '{entry_id}'.")
 
     logging.info(f"Total entries updated: {updated_entries}")
-
+    # Custom writer that also keeps all fields and entries
+    writer = BibTexWriter()
+    writer.indent = '    '  # optional: pretty formatting
+    writer.order_entries_by = None  # optional: keep original order
     try:
         with open(bib_path, 'w', encoding='utf-8') as bibtex_file:
-            bibtexparser.dump(bib_database, bibtex_file)
+            bibtexparser.dump(bib_database, bibtex_file, writer=writer)
         logging.info(f"Successfully wrote updates to BibTeX file: {bib_path}")
     except Exception as e:
         logging.exception(f"Failed to write to BibTeX file: {e}")
-
+    print ("Execution Successful! Check update_citations_py.log")
 if __name__ == "__main__":
     main()

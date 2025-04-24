@@ -1,19 +1,19 @@
 ---
-title: Polarization insensitive electrically reconfigurable meta-lens for the 2 μm
+title: Polarization insensitive electrically reconfigurable meta-lens for the 2 $μ$m
   wavelength
 authors:
 - Md. Asif Hossain Bhuiyan
 - Purbayan Das
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2025-04-18T09:50:39.855442Z'
+publishDate: '2025-04-24T18:37:39.868930Z'
 publication_types:
 - article-journal
 publication: '*Opt. Mater. Express*'
 doi: 10.1364/OME.540435
-abstract: The conventional fiber communication band of 1.55 μm is reaching its limit
+abstract: The conventional fiber communication band of 1.55 $μ$m is reaching its limit
   attributable to the escalation in bandwidth requirements for high-speed and bulk
-  data transmission. Researchers are exploring a 2 μm waveband for its higher capacity
+  data transmission. Researchers are exploring a 2 $μ$m waveband for its higher capacity
   and low attenuation as a solution for the next generation communication technologies.
   Accordingly, here we report an optically engineered metasurface for this waveband
   for fiber coupling or lensing. The structure is polarization-insensitive and dynamically
@@ -26,12 +26,9 @@ abstract: The conventional fiber communication band of 1.55 μm is reaching its 
   achieved a modulation depth of 90%. The focusing efficiency is as high as 76% and
   the ON-OFF switching ratio of the optimized lens is 26 dB. The multilayer insertion
   of thin IST ensures uniform phase transition with switching energy as low as 232.98
-  nJ/μm^2. Thus, with remarkable performance at 2 μm and dynamic multifunctionality,
+  nJ/$μ$m^2. Thus, with remarkable performance at 2 $μ$m and dynamic multifunctionality,
   our proposed device will revolutionize the upcoming telecommunication technologies
   and beyond.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://opg.optica.org/ome/abstract.cfm?URI=ome-14-12-2830
 ---

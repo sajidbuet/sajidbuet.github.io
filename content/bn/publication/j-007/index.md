@@ -2,17 +2,18 @@
 title: Pancharatnam–Berry Phase Manipulating Metasurface for Visible Color Hologram
   Based on Low Loss Silver Thin Film
 authors:
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Urcan Guler
 - Amr Shaltout
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2025-04-18T09:50:40.147089Z'
+publishDate: '2025-04-24T18:37:39.607097Z'
 publication_types:
 - article-journal
 publication: '*Advanced Optical Materials*'
+doi: 10.1002/adom.201700196
 abstract: This study demonstrates visible color hologram using a plasmonic metasurface.
   The metasurface is fabricated by perforating nanoslits in a 50 nm thick monocrystalline
   silver film that is ultrasmooth and has ultralow loss compared to conventional polycrystalline
@@ -25,7 +26,4 @@ abstract: This study demonstrates visible color hologram using a plasmonic metas
   ultracompact polychromatic plasmonic metasurfaces for advanced light manipulation.
 tags:
 - photonics
-links:
-- name: URL
-  url: 10.1002/adom.201700196
 ---

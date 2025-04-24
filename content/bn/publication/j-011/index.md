@@ -5,12 +5,12 @@ authors:
 - Harsha Reddy
 - Deesha Shah
 - Zhaxylyk A Kudyshev
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Di Wang
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2025-04-18T09:50:40.065859Z'
+publishDate: '2025-04-24T18:37:39.666218Z'
 publication_types:
 - article-journal
 publication: '*Nanoscale*'
@@ -21,10 +21,6 @@ abstract: Active control over the flow of light is highly desirable because of i
   titanium nitride (TiN) film, we numerically demonstrate deep phase modulation (PM)
   in an electrically tunable gold‑strip/TiN‑film hybrid metasurface. A $337^∘$ PM
   is achieved at $1.550,μmathrmm$ with a $3%$ carrier‑density change in the TiN film.
-  We also demonstrate
 tags:
 - photonics
-links:
-- name: URL
-  url: https://pubs.rsc.org/en/content/articlehtml/2019/nr/c9nr00205g
 ---

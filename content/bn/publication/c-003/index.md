@@ -7,7 +7,7 @@ authors:
 - Md. Gaffar
 - M. A. Matin
 date: '2009-01-01'
-publishDate: '2025-04-22T03:28:11.933790Z'
+publishDate: '2025-04-24T18:37:39.224477Z'
 publication_types:
 - paper-conference
 publication: '*2009 Loughborough Antennas & Propagation Conference*'

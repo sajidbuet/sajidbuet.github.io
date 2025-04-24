@@ -6,10 +6,10 @@ authors:
 - Fariba Islam
 - Sajid Muhaimin Choudhury
 date: '2021-01-01'
-publishDate: '2025-04-18T09:50:40.005443Z'
+publishDate: '2025-04-24T18:37:39.720840Z'
 publication_types:
 - article-journal
-publication: '*Sensing and Biosensing Research*'
+publication: '*Sensing and Bio-Sensing Research*'
 doi: 10.1016/j.sbsr.2021.100429
 abstract: 'Due to changes in our climate and constant loss of habitat for animals,
   new pathogens for humans are constantly erupting. SARS-CoV-2 virus, become so infectious

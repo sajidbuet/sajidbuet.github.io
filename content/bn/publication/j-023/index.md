@@ -6,7 +6,7 @@ authors:
 - Md. Rasidul Islam
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-18T09:50:39.838787Z'
+publishDate: '2025-04-24T18:37:39.888548Z'
 publication_types:
 - article-journal
 publication: '*Physica B: Condensed Matter*'
@@ -26,7 +26,4 @@ abstract: Researchers have shown considerable interest in two-dimensional silico
   up to 3% and under tensile strain up to +6.
 tags:
 - renewable
-links:
-- name: URL
-  url: https://www.sciencedirect.com/science/article/pii/S0921452624010111
 ---

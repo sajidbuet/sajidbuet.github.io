@@ -2,7 +2,7 @@
 title: Controlling the Polarization State of Light with Plasmonic Metal Oxide Metasurface
 authors:
 - Jongbum Kim
-- Sajid Choudhury
+- Sajid Muhaimin Choudhury
 - Clayton DeVault
 - Yang Zhao
 - Alexander V Kildishev
@@ -10,10 +10,11 @@ authors:
 - Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2025-04-18T09:50:37.922176Z'
+publishDate: '2025-04-24T18:37:37.368891Z'
 publication_types:
 - article-journal
 publication: '*ACS Nano*'
+doi: 10.1021/acsnano.6b03937
 abstract: Conventional plasmonic materials, namely, noble metals, hamper the realization
   of practical plasmonic devices due to their intrinsic limitations, such as lack
   of capabilities to tune in real time their optical properties, failure to assimilate
@@ -29,11 +30,7 @@ abstract: Conventional plasmonic materials, namely, noble metals, hamper the rea
   arrays of orthogonal nanorod pairs. Our Ga:ZnO metasurfaces provide a high degree
   of circular polarization across two distinct optical bands in the NIR. Flexible
   broadband tunability of the QWP metasurfaces is achieved by significant shifts of
-  their optical bands without any degradation in performance after a post‑annealing
-  process up to $450,^∘mathrmC$.
+  their optical bands.
 tags:
 - photonics
-links:
-- name: URL
-  url: http://pubs.acs.org/doi/full/10.1021/acsnano.6b03937
 ---

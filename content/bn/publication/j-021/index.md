@@ -6,7 +6,7 @@ authors:
 - Kaniz Fatema Supti
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2025-04-18T09:50:39.872116Z'
+publishDate: '2025-04-24T18:37:39.853230Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'
@@ -28,7 +28,4 @@ abstract: Photonic topological insulators provide unidirectional, robust, wavele
   electrically controlled optical communication systems and integrated photonic circuits.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://opg.optica.org/oe/abstract.cfm?URI=oe-32-26-45786
 ---

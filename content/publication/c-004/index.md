@@ -7,7 +7,7 @@ authors:
 - M. Gaffar
 - M. A. Matin
 date: '2010-01-01'
-publishDate: '2025-04-22T03:28:10.702407Z'
+publishDate: '2025-04-24T18:37:37.035202Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of Progress in Electromagnetic Research Symposium PIERS,

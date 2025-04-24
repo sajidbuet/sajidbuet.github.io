@@ -6,7 +6,7 @@ authors:
 - Md. Redwanul Karim
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-17T10:08:23.353166Z'
+publishDate: '2025-04-24T18:37:37.729843Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'
@@ -39,7 +39,4 @@ abstract: In this article, we report, for the first time, broadband multifunctio
   spectral bands.
 tags:
 - photonics
-links:
-- name: URL
-  url: https://www.sciencedirect.com/science/article/pii/S0030399224011885
 ---
