@@ -6,7 +6,7 @@ authors:
 - Md. Redwanul Karim
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-04-24T18:50:29.730222Z'
+publishDate: '2025-04-24T19:05:08.202000Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'

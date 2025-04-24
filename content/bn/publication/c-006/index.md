@@ -7,7 +7,7 @@ authors:
 - Sajid Muhaimin Choudhury
 - M. A. Matin
 date: '2010-01-01'
-publishDate: '2025-04-24T18:50:29.122045Z'
+publishDate: '2025-04-24T19:05:07.600175Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
