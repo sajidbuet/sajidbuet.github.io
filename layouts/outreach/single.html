@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+<div class="pub">
+
+  {{ partial "page_header_teaching.html" . }}
+  {{ $date := .Lastmod | time.Format site.Params.locale.date_format }}
+  <div class="article-container">
+{{ partial "breadcrumbs.html" . }}
+    <div class="article-metadata">
+      <span class="article-date">{{$date}}</span>
+    </div>
+
+    
+
+    <div class="article-style">
+      {{ .Content }}
+    </div>
+
+    {{ partial "page_footer" . }}
+
+  </div>
+</div>
+{{- end -}}

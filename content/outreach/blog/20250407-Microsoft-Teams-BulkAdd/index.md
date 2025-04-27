@@ -69,7 +69,7 @@ Unzip the file and extract the `Teams-bulk-add.ps1` file, keep it in same folder
 Modify the `TeamDisplayName` variable as your team's name:
 ![TeamCreation](TeamCreation.png)
 
-```powershell {linenos=inline hl_lines=[2] style=emacs}
+```powershell 
 # Define Team display name
 $TeamDisplayName = "EEE 416 (Jan 2025) B1 + B2"
 

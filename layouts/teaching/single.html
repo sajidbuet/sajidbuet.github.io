@@ -4,6 +4,7 @@
 
   {{ partial "page_header_teaching.html" . }}
   <div class="article-container">
+{{ partial "breadcrumbs.html" . }}
     <h4>{{ .Params.summary | markdownify | emojify }}</h4>
 
     {{ if .Params.course_type }}

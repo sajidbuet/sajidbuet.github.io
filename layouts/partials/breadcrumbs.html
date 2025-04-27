@@ -1,0 +1,10 @@
+<ul id="breadcrumbs">
+    {{- range .Ancestors.Reverse }}
+    <li><a href="{{ .RelPermalink }}">    {{- if eq .Title "" -}}
+        {{ partial "blox-core/functions/get_page_title" . }}
+    {{- else -}}
+        {{ .Title }}
+    {{- end -}}</a></li>
+    {{- end }}
+    <li class="nostart"><a href="{{ .RelPermalink }}">◎<i class="fas fa-page"></i></a></li>
+</ul>
