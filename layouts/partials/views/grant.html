@@ -1,0 +1,35 @@
+{{ $item := .item }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  
+  {{ $segments := split (trim $item.RelPermalink "/") "/" }}
+  {{ $lastIndex := sub (len $segments) 1 }}
+{{ $code := replaceRE "[-]" "" (index $segments $lastIndex) }}
+{{ $folderid := print "[" (upper (substr $code 0 1)) (substr $code 1) "]" }}
+
+  <b>{{print $folderid}}</b>
+  {{/* APA Style */}}
+  {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
+
+  <span class="article-metadata li-cite-author">
+    {{$item.Params.grant_position}}
+  </span>, 
+     <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>, 
+     Funded by: <a href="{{ $item.Params.funding_agency_url }}">{{ $item.Params.funding_agency }}</a>,  {{ $item.Params.funding_agency_address }}
+(Grant Duration: {{ (time.AsTime $item.Params.start_date).Format "02/01/2006" }} - {{ (time.AsTime $item.Params.end_date).Format "02/01/2006" }})
+  {{ if $item.Params.publication_short }}
+    {{- $item.Params.publication_short | markdownify -}}.
+  {{ else if $item.Params.publication }}
+    {{- $item.Params.publication | markdownify -}}.
+  {{ end }}
+  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }} 
+    <a class="btn btn-page-header btn-sm" href="{{ $item.Params.doi}}" target="_blank" rel="noopener">
+    <span class="__dimensions_badge_embed__" data-doi="{{ $item.Params.doi}}" data-hide-zero-citations="true" data-legend="hover-bottom" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+  </a>
+  </p>
+
+
+
+  {{ end }}
+</div>
