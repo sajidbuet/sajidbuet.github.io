@@ -1,0 +1,134 @@
+/* ─────────  Responsive + Modern Aesthetics  ───────── */
+
+/* ---------- Global tweaks ---------- */
+:root{
+    --pri:#c40000;
+    --bg:#fafafa;
+    --txt:#222;
+    --grey:#e6e6e6;
+    --seat-w:clamp(44px,5.5vw,56px);
+    --gap-h:clamp(8px,1vw,12px);
+    font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  
+  /* ─── overall page alignment ─── */
+body{margin:0 auto;max-width:1100px;text-align:center}
+
+/* header control row ভিতরের select / button হারিজন্টালি সেন্টার */
+header{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+header h2{flex:100%;margin:.4rem 0}
+  
+  /* ---------- Stopwatch panel ---------- */
+  #timerBox{
+    position:fixed;
+    left:50%; top:1rem;            /* horizontally centre */
+    transform:translateX(-50%);
+    box-shadow:0 4px 16px rgba(0,0,0,.98);
+  }
+  
+  #timerBox h3{margin:0 0 .5rem;text-align:center;color:var(--pri);font-size:1.2rem}
+  #timerBox svg{display:block;margin:0 auto;max-width:100%}
+  #toggleTimerBtn{
+    position:fixed;right:1rem;top:1rem;
+    padding:.4rem .7rem;font-size:.85rem;
+    cursor:pointer;border:1px solid #666;border-radius:6px;
+  }
+
+  #setRow,#timerBox .btnRow{margin-top:.6rem;text-align:center}
+  #timerBox button{
+    margin:.25rem .25rem;padding:.35rem .8rem;
+    font-size:.9rem;border:none;border-radius:6px;
+    background:#ececec;cursor:pointer;transition:.15s;
+  }
+  #timerBox button:hover:not(:disabled){background:#ddd}
+  #timerBox button:disabled{opacity:.45;cursor:not-allowed}
+  #timerBox .quick{background:#f1f1f1;border:1px solid #ccc;font-size:.8rem;padding:.3rem .7rem}
+  #timerBox input[type=number]{
+    width:60px;text-align:right;padding:.2rem .3rem;
+    border:1px solid #ccc;border-radius:4px;
+  }
+  
+  /* date & end‑time text */
+  #dateTime,#endTime{
+    margin-top:.3rem;text-align:center;font-size:1.5rem;user-select:none;
+  }
+  #endTime{color:var(--pri)}
+  
+  /* ----- pie‑chart text ----- */
+  #timeLabel{user-select:none}
+
+  /* plan heading centre */
+#planHolder h1{text-align:center;margin-top:1.4rem}
+  
+  /* ---------- Seat‑plan table ---------- */
+  table{
+    border-collapse:separate;
+    border-spacing:0 var(--gap-h);
+    margin:1rem auto 2rem;
+  }
+  td.seat{
+    width:var(--seat-w);height:clamp(36px,4.2vw,48px);
+    border:1px solid #000;border-radius:4px;
+    text-align:center;vertical-align:top;background:#fff;
+    font-weight:600;font-size:1.5rem;padding-top:4px;line-height:1.05;
+  }
+  .seat-num{display:block}
+  .chair{
+    width:60%;height:32%;margin:.25rem auto 0;background:#666;
+    border-radius:3px 3px 1px 1px;position:relative;
+  }
+  .chair::before,.chair::after{
+    content:"";position:absolute;width:14%;height:18%;
+    background:#666;bottom:-18%;
+  }
+  .chair::before{left:8%}.chair::after{right:8%}
+  
+  .blankcol{border:1px solid #000;width:calc(var(--seat-w)*.9);background:#f8f8f8}
+  .walkway{border:none;width:clamp(48px,7vw,78px);background:var(--grey)}
+  
+  /* ---------- Timer shake when finished ---------- */
+  @keyframes shake{
+    0%,100%{transform:rotate(0)}
+    20%{transform:rotate(3deg)}
+    50%{transform:rotate(-3deg)}
+    80%{transform:rotate(2deg)}
+  }
+  #pie.shake{animation:shake .15s linear infinite}
+  
+  /* ---------- Responsive layout tweaks ---------- */
+  @media(max-width:680px){
+    /* keep stopwatch on top for small screens */
+    #timerBox{position:static;margin:0 auto 1rem;display:block}
+  }
+  
+  /* ─── footer credit ─── */
+.page-footer{
+    margin:2rem 0 1rem;font-size:.85rem;color:#555;
+  }
+  .page-footer a{color:var(--pri);text-decoration:none;border-bottom:1px solid transparent}
+  .page-footer a:hover{border-color:var(--pri)}
+
+  /* ─── force timer panel to be fully opaque ─── */
+#timerBox{
+    background:#ffffff;     /* solid white (or use var(--bg) if you prefer) */
+    opacity:1 !important;   /* make sure no inherited opacity makes it see‑through */
+    backdrop-filter:none;   /* just in case a blur/opacity was applied elsewhere */
+  }
+
+  #toggleTimerBtn,
+#toggleSizeBtn{
+  border:1px solid #666;border-radius:6px;
+  padding:.4rem .7rem;font-size:.85rem;cursor:pointer;
+  background:#f5f5f5;transition:.15s;
+}
+#toggleTimerBtn:hover,
+#toggleSizeBtn:hover{background:#e8e8e8}
+
+/* close (✕) button in the top‑right corner of timerBox */
+#closeTimerBtn{
+    position:absolute; top:6px; right:6px;
+    border:none; background:transparent; font-size:1.2rem;
+    color:#666; cursor:pointer; padding:0; line-height:1;
+  }
+  #closeTimerBtn:hover{color:#c00}
+  
