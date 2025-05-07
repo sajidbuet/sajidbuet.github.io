@@ -26,7 +26,7 @@
 <!-- 614 × 614 pie‑chart  (another +60 %) -->
 <svg id="pie" width="614" height="614" viewBox="0 0 614 614">
   <!-- grey background ring -->
-  <circle  cx="307" cy="307" r="269"
+  <circle  id="remainingmin" cx="307" cy="307" r="269"
            fill="none" stroke="#ddd" stroke-width="61"/>
 
   <!-- red progress ring -->
@@ -75,12 +75,32 @@
   <!-- ───────── Seat‑Plan controls + toggle ───────── -->
   <header>
     <h2 style="display:inline-block">Class Test Administration Tool, Dept of EEE, BUET</h2>
-    <button id="toggleSizeBtn"  style="float:right;margin-top:4px;margin-right:.5rem">
-        Smaller Timer
-      </button>
-    <button id="muteBtn">🔊 Mute</button>
-    <button id="toggleTimerBtn" style="float:right;margin-top:4px">Hide Timer</button>
+    <div class="controls">
+      <button id="toggleTimerBtn" style="float:right;margin-top:4px">Hide Timer</button>
+
     
+    <button id="muteBtn">🔊 Mute</button>
+    <button id="fsToggle" style="float:right;margin-top:4px" aria-label="Toggle Fullscreen">⛶ Fullscreen</button>
+    <button id="themeToggle">🌙 Dark Mode</button>
+    <button id="toggleSizeBtn"  style="float:right;margin-top:4px;margin-right:.5rem">
+      Smaller Timer
+    </button>
+    <!-- new slider wrapper -->
+<div id="scaleControl">
+  <label for="scaleSlider"></label>
+  <input
+    type="range"
+    id="scaleSlider"
+    min="1"
+    max="2"
+    step="0.1"
+    value="1.0"
+  >
+  <span id="scaleValue">1.0×</span>
+</div>
+    
+    
+  </div>
     <br><br>
 
     <!-- (বাকি সেকশন, pattern ইত্যাদি আগের মতো) -->
