@@ -1,4 +1,29 @@
 /* ───────── Seat‑Plan (আগে যেমন) ───────── */
+
+const gong = document.getElementById('gongStart');
+const endBell = document.getElementById('endBell');
+const fiveMinBell = document.getElementById('fiveMinBell'); //fiveMinBell  lastFive
+const lastFive    = document.getElementById('lastFive');
+const pleaseStop = document.getElementById('pleaseStop');
+const muteBtn   = document.getElementById('muteBtn');
+let isMuted = false;
+let fiveMinFired = false;
+// মিউট বাটন ক্লিক হ্যান্ডলার
+muteBtn.addEventListener('click', () => {
+  isMuted = !isMuted;                        // ফ্ল্যাগ টগল
+  endBell.muted = pleaseStop.muted = isMuted;// HTML5 muted প্রপার্টি সেট :contentReference[oaicite:4]{index=4}
+  muteBtn.textContent = isMuted              // বাটন লেবেল আপডেট
+    ? '🔇 Unmute' 
+    : '🔊 Mute';
+  muteBtn.classList.toggle('muted', isMuted);
+});
+
+
+gong.load(); // নেটওয়ার্ক থেকে অবিলম্বে ফেচ করায়
+endBell.load();
+pleaseStop.load();
+lastFive.load();
+fiveMinBell.load();
 const SECTION_CFG = {
   A:{start:1,seats:65,dense:true},B:{start:66,seats:65,dense:true},C:{start:131,seats:65,dense:true},
   A1:{start:1,seats:33,dense:false},A2:{start:34,seats:32,dense:false},
@@ -167,17 +192,28 @@ function updateEndLabel(){endLbl.textContent=endTime?`Ends at ${endTime.toLoca
 /* ---------- controls ---------- */
 function startTimer(){
   if(running) return;
+
   //duration=parseInt(durInput.value,10)*60;
   duration        = (+durInput.value || 10) * 60;
   initialDuration = duration;          // ← freeze here
   remain          = duration;
+
   if(!duration) return;
+  if(duration === 300) fiveMinFired = true;
+  else  fiveMinFired = true;
   remain=duration;
   endTime=new Date(Date.now()+remain*1000);
   running=true;
   startBtn.disabled=true; pauseBtn.disabled=false; resetBtn.disabled=false;
   pie.classList.remove("shake");
   drawPie(); updateEndLabel();
+  try {
+    gong.currentTime = 0;
+    if (isMuted) return; 
+    gong.play();          // Chrome/Edge/FF/Safari
+  } catch (err) {
+    console.warn('Audio autoplay blocked:', err);
+  }
 }
 function pauseTimer(){
   if(!running){ // resume
@@ -200,14 +236,24 @@ function resetTimer(){
 }
 function adjust(sec){
   if(running){
-    //remain = Math.max(0, remain + sec);
-    //duration = Math.max(duration, remain);
     remain   = Math.max(0, remain + sec);     // only tweak the countdown
     endTime  = new Date(Date.now() + remain * 1000);
+    if (!fiveMinFired && remainingSeconds === 300) {
+      fiveMinFired = true;
+      if (!isMuted) {
+        //adjust here //fiveMinBell  lastFive
+        lastFive.currentTime = 0;
+        fiveMinBell.play().catch(err => console.warn('Autoplay blocked:', err));
+        fiveMinBell.addEventListener('ended', () => {
+          lastFive.currentTime = 0;
+          lastFive.play().catch(err => console.warn('Autoplay blocked:', err));
+        }, { once: true });
+      }
+      
+    }
   } else {
     /* timer idle: change the preset duration */
-    //duration = Math.max(0, duration + sec);
-    //remain   = duration;
+
     duration        = Math.max(0, duration + sec);
     initialDuration = duration;               // keep them in sync
     remain          = duration;
@@ -236,7 +282,15 @@ function beep(){
 function finish(){
   running=false; remain=0; drawPie(); updateEndLabel();
   pie.classList.add("shake"); beep();
+
   startBtn.disabled=false; pauseBtn.disabled=true; resetBtn.disabled=false; pauseBtn.textContent="Pause";
+  endBell.currentTime = 0;
+  if (isMuted) return;  
+  endBell.play().catch(err => console.warn('Autoplay blocked:', err));
+  endBell.addEventListener('ended', () => {
+    pleaseStop.currentTime = 0;
+    pleaseStop.play().catch(err => console.warn('Autoplay blocked:', err));
+  }, { once: true });
 }
 
 /* ---------- master second‑tick ---------- */
