@@ -10,7 +10,7 @@ authors:
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2025-04-24T19:14:19.318689Z'
+publishDate: '2025-05-13T16:30:57.679160Z'
 publication_types:
 - article-journal
 publication: '*Photonics Research*'

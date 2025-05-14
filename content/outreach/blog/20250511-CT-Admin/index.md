@@ -3,13 +3,13 @@ Title: Dr. Promptlove- How I Learned to Stop Worrying and Hit Generate - A ChatG
 Placing: 7
 icon: users
 description: How I Learned to Stop Worrying and Love the A.I.
-date: '2025-04-27'
+date: '2025-05-11'
 ---
 
 ### The "Bomb"!
 Stanley Kurbic's [Dr. Strangelove or: How I learned to stop worrying and love the bomb](https://www.imdb.com/title/tt0057012) was a 1964 masterpiece of cinema making. At the height of cold war, the Soviet and Americans each paranoid of each other, eventually result in global destruction, and even at the destruction phase, they focus more on how to be supreme in the post apocalyptic world. 
 
-![promptlove.png](promptlove.png)
+![promptlove.jpg](promptlove.jpg)
 
 2021 saw the rise of generative AI. Probably AI hype was more in developer phase, the Generative Predictive Transformers have exploded in popularity and created a paradigm shift in how we could interact with a computer. Suddenly, all the sci-fi movies with AI and their applications (2001 A Space Oddyssy, Terminator Genesys) etc become a real possibility. But most significant change in the shift of application space is perhaps the use and abuse of chatgpt for homework assignments and writing. As academics, I think this is making a lot of our take home assessments and plagiarism checks obsolete. There needs to be more research on how It would also cause a long term effect on the human race, but current research seem to suggest that it negetvely impacts our cognitive skills, loss of memory and reduces mental engagement [Dergaa (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11020077/). The AI is also making us hyper-productive. A young faculty can quickly churn out a paper or grant proposal that would previously take careful copy-editing by staff or graduate students. Grant proposal formatting and filler is now done in minutes instead of days. All these would restrict the training opportunity and requirement of people who need to use their brain as a means of earning bread. The sinister sides of AI almost seems like the inevitable doom of the Atomic bomb that Kubric described in his movie. The future seems bleak for the human race. 
 

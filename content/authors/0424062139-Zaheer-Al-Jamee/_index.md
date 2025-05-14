@@ -23,10 +23,13 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: Student ID 
 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
   - Grad Students
 ---
+* **Student ID:** 0424062139
+
+* **Major Group:** Power

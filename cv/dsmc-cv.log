@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  25 APR 2025 01:14
+This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  13 MAY 2025 22:30
  restricted system commands enabled.
 **dsmc-cv.tex -interaction nonstopmode
 (./dsmc-cv.tex
@@ -1535,6 +1535,12 @@ ns.fd)
 Package pgfplots info on input line 50: Using 'lua backend=false' for plot 0 (t
 ype 'pgfplothandlerybar'): LUA does not support xtick=data (yet).
 )
+Overfull \hbox (27.41817pt too wide) in paragraph at lines 140--140
+\TU/lmtt/m/n/10 solener . 2025 . 113535$ [][][]\TU/lmr/m/n/10 . \TU/lmr/m/sc/10
+ url\TU/lmr/m/n/10 : [][]$\TU/lmtt/m/n/10 https : / / www . sciencedirect . com / science / article / pii / S0038092X25002981$[][]\TU/lmr/m/n/10 .
+ []
+
+
 
 [2]
 
@@ -1562,13 +1568,13 @@ Package logreq Info: Writing requests to 'dsmc-cv.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 49696 strings out of 475684
+ 49695 strings out of 475684
  125165,2848258 words of node,token memory allocated
  953 words of node memory still in use:
    7 hlist, 3 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 24 attribute, 110 glue_spe
 c, 24 attribute_list, 2 write, 13 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 2:2835,3:1204,4:254,5:701,6:125,7:11630,8:62,9:749,10:20,11:812
- 71462 multiletter control sequences out of 65536+600000
+   avail lists: 2:2728,3:1198,4:278,5:743,6:125,7:11282,8:67,9:749,10:20,11:786
+ 71461 multiletter control sequences out of 65536+600000
  58 fonts using 4657655 bytes
  114i,13n,110p,2214b,2425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman7-
@@ -1591,9 +1597,9 @@ d/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><C:/
 Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmr9.pfb>
-Output written on dsmc-cv.pdf (6 pages, 150123 bytes).
+Output written on dsmc-cv.pdf (6 pages, 150406 bytes).
 
-PDF statistics: 317 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 318 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 131072)
  104 words of extra memory for PDF output out of 10000 (max. 100000000)
 
