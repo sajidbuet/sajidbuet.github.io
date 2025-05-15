@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Subhan Zawad Bihan
 
 # Full name (for SEO)
 first_name: Subhan Zawad Bihan
-last_name: 1024062339
+last_name:  1024062339
 
-# Username (matches folder name)
 authors:
   - 1024062339-Subhan-Zawad-Bihan
 

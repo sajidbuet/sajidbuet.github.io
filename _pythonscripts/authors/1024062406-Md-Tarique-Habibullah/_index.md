@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Md Tarique Habibullah
 
 # Full name (for SEO)
 first_name: Md Tarique Habibullah
-last_name: 1024062406
+last_name:  1024062406
 
-# Username (matches folder name)
 authors:
   - 1024062406-Md-Tarique-Habibullah
 

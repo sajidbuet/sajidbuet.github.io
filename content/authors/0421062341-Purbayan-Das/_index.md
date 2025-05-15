@@ -1,21 +1,23 @@
 ---
 # Display name
 
-title: Md Al Shahriar Shakil
+title: Purbayan Das
 
 # Full name (for SEO)
-first_name: Md
-last_name: Al Shahriar Shakil
+first_name: Purbayan Dasa
+last_name: 0421062341
+
+graduation_year: 
 
 # Username (this should match the folder name)
 authors:
-  - 18-Shahriar-shakil
+  - purbayan-das
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Masters Student 
+role: Masters Student
 
 # Organizations/Affiliations
 organizations:
@@ -25,8 +27,8 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-interests:
-  -  
+thesis:
+  title: '' 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

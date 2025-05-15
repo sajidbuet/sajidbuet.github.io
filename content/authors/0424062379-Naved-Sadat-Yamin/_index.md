@@ -1,23 +1,21 @@
 ---
 # Display name
 
-title: Purbayan Das
+title: Naved Sadat Yamin
 
 # Full name (for SEO)
-first_name: Purbayan 
-last_name: Das
-
-graduation_year: 
+first_name: Naved Sadat Yamin
+last_name: 0424062379
 
 # Username (this should match the folder name)
 authors:
-  - purbayan-das
+  - 0424062379-Naved-Sadat-Yamin
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Masters Student
+role: Masters Student 
 
 # Organizations/Affiliations
 organizations:
@@ -27,8 +25,8 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-thesis:
-  title: '' 
+interests:
+  -  
 
 # Organizational groups that you belong to (for People widget)
 user_groups:

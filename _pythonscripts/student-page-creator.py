@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
-"""
-student-page-creator.py
-Generate HugoBlox “People” pages and copy avatars from an Excel roster.
+"""student-page-creator.py  🚀  (HugoBlox People Page Generator)
+════════════════════════════════════════════════════════════
 
-Usage example
--------------
-python student-page-creator.py students.xlsx \
-    --img-dir ./photos \
-    --pages-dir ./content/authors \
-    --role "Masters Student" \
-    --dry         # optional, just shows what would happen
+For **each row** in a roster Excel sheet this script will
+1. 📁 create/verify an author folder `content/authors/<foldername>`.
+2. 🖼️  copy `<ApplicationID>.jpg|png|jpeg` → `avatar.jpg` *unless it already exists*.
+3. 📝 (re)write `_index.md` with YAML front‑matter populated from that row.
+
+Expected Excel headers (exact):
+    ApplicationID | Roll | name | Research Division | BSc Instituton | foldername |
+    role | user_groups | graduation_year | thesis-title
+
+Optional columns (**role**, **user_groups**, **graduation_year**, **thesis-title**) are
+added to the YAML only if their cell is non‑blank.
+
+Run (always colourful & verbose):
+    python student-page-creator.py students.xlsx \
+        --img-dir ./photos \
+        --pages-dir ./content/authors
+
+Add `--dry` for a safe preview with **no** filesystem writes.
 """
+
+from __future__ import annotations
 
 import argparse
 import logging
@@ -19,37 +31,75 @@ import sys
 import textwrap
 from pathlib import Path
 
-import pandas as pd
+import pandas as pd  # pip install pandas openpyxl
 
-# ------------- CLI ---------------------------------------------------------- #
-def get_args():
-    p = argparse.ArgumentParser(description="Create HugoBlox people pages.")
-    p.add_argument("excel", help="Path of the Excel file")
-    p.add_argument("--img-dir", default=".", help="Folder containing images")
-    p.add_argument("--pages-dir", default="./content/authors",
-                   help="Destination pages directory")
-    p.add_argument("--role", default="Masters Student",
-                   help="Role/position string written to front‑matter")
-    p.add_argument("--org", default="Q-PACER RG, Dept of EEE, BUET",
-                   help="Organization/Affiliation string")
-    p.add_argument("--dry", action="store_true",
-                   help="Dry‑run: don’t write files, only show actions")
-    return p.parse_args()
+###############################################################################
+# Console‑colour helpers                                                      #
+###############################################################################
+
+RESET  = "\033[0m"
+BOLD   = "\033[1m"
+GREEN  = "\033[92m"
+YELLOW = "\033[93m"
+RED    = "\033[91m"
+CYAN   = "\033[96m"
+
+FOLDER_EMO = "📁"
+COPY_EMO   = "🖼️ "
+WRITE_EMO  = "📝"
+WARN_EMO   = "⚠️ "
+PASS_EMO   = "✅"
+LOCK_EMO   = "🔒"
 
 
-# ------------- Helpers ------------------------------------------------------ #
-EXTS = [".jpg", ".jpeg", ".png"]
+def cprint(msg: str, colour: str = "", *, bold: bool = False) -> None:
+    """Print *msg* in colour (and optionally bold)."""
+    prefix = (BOLD if bold else "") + colour
+    print(f"{prefix}{msg}{RESET}")
+
+###############################################################################
+# CLI arguments                                                               #
+###############################################################################
+
+EXTENSIONS = [".jpg", ".jpeg", ".png"]
+
+
+def get_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Generate HugoBlox author pages (colourful output)."
+    )
+    parser.add_argument("excel", help="Roster Excel file (.xlsx)")
+    parser.add_argument("--img-dir", default=".", help="Directory with photos")
+    parser.add_argument(
+        "--pages-dir",
+        default="./content/authors",
+        help="Destination root for author folders",
+    )
+    parser.add_argument(
+        "--org",
+        default="Q-PACER RG, Dept of EEE, BUET",
+        help="Organisation string for YAML (constant)",
+    )
+    parser.add_argument("--dry", action="store_true", help="Preview only – no writes")
+    return parser.parse_args()
+
+###############################################################################
+# Helper functions                                                            #
+###############################################################################
+
+def conditional_zfill(app_id: str) -> str:
+    """Return *app_id* padded to 7 digits unless it already starts with 0."""
+    return app_id if app_id.startswith("0") else app_id.zfill(7)
 
 
 def find_image(app_id: str, img_dir: Path) -> Path | None:
-    """Return the first existing image path for given ApplicationID."""
-    candidates: list[Path] = []
-    app_id_pad = app_id.zfill(6)
-    for ext in EXTS:
-        candidates.extend([*img_dir.glob(f"{app_id}{ext}"),
-                           *img_dir.glob(f"{app_id_pad}{ext}")])
-    files = [c.resolve() for c in candidates if c.is_file()]
-    return files[0] if files else None
+    """Find the first image that matches *app_id* in *img_dir*."""
+    app_id_pad = conditional_zfill(app_id)
+    for ext in EXTENSIONS:
+        for candidate in (img_dir / f"{app_id}{ext}", img_dir / f"{app_id_pad}{ext}"):
+            if candidate.is_file():
+                return candidate.resolve()
+    return None
 
 
 def split_name(full_name: str) -> tuple[str, str]:
@@ -57,115 +107,168 @@ def split_name(full_name: str) -> tuple[str, str]:
     return (parts[0], " ".join(parts[1:])) if parts else ("", "")
 
 
-def write_markdown(folder: Path, *, first: str, last: str, full: str,
-                   foldername: str, role: str, org: str,
-                   student_id: str, division: str, bsc_inst: str,
-                   dry: bool = False) -> None:
-    """Generate _index.md front‑matter + body inside *folder*."""
-    fm = textwrap.dedent(f"""\
-        ---
-        # Display name
-        title: {full}
+def build_yaml(front: dict) -> str:
+    """Serialize *front* (skipping None/"") to minimal YAML."""
+    lines: list[str] = ["---"]
+    for key, value in front.items():
+        if value in (None, ""):
+            continue
+        if isinstance(value, list):
+            lines.append(f"{key}:")
+            for v in value:
+                lines.append(f"  - {v}")
+        elif isinstance(value, dict):
+            lines.append(f"{key}:")
+            for k, v in value.items():
+                lines.append(f"  {k}: {v}")
+        else:
+            lines.append(f"{key}: {value}")
+    lines.append("---")
+    return "\n".join(lines)
 
-        # Full name (for SEO)
-        first_name: {first} {last}
-        last_name: {student_id}
 
-        # Username (matches folder name)
-        authors:
-          - {foldername}
+def write_markdown(
+    dest: Path,
+    *,
+    front: dict,
+    body_lines: list[str],
+    dry: bool = False,
+) -> None:
+    """Create/overwrite `_index.md` in *dest* using *front* and *body_lines*."""
+    md_path = dest / "_index.md"
+    content = build_yaml(front) + "\n\n" + "\n".join(body_lines) + "\n"
 
-        superuser: false
-        role: {role}
-
-        organizations:
-          - name: {org}
-            url: ''
-
-        bio: Student ID {student_id}
-
-        user_groups:
-          - Grad Students
-        ---
-
-        * **Student ID:** {student_id}
-        * **Research Division:** {division}
-        * **BSc Institution:** {bsc_inst}
-        """)
-
-    md_path = folder / "_index.md"
     if dry:
-        print(f"[DRY‑RUN] ├─ would write markdown → {md_path}")
-        return
-    with md_path.open("w", encoding="utf-8") as f:
-        f.write(fm)
-    logging.info(f"Created {md_path}")
+        cprint(f"{WRITE_EMO} {md_path} (dry)", CYAN)
+    else:
+        try:
+            md_path.write_text(content, encoding="utf-8")
+            cprint(f"{WRITE_EMO} {md_path}", CYAN)
+        except PermissionError:
+            cprint(f"{WARN_EMO} cannot write markdown – file open elsewhere: {md_path}", RED)
 
+###############################################################################
+# Core processing                                                             #
+###############################################################################
 
-# ------------- Core --------------------------------------------------------- #
-def process(df: pd.DataFrame, img_dir: Path, pages_dir: Path, args):
-    created, missing = 0, 0
+def process(df: pd.DataFrame, img_dir: Path, pages_dir: Path, args) -> None:
+    total = len(df.index)
+    processed = skipped_avatar = missing_photo = 0
+
+    cprint(f"Processing {total} rows…", CYAN, bold=True)
 
     for _, row in df.iterrows():
-        app_id       = str(row["ApplicationID"]).strip().zfill(7)
-        foldername   = str(row["foldername"]).strip()
-        full_name    = str(row["name"]).strip()
-        division     = str(row["Research Division"]).strip()
-        bsc_inst     = str(row["BSc Instituton"]).strip()
-        student_id   = str(row["Roll"]).strip()
-
-        img_src = find_image(app_id, img_dir)
-        if img_src is None:
-            logging.warning(f"✗ Image not found for ApplicationID {app_id}")
-            missing += 1
-            continue
+        # ── extract & sanitise values ─────────────────────────────────────
+        app_id_raw = str(row["ApplicationID"]).strip()
+        foldername = str(row["foldername"]).strip()
+        full_name  = str(row["name"]).strip()
+        first, last = split_name(full_name)
+        division   = str(row["Research Division"]).strip()
+        bsc_inst   = str(row["BSc Instituton"]).strip()
+        student_id = str(row["Roll"]).strip()
+        role        = str(row.get("role", "")).strip()
+        user_groups = str(row.get("user_groups", "")).strip()
+        grad_year   = str(row.get("graduation_year", "")).strip()
+        thesis_ttl  = str(row.get("thesis-title", "")).strip()
 
         dest_dir   = pages_dir / foldername
         avatar_dst = dest_dir / "avatar.jpg"
-        if not args.dry:
-            dest_dir.mkdir(parents=True, exist_ok=True)
 
-        # copy avatar
-        if args.dry:
-            print(f"[DRY‑RUN] ├─ would copy {img_src.name} → {avatar_dst}")
+        # ── ensure folder exists ─────────────────────────────────────────
+        if not dest_dir.exists():
+            if args.dry:
+                cprint(f"{FOLDER_EMO} {dest_dir} (create) [dry]", GREEN)
+            else:
+                dest_dir.mkdir(parents=True)
+                cprint(f"{FOLDER_EMO} {dest_dir}", GREEN)
+
+        # ── copy avatar if needed ────────────────────────────────────────
+        if not avatar_dst.is_file():
+            img_src = find_image(app_id_raw, img_dir)
+            if img_src:
+                if args.dry:
+                    cprint(f"{COPY_EMO} {img_src.name} → {avatar_dst} [dry]", GREEN)
+                else:
+                    try:
+                        shutil.copy(img_src, avatar_dst)
+                        cprint(f"{COPY_EMO} {avatar_dst}", GREEN)
+                    except PermissionError:
+                        cprint(f"{WARN_EMO} cannot copy avatar – file in use: {avatar_dst}", RED)
+            else:
+                cprint(f"{WARN_EMO} no photo for {app_id_raw}", YELLOW)
+                missing_photo += 1
         else:
-            shutil.copy(img_src, avatar_dst)
-            logging.info(f"Copied avatar → {avatar_dst}")
+            skipped_avatar += 1
+            cprint(f"{COPY_EMO} avatar exists – skip copy for {foldername}", YELLOW)
 
-        # write markdown
-        first, last = split_name(full_name)
-        write_markdown(dest_dir,
-                       first=first, last=last, full=full_name,
-                       foldername=foldername,
-                       role=args.role, org=args.org,
-                       student_id=student_id, division=division,
-                       bsc_inst=bsc_inst,
-                       dry=args.dry)
+        # ── build YAML front‑matter dict ─────────────────────────────────
+        front = {
+            "title": full_name,
+            "first_name": f"{first} {last}",
+            "last_name": student_id,
+            "authors": [foldername],
+            "superuser": "false",
+            "organizations": [f"{{name: {args.org}, url: ''}}"],
+            # optional
+            "role": role or None,
+            "user_groups": [user_groups] if user_groups else None,
+            "graduation_year": grad_year or None,
+            "thesis": {"title": thesis_ttl} if thesis_ttl else None,
+        }
 
-        created += 1
+        body_lines = [
+            f"* **Student ID:** {student_id}",
+            f"* **Research Division:** {division}",
+            f"* **BSc Institution:** {bsc_inst}",
+        ]
 
-    print(f"\n✓ Completed. Pages created: {created} | Missing avatars: {missing}")
+        write_markdown(dest_dir, front=front, body_lines=body_lines, dry=args.dry)
+        processed += 1
 
+    # ── summary ──────────────────────────────────────────────────────────
+    cprint("\nSummary", CYAN, bold=True)
+    cprint(f"{PASS_EMO} Pages processed : {processed}/{total}", GREEN, bold=True)
+    cprint(f"{COPY_EMO} Avatars skipped  : {skipped_avatar}", YELLOW)
+    cprint(f"{WARN_EMO} Missing photos   : {missing_photo}", RED if missing_photo else GREEN)
 
-# ------------- Entry -------------------------------------------------------- #
-def main():
+###############################################################################
+# Entry                                                                       #
+###############################################################################
+
+def main() -> None:
     args = get_args()
+
     excel_path = Path(args.excel).expanduser().resolve()
     img_dir    = Path(args.img_dir).expanduser().resolve()
     pages_dir  = Path(args.pages_dir).expanduser().resolve()
 
     if not excel_path.exists():
-        sys.exit(f"Excel file not found: {excel_path}")
+        sys.exit(f"❌  Excel file not found: {excel_path}")
     if not img_dir.is_dir():
-        sys.exit(f"Image directory not found: {img_dir}")
+        sys.exit(f"❌  Image directory not found: {img_dir}")
 
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
+    logging.basicConfig(level=logging.ERROR)
 
-    df = pd.read_excel(excel_path, engine="openpyxl")
-    required = {"ApplicationID", "Roll", "name", "Research Division",
-                "BSc Instituton", "foldername"}
-    if not required.issubset(df.columns):
-        sys.exit(f"Excel must contain columns: {required}")
+    # read Excel in *read‑only* mode to avoid Windows lock issues
+    try:
+        with open(excel_path, "rb") as f:
+            df = pd.read_excel(f, engine="openpyxl", engine_kwargs={"read_only": True})
+    except PermissionError:
+        cprint(f"{LOCK_EMO}  Excel file is open elsewhere. Close it and retry.", RED, bold=True)
+        sys.exit(1)
+    except Exception as exc:
+        sys.exit(f"❌  Failed to read Excel: {exc}")
+
+    mandatory = {
+        "ApplicationID",
+        "Roll",
+        "name",
+        "Research Division",
+        "BSc Instituton",
+        "foldername",
+    }
+    if not mandatory.issubset(df.columns):
+        sys.exit("❌  Excel must contain columns: " + ", ".join(mandatory))
 
     process(df, img_dir, pages_dir, args)
 

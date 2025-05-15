@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Md. Tasrif Prodhan
 
 # Full name (for SEO)
 first_name: Md. Tasrif Prodhan
-last_name: 1024062129
+last_name:  1024062129
 
-# Username (matches folder name)
 authors:
   - 1024062129-Md-Tasrif-Prodhan
 

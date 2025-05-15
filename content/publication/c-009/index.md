@@ -4,7 +4,7 @@ authors:
 - Sajid Muhaimin Choudhury
 - M. A. Matin
 date: '2012-01-01'
-publishDate: '2025-05-13T16:30:57.372770Z'
+publishDate: '2025-05-15T13:30:06.904179Z'
 publication_types:
 - paper-conference
 publication: '*2012 7th International Conference on Electrical and Computer Engineering*'

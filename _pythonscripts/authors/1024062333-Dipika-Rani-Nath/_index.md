@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Dipika Rani Nath
 
 # Full name (for SEO)
 first_name: Dipika Rani Nath
-last_name: 1024062333
+last_name:  1024062333
 
-# Username (matches folder name)
 authors:
   - 1024062333-Dipika-Rani-Nath
 

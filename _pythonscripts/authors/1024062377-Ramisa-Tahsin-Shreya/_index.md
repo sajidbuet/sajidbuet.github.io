@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Ramisa Tahsin Shreya
 
 # Full name (for SEO)
 first_name: Ramisa Tahsin Shreya
-last_name: 1024062377
+last_name:  1024062377
 
-# Username (matches folder name)
 authors:
   - 1024062377-Ramisa-Tahsin-Shreya
 

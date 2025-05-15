@@ -3,7 +3,7 @@ title: Design and implementation of a low cost Power Factor Improvement device
 authors:
 - Sajid Muhaimin Choudhury
 date: '2008-01-01'
-publishDate: '2025-05-13T16:30:57.248995Z'
+publishDate: '2025-05-15T13:30:06.776690Z'
 publication_types:
 - paper-conference
 publication: '*TENCON 2008 - 2008 IEEE Region 10 Conference*'

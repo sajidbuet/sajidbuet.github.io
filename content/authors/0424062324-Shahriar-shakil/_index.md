@@ -1,15 +1,15 @@
 ---
 # Display name
 
-title: Naved Sadat Yamin
+title: Md Al Shahriar Shakil
 
 # Full name (for SEO)
-first_name: Naved
-last_name: Sadat Yamin
+first_name: Md Al Shahriar Shakil
+last_name: 0424062324
 
 # Username (this should match the folder name)
 authors:
-  - 18-Naved-Sadat-Yamin
+  - 0424062324-Shahriar-shakil
 
 # Is this the primary user of the site?
 superuser: false

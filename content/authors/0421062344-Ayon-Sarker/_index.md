@@ -1,23 +1,21 @@
 ---
 # Display name
 
-title: Md. Mahfuzul Haque
+title: Ayon Sarkar
 
 # Full name (for SEO)
-first_name: Md.
-last_name: Mahfuzul Haque
-
-graduation_year: 2025
+first_name: Ayon Sarkar
+last_name: 0421062344
 
 # Username (this should match the folder name)
 authors:
-  - mahfuzul-hoque
+  - 0421062344-Ayon-Sarker
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Graduated with MSc (Jan 2025)
+role: Masters Student 
 
 # Organizations/Affiliations
 organizations:
@@ -28,10 +26,10 @@ organizations:
 bio: 
 
 thesis:
-
-  title: 'Design Of Silicon-carbide Based Single-quantum-well White LED' 
+  title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
+  status: CASR Approved
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
-  - Alumni
+  - Grad Students
 ---

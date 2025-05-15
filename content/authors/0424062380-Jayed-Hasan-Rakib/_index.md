@@ -4,8 +4,8 @@
 title: Jayed Hasan Rakib
 
 # Full name (for SEO)
-first_name: Jayed
-last_name: Hasan Rakib
+first_name: Jayed Hasan Rakib
+last_name: 0424062380
 
 # Username (this should match the folder name)
 authors:

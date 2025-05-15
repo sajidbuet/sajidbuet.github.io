@@ -4,15 +4,15 @@
 title: Shamima Akter Mitu
 
 # Full name (for SEO)
-first_name: Shamima
-last_name: Akter Mitu
+first_name: Shamima Akter Mitu
+last_name: 0421062320
 
 graduation_year: 2023
 show_social: false 
 
 # Username (this should match the folder name)
 authors:
-  - shamima_akter
+  - A-0421062320-Shamima-Mitu
 
 # Is this the primary user of the site?
 superuser: false

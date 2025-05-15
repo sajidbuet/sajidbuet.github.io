@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Junayet Hossaain
 
 # Full name (for SEO)
 first_name: Junayet Hossaain
-last_name: 1024062374
+last_name:  1024062374
 
-# Username (matches folder name)
 authors:
   - 1024062374-Junayet-Hossaain
 

@@ -1,23 +1,21 @@
 ---
 # Display name
 
-title: Ehsanul Karim
+title: Puja Das
 
 # Full name (for SEO)
-first_name: Ehsanul
-last_name: Karim
-
-graduation_year: 2024
+first_name: Puja Das
+last_name: 0421062347
 
 # Username (this should match the folder name)
 authors:
-  - 16_Ehsanul_Karim
+  - 0421062347-Puja-Das
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Graduated with MSc (June 2024)
+role: Masters Student 
 
 # Organizations/Affiliations
 organizations:
@@ -27,11 +25,9 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
-thesis:
-    title: 'Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range'
 
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
-  - Alumni
+  - Grad Students
 ---

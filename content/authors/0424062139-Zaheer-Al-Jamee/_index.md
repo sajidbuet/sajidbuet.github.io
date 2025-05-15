@@ -4,8 +4,8 @@
 title: Zaheer Al Jamee
 
 # Full name (for SEO)
-first_name: Zaheer
-last_name: Al Jamee
+first_name: Zaheer Al Jamee
+last_name: 0424062139
 
 # Username (this should match the folder name)
 authors:
@@ -31,5 +31,5 @@ user_groups:
   - Grad Students
 ---
 * **Student ID:** 0424062139
-
-* **Major Group:** Power
+* **Research Division:** Power
+* * **BSc Institution:**  RUET

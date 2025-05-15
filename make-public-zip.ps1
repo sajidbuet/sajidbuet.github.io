@@ -6,7 +6,7 @@ Write-Host " "
 Write-Host "Compile the CV, update publications in bib, compile hugoblox site, and make a zip of the public folder"
 Write-Host " "
 # set updatelatex =1 if you have updated the bib or tex file for CV.
-$updatelatex = 1
+$updatelatex = 0
 if ($updatelatex) {
 
 Write-Host "Executing LaTeX run in /cv/ folder"

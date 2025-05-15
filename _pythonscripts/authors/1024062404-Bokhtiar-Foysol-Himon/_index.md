@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Bokhtiar Foysol Himon
 
 # Full name (for SEO)
 first_name: Bokhtiar Foysol Himon
-last_name: 1024062404
+last_name:  1024062404
 
-# Username (matches folder name)
 authors:
   - 1024062404-Bokhtiar-Foysol-Himon
 

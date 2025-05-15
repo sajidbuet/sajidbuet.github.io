@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Tanvir Ahmed
 
 # Full name (for SEO)
 first_name: Tanvir Ahmed
-last_name: 1024062144
+last_name:  1024062144
 
-# Username (matches folder name)
 authors:
   - 1024062144-Tanvir-Ahmed
 

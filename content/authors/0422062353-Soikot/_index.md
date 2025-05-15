@@ -4,8 +4,8 @@
 title: Soikot Sarkar
 
 # Full name (for SEO)
-first_name: Soikot
-last_name: Sarkar
+first_name: Soikot Sarkar
+last_name: 0422062353
 
 # Username (this should match the folder name)
 authors:

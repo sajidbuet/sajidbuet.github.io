@@ -5,7 +5,7 @@ authors:
 - Md. Ehsanul Karim
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-05-13T16:30:59.940290Z'
+publishDate: '2025-05-15T13:30:09.829819Z'
 publication_types:
 - article-journal
 publication: '*Optical Materials Express*'

@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Md. Emad Hossain Likhon
 
 # Full name (for SEO)
 first_name: Md. Emad Hossain Likhon
-last_name: 1024062303
+last_name:  1024062303
 
-# Username (matches folder name)
 authors:
   - 1024062303-Md-Emad-Hossain-Likhon
 

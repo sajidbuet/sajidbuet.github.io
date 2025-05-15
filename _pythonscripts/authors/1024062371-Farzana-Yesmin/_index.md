@@ -1,12 +1,12 @@
+
 ---
 # Display name
 title: Farzana Yesmin
 
 # Full name (for SEO)
 first_name: Farzana Yesmin
-last_name: 1024062371
+last_name:  1024062371
 
-# Username (matches folder name)
 authors:
   - 1024062371-Farzana-Yesmin
 
