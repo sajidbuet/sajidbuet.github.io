@@ -1,26 +1,18 @@
-
 ---
-# Display name
 title: Md Tarique Habibullah
-
-# Full name (for SEO)
 first_name: Md Tarique Habibullah
-last_name:  1024062406
-
+last_name: 1024062406
 authors:
   - 1024062406-Md-Tarique-Habibullah
-
 superuser: false
-role: Masters Student
-
 organizations:
-  - name: Q-PACER RG, Dept of EEE, BUET
-    url: ''
-
-bio: Student ID 1024062406
-
+  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+role: Masters Student
 user_groups:
   - Grad Students
+graduation_year: nan
+thesis:
+  title: nan
 ---
 
 * **Student ID:** 1024062406

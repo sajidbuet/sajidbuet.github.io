@@ -1,26 +1,18 @@
-
 ---
-# Display name
 title: Farzana Yesmin
-
-# Full name (for SEO)
 first_name: Farzana Yesmin
-last_name:  1024062371
-
+last_name: 1024062371
 authors:
   - 1024062371-Farzana-Yesmin
-
 superuser: false
-role: Masters Student
-
 organizations:
-  - name: Q-PACER RG, Dept of EEE, BUET
-    url: ''
-
-bio: Student ID 1024062371
-
+  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+role: Masters Student
 user_groups:
   - Grad Students
+graduation_year: nan
+thesis:
+  title: nan
 ---
 
 * **Student ID:** 1024062371
