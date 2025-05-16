@@ -1,26 +1,18 @@
 ---
-# Display name
 title: Tanvir Ahmed
-
-# Full name (for SEO)
 first_name: Tanvir Ahmed
 last_name: 1024062144
-
-# Username (matches folder name)
 authors:
   - 1024062144-Tanvir-Ahmed
-
 superuser: false
-role: Masters Student
-
 organizations:
-  - name: Q-PACER RG, Dept of EEE, BUET
-    url: ''
-
-bio: Student ID 1024062144
-
+  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+role: Masters Student
 user_groups:
   - Grad Students
+graduation_year: nan
+thesis:
+  title: nan
 ---
 
 * **Student ID:** 1024062144
