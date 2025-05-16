@@ -17,4 +17,4 @@ thesis:
 
 * **Student ID:** Ahmed
 * **Research Division:** nan
-* **BSc Institution:** nan
+* **BSc Institution:** BUET

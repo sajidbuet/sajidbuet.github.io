@@ -97,14 +97,16 @@
     <div class="row">
 
       {{ with $person.thesis }}
+      {{ $t := .title | default "" }}
+      {{ if and (ne $t "") (ne (lower $t) "nan") }}
       <div class="col-md-12">
         <div class="section-subheading">Thesis Title{{ if .status }} ({{ .status }}){{ end }}</div>
         <ul class="ul-interests mb-0">
-		{{ .title }}
+		{{ $t }}
         </ul>
       </div>
       {{ end }}
-      
+      {{ end }}
       {{ with $person.interests }}
       <div class="col-md-5">
         <div class="section-subheading">{{ i18n "interests" | markdownify }}</div>

@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""student-page-creator.py  🚀  (HugoBlox People Page Generator)
+"""student‑page‑creator.py  🚀  (HugoBlox People Page Generator)
 ════════════════════════════════════════════════════════════
 
-This script converts a roster Excel sheet into HugoBlox "People" pages.
+Synchronise a roster Excel sheet with HugoBlox *People* pages.
 
-Workflow for each row
----------------------
-1. 📁  Ensure folder `content/authors/<foldername>` exists.
-2. 🖼️   Copy `<ApplicationID>.jpg|png|jpeg` → `avatar.jpg` **or**, if missing,
-   fall back to the file given by `--default-avatar`. If an avatar already
-   exists inside the folder it is **never** overwritten.
-3. 📝   Generate/refresh `_index.md` with YAML front‑matter populated from the
-   Excel row (optional fields are included only when non‑blank).
+Key features (2025‑05‑16)
+------------------------
+* **Create or update** each author folder (`content/authors/<foldername>`).
+* Skip the **special** `admin/` folder entirely.
+* Copy a personal photo to `avatar.jpg` once; fall back to `--default-avatar`.
+* (Re)write `_index.md` with YAML front‑matter and bio bullets on every run.
+* Colourful, emoji‑rich console output and safe **dry‑run** mode.
 
 Required Excel headers
 ----------------------
@@ -20,24 +19,29 @@ ApplicationID | Roll | name | Research Division | BSc Instituton | foldername |
 role | user_groups | graduation_year | thesis-title
 ```
 
-Run
----
+Typical usage
+-------------
 ```bash
-python student-page-creator.py students.xlsx \
-       --img-dir ./photos \
-       --pages-dir ./content/authors \
-       --default-avatar ./default-avatar.jpg      # default path
-```
-Use `--dry` for a safe preview (no filesystem writes).
-"""
+# real run
+author_excel=all-members.xlsx
+python student-page-creator.py $author_excel --img-dir ./photos
 
+
+python student-page-creator.py all-members.xlsx --img-dir ./photos
+
+
+
+
+# preview (nothing written)
+python student-page-creator.py $author_excel --dry
+```
+"""
 from __future__ import annotations
 
 import argparse
 import logging
 import shutil
 import sys
-import textwrap
 from pathlib import Path
 
 import pandas as pd  # pip install pandas openpyxl
@@ -46,51 +50,61 @@ import pandas as pd  # pip install pandas openpyxl
 # Console helpers                                                             #
 ###############################################################################
 
-RESET  = "\033[0m"; BOLD = "\033[1m"; GREEN = "\033[92m"; YELLOW = "\033[93m"; RED = "\033[91m"; CYAN = "\033[96m"
-FOLDER_EMO, COPY_EMO, WRITE_EMO, WARN_EMO, PASS_EMO, LOCK_EMO = "📁", "🖼️ ", "📝", "⚠️ ", "✅", "🔒"
+RESET, BOLD = "\033[0m", "\033[1m"
+GREEN, YELLOW, RED, CYAN = "\033[92m", "\033[93m", "\033[91m", "\033[96m"
+FOLDER_EMO, COPY_EMO, WRITE_EMO, WARN_EMO, PASS_EMO, LOCK_EMO = "📁", "🖼️ ", "📝", "⚠️", "✅", "🔒"
 
 def cprint(msg: str, colour: str = "", *, bold: bool = False) -> None:
-    print(f"{(BOLD if bold else '') + colour}{msg}{RESET}")
+    """Colourised print helper."""
+    prefix = (BOLD if bold else "") + colour
+    print(f"{prefix}{msg}{RESET}")
 
 ###############################################################################
-# CLI                                                                         #
+# CLI arguments                                                               #
 ###############################################################################
 
 EXTENSIONS = [".jpg", ".jpeg", ".png"]
 
 def get_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Generate colourful HugoBlox author pages.")
-    p.add_argument("excel", help="Roster Excel file (.xlsx)")
+    p = argparse.ArgumentParser(description="Create / refresh HugoBlox author pages from Excel.")
+    p.add_argument("excel", help="Path to roster Excel (.xlsx)")
     p.add_argument("--img-dir", default=".", help="Directory containing photos")
-    p.add_argument("--pages-dir", default="./content/authors", help="Destination root for author folders")
-    p.add_argument("--org", default="Q-PACER RG, Dept of EEE, BUET", help="Organisation string for YAML")
-    p.add_argument("--default-avatar", default="./default-avatar.jpg", help="Fallback avatar when photo missing")
-    p.add_argument("--dry", action="store_true", help="Preview run – no file writes")
+    p.add_argument("--pages-dir", default="../content/authors", help="Author folders root")
+    p.add_argument("--org", default="Q-PACER RG, Dept of EEE, BUET", help="Organisation name")
+    p.add_argument("--default-avatar", default="./default-avatar.jpg", help="Fallback avatar path")
+    p.add_argument("--dry", action="store_true", help="Dry‑run – no file writes")
     return p.parse_args()
 
 ###############################################################################
-# Helpers                                                                     #
+# Utility functions                                                           #
 ###############################################################################
 
 def conditional_zfill(app_id: str) -> str:
+    """Pad to 7 digits unless id already starts with 0."""
     return app_id if app_id.startswith("0") else app_id.zfill(7)
 
+
 def find_image(app_id: str, img_dir: Path) -> Path | None:
-    app_id_pad = conditional_zfill(app_id)
+    """Return the first matching photo for *app_id* or None."""
+    aid_padded = conditional_zfill(app_id)
     for ext in EXTENSIONS:
-        for cand in (img_dir / f"{app_id}{ext}", img_dir / f"{app_id_pad}{ext}"):
+        for cand in (img_dir / f"{app_id}{ext}", img_dir / f"{aid_padded}{ext}"):
             if cand.is_file():
                 return cand.resolve()
     return None
+
 
 def split_name(full_name: str) -> tuple[str, str]:
     parts = full_name.strip().split()
     return (parts[0], " ".join(parts[1:])) if parts else ("", "")
 
+
 def build_yaml(front: dict) -> str:
+    """Return a YAML front‑matter block skipping empties."""
     lines = ["---"]
     for k, v in front.items():
-        if v in (None, ""): continue
+        if v in (None, "", []):
+            continue
         if isinstance(v, list):
             lines.append(f"{k}:")
             lines += [f"  - {item}" for item in v]
@@ -102,71 +116,67 @@ def build_yaml(front: dict) -> str:
     lines.append("---")
     return "\n".join(lines)
 
-def write_markdown(dest: Path, *, front: dict, body: list[str], dry: bool=False):
-    md_path = dest / "_index.md"
+
+def write_markdown(folder: Path, front: dict, body: list[str], *, dry: bool) -> None:
+    md_path = folder / "_index.md"
     content = build_yaml(front) + "\n\n" + "\n".join(body) + "\n"
     if dry:
         cprint(f"{WRITE_EMO} {md_path} (dry)", CYAN)
-    else:
-        try:
-            md_path.write_text(content, encoding="utf-8")
-            cprint(f"{WRITE_EMO} {md_path}", CYAN)
-        except PermissionError:
-            cprint(f"{WARN_EMO} cannot write markdown – open elsewhere: {md_path}", RED)
+        return
+    try:
+        md_path.write_text(content, encoding="utf-8")
+        cprint(f"{WRITE_EMO} {md_path}", CYAN)
+    except PermissionError:
+        cprint(f"{WARN_EMO} cannot write markdown – open elsewhere: {md_path}", RED)
 
 ###############################################################################
-# Core                                                                        #
+# Core processing                                                             #
 ###############################################################################
 
-def process(df: pd.DataFrame, img_dir: Path, pages_dir: Path, default_avatar: Path, args):
+def process_roster(df: pd.DataFrame, *, img_dir: Path, pages_dir: Path, default_avatar: Path, args) -> None:
     total = len(df)
-    processed = skipped = fallback_used = 0
-    missing_photo = 0
-
+    processed = skipped_avatar = fallback_used = missing_photo = 0
     cprint(f"Processing {total} rows…", CYAN, bold=True)
 
     for _, row in df.iterrows():
-        app_id = str(row["ApplicationID"]).strip()
         foldername = str(row["foldername"]).strip()
-        dest_dir = pages_dir / foldername
-        avatar_dst = dest_dir / "avatar.jpg"
+        if foldername.lower() == "admin":
+            continue  # special folder ignored
 
-        # ensure folder
-        if not dest_dir.exists():
+        author_dir = pages_dir / foldername
+        avatar_dst = author_dir / "avatar.jpg"
+
+        # 1. ensure folder exists
+        if not author_dir.exists():
             if args.dry:
-                cprint(f"{FOLDER_EMO} {dest_dir} [dry-create]", GREEN)
+                cprint(f"{FOLDER_EMO} {author_dir} [dry-create]", GREEN)
             else:
-                dest_dir.mkdir(parents=True)
-                cprint(f"{FOLDER_EMO} {dest_dir}", GREEN)
+                author_dir.mkdir(parents=True, exist_ok=True)
+                cprint(f"{FOLDER_EMO} {author_dir}", GREEN)
 
-        # avatar logic
-        if avatar_dst.is_file():
-            skipped +=1
-            cprint(f"{COPY_EMO} avatar exists – skip copy for {foldername}", YELLOW)
-        else:
-            src = find_image(app_id, img_dir)
+        # 2. copy avatar only if missing
+        if not avatar_dst.is_file():
+            src = find_image(str(row["ApplicationID"]).strip(), img_dir)
+            if src is None and default_avatar.is_file():
+                fallback_used += 1
+                src = default_avatar
+                cprint(f"{COPY_EMO} using default avatar for {foldername}", CYAN)
             if src is None:
-                # try default avatar
-                if default_avatar.is_file():
-                    src = default_avatar
-                    fallback_used += 1
-                    cprint(f"{COPY_EMO} using default avatar for {foldername}", CYAN)
-                else:
-                    cprint(f"{WARN_EMO} no photo and default avatar missing", RED)
-                    missing_photo += 1
-                    src = None
-            if src is not None and not args.dry:
+                missing_photo += 1
+            elif args.dry:
+                cprint(f"{COPY_EMO} {src.name} → {avatar_dst} [dry]", GREEN)
+            else:
                 try:
                     shutil.copy(src, avatar_dst)
                     cprint(f"{COPY_EMO} {avatar_dst}", GREEN)
                 except PermissionError:
-                    cprint(f"{WARN_EMO} cannot copy avatar – file in use: {avatar_dst}", RED)
-            elif src is not None and args.dry:
-                cprint(f"{COPY_EMO} {src.name} → {avatar_dst} [dry]", GREEN)
+                    cprint(f"{WARN_EMO} cannot copy avatar – file locked: {avatar_dst}", RED)
+        else:
+            skipped_avatar += 1
 
-        # markdown
+        # 3. write / refresh markdown
         first, last = split_name(str(row["name"]).strip())
-        front = {
+        yaml_front = {
             "title": row["name"].strip(),
             "first_name": f"{first} {last}",
             "last_name": str(row["Roll"]).strip(),
@@ -183,22 +193,23 @@ def process(df: pd.DataFrame, img_dir: Path, pages_dir: Path, default_avatar: Pa
             f"* **Research Division:** {row['Research Division']}",
             f"* **BSc Institution:** {row['BSc Instituton']}",
         ]
-        write_markdown(dest_dir, front=front, body=body, dry=args.dry)
+        write_markdown(author_dir, yaml_front, body, dry=args.dry)
         processed += 1
 
     # summary
     cprint("\nSummary", CYAN, bold=True)
-    cprint(f"{PASS_EMO} Pages processed : {processed}/{total}", GREEN, bold=True)
-    cprint(f"{COPY_EMO} Avatars skipped  : {skipped}", YELLOW)
-    cprint(f"{COPY_EMO} Default avatars  : {fallback_used}", CYAN)
-    cprint(f"{WARN_EMO} Missing photos   : {missing_photo}", RED if missing_photo else GREEN)
+    cprint(f"{PASS_EMO} Pages processed   : {processed}/{total}", GREEN, bold=True)
+    cprint(f"{COPY_EMO} Avatars skipped   : {skipped_avatar}", YELLOW)
+    cprint(f"{COPY_EMO} Default avatars   : {fallback_used}", CYAN)
+    cprint(f"{WARN_EMO} Missing photos    : {missing_photo}", RED if missing_photo else GREEN)
 
 ###############################################################################
-# Entry                                                                       #
+# Entry point                                                                 #
 ###############################################################################
 
-def main():
+def main() -> None:
     args = get_args()
+
     excel_path = Path(args.excel).expanduser().resolve()
     img_dir = Path(args.img_dir).expanduser().resolve()
     pages_dir = Path(args.pages_dir).expanduser().resolve()
@@ -207,8 +218,8 @@ def main():
     if not excel_path.exists():
         sys.exit(f"❌  Excel not found: {excel_path}")
     if not img_dir.is_dir():
-        sys.exit(f"❌  Image dir not found: {img_dir}")
-    if not default_avatar.is_file():
+        sys.exit(f"❌  Image directory not found: {img_dir}")
+    if not default_avatar.exists():
         cprint(f"{WARN_EMO} default avatar not found: {default_avatar}", YELLOW)
 
     logging.basicConfig(level=logging.ERROR)
@@ -220,11 +231,12 @@ def main():
         cprint(f"{LOCK_EMO}  Excel file is open elsewhere. Close it and retry.", RED, bold=True)
         sys.exit(1)
 
-    required = {"ApplicationID","Roll","name","Research Division","BSc Instituton","foldername"}
+    required = {"ApplicationID", "Roll", "name", "Research Division", "BSc Instituton", "foldername"}
     if not required.issubset(df.columns):
-        sys.exit("❌  Excel missing required columns: " + ", ".join(required))
+        sys.exit("❌  Excel missing required columns: " + ", ".join(sorted(required)))
 
-    process(df, img_dir, pages_dir, default_avatar, args)
+    process_roster(df, img_dir=img_dir, pages_dir=pages_dir, default_avatar=default_avatar, args=args)
+
 
 if __name__ == "__main__":
     main()

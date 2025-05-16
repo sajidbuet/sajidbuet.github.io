@@ -17,4 +17,4 @@ thesis:
 
 * **Student ID:** 0422062353
 * **Research Division:** nan
-* **BSc Institution:** nan
+* **BSc Institution:** BUET

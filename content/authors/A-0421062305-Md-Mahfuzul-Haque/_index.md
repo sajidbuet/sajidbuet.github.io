@@ -17,4 +17,4 @@ thesis:
 
 * **Student ID:** 0421062305
 * **Research Division:** nan
-* **BSc Institution:** nan
+* **BSc Institution:** SUST

@@ -17,4 +17,4 @@ thesis:
 
 * **Student ID:** Solaiman
 * **Research Division:** nan
-* **BSc Institution:** nan
+* **BSc Institution:** BUET
