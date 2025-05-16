@@ -1,5 +1,6 @@
 ---
 title: Zaheer Al Jamee
+slug: 0424062139-zaheer-al-jamee
 first_name: Zaheer Al Jamee
 last_name: 0424062139
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0424062139
-* **Research Division:** EEPS
 * **BSc Institution:** RUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 April
+* **Research Division:** EEPS
+* **Thesis Status:** -

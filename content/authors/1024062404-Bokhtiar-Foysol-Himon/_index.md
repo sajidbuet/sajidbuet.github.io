@@ -1,5 +1,6 @@
 ---
 title: Bokhtiar Foysol Himon
+slug: 1024062404-bokhtiar-foysol-himon
 first_name: Bokhtiar Foysol Himon
 last_name: 1024062404
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062404
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EP
+* **Thesis Status:** -

@@ -1,5 +1,6 @@
 ---
 title: Shamima Akter Mitu
+slug: a-0421062320-shamima-mitu
 first_name: Shamima Akter Mitu
 last_name: 0421062320
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
 ---
 
+## Information
 * **Student ID:** 0421062320
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2021 April
+* **Research Division:** EP
+* **Thesis Status:** Thesis Defended and Accepted

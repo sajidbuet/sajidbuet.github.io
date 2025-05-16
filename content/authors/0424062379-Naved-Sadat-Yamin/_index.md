@@ -1,5 +1,6 @@
 ---
 title: Naved Sadat Yamin
+slug: 0424062379-naved-sadat-yamin
 first_name: Naved Sadat Yamin
 last_name: 0424062379
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0424062379
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 April
+* **Research Division:** EP
+* **Thesis Status:** -

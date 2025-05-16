@@ -1,5 +1,6 @@
 ---
 title: Purbayan Das
+slug: 0421062341-purbayan-das
 first_name: Purbayan Das
 last_name: 0421062341
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0421062341
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2021 April
+* **Research Division:** EP
+* **Thesis Status:** -

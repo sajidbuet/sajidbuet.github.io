@@ -1,5 +1,6 @@
 ---
 title: Md. Mesbah Uddin
+slug: 0423062319-mesbah
 first_name: Md. Mesbah Uddin
 last_name: 0423062319
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0423062319
-* **Research Division:** EP
 * **BSc Institution:** MIST
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2023 April
+* **Research Division:** EP
+* **Thesis Status:** -

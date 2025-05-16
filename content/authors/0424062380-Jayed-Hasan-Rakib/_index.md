@@ -1,5 +1,6 @@
 ---
 title: Jayed Hasan Rakib
+slug: 0424062380-jayed-hasan-rakib
 first_name: Jayed Hasan Rakib
 last_name: 0424062380
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0424062380
-* **Research Division:** EP
 * **BSc Institution:** RUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 April
+* **Research Division:** EP
+* **Thesis Status:** -

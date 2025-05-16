@@ -1,5 +1,6 @@
 ---
 title: Md. Tanvirul Islam
+slug: 20-tanvirul-islam
 first_name: Md. Tanvirul Islam
 last_name: 2006095
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 2006095
-* **Research Division:** EEPS
 * **BSc Institution:** BUET
+* **Working Towards:** B.Sc. Engg.
+* **First Enrollment:** 2020
+* **Research Division:** EEPS
+* **Thesis Status:** nan

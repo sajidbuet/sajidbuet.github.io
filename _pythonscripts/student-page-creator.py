@@ -178,6 +178,7 @@ def process_roster(df: pd.DataFrame, *, img_dir: Path, pages_dir: Path, default_
         first, last = split_name(str(row["name"]).strip())
         yaml_front = {
             "title": row["name"].strip(),
+            "slug": str(row["foldername"]).lower(),
             "first_name": f"{first} {last}",
             "last_name": str(row["Roll"]).strip(),
             "authors": [foldername],
@@ -189,9 +190,15 @@ def process_roster(df: pd.DataFrame, *, img_dir: Path, pages_dir: Path, default_
             "thesis": {"title": str(row.get("thesis-title", "")).strip()} if str(row.get("thesis-title", "")).strip() else None,
         }
         body = [
+            f"## Information",
             f"* **Student ID:** {row['Roll']}",
-            f"* **Research Division:** {row['Research Division']}",
             f"* **BSc Institution:** {row['BSc Instituton']}",
+            f"* **Working Towards:** {row['degree_sought']}",
+            f"* **First Enrollment:** {row['first_enrollment']}",
+            f"* **Research Division:** {row['Research Division']}",
+            f"* **Thesis Status:** {row['thesis_approval']}",
+            
+            
         ]
         write_markdown(author_dir, yaml_front, body, dry=args.dry)
         processed += 1

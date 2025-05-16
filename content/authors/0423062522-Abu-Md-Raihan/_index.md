@@ -1,5 +1,6 @@
 ---
 title: Abu Md. Raihan
+slug: 0423062522-abu-md-raihan
 first_name: Abu Md. Raihan
 last_name: 0423062522
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0423062522
-* **Research Division:** CSP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2023 April
+* **Research Division:** CSP
+* **Thesis Status:** -

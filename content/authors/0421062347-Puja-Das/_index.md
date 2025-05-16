@@ -1,5 +1,6 @@
 ---
 title: Puja Das
+slug: 0421062347-puja-das
 first_name: Puja Das
 last_name: 0421062347
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0421062347
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2021 April
+* **Research Division:** EP
+* **Thesis Status:** BPGS Approved Proposal and BoE

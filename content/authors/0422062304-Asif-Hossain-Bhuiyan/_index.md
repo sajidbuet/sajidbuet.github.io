@@ -1,5 +1,6 @@
 ---
 title: Md Asif Hossain Bhuiyan
+slug: 0422062304-asif-hossain-bhuiyan
 first_name: Md Asif Hossain Bhuiyan
 last_name: 0422062304
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared Waveband
 ---
 
+## Information
 * **Student ID:** 0422062304
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2022 April
+* **Research Division:** EP
+* **Thesis Status:** CASR Approved Proposal and BoE

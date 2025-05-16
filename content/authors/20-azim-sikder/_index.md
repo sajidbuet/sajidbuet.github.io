@@ -1,5 +1,6 @@
 ---
 title: Md. Azim Sikder
+slug: 20-azim-sikder
 first_name: Md. Azim Sikder
 last_name: 2006022
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 2006022
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** B.Sc. Engg.
+* **First Enrollment:** 2020
+* **Research Division:** EP
+* **Thesis Status:** nan

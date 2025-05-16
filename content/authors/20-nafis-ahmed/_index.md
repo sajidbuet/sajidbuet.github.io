@@ -1,5 +1,6 @@
 ---
 title: Nafis Ahmed
+slug: 20-nafis-ahmed
 first_name: Nafis Ahmed
 last_name: 2006192
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 2006192
-* **Research Division:** CSP
 * **BSc Institution:** BUET
+* **Working Towards:** B.Sc. Engg.
+* **First Enrollment:** 2020
+* **Research Division:** CSP
+* **Thesis Status:** nan

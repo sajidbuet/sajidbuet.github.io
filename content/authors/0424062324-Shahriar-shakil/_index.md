@@ -1,5 +1,6 @@
 ---
 title: Md Al Shahriar Shakil
+slug: 0424062324-shahriar-shakil
 first_name: Md Al Shahriar Shakil
 last_name: 0424062324
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0424062324
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 April
+* **Research Division:** EP
+* **Thesis Status:** -

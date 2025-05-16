@@ -1,5 +1,6 @@
 ---
 title: Md. Ehsanul Karim
+slug: a-0422062302-md-ehsanul-karim
 first_name: Md. Ehsanul Karim
 last_name: 0422062302
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
 ---
 
+## Information
 * **Student ID:** 0422062302
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2022 April
+* **Research Division:** EP
+* **Thesis Status:** Thesis Defended and Accepted

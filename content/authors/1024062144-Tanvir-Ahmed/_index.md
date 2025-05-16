@@ -1,5 +1,6 @@
 ---
 title: Tanvir Ahmed
+slug: 1024062144-tanvir-ahmed
 first_name: Tanvir Ahmed
 last_name: 1024062144
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062144
-* **Research Division:** EEPS
 * **BSc Institution:** RUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EEPS
+* **Thesis Status:** -

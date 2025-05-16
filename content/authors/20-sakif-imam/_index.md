@@ -1,5 +1,6 @@
 ---
 title: Md. Sakif Imam
+slug: 20-sakif-imam
 first_name: Md. Sakif Imam
 last_name: 2006173
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 2006173
-* **Research Division:** EEPS
 * **BSc Institution:** BUET
+* **Working Towards:** B.Sc. Engg.
+* **First Enrollment:** 2020
+* **Research Division:** EEPS
+* **Thesis Status:** nan

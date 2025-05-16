@@ -1,6 +1,7 @@
 ---
-title: Ayon Sarkar
-first_name: Ayon Sarkar
+title: Ayon Sarker
+slug: 0421062344-ayon-sarker
+first_name: Ayon Sarker
 last_name: 0421062344
 authors:
   - 0421062344-Ayon-Sarker
@@ -15,6 +16,10 @@ thesis:
   title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
 ---
 
+## Information
 * **Student ID:** 0421062344
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2021 April
+* **Research Division:** EP
+* **Thesis Status:** CASR Approved Proposal and BoE

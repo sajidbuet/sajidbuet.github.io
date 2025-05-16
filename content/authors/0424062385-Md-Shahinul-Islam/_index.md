@@ -1,5 +1,6 @@
 ---
 title: Md. Shahinul Islam
+slug: 0424062385-md-shahinul-islam
 first_name: Md. Shahinul Islam
 last_name: 0424062385
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 0424062385
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 April
+* **Research Division:** EP
+* **Thesis Status:** -

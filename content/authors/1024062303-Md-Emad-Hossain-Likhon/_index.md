@@ -1,5 +1,6 @@
 ---
 title: Md. Emad Hossain Likhon
+slug: 1024062303-md-emad-hossain-likhon
 first_name: Md. Emad Hossain Likhon
 last_name: 1024062303
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062303
-* **Research Division:** EP
 * **BSc Institution:** RUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EP
+* **Thesis Status:** -

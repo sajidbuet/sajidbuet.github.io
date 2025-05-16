@@ -1,5 +1,6 @@
 ---
 title: Farzana Yesmin
+slug: 1024062371-farzana-yesmin
 first_name: Farzana Yesmin
 last_name: 1024062371
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062371
-* **Research Division:** EP
 * **BSc Institution:** RUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EP
+* **Thesis Status:** -

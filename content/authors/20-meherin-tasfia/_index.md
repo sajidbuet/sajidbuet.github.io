@@ -1,5 +1,6 @@
 ---
 title: Meherin Tasfia
+slug: 20-meherin-tasfia
 first_name: Meherin Tasfia
 last_name: 2006175
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 2006175
-* **Research Division:** CSP
 * **BSc Institution:** BUET
+* **Working Towards:** B.Sc. Engg.
+* **First Enrollment:** 2020
+* **Research Division:** CSP
+* **Thesis Status:** nan

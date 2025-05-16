@@ -1,5 +1,6 @@
 ---
 title: Md. Mahfuzul Haque
+slug: a-0421062305-md-mahfuzul-haque
 first_name: Md. Mahfuzul Haque
 last_name: 0421062305
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: Design Of Silicon-carbide Based Single-quantum-well White LED
 ---
 
+## Information
 * **Student ID:** 0421062305
-* **Research Division:** EP
 * **BSc Institution:** SUST
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2021 April
+* **Research Division:** EP
+* **Thesis Status:** Thesis Defended and Accepted

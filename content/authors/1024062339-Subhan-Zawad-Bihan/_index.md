@@ -1,5 +1,6 @@
 ---
 title: Subhan Zawad Bihan
+slug: 1024062339-subhan-zawad-bihan
 first_name: Subhan Zawad Bihan
 last_name: 1024062339
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062339
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EP
+* **Thesis Status:** -

@@ -1,5 +1,6 @@
 ---
 title: Ramisa Tahsin Shreya
+slug: 1024062377-ramisa-tahsin-shreya
 first_name: Ramisa Tahsin Shreya
 last_name: 1024062377
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062377
-* **Research Division:** EP
 * **BSc Institution:** BUET
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EP
+* **Thesis Status:** -

@@ -1,5 +1,6 @@
 ---
 title: Md. Tasrif Prodhan
+slug: 1024062129-md-tasrif-prodhan
 first_name: Md. Tasrif Prodhan
 last_name: 1024062129
 authors:
@@ -15,6 +16,10 @@ thesis:
   title: nan
 ---
 
+## Information
 * **Student ID:** 1024062129
-* **Research Division:** EEPS
 * **BSc Institution:** DU
+* **Working Towards:** M.Sc. Engg.
+* **First Enrollment:** 2024 October
+* **Research Division:** EEPS
+* **Thesis Status:** -
