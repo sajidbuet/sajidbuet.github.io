@@ -1,7 +1,7 @@
 ---
 title: Md. Solaiman
 first_name: Md. Solaiman
-last_name: Solaiman
+last_name: 2006008
 authors:
   - 20-md-solaiman
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Solaiman
-* **Research Division:** nan
+* **Student ID:** 2006008
+* **Research Division:** EP
 * **BSc Institution:** BUET

@@ -1,7 +1,7 @@
 ---
 title: Md. Azim Sikder
 first_name: Md. Azim Sikder
-last_name: Sikder
+last_name: 2006022
 authors:
   - 20-azim-sikder
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Sikder
-* **Research Division:** nan
+* **Student ID:** 2006022
+* **Research Division:** EP
 * **BSc Institution:** BUET

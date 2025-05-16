@@ -16,5 +16,5 @@ thesis:
 ---
 
 * **Student ID:** 0424062139
-* **Research Division:** Power
+* **Research Division:** EEPS
 * **BSc Institution:** RUET

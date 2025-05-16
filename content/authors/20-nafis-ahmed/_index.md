@@ -1,7 +1,7 @@
 ---
 title: Nafis Ahmed
 first_name: Nafis Ahmed
-last_name: Ahmed
+last_name: 2006192
 authors:
   - 20-nafis-ahmed
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Ahmed
-* **Research Division:** nan
+* **Student ID:** 2006192
+* **Research Division:** CSP
 * **BSc Institution:** BUET

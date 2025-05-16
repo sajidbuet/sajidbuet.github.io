@@ -1,7 +1,7 @@
 ---
 title: Md. Tanvirul Islam
 first_name: Md. Tanvirul Islam
-last_name: Islam
+last_name: 2006095
 authors:
   - 20-tanvirul-islam
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Islam
-* **Research Division:** nan
+* **Student ID:** 2006095
+* **Research Division:** EEPS
 * **BSc Institution:** BUET

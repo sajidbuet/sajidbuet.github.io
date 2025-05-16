@@ -1,6 +1,5 @@
 ---
 title: Purbayan Das
-slug: 0421062341-purbayan-das
 first_name: Purbayan Das
 last_name: 0421062341
 authors:
@@ -17,5 +16,5 @@ thesis:
 ---
 
 * **Student ID:** 0421062341
-* **Research Division:** nan
+* **Research Division:** EP
 * **BSc Institution:** BUET

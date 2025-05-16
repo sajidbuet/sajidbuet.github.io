@@ -16,5 +16,5 @@ thesis:
 ---
 
 * **Student ID:** 0423062319
-* **Research Division:** nan
+* **Research Division:** EP
 * **BSc Institution:** MIST

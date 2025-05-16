@@ -1,7 +1,7 @@
 ---
 title: Md. Sakif Imam
 first_name: Md. Sakif Imam
-last_name: Imam
+last_name: 2006173
 authors:
   - 20-sakif-imam
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Imam
-* **Research Division:** nan
+* **Student ID:** 2006173
+* **Research Division:** EEPS
 * **BSc Institution:** BUET

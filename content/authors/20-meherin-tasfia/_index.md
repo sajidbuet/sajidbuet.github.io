@@ -1,7 +1,7 @@
 ---
 title: Meherin Tasfia
 first_name: Meherin Tasfia
-last_name: Tasfia
+last_name: 2006175
 authors:
   - 20-meherin-tasfia
 superuser: false
@@ -15,6 +15,6 @@ thesis:
   title: nan
 ---
 
-* **Student ID:** Tasfia
-* **Research Division:** nan
+* **Student ID:** 2006175
+* **Research Division:** CSP
 * **BSc Institution:** BUET

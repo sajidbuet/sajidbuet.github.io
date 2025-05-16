@@ -1,6 +1,6 @@
 ---
-title: Ayon Sarker
-first_name: Ayon Sarker
+title: Ayon Sarkar
+first_name: Ayon Sarkar
 last_name: 0421062344
 authors:
   - 0421062344-Ayon-Sarker
@@ -16,5 +16,5 @@ thesis:
 ---
 
 * **Student ID:** 0421062344
-* **Research Division:** nan
+* **Research Division:** EP
 * **BSc Institution:** BUET

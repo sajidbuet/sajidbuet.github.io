@@ -16,5 +16,5 @@ thesis:
 ---
 
 * **Student ID:** 0423062522
-* **Research Division:** nan
+* **Research Division:** CSP
 * **BSc Institution:** BUET
