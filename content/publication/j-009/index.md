@@ -12,7 +12,7 @@ authors:
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 date: '2019-01-01'
-publishDate: '2025-05-15T13:30:07.248551Z'
+publishDate: '2025-05-16T15:23:08.137466Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'

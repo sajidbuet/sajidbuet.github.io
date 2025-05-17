@@ -8,7 +8,7 @@ authors:
 - Sergei Bozhevolnyi
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2025-05-15T13:30:09.411794Z'
+publishDate: '2025-05-16T15:23:10.102630Z'
 publication_types:
 - paper-conference
 publication: '*Frontiers in Optics 2017*'

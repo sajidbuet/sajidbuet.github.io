@@ -6,7 +6,7 @@ authors:
 - Purbayan Das
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2025-05-15T13:30:09.887138Z'
+publishDate: '2025-05-16T15:23:10.560651Z'
 publication_types:
 - article-journal
 publication: '*Opt. Mater. Express*'

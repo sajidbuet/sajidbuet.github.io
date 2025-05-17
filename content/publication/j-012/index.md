@@ -35,7 +35,7 @@ authors:
 - Sergei Tretyakov
 - Christophe Craeye
 date: '2019-01-01'
-publishDate: '2025-05-15T13:30:07.295672Z'
+publishDate: '2025-05-16T15:23:08.171269Z'
 publication_types:
 - article-journal
 publication: '*Journal of Optics*'

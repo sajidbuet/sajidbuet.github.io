@@ -1,18 +1,12 @@
 ---
-title: Design of Dual-Band Plasmonic Absorber for Biomedical Sensing and Environmental
-  Monitoring
+title: Design of Silicon-Carbide Based Single-Quantum-Well White LED
 authors:
-- Ayon Sarker
+- Md. Mahfuzul Haque
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2025-05-15T13:30:07.561268Z'
+publishDate: '2025-05-16T15:23:08.451240Z'
 publication_types:
 - manuscript
 tags:
 - photonics
-links:
-- name: arXiv
-  url: https://arxiv.org/abs/2411.12356
-- name: URL
-  url: https://arxiv.org/abs/2411.12356
 ---
