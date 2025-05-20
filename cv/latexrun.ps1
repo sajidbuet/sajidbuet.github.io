@@ -1,131 +1,132 @@
-# Stop execution if any command fails
-$GoogleScholarProfileID = "Fu8Hkb4AAAAJ"
-$ErrorActionPreference = "Stop"
+﻿###############################################################################
+# 🛠️  DSMC CV — Full LaTeX + Bibliography Build Script (emoji + colour)       #
+# ----------------------------------------------------------------------------#
+# • Updates citation metrics, regenerates papers.bib, compiles the CV with     #
+#   LuaLaTeX+Biber, then cleans auxiliaries.                                   #
+# • Requires: pop8query.exe, pop8metrics.exe, Python 3, LuaLaTeX, Biber.       #
+###############################################################################
 
-# Define the paths to the main TeX file, bibliography file, and class file
-$texFile = "dsmc-cv.tex"
-$bibFile = "papers.bib"
-$clsFile = "buetcv.cls"
+# ─── Console prep: force UTF-8 so emojis render in Windows PowerShell 5 ──────
+chcp 65001            > $null                  # Set code-page to UTF-8. :contentReference[oaicite:5]{index=5}
+[Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8   # PS output stream. :contentReference[oaicite:6]{index=6}
 
-Write-Host " "
-Write-Host " "
-Write-Host "    ** DSMC LaTeX Run **"
-Write-Host "    ** sajid.buet.ac.bd **"
-Write-Host " "
-Write-Host "    Before you proceed, make sure that you have updated the publications in papers.bib."
-Write-Host "     Add citationurl field in the bib file from the PoPCites.csv, add journal metrics from SCIMAGO JR manually. "
-Write-Host " "
-Write-Host " "
-Write-Host "    ** LaTeXRun Step 1: Update PoPCites.csv with pop8query.exe **"
+# ─── Colour palette shortcuts ────────────────────────────────────────────────
+$Info  = 'Cyan'
+$Step  = 'Yellow'
+$Warn  = 'Magenta'
+$Error = 'Red'
+$Good  = 'Green'
+
+# Fail fast on any non-terminating error
+$ErrorActionPreference = 'Stop'
+
+# ─── Config ­─────────────────────────────────────────────────────────────────
+$GoogleScholarProfileID = 'Fu8Hkb4AAAAJ'
+$texFile = 'dsmc-cv.tex'
+$bibFile = 'papers.bib'
+$clsFile = 'buetcv.cls'
+
+# ──────────────────────────── BANNER ─────────────────────────────────────────
+Write-Host ''
+Write-Host '📄  ** DSMC LaTeX Run **'                  -ForegroundColor $Step
+Write-Host '🌐  sajid.buet.ac.bd'                       -ForegroundColor $Info
+Write-Host ''
+Write-Host 'ℹ️   Ensure *papers.bib* is UPDATED with PoPCites.csv +' `
+           'SCImago metrics before compiling.'          -ForegroundColor $Warn
+Write-Host ''
+
+# ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
+Write-Host '🔍  Step 1: Refresh PoPCites.csv via pop8query.exe' -ForegroundColor $Step
 .\pop8query.exe --gsprofile --author $GoogleScholarProfileID PoPCites.csv
 
-Write-Host "    ** LaTeXRun Step 2: Update PoPMetrics.csv with pop8metrics.exe **"
-.\pop8metrics.exe --label "text1" --format csvh PoPCites.csv PoPMetrics.csv
+Write-Host '📈  Step 2: Produce PoPMetrics.csv via pop8metrics.exe' -ForegroundColor $Step
+.\pop8metrics.exe --label 'text1' --format csvh PoPCites.csv PoPMetrics.csv
 
-Write-Host "    ** LaTeXRun Step 3: Use pycv_update_citations_bib.py for updating the $bibFile file**"
+Write-Host '🖊️   Step 3: Inject new citation counts into papers.bib' -ForegroundColor $Step
 python pycv_update_citations_bib.py
 
-Write-Host "    ** LaTeXRun Step 4: Check PoPAuthYear.csv for completeness **"
-
-$csvPoPAuthYear = "PoPAuthYear.csv"
-
-# Check if file exists
-if (-Not (Test-Path $csvPoPAuthYear)) {
-    Write-Error "    File '$csvPoPAuthYear' not found."
-    exit 1
-}
-$data = Import-Csv -Path $csvPoPAuthYear
-
-if (-Not ($data | Get-Member -Name 'Year') -or -Not ($data | Get-Member -Name 'Cites')) {
-    Write-Error "    CSV must have 'Year' and 'Cites' columns."
+# ═════════════════════ 2️⃣  Validate PoPAuthYear.csv ════════════════════════
+Write-Host '🗂️   Step 4: Check PoPAuthYear.csv completeness' -ForegroundColor $Step
+$csvPoPAuthYear = 'PoPAuthYear.csv'
+if (-not (Test-Path $csvPoPAuthYear)) {
+    Write-Host "❌  File '$csvPoPAuthYear' not found." -ForegroundColor $Error
     exit 1
 }
 
-# Convert years to integers, just in case
+$data = Import-Csv $csvPoPAuthYear
+if (-not ($data | Get-Member Year) -or -not ($data | Get-Member Cites)) {
+    Write-Host '❌  CSV requires columns Year & Cites.' -ForegroundColor $Error
+    exit 1
+}
+
 $data | ForEach-Object { $_.Year = [int]$_.Year }
+$lastYear         = ($data | Sort-Object Year)[-1].Year
+$expectedLastYear = (Get-Date).Year - 1   # expect complete data up to last full year
 
-# Find the last (latest) year in the file
-$lastYear = ($data | Sort-Object Year)[-1].Year
-
-# Get last full year (e.g., if current year is 2025, we expect data till 2024)
-$expectedLastYear = (Get-Date).Year 
-
-# Check and throw error if outdated
 if ($lastYear -lt $expectedLastYear) {
-    Write-Output "    Current year is $expectedLastYear."
-    Write-Output "    Last entry of $csvPoPAuthYear is $lastYear."
-    Write-Output ""
-    Write-Output "    So citation data of current year is missing. "
-    Write-Output "    You must update the $csvPoPAuthYear manually up to last year's citations."
-    throw "    Missing citation data at $csvPoPAuthYear"
+    Write-Host "⚠️  Missing citation data for $expectedLastYear → update PoPAuthYear.csv!" `
+               -ForegroundColor $Warn
+    exit 1
 } else {
-    Write-Output "PoPAuthYear.csv is up-to-date till last year (last entry: $lastYear)."
+    Write-Host "✅  PoPAuthYear.csv is current (last year: $lastYear)." -ForegroundColor $Good
 }
 
-Write-Host "    ** Step 5: Use PoPAuthYear.csv for updating gscholar.tex **"
+# ═════════════════════ 3️⃣  Generate gscholar.tex ═══════════════════════════
+Write-Host '🧮  Step 5: Render gscholar.tex from PoPAuthYear.csv' -ForegroundColor $Step
 python pycv_update_gscholar_tex.py
 
+# ═════════════════════ 4️⃣  LaTeX compilation ═══════════════════════════════
+Write-Host '📚  Step 6: Compiling LaTeX sources…' -ForegroundColor $Step
 
-Write-Host "    ** Step 6: Latex Compilation **"
-
-
-
-# Verify that the required files exist
-if (-Not (Test-Path $texFile)) {
-    Write-Error "Error: The file '$texFile' was not found."
-    exit 1
+foreach ($f in @($texFile, $bibFile, $clsFile)) {
+    if (-not (Test-Path $f)) {
+        Write-Host "❌  Required file '$f' was not found." -ForegroundColor $Error
+        exit 1
+    }
 }
 
-if (-Not (Test-Path $bibFile)) {
-    Write-Error "Error: The bibliography file '$bibFile' was not found."
-    exit 1
-}
+$texDir      = [IO.Path]::GetDirectoryName($texFile)
+$texBaseName = [IO.Path]::GetFileNameWithoutExtension($texFile)
+$localTex    = if ($texDir) { Push-Location $texDir; "$texBaseName.tex" } else { $texFile }
 
-if (-Not (Test-Path $clsFile)) {
-    Write-Error "Error: The class file '$clsFile' was not found."
-    exit 1
-}
+# 1st pass
+Write-Host '🖨️   lualatex — first pass' -ForegroundColor $Info
+lualatex $localTex -interaction nonstopmode
 
+# Biber
+Write-Host '🔗  biber bibliography pass' -ForegroundColor $Info
+biber $texBaseName
 
-# Extract the directory and base name from the TeX file path
-$texDir = [System.IO.Path]::GetDirectoryName($texFile)
-$texBaseName = [System.IO.Path]::GetFileNameWithoutExtension($texFile)
+# 2nd & 3rd passes
+Write-Host '🔄  lualatex — second pass' -ForegroundColor $Info
+lualatex $localTex -interaction nonstopmode
+Write-Host '🔄  lualatex — third pass'  -ForegroundColor $Info
+lualatex $localTex -interaction nonstopmode
 
-# If the TeX file is in a subfolder, change directory into it
-if ($texDir -and $texDir -ne "") {
-    Push-Location $texDir
-    # Now, the TeX file is in the current directory
-    $localTexFile = "$texBaseName.tex"
+if ($texDir) { Pop-Location }
+
+Write-Host '🏁  Compilation complete.' -ForegroundColor $Good
+
+# ═════════════════════ 5️⃣  Verify output PDF ═══════════════════════════════
+$outputPdf = if ($texDir) {
+    "$texDir/$texBaseName.pdf"      # e.g. 'subfolder/cv.pdf'
 } else {
-    $localTexFile = $texFile
+    "$texBaseName.pdf"              # e.g. 'cv.pdf' in the working dir
 }
 
+if (Test-Path $outputPdf) {
+    Write-Host "✅  cv.pdf created successfully at $outputPdf." -ForegroundColor $Good
+} else {
+    Write-Host "❌  Build finished but cv.pdf is MISSING!" -ForegroundColor $Error
+    exit 1
+}
 
+# ═════════════════════ 6️⃣  Clean auxiliary files ═══════════════════════════
+Write-Host '🧹  Step 7: Cleaning auxiliaries' -ForegroundColor $Step
+Get-ChildItem -Path (Split-Path $texFile -Parent) `
+    -Include *.aux,*.bbl,*.bcf,*.xml,*.gz,*.fls,*.fdb_latexmk,*.blg `
+    -File -Recurse | Remove-Item -Force
+Write-Host '🗑️   Cleanup complete.' -ForegroundColor $Info
 
-
-# Run pdflatex (first pass) to generate the .aux and .bcf files
-Write-Host "        Running lualatex (first pass)..."
-lualatex $localTexFile   -interaction nonstopmode 
-
-# Run biber to process the bibliography (instead of bibtex)
-Write-Host "        Running biber..."
-biber $texBaseName 
-
-
-# Run pdflatex two more times to resolve references and bibliography
-Write-Host "        Running lualatex (second pass)..."
-lualatex $localTexFile   -interaction nonstopmode  
-Write-Host "        Running lualatex (third pass)..."
-lualatex $localTexFile   -interaction nonstopmode  
-
-
-Write-Host "        Compilation complete."
-
-
-# Clean up auxiliary files (aux, bbl, bcf, log, xml, gz) in the current directory
-Write-Host "    ** Step 7: Cleaning up auxiliary files... **"
-Get-ChildItem -Path .\* -Include *.aux, *.bbl, *.bcf, *.xml, *.gz, *.fls, *.fdb_latexmk, *.blg, -File | Remove-Item -Force
-
-Write-Host "       Cleanup complete."
-Write-Host "       End of LaTeX run."
-
+Write-Host ''
+Write-Host '🎉  End of LaTeX run. Have a productive day!' -ForegroundColor $Step

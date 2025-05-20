@@ -6,7 +6,7 @@ authors:
 - Purbayan Das
 - Sajid Muhaimin Choudhury
 date: '2020-01-01'
-publishDate: '2025-05-16T15:23:10.402343Z'
+publishDate: '2025-05-20T01:51:09.747015Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'

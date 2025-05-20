@@ -5,7 +5,7 @@ authors:
 - Soikot Sarkar
 - Sajid Muhaimin Choudhury
 date: '2025-01-01'
-publishDate: '2025-05-16T15:23:10.600615Z'
+publishDate: '2025-05-20T01:51:09.953640Z'
 publication_types:
 - article-journal
 publication: '*Solar Energy*'

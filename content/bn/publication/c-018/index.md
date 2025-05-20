@@ -6,7 +6,7 @@ authors:
 - Md. Ehsanul Karim
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-05-16T15:23:10.144440Z'
+publishDate: '2025-05-20T01:51:09.483738Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

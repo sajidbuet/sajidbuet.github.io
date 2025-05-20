@@ -37,7 +37,7 @@ python student-page-creator.py $author_excel --dry
 ```
 """
 from __future__ import annotations
-
+import os
 import argparse
 import logging
 import shutil
@@ -119,13 +119,14 @@ def build_yaml(front: dict) -> str:
 
 def write_markdown(folder: Path, front: dict, body: list[str], *, dry: bool) -> None:
     md_path = folder / "_index.md"
+    short   = f"{folder.name}{os.sep}{md_path.name}"
     content = build_yaml(front) + "\n\n" + "\n".join(body) + "\n"
     if dry:
-        cprint(f"{WRITE_EMO} {md_path} (dry)", CYAN)
+        cprint(f"{WRITE_EMO} {short} (dry)", CYAN)
         return
     try:
         md_path.write_text(content, encoding="utf-8")
-        cprint(f"{WRITE_EMO} {md_path}", CYAN)
+        #cprint(f"{WRITE_EMO} {short}", CYAN)
     except PermissionError:
         cprint(f"{WARN_EMO} cannot write markdown – open elsewhere: {md_path}", RED)
 
@@ -137,7 +138,7 @@ def process_roster(df: pd.DataFrame, *, img_dir: Path, pages_dir: Path, default_
     total = len(df)
     processed = skipped_avatar = fallback_used = missing_photo = 0
     cprint(f"Processing {total} rows…", CYAN, bold=True)
-
+    cprint(f"Working DIR={pages_dir}", CYAN, bold=True)
     for _, row in df.iterrows():
         foldername = str(row["foldername"]).strip()
         if foldername.lower() == "admin":
