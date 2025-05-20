@@ -20,7 +20,7 @@ Write-Host '📝  Compiles CV, refreshes publications, rebuilds Hugo site, and z
 Write-Host ''
 
 # ───────────────────────────── 1️⃣  CV + BibTeX update ───────────────────────
-$updatelatex = 1          # set to 1 when you modify cv/*.tex or *.bib
+$updatelatex = 0          # set to 1 when you modify cv/*.tex or *.bib
 if ($updatelatex) {
 
     Write-Host '📄  Running LaTeX in /cv (log → latexmk.log)…' -ForegroundColor $Step

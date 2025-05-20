@@ -10,7 +10,7 @@ organizations:
   - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
 role: Masters Student
 user_groups:
-  - Grad Students
+  - MSc Students
 graduation_year: nan
 thesis:
   title: nan
@@ -20,6 +20,6 @@ thesis:
 * **Student ID:** 1024062406
 * **BSc Institution:** BUET
 * **Working Towards:** B.Sc. Engg.
-* **First Enrollment:** 2020
+* **First Enrollment:** 2024 October
 * **Research Division:** EP
-* **Thesis Status:** nan
+* **Thesis Status:** -

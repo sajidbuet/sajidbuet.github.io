@@ -10,7 +10,7 @@ organizations:
   - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
 role: Masters Student
 user_groups:
-  - Grad Students
+  - MSc Students
 graduation_year: nan
 thesis:
   title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring

@@ -26,7 +26,8 @@ sections:
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
           - Researchers
-          - Grad Students
+          - PhD Students
+          - MSc Students
           - Undergrad Students
           - UG Students
           - Administration

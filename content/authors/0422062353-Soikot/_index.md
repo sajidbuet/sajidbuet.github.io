@@ -10,7 +10,7 @@ organizations:
   - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
 role: Masters Student
 user_groups:
-  - Grad Students
+  - MSc Students
 graduation_year: nan
 thesis:
   title: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency
