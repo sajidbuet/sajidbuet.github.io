@@ -1,7 +1,13 @@
-2025-05-20 11:08:45,479 - INFO - Loading CSV file: PopCites.csv
-2025-05-20 11:08:45,486 - INFO - Loading BibTeX file: papers.bib
-2025-05-20 11:08:45,613 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
-2025-05-20 11:08:45,613 - WARNING - No matching 'CitationURL' found in CSV for entry 'J023'.
-2025-05-20 11:08:45,613 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
-2025-05-20 11:08:45,613 - INFO - Total entries updated: 0
-2025-05-20 11:08:45,613 - INFO - Successfully wrote updates to BibTeX file: papers.bib
+2025-05-31 15:46:07,171 - INFO - Loading CSV file: PopCites.csv
+2025-05-31 15:46:07,177 - INFO - Loading BibTeX file: papers.bib
+2025-05-31 15:46:07,256 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J008': 166 -> 167
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J009': 214 -> 215
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J012': 275 -> 278
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J013': 12 -> 13
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J018': 21 -> 22
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J023':  -> 0
+2025-05-31 15:46:07,256 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
+2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'P01': 12 -> 13
+2025-05-31 15:46:07,256 - INFO - Total entries updated: 7
+2025-05-31 15:46:07,266 - INFO - Successfully wrote updates to BibTeX file: papers.bib

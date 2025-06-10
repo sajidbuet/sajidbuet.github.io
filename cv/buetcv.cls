@@ -242,7 +242,7 @@
 \usepackage[
     backend=biber,
     style=ext-numeric,
-    firstinits=true,
+    firstinits=false,
     maxcitenames=99,
     maxbibnames=99,
     sorting=ydnt,
@@ -250,6 +250,16 @@
     isbn=false,
     datamodel=ignore,        % allow unknown fields
 ]{biblatex}
+
+\AtBeginDocument{%
+  \DeclareFieldFormat{doi}{%
+    \ifhyperref
+      {\href{https://doi.org/#1}{\nolinkurl{#1}}}%  হাইপারলিংক  \nolinkurl{#1}
+      {\nolinkurl{#1}}%                       হাইপারলিংক না থাকলে শুধু টেক্সট
+  }%
+}
+
+
 
 \addbibresource{papers.bib}
 
@@ -298,8 +308,8 @@
 %    {\addtocategory{byname}{\thefield{entrykey}}}
 %    {}}
 
-
-
-\endinput
 %%
 %% End of file `buetcv.sty'.
+
+\endinput
+

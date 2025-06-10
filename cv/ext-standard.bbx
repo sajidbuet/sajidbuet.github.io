@@ -10,7 +10,6 @@
 \RequirePackage{xcolor}
 
 
-
 \blx@inputonce{ext-biblatex-aux.def}{auxiliary code for ext-biblatex}
   {}{}{}{}
 
@@ -26,7 +25,8 @@
           \setunit{\addspace}%
           {\scriptsize
             \textcolor{blue}{%
-              \aiGoogleScholar Citations:\, \textbf{\printfield{citationnos}}, \,%
+              %\aiGoogleScholar
+               Citations:\, \textbf{\printfield{citationnos}}, \,%
             }%
           }%
         }
@@ -1249,7 +1249,7 @@
 
 \renewbibmacro*{doi+eprint+url}{%
   \ifboolexpr{togl {bbx:doi} and not test {\iffieldxref{doi}}}
-    {\printfield{doi}}
+    {\printfield{doi} }
     {}%
   \newunit\newblock
   \ifboolexpr{togl {bbx:eprint} and not test {\iffieldxref{eprint}}}
@@ -1454,3 +1454,4 @@
 % and is included in MikTeX and TeX live 2018 or later.
 % The development version can be found on GitHub
 %   https://github.com/moewew/biblatex-ext
+

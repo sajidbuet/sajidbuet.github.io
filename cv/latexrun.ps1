@@ -35,7 +35,10 @@ Write-Host 'ℹ️   Ensure *papers.bib* is UPDATED with PoPCites.csv +' `
            'SCImago metrics before compiling.'          -ForegroundColor $Warn
 Write-Host ''
 
+# No update citation
+$update_citation = 0
 # ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
+if($update_citation ) {
 Write-Host '🔍  Step 1: Refresh PoPCites.csv via pop8query.exe' -ForegroundColor $Step
 .\pop8query.exe --gsprofile --author $GoogleScholarProfileID PoPCites.csv
 
@@ -75,6 +78,10 @@ if ($lastYear -lt $expectedLastYear) {
 Write-Host '🧮  Step 5: Render gscholar.tex from PoPAuthYear.csv' -ForegroundColor $Step
 python pycv_update_gscholar_tex.py
 
+}
+else {
+    Write-Host 'Update Citation Disabled... Skipping Step 1-5.'
+}
 # ═════════════════════ 4️⃣  LaTeX compilation ═══════════════════════════════
 Write-Host '📚  Step 6: Compiling LaTeX sources…' -ForegroundColor $Step
 
