@@ -55,6 +55,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{subcaption}
 \RequirePackage{pgfplots}
+\RequirePackage{longtable}
 \pgfplotsset{compat=1.18}
 
 \definecolor{primaryColor}{RGB}{0, 0, 0} 
