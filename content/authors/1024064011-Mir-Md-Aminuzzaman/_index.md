@@ -1,13 +1,13 @@
 ---
 title: Mir Md. Aminuzzaman
 slug: 1024064011-mir-md-aminuzzaman
-first_name: Mir Md. Aminuzzaman
-last_name: 1024064011
+first_name: Mir
+last_name: Md. Aminuzzaman
 authors:
   - 1024064011-Mir-Md-Aminuzzaman
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Ph.D. Student
 user_groups:
   - PhD Students

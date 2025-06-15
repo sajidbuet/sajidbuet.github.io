@@ -1,13 +1,13 @@
 ---
 title: Md Al Shahriar Shakil
 slug: 0424062324-shahriar-shakil
-first_name: Md Al Shahriar Shakil
-last_name: 0424062324
+first_name: Md
+last_name: Al Shahriar Shakil
 authors:
   - 0424062324-Shahriar-shakil
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

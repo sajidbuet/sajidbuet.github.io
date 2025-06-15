@@ -1,13 +1,13 @@
 ---
 title: Junayet Hossaain
 slug: 1024062374-junayet-hossaain
-first_name: Junayet Hossaain
-last_name: 1024062374
+first_name: Junayet
+last_name: Hossaain
 authors:
   - 1024062374-Junayet-Hossaain
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

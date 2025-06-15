@@ -1,13 +1,13 @@
 ---
 title: Bokhtiar Foysol Himon
 slug: 1024062404-bokhtiar-foysol-himon
-first_name: Bokhtiar Foysol Himon
-last_name: 1024062404
+first_name: Bokhtiar
+last_name: Foysol Himon
 authors:
   - 1024062404-Bokhtiar-Foysol-Himon
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

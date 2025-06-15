@@ -1,13 +1,13 @@
 ---
 title: Meherin Tasfia
 slug: 20-meherin-tasfia
-first_name: Meherin Tasfia
-last_name: 2006175
+first_name: Meherin
+last_name: Tasfia
 authors:
   - 20-meherin-tasfia
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

@@ -1,13 +1,13 @@
 ---
 title: Md. Shahinul Islam
 slug: 0424062385-md-shahinul-islam
-first_name: Md. Shahinul Islam
-last_name: 0424062385
+first_name: Md.
+last_name: Shahinul Islam
 authors:
   - 0424062385-Md-Shahinul-Islam
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

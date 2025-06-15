@@ -1,13 +1,13 @@
 ---
 title: Ramisa Tahsin Shreya
 slug: 1024062377-ramisa-tahsin-shreya
-first_name: Ramisa Tahsin Shreya
-last_name: 1024062377
+first_name: Ramisa
+last_name: Tahsin Shreya
 authors:
   - 1024062377-Ramisa-Tahsin-Shreya
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

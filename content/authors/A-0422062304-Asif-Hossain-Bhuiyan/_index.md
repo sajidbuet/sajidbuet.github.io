@@ -1,13 +1,13 @@
 ---
 title: Md Asif Hossain Bhuiyan
 slug: a-0422062304-asif-hossain-bhuiyan
-first_name: Md Asif Hossain Bhuiyan
-last_name: 0422062304
+first_name: Md
+last_name: Asif Hossain Bhuiyan
 authors:
   - A-0422062304-Asif-Hossain-Bhuiyan
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Graduated with MSc (May 2025)
 user_groups:
   - Alumni

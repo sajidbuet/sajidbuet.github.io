@@ -1,16 +1,16 @@
 ---
 title: Soikot Sarkar
-slug: 0422062353-soikot
-first_name: Soikot Sarkar
-last_name: 0422062353
+slug: a-0422062353-soikot
+first_name: Soikot
+last_name: Sarkar
 authors:
-  - 0422062353-Soikot
-superuser: false
+  - A-0422062353-Soikot
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
-role: Masters Student
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+role: Defended MSc Thesis (June 2025)
 user_groups:
-  - MSc Students
+  - Alumni
 graduation_year: nan
 thesis:
   title: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency
@@ -18,8 +18,8 @@ thesis:
 
 ## Information
 * **Student ID:** 0422062353
-* **BSc Institution:** BUET
+* **BSc Institution:** SUST
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2022 April
 * **Research Division:** EP
-* **Thesis Status:** CASR Approved Proposal and BoE
+* **Thesis Status:** Thesis Defended

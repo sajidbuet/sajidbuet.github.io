@@ -1,13 +1,13 @@
 ---
 title: Md. Azim Sikder
 slug: 20-azim-sikder
-first_name: Md. Azim Sikder
-last_name: 2006022
+first_name: Md.
+last_name: Azim Sikder
 authors:
   - 20-azim-sikder
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

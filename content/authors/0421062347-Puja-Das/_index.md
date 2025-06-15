@@ -1,13 +1,13 @@
 ---
 title: Puja Das
 slug: 0421062347-puja-das
-first_name: Puja Das
-last_name: 0421062347
+first_name: Puja
+last_name: Das
 authors:
   - 0421062347-Puja-Das
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students
@@ -22,4 +22,4 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2021 April
 * **Research Division:** EP
-* **Thesis Status:** BPGS Approved Proposal and BoE
+* **Thesis Status:** CASR Approved Proposal and BoE

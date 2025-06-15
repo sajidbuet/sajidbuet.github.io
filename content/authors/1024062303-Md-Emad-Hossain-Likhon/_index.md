@@ -1,13 +1,13 @@
 ---
 title: Md. Emad Hossain Likhon
 slug: 1024062303-md-emad-hossain-likhon
-first_name: Md. Emad Hossain Likhon
-last_name: 1024062303
+first_name: Md.
+last_name: Emad Hossain Likhon
 authors:
   - 1024062303-Md-Emad-Hossain-Likhon
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

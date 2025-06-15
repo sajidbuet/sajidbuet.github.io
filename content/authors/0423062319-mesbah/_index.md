@@ -1,13 +1,13 @@
 ---
 title: Md. Mesbah Uddin
 slug: 0423062319-mesbah
-first_name: Md. Mesbah Uddin
-last_name: 0423062319
+first_name: Md.
+last_name: Mesbah Uddin
 authors:
   - 0423062319-mesbah
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

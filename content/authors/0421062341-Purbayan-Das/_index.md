@@ -1,13 +1,13 @@
 ---
 title: Purbayan Das
 slug: 0421062341-purbayan-das
-first_name: Purbayan Das
-last_name: 0421062341
+first_name: Purbayan
+last_name: Das
 authors:
   - 0421062341-Purbayan-Das
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

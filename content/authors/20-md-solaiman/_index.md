@@ -1,13 +1,13 @@
 ---
 title: Md. Solaiman
 slug: 20-md-solaiman
-first_name: Md. Solaiman
-last_name: 2006008
+first_name: Md.
+last_name: Solaiman
 authors:
   - 20-md-solaiman
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

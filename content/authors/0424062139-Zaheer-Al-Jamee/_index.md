@@ -1,13 +1,13 @@
 ---
 title: Zaheer Al Jamee
 slug: 0424062139-zaheer-al-jamee
-first_name: Zaheer Al Jamee
-last_name: 0424062139
+first_name: Zaheer
+last_name: Al Jamee
 authors:
   - 0424062139-Zaheer-Al-Jamee
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

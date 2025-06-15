@@ -1,13 +1,13 @@
 ---
 title: Md. Ehsanul Karim
 slug: a-0422062302-md-ehsanul-karim
-first_name: Md. Ehsanul Karim
-last_name: 0422062302
+first_name: Md.
+last_name: Ehsanul Karim
 authors:
   - A-0422062302-Md-Ehsanul-Karim
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Graduated with MSc (June 2024)
 user_groups:
   - Alumni

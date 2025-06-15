@@ -1,13 +1,13 @@
 ---
 title: Md. Mahfuzul Haque
 slug: a-0421062305-md-mahfuzul-haque
-first_name: Md. Mahfuzul Haque
-last_name: 0421062305
+first_name: Md.
+last_name: Mahfuzul Haque
 authors:
   - A-0421062305-Md-Mahfuzul-Haque
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Graduated with MSc (Jan 2025)
 user_groups:
   - Alumni

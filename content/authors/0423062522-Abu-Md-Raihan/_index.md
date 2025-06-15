@@ -1,13 +1,13 @@
 ---
 title: Abu Md. Raihan
 slug: 0423062522-abu-md-raihan
-first_name: Abu Md. Raihan
-last_name: 0423062522
+first_name: Abu
+last_name: Md. Raihan
 authors:
   - 0423062522-Abu-Md-Raihan
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

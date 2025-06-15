@@ -1,13 +1,13 @@
 ---
 title: Md. Sakif Imam
 slug: 20-sakif-imam
-first_name: Md. Sakif Imam
-last_name: 2006173
+first_name: Md.
+last_name: Sakif Imam
 authors:
   - 20-sakif-imam
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

@@ -1,13 +1,13 @@
 ---
 title: Md Tarique Habibullah
 slug: 1024062406-md-tarique-habibullah
-first_name: Md Tarique Habibullah
-last_name: 1024062406
+first_name: Md
+last_name: Tarique Habibullah
 authors:
   - 1024062406-Md-Tarique-Habibullah
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

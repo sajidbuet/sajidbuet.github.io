@@ -1,13 +1,13 @@
 ---
 title: Ayon Sarker
 slug: 0421062344-ayon-sarker
-first_name: Ayon Sarker
-last_name: 0421062344
+first_name: Ayon
+last_name: Sarker
 authors:
   - 0421062344-Ayon-Sarker
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

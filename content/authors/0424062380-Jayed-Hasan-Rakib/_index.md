@@ -1,13 +1,13 @@
 ---
 title: Jayed Hasan Rakib
 slug: 0424062380-jayed-hasan-rakib
-first_name: Jayed Hasan Rakib
-last_name: 0424062380
+first_name: Jayed
+last_name: Hasan Rakib
 authors:
   - 0424062380-Jayed-Hasan-Rakib
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students

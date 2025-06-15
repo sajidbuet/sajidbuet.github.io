@@ -1,13 +1,13 @@
 ---
 title: Nafis Ahmed
 slug: 20-nafis-ahmed
-first_name: Nafis Ahmed
-last_name: 2006192
+first_name: Nafis
+last_name: Ahmed
 authors:
   - 20-nafis-ahmed
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

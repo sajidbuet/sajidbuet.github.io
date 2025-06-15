@@ -1,13 +1,13 @@
 ---
 title: Shamima Akter Mitu
 slug: a-0421062320-shamima-mitu
-first_name: Shamima Akter Mitu
-last_name: 0421062320
+first_name: Shamima
+last_name: Akter Mitu
 authors:
   - A-0421062320-Shamima-Mitu
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Graduated with MSc (May 2023)
 user_groups:
   - Alumni

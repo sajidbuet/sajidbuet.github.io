@@ -1,13 +1,13 @@
 ---
 title: Md. Tanvirul Islam
 slug: 20-tanvirul-islam
-first_name: Md. Tanvirul Islam
-last_name: 2006095
+first_name: Md.
+last_name: Tanvirul Islam
 authors:
   - 20-tanvirul-islam
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: UG Student
 user_groups:
   - Undergrad Students

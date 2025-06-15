@@ -1,13 +1,13 @@
 ---
 title: Dipika Rani Nath
 slug: 1024062333-dipika-rani-nath
-first_name: Dipika Rani Nath
-last_name: 1024062333
+first_name: Dipika
+last_name: Rani Nath
 authors:
   - 1024062333-Dipika-Rani-Nath
-superuser: false
+superuser: False
 organizations:
-  - {name: Q-PACER RG, Dept of EEE, BUET, url: ''}
+  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
 role: Masters Student
 user_groups:
   - MSc Students
