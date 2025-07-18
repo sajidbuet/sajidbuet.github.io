@@ -7,7 +7,7 @@ authors:
 - Mohammad Asif Zaman
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2025-05-20T05:09:04.873111Z'
+publishDate: '2025-07-17T17:32:25.994600Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE

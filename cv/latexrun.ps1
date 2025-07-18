@@ -36,7 +36,7 @@ Write-Host 'ℹ️   Ensure *papers.bib* is UPDATED with PoPCites.csv +' `
 Write-Host ''
 
 # No update citation
-$update_citation = 0
+$update_citation =1 
 # ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
 if($update_citation ) {
 Write-Host '🔍  Step 1: Refresh PoPCites.csv via pop8query.exe' -ForegroundColor $Step

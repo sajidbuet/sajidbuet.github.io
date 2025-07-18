@@ -1,13 +1,27 @@
-2025-05-31 15:46:07,171 - INFO - Loading CSV file: PopCites.csv
-2025-05-31 15:46:07,177 - INFO - Loading BibTeX file: papers.bib
-2025-05-31 15:46:07,256 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J008': 166 -> 167
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J009': 214 -> 215
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J012': 275 -> 278
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J013': 12 -> 13
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J018': 21 -> 22
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'J023':  -> 0
-2025-05-31 15:46:07,256 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
-2025-05-31 15:46:07,256 - INFO - Updating 'citationnos' for entry 'P01': 12 -> 13
-2025-05-31 15:46:07,256 - INFO - Total entries updated: 7
-2025-05-31 15:46:07,266 - INFO - Successfully wrote updates to BibTeX file: papers.bib
+2025-07-17 23:31:19,114 - INFO - Loading CSV file: PopCites.csv
+2025-07-17 23:31:19,130 - INFO - Loading BibTeX file: papers.bib
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C002': 4 -> 5
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C003': 6 -> 7
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C004': 8 -> 9
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C005': 1 -> 2
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C007': 0 -> 1
+2025-07-17 23:31:19,336 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'C013': 3 -> 4
+2025-07-17 23:31:19,336 - WARNING - No matching 'CitationURL' found in CSV for entry 'C014'.
+2025-07-17 23:31:19,336 - WARNING - No matching 'CitationURL' found in CSV for entry 'C024'.
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J001': 0 -> 1
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J002': 10 -> 11
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J005': 75 -> 77
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J006': 37 -> 38
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J007': 83 -> 85
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J008': 167 -> 171
+2025-07-17 23:31:19,336 - INFO - Updating 'citationnos' for entry 'J009': 215 -> 216
+2025-07-17 23:31:19,352 - INFO - Updating 'citationnos' for entry 'J012': 278 -> 284
+2025-07-17 23:31:19,352 - INFO - Updating 'citationnos' for entry 'J014': 69 -> 74
+2025-07-17 23:31:19,352 - INFO - Updating 'citationnos' for entry 'J018': 22 -> 25
+2025-07-17 23:31:19,352 - INFO - Updating 'citationnos' for entry 'J025': 0 -> 1
+2025-07-17 23:31:19,352 - INFO - Updating 'citationnos' for entry 'J026': 1 -> 2
+2025-07-17 23:31:19,352 - WARNING - Entry 'X01' is missing 'citesurl'. Skipping.
+2025-07-17 23:31:19,352 - WARNING - Entry 'X02' is missing 'citesurl'. Skipping.
+2025-07-17 23:31:19,352 - INFO - Total entries updated: 18
+2025-07-17 23:31:19,356 - INFO - Successfully wrote updates to BibTeX file: papers.bib
