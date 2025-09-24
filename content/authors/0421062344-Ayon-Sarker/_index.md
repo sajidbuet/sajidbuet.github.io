@@ -8,10 +8,10 @@ authors:
 superuser: False
 organizations:
   - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
-role: Masters Student
+role: Graduated with MSc (July 2025)
 user_groups:
-  - MSc Students
-graduation_year: nan
+  - Alumni
+graduation_year: 2025.0
 thesis:
   title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
 ---
@@ -22,4 +22,4 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2021 April
 * **Research Division:** EP
-* **Thesis Status:** CASR Approved Proposal and BoE
+* **Thesis Status:** Thesis Defended and Accepted

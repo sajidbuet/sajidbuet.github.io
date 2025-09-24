@@ -8,10 +8,10 @@ authors:
 superuser: False
 organizations:
   - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
-role: Defended MSc Thesis (June 2025)
+role: Graduated with MSc (July 2025)
 user_groups:
   - Alumni
-graduation_year: nan
+graduation_year: 2025.0
 thesis:
   title: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency
 ---
@@ -22,4 +22,4 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2022 April
 * **Research Division:** EP
-* **Thesis Status:** Thesis Defended
+* **Thesis Status:** Thesis Defended and Accepted

@@ -8,12 +8,12 @@ authors:
 superuser: False
 organizations:
   - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
-role: Masters Student
+role: Defended MSc (September 2025)
 user_groups:
-  - MSc Students
-graduation_year: nan
+  - Alumni
+graduation_year: 2025.0
 thesis:
-  title: nan
+  title: Efficiency Enhancement of HTL-Free Perovskite/Cadmium-Sulfide Heterojunction Solar Cell Incorporating Light Trapping Structure
 ---
 
 ## Information
@@ -22,4 +22,4 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2021 April
 * **Research Division:** EP
-* **Thesis Status:** CASR Approved Proposal and BoE
+* **Thesis Status:** Thesis Defended

@@ -35,8 +35,8 @@ Write-Host 'ℹ️   Ensure *papers.bib* is UPDATED with PoPCites.csv +' `
            'SCImago metrics before compiling.'          -ForegroundColor $Warn
 Write-Host ''
 
-# No update citation
-$update_citation =1 
+# No update citation set to 0
+$update_citation =0 
 # ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
 if($update_citation ) {
 Write-Host '🔍  Step 1: Refresh PoPCites.csv via pop8query.exe' -ForegroundColor $Step
