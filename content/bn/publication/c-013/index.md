@@ -7,7 +7,7 @@ authors:
 - Alexandra Boltasseva
 - Alexander V. Kildishev
 date: '2015-01-01'
-publishDate: '2025-07-17T17:32:29.333266Z'
+publishDate: '2025-09-26T00:09:42.122168Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2015*'

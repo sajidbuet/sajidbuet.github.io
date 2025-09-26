@@ -1,5 +1,5 @@
 ---
-title: Ayon Sarkar Defends Final
+title: Ayon Sarkar Defends MSc Thesis
 date: 2025-07-05
 image:
   focal_point: 'top'

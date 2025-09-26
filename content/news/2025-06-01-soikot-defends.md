@@ -1,5 +1,5 @@
 ---
-title: Soikot Sarkar Defends Final
+title: Soikot Sarkar Defends MSc Thesis
 date: 2025-06-01
 image:
   focal_point: 'top'

@@ -1,5 +1,5 @@
 ---
-title: Asif Hossain Bhuiyan Defends Final
+title: Asif Hossain Bhuiyan Defends MSc Thesis
 date: 2025-05-19
 image:
   focal_point: 'top'

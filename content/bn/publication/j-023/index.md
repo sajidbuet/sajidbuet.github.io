@@ -5,7 +5,7 @@ authors:
 - Ayon Sarker
 - Sajid Muhaimin Choudhury
 date: '2025-05-01'
-publishDate: '2025-07-17T17:32:30.017595Z'
+publishDate: '2025-09-26T00:09:42.818141Z'
 publication_types:
 - article-journal
 publication: '*Opt. Continuum*'

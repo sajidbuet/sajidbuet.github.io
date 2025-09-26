@@ -7,7 +7,7 @@ authors:
 - Sajid Muhaimin Choudhury
 - Md. Gaffar
 date: '2009-01-01'
-publishDate: '2025-07-17T17:32:25.931150Z'
+publishDate: '2025-09-26T00:09:39.029160Z'
 publication_types:
 - paper-conference
 publication: '*2009 IEEE Antennas and Propagation Society International Symposium*'

@@ -1,12 +1,17 @@
 ---
-title: Design of Silicon-Carbide Based Single-Quantum-Well White LED
+title: Harnessing Topological Valley-Hall States in Photonic Crystals for Robust Cancer
+  Cell Detection
 authors:
-- Md. Mahfuzul Haque
+- Junayet Hossain
 - Sajid Muhaimin Choudhury
+- Mohammed Imamul Hasan Bhuiyan
 date: '2025-01-01'
-publishDate: '2025-07-17T17:32:26.912826Z'
+publishDate: '2025-09-26T00:09:38.981690Z'
 publication_types:
 - manuscript
 tags:
 - photonics
+links:
+- name: URL
+  url: https://arxiv.org/abs/2509.05690
 ---
