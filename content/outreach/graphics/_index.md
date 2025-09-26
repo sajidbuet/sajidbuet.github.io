@@ -16,11 +16,28 @@ Occasionally, additional logos become necessary, and BUET has no media departmen
 The hex color used in BUET logo in the wikipedia article is AC1F24.
 
 Below images have transparent background and are suitable to be used in powerpoint/word.
+#### BUET Seal Logos
+| Variant   | Files                                                                                                                                                                                                          | Preview                                                                |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **Color** | [1200px](BUET_logo_1200px_color.png), [256px](BUET_logo_256px_color.png), [SVG](BUET_logo_color.svg), [EMF](BUET_logo_color.emf), [WMF](BUET_logo_color.wmf), [EEE Color 256px](BUET_LOGO_EEE_color_256px.png) | <img src="BUET_logo_256px_color.png" width="100">                      |
+| **White** | [PNG](BUET_logo_white.png), [128px](BUET_logo_white_128px.png), [EMF](BUET_logo_white.emf), [WMF](BUET_logo_white.wmf)                                                                                         | <img src="BUET_logo_white.png" width="100" style="background:#CFCFCF"> |
+| **Black** | [PNG](BUET_logo_black-757px.png), [EMF](BUET_logo_black.emf), [WMF](BUET_logo_black.wmf)                                                                                                                       | <img src="BUET_logo_black-757px.png" width="100">                      |
 
-|          |     |    |
-|--------------|-----------|------------|
-|  [White.png](BUET_logo_white.png) <br/>  [White.emf](BUET_logo_white.emf) <br/> [White.emf](BUET_logo_white.emf) <br/> <img src="BUET_logo_white.png" width="128" height="128" style="background-color: #ac1f24" />    |   [1200px_color.png](BUET_logo_1200px_color.png) <br/> [256px_color.png](BUET_logo_256px_color.png) <br/>[SVG](BUET_logo_color.svg) </br> [EMF](BUET_logo_color.emf) <br/> [WMF](BUET_logo_color.wmf)<img src="BUET_logo_256px_color.png" width="128" height="128" />   <br/> <br/>   | [black.emf](BUET_logo_black.emf) <br/> [black.wmf](BUET_logo_black.wmf)  <br/> [black.png](BUET_logo_black-757px.png) <img src="BUET_logo_black-757px.png" width="128" height="128" />   <br/><br/>       |
-| [admin_EEE.png](admin_EEE.png)   <br/> <img src="admin_EEE.png" width="128" height="128" />       | [buet_eee_full_logo.svg](buet_eee_full_logo.svg)  <br/> <img src="buet_eee_full_logo.svg" width="208" height="128" />   <br/> <img src="buet_eee_full_logo_brown_white.svg" width="208" height="128" />    | [BUET EEE Website.svg](bueteee_logo_black_grav.svg) <img src="bueteee_logo_black_grav.svg" width="128"  />       |
+#### EEE Department Logos
+| Variant           | Files                                                                                | Preview                                                                         |
+| ----------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| **Default Color** | [PNG](buet_eee_full_logo.png), [SVG](buet_eee_full_logo.svg)                         | <img src="buet_eee_full_logo.png" width="180">                                  |
+| **Black**         | [PNG](buet_eee_full_logo_black.png), [SVG](buet_eee_full_logo_black.svg)             | <img src="buet_eee_full_logo_black.png" width="180">                            |
+| **White**         | [PNG](buet_eee_full_logo_white.png), [SVG](buet_eee_full_logo_white.svg)             | <img src="buet_eee_full_logo_white.png" width="180" style="background:#CFCFCF"> |
+| **Brown-White**   | [PNG](buet_eee_full_logo_brown_white.png), [SVG](buet_eee_full_logo_brown_white.svg) | <img src="buet_eee_full_logo_brown_white.png" width="180" style="background:#CFCFCF">                      |
+| **Maroon**        | [PNG](buet_eee_full_logo_maroon.png), [SVG](buet_eee_full_logo_maroon.svg)           | <img src="buet_eee_full_logo_maroon.png" width="180">                           |
+
+#### Utility / Special
+| Purpose                 | Files                              | Preview                                             |
+| ----------------------- | ---------------------------------- | --------------------------------------------------- |
+| **Website / Grav Logo** | [SVG](bueteee_logo_black_grav.svg) | <img src="bueteee_logo_black_grav.svg" width="100"> |
+| **Webmail Icon**        | [SVG](BUET_logo_webmail-01.svg)    | <img src="BUET_logo_webmail-01.svg" width="100">    |
+| **Admin EEE**           | [PNG](admin_EEE.png)               | <img src="admin_EEE.png" width="100">               |
 
 
 
