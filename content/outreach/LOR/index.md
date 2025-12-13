@@ -22,18 +22,54 @@ you <span style="color:red">MUST</span> meet at least one of the following descr
   3. Performed some kind of project work under my guidance/in collaboration that resulted in a peer-reveiewed publication 
   4. You successfully completed my graduate level course
   5. You are a colleague / part-time faculty member who directly took any class with me
-  6. I taught a final-year lab course that you successfully completed, and demonstrated a good project <sup>1</sup>
+  6. I taught a final-year lab course that you successfully completed, and demonstrated a honours project <sup>1</sup>
   7. I served as a  member in your MSc/PhD examination committee
   8. I was an external examiner of your Final year thesis/project
-  9. My undergraduate advisee <sup></sup>
+
 
  ** for serial number 6 and above, I will only give LORs to schools that have application deadline on or AFTER December 15th of the calendar year. Kindly refrain from requesting LORs for other schools**   
 
-<sup>1</sup> based on  sessional course project alone, it is diffcult to judge your motivation. However,  if a project from a theory/lab course was truly exceptional, and resulted in a publication with my approval, I will be happy to recommend you based on your capacity to perform original research/review. Only for final-year lab-course, if I was directly assigned to your section, AND you completed a project successfully in that course, I can recommend you based on your output and ability to solve complex Engineering Problem.  
+<sup>1</sup> based on  sessional course project alone, it is diffcult to judge your motivation. However,  if a project from a theory/lab course was truly exceptional, and resulted in a publication with my approval, I will be happy to recommend you based on your capacity to perform original research/review. Only for final-year lab-course, if I was directly assigned to your section, AND you completed an honours project successfully in that course, I can recommend you based on your output and ability to solve complex Engineering Problem.  
 
 Simply taking an undergraduate theory course does not give the instructor sufficient capacity to judge the research aptitude of a student. As such, if you only interacted with me as a student in my theory course, unfortunately, I will not be in a position to recommend you. 
  
 If you are currently enrolled in BUET MSc program under my supervision, please consult with me before applying. Also, consider not adding me as a recommender if your research progress is unsatisfactory. For students enrolled under other faculty members, I will only recommend you only if your current supervisor recommends. You should attach a copy of the consent in the email, otherwise I will have to personally call and confirm with him/her before giving the LOR.
+
+#### Sample question and answer that I need to do for a LOR
+Each Letter of Recommendation form is different, and many a times, I have to manually type out responses, in addition to the formatted LOR that needs to be submitted. Almost all programs require likeart charts. Here is an example of a school's LOR. I am expected to judge each student, whether they fall under the Categories: Outstanding (Top 2%), Very Good (Top 10%), Good
+(Top 25%), Average (Top 50%), Below Average (Lower 50%), Not Applicable or Not Known
+* Overall scholarly ability
+* Technical ability in the field
+* Potential as a researcher
+* Potential as a teacher
+* Intellectual ability/capacity
+* Analytical and problem-solving ability
+* Quantitative skills
+* Meticulousness/attention to detail
+* Thoroughness in completing tasks
+* Oral communication skills
+* Written communication skills
+* Listening skills
+* Interpersonal skills
+* Maturity/emotional intelligence
+* Judgment/common sense
+* Ability to work well with others
+* Motivation
+* Initiative
+* Perseverance
+* Creativity/originality
+* Self-reliance and independence in scholarly work
+* Flexibility
+* Leadership potential
+* Self-confidence
+* Responsibility
+* Integrity
+* Work ethic
+* Respect for authority
+* Time management skills
+* Ability to work under pressure
+
+
 
  #### List of Eligible Students
  For convenience, I am explicitly listing students who only did my only undergraduate class and would be eligible for LOR. Other students are requested not to send me an email. 

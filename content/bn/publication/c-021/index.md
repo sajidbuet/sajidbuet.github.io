@@ -8,7 +8,7 @@ authors:
 - Sajid Muhaimin Choudhury
 - Md Tareq Mahmud
 date: '2023-01-01'
-publishDate: '2025-09-26T00:09:42.275620Z'
+publishDate: '2025-10-24T10:57:56.895432Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

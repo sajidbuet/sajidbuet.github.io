@@ -7,7 +7,7 @@ authors:
 - SM Choudhury
 - Md A Matin
 date: '2011-01-01'
-publishDate: '2025-09-26T00:09:39.449832Z'
+publishDate: '2025-10-24T10:57:54.056004Z'
 publication_types:
 - article-journal
 publication: '*IET Microwaves and Antennas & Propagation*'

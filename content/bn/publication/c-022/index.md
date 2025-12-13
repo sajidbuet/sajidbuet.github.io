@@ -5,7 +5,7 @@ authors:
 - Shamima Akter Mitu
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2025-09-26T00:09:42.281045Z'
+publishDate: '2025-10-24T10:57:56.914803Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE Photonics Conference (IPC)*'
