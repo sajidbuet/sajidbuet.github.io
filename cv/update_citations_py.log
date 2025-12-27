@@ -1,20 +1,12 @@
-2025-10-24 16:57:26,526 - INFO - Loading CSV file: PopCites.csv
-2025-10-24 16:57:26,545 - INFO - Loading BibTeX file: papers.bib
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'X01'.
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'C009': 5 -> 6
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'C014'.
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'C021': 0 -> 2
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'C024'.
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'C025'.
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J005': 77 -> 78
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J007': 85 -> 86
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J008': 176 -> 178
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J009': 220 -> 222
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J012': 296 -> 297
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J014': 79 -> 80
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J018': 29 -> 32
-2025-10-24 16:57:26,718 - INFO - Updating 'citationnos' for entry 'J024': 2 -> 1
-2025-10-24 16:57:26,718 - WARNING - No matching 'CitationURL' found in CSV for entry 'J027'.
-2025-10-24 16:57:26,718 - INFO - Total entries updated: 10
-2025-10-24 16:57:26,734 - INFO - Successfully wrote updates to BibTeX file: papers.bib
+2025-12-26 00:40:56,681 - INFO - Loading CSV file: PopCites.csv
+2025-12-26 00:40:56,689 - INFO - Loading BibTeX file: papers.bib
+2025-12-26 00:40:56,830 - WARNING - No matching 'CitationURL' found in CSV for entry 'X01'.
+2025-12-26 00:40:56,830 - WARNING - No matching 'CitationURL' found in CSV for entry 'X02'.
+2025-12-26 00:40:56,830 - WARNING - Entry 'X03' is missing 'citesurl'. Skipping.
+2025-12-26 00:40:56,831 - WARNING - No matching 'CitationURL' found in CSV for entry 'C008'.
+2025-12-26 00:40:56,831 - WARNING - No matching 'CitationURL' found in CSV for entry 'C014'.
+2025-12-26 00:40:56,831 - WARNING - No matching 'CitationURL' found in CSV for entry 'C024'.
+2025-12-26 00:40:56,831 - WARNING - No matching 'CitationURL' found in CSV for entry 'C025'.
+2025-12-26 00:40:56,832 - WARNING - No matching 'CitationURL' found in CSV for entry 'J027'.
+2025-12-26 00:40:56,832 - INFO - Total entries updated: 0
+2025-12-26 00:40:56,842 - INFO - Successfully wrote updates to BibTeX file: papers.bib
