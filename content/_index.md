@@ -16,7 +16,27 @@ sections:
 
         **Q-PACERS** or the   **Q**uantum-, **P**hotonic-, **A**ntenna-, **C**omputing-, **E**mbedded- , and **R**enewable-energy **S**ystems Research Group  is a hub of innovation in electronics and photonics research at the Department of EEE, BUET, Bangladesh. Founded and led by [Dr. Sajid Muhaimin Choudhury](author/dsmc), the group leverages expertise in both experimental and computational tools to tackle cutting-edge research challenges.
         
+  - block: people-admin
+    content:
+      title: Principle Investigator
+      # Choose which groups/teams of users to display.
+      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
+      user_groups:
+          - Principal Investigator
+      sort_ascending: true
+    design:
+      show_interests: true
+      show_role: true
+      show_social: true
 
+  - block: markdown
+    content:
+      title:
+      subtitle:
+      text: |
+        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+    design:
+      columns: '1'
 
   - block: markdown
     content:
@@ -58,25 +78,5 @@ sections:
     design:
       view: citation
       columns: '1'
-  - block: people-admin
-    content:
-      title: Principle Investigator
-      # Choose which groups/teams of users to display.
-      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
-      user_groups:
-          - Principal Investigator
-      sort_ascending: true
-    design:
-      show_interests: true
-      show_role: true
-      show_social: true
 
-  - block: markdown
-    content:
-      title:
-      subtitle:
-      text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
-    design:
-      columns: '1'
 ---

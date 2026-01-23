@@ -40,6 +40,14 @@ $update_citation =1
 # ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
 if($update_citation ) {
 Write-Host '🔍  Step 1: Refresh PoPCites.csv via pop8query.exe' -ForegroundColor $Step
+Write-Host 'note- if the pop8query failed above, you can use TamperMonkey and the custom user script the https://github.com/sajidbuet/scholar-profile-exporter/ to download the PoPCites.csv' -ForegroundColor $Step
+
+Write-Host '📝  Note (fallback option): If Step 1 fails (e.g., CAPTCHA / rate-limit / login issue), you can generate PoPCites.csv manually from your browser using Tampermonkey.' -ForegroundColor $Step
+Write-Host '👉  Install and enable the userscript from: https://github.com/sajidbuet/scholar-profile-exporter/' -ForegroundColor $Step
+Write-Host '✅  Then open your Google Scholar profile → click **Load all (optional)** → click **Export PoPCites.csv**.' -ForegroundColor $Step
+Write-Host '📌  Make sure the downloaded file is saved/replaced as: PoPCites.csv in this working folder before continuing to Step 2.' -ForegroundColor $Step
+Write-Host '🔄  After the CSV is updated, re-run this PowerShell script to continue the pipeline.' -ForegroundColor $Step
+
 .\pop8query.exe --gsprofile --author $GoogleScholarProfileID PoPCites.csv
 
 Write-Host '📈  Step 2: Produce PoPMetrics.csv via pop8metrics.exe' -ForegroundColor $Step

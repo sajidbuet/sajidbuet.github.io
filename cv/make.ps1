@@ -1,0 +1,1 @@
+./latexrun.ps1 > latexmk.log

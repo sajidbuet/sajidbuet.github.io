@@ -4,11 +4,12 @@
 {{ $noticeKey := .Params.copyright.notice | default site.Params.footer.copyright.notice }}
 {{ $notice := i18n $noticeKey }}
 
-{{ $admin := .Site.Author.name | default "Admin XXX" }}
+{{ $admin := .Site.Author.name | default "Dr. Sajid Muhaimin Choudhury" }}
 {{ $adminLink := .Site.Author.url | default "#" }}
 {{ with .GetPage "/authors/admin" }}
-  {{ $admin = .Title }}
-  {{ $adminLink = print "/author/" (replace (lower $admin) " " "-") }}
+  {{ $admin = .Title }} 
+  {{ $slug := .Params.slug | default (urlize .Title) }}
+  {{ $adminLink = print "/people/" (replace (lower $slug) " " "-") }}
 {{ end }}
 
 

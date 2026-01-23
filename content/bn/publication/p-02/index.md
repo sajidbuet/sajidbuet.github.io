@@ -11,7 +11,7 @@ authors:
 - Harsha Reddy
 - Vladimir Shalaev
 date: '2021-07-29'
-publishDate: '2025-12-25T18:41:21.225023Z'
+publishDate: '2026-01-23T20:25:08.560006Z'
 publication_types:
 - patent
 tags:

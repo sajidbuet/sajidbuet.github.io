@@ -1,11 +1,9 @@
 ---
-Title: Unicode Scientific Symbols Cheat Sheet
+Title: Unicode Scientific Symbols Cheatsheet
 Placing: 7
 icon: file-text
 summary: Greek letters, subscripts/superscripts, and a broad catalog of mathematical, logical, and operator symbols (Unicode).
 ---
-
-# Unicode Scientific Symbols (Unicode + Subscripts)
 
 This page lists commonly used scientific symbols you can paste directly into Markdown/HTML. Rendering depends on the font; for best coverage use modern fonts (e.g., Noto Sans/Serif).
 
@@ -13,6 +11,7 @@ This page lists commonly used scientific symbols you can paste directly into Mar
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [1. Greek alphabet](#1-greek-alphabet)
   - [1.1 Full alphabet table](#11-full-alphabet-table)
   - [1.2 Variant Greek forms](#12-variant-greek-forms)
@@ -38,6 +37,10 @@ This page lists commonly used scientific symbols you can paste directly into Mar
   - [12.4 Comparison and ordering operators](#124-comparison-and-ordering-operators)
   - [12.5 Calculus operators](#125-calculus-operators)
 - [13. Physics and engineering symbols](#13-physics-and-engineering-symbols)
+  - [Maxwell’s equations (differential form)](#maxwells-equations-differential-form)
+  - [Maxwell’s equations (integral form)](#maxwells-equations-integral-form)
+  - [Schrödinger equation](#schrödinger-equation)
+  - [Poisson’s equation](#poissons-equation)
 - [14. Quantum information staples](#14-quantum-information-staples)
 - [15. Quick copy block](#15-quick-copy-block)
 - [16. Notes for Markdown users](#16-notes-for-markdown-users)
@@ -355,6 +358,54 @@ If you need full math-quality subscripts for arbitrary text, prefer LaTeX/MathJa
 | ⟂ ∥ | perpendicular / parallel |
 
 ---
+
+
+### Maxwell’s equations (differential form)
+
+1) Gauss’s law (electric):
+∇·E = ρ/ε₀
+
+2) Gauss’s law (magnetism):
+∇·B = 0
+
+3) Faraday’s law of induction:
+∇×E = −∂B/∂t
+
+4) Ampère–Maxwell law:
+∇×B = μ₀J + μ₀ε₀ ∂E/∂t
+
+
+### Maxwell’s equations (integral form)
+
+1) Gauss’s law (electric):
+∯_S E·dA = Q_enc/ε₀
+
+2) Gauss’s law (magnetism):
+∯_S B·dA = 0
+
+3) Faraday’s law of induction:
+∮_C E·dl = − d/dt ( ∯_S B·dA )
+
+4) Ampère–Maxwell law:
+∮_C B·dl = μ₀ I_enc + μ₀ε₀ d/dt ( ∯_S E·dA )
+
+
+### Schrödinger equation
+
+Time-dependent Schrödinger equation:
+iℏ ∂ψ/∂t = Ĥψ
+
+Common single-particle form (potential V):
+iℏ ∂ψ/∂t = [ −(ℏ²/2m) ∇² + V ] ψ
+
+
+### Poisson’s equation
+
+Electrostatics (for potential φ):
+∇²φ = −ρ/ε₀
+
+General Poisson form:
+∇²u = f
 
 ## 14. Quantum information staples
 

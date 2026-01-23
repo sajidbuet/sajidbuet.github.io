@@ -9,7 +9,7 @@ authors:
 - Alexandra Boltasseva
 - Vladimir M Shalaev
 date: '2018-01-01'
-publishDate: '2025-12-25T18:41:20.834753Z'
+publishDate: '2026-01-23T20:25:08.164063Z'
 publication_types:
 - article-journal
 publication: '*Nanophotonics*'

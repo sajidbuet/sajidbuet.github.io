@@ -7,7 +7,7 @@ authors:
 - Sujoy Mondal
 - Sajid Muhaimin Choudhury
 date: '2022-01-01'
-publishDate: '2025-12-25T18:41:20.976827Z'
+publishDate: '2026-01-23T20:25:08.326520Z'
 publication_types:
 - article-journal
 publication: '*Optics Continuum*'

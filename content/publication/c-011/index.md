@@ -10,7 +10,7 @@ authors:
 - Andrea Alu
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2025-12-25T18:41:18.022031Z'
+publishDate: '2026-01-23T20:25:04.810986Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
