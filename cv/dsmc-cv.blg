@@ -1,0 +1,34 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'dsmc-cv.blg'
+[145] biber-MSWIN64:340> INFO - === 
+[197] Biber.pm:420> INFO - Reading 'dsmc-cv.bcf'
+[330] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[369] Biber.pm:4463> INFO - Processing section 0
+[384] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 0
+[441] bibtex.pm:1713> INFO - LaTeX decoding ...
+[566] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[1054] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1054] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1055] Biber.pm:4283> INFO - Sorting list 'ydnt/global/FF44570ACA8241914870AFBC310CDB85/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1055] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1212] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1212] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1212] Biber.pm:4283> INFO - Sorting list 'ydnt/global/0D61F8370CAD1D412F80B84D143E1257/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1212] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1358] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1358] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1358] Biber.pm:4283> INFO - Sorting list 'ydnt/global/44C29EDB103A2872F519AD0C9A0FDAAA/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1358] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1503] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1503] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1503] Biber.pm:4283> INFO - Sorting list 'ydnt/global/02129BB861061D1A052C592E2DC6B383/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1504] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1661] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1662] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1662] Biber.pm:4283> INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1662] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1750] bbl.pm:676> INFO - Writing 'dsmc-cv.bbl' with encoding 'UTF-8'
+[2042] bbl.pm:779> INFO - Output to dsmc-cv.bbl
+[2048] Biber.pm:131> WARN - legacy month field 'May' in entry 'J023' is not an integer - this will probably not sort properly.
+[2048] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_ID0d\4cba211c7098ce6d56874590d4a06a86_40408.utf8, line 2, warning: possible runaway string started at line 1
+[2048] Biber.pm:133> INFO - WARNINGS: 2
