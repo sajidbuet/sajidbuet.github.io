@@ -4,8 +4,8 @@
 {{ $noticeKey := .Params.copyright.notice | default site.Params.footer.copyright.notice }}
 {{ $notice := i18n $noticeKey }}
 
-{{ $admin := .Site.Author.name | default "Dr. Sajid Muhaimin Choudhury" }}
-{{ $adminLink := .Site.Author.url | default "#" }}
+{{ $admin := .Site.Params.author.name  | default "Dr. Sajid Muhaimin Choudhury" }}
+{{ $adminLink := .Site.Params.Author.url | default "#" }}
 {{ with .GetPage "/authors/admin" }}
   {{ $admin = .Title }} 
   {{ $slug := .Params.slug | default (urlize .Title) }}
