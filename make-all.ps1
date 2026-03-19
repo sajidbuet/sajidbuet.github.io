@@ -25,7 +25,7 @@ if ($updatelatex) {
 
     Write-Host '📄  Running LaTeX in /cv (log → latexmk.log)…' -ForegroundColor $Step
     cd cv
-    #./latexrun.ps1 > latexmk.log
+    ./latexrun.ps1 > latexmk.log
     cd ..
 
     # ── copy fresh PDF to author folder ──────────────────────────────────────
@@ -86,8 +86,8 @@ if ($updatelatex) {
         Write-Host "✅  Import complete for $($locale.Lang)." -ForegroundColor $Info
     }
 
-    #Remove-Item 'papers.bib'
-    #Remove-Item 'papers-me.bib'
+    Remove-Item 'papers.bib'
+    Remove-Item 'papers-me.bib'
     Write-Host ''
 }
 else {
