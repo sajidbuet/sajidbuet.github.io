@@ -1,7 +1,7 @@
 name: Deploy website to GitHub Pages
 
 env:
-  WC_HUGO_VERSION: '0.152.2'
+  WC_HUGO_VERSION: '0.148.2'
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
@@ -36,25 +36,25 @@ jobs:
           hugo-version: ${{ env.WC_HUGO_VERSION }}
           extended: true
 
-      - name: Cache Hugo modules
-        uses: actions/cache@v4
-        with:
-          path: /tmp/hugo_cache_runner/
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
+      - name: Clean Hugo caches
+        run: |
+          rm -rf /tmp/hugo_cache_runner/*
+          hugo mod clean
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Show Hugo environment
+        run: |
+          hugo version
+          hugo env
+          hugo mod graph || true
+
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
-          echo "Hugo version:"
-          hugo version
-          echo "Hugo Cache Dir: $(hugo config | grep cachedir || true)"
           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload Pages artifact
