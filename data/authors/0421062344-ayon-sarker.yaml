@@ -1,0 +1,26 @@
+title: Ayon Sarker
+name:
+  first: Ayon
+  last: Sarker
+role: Graduated with MSc (July 2025)
+bio: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+  year: 2025
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0421062344'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2021 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
+    research_division: EP

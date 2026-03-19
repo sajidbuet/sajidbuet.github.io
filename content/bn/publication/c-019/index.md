@@ -5,7 +5,7 @@ authors:
 - Soikot Sarkar
 - Sajid Muhaimin Choudhury
 date: '2023-01-01'
-publishDate: '2026-01-23T20:25:07.810839Z'
+publishDate: '2026-03-19T10:32:36.757874Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

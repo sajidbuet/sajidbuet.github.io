@@ -1,0 +1,21 @@
+title: Meherin Tasfia
+name:
+  first: Meherin
+  last: Tasfia
+role: UG Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+interests:
+- CSP
+user_groups:
+- Undergrad Students
+params:
+  student:
+    roll: 2006175
+    degree_sought: B.Sc. Engg.
+    first_enrollment: 2020
+    research_division: CSP

@@ -1,0 +1,26 @@
+title: Md. Mahfuzul Haque
+name:
+  first: Md.
+  last: Mahfuzul Haque
+role: Graduated with MSc (Jan 2025)
+bio: Design Of Silicon-carbide Based Single-quantum-well White LED
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: SUST
+  year: 2025
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0421062305'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2021 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Design Of Silicon-carbide Based Single-quantum-well White LED
+    research_division: EP

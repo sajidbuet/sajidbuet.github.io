@@ -1,0 +1,27 @@
+title: Soikot Sarkar
+name:
+  first: Soikot
+  last: Sarkar
+role: Graduated with MSc (July 2025)
+bio: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell for Efficiency
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: SUST
+  year: 2025
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0422062353'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2022 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Hybrid Metal-Dielectric Nanostructures Integrated Heterojunction Thin Film Solar Cell
+      for Efficiency
+    research_division: EP

@@ -3,8 +3,10 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Q-PACERS (DSMC-RG) # Website name
-baseURL: 'https://sajid.buet.ac.bd' # Website URL
+# Website name (set in params.yaml under hugoblox.branding.name)
+title: 'SAJID Lab'
+# Website URL
+baseURL: 'https://sajid.org.bd/'
 
 ############################
 ## LANGUAGE
@@ -14,7 +16,18 @@ defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
+languages:
+  en:
+    languageCode: en-us
+    languageName: English
+    weight: 1
+    contentDir: content
 
+  bn:
+    languageCode: bn-BD
+    languageName: বাংলা
+    weight: 2
+    contentDir: content/bn
 ############################
 ## ADVANCED
 ############################
@@ -28,20 +41,18 @@ pagination:
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
-permalinks:
-  authors: '/people/:slug/'
+ignoreFiles: ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 disableAliases: true
-disablePathToLower: false
+#permalinks:
+#  authors: '/people/:slug/'
 outputs:
-  home: [HTML, RSS, headers, redirects]
+  home: [HTML, RSS, headers, redirects, backlinks]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
-  quality: 80
+  quality: 90
   anchor: smart
-minify:
-  minifyOutput: true
+  hint: picture
 timeout: 600000
 taxonomies:
   author: authors
@@ -51,16 +62,6 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
-  goldmark:
-    extensions:
-        delete:
-          enable: true
-        insert:
-          enable: true
-        subscript:
-          enable: true
-        superscript:
-          enable: true
 security:
   _merge: deep
 sitemap:

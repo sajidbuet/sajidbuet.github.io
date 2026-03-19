@@ -1,0 +1,22 @@
+title: Naved Sadat Yamin
+name:
+  first: Naved
+  last: Sadat Yamin
+role: Masters Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+interests:
+- EP
+user_groups:
+- MSc Students
+params:
+  student:
+    roll: 0424062379
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2024 April
+    thesis_status: '-'
+    research_division: EP

@@ -1,0 +1,22 @@
+title: Mir Md. Aminuzzaman
+name:
+  first: Mir
+  last: Md. Aminuzzaman
+role: Ph.D. Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: MIST
+interests:
+- EP
+user_groups:
+- PhD Students
+params:
+  student:
+    roll: 1024064011
+    degree_sought: Ph.D.
+    first_enrollment: 2024 October
+    thesis_status: '-'
+    research_division: EP

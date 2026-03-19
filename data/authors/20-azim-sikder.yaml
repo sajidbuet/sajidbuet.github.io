@@ -1,0 +1,22 @@
+title: Md. Azim Sikder
+slug: 20-azim-sikder
+name:
+  first: Md.
+  last: Azim Sikder
+role: UG Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+interests:
+- EP
+user_groups:
+- Undergrad Students
+params:
+  student:
+    roll: 2006022
+    degree_sought: B.Sc. Engg.
+    first_enrollment: 2020
+    research_division: EP

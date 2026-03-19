@@ -7,7 +7,7 @@ authors:
 - Md. Redwanul Karim
 - Naved Sadat Yamin
 date: '2025-01-01'
-publishDate: '2026-01-23T20:25:05.075497Z'
+publishDate: '2026-03-19T10:32:33.590713Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

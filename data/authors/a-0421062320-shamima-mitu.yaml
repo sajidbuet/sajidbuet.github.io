@@ -1,0 +1,26 @@
+title: Shamima Akter Mitu
+name:
+  first: Shamima
+  last: Akter Mitu
+role: Graduated with MSc (May 2023)
+bio: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+  year: 2023
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0421062320'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2021 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
+    research_division: EP

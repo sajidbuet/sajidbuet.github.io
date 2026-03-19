@@ -1,0 +1,6 @@
+#site-header.header {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }

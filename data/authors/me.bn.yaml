@@ -1,0 +1,64 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: ড. সাজিদ মুহাইমিন চৌধুরী
+role: সহযোগী অধ্যাপক
+bio: বুয়েটের বৈদ্যুতিক ও ইলেকট্রনিক কৌশল বিভাগে কর্মরত সহযোগী অধ্যাপক। তাঁর গবেষণার ক্ষেত্রের মধ্যে রয়েছে ফোটনিক কোয়ান্টাম কম্পিউটিং, মেটাসারফেসভিত্তিক ফ্ল্যাট অপটিক্স, ফেজ-চেঞ্জ ফোটনিক ডিভাইস এবং এমবেডেড সিস্টেম ডিজাইন।
+
+affiliations:
+  - name: বৈদ্যুতিক ও ইলেকট্রনিক কৌশল বিভাগ, বুয়েট
+    url: https://eee.buet.ac.bd
+
+links:
+  - icon: hero/envelope
+    url: mailto:sajid@eee.buet.ac.bd
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sajidmc/
+  - icon: brands/google-scholar
+    url: http://scholar.google.com/citations?user=Fu8Hkb4AAAAJ&hl=en
+  - icon: brands/github
+    url: https://github.com/sajidmc
+  - icon: brands/orcid
+    url: http://orcid.org/0000-0002-0216-7125
+  - icon: brands/researchgate
+    url: https://www.researchgate.net/profile/Sajid_Choudhury
+  - icon: brands/cv
+    url: cv.pdf
+
+interests:
+  - কোয়ান্টাম
+  - ফোটনিক্স
+  - অ্যান্টেনা
+  - কম্পিউটিং ও কৃত্রিম বুদ্ধিমত্তা
+  - এমবেডেড সিস্টেম ও আইওটি
+  - নবায়নযোগ্য শক্তি ব্যবস্থা
+
+education:
+  - degree: ইসিই-তে পিএইচডি
+    institution: পার্ডু বিশ্ববিদ্যালয়, ওয়েস্ট লাফায়েট, ইন্ডিয়ানা, যুক্তরাষ্ট্র
+    end: "2019-08-05"
+  - degree: এমএসসি ইঞ্জিনিয়ারিং, ইইই
+    institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
+    end: "2011-11-11"
+  - degree: বিএসসি ইঞ্জিনিয়ারিং, ইইই
+    institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
+    end: "2009-11-11"
+
+experience:
+  - title: সহযোগী অধ্যাপক
+    department: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ (ইইই)
+    institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
+    start: "2022-06-21"
+    description: 
+  - title: সহকারী অধ্যাপক
+    department: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ (ইইই)
+    institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
+    start: "2019-01-01"
+    end: "2019-12-31"
+    description: 
+
+highlight_name: true
+website: ""
+user_groups:
+  - Principal Investigator1

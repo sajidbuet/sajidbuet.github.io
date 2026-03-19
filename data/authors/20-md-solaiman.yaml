@@ -1,0 +1,21 @@
+title: Md. Solaiman
+name:
+  first: Md.
+  last: Solaiman
+role: UG Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+interests:
+- EP
+user_groups:
+- Undergrad Students
+params:
+  student:
+    roll: 2006008
+    degree_sought: B.Sc. Engg.
+    first_enrollment: 2020
+    research_division: EP

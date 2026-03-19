@@ -5,7 +5,7 @@ authors:
 - Md Mahfuzul Haque
 - Sajid Muhaimin Choudhury
 date: '2024-01-01'
-publishDate: '2026-01-23T20:25:05.008947Z'
+publishDate: '2026-03-19T10:32:33.520166Z'
 publication_types:
 - paper-conference
 publication: '*2024 13th International Conference on Electrical and Computer Engineering

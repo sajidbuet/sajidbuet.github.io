@@ -1,0 +1,22 @@
+title: Abu Md. Raihan
+name:
+  first: Abu
+  last: Md. Raihan
+role: Masters Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+interests:
+- CSP
+user_groups:
+- MSc Students
+params:
+  student:
+    roll: '0423062522'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2023 April
+    thesis_status: '-'
+    research_division: CSP

@@ -11,9 +11,9 @@ $Step     = 'Yellow'
 $Warning  = 'Magenta'
 $ErrorCol = 'Red'
 
-Write-Host ' HUGO Blox QPACERS RG ' -ForegroundColor $Info
+Write-Host ' HUGO Blox SajidLab' -ForegroundColor $Info
 Write-Host '🔧  Full Compilation Toolchain' -ForegroundColor $Step
-Write-Host '🌐  https://sajid.buet.ac.bd'   -ForegroundColor $Info
+Write-Host '🌐  https://www.sajid.org.bd'   -ForegroundColor $Info
 Write-Host ''
 Write-Host '📝  Compiles CV, refreshes publications, rebuilds Hugo site, and zips /public.' `
            -ForegroundColor $Step
@@ -30,7 +30,7 @@ if ($updatelatex) {
 
     # ── copy fresh PDF to author folder ──────────────────────────────────────
     $sourceFile        = 'cv\dsmc-cv.pdf'
-    $destinationFolder = 'content\authors\admin'
+    $destinationFolder = 'content\'
     $destinationFile   = Join-Path $destinationFolder 'cv.pdf'
 
     Write-Host "📂  Copying $sourceFile → $destinationFolder" -ForegroundColor $Info
@@ -75,6 +75,7 @@ Write-Host ''
 Write-Host '👥  Re-generating author pages from all-members.xlsx…' -ForegroundColor $Step
 cd _pythonscripts
 python student-page-creator.py all-members.xlsx --img-dir ./photos
+python student-yaml-creator.py all-members.xlsx --img-dir ./photos
 cd ..
 Write-Host '✅  Author pages refreshed.' -ForegroundColor $Info
 
@@ -102,12 +103,12 @@ if (-not (Test-Path $folderToZip)) {
     exit 1
 }
 
-$timestamp   = Get-Date -Format 'yyyy-MM-dd-HH-mm'
-$zipFileName = "public-$timestamp.zip"
+#$timestamp   = Get-Date -Format 'yyyy-MM-dd-HH-mm'
+#$zipFileName = "public-$timestamp.zip"
 
-Write-Host "📦  Compressing → $zipFileName…" -ForegroundColor $Info
-Compress-Archive -Path "$folderToZip\*" -DestinationPath $zipFileName -Force
-Write-Host '✅  ZIP ready for deployment.' -ForegroundColor $Info
+#Write-Host "📦  Compressing → $zipFileName…" -ForegroundColor $Info
+#Compress-Archive -Path "$folderToZip\*" -DestinationPath $zipFileName -Force
+#Write-Host '✅  ZIP ready for deployment.' -ForegroundColor $Info
 
 Write-Host ''
 Write-Host '🎯  Build pipeline complete. Have a productive day! ✨' -ForegroundColor $Step

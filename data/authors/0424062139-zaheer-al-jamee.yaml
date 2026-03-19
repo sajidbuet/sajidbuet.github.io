@@ -1,0 +1,22 @@
+title: Zaheer Al Jamee
+name:
+  first: Zaheer
+  last: Al Jamee
+role: Masters Student
+bio: ""
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: RUET
+interests:
+- EEPS
+user_groups:
+- MSc Students
+params:
+  student:
+    roll: 0424062139
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2024 April
+    thesis_status: '-'
+    research_division: EEPS

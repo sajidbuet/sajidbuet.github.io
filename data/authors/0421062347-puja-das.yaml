@@ -1,0 +1,28 @@
+title: Puja Das
+name:
+  first: Puja
+  last: Das
+role: Defended MSc (September 2025)
+bio: Efficiency Enhancement of HTL-Free Perovskite/Cadmium-Sulfide Heterojunction Solar Cell Incorporating
+  Light Trapping Structure
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+  year: 2025
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0421062347'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2021 April
+    thesis_status: Thesis Defended
+    thesis_title: Efficiency Enhancement of HTL-Free Perovskite/Cadmium-Sulfide Heterojunction Solar Cell
+      Incorporating Light Trapping Structure
+    research_division: EP

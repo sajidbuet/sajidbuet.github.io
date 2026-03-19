@@ -1,0 +1,28 @@
+title: Md Asif Hossain Bhuiyan
+name:
+  first: Md
+  last: Asif Hossain Bhuiyan
+role: Graduated with MSc (May 2025)
+bio: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared
+  Waveband
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+  year: 2025
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0422062304'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2022 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At
+      Near Infrared Waveband
+    research_division: EP

@@ -8,7 +8,7 @@ authors:
 - M. Shah Alam
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2026-01-23T20:25:04.747981Z'
+publishDate: '2026-03-19T10:32:33.201857Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE

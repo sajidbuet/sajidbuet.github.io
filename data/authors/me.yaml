@@ -1,0 +1,59 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Dr. Sajid Muhaimin Choudhury
+role: Associate Professor
+bio: Associate Professor in the Department of EEE, BUET, working on photonic quantum computing, flat optics with metasurfaces, phase-change photonic devices, and embedded systems design.
+
+affiliations:
+  - name: Department of EEE, BUET
+    url: https://eee.buet.ac.bd
+links:
+  - icon: hero/envelope
+    url: mailto:sajid@eee.buet.ac.bd
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sajidmc/
+  - icon: brands/google-scholar
+    url: http://scholar.google.com/citations?user=Fu8Hkb4AAAAJ&hl=en
+  - icon: brands/github
+    url: https://github.com/sajidmc
+  - icon: brands/orcid
+    url: http://orcid.org/0000-0002-0216-7125
+  - icon: brands/researchgate
+    url: https://www.researchgate.net/profile/Sajid_Choudhury
+  - icon: brands/cv
+    url: cv.pdf
+interests:
+  - Quantum
+  - Photonics
+  - Antenna
+  - Computing and AI 
+  - Embedded and IoT
+  - Renewable Systems
+education:
+  - degree: PhD in ECE
+    institution: Purdue University, West Lafayette, IN, USA
+    end: "2019-08-05"
+  - degree: MSc Engg in EEE
+    institution:  Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
+    end: "2011-11-11"
+  - degree: BSc Engg in EEE
+    institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
+    end: "2009-11-11"
+experience:
+  - title: Associate Professor
+    department: Department of Electrical and Electronic Engineering (EEE)
+    institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
+    start: "2022-06-21"
+    description: 
+  - title: Assistant Professor
+    department: Department of Electrical and Electronic Engineering (EEE)
+    institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
+    start: "2019-01-01"
+    end: "2019-12-31"
+    description: 
+highlight_name: true
+website: ""
+user_groups:
+  - Principal Investigator

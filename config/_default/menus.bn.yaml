@@ -1,27 +1,28 @@
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
-
 main:
-  - name: গবেষণা
-    url: research
+  - name: হোম
+    url: '/bn/#about'
     weight: 10
-  - name: সংবাদ
-    url: ../news
+  - name: গবেষণা
+    url: '/bn/#research'
     weight: 20
-  - name: সদস্যবৃন্দ
-    url: ../people
+  - name: অর্থায়ন
+    url: '/bn/#projects'
+    weight: 25
+  - name: দল
+    url: '/bn/#team'
     weight: 30
-  - name: শিক্ষাদান
-    url: ../teaching
-    weight: 40
   - name: প্রকাশনা
-    url: /publication
+    url: '/bn/#publication'
+    weight: 40
+  - name: পাঠদান
+    url: '/bn/#teaching'
+    weight: 45
+  - name: সংবাদ
+    url: '/bn/#news'
     weight: 50
-  - name: সম্প্রসারণ
-    url: ../outreach
+  - name: আউটরিচ
+    url: '/#outreach'
     weight: 60
   - name: যোগাযোগ
-    url: contact
+    url: '/#contact'
     weight: 70

@@ -1,0 +1,26 @@
+title: Md. Ehsanul Karim
+name:
+  first: Md.
+  last: Ehsanul Karim
+role: Graduated with MSc (June 2024)
+bio: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
+organizations:
+- name: Dept. of EEE, BUET
+education:
+- course: BSc
+  institution: BUET
+  year: 2024
+- course: M.Sc. Engg. Research
+  institution: Dept. of EEE, BUET
+interests:
+- EP
+user_groups:
+- Alumni
+params:
+  student:
+    roll: '0422062302'
+    degree_sought: M.Sc. Engg.
+    first_enrollment: 2022 April
+    thesis_status: Thesis Defended and Accepted
+    thesis_title: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
+    research_division: EP

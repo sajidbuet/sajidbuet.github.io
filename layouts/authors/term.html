@@ -1,0 +1,277 @@
+{{ define "main" }}
+
+{{ $lang := .Language.Lang | default "en" }}
+
+{{/* Resolve author slug from params first, then folder name */}}
+{{ $slug := "" }}
+
+{{ with .Params.slug }}
+  {{ $slug = . | urlize }}
+{{ end }}
+
+{{ if not $slug }}
+  {{ with .File }}
+    {{ $dir := path.Base (strings.TrimSuffix "/" .Dir) }}
+    {{ if ne $dir "." }}
+      {{ $slug = $dir | urlize }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $slug }}
+  {{ with .Data.Term }}
+    {{ $slug = . | urlize }}
+  {{ end }}
+{{ end }}
+
+{{ $profile := dict }}
+
+{{ if eq $lang "bn" }}
+  {{ with index site.Data.authors "bn" $slug }}
+    {{ $profile = . }}
+  {{ end }}
+{{ else }}
+  {{ with index site.Data.authors $slug }}
+    {{ $profile = . }}
+  {{ end }}
+{{ end }}
+
+{{ if not $profile }}
+  {{ with index site.Data.authors $slug }}
+    {{ $profile = . }}
+  {{ end }}
+{{ end }}
+
+{{ if not $profile }}
+  {{ $profile = partial "functions/get_author_profile" (dict "slug" $slug) }}
+{{ end }}
+
+{{ $avatar := "" }}
+{{ with .Resources.GetMatch "avatar*" }}
+  {{ $avatar = . }}
+{{ end }}
+{{ if not $avatar }}
+  {{ with .Resources.GetMatch "{avatar,profile,portrait}*" }}
+    {{ $avatar = . }}
+  {{ end }}
+{{ end }}
+
+{{ $avatar_shape := site.Params.hugoblox.layout.avatar_shape | default "circle" }}
+
+{{ $interests := or $profile.interests .Params.interests }}
+{{ $education := or $profile.education .Params.education.courses }}
+{{ $skills := or $profile.skills .Params.skills }}
+{{ $experience := or .Params.experience.jobs $profile.experience }}
+
+{{ $t := dict
+  "about" "About"
+  "research_interests" "Research Interests"
+  "education" "Education"
+  "experience" "Experience"
+  "skills" "Skills"
+  "present" "Present"
+  "language" "Language"
+}}
+{{ if eq $lang "bn" }}
+  {{ $t = dict
+    "about" "পরিচিতি"
+    "research_interests" "গবেষণার আগ্রহ"
+    "education" "শিক্ষা"
+    "experience" "কর্ম-অভিজ্ঞতা"
+    "skills" "দক্ষতা"
+    "present" "বর্তমান"
+    "language" "ভাষা"
+  }}
+{{ end }}
+
+<section class="max-w-6xl mx-auto px-6 py-10">
+
+  {{/* TEMP DEBUG: remove after testing 
+  <div class="mb-4 rounded-lg border border-yellow-300 bg-yellow-50 px-4 py-3 text-sm text-yellow-900">
+    lang={{ $lang }} |
+    slug={{ $slug }} |
+    has_bn={{ if index site.Data.authors "bn" $slug }}yes{{ else }}no{{ end }} |
+    has_en={{ if index site.Data.authors $slug }}yes{{ else }}no{{ end }}
+  </div>
+*/}}
+  {{ if .IsTranslated }}
+    <div class="mb-6 flex items-center justify-end gap-2 text-sm text-neutral-600 dark:text-neutral-300">
+      <span class="font-medium">{{ index $t "language" }}:</span>
+      {{ range .AllTranslations }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="rounded-full border px-3 py-1 transition
+                 {{ if eq .Language.Lang $.Language.Lang }}
+                   border-primary-500 text-primary-600 dark:text-primary-400
+                 {{ else }}
+                   border-neutral-300 hover:border-primary-400 dark:border-neutral-700
+                 {{ end }}">
+          {{ .Language.LanguageName }}
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+    <div class="lg:col-span-1">
+      <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="flex flex-col items-center text-center">
+
+          {{ if $avatar }}
+            {{ $responsive := partial "functions/process_responsive_image.html" (dict
+              "image" $avatar
+              "mode" "fill"
+              "aspect_ratio" "1:1"
+              "anchor" "Center"
+              "sizes" (slice 160 240 320 480)
+            ) }}
+            {{ $avatarSrc := $avatar.RelPermalink }}
+            {{ with $responsive.fallback }}
+              {{ $avatarSrc = .RelPermalink }}
+            {{ end }}
+            <img
+              class="h-36 w-36 sm:h-44 sm:w-44 {{ if ne $avatar_shape "square" }}rounded-full{{ else }}rounded-2xl{{ end }} object-cover"
+              srcset="{{ $responsive.srcset }}"
+              sizes="176px"
+              src="{{ $avatarSrc }}"
+              width="176"
+              height="176"
+              alt="{{ or $profile.title $profile.name.display }}"
+              loading="lazy"
+            />
+          {{ else }}
+            <div class="h-36 w-36 sm:h-44 sm:w-44 bg-gray-100 dark:bg-gray-800 {{ if ne $avatar_shape "square" }}rounded-full{{ else }}rounded-2xl{{ end }} flex items-center justify-center">
+              {{ partial "functions/get_icon" (dict "name" "hero/user" "attributes" "class=\"h-14 w-14 text-gray-400\"") }}
+            </div>
+          {{ end }}
+
+          <div class="mt-5 space-y-2">
+            <h1 class="text-3xl sm:text-4xl font-bold leading-tight">
+              {{ or $profile.title $profile.name.display }}
+            </h1>
+
+            {{ with $profile.role }}
+              <div class="text-lg font-semibold text-neutral-700 dark:text-neutral-200">
+                {{ . | markdownify | emojify }}
+              </div>
+            {{ end }}
+
+            {{ with $profile.affiliations }}
+              <div class="text-neutral-600 dark:text-neutral-300">
+                {{ range $index, $org := . }}
+                  {{ if gt $index 0 }}<span class="mx-1">·</span>{{ end }}
+                  {{ if $org.url }}
+                    <a href="{{ $org.url }}" class="underline underline-offset-4">{{ $org.name }}</a>
+                  {{ else }}
+                    {{ $org.name }}
+                  {{ end }}
+                {{ end }}
+              </div>
+            {{ end }}
+
+            {{ with $profile.bio }}
+              <div class="pt-2 text-neutral-700 dark:text-neutral-300">
+                {{ . | markdownify | emojify }}
+              </div>
+            {{ end }}
+
+            {{ with $profile.links }}
+              <div class="pt-3 flex justify-center">
+                {{ partial "social_links" (dict "Params" (dict "profiles" .)) }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      {{ with $interests }}
+        <div class="mt-6 bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <h2 class="text-xl font-semibold mb-4">{{ index $t "research_interests" }}</h2>
+          <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+            {{ range . }}
+              <li class="flex items-start gap-2">
+                <span class="mt-2 h-2 w-2 rounded-full bg-primary-500"></span>
+                <span>{{ . }}</span>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="lg:col-span-2 space-y-6">
+      {{ with .Content }}
+        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <div class="prose prose-slate dark:prose-invert max-w-none article-style">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $education }}
+        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <h2 class="text-xl font-semibold mb-5">{{ index $t "education" }}</h2>
+          <div class="space-y-5">
+            {{ range . }}
+              <div class="border-l-2 border-primary-500 pl-4">
+                <div class="font-semibold text-neutral-900 dark:text-neutral-100">
+                  {{ or .degree .course }}
+                </div>
+                {{ with .institution }}
+                  <div class="text-neutral-700 dark:text-neutral-300">{{ . }}</div>
+                {{ end }}
+                <div class="text-sm text-neutral-500 dark:text-neutral-400">
+                  {{ if .end }}
+                    {{ (time .end).Format "2006" }}
+                  {{ else if .year }}
+                    {{ .year }}
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $experience }}
+        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <h2 class="text-xl font-semibold mb-5">{{ index $t "experience" }}</h2>
+          <div class="space-y-5">
+            {{ range . }}
+              <div class="border-l-2 border-primary-500 pl-4">
+                <div class="font-semibold text-neutral-900 dark:text-neutral-100">
+                  {{ or .jobtitle .title }}
+                </div>
+
+                <div class="text-neutral-700 dark:text-neutral-300">
+                  {{ with .department }}{{ . }}{{ end }}
+                  {{ if and .department .institution }}, {{ end }}
+                  {{ with .institution }}{{ . }}{{ end }}
+                </div>
+
+                {{ with .description }}
+                  <div class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                    {{ . | markdownify | emojify }}
+                  </div>
+                {{ end }}
+
+                <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  {{ with .start }}{{ (time .).Format "Jan 2006" }}{{ end }}
+                  <span> – </span>
+                  {{ if .end }}
+                    {{ (time .end).Format "Jan 2006" }}
+                  {{ else }}
+                    {{ index $t "present" }}
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+
+{{ end }}

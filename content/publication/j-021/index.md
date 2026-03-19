@@ -6,7 +6,7 @@ authors:
 - Kaniz Fatema Supti
 - Sajid Muhaimin Choudhury
 date: '2024-12-01'
-publishDate: '2026-01-23T20:25:05.485695Z'
+publishDate: '2026-03-19T10:32:34.050418Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'
