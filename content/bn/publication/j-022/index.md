@@ -4,9 +4,9 @@ title: Polarization insensitive electrically reconfigurable meta-lens for the 2 
 authors:
 - Md. Asif Hossain Bhuiyan
 - Purbayan Das
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2024-12-01'
-publishDate: '2026-03-19T10:32:37.508760Z'
+publishDate: '2026-03-19T21:19:01.661952Z'
 publication_types:
 - article-journal
 publication: '*Opt. Mater. Express*'

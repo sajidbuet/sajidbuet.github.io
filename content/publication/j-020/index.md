@@ -3,9 +3,9 @@ title: Sb2S3/AlGaAs based Reconfigurable Metasurface for Dynamic Polarization an
   Directionality Control of Quantum Emitter Emission
 authors:
 - Md. Ehsanul Karim
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2024-01-01'
-publishDate: '2026-03-19T10:32:34.024902Z'
+publishDate: '2026-03-19T21:18:58.818233Z'
 publication_types:
 - article-journal
 publication: '*RSC Advances*'

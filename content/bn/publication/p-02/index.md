@@ -3,7 +3,7 @@ title: Thermophotovoltaic system and method of making the same
 authors:
 - Esteban Marinero-Caceres
 - Arnold Toppo
-- Sajid Choudhury
+- ' me'
 - Urcan Guler
 - Zhaxylyk Kudyshev
 - Joseph Pekny
@@ -11,7 +11,7 @@ authors:
 - Harsha Reddy
 - Vladimir Shalaev
 date: '2021-07-29'
-publishDate: '2026-03-19T10:32:37.645617Z'
+publishDate: '2026-03-19T21:19:01.773132Z'
 publication_types:
 - patent
 tags:

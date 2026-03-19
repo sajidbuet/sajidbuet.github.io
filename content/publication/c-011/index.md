@@ -5,12 +5,12 @@ authors:
 - Jongbum Kim
 - Yang Zhao
 - Aveek Dutta
-- Sajid Muhaimin Choudhury
+- ' me'
 - Alexander V. Kildishev
 - Andrea Alu
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2026-03-19T10:32:33.279413Z'
+publishDate: '2026-03-19T21:18:58.182280Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'

@@ -5,10 +5,10 @@ title: 'Discrete Modulated Continuous-Variable Quantum Key Distribution: Securit
 authors:
 - Abdul Mukit
 - Md Sabbir Hossen Bijoy
-- Sajid Muhaimin Choudhury
+- ' me'
 - Md Tareq Mahmud
 date: '2023-01-01'
-publishDate: '2026-03-19T10:32:36.799397Z'
+publishDate: '2026-03-19T21:19:01.070036Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

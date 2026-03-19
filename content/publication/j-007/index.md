@@ -1,15 +1,15 @@
 ---
-title: Pancharatnam–Berry Phase Manipulating Metasurface for Visible Color Hologram
+title: Pancharatnamâ€“Berry Phase Manipulating Metasurface for Visible Color Hologram
   Based on Low Loss Silver Thin Film
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Urcan Guler
 - Amr Shaltout
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2026-03-19T10:32:33.743785Z'
+publishDate: '2026-03-19T21:18:58.564465Z'
 publication_types:
 - article-journal
 publication: '*Advanced Optical Materials*'

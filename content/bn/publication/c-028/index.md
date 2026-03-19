@@ -2,12 +2,12 @@
 title: Integrating Deep Learning and Topology Optimization for Next-Generation Nanophotonic
   Devices
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Md. Ehsanul Karim
 - Md. Redwanul Karim
 - Naved Sadat Yamin
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:36.950010Z'
+publishDate: '2026-03-19T21:19:01.193585Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

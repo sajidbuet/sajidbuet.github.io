@@ -1,7 +1,7 @@
 ---
 title: Material platforms for optical metasurfaces
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Di Wang
 - Krishnakali Chaudhuri
 - Clayton DeVault
@@ -9,13 +9,13 @@ authors:
 - Alexandra Boltasseva
 - Vladimir M Shalaev
 date: '2018-01-01'
-publishDate: '2026-03-19T10:32:37.161993Z'
+publishDate: '2026-03-19T21:19:01.386186Z'
 publication_types:
 - article-journal
 publication: '*Nanophotonics*'
 doi: 10.1515/nanoph-2017-0130
 abstract: Optical metasurfaces are judicously engineered electromagnetic interfaces
-  that can control and manipulate many of light’s quintessential properties, such
+  that can control and manipulate many of lightâ€™s quintessential properties, such
   as amplitude, phase, and polarization. These artificial surfaces are composed of
   subwavelength arrays of optical antennas that experience resonant light-matter interaction
   with incoming electromagnetic radiation. Their ability to arbitrarily engineer optical

@@ -3,9 +3,9 @@ title: Design and Performance Analysis of a c-Si Thin-Film Solar Cell Using Plas
   Ag Nanostructures
 authors:
 - Soikot Sarkar
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2023-01-01'
-publishDate: '2026-03-19T10:32:36.757874Z'
+publishDate: '2026-03-19T21:19:01.038524Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

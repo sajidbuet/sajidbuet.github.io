@@ -3,9 +3,9 @@ title: 'Towards High-Performance Quantum-Based LEDs: Optoelectronic Modulation o
   2D Silicon Carbide for Tunable and Efficient White Light Emission'
 authors:
 - Md. Mahfuzul Haque
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:33.555193Z'
+publishDate: '2026-03-19T21:18:58.414412Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

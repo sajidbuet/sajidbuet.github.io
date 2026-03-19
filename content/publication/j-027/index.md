@@ -3,9 +3,9 @@ title: 'Tailoring electronic and optoelectronic properties of 2D-SiC via defects
   doping: a first-principles study toward efficient white light-emitting diodes'
 authors:
 - Md. Mahfuzul Haque
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:34.164482Z'
+publishDate: '2026-03-19T21:18:58.932566Z'
 publication_types:
 - article-journal
 publication: '*RSC advances*'
@@ -24,7 +24,7 @@ abstract: The advent of graphene catalyzed extensive exploration into two-dimens
   types and dopants, affirming its suitability for efficient light-emitting applications.
   Building upon these findings, we propose a novel light-emitting diode (LED) architecture
   utilizing defect, doping-tailored 2D-SiC as the active emissive layer. Simulated
-  optical and electrical performance metrics, including power spectral density, current–voltage
+  optical and electrical performance metrics, including power spectral density, currentâ€“voltage
   characteristics, luminous power, light extraction efficiency, and CIE color coordinates,
   confirm the feasibility of achieving high-performance white light emission through
   strategic RGB color mixing. These findings confirm the capabilities of defect and

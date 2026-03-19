@@ -3,14 +3,14 @@ title: Enhancing sensitivity to ambient refractive index with tunable few-layer 
   nanoribbons
 authors:
 - Huan Jiang
-- Sajid Muhaimin Choudhury
+- ' me'
 - Zhaxylyk A Kudyshev
 - Di Wang
 - Peng Xiao
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2026-03-19T10:32:33.804804Z'
+publishDate: '2026-03-19T21:18:58.626487Z'
 publication_types:
 - article-journal
 publication: '*Photonics Research*'

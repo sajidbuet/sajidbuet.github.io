@@ -4,9 +4,9 @@ authors:
 - Mohammad Tahsin Alam
 - Yasir Mahmud
 - Zafrin Jahan Nikita
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2024-01-01'
-publishDate: '2026-03-19T10:32:36.848939Z'
+publishDate: '2026-03-19T21:19:01.108037Z'
 publication_types:
 - paper-conference
 publication: '*2024 2nd International Conference on Information and Communication

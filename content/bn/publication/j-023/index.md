@@ -3,9 +3,9 @@ title: Concentric annular-hexagonal plasmonic resonator with nanorod vertices fo
   dual-band absorption in NIR and MIR for sensing applications
 authors:
 - Ayon Sarker
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-05-01'
-publishDate: '2026-03-19T10:32:37.534269Z'
+publishDate: '2026-03-19T21:19:01.682458Z'
 publication_types:
 - article-journal
 publication: '*Opt. Continuum*'

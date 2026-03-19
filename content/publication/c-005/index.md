@@ -2,12 +2,12 @@
 title: Design of an X band aperture matched horn antenna by optimization of back-lobe
   and cross-polarization level
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Md. Gaffar
 - Mohammad Asif Zaman
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2026-03-19T10:32:33.165344Z'
+publishDate: '2026-03-19T21:18:58.085744Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE

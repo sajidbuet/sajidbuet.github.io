@@ -20,7 +20,7 @@ sections:
     id: team
     content:
       title: Meet Our Team
-      subtitle: ''
+      subtitle: 'Principal Investigator'
       text: ''
       user_groups:
         - Principal Investigator

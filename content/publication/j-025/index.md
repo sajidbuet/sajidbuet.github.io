@@ -4,9 +4,9 @@ title: 'Investigation of the physical properties through strain effect of monola
 authors:
 - Md. Mahfuzul Haque
 - Md. Rasidul Islam
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:34.119449Z'
+publishDate: '2026-03-19T21:18:58.897948Z'
 publication_types:
 - article-journal
 publication: '*Physica B: Condensed Matter*'

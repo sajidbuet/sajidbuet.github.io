@@ -1,14 +1,14 @@
 ---
 title: Novel Hard Mask Fabrication Method for Hybrid Plasmonic Waveguide and Metasurfaces
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Vladimir A. Zenin
 - Soham Saha
 - Vladimir M. Shalaev
 - Sergei Bozhevolnyi
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2026-03-19T10:32:36.689834Z'
+publishDate: '2026-03-19T21:19:00.989940Z'
 publication_types:
 - paper-conference
 publication: '*Frontiers in Optics 2017*'

@@ -114,7 +114,7 @@
                 {{ if and $show_interests $profile.interests }}
                 <div class="mb-4">
                   <div class="flex flex-wrap gap-1">
-                    {{ range first 3 $profile.interests }}
+                    {{ range first 6 $profile.interests }}
                     <span class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded">
                       {{ . }}
                     </span>

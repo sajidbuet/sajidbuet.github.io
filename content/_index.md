@@ -204,7 +204,7 @@ sections:
     #     - name: Materials
     #       tag: Materials
     design:
-      view: article-grid
+      view: grant
       columns: 2
 
 
@@ -273,7 +273,7 @@ sections:
         folders:
           - teaching
         exclude_past: false  # Show both past and future events
-      count: 3
+      count: 5
       sort_by: Date
       sort_ascending: false
     design:

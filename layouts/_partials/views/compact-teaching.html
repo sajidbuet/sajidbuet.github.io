@@ -1,13 +1,15 @@
 {{ $item := .item }}
 
 {{/* Dynamic view adjusts to content type. */}}
-{{ $show_authors_only := false }}{{/* Show authors only or full metadata? */}}
+{{ $show_authors_only := false }}
 {{ $link := $item.RelPermalink }}
 {{ $target := "" }}
+
 {{ if $item.Params.external_link }}
   {{ $link = $item.Params.external_link }}
   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
 {{ end }}
+
 {{ if eq $item.Type "event" }}
   {{ $show_authors_only = true }}
 {{ else if eq $item.Type "publication" }}
@@ -28,55 +30,65 @@
   {{ $summary = "" }}
 {{ end }}
 
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
-    </div>
-
-    {{ with $summary }}
-    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="summary-link">
-      <div class="article-style">
-        {{.}}
-      </div>
-    </a>
-    {{ end }}
-
-
-    {{ if $has_attachments }}
-    <div class="btn-links">
-      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
-    </div>
-    {{ end }}
-
-  </div>
-  <div class="ml-3">
-    {{ $resource := "" }}
-    {{ with $item.Resources.GetMatch "*featured*" }}
+{{ $resource := "" }}
+{{ with $item.Resources.GetMatch "*featured*" }}
+  {{ $resource = . }}
+{{ else }}
+  {{ with $item.Resources.GetMatch "*cover*" }}
+    {{ $resource = . }}
+  {{ else }}
+    {{ with $item.Resources.GetMatch "{featured,cover}.*" }}
       {{ $resource = . }}
-    {{ else }}
-      {{ with $item.Resources.GetMatch "*cover*" }}
-        {{ $resource = . }}
-      {{ else }}
-        {{ with $item.Resources.GetMatch "{featured,cover}.*" }}
-          {{ $resource = . }}
-        {{ end }}
-      {{ end }}
     {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="w-full group mb-6 overflow-hidden rounded-2xl border border-slate-200/70 bg-white/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/70">
+  <div class="flex flex-col gap-5 p-5 sm:flex-row sm:items-start">
 
     {{ with $resource }}
-      {{ $image := .Resize "150x" }}
+      {{ $image := .Resize "300x" }}
       {{ if ne $image.MediaType.SubType "gif" }}
         {{ $image = $image.Process "webp" }}
       {{ end }}
-      <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
-        <img src="{{ $image.RelPermalink }}"
-             height="{{ $image.Height }}"
-             width="{{ $image.Width }}"
-             alt="{{ $item.Title }}"
-             loading="lazy">
-      </a>
+
+      <div class="sm:w-44 sm:flex-shrink-0">
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block overflow-hidden rounded-xl">
+          <img
+            src="{{ $image.RelPermalink }}"
+            height="{{ $image.Height }}"
+            width="{{ $image.Width }}"
+            alt="{{ $item.Title }}"
+            loading="lazy"
+            class="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-28">
+        </a>
+      </div>
     {{ end }}
+
+    <div class="min-w-0 flex-1">
+
+      <div class="mb-2">
+        <h3 class="text-lg font-semibold leading-snug text-slate-900 dark:text-slate-100">
+          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400">
+            {{ $item.Title }}
+          </a>
+        </h3>
+      </div>
+
+      {{ with $summary }}
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
+          <div class="article-style text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+            {{ . }}
+          </div>
+        </a>
+      {{ end }}
+
+      {{ if $has_attachments }}
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+        </div>
+      {{ end }}
+
+    </div>
   </div>
 </div>

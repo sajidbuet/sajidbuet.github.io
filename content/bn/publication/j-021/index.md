@@ -4,9 +4,9 @@ title: Lithium niobate photonic topological insulator-based multi-wavelength opt
 authors:
 - Prithu Mahmud
 - Kaniz Fatema Supti
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2024-12-01'
-publishDate: '2026-03-19T10:32:37.488761Z'
+publishDate: '2026-03-19T21:19:01.643949Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'

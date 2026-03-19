@@ -4,3 +4,28 @@
     -webkit-backdrop-filter: blur(14px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   }
+  .hero-richtext a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    transition:
+      color 0.25s ease,
+      background-size 0.25s ease,
+      background-position 0.25s ease;
+    font-weight: 600;
+  }
+  
+  .hero-richtext a:hover {
+    background-size: 100% 2px;
+    background-position: 0 calc(100% - 1px);
+  }
+  
+  .hero-richtext a {
+    color: var(--color-primary-600);
+  }
+  
+  .dark .hero-richtext a {
+    color: var(--color-primary-400);
+  }

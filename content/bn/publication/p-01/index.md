@@ -2,12 +2,12 @@
 title: System for producing ultra-thin color phase hologram with metasurfaces
 authors:
 - Amr Shaltout
-- Sajid Choudhury
+- ' me'
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 - Vladimir M. Shalaev
 date: '2018-04-24'
-publishDate: '2026-03-19T10:32:37.625106Z'
+publishDate: '2026-03-19T21:19:01.757133Z'
 publication_types:
 - patent
 tags:

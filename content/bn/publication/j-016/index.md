@@ -5,9 +5,9 @@ authors:
 - Himaddri Roy
 - Ehsanul Karim
 - Sujoy Mondal
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2022-01-01'
-publishDate: '2026-03-19T10:32:37.365102Z'
+publishDate: '2026-03-19T21:19:01.541759Z'
 publication_types:
 - article-journal
 publication: '*Optics Continuum*'

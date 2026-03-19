@@ -4,10 +4,10 @@ title: Analysis of a conical corrugated horn operating in the K-band with low cr
 authors:
 - M.A. Matin
 - Mohammad Asif Zaman
-- Sajid Muhaimin Choudhury
+- ' me'
 - Md. Gaffar
 date: '2009-01-01'
-publishDate: '2026-03-19T10:32:33.102311Z'
+publishDate: '2026-03-19T21:18:58.029237Z'
 publication_types:
 - paper-conference
 publication: '*2009 IEEE Antennas and Propagation Society International Symposium*'

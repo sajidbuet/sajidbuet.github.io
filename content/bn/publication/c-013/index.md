@@ -1,13 +1,13 @@
 ---
 title: Color Hologram Generation Using a Pancharatnam-Berry Phase Manipulating Metasurface
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - Amr Shaltout
 - Vladimir M. Shalaev
 - Alexandra Boltasseva
 - Alexander V. Kildishev
 date: '2015-01-01'
-publishDate: '2026-03-19T10:32:36.642884Z'
+publishDate: '2026-03-19T21:19:00.954431Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2015*'

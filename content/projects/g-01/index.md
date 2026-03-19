@@ -1,7 +1,7 @@
 ---
 title: Design and Low-cost Fabrication of Optical Biosensors for Virus Detection
 authors:
-- Sajid Muhaimin Choudhury
+- me
 date: '2008-01-01'
 start_date: '2021-01-01'
 end_date: '2022-01-01'

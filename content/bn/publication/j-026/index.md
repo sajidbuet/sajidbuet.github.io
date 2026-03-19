@@ -4,9 +4,9 @@ title: Synergizing deep learning and phase change materials for four-state broad
 authors:
 - Md. Ehsanul Karim
 - Md. Redwanul Karim
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:37.577593Z'
+publishDate: '2026-03-19T21:19:01.719133Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'

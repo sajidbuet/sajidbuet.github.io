@@ -2,9 +2,9 @@
 title: Valley Photonic Topological Insulator for Fluorescence Endoscopy
 authors:
 - Naved Sadat Yamin
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T10:32:36.929009Z'
+publishDate: '2026-03-19T21:19:01.173064Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

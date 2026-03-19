@@ -6,9 +6,9 @@ authors:
 - Zabir Ahmed
 - Mohammad Ishfaque Jahan Rafee
 - M A Awal
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2014-01-01'
-publishDate: '2026-03-19T10:32:36.623367Z'
+publishDate: '2026-03-19T21:19:00.937430Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'

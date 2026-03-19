@@ -4,9 +4,9 @@ authors:
 - Ayon Sarker
 - Shamima Akter Mitu
 - Purbayan Das
-- Sajid Muhaimin Choudhury
+- ' me'
 date: '2020-01-01'
-publishDate: '2026-03-19T10:32:37.295069Z'
+publishDate: '2026-03-19T21:19:01.483731Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'

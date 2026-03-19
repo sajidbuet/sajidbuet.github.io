@@ -1,35 +1,146 @@
 {{ $item := .item }}
-{{ $has_attachments := partial "functions/has_attachments" $item }}
 
-<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
-  
-  {{ $segments := split (trim $item.RelPermalink "/") "/" }}
-  {{ $lastIndex := sub (len $segments) 1 }}
-{{ $code := replaceRE "[-]" "" (index $segments $lastIndex) }}
-{{ $folderid := print "[" (upper (substr $code 0 1)) (substr $code 1) "]" }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
 
-  <b>{{print $folderid}}</b>
-  {{/* APA Style */}}
-  {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
+{{ $start := "" }}
+{{ with $item.Params.start_date }}
+  {{ $start = time.AsTime . | time.Format "Jan 2006" }}
+{{ end }}
 
-  <span class="article-metadata li-cite-author">
-    {{$item.Params.grant_position}}
-  </span>, 
-     <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>, 
-     Funded by: <a href="{{ $item.Params.funding_agency_url }}">{{ $item.Params.funding_agency }}</a>,  {{ $item.Params.funding_agency_address }}
-(Grant Duration: {{ (time.AsTime $item.Params.start_date).Format "02/01/2006" }} - {{ (time.AsTime $item.Params.end_date).Format "02/01/2006" }})
-  {{ if $item.Params.publication_short }}
-    {{- $item.Params.publication_short | markdownify -}}.
-  {{ else if $item.Params.publication }}
-    {{- $item.Params.publication | markdownify -}}.
-  {{ end }}
-  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }} 
-    <a class="btn btn-page-header btn-sm" href="{{ $item.Params.doi}}" target="_blank" rel="noopener">
-    <span class="__dimensions_badge_embed__" data-doi="{{ $item.Params.doi}}" data-hide-zero-citations="true" data-legend="hover-bottom" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-  </a>
-  </p>
+{{ $end := "" }}
+{{ with $item.Params.end_date }}
+  {{ $end = time.AsTime . | time.Format "Jan 2006" }}
+{{ end }}
 
+{{ $period := "" }}
+{{ if and $start $end }}
+  {{ $period = printf "%s – %s" $start $end }}
+{{ else if $start }}
+  {{ $period = $start }}
+{{ else if $end }}
+  {{ $period = $end }}
+{{ end }}
 
+{{ $agencyHost := "" }}
+{{ with $item.Params.funding_agency_url }}
+  {{ $agencyHost = replaceRE "^https?://([^/]+)/?.*$" "$1" . }}
+{{ end }}
 
-  {{ end }}
+<div class="group w-full max-w-none h-full rounded-2xl border border-slate-200/70 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+  <div class="flex h-full flex-col">
+
+    {{ with $item.Params.grant_name }}
+      <div class="mb-3">
+        <span class="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-semibold text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">
+          {{ . }}
+        </span>
+      </div>
+    {{ end }}
+
+    <div class="mb-4">
+      <h3 class="text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-primary-600 dark:text-slate-100 dark:group-hover:text-primary-400">
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hover:underline">
+          {{ $item.Title }}
+        </a>
+      </h3>
+    </div>
+
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {{ with $item.Params.funding_award_amount }}
+        <div class="min-w-0 rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
+          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            Award
+          </div>
+          <div class="mt-1 text-xl font-bold text-slate-900 dark:text-slate-100 break-words">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $period }}
+        <div class="min-w-0 rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
+          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            Project Period
+          </div>
+          <div class="mt-1 text-sm font-semibold text-slate-900 dark:text-slate-100 break-words">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $item.Params.grant_position }}
+        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700">
+          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            Role
+          </div>
+          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $item.Params.funding_agency }}
+        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700">
+          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            Agency
+          </div>
+          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with $item.Params.funding_agency_address }}
+        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700 md:col-span-2">
+          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            Location
+          </div>
+          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
+            {{ . }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+
+    {{ with $item.Params.authors }}
+      <div class="mt-4 border-t border-slate-200 pt-3 dark:border-slate-800">
+        <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          Investigator{{ if gt (len .) 1 }}s{{ end }}
+        </div>
+        <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
+          {{ range $i, $a := . }}
+            {{ if $i }}, {{ end }}
+            {{ $slug := $a | urlize }}
+            {{ $profile := partial "functions/get_author_profile" $slug }}
+            {{ if $profile.title }}
+              {{ $profile.title }}
+            {{ else }}
+              {{ $a }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 pt-1">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 transition-colors hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+        <span>View Details</span>
+        <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+
+      {{ with $item.Params.funding_agency_url }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="text-xs text-slate-500 hover:text-primary-600 dark:text-slate-400 dark:hover:text-primary-400 break-all">
+          {{ $agencyHost | default . }}
+        </a>
+      {{ end }}
+    </div>
+
+  </div>
 </div>

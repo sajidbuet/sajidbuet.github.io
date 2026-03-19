@@ -1,10 +1,10 @@
 ---
 title: Effect of FSS ground plane on second iteration of hexaflake fractal patch antenna
 authors:
-- Sajid Muhaimin Choudhury
+- ' me'
 - M. A. Matin
 date: '2012-01-01'
-publishDate: '2026-03-19T10:32:33.240375Z'
+publishDate: '2026-03-19T21:18:58.150767Z'
 publication_types:
 - paper-conference
 publication: '*2012 7th International Conference on Electrical and Computer Engineering*'

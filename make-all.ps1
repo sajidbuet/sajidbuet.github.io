@@ -25,7 +25,7 @@ if ($updatelatex) {
 
     Write-Host '📄  Running LaTeX in /cv (log → latexmk.log)…' -ForegroundColor $Step
     cd cv
-    ./latexrun.ps1 > latexmk.log
+    #./latexrun.ps1 > latexmk.log
     cd ..
 
     # ── copy fresh PDF to author folder ──────────────────────────────────────
@@ -45,8 +45,31 @@ if ($updatelatex) {
     # ── export BibTeX ────────────────────────────────────────────────────────
     Copy-Item -Path 'cv\papers.bib' -Destination 'papers.bib' -Force
     $bibFile = 'papers.bib'
+    $bibFileMe   = 'papers-me.bib'
     $pubEn   = 'content/publication/'
     $pubBn   = 'content/bn/publication/'
+
+    if (Test-Path $bibFileMe) {
+        Remove-Item $bibFileMe -Force
+    }
+    # Copy cv\papers.bib → papers-me.bib
+    Copy-Item -Path $bibFile -Destination $bibFileMe -Force
+
+   # Read entire file
+    $content = Get-Content $bibFileMe -Raw
+
+    # Replace all name variants with "me"
+    $patterns = @(
+        'Sajid Muhaimin Choudhury',
+        'Sajid Choudhury',
+        'Choudhury, Sajid Muhaimin',
+        'S\. M\. Choudhury'
+    )
+    foreach ($pattern in $patterns) {
+        $content = $content -replace $pattern, 'me'
+    }
+    # Save modified BibTeX
+    Set-Content -Path $bibFileMe -Value $content -Encoding UTF8
 
     foreach ($locale in @(
             @{ Path = $pubEn; Lang = 'en' },
@@ -59,11 +82,12 @@ if ($updatelatex) {
         }
 
         Write-Host "🔄  academic import → $($locale.Lang)…" -ForegroundColor $Info
-        academic import $bibFile $locale.Path --compact --overwrite
+        academic import $bibFileMe $locale.Path --compact --overwrite
         Write-Host "✅  Import complete for $($locale.Lang)." -ForegroundColor $Info
     }
 
-    Remove-Item 'papers.bib'
+    #Remove-Item 'papers.bib'
+    #Remove-Item 'papers-me.bib'
     Write-Host ''
 }
 else {
@@ -90,7 +114,7 @@ if (Test-Path $publicFolder) {
 }
 
 Write-Host '⚙️   Running hugo --gc --minify…' -ForegroundColor $Info
-hugo --gc --minify
+#hugo --gc --minify
 Write-Host '✅  Hugo build finished.' -ForegroundColor $Info
 
 # ───────────────────────────── 4️⃣  Zip /public ──────────────────────────────

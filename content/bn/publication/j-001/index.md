@@ -6,10 +6,10 @@ authors:
 - Md Gaffar
 - Md Mushfiqul Alam
 - Sayed Ashraf Mamun
-- Sajid Muhaimin Choudhury
+- ' me'
 - MA Matin
 date: '2011-01-01'
-publishDate: '2026-03-19T10:32:36.972499Z'
+publishDate: '2026-03-19T21:19:01.211594Z'
 publication_types:
 - article-journal
 publication: '*International Journal of Computer and Electrical Engineering*'
