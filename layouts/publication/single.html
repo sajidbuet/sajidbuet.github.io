@@ -1,0 +1,353 @@
+{{ define "main" }}
+{{ $page := . }}
+
+{{/* ---------- Publication type label ---------- */}}
+{{ $pubTypeRaw := "" }}
+{{ with .Params.publication_types }}
+  {{ $pubTypeRaw = index . 0 }}
+{{ end }}
+
+{{ $pubTypeLabel := $pubTypeRaw }}
+{{ if eq $pubTypeRaw "article-journal" }}
+  {{ $pubTypeLabel = "Journal Article" }}
+{{ else if eq $pubTypeRaw "paper-conference" }}
+  {{ $pubTypeLabel = "Conference Paper" }}
+{{ else if eq $pubTypeRaw "patent" }}
+  {{ $pubTypeLabel = "Patent" }}
+{{ else if eq $pubTypeRaw "manuscript" }}
+  {{ $pubTypeLabel = "Manuscript" }}
+{{ end }}
+
+{{/* ---------- Links / resources ---------- */}}
+{{ $doi := .Params.doi }}
+{{ $url := .Params.url | default .Params.external_link }}
+
+{{ $pdf := "" }}
+{{ with .Params.pdf }}
+  {{ $pdf = . }}
+{{ else }}
+  {{ with .Resources.GetMatch "*.pdf" }}
+    {{ $pdf = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{ $bibContent := "" }}
+{{ with .Resources.GetMatch "cite.bib" }}
+  {{ $bibContent = .Content }}
+{{ end }}
+
+{{ $featured := "" }}
+{{ with .Resources.GetMatch "*featured*" }}
+  {{ $featured = .RelPermalink }}
+{{ else }}
+  {{ with .Resources.GetMatch "{cover,hero,thumbnail}*" }}
+    {{ $featured = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{ $authors := .Params.authors }}
+
+<style>
+  .pub-accent {
+    color: rgb(var(--color-primary-600));
+  }
+  .dark .pub-accent {
+    color: rgb(var(--color-primary-400));
+  }
+
+  .pub-accent-bg {
+    background-color: rgb(var(--color-primary-600));
+    
+  }
+  .pub-accent-bg:hover {
+    background-color: rgb(var(--color-primary-700));
+  }
+  .dark .pub-accent-bg {
+    background-color: rgb(var(--color-primary-500));
+    color: rgb(255 255 255);
+  }
+  .dark .pub-accent-bg:hover {
+    background-color: rgb(var(--color-primary-400));
+  }
+
+  .pub-accent-soft {
+    background-color: rgb(var(--color-primary-50));
+    color: rgb(var(--color-primary-700));
+    border-color: rgb(var(--color-primary-200));
+  }
+  .dark .pub-accent-soft {
+    background-color: rgba(var(--color-primary-400), 0.10);
+    color: rgb(var(--color-primary-300));
+    border-color: rgba(var(--color-primary-400), 0.20);
+  }
+
+  .pub-hero {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(var(--color-primary-500), 0.08) 0%,
+        rgba(var(--color-primary-500), 0.03) 45%,
+        rgba(0,0,0,0) 100%
+      );
+  }
+  .dark .pub-hero {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(var(--color-primary-400), 0.12) 0%,
+        rgba(var(--color-primary-400), 0.05) 45%,
+        rgba(255, 255, 255, 1 ) 100%
+      );
+  }
+</style>
+
+<section class="pub-hero border-b border-slate-200/70 dark:border-slate-800/70">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="max-w-5xl">
+
+      <div class="mb-5 flex flex-wrap gap-2">
+        {{ if $pubTypeLabel }}
+          <span class="inline-flex rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-sm font-medium text-slate-800 backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100">
+            {{ $pubTypeLabel }}
+          </span>
+        {{ end }}
+
+        {{ with .Params.publication }}
+          <span class="inline-flex rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-sm text-slate-800 backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100">
+            {{ . | markdownify }}
+          </span>
+        {{ end }}
+
+        <span class="inline-flex rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-sm text-slate-700 backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200">
+          {{ .Date | time.Format ":date_long" }}
+        </span>
+      </div>
+
+      <h1 class="max-w-5xl text-3xl font-bold leading-tight tracking-tight  sm:text-4xl xl:text-6xl dark:text-slate-50">
+        {{ .Title | markdownify }}
+      </h1>
+
+      {{ with $authors }}
+        <div class="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+          {{ range $i, $author := . }}
+            {{ $authorTrim := $author | strings.TrimSpace }}
+            {{ if gt $i 0 }}<span class="mx-2 text-slate-400 dark:text-slate-600">·</span>{{ end }}
+            {{ if eq $authorTrim "me" }}
+              <a href="{{ "/authors/me" | relLangURL }}" class="font-semibold pub-accent hover:opacity-80">
+                Sajid Muhaimin Choudhury
+              </a>
+            {{ else }}
+              <span>{{ $authorTrim }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ with .Params.tags }}
+        <div class="mt-5 flex flex-wrap gap-2">
+          {{ range . }}
+            <a
+              href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}"
+              class="inline-flex rounded-full border px-3 py-1 text-xs font-medium transition pub-accent-soft"
+            >
+              {{ . }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        {{ with $doi }}
+          <a
+            href="https://doi.org/{{ . }}"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-semibold transition pub-accent-bg"
+          >
+            DOI
+          </a>
+        {{ end }}
+
+        {{ with $url }}
+          <a
+            href="{{ . }}"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+          >
+            URL
+          </a>
+        {{ end }}
+
+        {{ with $pdf }}
+          <a
+            href="{{ . }}"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+          >
+            PDF
+          </a>
+        {{ end }}
+
+        <a
+          href="#citation"
+          class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+        >
+          Cite
+        </a>
+
+        {{ if $bibContent }}
+          <a
+            href="#bibtex"
+            class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+          >
+            BibTeX
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-slate-950">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="grid grid-cols-1 gap-8 xl:grid-cols-12 xl:gap-10">
+
+      <main class="min-w-0 xl:col-span-8 space-y-8">
+
+        {{ with .Params.abstract }}
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
+              <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">Abstract</h2>
+            </div>
+            <div class="px-6 py-5">
+              <div class="prose prose-slate max-w-none dark:prose-invert">
+                {{ . | markdownify }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+
+        {{ with $featured }}
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <img
+              src="{{ . }}"
+              alt="{{ $page.Title }}"
+              class="w-full h-auto"
+              loading="lazy"
+            >
+          </div>
+        {{ end }}
+
+        {{ if .Content }}
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
+              <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">Details</h2>
+            </div>
+            <div class="px-6 py-6">
+              <div class="prose prose-slate max-w-none dark:prose-invert">
+                {{ .Content }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+
+        <div id="citation" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
+            <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">Citation</h2>
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+              
+            </p>
+          </div>
+          <div class="px-6 py-5">
+            <div class="prose prose-slate max-w-none dark:prose-invert">
+              {{ partial "views/citation" (dict "item" .) }}
+            </div>
+          </div>
+        </div>
+
+        {{ if $bibContent }}
+          <div id="bibtex" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
+              <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">BibTeX</h2>
+              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                
+              </p>
+            </div>
+            <div class="px-6 py-5">
+              <pre class="overflow-x-auto rounded-xl bg-slate-100 p-4 text-sm leading-relaxed text-slate-800 dark:bg-slate-950 dark:text-slate-100"><code>{{ $bibContent }}</code></pre>
+            </div>
+          </div>
+        {{ end }}
+
+      </main>
+
+      <aside class="min-w-0 xl:col-span-4">
+        <div class="space-y-6 xl:sticky xl:top-24">
+
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <div class="border-b border-slate-200 px-5 py-4 dark:border-slate-800">
+              <h2 class="text-xl font-semibold text-slate-900 dark:text-slate-100">Publication Info</h2>
+            </div>
+
+            <dl class="divide-y divide-slate-200 dark:divide-slate-800">
+              <div class="px-5 py-4">
+                <dt class="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Type</dt>
+                <dd class="text-sm text-slate-900 dark:text-slate-100">{{ $pubTypeLabel }}</dd>
+              </div>
+
+              {{ with .Params.publication }}
+                <div class="px-5 py-4">
+                  <dt class="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Venue</dt>
+                  <dd class="text-sm text-slate-900 dark:text-slate-100">{{ . | markdownify }}</dd>
+                </div>
+              {{ end }}
+
+              <div class="px-5 py-4">
+                <dt class="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Date</dt>
+                <dd class="text-sm text-slate-900 dark:text-slate-100">{{ .Date | time.Format ":date_long" }}</dd>
+              </div>
+
+              {{ with $doi }}
+                <div class="px-5 py-4">
+                  <dt class="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">DOI</dt>
+                  <dd class="break-all text-sm">
+                    <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="pub-accent hover:underline">
+                      {{ . }}
+                    </a>
+                  </dd>
+                </div>
+              {{ end }}
+
+              {{ with .Params.tags }}
+                <div class="px-5 py-4">
+                  <dt class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Tags</dt>
+                  <dd>
+                    <div class="flex flex-wrap gap-2">
+                      {{ range . }}
+                        <a
+                          href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}"
+                          class="rounded-full border px-2.5 py-1 text-xs transition pub-accent-soft"
+                        >
+                          {{ . }}
+                        </a>
+                      {{ end }}
+                    </div>
+                  </dd>
+                </div>
+              {{ end }}
+            </dl>
+          </div>
+
+          
+
+         
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+{{ end }}

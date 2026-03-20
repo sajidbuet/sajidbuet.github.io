@@ -1,0 +1,613 @@
+{{ define "main" }}
+{{ $page := . }}
+{{ $pubs := .RegularPagesRecursive.ByDate.Reverse }}
+
+{{/* ---------- Collect filter vocab + counts ---------- */}}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "tagCounts" (dict) }}
+{{ $scratch.Set "typeCounts" (dict) }}
+{{ $scratch.Set "yearCounts" (dict) }}
+{{ $scratch.Set "tags" (slice) }}
+{{ $scratch.Set "types" (slice) }}
+{{ $scratch.Set "years" (slice) }}
+
+{{ range $pubs }}
+  {{ $year := printf "%d" .Date.Year }}
+  {{ $yearCounts := $scratch.Get "yearCounts" }}
+  {{ $yearCurrent := or (index $yearCounts $year) 0 }}
+  {{ $scratch.Set "yearCounts" (merge $yearCounts (dict $year (add $yearCurrent 1))) }}
+  {{ if not (in ($scratch.Get "years") $year) }}
+    {{ $scratch.Add "years" (slice $year) }}
+  {{ end }}
+
+  {{ range (.Params.publication_types | default (slice)) }}
+    {{ $typeKey := lower (trim . " ") }}
+    {{ if $typeKey }}
+      {{ $typeCounts := $scratch.Get "typeCounts" }}
+      {{ $typeCurrent := or (index $typeCounts $typeKey) 0 }}
+      {{ $scratch.Set "typeCounts" (merge $typeCounts (dict $typeKey (add $typeCurrent 1))) }}
+      {{ if not (in ($scratch.Get "types") $typeKey) }}
+        {{ $scratch.Add "types" (slice $typeKey) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ range (.Params.tags | default (slice)) }}
+    {{ $tagKey := lower (trim . " ") }}
+    {{ if $tagKey }}
+      {{ $tagCounts := $scratch.Get "tagCounts" }}
+      {{ $tagCurrent := or (index $tagCounts $tagKey) 0 }}
+      {{ $scratch.Set "tagCounts" (merge $tagCounts (dict $tagKey (add $tagCurrent 1))) }}
+      {{ if not (in ($scratch.Get "tags") $tagKey) }}
+        {{ $scratch.Add "tags" (slice $tagKey) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $tagCounts := $scratch.Get "tagCounts" }}
+{{ $typeCounts := $scratch.Get "typeCounts" }}
+{{ $yearCounts := $scratch.Get "yearCounts" }}
+
+{{ $tags := sort ($scratch.Get "tags") }}
+{{ $types := sort ($scratch.Get "types") }}
+{{ $years := sort ($scratch.Get "years") "value" "desc" }}
+
+{{ $pubTypeLabels := dict
+  "article-journal" "Journal"
+  "paper-conference" "Conference"
+  "patent" "Patent"
+  "manuscript" "Manuscript"
+  "preprint" "Preprint"
+  "chapter" "Book Chapter"
+  "book" "Book"
+  "thesis" "Thesis"
+}}
+
+<style>
+  .pub-hidden {
+    display: none !important;
+  }
+
+  .pub-toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 1024px) {
+    .pub-toolbar {
+      grid-template-columns: minmax(0,1fr) auto;
+      align-items: center;
+    }
+  }
+
+  .pub-toolbar-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pub-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 1024px) {
+    .pub-toolbar-right {
+      justify-content: flex-end;
+    }
+  }
+
+  .pub-filter {
+    position: relative;
+  }
+
+  .pub-filter summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+  }
+
+  .pub-filter summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .pub-filter-button {
+    min-width: 13rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148,163,184,.24);
+    background: rgba(15,23,42,.32);
+    color: rgb(226,232,240);
+    padding: 0.8rem 1rem;
+    font-size: 0.97rem;
+    line-height: 1.15;
+    transition: border-color .18s ease, background .18s ease, color .18s ease;
+  }
+
+  .pub-filter-button:hover {
+    border-color: rgba(56,189,248,.45);
+    background: rgba(2,132,199,.10);
+  }
+
+  .pub-filter[open] .pub-filter-button {
+    border-color: rgba(56,189,248,.55);
+    background: rgba(2,132,199,.12);
+  }
+
+  .pub-filter-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    min-width: 0;
+  }
+
+  .pub-filter-name {
+    color: rgb(148,163,184);
+    font-size: .88rem;
+    flex: 0 0 auto;
+  }
+
+  .pub-filter-selected {
+    color: rgb(241,245,249);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pub-filter-count-inline {
+    color: rgb(148,163,184);
+    font-size: .9em;
+    flex: 0 0 auto;
+  }
+
+  .pub-filter-chevron {
+    width: 1rem;
+    height: 1rem;
+    color: rgb(148,163,184);
+    transition: transform .18s ease;
+    flex: 0 0 auto;
+  }
+
+  .pub-filter[open] .pub-filter-chevron {
+    transform: rotate(180deg);
+  }
+
+  .pub-filter-menu {
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + .55rem);
+    left: 0;
+    width: min(22rem, calc(100vw - 2.5rem));
+    max-height: 22rem;
+    overflow: auto;
+    border-radius: 1rem;
+    border: 1px solid rgba(148,163,184,.20);
+    background: rgba(2,6,23,.96);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    padding: .55rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .pub-filter-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    border-radius: .8rem;
+    padding: .72rem .8rem;
+    color: rgb(226,232,240);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background .15s ease, color .15s ease;
+  }
+
+  .pub-filter-option:hover {
+    background: rgba(30,41,59,.75);
+  }
+
+  .pub-filter-option.is-active {
+    background: rgba(2,132,199,.16);
+    color: white;
+  }
+
+  .pub-filter-option .option-label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pub-filter-option .option-count {
+    color: rgb(148,163,184);
+    font-size: .92em;
+    flex: 0 0 auto;
+  }
+
+  .pub-clear-btn {
+    border-radius: 9999px;
+    border: 1px solid rgba(148,163,184,.20);
+    padding: .72rem 1rem;
+    color: rgb(226,232,240);
+    background: transparent;
+    transition: background .18s ease, border-color .18s ease;
+    touch-action: manipulation;
+  }
+
+  .pub-clear-btn:hover {
+    background: rgba(148,163,184,.10);
+    border-color: rgba(148,163,184,.30);
+  }
+
+  .pub-result-count {
+    color: rgb(148,163,184);
+    font-size: .97rem;
+    white-space: nowrap;
+  }
+
+  .pub-active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+
+  .pub-active-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .48rem .8rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(56,189,248,.25);
+    background: rgba(2,132,199,.10);
+    color: rgb(224,242,254);
+    font-size: .92rem;
+  }
+
+  .pub-pill-remove {
+    border: 0;
+    background: transparent;
+    color: rgb(148,163,184);
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    font-size: 1rem;
+    touch-action: manipulation;
+  }
+
+  .pub-pill-remove:hover {
+    color: white;
+  }
+
+  #pub-list > .pub-item + .pub-item {
+    margin-top: 2rem;
+  }
+</style>
+
+<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+  <header class="mb-8">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-center">
+      {{ .Title }}
+    </h1>
+    {{ with .Content }}
+      <div class="prose prose-invert mx-auto mt-4 max-w-3xl text-center">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  <section class="mb-8 rounded-2xl border border-slate-700/40 bg-slate-900/20 p-4 md:p-5">
+    <div class="pub-toolbar">
+      <div class="pub-toolbar-left">
+        <details class="pub-filter" data-filter-group="tag">
+          <summary class="pub-filter-button" aria-label="Filter by topic tag">
+            <span class="pub-filter-label-wrap">
+              <span class="pub-filter-name">Tag</span>
+              <span class="pub-filter-selected" data-filter-selected="tag">All tags</span>
+              <span class="pub-filter-count-inline" data-filter-selected-count="tag">({{ len $pubs }})</span>
+            </span>
+            <svg class="pub-filter-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.512a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="pub-filter-menu">
+            <button type="button" class="pub-filter-option is-active" data-filter-group="tag" data-filter-value="" data-filter-label="All tags" data-filter-count="{{ len $pubs }}">
+              <span class="option-label">All tags</span>
+              <span class="option-count">({{ len $pubs }})</span>
+            </button>
+            {{ range $tags }}
+              {{ $label := . | humanize | title }}
+              {{ $count := index $tagCounts . }}
+              <button type="button" class="pub-filter-option" data-filter-group="tag" data-filter-value="{{ . }}" data-filter-label="{{ $label }}" data-filter-count="{{ $count }}">
+                <span class="option-label">{{ $label }}</span>
+                <span class="option-count">({{ $count }})</span>
+              </button>
+            {{ end }}
+          </div>
+        </details>
+
+        <details class="pub-filter" data-filter-group="type">
+          <summary class="pub-filter-button" aria-label="Filter by publication type">
+            <span class="pub-filter-label-wrap">
+              <span class="pub-filter-name">Type</span>
+              <span class="pub-filter-selected" data-filter-selected="type">All types</span>
+              <span class="pub-filter-count-inline" data-filter-selected-count="type">({{ len $pubs }})</span>
+            </span>
+            <svg class="pub-filter-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.512a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="pub-filter-menu">
+            <button type="button" class="pub-filter-option is-active" data-filter-group="type" data-filter-value="" data-filter-label="All types" data-filter-count="{{ len $pubs }}">
+              <span class="option-label">All types</span>
+              <span class="option-count">({{ len $pubs }})</span>
+            </button>
+            {{ range $types }}
+              {{ $label := or (index $pubTypeLabels .) (. | replace "-" " " | humanize | title) }}
+              {{ $count := index $typeCounts . }}
+              <button type="button" class="pub-filter-option" data-filter-group="type" data-filter-value="{{ . }}" data-filter-label="{{ $label }}" data-filter-count="{{ $count }}">
+                <span class="option-label">{{ $label }}</span>
+                <span class="option-count">({{ $count }})</span>
+              </button>
+            {{ end }}
+          </div>
+        </details>
+
+        <details class="pub-filter" data-filter-group="year">
+          <summary class="pub-filter-button" aria-label="Filter by year">
+            <span class="pub-filter-label-wrap">
+              <span class="pub-filter-name">Year</span>
+              <span class="pub-filter-selected" data-filter-selected="year">All years</span>
+              <span class="pub-filter-count-inline" data-filter-selected-count="year">({{ len $pubs }})</span>
+            </span>
+            <svg class="pub-filter-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.512a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="pub-filter-menu">
+            <button type="button" class="pub-filter-option is-active" data-filter-group="year" data-filter-value="" data-filter-label="All years" data-filter-count="{{ len $pubs }}">
+              <span class="option-label">All years</span>
+              <span class="option-count">({{ len $pubs }})</span>
+            </button>
+            {{ range $years }}
+              {{ $count := index $yearCounts . }}
+              <button type="button" class="pub-filter-option" data-filter-group="year" data-filter-value="{{ . }}" data-filter-label="{{ . }}" data-filter-count="{{ $count }}">
+                <span class="option-label">{{ . }}</span>
+                <span class="option-count">({{ $count }})</span>
+              </button>
+            {{ end }}
+          </div>
+        </details>
+      </div>
+
+      <div class="pub-toolbar-right">
+        <span id="pub-visible-count" class="pub-result-count">{{ len $pubs }} shown</span>
+        <button type="button" id="pub-clear-filters" class="pub-clear-btn text-sm">Clear</button>
+      </div>
+    </div>
+
+    <div id="pub-active-filters" class="pub-active-filters mt-4 pub-hidden"></div>
+  </section>
+
+  <section id="pub-list">
+    {{ range $pubs }}
+      {{ $year := printf "%d" .Date.Year }}
+
+      {{ $typeVals := slice }}
+      {{ range (.Params.publication_types | default (slice)) }}
+        {{ $clean := lower (trim . " ") }}
+        {{ if $clean }}
+          {{ $typeVals = $typeVals | append $clean }}
+        {{ end }}
+      {{ end }}
+
+      {{ $tagVals := slice }}
+      {{ range (.Params.tags | default (slice)) }}
+        {{ $clean := lower (trim . " ") }}
+        {{ if $clean }}
+          {{ $tagVals = $tagVals | append $clean }}
+        {{ end }}
+      {{ end }}
+
+      <div
+        class="pub-item"
+        data-year="{{ $year }}"
+        data-types="{{ delimit $typeVals "|" }}"
+        data-tags="{{ delimit $tagVals "|" }}"
+      >
+        {{ partial "views/citation" (dict "page" $page "item" .) }}
+      </div>
+    {{ end }}
+  </section>
+
+  <div id="pub-no-results" class="pub-hidden mt-10 rounded-2xl border border-slate-700/50 bg-slate-900/30 p-6 text-center text-slate-300">
+    No publications match the selected filters.
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const state = {
+    tag: { value: '', label: 'All tags', count: '{{ len $pubs }}' },
+    type: { value: '', label: 'All types', count: '{{ len $pubs }}' },
+    year: { value: '', label: 'All years', count: '{{ len $pubs }}' }
+  };
+
+  const items = Array.from(document.querySelectorAll('.pub-item'));
+  const clearBtn = document.getElementById('pub-clear-filters');
+  const noResults = document.getElementById('pub-no-results');
+  const visibleCount = document.getElementById('pub-visible-count');
+  const activeFilters = document.getElementById('pub-active-filters');
+  const detailsEls = Array.from(document.querySelectorAll('.pub-filter'));
+  const optionEls = Array.from(document.querySelectorAll('.pub-filter-option'));
+
+  function inPipeList(haystack, needle) {
+    if (!needle) return true;
+    if (!haystack) return false;
+    return haystack.split('|').includes(needle);
+  }
+
+  function closeOtherDetails(current) {
+    detailsEls.forEach(el => {
+      if (el !== current) el.removeAttribute('open');
+    });
+  }
+
+  detailsEls.forEach(el => {
+    el.addEventListener('toggle', function () {
+      if (this.open) closeOtherDetails(this);
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('.pub-filter')) {
+      detailsEls.forEach(el => el.removeAttribute('open'));
+    }
+  });
+
+  function updateSummary(group) {
+    const labelEl = document.querySelector(`[data-filter-selected="${group}"]`);
+    const countEl = document.querySelector(`[data-filter-selected-count="${group}"]`);
+    if (labelEl) labelEl.textContent = state[group].label;
+    if (countEl) countEl.textContent = `(${state[group].count})`;
+  }
+
+  function updateOptionStates(group) {
+    optionEls
+      .filter(opt => opt.dataset.filterGroup === group)
+      .forEach(opt => {
+        const active = opt.dataset.filterValue === state[group].value;
+        opt.classList.toggle('is-active', active);
+        opt.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+  }
+
+  function renderActiveFilters() {
+    const pills = [];
+
+    if (state.tag.value) {
+      pills.push(`
+        <span class="pub-active-pill">
+          Tag: ${state.tag.label}
+          <button type="button" class="pub-pill-remove" data-clear-group="tag" aria-label="Clear tag filter">&times;</button>
+        </span>
+      `);
+    }
+
+    if (state.type.value) {
+      pills.push(`
+        <span class="pub-active-pill">
+          Type: ${state.type.label}
+          <button type="button" class="pub-pill-remove" data-clear-group="type" aria-label="Clear type filter">&times;</button>
+        </span>
+      `);
+    }
+
+    if (state.year.value) {
+      pills.push(`
+        <span class="pub-active-pill">
+          Year: ${state.year.label}
+          <button type="button" class="pub-pill-remove" data-clear-group="year" aria-label="Clear year filter">&times;</button>
+        </span>
+      `);
+    }
+
+    if (pills.length) {
+      activeFilters.innerHTML = pills.join('');
+      activeFilters.classList.remove('pub-hidden');
+    } else {
+      activeFilters.innerHTML = '';
+      activeFilters.classList.add('pub-hidden');
+    }
+
+    activeFilters.querySelectorAll('[data-clear-group]').forEach(btn => {
+      btn.addEventListener('click', function () {
+        resetGroup(this.dataset.clearGroup);
+      });
+    });
+  }
+
+  function applyFilters() {
+    let shown = 0;
+
+    items.forEach(item => {
+      const matchesTag = inPipeList(item.dataset.tags || '', state.tag.value);
+      const matchesType = inPipeList(item.dataset.types || '', state.type.value);
+      const matchesYear = !state.year.value || item.dataset.year === state.year.value;
+
+      const show = matchesTag && matchesType && matchesYear;
+      item.classList.toggle('pub-hidden', !show);
+      if (show) shown += 1;
+    });
+
+    if (visibleCount) {
+      visibleCount.textContent = `${shown} shown`;
+    }
+
+    if (noResults) {
+      noResults.classList.toggle('pub-hidden', shown !== 0);
+    }
+
+    renderActiveFilters();
+  }
+
+  function setGroup(group, value, label, count) {
+    state[group] = {
+      value: value || '',
+      label: label,
+      count: count
+    };
+    updateSummary(group);
+    updateOptionStates(group);
+    applyFilters();
+  }
+
+  function resetGroup(group) {
+    const defaultLabel = group === 'tag' ? 'All tags' : (group === 'type' ? 'All types' : 'All years');
+    setGroup(group, '', defaultLabel, '{{ len $pubs }}');
+  }
+
+  optionEls.forEach(opt => {
+    opt.setAttribute('aria-pressed', opt.classList.contains('is-active') ? 'true' : 'false');
+
+    opt.addEventListener('click', function () {
+      const group = this.dataset.filterGroup;
+      const value = this.dataset.filterValue || '';
+      const label = this.dataset.filterLabel || '';
+      const count = this.dataset.filterCount || '{{ len $pubs }}';
+
+      setGroup(group, value, label, count);
+
+      const parentDetails = this.closest('.pub-filter');
+      if (parentDetails) parentDetails.removeAttribute('open');
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      resetGroup('tag');
+      resetGroup('type');
+      resetGroup('year');
+    });
+  }
+
+  updateSummary('tag');
+  updateSummary('type');
+  updateSummary('year');
+  updateOptionStates('tag');
+  updateOptionStates('type');
+  updateOptionStates('year');
+  applyFilters();
+});
+</script>
+{{ end }}

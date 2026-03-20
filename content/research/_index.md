@@ -5,7 +5,7 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: hero
+  - block: hero-qpacers
     content:
       title: |
          Research
@@ -22,7 +22,7 @@ sections:
       count: 5
       filters:
         folders:
-          - grants
+          - projects
     design:
       view: grant
       columns: '1'

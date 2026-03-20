@@ -82,17 +82,19 @@ sections:
       spacing:
         padding: ["3rem", 0, "3rem", 0]
 
-  - block: research-areas
+  - block: research-area-qpacers
     id: research
+    
     content:
       title: Research Focus Areas
       subtitle: 
       text: Research is organized under the Q-PACERS framework, integrating Quantum, Photonic, Antenna, Computing, Embedded, and Renewable-Energy Systems to address next-generation challenges in intelligent devices and advanced electromagnetic systems.
-
+      
       items:
         - name: Quantum Computing & Quantum Photonics
           description: Investigating quantum information processing, photonic qubits, and quantum device architectures, with emphasis on algorithm–hardware co-design and emerging quantum photonic platforms.
           icon: hero/quantum
+          
           gradient: from-indigo-400 to-purple-600
           status: active
           topics:

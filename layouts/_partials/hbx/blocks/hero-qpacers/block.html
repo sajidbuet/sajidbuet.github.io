@@ -1,0 +1,162 @@
+{{/* Hugo Blox: Hero QPACERS */}}
+{{/* Ported from old hero block into current site visual style */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $branding := partial "functions/get_branding" . }}
+
+{{/* CTA compatibility: support old cta / cta_alt and newer primary_action */}}
+{{ $ctaLabel := "" }}
+{{ $ctaURL := "" }}
+{{ $ctaIcon := "" }}
+
+{{ if $block.content.cta.url }}
+  {{ $ctaURL = $block.content.cta.url }}
+  {{ $ctaLabel = $block.content.cta.label }}
+  {{ $ctaIcon = $block.content.cta.icon }}
+{{ else if $block.content.primary_action.url }}
+  {{ $ctaURL = $block.content.primary_action.url }}
+  {{ $ctaLabel = $block.content.primary_action.text }}
+  {{ $ctaIcon = $block.content.primary_action.icon }}
+{{ end }}
+
+{{ $ctaTarget := "" }}
+{{ if $ctaURL }}
+  {{ $scheme := (urls.Parse $ctaURL).Scheme }}
+  {{ if not $scheme }}
+    {{ $ctaURL = $ctaURL | relLangURL }}
+  {{ else if in (slice "http" "https") $scheme }}
+    {{ $ctaTarget = "target=\"_blank\" rel=\"noopener\"" }}
+  {{ end }}
+{{ end }}
+
+{{ $ctaAltLabel := "" }}
+{{ $ctaAltURL := "" }}
+
+{{ if $block.content.cta_alt.url }}
+  {{ $ctaAltURL = $block.content.cta_alt.url }}
+  {{ $ctaAltLabel = $block.content.cta_alt.label }}
+{{ else if $block.content.secondary_action.url }}
+  {{ $ctaAltURL = $block.content.secondary_action.url }}
+  {{ $ctaAltLabel = $block.content.secondary_action.text }}
+{{ end }}
+
+{{ $ctaAltTarget := "" }}
+{{ if $ctaAltURL }}
+  {{ $scheme := (urls.Parse $ctaAltURL).Scheme }}
+  {{ if not $scheme }}
+    {{ $ctaAltURL = $ctaAltURL | relLangURL }}
+  {{ else if in (slice "http" "https") $scheme }}
+    {{ $ctaAltTarget = "target=\"_blank\" rel=\"noopener\"" }}
+  {{ end }}
+{{ end }}
+
+{{ $hasImage := $block.content.image.filename }}
+{{ $image := "" }}
+{{ $isSVG := false }}
+
+{{ if $hasImage }}
+  {{ $image = resources.Get (path.Join "media" $block.content.image.filename) }}
+  {{ if $image }}
+    {{ $isSVG = eq $image.MediaType.SubType "svg" }}
+  {{ end }}
+{{ end }}
+<div class="pt-0 pb-8 sm:pt-2 sm:pb-10 lg:pt-3 lg:pb-12 px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto w-full max-w-7xl">
+    <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-8">
+
+      {{/* Text content */}}
+      <div class="lg:col-span-6 {{ if and $hasImage $block.content.design.flip }}lg:order-2{{ end }}">
+        <div class="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
+
+          {{ with $block.content.title }}
+            <h1 class="font-display text-4xl font-bold tracking-tighter text-slate-900 dark:text-slate-100 sm:text-5xl lg:text-6xl">
+              {{ . | markdownify | emojify }}
+            </h1>
+          {{ end }}
+
+          {{ with $block.content.text }}
+            <div class="hero-richtext mt-6 space-y-6 font-display text-lg leading-relaxed tracking-tight text-slate-700 dark:text-slate-200 sm:text-xl">
+              {{ . | $page.RenderString | emojify }}
+            </div>
+          {{ end }}
+
+          {{ with $block.content.details }}
+            <div class="mt-5 max-w-3xl space-y-4 text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
+              {{ . | $page.RenderString | emojify }}
+            </div>
+          {{ end }}
+
+          {{ with $block.content.cta_note }}
+            <p class="mt-5 text-sm text-slate-500 dark:text-slate-400 sm:text-base">
+              {{ .label | markdownify | emojify | safeHTML }}
+            </p>
+          {{ end }}
+
+          {{ if or $ctaURL $ctaAltURL }}
+            <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              {{ if $ctaURL }}
+                <a
+                  class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 active:text-white/80"
+                  href="{{ $ctaURL | safeURL }}"
+                  {{ $ctaTarget | safeHTMLAttr }}>
+                  <span>{{ $ctaLabel | markdownify | emojify }}</span>
+                  {{ with $ctaIcon }}
+                    <span class="ml-2">
+                      {{ partial "functions/get_icon" (dict "name" . "attributes" "style=\"height:1em\"") }}
+                    </span>
+                  {{ end }}
+                </a>
+              {{ end }}
+
+              {{ if $ctaAltURL }}
+                <a
+                  class="inline-flex items-center justify-center rounded-2xl px-6 py-4 text-base font-semibold text-slate-700 ring-1 ring-slate-300 transition duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-900/70"
+                  href="{{ $ctaAltURL | safeURL }}"
+                  {{ $ctaAltTarget | safeHTMLAttr }}>
+                  <span>{{ $ctaAltLabel | markdownify | emojify }}</span>
+                  <span class="ml-2">→</span>
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+
+        </div>
+      </div>
+
+      {{/* Media area */}}
+      {{ if $hasImage }}
+        <div class="lg:col-span-6 {{ if and $hasImage $block.content.design.flip }}lg:order-1{{ end }}">
+          <div class="mx-auto flex max-w-2xl items-center justify-center">
+
+            {{ if and $image $isSVG }}
+              <div class="w-full rounded-3xl border border-slate-200/70 bg-white/60 p-4 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/50 sm:p-6">
+                {{ partial "qpacer" . }}
+              </div>
+            {{ else if $image }}
+              {{ $imgLarge := $image.Resize "1200x" }}
+              {{ $imgMedium := $image.Resize "800x" }}
+              {{ $imgSmall := $image.Resize "500x" }}
+              <div class="w-full overflow-hidden rounded-3xl border border-slate-200/70 bg-white/60 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/50">
+                <img
+                  class="h-auto w-full object-contain"
+                  src="{{ $imgMedium.RelPermalink }}"
+                  srcset="{{ $imgSmall.RelPermalink }} 500w, {{ $imgMedium.RelPermalink }} 800w, {{ $imgLarge.RelPermalink }} 1200w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  width="{{ $image.Width }}"
+                  height="{{ $image.Height }}"
+                  alt="{{ with $block.content.title }}{{ . | plainify }}{{ else }}{{ $branding.site_title }}{{ end }}">
+              </div>
+            {{ else }}
+              <div class="w-full rounded-3xl px-6 py-12 text-center text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400">
+                {{ partial "qpacer" . }}
+              </div>
+            {{ end }}
+
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
