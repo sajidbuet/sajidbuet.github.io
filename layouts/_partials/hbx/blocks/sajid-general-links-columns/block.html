@@ -1,0 +1,188 @@
+{{/* Hugo Blox: General Link Columns */}}
+{{/* 3 columns, each with heading, subheading, and stacked buttons */}}
+{{/* test 
+  - block: sajid-general-links-columns
+    id: outreach
+    content:
+      title: Outreach & Beyond Research
+      subtitle: >
+        Resources, writing, and creative work beyond formal research.
+      columns:
+        - heading: Academic & Professional
+          subheading: Resources for students, collaborators, and academic engagement.
+          icon: hero/academic-cap
+          buttons:
+            - title: LOR Request
+              description: Guidelines for requesting a recommendation letter.
+              url: /lor-request/
+              icon: hero/document-text
+
+            - title: Professional Activities
+              description: Current and past service, leadership, and affiliations.
+              url: /professional-activities/
+              icon: hero/briefcase
+
+            - title: Templates
+              description: Templates and resources from Q-PACERS Lab.
+              url: /templates/
+              icon: hero/squares-2x2
+
+            - title: Unicode Scientific Symbols
+              description: Unicode reference for Greek letters and scientific symbols.
+              url: /unicode-scientific-symbols/
+              icon: hero/calculator
+
+        - heading: Writing
+          subheading: Long-form, reflective, and creative writing.
+          icon: hero/pencil-square
+          buttons:
+            - title: Blog
+              description: A collection of blog articles and notes.
+              url: /blog/
+              icon: hero/pencil-square
+              featured: true
+
+            - title: Poems
+              description: A collection of selected poems.
+              url: /poems/
+              icon: hero/book-open
+
+            - title: Song Writing
+              description: Composed songs and related pages.
+              url: /song-writing/
+              icon: hero/musical-note
+
+        - heading: Creative & Personal
+          subheading: Design work, interests, and personal explorations.
+          icon: hero/sparkles
+          buttons:
+            - title: Graphics
+              description: Logo and graphic design collection.
+              url: /graphics/
+              icon: hero/photo
+
+            - title: Hobbies
+              description: Personal interests and related links.
+              url: /hobbies/
+              icon: hero/heart
+ */}}
+
+
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+<div class="relative overflow-hidden py-10 sm:py-12 lg:py-14">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+
+      {{ with $block.content.title }}
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+            {{ . | $page.RenderString | emojify }}
+          </h2>
+        </div>
+      {{ end }}
+
+      {{ with $block.content.subtitle }}
+        <div class="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
+          {{ . | $page.RenderString | emojify }}
+        </div>
+      {{ end }}
+
+      {{ with $block.content.text }}
+        <div class="mx-auto mt-6 max-w-4xl text-center text-base leading-relaxed text-slate-700 dark:text-slate-200">
+          {{ . | $page.RenderString | emojify }}
+        </div>
+      {{ end }}
+
+      {{ with $block.content.columns }}
+        <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {{ range . }}
+            <div class="flex h-full flex-col rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-sm ring-1 ring-black/5 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/60 dark:ring-white/10">
+              
+              <div>
+                <div class="flex items-start gap-3">
+                  {{ with .icon }}
+                    <div class="mt-0.5 shrink-0 text-primary-600 dark:text-primary-400">
+                      {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"h-6 w-6\"") }}
+                    </div>
+                  {{ end }}
+
+                  <div class="min-w-0">
+                    {{ with .heading }}
+                      <h3 class="text-xl font-semibold leading-snug text-slate-900 dark:text-slate-100">
+                        {{ . | $page.RenderString | emojify }}
+                      </h3>
+                    {{ end }}
+
+                    {{ with .subheading }}
+                      <div class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                        {{ . | $page.RenderString | emojify }}
+                      </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+
+              {{ with .buttons }}
+  <div class="mt-6 flex flex-col gap-3">
+    {{ range . }}
+      {{ $link := .url }}
+      {{ $scheme := (urls.Parse $link).Scheme }}
+      {{ $target := "" }}
+
+      {{ if not $scheme }}
+        {{ $link = $link | relLangURL }}
+      {{ else if in (slice "http" "https") $scheme }}
+        {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+      {{ end }}
+
+      {{ $featured := .featured | default false }}
+
+      <a
+        href="{{ $link | safeURL }}"
+        {{ $target | safeHTMLAttr }}
+        class="group inline-flex w-full items-center justify-between rounded-xl border px-4 text-left shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md
+        {{ if $featured }}
+          border-slate-300/80 bg-slate-100/80 py-4 dark:border-slate-600/80 dark:bg-slate-800/90
+        {{ else }}
+          border-slate-200/70 bg-slate-50/70 py-3 dark:border-slate-700/70 dark:bg-slate-900/60 dark:hover:bg-slate-800/80
+        {{ end }}"
+      >
+        <span class="flex min-w-0 items-center gap-3">
+          {{ with .icon }}
+            <span class="shrink-0 text-primary-600 dark:text-primary-400">
+              {{ partial "functions/get_icon" (dict "name" . "attributes" (cond $featured "class=\"h-6 w-6\"" "class=\"h-5 w-5\"")) }}
+            </span>
+          {{ end }}
+
+          <span class="min-w-0">
+            <span class="block truncate text-slate-900 group-hover:text-primary-600 dark:text-slate-100 dark:group-hover:text-primary-400 {{ if $featured }}text-lg font-semibold{{ else }}text-sm font-medium{{ end }}">
+              {{ .title | markdownify | emojify }}
+            </span>
+
+            {{ with .description }}
+              <span class="mt-0.5 block leading-relaxed text-slate-600 dark:text-slate-300 {{ if $featured }}text-sm{{ else }}text-xs{{ end }}">
+                {{ . | $page.RenderString | emojify }}
+              </span>
+            {{ end }}
+          </span>
+        </span>
+
+        <span class="ml-3 shrink-0 text-primary-600 transition-transform duration-300 group-hover:translate-x-1 dark:text-primary-400">
+          {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" (cond $featured "class=\"h-5 w-5\"" "class=\"h-4 w-4\"")) }}
+        </span>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
+
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>

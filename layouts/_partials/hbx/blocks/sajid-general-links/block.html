@@ -1,0 +1,148 @@
+{{/* Hugo Blox: General Links */}}
+{{/* Title + 3-column button/link cards using theme colors only */}}
+
+{{/* test 
+  - block: sajid-general-links
+    id: outreach
+    content:
+      title: Outreach & Beyond Research
+      subtitle: >
+        Resources, writing, and creative work beyond formal research publications.
+      links:
+        - title: Blog
+          description: A collection of my blog articles.
+          url: /blog/
+          icon: hero/pencil-square
+          button_text: Read Articles
+
+        - title: LOR Request
+          description: Guidelines to request a letter of recommendation.
+          url: /lor-request/
+          icon: hero/document-text
+          button_text: View Guidelines
+
+        - title: Unicode Scientific Symbols Cheatsheet
+          description: Greek letters, subscripts, superscripts, and mathematical or logical Unicode symbols.
+          url: /unicode-scientific-symbols/
+          icon: hero/calculator
+          button_text: Open Cheatsheet
+
+        - title: Templates
+          description: Templates and resources from Q-PACERS Lab.
+          url: /templates/
+          icon: hero/squares-2x2
+          button_text: Browse Templates
+
+        - title: Professional Activities
+          description: Current and past professional activities, service, and affiliations.
+          url: /professional-activities/
+          icon: hero/briefcase
+          button_text: View Activities
+
+        - title: Poems
+          description: A collection of some of my poetry.
+          url: /poems/
+          icon: hero/book-open
+          button_text: Read Poems
+
+        - title: Hobbies
+          description: Personal interests and links to related pages.
+          url: /hobbies/
+          icon: hero/heart
+          button_text: Explore Hobbies
+
+        - title: Graphics
+          description: Graphic and logo collection designed by me, including BUET and BUET-EEE works.
+          url: /graphics/
+          icon: hero/photo
+          button_text: View Graphics
+
+        - title: Song Writing
+          description: A collection of my composed songs.
+          url: /song-writing/
+          icon: hero/musical-note
+          button_text: Listen & Read
+    design:
+      columns: "1"
+ */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+<div class="relative overflow-hidden py-10 sm:py-12 lg:py-14">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+
+      {{ with $block.content.title }}
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+            {{ . | $page.RenderString | emojify }}
+          </h2>
+        </div>
+      {{ end }}
+
+      {{ with $block.content.subtitle }}
+        <div class="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
+          {{ . | $page.RenderString | emojify }}
+        </div>
+      {{ end }}
+
+      {{ with $block.content.text }}
+        <div class="mx-auto mt-6 max-w-4xl text-center text-base leading-relaxed text-slate-700 dark:text-slate-200">
+          {{ . | $page.RenderString | emojify }}
+        </div>
+      {{ end }}
+
+      {{ with $block.content.links }}
+        <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {{ range . }}
+            {{ $link := .url }}
+            {{ $scheme := (urls.Parse $link).Scheme }}
+            {{ $target := "" }}
+            {{ if not $scheme }}
+              {{ $link = $link | relLangURL }}
+            {{ else if in (slice "http" "https") $scheme }}
+              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+
+            <a
+              href="{{ $link | safeURL }}"
+              {{ $target | safeHTMLAttr }}
+              class="group flex h-full flex-col justify-between rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-sm ring-1 ring-black/5 backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/60 dark:ring-white/10">
+
+              <div>
+                <div class="flex items-start gap-3">
+                  {{ with .icon }}
+                    <div class="mt-0.5 shrink-0 text-primary-600 dark:text-primary-400">
+                      {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"h-6 w-6\"") }}
+                    </div>
+                  {{ end }}
+
+                  <div class="min-w-0">
+                    <h3 class="text-lg font-semibold leading-snug text-slate-900 transition-colors group-hover:text-primary-600 dark:text-slate-100 dark:group-hover:text-primary-400">
+                      {{ .title | markdownify | emojify }}
+                    </h3>
+
+                    {{ with .description }}
+                      <div class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                        {{ . | $page.RenderString | emojify }}
+                      </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 inline-flex items-center text-sm font-medium text-primary-600 dark:text-primary-400">
+                {{ .button_text | default "Explore" | markdownify | emojify }}
+                <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                  {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" "class=\"h-4 w-4\"") }}
+                </span>
+              </div>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
