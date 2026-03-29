@@ -94,9 +94,8 @@ sections:
         - name: Quantum Computing & Quantum Photonics
           description: Investigating quantum information processing, photonic qubits, and quantum device architectures, with emphasis on algorithm–hardware co-design and emerging quantum photonic platforms.
           icon: hero/quantum
-          
           gradient: from-indigo-400 to-purple-600
-          status: active
+          status: emerging
           topics:
             - Photonic Qubits
             - Quantum Error Correction
@@ -135,7 +134,7 @@ sections:
           description: Integrating machine learning, optimization, and computational methods with physical system design, including AI-assisted photonic design and physics-informed computation.
           icon: hero/computing
           gradient: from-purple-400 to-pink-600
-          status: active
+          status: planning
           topics:
             - AI for Photonics
             - Computer Architecture
