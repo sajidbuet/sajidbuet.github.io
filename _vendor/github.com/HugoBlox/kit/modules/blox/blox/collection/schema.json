@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/collection.json",
   "title": "Collection Block Schema",
   "description": "Schema for the Collection block - displays filtered and sorted collections of pages",

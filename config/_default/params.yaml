@@ -23,7 +23,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "Leading research lab advancing knowledge through innovative scientific discovery and collaboration."
+    description: "Smart and Advanced Junctions of Intelligent Devices. Research Lab of Dr. Sajid Muhaimin Choudhury"
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "GetResearchDev"         # Twitter/X handle for Twitter Cards (without @)
@@ -178,7 +178,7 @@ hugoblox:
   # Site search
   # ────────────────────────────────────────────────────────────────────────────
   search:
-    enable: true
+    enable: false
     # Trending/suggested search terms
     suggestions: []
     # Quick action shortcuts in search modal

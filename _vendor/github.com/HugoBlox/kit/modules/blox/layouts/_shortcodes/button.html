@@ -68,7 +68,7 @@
 {{/* Set target and rel attributes based on new_tab parameter */}}
 {{- $targetAttr := "" -}}
 {{- $relAttr := "" -}}
-{{- $isExternal := or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") -}}
+{{- $isExternal := or (strings.HasPrefix $url "https://") (strings.HasPrefix $url "https://") -}}
 
 {{- if $newTab -}}
   {{- $targetAttr = "_blank" -}}

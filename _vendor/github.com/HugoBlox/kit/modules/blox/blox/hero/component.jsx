@@ -18,7 +18,7 @@ export function renderText(text) {
 export function processUrl(url) {
   if (!url) return {href: "#"};
 
-  if (url.startsWith("http://") || url.startsWith("https://")) {
+  if (url.startsWith("https://") || url.startsWith("https://")) {
     return {
       href: url,
       target: "_blank",

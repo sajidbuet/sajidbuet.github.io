@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/hero.json",
   "title": "Hero Block Schema",
   "description": "Schema for the Hero block - displays prominent hero sections with titles, text, and calls-to-action",

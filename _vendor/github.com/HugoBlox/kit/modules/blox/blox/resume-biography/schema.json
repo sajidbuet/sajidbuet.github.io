@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/resume-biography.json",
   "title": "Resume Biography Block Schema",
   "description": "Schema for the Biography block - renders author details with avatar, banner, bio, and social links",

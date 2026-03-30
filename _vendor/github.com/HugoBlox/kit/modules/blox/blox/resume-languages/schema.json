@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/resume-languages.json",
   "title": "Resume Languages Block Schema",
   "description": "Schema for the Languages block - renders language proficiency from the author profile",

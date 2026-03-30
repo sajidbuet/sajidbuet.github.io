@@ -98,8 +98,8 @@ this.markmap = this.markmap || {};
   /*! @gera2ld/jsx-dom v2.2.2 | ISC License */
   const VTYPE_ELEMENT = 1;
   const VTYPE_FUNCTION = 2;
-  const SVG_NS = "http://www.w3.org/2000/svg";
-  const XLINK_NS = "http://www.w3.org/1999/xlink";
+  const SVG_NS = "https://www.w3.org/2000/svg";
+  const XLINK_NS = "https://www.w3.org/1999/xlink";
   const NS_ATTRS = {
     show: XLINK_NS,
     actuate: XLINK_NS,

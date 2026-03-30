@@ -101,7 +101,7 @@ sections:
 
 ```json
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/my-block.json",
   "title": "My Block Schema",
   "description": "Schema for my custom block",

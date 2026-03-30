@@ -24,7 +24,7 @@
   {{ end }}
   {{ if $filename }}
     {{/* Check if it's a remote URL */}}
-    {{ if or (strings.HasPrefix $filename "http://") (strings.HasPrefix $filename "https://") }}
+    {{ if or (strings.HasPrefix $filename "https://") (strings.HasPrefix $filename "https://") }}
       {{ $resource = resources.GetRemote $filename }}
       {{ if eq $resource nil }}
         {{ warnf "Remote cover image not found: %s" $filename }}

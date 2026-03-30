@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/logos.json",
   "title": "Logos Block Schema",
   "description": "Schema for the Logos block - showcases partner/customer logos in grid, carousel, or marquee layouts",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/features.json",
   "title": "Features Block Schema",
   "description": "Schema for the Features block - displays a grid of features with icons, names, and descriptions",

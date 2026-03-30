@@ -35,7 +35,7 @@ hugoblox:
 
 links:
   - type: pdf
-    url: http://arxiv.org/pdf/1512.04133v1
+    url: https://arxiv.org/pdf/1512.04133v1
   - type: code
     url: https://github.com/HugoBlox/hugo-blox-builder
   - type: dataset

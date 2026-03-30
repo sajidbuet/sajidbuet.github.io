@@ -60,17 +60,17 @@ https://audiopen.ai/
 
 ### Search engines:
 
-#### [Consensus](http://consensus.app/)
+#### [Consensus](https://consensus.app/)
 Unlike ChatGPT that gives you fake citations, Consensus answers your questions with references to actually published papers.
-http://consensus.app/
+https://consensus.app/
 
-#### [Evidence Hunt](http://evidencehunt.com/)
+#### [Evidence Hunt](https://evidencehunt.com/)
 Answers your clinical questions with citations to published papers.
-http://evidencehunt.com/
+https://evidencehunt.com/
 
-#### [Search Smart](http://searchsmart.org/)
+#### [Search Smart](https://searchsmart.org/)
 A search engine to help you find the most suitable database for your research.
-http://searchsmart.org/
+https://searchsmart.org/
 
 
 

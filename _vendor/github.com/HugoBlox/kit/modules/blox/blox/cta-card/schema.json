@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/cta-card.json",
   "title": "CTA Card Block Schema",
   "description": "Schema for the CTA Card block - displays a prominent call-to-action card with title, text, and button",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://hugoblox.com/schemas/blocks/resume-skills.json",
   "title": "Resume Skills Block Schema",
   "description": "Schema for the Resume Skills block - displays skills and proficiency pulled from an author profile",

@@ -46,7 +46,7 @@ PARAMETERS:
     {{- else -}}
       {{- $icon_body := index . "body" -}}
       {{- $icon_size := index $icon_pack "height" -}}
-      {{- $icon_content = printf `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %s %s">%s</svg>` (cast.ToString $icon_size) (cast.ToString $icon_size) $icon_body -}}
+      {{- $icon_content = printf `<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 %s %s">%s</svg>` (cast.ToString $icon_size) (cast.ToString $icon_size) $icon_body -}}
     {{- end -}}
   {{- else -}}
     {{- with resources.GetMatch (path.Join "media" "icons" $pack (printf "%s.svg" $iconName)) -}}
