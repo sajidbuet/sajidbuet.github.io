@@ -21,7 +21,7 @@ $clsFile = 'buetcv.cls'
 # ──────────────────────────── BANNER ─────────────────────────────────────────
 Write-Host ''
 Write-Host '📄  ** DSMC Update Citation Run **'                  -ForegroundColor $Step
-Write-Host '🌐  sajid.buet.ac.bd'                       -ForegroundColor $Info
+Write-Host '🌐  sajid.bd'                       -ForegroundColor $Info
 Write-Host ''
 Write-Host 'ℹ️   Ensure *papers.bib* is UPDATED with PoPCites.csv +' `
            'SCImago metrics before compiling.'          -ForegroundColor $Warn

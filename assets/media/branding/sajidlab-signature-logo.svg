@@ -4,7 +4,7 @@
       :root {
         --color-primary-600: #0c96c8;
         --logo-navy: currentColor;
-        --logo-teal: var(--color-primary-600);
+        --logo-teal: #0c96c8;
         --logo-slate: #5B6475;
       }
       .no-fill { fill: none; }

@@ -89,7 +89,7 @@ In order to receive a LOR from me, you **must Waive the right to access** to wha
 If I find that the waiver is not done in an LOR form, I will copy paste the following text in the LOR form:
 
 <span style="color:red">
-"The detailed policy of my LOR is elaborated in my website https://sajid.buet.ac.bd/outreach/LOR, and the candidate still chose the option of not waiving the right to access this report. 
+"The detailed policy of my LOR is elaborated in my website https://www.sajid.bd/outreach/LOR, and the candidate still chose the option of not waiving the right to access this report. 
 </span>
 
 <span style="color:red">
@@ -112,10 +112,10 @@ Since the applicant did not waive the right to access this report, I hereby decl
   _If you do not email me properly, I will simply copy and send the following text (keeping it here for my convenience, so that I can copy/paste it.) _ 
 
 #### Reply template for ineligible students
-  Dear X, <br/> Thank you very much for your email. If you could kindly go to my website [https://sajid.buet.ac.bd/outreach/LOR](https://sajid.buet.ac.bd/outreach/LOR) and first check if you are eligible to receive an LOR from me. If you are eligible, please fill out the [LOR Request form](LOR_Request_Form.docx) and send me the email again. <br/>Thank you</span>
+  Dear X, <br/> Thank you very much for your email. If you could kindly go to my website [https://https:///outreach/LOR](https://https:///outreach/LOR) and first check if you are eligible to receive an LOR from me. If you are eligible, please fill out the [LOR Request form](LOR_Request_Form.docx) and send me the email again. <br/>Thank you</span>
 
 #### Reply template for eligible students
-  Dear X, <br/> Thank you very much for your email. If you could kindly go to my website [https://sajid.buet.ac.bd/outreach/LOR](https://sajid.buet.ac.bd/outreach/LOR) and, please fill out the [LOR Request form](LOR_Request_Form.docx) and send me the email again. I will confirm receipt of the email. Start adding my email after my confirmation. 
+  Dear X, <br/> Thank you very much for your email. If you could kindly go to my website [https://https:///outreach/LOR](https://https:///outreach/LOR) and, please fill out the [LOR Request form](LOR_Request_Form.docx) and send me the email again. I will confirm receipt of the email. Start adding my email after my confirmation. 
   <br/> Once you finish submitting all LORs, kindly email and let me know, again, and I will try to submit all of your LORs in one go. You do not need to send me a draft LOR, just the form is sufficient.
   <br/> For students enrolled under other faculty members, I will only recommend you only if your current supervisor recommends. You should attach a copy of the consent in the email, otherwise I will have to personally call and confirm with him/her before giving the LOR.
   <br/>Thank you</span>
