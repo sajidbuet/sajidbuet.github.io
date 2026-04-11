@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776.28 213.14" role="img" aria-label="SAJID Lab logo">
+  <defs>
+    <style>
+      :root {
+        --color-primary-600: #0c96c8;
+        --logo-navy: currentColor;
+        --logo-teal: var(--color-primary-600);
+        --logo-slate: #5B6475;
+      }
+      .no-fill { fill: none; }
+      .fill-navy { fill: var(--logo-slate); }
+      .fill-teal { fill: var(--logo-teal); }
+      .fill-slate { fill: var(--logo-slate); }
+      .stroke-teal-thin,.stroke-teal {
+        fill: none;
+        stroke: var(--logo-teal);
+        stroke-miterlimit: 10;
+      }
+      .stroke-teal-thin {
+        stroke-linecap: round;
+        stroke-width: 3px;
+      }
+      .stroke-teal { stroke-width: 6px; }
+      .font-tagline,.font-lab {
+        font-family: Arial-BoldMT, Arial, sans-serif;
+        font-weight: 700;
+      }
+      .font-tagline { font-size: 35.71px; }
+      .font-lab { font-size: 156.22px; }
+      .tight-space { letter-spacing: -0.04em; }
+    </style>
+    <clipPath id="clip-chip-loader" transform="translate(-37.7 -187.06)">
+      <rect class="no-fill" x="352.42" y="239.72" width="45.87" height="54.7"/>
+    </clipPath>
+  </defs>
+
+  <line class="stroke-teal-thin" x1="157.27" y1="91.04" x2="189.8" y2="58.04"/>
+  <circle class="fill-teal" cx="11.83" cy="89.19" r="3.36"/>
+  <circle class="fill-teal" cx="46.36" cy="52.06" r="3.36"/>
+  <circle class="fill-teal" cx="86.61" cy="64.01" r="3.36"/>
+  <circle class="fill-teal" cx="52.08" cy="101.14" r="3.36"/>
+
+  <g>
+    <path class="fill-navy" d="M118.72,237.44l11.65-17.35c-30-16.08-66.35-14.65-79,0s-9,33.25,0,40.21,41.81,16,50.75,18.29,10.82,16.83,0,20.68-36.66,1.37-51.38-11L38.64,304.78c34.37,20,69,21.63,89,0,8.2-13.17,7.88-24.82,0-35.12-7.29-7.08-17.76-11.77-31.1-14.34a120,120,0,0,1-23.51-6.65c-11.23-4.68-6.86-17,0-19.64s15.94-2.47,26.63,0A58.7,58.7,0,0,1,118.72,237.44Z" transform="translate(-37.7 -187.06)"/>
+    <path class="fill-navy" d="M89.78,281.66a6.56,6.56,0,0,0-6,4.07h-7l-13.9-11.18h-7a6.55,6.55,0,1,0-.39,4.46h5.83l13.9,11.18h8.36a6.54,6.54,0,1,0,6.23-8.53Zm-40.24-2.44a3,3,0,1,1,3-3A3,3,0,0,1,49.54,279.22Zm40.24,11.95a3,3,0,1,1,3-3A3,3,0,0,1,89.78,291.17Z" transform="translate(-37.7 -187.06)"/>
+    <path class="fill-navy" d="M124.31,244.54a6.55,6.55,0,0,0-6,4.06h-7l-13.9-11.18h-7a6.52,6.52,0,1,0-.38,4.47h5.83l13.9,11.18h8.36a6.54,6.54,0,1,0,6.23-8.53Zm-40.24-2.45a3,3,0,1,1,3-3A3,3,0,0,1,84.07,242.09ZM124.31,254a3,3,0,1,1,3-3A3,3,0,0,1,124.31,254Z" transform="translate(-37.7 -187.06)"/>
+  </g>
+
+  <line class="stroke-teal-thin" x1="187.52" y1="23.99" x2="187.52" y2="23.16"/>
+  <path class="fill-teal" d="M234.42,248.27a8.74,8.74,0,0,0-8.44-8.64v-4.26c6.88,0,12.63,6,12.75,12.79h-4.22" transform="translate(-37.7 -187.06)"/>
+  <path class="fill-teal" d="M244.6,248.16h-.1c-.21-9.83-8.5-18.61-18.52-18.62v-5c12.73,0,23.18,11.15,23.46,23.61H244.5" transform="translate(-37.7 -187.06)"/>
+  <path class="fill-teal" d="M259.94,248.16c0-18.34-15.49-34-34-34v4.58c16,0,28.88,13.82,29.22,29.43Z" transform="translate(-37.7 -187.06)"/>
+
+  <polygon class="fill-navy" points="150.49 21.5 99.53 133.33 125.01 133.33 135.31 108.86 187.52 108.86 198.33 133.33 222.46 133.33 191.68 64.01 175.81 79.88 180.65 91.18 142.38 90.97 161 46.2 170.67 70.55 186.13 55.1 171.92 21.5 150.49 21.5"/>
+
+  <g>
+    <path class="fill-navy" d="M282.42,211.67v17.48h29.75v26.54l7.86-6.52a6.13,6.13,0,0,1,3.92-8.29V228.17a6.21,6.21,0,1,1,3.57,0v12.71A6.19,6.19,0,0,1,325.74,253a6.13,6.13,0,0,1-3.46-1.07l-10.11,8.39V290.1c-10.17,11.95-21.43,12.45-33.91,0l-13.52,16.22c11,10.15,23.75,15.58,38.9,14.08,17.21-.92,28.65-10.68,33.9-29.89V211.67Zm45.1,60.42v18.56L311,308q0,.31,0,.63a6.21,6.21,0,1,1-1.6-4.15L324,289.22V272.09a6.2,6.2,0,1,1,3.57,0Z" transform="translate(-37.7 -187.06)"/>
+    <circle class="fill-navy" cx="288.03" cy="79.09" r="2.62"/>
+    <circle class="fill-navy" cx="288.03" cy="60.09" r="2.62"/>
+    <circle class="fill-navy" cx="288.03" cy="35.09" r="2.62"/>
+    <circle class="fill-navy" cx="267.03" cy="122.09" r="2.62"/>
+    <circle class="fill-navy" cx="336.53" cy="32.59" r="1.62"/>
+    <circle class="fill-navy" cx="336.23" cy="124.59" r="2.62"/>
+  </g>
+
+  <rect class="fill-navy" x="322.93" y="49.99" width="26.62" height="56.79"/>
+
+  <g clip-path="url(#clip-chip-loader)">
+    <g>
+      <line class="stroke-teal" x1="314.71" y1="57.84" x2="322.41" y2="57.84"/>
+      <line class="stroke-teal" x1="350.08" y1="57.84" x2="357.78" y2="57.84"/>
+      <line class="stroke-teal" x1="314.71" y1="68.84" x2="322.41" y2="68.84"/>
+      <line class="stroke-teal" x1="350.08" y1="68.84" x2="357.78" y2="68.84"/>
+      <line class="stroke-teal" x1="314.71" y1="79.84" x2="322.41" y2="79.84"/>
+      <line class="stroke-teal" x1="350.08" y1="79.84" x2="357.78" y2="79.84"/>
+      <line class="stroke-teal" x1="314.71" y1="90.84" x2="322.41" y2="90.84"/>
+      <line class="stroke-teal" x1="350.08" y1="90.84" x2="357.78" y2="90.84"/>
+      <line class="stroke-teal" x1="314.71" y1="101.84" x2="322.41" y2="101.84"/>
+      <line class="stroke-teal" x1="350.08" y1="101.84" x2="357.78" y2="101.84"/>
+    </g>
+  </g>
+
+  <g>
+    <rect class="fill-teal" x="397.52" y="62.07" width="12.16" height="13.07"/>
+    <rect class="fill-teal" x="397.52" y="78.71" width="12.16" height="12.86"/>
+    <rect class="fill-teal" x="397.52" y="95.15" width="12.16" height="14.31"/>
+    <rect class="fill-teal" x="428.98" y="78.71" width="11.74" height="12.86"/>
+    <path class="fill-teal" d="M460.78,231.61l1.68.93-.41.31a12,12,0,0,0-1.26,1.1h0a11.83,11.83,0,0,0-1.12,1.24l-.32.41-2.12-4H451v6.08l7.25-.12L458,238a14,14,0,0,0-.55,1.58,13.65,13.65,0,0,0-.34,1.64l-.07.51L451,238v7.58h5.68v3.58H451v13.07h12.16v-6h3.57v6h7.95l-3.89-6.49.51-.07a11.55,11.55,0,0,0,1.64-.31,13.44,13.44,0,0,0,1.59-.52l.48-.2-.26,7.59h3.72v-3.54H482v3.54h2.25a48.91,48.91,0,0,0-3.11-16,11.87,11.87,0,0,1-11.41,8.66,12.07,12.07,0,0,1-3.19-.43,11.88,11.88,0,0,1-2.67-21.79,11.65,11.65,0,0,1,1.91-.86,17.36,17.36,0,0,0-2.73-.21Zm16.58,21.58a11.86,11.86,0,0,0,1.26-1.09h0a14.52,14.52,0,0,0,1.12-1.25l.32-.41,3.61,6.79L477,253.5Zm-18.13-2.93.31.41a12,12,0,0,0,1.09,1.27,13.31,13.31,0,0,0,1.25,1.12l.4.31L455.49,257Z" transform="translate(-37.7 -187.06)"/>
+    <rect class="fill-teal" x="413.25" y="78.71" width="12.16" height="12.86"/>
+    <path class="fill-navy" d="M464.43,211.67H411.07V320.4h53.36C519.76,320.4,519.76,211.67,464.43,211.67ZM463,300.08H431.65V228H463c17,0,24.8,18.67,24.8,36S480.08,300.08,463,300.08Z" transform="translate(-37.7 -187.06)"/>
+    <path class="fill-teal" d="M481,282.21h-14.3v13.91c6-1.3,9.84-5.67,12.09-9.44A32.62,32.62,0,0,0,481,282.21Z" transform="translate(-37.7 -187.06)"/>
+    <path class="fill-teal" d="M482,265.78v12.86h.24a50.46,50.46,0,0,0,2-12.86Z" transform="translate(-37.7 -187.06)"/>
+    <rect class="fill-teal" x="397.52" y="44.55" width="12.16" height="13.95"/>
+    <path class="fill-teal" d="M463.11,296.51v-14.3H451v14.3h12.16Z" transform="translate(-37.7 -187.06)"/>
+  </g>
+
+  <text class="fill-slate font-tagline" transform="translate(0 187.22) scale(0.9 1)">
+    Smart &amp;<tspan class="tight-space" x="136.92" y="0"> </tspan><tspan x="145.52" y="0">Advanced Junction of Intelligent Devices</tspan>
+  </text>
+  <text class="fill-teal font-lab" transform="translate(496.63 134.02) scale(0.94 1)">Lab</text>
+
+  <g>
+    <path class="fill-navy" d="M379.37,300.9v-7.06H382v5.85l3.55,3.1V228.1L382,231.21v5.84h-2.68V230l6.23-5.44V211.67H362.3v12.6l6.54,5.72v7.06h-2.68v-5.84l-3.86-3.38v75.23l3.86-3.37v-5.85h2.68v7.06l-6.54,5.72V320.4h23.29v-14ZM374,315.68a4.25,4.25,0,0,1-1.79-8.11V293.84h3.57v13.73a4.25,4.25,0,0,1-1.78,8.11Zm2-92.36v13.73h-3.57V223.32a4.26,4.26,0,1,1,3.57,0Z" transform="translate(-37.7 -187.06)"/>
+  </g>
+</svg>
