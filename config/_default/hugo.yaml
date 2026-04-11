@@ -6,7 +6,7 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: 'SAJID Lab'
 # Website URL
-baseURL: 'https://sajid.org.bd/'
+baseURL: 'https://www.sajid.org.bd/'
 
 ############################
 ## LANGUAGE
