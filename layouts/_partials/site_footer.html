@@ -2,7 +2,7 @@
 {{ $profile := partial "functions/get_author_profile" (dict "slug" "me") }}
 
 {{ $name := $profile.title | default "Dr. Sajid Muhaimin Choudhury" }}
-{{ $role := $profile.role | default "Associate Professor" }}
+{{ $role := $profile.role | default "Professor" }}
 {{ $links := $profile.links | default (slice) }}
 
 {{ $dept := "Department of Electrical and Electronic Engineering" }}

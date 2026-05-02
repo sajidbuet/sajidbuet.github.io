@@ -20,14 +20,17 @@ Write-Host '📝  Compiles CV, refreshes publications, rebuilds Hugo site, and z
 Write-Host ''
 
 # ───────────────────────────── 1️⃣  CV + BibTeX update ───────────────────────
-$updatelatex = 1          # set to 1 when you modify cv/*.tex or *.bib
+$updatelatex = 0          # set to 1 when you modify cv/*.tex or *.bib
 if ($updatelatex) {
 
     Write-Host '📄  Running LaTeX in /cv (log → latexmk.log)…' -ForegroundColor $Step
     cd cv
     ./latexrun.ps1 > latexmk.log
     cd ..
-
+}
+else {
+    Write-Host 'ℹ️  CV not updated – set $updatelatex = 1 to enable.' -ForegroundColor $Warning
+}
     # ── copy fresh PDF to author folder ──────────────────────────────────────
     $sourceFile        = 'cv\dsmc-cv.pdf'
     $destinationFolder = 'content\'
@@ -84,15 +87,17 @@ if ($updatelatex) {
         Write-Host "🔄  academic import → $($locale.Lang)…" -ForegroundColor $Info
         academic import $bibFileMe $locale.Path --compact --overwrite
         Write-Host "✅  Import complete for $($locale.Lang)." -ForegroundColor $Info
-    }
+    
 
+if (test-path 'papers.bib') {
     Remove-Item 'papers.bib'
+}
+if (test-path 'papers-me.bib') {
     Remove-Item 'papers-me.bib'
+}
     Write-Host ''
 }
-else {
-    Write-Host 'ℹ️  CV not updated – set $updatelatex = 1 to enable.' -ForegroundColor $Warning
-}
+
 
 # ───────────────────────────── 2️⃣  User-page rebuild ────────────────────────
 Write-Host ''

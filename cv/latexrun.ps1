@@ -99,7 +99,7 @@ foreach ($f in @($texFile, $bibFile, $clsFile)) {
         exit 1
     }
 }
-
+Remove-Item dsmc-cv.aux,dsmc-cv.out,dsmc-cv.toc,dsmc-cv.bbl,dsmc-cv.bcf,dsmc-cv.blg,dsmc-cv.run.xml,dsmc-cv.log,dsmc-cv.pdf -ErrorAction SilentlyContinue
 $texDir      = [IO.Path]::GetDirectoryName($texFile)
 $texBaseName = [IO.Path]::GetFileNameWithoutExtension($texFile)
 $localTex    = if ($texDir) { Push-Location $texDir; "$texBaseName.tex" } else { $texFile }
@@ -141,7 +141,8 @@ Write-Host '🧹  Step 7: Cleaning auxiliaries' -ForegroundColor $Step
 Get-ChildItem -Path (Split-Path $texFile -Parent) `
     -Include *.aux,*.bbl,*.bcf,*.xml,*.gz,*.fls,*.fdb_latexmk,*.blg `
     -File -Recurse | Remove-Item -Force
-Write-Host '🗑️   Cleanup complete.' -ForegroundColor $Info
 
+    Write-Host '🗑️   Cleanup complete.' -ForegroundColor $Info
+    Remove-Item dsmc-cv.aux,dsmc-cv.out,dsmc-cv.toc,dsmc-cv.bbl,dsmc-cv.bcf,dsmc-cv.blg,dsmc-cv.run.xml,dsmc-cv.log,dsmc-cv.pdf -ErrorAction SilentlyContinue
 Write-Host ''
 Write-Host '🎉  End of LaTeX run. Have a productive day!' -ForegroundColor $Step

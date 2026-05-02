@@ -3,7 +3,7 @@ slug: me
 is_owner: true
 name:
   display: Dr. Sajid Muhaimin Choudhury
-role: Associate Professor
+role: Professor
 bio: Department of EEE, BUET, Senior Member (IEEE)
 
 affiliations:
@@ -42,10 +42,16 @@ education:
     institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
     end: "2009-11-11"
 experience:
+  - title: Professor
+    department: Department of Electrical and Electronic Engineering (EEE)
+    institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
+    start: "2025-07-21"
+    
   - title: Associate Professor
     department: Department of Electrical and Electronic Engineering (EEE)
     institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
     start: "2022-06-21"
+    end: "2025-07-21"
     description: 
   - title: Assistant Professor
     department: Department of Electrical and Electronic Engineering (EEE)

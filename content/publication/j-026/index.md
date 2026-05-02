@@ -6,7 +6,7 @@ authors:
 - Md. Redwanul Karim
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-05-02T15:32:08.081486Z'
+publishDate: '2026-05-02T16:33:54.882585Z'
 publication_types:
 - article-journal
 publication: '*Optics & Laser Technology*'

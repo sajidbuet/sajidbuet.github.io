@@ -1,10 +1,10 @@
-2026-05-02 21:31:39,410 - INFO - Loading CSV file: PopCites.csv
-2026-05-02 21:31:39,420 - INFO - Loaded 61 citation_for_view keys from CSV. Skipped 0 rows without citation_for_view.
-2026-05-02 21:31:39,421 - INFO - Loading BibTeX file: papers.bib
-2026-05-02 21:31:39,638 - WARNING - Entry 'X03' is missing 'citesurl'. Skipping.
-2026-05-02 21:31:39,638 - WARNING - Entry 'X04' is missing 'citesurl'. Skipping.
-2026-05-02 21:31:39,638 - WARNING - No matching citation_for_view found in CSV for entry 'C014'. key=Fu8Hkb4AAAAJ:Se3iqnhoufwC
-2026-05-02 21:31:39,639 - WARNING - Entry 'C026' is missing 'citesurl'. Skipping.
-2026-05-02 21:31:39,639 - WARNING - Entry 'C027' is missing 'citesurl'. Skipping.
-2026-05-02 21:31:39,639 - INFO - Total entries updated: 0
-2026-05-02 21:31:39,646 - INFO - Successfully wrote updates to BibTeX file: papers.bib
+2026-05-02 22:28:14,495 - INFO - Loading CSV file: PopCites.csv
+2026-05-02 22:28:14,511 - INFO - Loaded 61 citation_for_view keys from CSV. Skipped 0 rows without citation_for_view.
+2026-05-02 22:28:14,511 - INFO - Loading BibTeX file: papers.bib
+2026-05-02 22:28:14,795 - WARNING - Entry 'X03' is missing 'citesurl'. Skipping.
+2026-05-02 22:28:14,795 - WARNING - Entry 'X04' is missing 'citesurl'. Skipping.
+2026-05-02 22:28:14,795 - WARNING - No matching citation_for_view found in CSV for entry 'C014'. key=Fu8Hkb4AAAAJ:Se3iqnhoufwC
+2026-05-02 22:28:14,796 - WARNING - Entry 'C026' is missing 'citesurl'. Skipping.
+2026-05-02 22:28:14,796 - WARNING - Entry 'C027' is missing 'citesurl'. Skipping.
+2026-05-02 22:28:14,797 - INFO - Total entries updated: 0
+2026-05-02 22:28:14,806 - INFO - Successfully wrote updates to BibTeX file: papers.bib

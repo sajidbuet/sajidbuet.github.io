@@ -1,7 +1,11 @@
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  2 MAY 2026 21:31
+This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2025.4.18)  2 MAY 2026 22:28
  restricted system commands enabled.
-**dsmc-cv.tex -interaction nonstopmode
-(./dsmc-cv.tex
+ file:line:error style messages enabled.
+**c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/ds
+mc-cv
+
+(c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsm
+c-cv.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
 Lua module: luaotfload 2024-02-14 v3.28 Lua based OpenType font support
@@ -1511,44 +1515,44 @@ Package biblatex Info: ... file 'dsmc-cv.bbl' found.
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Overfull \hbox (12.3321pt too wide) in paragraph at lines 91--92
+Overfull \hbox (12.3321pt too wide) in paragraph at lines 83--84
 []\TU/lmr/bx/n/10 Ph.D. The-sis: \TU/lmr/m/n/10 WAVE-FRONT MA-NIP-U-LA-TION WITH
  META-
  []
 
 
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 98--99
+Overfull \hbox (9.81612pt too wide) in paragraph at lines 90--91
 []\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BUE
 T) 
  []
 
 
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 107--108
+Overfull \hbox (9.81612pt too wide) in paragraph at lines 99--100
 []\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BUE
 T) 
  []
@@ -1582,7 +1586,7 @@ ype 'pgfplothandlerybar'): LUA does not support xtick=data (yet).
 [7]
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 257--261
+Underfull \hbox (badness 10000) in paragraph at lines 249--253
 
  []
 
@@ -1612,7 +1616,7 @@ c, 35 attribute_list, 2 write, 25 pdf_action, 2 pdf_colorstack nodes
 
  71688 multiletter control sequences out of 65536+600000
  57 fonts using 4634927 bytes
- 114i,13n,110p,2214b,2425s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,13n,110p,2260b,2425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmromanca
 ps10-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/pu
 blic/lm/lmroman7-bold.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/op

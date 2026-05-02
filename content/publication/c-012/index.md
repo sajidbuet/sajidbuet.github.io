@@ -8,7 +8,7 @@ authors:
 - M A Awal
 - ' me'
 date: '2014-01-01'
-publishDate: '2026-05-02T15:32:07.171260Z'
+publishDate: '2026-05-02T16:33:53.837509Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'
