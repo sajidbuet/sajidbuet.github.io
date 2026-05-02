@@ -5,7 +5,7 @@ authors:
 - Md Al Shahriar Shakil
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-03-19T21:19:01.140066Z'
+publishDate: '2026-05-02T15:32:10.698242Z'
 publication_types:
 - paper-conference
 publication: '*2025 International Conference on Quantum Photonics, Artificial Intelligence,

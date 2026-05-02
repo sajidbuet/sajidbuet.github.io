@@ -3,7 +3,7 @@ title: Design and implementation of a low cost Power Factor Improvement device
 authors:
 - ' me'
 date: '2008-01-01'
-publishDate: '2026-03-19T21:19:00.748688Z'
+publishDate: '2026-05-02T15:32:10.221202Z'
 publication_types:
 - paper-conference
 publication: '*TENCON 2008 - 2008 IEEE Region 10 Conference*'

@@ -6,7 +6,7 @@ authors:
 - Zafrin Jahan Nikita
 - ' me'
 date: '2024-01-01'
-publishDate: '2026-03-19T21:18:58.367385Z'
+publishDate: '2026-05-02T15:32:07.402828Z'
 publication_types:
 - paper-conference
 publication: '*2024 2nd International Conference on Information and Communication

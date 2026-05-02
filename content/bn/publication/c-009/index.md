@@ -4,7 +4,7 @@ authors:
 - ' me'
 - M. A. Matin
 date: '2012-01-01'
-publishDate: '2026-03-19T21:19:00.885411Z'
+publishDate: '2026-05-02T15:32:10.388303Z'
 publication_types:
 - paper-conference
 publication: '*2012 7th International Conference on Electrical and Computer Engineering*'

@@ -61,7 +61,7 @@ sections:
           sub_metric: Journals and international conferences in photonics, nanotechnology, and embedded systems
           icon: hero/document-text
 
-        - statistic: "1298+"
+        - statistic: "1300+"
           description: Scholarly citations
           sub_metric: "h-index: 13 (Google Scholar)"
           icon: hero/chart-bar
@@ -359,7 +359,7 @@ sections:
       address:
         lines:
           - Dr. Sajid Muhaimin Choudhury
-          - Associate Professor
+          - Professor
           - Department of Electrical and Electronic Engineering (EEE)
           - Bangladesh University of Engineering and Technology (BUET)
           - EEE 222, ECE Building

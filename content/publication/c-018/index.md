@@ -6,7 +6,7 @@ authors:
 - Md. Ehsanul Karim
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-03-19T21:18:58.283814Z'
+publishDate: '2026-05-02T15:32:07.288284Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

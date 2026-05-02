@@ -7,7 +7,7 @@ authors:
 - ' me'
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2026-03-19T21:18:58.267303Z'
+publishDate: '2026-05-02T15:32:07.265767Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
