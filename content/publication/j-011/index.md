@@ -10,7 +10,7 @@ authors:
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2026-05-02T16:36:02.467452Z'
+publishDate: '2026-05-27T16:11:17.353843Z'
 publication_types:
 - article-journal
 publication: '*Nanoscale*'

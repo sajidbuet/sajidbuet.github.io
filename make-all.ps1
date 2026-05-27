@@ -103,8 +103,8 @@ if (test-path 'papers-me.bib') {
 Write-Host ''
 Write-Host '👥  Re-generating author pages from all-members.xlsx…' -ForegroundColor $Step
 cd _pythonscripts
-python student-page-creator.py all-members.xlsx --img-dir ./photos
-python student-yaml-creator.py all-members.xlsx --img-dir ./photos
+python student-author-page-creator.py all-members.xlsx --img-dir ./photos
+python student-author-yaml-creator.py all-members.xlsx --img-dir ./photos
 cd ..
 Write-Host '✅  Author pages refreshed.' -ForegroundColor $Info
 

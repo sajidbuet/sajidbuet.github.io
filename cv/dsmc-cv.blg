@@ -1,0 +1,34 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.blg'
+[141] biber-MSWIN64:340> INFO - === 
+[188] Biber.pm:420> INFO - Reading 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bcf'
+[323] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[362] Biber.pm:4463> INFO - Processing section 0
+[379] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 0
+[445] bibtex.pm:1713> INFO - LaTeX decoding ...
+[601] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[1504] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1504] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1504] Biber.pm:4283> INFO - Sorting list 'ydnt/global/FF44570ACA8241914870AFBC310CDB85/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1505] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1689] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1690] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1690] Biber.pm:4283> INFO - Sorting list 'ydnt/global/0D61F8370CAD1D412F80B84D143E1257/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1690] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[1899] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1899] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1899] Biber.pm:4283> INFO - Sorting list 'ydnt/global/44C29EDB103A2872F519AD0C9A0FDAAA/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[1900] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[2198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2198] Biber.pm:4283> INFO - Sorting list 'ydnt/global/02129BB861061D1A052C592E2DC6B383/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[2198] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[2452] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2453] Biber.pm:4283> INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
+[2453] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[2582] bbl.pm:676> INFO - Writing 'c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bbl' with encoding 'UTF-8'
+[2979] bbl.pm:779> INFO - Output to c:/Users/Sajid/OneDrive/Documents/Website/sajidbuet/sajidbuet.github.io/cv/dsmc-cv.bbl
+[2987] Biber.pm:131> WARN - legacy month field 'May' in entry 'J023' is not an integer - this will probably not sort properly.
+[2988] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Sajid\AppData\Local\Temp\biber_tmp_2cDm\4cba211c7098ce6d56874590d4a06a86_60452.utf8, line 2, warning: possible runaway string started at line 1
+[2988] Biber.pm:133> INFO - WARNINGS: 2

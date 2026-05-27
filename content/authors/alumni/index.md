@@ -23,14 +23,28 @@ sections:
   - block: student_list1
     title: UG Alumni
     student_batches:
+    - batch: "2020"
+      students:
+        - name: "Md. Solaiman (2006008) and Md. Azim Sikder (2006022)"
+          year: "2026"
+          title: "Quantum Tokens for Anti-counterfeit System"
+        - name: "Meherin Tasfia (2006175)"
+          year: "2026"
+          title: "Deep Learning-Assisted Photonic Biosensor for Tear-Based Diabetic Retinopathy Detection​"
+        - name: "Md. Sakif Imam (2006173)"
+          year: "2026"
+          title: "Physics Informed Neural Network for Photonic Design"
+        - name: "Md. Tanvirul Islam (2006095)"
+          year: "2026"
+          title: "Security-Corrected Carbon Aware Optimal Power Flow Framework with Supercritical CO2 Turbines"
+        - name: "Nafis Ahmed (2006192)"
+          year: "2026"
+          title: "Physics-constrained adaptive personalized federated learning for cross-domain prognostics of Li-ion batteries"          
     - batch: "2019"
       students:
-        - name: "Subhan Zawad Bihan"
+        - name: "Subhan Zawad Bihan and Anindya Kishore Choudhury"
           year: "2025"
           title: "Performance Analysis of Different Stabilizer Codes in Code Concatenation Approach for One-Way Quantum Repeaters"      
-        - name: "Anindya Kishore Choudhury"
-          year: "2025"
-          title: "-DO-"      
         - name: "Dipika Rani Nath"
           year: "2025"
           title: "A Tunable Polarization-Insensitive Varifocal Metalens Assisted by Phase-Change Material Ge2Sb2Te5 (GST)"      
