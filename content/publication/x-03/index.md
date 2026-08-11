@@ -1,12 +1,12 @@
 ---
-title: Exploiting Steane-Code Syndrome Redundancy in Hybrid Photonicâ€“Stabilizer
-  One-Way Repeaters
+title: Exploiting Steane-Code Syndrome Redundancy in Hybrid Photonic–Stabilizer One-Way
+  Repeaters
 authors:
 - Subhan Zawad Bihan
 - Anindya Kishore Choudhury
 - ' me'
 date: '2026-01-01'
-publishDate: '2026-05-27T16:11:16.573366Z'
+publishDate: '2026-08-11T07:46:24.594100Z'
 publication_types:
 - manuscript
 tags:

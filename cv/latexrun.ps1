@@ -143,6 +143,6 @@ Get-ChildItem -Path (Split-Path $texFile -Parent) `
     -File -Recurse | Remove-Item -Force
 
     Write-Host '🗑️   Cleanup complete.' -ForegroundColor $Info
-    Remove-Item dsmc-cv.aux,dsmc-cv.out,dsmc-cv.toc,dsmc-cv.bbl,dsmc-cv.bcf,dsmc-cv.blg,dsmc-cv.run.xml,dsmc-cv.log,dsmc-cv.pdf -ErrorAction SilentlyContinue
+    Remove-Item dsmc-cv.aux,dsmc-cv.out,dsmc-cv.toc,dsmc-cv.bbl,dsmc-cv.bcf,dsmc-cv.blg,dsmc-cv.run.xml,dsmc-cv.log -ErrorAction SilentlyContinue
 Write-Host ''
 Write-Host '🎉  End of LaTeX run. Have a productive day!' -ForegroundColor $Step

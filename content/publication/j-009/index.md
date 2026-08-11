@@ -12,31 +12,31 @@ authors:
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 date: '2019-01-01'
-publishDate: '2026-05-27T16:11:17.314324Z'
+publishDate: '2026-08-11T07:46:25.364857Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'
 doi: 10.1063/1.5110051
-abstract: "Since ancient times, plasmonic structural coloring has inspired humanity;
+abstract: Since ancient times, plasmonic structural coloring has inspired humanity;
   glassmakers achieved vibrant colors by doping glass with metal nanoparticles to
   craft beautiful objects such as the Roman Lycurgus cup and stained glass. These
   lovely color filtering effects are a consequence of the resonant coupling of light
   and free electrons in metal nanoparticles, known as surface plasmons. Thanks to
   the continuing improvement of nanofabrication technology, the dimensions of nanoparticles
-  and structures can now be precisely engineered to form â€œoptical nanoantennas,â€\x9D
-  allowing for control of optical response at an unprecedented level. Recently, the
-  field of plasmonic structural coloring has seen extensive growth. In this review,
-  we provide an up-to-date overview of various plasmonic color filtering approaches
-  and highlight their uses in a broad palette of applications. Various surface plasmon
-  resonance modes employed in the plasmonic color filtering effect are discussed.
-  We first review the development of the pioneering static plasmonic colors achieved
-  with invariant optical nanoantennas and ambient environment, then we address a variety
-  of emerging approaches that enable dynamic color tuning, erasing, and restoring.
-  These dynamic color filters are capable of actively changing the filtered colors
-  and carrying more color information states than the static systems. Thus, they open
-  an avenue to high-density data storage, information encryption, and plasmonic information
+  and structures can now be precisely engineered to form “optical nanoantennas,” allowing
+  for control of optical response at an unprecedented level. Recently, the field of
+  plasmonic structural coloring has seen extensive growth. In this review, we provide
+  an up-to-date overview of various plasmonic color filtering approaches and highlight
+  their uses in a broad palette of applications. Various surface plasmon resonance
+  modes employed in the plasmonic color filtering effect are discussed. We first review
+  the development of the pioneering static plasmonic colors achieved with invariant
+  optical nanoantennas and ambient environment, then we address a variety of emerging
+  approaches that enable dynamic color tuning, erasing, and restoring. These dynamic
+  color filters are capable of actively changing the filtered colors and carrying
+  more color information states than the static systems. Thus, they open an avenue
+  to high-density data storage, information encryption, and plasmonic information
   processing. Finally, we discuss the challenges and future perspectives in this exciting
-  research area."
+  research area.
 tags:
 - photonics
 ---

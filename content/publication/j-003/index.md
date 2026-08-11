@@ -8,7 +8,7 @@ authors:
 - Md M Alam
 - Md Matin
 date: '2011-01-01'
-publishDate: '2026-05-27T16:11:17.187262Z'
+publishDate: '2026-08-11T07:46:25.242161Z'
 publication_types:
 - article-journal
 publication: '*Journal of Engineering Science & Technology Review*'

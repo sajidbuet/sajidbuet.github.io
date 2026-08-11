@@ -5,7 +5,7 @@ authors:
 - Md. Mahfuzul Haque
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-05-27T16:11:17.686971Z'
+publishDate: '2026-08-11T07:46:25.778067Z'
 publication_types:
 - article-journal
 publication: '*RSC advances*'
@@ -24,7 +24,7 @@ abstract: The advent of graphene catalyzed extensive exploration into two-dimens
   types and dopants, affirming its suitability for efficient light-emitting applications.
   Building upon these findings, we propose a novel light-emitting diode (LED) architecture
   utilizing defect, doping-tailored 2D-SiC as the active emissive layer. Simulated
-  optical and electrical performance metrics, including power spectral density, currentâ€“voltage
+  optical and electrical performance metrics, including power spectral density, current–voltage
   characteristics, luminous power, light extraction efficiency, and CIE color coordinates,
   confirm the feasibility of achieving high-performance white light emission through
   strategic RGB color mixing. These findings confirm the capabilities of defect and

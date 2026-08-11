@@ -8,7 +8,7 @@ authors:
 - ' me'
 - Md Tareq Mahmud
 date: '2023-01-01'
-publishDate: '2026-05-27T16:11:16.983551Z'
+publishDate: '2026-08-11T07:46:25.037328Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics

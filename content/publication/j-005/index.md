@@ -7,10 +7,10 @@ authors:
 - Yang Zhao
 - Alexander V Kildishev
 - Vladimir M Shalaev
-- Andrea AlÃ¹
+- Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2026-05-27T16:11:17.229784Z'
+publishDate: '2026-08-11T07:46:25.281477Z'
 publication_types:
 - article-journal
 publication: '*ACS Nano*'
@@ -20,17 +20,17 @@ abstract: Conventional plasmonic materials, namely, noble metals, hamper the rea
   of capabilities to tune in real time their optical properties, failure to assimilate
   with CMOS standards, and severe degradation at increased temperatures. Transparent
   conducting oxide (TCO) is a promising alternative plasmonic material throughout
-  the nearâ€‘ and midâ€‘infrared wavelengths. In addition to compatibility with established
-  siliconâ€‘based fabrication procedures, TCOs provide great flexibility in the design
+  the near‑ and mid‑infrared wavelengths. In addition to compatibility with established
+  silicon‑based fabrication procedures, TCOs provide great flexibility in the design
   and optimization of plasmonic devices because their intrinsic optical properties
   can be tailored and dynamically tuned. In this work, we experimentally demonstrate
-  metalâ€‘oxide metasurfaces operating as quarterâ€‘wave plates (QWPs) over a broad
-  nearâ€‘infrared (NIR) range from $1.75$--$2.5,μmathrmm$. We employ zinc oxide highly
-  doped with gallium (Ga:ZnO) as the plasmonic constituent material of the metasurfaces
-  and fabricate arrays of orthogonal nanorod pairs. Our Ga:ZnO metasurfaces provide
-  a high degree of circular polarization across two distinct optical bands in the
-  NIR. Flexible broadband tunability of the QWP metasurfaces is achieved by significant
-  shifts of their optical bands.
+  metal‑oxide metasurfaces operating as quarter‑wave plates (QWPs) over a broad near‑infrared
+  (NIR) range from $1.75$--$2.5,μmathrmm$. We employ zinc oxide highly doped with
+  gallium (Ga:ZnO) as the plasmonic constituent material of the metasurfaces and fabricate
+  arrays of orthogonal nanorod pairs. Our Ga:ZnO metasurfaces provide a high degree
+  of circular polarization across two distinct optical bands in the NIR. Flexible
+  broadband tunability of the QWP metasurfaces is achieved by significant shifts of
+  their optical bands.
 tags:
 - photonics
 ---

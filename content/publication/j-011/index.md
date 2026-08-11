@@ -10,7 +10,7 @@ authors:
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2026-05-27T16:11:17.353843Z'
+publishDate: '2026-08-11T07:46:25.413389Z'
 publication_types:
 - article-journal
 publication: '*Nanoscale*'
@@ -19,9 +19,8 @@ abstract: Active control over the flow of light is highly desirable because of i
   applicability to information processing, telecommunication, and spectroscopic imaging.
   In this paper, by employing the tunability of carrier density in a $1,mathrmnm$
   titanium nitride (TiN) film, we numerically demonstrate deep phase modulation (PM)
-  in an electrically tunable goldâ€‘strip/TiNâ€‘film hybrid metasurface. A $337^∘$
-  PM is achieved at $1.550,μmathrmm$ with a $3%$ carrierâ€‘density change in the TiN
-  film.
+  in an electrically tunable gold‑strip/TiN‑film hybrid metasurface. A $337^∘$ PM
+  is achieved at $1.550,μmathrmm$ with a $3%$ carrier‑density change in the TiN film.
 tags:
 - photonics
 ---

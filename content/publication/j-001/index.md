@@ -9,7 +9,7 @@ authors:
 - ' me'
 - MA Matin
 date: '2011-01-01'
-publishDate: '2026-05-27T16:11:17.148750Z'
+publishDate: '2026-08-11T07:46:25.194953Z'
 publication_types:
 - article-journal
 publication: '*International Journal of Computer and Electrical Engineering*'
