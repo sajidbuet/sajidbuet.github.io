@@ -100,7 +100,6 @@ This handout is designed to be followed from top to bottom during the workshop a
   - [Three takeaways](#three-takeaways)
   - [Workshop and textbook reference](#workshop-and-textbook-reference)
   - [Official technical references](#official-technical-references)
-  - [Files to distribute separately to students](#files-to-distribute-separately-to-students)
 
 ---
 
@@ -1470,16 +1469,5 @@ The supplied educational processor is intentionally a stepping stone rather than
 - MSYS2: [Environments](https://www.msys2.org/docs/environments/)
 - MSYS2: [Package Management](https://www.msys2.org/docs/package-management/)
 - MSYS2 UCRT64 packages: [GCC](https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-gcc), [Arm GCC](https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-arm-none-eabi-gcc), [Icarus Verilog](https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-iverilog), [GTKWave](https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-gtkwave)
-
-### Files to distribute separately to students
-
-At minimum, distribute these two source files before the full-processor exercise:
-
-```text
-arm_single.sv
-arm_single_tb.sv
-```
-
-Students generate `memfile.dat` from `simple_sum.s` during the workshop. The bundle also contains a reference `memfile.dat` for recovery if time is limited.
 
 [↑ Back to top](#top)
