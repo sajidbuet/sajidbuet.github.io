@@ -8,7 +8,7 @@ authors:
 superuser: False
 organizations:
   - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
-role: Defended MSc (September 2025)
+role: Graduated with MSc (September 2025)
 user_groups:
   - Alumni
 graduation_year: 2025.0

@@ -6,7 +6,7 @@ authors:
 - Shamima Akter Mitu
 - ' me'
 date: '2022-01-01'
-publishDate: '2026-08-11T07:46:25.558031Z'
+publishDate: '2026-08-12T03:02:27.335915Z'
 publication_types:
 - article-journal
 publication: '*Applied Optics*'

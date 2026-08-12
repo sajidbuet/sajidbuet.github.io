@@ -9,7 +9,7 @@ authors:
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2026-08-11T07:46:25.321715Z'
+publishDate: '2026-08-12T03:02:26.967727Z'
 publication_types:
 - article-journal
 publication: '*Advanced Optical Materials*'

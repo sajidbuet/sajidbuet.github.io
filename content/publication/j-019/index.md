@@ -5,7 +5,7 @@ authors:
 - Md. Ehsanul Karim
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-08-11T07:46:25.607158Z'
+publishDate: '2026-08-12T03:02:27.414453Z'
 publication_types:
 - article-journal
 publication: '*Optical Materials Express*'

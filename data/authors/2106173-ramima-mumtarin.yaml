@@ -1,7 +1,7 @@
-title: Md. Solaiman
+title: Ramima Mumtarin
 name:
-  first: Md.
-  last: Solaiman
+  first: Ramima
+  last: Mumtarin
 role: UG Student
 bio: ""
 organizations:
@@ -15,7 +15,7 @@ user_groups:
 - Undergrad Students
 params:
   student:
-    roll: 2006008
+    roll: 2106173
     degree_sought: B.Sc. Engg.
-    first_enrollment: 2020
+    first_enrollment: 2021
     research_division: EP

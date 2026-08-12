@@ -1,16 +1,17 @@
 ---
-title: 'All-Optical Varifocal Switching in a Polarization-Insensitive Si--GST Metalens '
+title: Exploiting Steane-Code Syndrome Redundancy in Hybrid Photonic–Stabilizer One-Way
+  Repeaters
 authors:
-- Dipika Rani Nath
-- Sadid Muneer
+- Subhan Zawad Bihan
+- Anindya Kishore Choudhury
 - ' me'
-date: '2025-01-01'
-publishDate: '2026-08-11T07:46:24.576056Z'
+date: '2026-01-01'
+publishDate: '2026-08-12T03:02:25.762384Z'
 publication_types:
 - manuscript
 tags:
 - photonics
 links:
 - name: URL
-  url: https://arxiv.org/abs/2511.21138
+  url: ''
 ---

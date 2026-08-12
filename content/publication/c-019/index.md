@@ -5,7 +5,7 @@ authors:
 - Soikot Sarkar
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-08-11T07:46:24.997031Z'
+publishDate: '2026-08-12T03:02:26.393295Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
