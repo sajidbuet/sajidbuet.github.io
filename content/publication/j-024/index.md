@@ -5,7 +5,7 @@ authors:
 - Soikot Sarkar
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-08-12T03:02:27.636177Z'
+publishDate: '2026-09-01T16:20:40.610342Z'
 publication_types:
 - article-journal
 publication: '*Solar Energy*'

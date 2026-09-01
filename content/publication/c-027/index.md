@@ -4,7 +4,7 @@ authors:
 - Naved Sadat Yamin
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-08-12T03:02:26.725414Z'
+publishDate: '2026-09-01T16:20:40.193531Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

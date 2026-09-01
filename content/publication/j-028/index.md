@@ -6,7 +6,7 @@ authors:
 - Sadid Muneer
 - ' me'
 date: '2026-08-01'
-publishDate: '2026-08-12T03:02:27.809718Z'
+publishDate: '2026-09-01T16:20:40.692742Z'
 publication_types:
 - article-journal
 publication: '*J. Opt. Soc. Am. B*'
