@@ -1,76 +1,112 @@
-{{/* Hugo Blox: Hero With Stats */}}
-{{/* Centered hero with transparent background, larger logo, no title */}}
+{{/* SAJID.BD hero — Phase 3 rebuild.
+
+     Changes from Phase 2A:
+       - Renders a real <h1>. Previously `content.title` was silently dropped
+         and the page shipped with zero h1 elements.
+       - Renders `secondary_action`, which was configured but had no code path.
+       - Folds the credibility metrics into a rule-separated strip instead of
+         a separate 576px card section. The strip is plain markup with no
+         reveal class, so it is visible without JS and under reduced motion.
+       - Tightened vertical rhythm and lede measure.
+
+     The wordmark keeps its visual role; the <h1> carries the semantic one.
+*/}}
 
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $branding := partial "functions/get_branding" . }}
-
 {{- $show_logo := site.Params.hugoblox.header.show_logo | default true -}}
 
-{{ $link := $block.content.primary_action.url }}
-{{ $scheme := (urls.Parse $link).Scheme }}
-{{ $target := "" }}
-{{ if not $scheme }}
-  {{ $link = $link | relLangURL }}
-{{ else if in (slice "http" "https") $scheme }}
-  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-{{ end }}
-<div class="relative overflow-hidden pt-10 pb-10 sm:pt-12 sm:pb-12 lg:pt-14 lg:pb-14">
-  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto flex max-w-5xl flex-col items-center text-center">
+{{ $primary := $block.content.primary_action }}
+{{ $secondary := $block.content.secondary_action }}
+
+{{- /* Resolve hrefs once. An in-page anchor (#id) is left untouched; a path is
+       run through relLangURL; an absolute URL is marked external. */ -}}
+{{- $pHref := "" }}{{ $pExternal := false -}}
+{{- with $primary.url -}}
+  {{- $scheme := (urls.Parse .).Scheme -}}
+  {{- if $scheme -}}{{- $pHref = . }}{{ $pExternal = true -}}
+  {{- else if hasPrefix . "#" -}}{{- $pHref = . -}}
+  {{- else -}}{{- $pHref = . | relLangURL -}}{{- end -}}
+{{- end -}}
+
+{{- $sHref := "" }}{{ $sExternal := false -}}
+{{- with $secondary.url -}}
+  {{- $scheme := (urls.Parse .).Scheme -}}
+  {{- if $scheme -}}{{- $sHref = . }}{{ $sExternal = true -}}
+  {{- else if hasPrefix . "#" -}}{{- $sHref = . -}}
+  {{- else -}}{{- $sHref = . | relLangURL -}}{{- end -}}
+{{- end -}}
+
+<div class="sj-hero relative overflow-hidden">
+  <div class="sj-hero__inner mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
+
+    {{/* Identity ------------------------------------------------------- */}}
+    <div class="flex flex-col items-center text-center">
 
       {{ if $show_logo }}
-        <a
-          class="group inline-flex items-center justify-center transition duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02]"
-          href="{{ site.Home.RelPermalink }}"
-          title="{{ $branding.site_title }}">
-<div class="transition duration-300 ease-out group-hover:drop-shadow-xl" style="width:min(88vw,440px);">
-  {{ partial "custom/logo-loader-loop.html" . }}
-</div>
-        </a>
+        <div class="sj-hero__mark" style="width:min(78vw,380px);">
+          {{ partial "custom/logo-loader-loop.html" . }}
+        </div>
+      {{ end }}
+
+      {{/* The one and only <h1>. Visually restrained because the wordmark
+           above already carries the visual weight, but present, unique and
+           readable by assistive technology and search engines. */}}
+      {{ with $block.content.title }}
+        <h1 class="sj-hero__title">{{ . | markdownify | emojify }}</h1>
       {{ end }}
 
       {{ with $block.content.text }}
-        <div class="hero-richtext mt-8 max-w-5xl space-y-6 font-display text-xl leading-relaxed tracking-tight text-slate-700 dark:text-slate-200 sm:text-2xl">
+        <div class="sj-hero__lede hero-richtext">
           {{ . | $page.RenderString | emojify }}
         </div>
       {{ end }}
 
       {{ with $block.content.details }}
-        <div class="mt-5 max-w-3xl space-y-4 text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
+        <div class="sj-hero__support">
           {{ . | $page.RenderString | emojify }}
         </div>
       {{ end }}
 
-      {{ with $link }}
-        <div class="mt-10">
-          <a
-            class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 active:text-white/80"
-            href="{{ $link | safeURL }}"
-            {{ $target | safeHTMLAttr }}>
-            <span>
-              {{ $block.content.primary_action.text | markdownify | emojify }}
-            </span>
-            {{ with $block.content.primary_action.icon }}
-              <span class="ml-2">
-                {{ partial "functions/get_icon" (dict "name" . "attributes" "style=\"height:1em\"") }}
-              </span>
-            {{ end }}
-          </a>
+      {{/* Actions: exactly one primary, at most one secondary ----------- */}}
+      {{ if or $pHref $sHref }}
+        <div class="sj-hero__actions">
+          {{ with $pHref }}
+            <a class="sj-btn sj-btn--primary" href="{{ . }}"
+               {{ if $pExternal }}target="_blank" rel="noopener"{{ end }}>
+              <span>{{ $primary.text | markdownify | emojify }}</span>
+              {{ with $primary.icon }}
+                {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"sj-btn__icon\" aria-hidden=\"true\"") }}
+              {{ end }}
+            </a>
+          {{ end }}
+
+          {{ with $sHref }}
+            <a class="sj-btn sj-btn--secondary" href="{{ . }}"
+               {{ if $sExternal }}target="_blank" rel="noopener"{{ end }}>
+              <span>{{ $secondary.text | markdownify | emojify }}</span>
+              {{ with $secondary.icon }}
+                {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"sj-btn__icon\" aria-hidden=\"true\"") }}
+              {{ end }}
+            </a>
+          {{ end }}
         </div>
       {{ end }}
-
-      {{ with $block.content.items }}
-        <dl class="mt-12 grid w-full max-w-4xl grid-cols-2 gap-6 text-center sm:grid-cols-4">
-          {{ range . }}
-            <div class="rounded-2xl px-4 py-5 ring-1 ring-black/5 dark:ring-white/10 backdrop-blur-sm">
-              <dt class="font-mono text-sm text-primary-600 dark:text-primary-400">{{ .name }}</dt>
-              <dd class="mt-1 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">{{ .description }}</dd>
-            </div>
-          {{ end }}
-        </dl>
-      {{ end }}
-
     </div>
+
+    {{/* Credibility strip ---------------------------------------------
+         Plain <dl>, no reveal class, no card. Rule-separated, not boxed. */}}
+    {{ with $block.content.items }}
+      <dl class="sj-stats" aria-label="{{ i18n "at_a_glance" | default "Lab at a glance" }}">
+        {{ range . }}
+          <div class="sj-stats__item">
+            <dt class="sj-stats__value">{{ .value | default .statistic }}</dt>
+            <dd class="sj-stats__label">{{ .label | default .description }}</dd>
+          </div>
+        {{ end }}
+      </dl>
+    {{ end }}
+
   </div>
 </div>

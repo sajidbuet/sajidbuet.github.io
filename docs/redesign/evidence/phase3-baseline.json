@@ -1,0 +1,20 @@
+{
+  "page": "{\"docH\":12822,\"h1\":0,\"h1txt\":[],\"h2\":6,\"main\":1,\"domNodes\":1525}",
+  "sections": "[\n {\n  \"id\": \"about\",\n  \"h\": 709,\n  \"top\": 65,\n  \"pt\": \"96px\",\n  \"pb\": \"96px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative overflow-hidden hbb-section blox-hero-with-stats  \"\n },\n {\n  \"id\": \"section-stats\",\n  \"h\": 576,\n  \"top\": 774,\n  \"pt\": \"48px\",\n  \"pb\": \"48px\",\n  \"heading\": \"H3:50+\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-stats  bg-gradient-to-b from-prim\"\n },\n {\n  \"id\": \"research\",\n  \"h\": 1937,\n  \"top\": 1350,\n  \"pt\": \"80px\",\n  \"pb\": \"80px\",\n  \"heading\": \"H2:Research Focus Areas\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-research-area-qpacers  bg-gradien\"\n },\n {\n  \"id\": \"projects\",\n  \"h\": 1852,\n  \"top\": 3286,\n  \"pt\": \"96px\",\n  \"pb\": \"96px\",\n  \"heading\": \"H3:Design and Low-cost Fabrication of Opt\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  \"\n },\n {\n  \"id\": \"team\",\n  \"h\": 914,\n  \"top\": 5139,\n  \"pt\": \"48px\",\n  \"pb\": \"48px\",\n  \"heading\": \"H2:Meet Our Team\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-team-showcase-admin  bg-gray-50 d\"\n },\n {\n  \"id\": \"publication\",\n  \"h\": 752,\n  \"top\": 6053,\n  \"pt\": \"96px\",\n  \"pb\": \"96px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  \"\n },\n {\n  \"id\": \"section-cta-button-list\",\n  \"h\": 288,\n  \"top\": 6804,\n  \"pt\": \"96px\",\n  \"pb\": \"96px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-cta-button-list  \"\n },\n {\n  \"id\": \"teaching\",\n  \"h\": 1153,\n  \"top\": 7092,\n  \"pt\": \"64px\",\n  \"pb\": \"64px\",\n  \"heading\": \"H3:EEE 303 (Jul 2025)\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  bg-gradient-to-b from\"\n },\n {\n  \"id\": \"news\",\n  \"h\": 1212,\n  \"top\": 8246,\n  \"pt\": \"64px\",\n  \"pb\": \"64px\",\n  \"heading\": \"H3:Puja Das Defends MSc Thesis\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  bg-gradient-to-b from\"\n },\n {\n  \"id\": \"section-logos\",\n  \"h\": 718,\n  \"top\": 9458,\n  \"pt\": \"64px\",\n  \"pb\": \"64px\",\n  \"heading\": \"H2:Collaborators & Partners\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-logos  bg-gradient-to-b from-whit\"\n },\n {\n  \"id\": \"contact\",\n  \"h\": 949,\n  \"top\": 10176,\n  \"pt\": \"80px\",\n  \"pb\": \"80px\",\n  \"heading\": \"H2:Contact\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-contact-info  bg-gradient-to-b fr\"\n },\n {\n  \"id\": \"outreach\",\n  \"h\": 1108,\n  \"top\": 11125,\n  \"pt\": \"96px\",\n  \"pb\": \"96px\",\n  \"heading\": \"H2:Outreach & Beyond Research\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-sajid-general-links-blog  \"\n }\n]",
+  "motion": "{\"anims\":14,\"infinite\":14,\"names\":[\"pulse\",\"pulseS\",\"wifiPulse\",\"jNodePulse\",\"blink\"]}",
+  "grants": "{\"grantEntries\":0,\"projectsSectionH\":1852,\"outreachSectionH\":1108,\"ctaSectionH\":288}",
+  "reduced": "{\"anims\":0,\"infinite\":0,\"hiddenBlocks\":8}",
+  "viewports": [
+    "{\"vp\":\"1920x1080 light\",\"docH\":12822,\"over\":false,\"scrollW\":1905}",
+    "{\"vp\":\"1440x900 dark\",\"docH\":12822,\"over\":false,\"scrollW\":1425}",
+    "{\"vp\":\"1280x800 light\",\"docH\":12874,\"over\":false,\"scrollW\":1265}",
+    "{\"vp\":\"1024x768 light\",\"docH\":13302,\"over\":false,\"scrollW\":1009}",
+    "{\"vp\":\"768x1024 light\",\"docH\":15740,\"over\":false,\"scrollW\":768}",
+    "{\"vp\":\"430x932 light\",\"docH\":18815,\"over\":false,\"scrollW\":430}",
+    "{\"vp\":\"390x844 light\",\"docH\":19322,\"over\":false,\"scrollW\":390}",
+    "{\"vp\":\"390x844 dark\",\"docH\":19322,\"over\":false,\"scrollW\":390}"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

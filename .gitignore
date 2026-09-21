@@ -86,4 +86,8 @@ npm-debug.log*
 # capture drivers there regenerate the images on demand:
 #   hugo server --disableFastRender --port 1315
 #   node docs/redesign/evidence/phase2a-qa-driver.mjs
-docs/redesign/screenshots/
+docs/redesign/screenshots/**/*.png
+docs/redesign/screenshots/**/*.jpg
+docs/redesign/screenshots/**/*.jpeg
+# ...but keep the written review notes that live alongside them.
+!docs/redesign/screenshots/**/*.md

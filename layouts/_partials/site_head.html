@@ -101,6 +101,7 @@
   {{ $project_css := slice }}
   {{ with resources.Get "css/tokens.css" }}{{ $project_css = $project_css | append . }}{{ end }}
   {{ with resources.Get "css/custom.css" }}{{ $project_css = $project_css | append . }}{{ end }}
+  {{ with resources.Get "css/homepage.css" }}{{ $project_css = $project_css | append . }}{{ end }}
   {{ with $project_css }}
     {{ $styles := . | resources.Concat "css/sajid-foundation.css" | minify | fingerprint "sha256" }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />

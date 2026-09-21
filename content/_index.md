@@ -5,214 +5,168 @@ date: 2022-10-24
 type: landing
 
 design:
-  # Default section spacing
-  spacing: '6rem'
+  # Phase 3: default section rhythm from the approved spacing scale.
+  # Was '6rem' (96px), which produced ~12,800px of homepage.
+  spacing: '4.5rem'
 
 sections:
+  # ── 1. Hero / Identity ────────────────────────────────────────────────
   - block: hero-with-stats
     id: about
     content:
-      title: |
-        SAJID Lab 
+      # The wordmark above already states the name, so the h1 carries the
+      # positioning rather than repeating it.
+      title: 'Quantum, photonic and intelligent device research'
       text: |
-         We work on problems related to **quantum**, **photonics**, **antenna**, **computing and AI**, **embedded systems**, **renewable** systems through interdisciplinary research and hands-on innovation. Led by [Dr. Sajid Muhaimin Choudhury](/authors/me), [Department of EEE, BUET](https://eee.buet.ac.bd), our goal is to develop rigorous, high-impact technologies while training the next generation of researchers and engineers.
+        Six domains — quantum, photonics, antennas, computing and AI, embedded systems and renewable energy — investigated together and built in the lab.
+      details: |
+        Led by [Dr. Sajid Muhaimin Choudhury](/authors/me), [Department of EEE, BUET](https://eee.buet.ac.bd).
       primary_action:
-        text:  Meet the Team
-        url: '#team'
-        icon: hero/user-group
+        text: Explore Research
+        url: '/research/'
+        icon: hero/beaker
       secondary_action:
-        text:  View Publications
-        url: '#publication'
-        icon: hero/academic-cap
-      #announcement:
-      #  text: "We are hiring PhD students and postdocs!"
-      #  link:
-      #    text: "Apply now"
-      #    url: "/opportunities"
-    design:
-      # For full-screen, add `min-h-screen` below
-      css_class: ""
-      background:
-        # Option A: Modern gradient mesh (recommended for 2025/2026)
-        gradient_mesh:
-          enable: true
-          style: "waves"
-          animation: "pulse"
-          intensity: "medium"
-          colors:
-            - "primary-500/30"
-            - "secondary-600/20"
-            - "indigo-600/15"
-        
-        # Option B: Team/lab image (uncomment to use instead of gradient mesh)
-        #image:
-        #  filename: "pexels-polina-tankilevitch-3735769.jpg"
-        #  filters:
-        #    brightness: 0.6
-        #    contrast: 1.1
-
-
-
-  - block: stats
-    content:
+        text: Meet the Team
+        url: '/authors/'
+        icon: hero/user-group
+      # Compact credibility strip, folded into the hero.
+      # Values mirror the previous stats block — no new claims.
       items:
-        - statistic: "50+"
-          description: Peer-reviewed publications
-          sub_metric: Journals and international conferences in photonics, nanotechnology, and embedded systems
-          icon: hero/document-text
-
-        - statistic: "1300+"
-          description: Scholarly citations
-          sub_metric: "h-index: 13 (Google Scholar)"
-          icon: hero/chart-bar
-
-        - statistic: "7"
-          description: MSc theses supervised
-          sub_metric: Photonics, metasurfaces, quantum devices, and energy systems
-          icon: hero/user-group
-
-        - statistic: "6"
-          description: Core research domains
-          sub_metric: Quantum, Photonics, Antenna, Computing, Embedded Systems, Renewable Energy (Q-PACERS)
-          icon: hero/beaker
+        - value: '50+'
+          label: Peer-reviewed publications
+        - value: '1300+'
+          label: Scholarly citations
+        - value: '13'
+          label: h-index (Google Scholar)
+        - value: '6'
+          label: Research areas
     design:
-      layout: cards
-      # Section background color (CSS class)
-      css_class: "bg-gradient-to-b from-primary-50 to-white dark:from-primary-900/20 dark:to-gray-800"
+      css_class: ''
       spacing:
-        padding: ["3rem", 0, "3rem", 0]
+        padding: ['3rem', 0, '2rem', 0]
 
+  # ── 2. Research at a Glance ───────────────────────────────────────────
   - block: research-area-qpacers
     id: research
-    
     content:
-      title: Research Focus Areas
-      subtitle: 
-      text: Research is organized under the Q-PACERS framework, integrating Quantum, Photonic, Antenna, Computing, Embedded, and Renewable-Energy Systems to address next-generation challenges in intelligent devices and advanced electromagnetic systems.
-      
+      title: Research
+      subtitle: ''
+      text: Research runs under the Q-PACERS framework — Quantum, Photonic, Antenna, Computing, Embedded and Renewable-energy Systems.
       items:
         - name: Quantum Computing & Quantum Photonics
-          description: Investigating quantum information processing, photonic qubits, and quantum device architectures, with emphasis on algorithm–hardware co-design and emerging quantum photonic platforms.
+          description: Photonic qubits, quantum error correction and device architectures, with emphasis on algorithm–hardware co-design.
           icon: hero/quantum
-          gradient: from-indigo-400 to-purple-600
           status: emerging
           topics:
             - Photonic Qubits
             - Quantum Error Correction
             - Optical Quantum Systems
           cta:
-            text: Explore Research
             url: /research/quantum
 
         - name: Photonics & Nanophotonics
-          description: Designing nanoscale photonic materials and devices, including plasmonic structures, metasurfaces, and optical modulators for sensing, communication, and light–matter interaction engineering.
+          description: Plasmonic structures, metasurfaces and optical modulators for sensing, communication and light–matter interaction.
           icon: hero/photonics
-          gradient: from-blue-400 to-cyan-600
           status: active
           topics:
             - Metasurfaces
             - Optical Modulators
             - Optical Sensing
           cta:
-            text: Explore Research
             url: /research/photonics
 
         - name: Antenna & Electromagnetic Systems
-          description: Developing advanced antenna systems and engineered electromagnetic structures, including fractal antennas and reconfigurable metasurfaces for communication and sensing applications.
+          description: Fractal antennas and reconfigurable metasurfaces for communication and sensing applications.
           icon: hero/antenna
-          gradient: from-green-400 to-emerald-600
           status: past
           topics:
             - Fractal Antennas
             - Electromagnetic Modeling
             - Wireless Systems
           cta:
-            text: Explore Research
             url: /research/antenna
 
         - name: Computing & AI for Physical Systems
-          description: Integrating machine learning, optimization, and computational methods with physical system design, including AI-assisted photonic design and physics-informed computation.
+          description: Machine learning, optimisation and physics-informed computation applied to photonic and hardware design.
           icon: hero/computing
-          gradient: from-purple-400 to-pink-600
           status: planning
           topics:
             - AI for Photonics
             - Computer Architecture
             - Optimization Algorithms
           cta:
-            text: Explore Research
             url: /research/computing
 
         - name: Embedded Systems & IoT
-          description: Designing embedded platforms and intelligent sensing systems for real-world applications, including IoT-enabled devices for environmental monitoring and healthcare systems.
+          description: Embedded platforms and intelligent sensing for environmental monitoring and healthcare systems.
           icon: hero/embedded
-          gradient: from-yellow-400 to-orange-600
           status: active
           topics:
             - Embedded Systems Design
             - Edge Computing
             - Hardware Prototyping
           cta:
-            text: Explore Research
             url: /research/embedded
 
         - name: Renewable Energy & Sustainable Systems
-          description: Advancing photovoltaic technologies and sustainable energy systems using nanophotonics, including solar cell optimization and energy-aware intelligent systems.
+          description: Photovoltaic technologies and energy harvesting using nanophotonics and energy-aware design.
           icon: hero/renewable
-          gradient: from-amber-400 to-red-500
           status: active
           topics:
             - Photovoltaics
             - Energy Harvesting
             - Photocatalysis
           cta:
-            text: Explore Research
-            url: /research/renewable
-
-      cta:
-        text: View All Research Activities
-        url: /research
-        icon: hero/arrow-right
-
+            text: All research areas
+            url: /research/
     design:
       layout: cards
-      css_class: "bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      css_class: 'sj-band'
       spacing:
-        padding: ["5rem", 0, "5rem", 0]
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
-
+  # ── 3. Selected Publications ──────────────────────────────────────────
+  # Curated via `featured: true` in publication front matter — not
+  # most-recent. See docs/redesign/implementation-roadmap.md (Phase 3).
   - block: collection
-    id: projects
+    id: publication
     content:
-      title: Research Grants
-      subtitle: ''
+      title: Selected Publications
       text: ''
       filters:
         folders:
-          - projects
-      count: 0  # Number of items to show (0 = all)
-      # Default filter UI (for future release)
-      #default_button_index: 0
-      # Filter toolbar (optional)
-      # Add or remove as many filters as you like
-    #   buttons:
-    #     - name: All
-    #       tag: '*'
-    #     - name: Machine Learning
-    #       tag: ML
-    #     - name: Biology
-    #       tag: Biology
-    #     - name: Materials
-    #       tag: Materials
+          - publication
+        featured_only: true
+      count: 4
+      archive:
+        text: View all publications
     design:
-      view: grant
-      columns: 2
+      view: citation
+      spacing:
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
+  # ── 4. Featured Projects (placeholder until Phase 4) ──────────────────
+  - block: projects-featured
+    id: projects-portfolio
+    content:
+      title: Projects & Engineering Work
+      subtitle: ''
+      count: 3
+      text: |
+        Selected open-source software, research software and engineering tools from the lab will be showcased here.
+      cta:
+        text: View all projects
+        url: /projects/
+    design:
+      css_class: 'sj-band'
+      spacing:
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
+  # ── 5. Team ───────────────────────────────────────────────────────────
   - block: team-showcase-admin
     id: team
     content:
-      title: Meet Our Team
+      title: Team
       subtitle: ''
       text: ''
       user_groups:
@@ -220,102 +174,75 @@ sections:
       sort_by: 'Params.last_name'
       sort_ascending: true
       cta:
-        text: View All Team Members
-        url: /authors
+        text: View all team members
+        url: /authors/
         icon: user-group
     design:
       show_role: true
       show_organizations: false
-      show_interests: true
+      show_interests: false
       show_social: true
-      # Section background color
-      css_class: "bg-gray-50 dark:bg-gray-900"
-      # Reduce spacing
+      css_class: 'sj-team-compact'
       spacing:
-        padding: ["3rem", 0, "3rem", 0]
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
-  - block: collection
-    id: publication
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-      count: 3
-    design:
-      view: citation
-  - block: cta-button-list
-    content:
-      buttons:
-        - text: View All Publications
-          url: /publication/
-          icon: academicons/google-scholar      
-#  - block: collection
-#    id: featured
-#    content:
-#      title: Featured Research
-#      filters:
-#        folders:
-#          - featured-research
-#        featured_only: true
-#    design:
-#      view: article-grid
-#      columns: 2
-
+  # ── 6. Teaching & Notes ───────────────────────────────────────────────
   - block: collection
     id: teaching
     content:
       title: Teaching
-      subtitle: Courses offered
-      text: List all courses
+      subtitle: ''
+      text: ''
       filters:
         folders:
           - teaching
-        exclude_past: false  # Show both past and future events
-      count: 5
+        exclude_past: false
+      count: 3
       sort_by: Date
       sort_ascending: false
+      archive:
+        text: View teaching
     design:
-      view: card-basic
-      # columns: 3
-      show_date: true
+      view: compact
+      show_date: false
       show_read_time: false
-      show_read_more: true
-      css_class: "bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      show_read_more: false
+      css_class: 'sj-band sj-compact-list'
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
-
+  # ── 7. Latest News ────────────────────────────────────────────────────
   - block: collection
     id: news
     content:
-      title: News & Updates
+      title: Latest News
       subtitle: ''
       text: ''
       filters:
         folders:
           - news
-        exclude_past: false  # Show both past and future events
+        exclude_past: false
       count: 3
       sort_by: Date
       sort_ascending: false
+      archive:
+        text: View all news
     design:
-      view: card-noimage
-      # columns: 3
+      view: compact
       show_date: true
       show_read_time: false
-      show_read_more: true
-      css_class: "bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      show_read_more: false
+      css_class: 'sj-compact-list'
       spacing:
-        padding: ["4rem", 0, "4rem", 0]      
+        padding: ['4.5rem', 0, '4.5rem', 0]
 
+  # ── 8. Collaborators & Partners ───────────────────────────────────────
   - block: logos
+    id: partners
     content:
       title: Collaborators & Partners
-      subtitle: Leading the way together
-      text: We work with top universities, research institutes, and industry leaders to advance scientific discovery
+      subtitle: ''
+      text: ''
       logos:
         - name: BUET
           image: partners/BUET_LOGO.svg
@@ -327,10 +254,9 @@ sections:
           url: https://www.purdue.edu
           external: true
           description: Purdue University
-
         - name: BRAC University
           image: partners/BRAC_University.svg
-          url: https://research.google
+          url: https://www.bracu.ac.bd
           external: true
           description: BRAC University
         - name: United International University
@@ -338,41 +264,27 @@ sections:
           url: https://www.uiu.ac.bd
           external: true
           description: United International University
-      cta:
-        text: Collaborate with us
-        url: /#contact
-        icon: hero/user-plus
     design:
       display_mode: grid
       show_pattern: false
-      css_class: "bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      css_class: 'sj-band sj-partners'
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: ['3rem', 0, '3rem', 0]
 
+  # ── 9. Contact ────────────────────────────────────────────────────────
   - block: contact-info
     id: contact
     content:
       title: Contact
-      subtitle: Get in touch for research collaboration, academic inquiries, and student supervision
+      subtitle: For research collaboration, academic enquiries and student supervision.
       visit_title: Visit Office
       connect_title: Connect Online
       address:
         lines:
-          - Dr. Sajid Muhaimin Choudhury
-          - Professor
-          - Department of Electrical and Electronic Engineering (EEE)
-          - Bangladesh University of Engineering and Technology (BUET)
+          - Department of EEE, BUET
           - EEE 222, ECE Building
-          - BUET, Dhakeshwari Road
           - Dhaka 1205, Bangladesh
-      directions:
-        - Enter ECE Building from the Palashi side
-        - Take the stairs to Floor 2
-        - Office: Room 222
-      office_hours:
-        - "Saturday: 9:00 AM - 4:00 PM"
       email: sajid@eee.buet.ac.bd
-      phone: "+88-02-55666000 / Ext 6452"
       social:
         - icon: brands/linkedin
           url: https://linkedin.com/in/sajidmc
@@ -380,107 +292,21 @@ sections:
           url: https://scholar.google.com/citations?user=Fu8Hkb4AAAAJ&hl=en
         - icon: academicons/orcid
           url: https://orcid.org/0000-0002-0216-7125
-      prospective:
-        title: Prospective Students and Collaborators
-        text: Prospective students, researchers, and collaborators are welcome to get in touch regarding research opportunities, supervision, and joint projects.
-        button:
-          text: Email Dr. Sajid
-          url: mailto:sajid@eee.buet.ac.bd
-      map_url: https://maps.google.com/?q=EEE+222+ECE+Building+BUET+Dhakeshwari+Road+Dhaka+1205+Bangladesh
       show_form: false
     design:
-      css_class: "bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      css_class: 'sj-contact-compact'
       spacing:
-        padding: ["5rem", 0, "5rem", 0]
+        padding: ['3rem', 0, '3rem', 0]
 
-
-  - block: sajid-general-links-blog
-    id: outreach
-    content:
-      title: Outreach & Beyond Research
-      subtitle: >
-        Resources, writing, professional service, and personal creative work beyond formal research.
-
-      column_1:
-        heading: Resources
-        subheading: >
-          Useful resources for students, collaborators.
-        icon: hero/academic-cap
-        buttons:
-          - title: LOR Request
-            description: Guidance for requesting a letter of recommendation.
-            url: /outreach/lor
-            icon: hero/document-text
-
-          - title: Templates
-            description: Reusable templates, formats, and lab resources.
-            url: /outreach/templates
-            icon: hero/squares-2x2
-
-          - title: Unicode Scientific Symbols
-            description: Scientific typing help for Greek letters, symbols, subscripts, and superscripts.
-            url: /outreach/scientific-typing
-            icon: hero/calculator
-
-          - title: Graphics
-            description: Logos, visual assets, and graphic work prepared for academic and institutional use.
-            url: /outreach/graphics
-            icon: hero/photo
-
-      blog:
-        heading: Blog
-        heading_url: /outreach/blog
-        subheading: ""
-        icon: hero/pencil-square
-        folder: /outreach/blog
-        limit: 4
-        feature_first: false
-        feature_all: false
-        read_more_text: Read more
-        all_posts_url: /outreach/blog
-        all_posts_text: View all blog posts
-
-      column_3:
-        heading: Activities
-        subheading: >
-          Activities beyond academic work.
-        icon: hero/sparkles
-        buttons:
-          - title: Professional Activities
-            description: Current and past service, leadership, and professional engagement.
-            url: /outreach/professional
-            icon: hero/briefcase
-
-          - title: Hobbies
-            description: Personal interests and related pages.
-            url: /outreach/hobbies
-            icon: hero/heart
-
-          - title: Poems
-            description: A collection of poems written by me.
-            url: /outreach/poetry
-            icon: hero/book-open
-
-          - title: Songs
-            description: Songs composed by me, including AI-assisted creative work.
-            url: /outreach/songs
-            icon: hero/musical-note
-      bottom_ctas:
-        - title: View All Resources
-          url: /outreach/
-          icon: hero/academic-cap
-          show_arrow: true
-
-        - title: Visit the Blog
-          url: /outreach/blog
-          icon: hero/pencil-square
-          show_arrow: true
-
-        - title: Explore Activities
-          url: /outreach/professional
-          icon: hero/sparkles
-          show_arrow: true
-    design:
-      columns: "1"
-
+# ── Removed from the homepage in Phase 3 ────────────────────────────────
+#   * block: collection id: projects  (full Research Grants list, 1852px)
+#       -> grants remain at /projects/ and on /research/ until Phase 4
+#          migrates Funding to /research/funding/.
+#   * block: stats  (576px standalone card section)
+#       -> folded into the hero as a compact strip.
+#   * block: cta-button-list  (orphan 288px section for one button)
+#       -> replaced by inline section links.
+#   * block: sajid-general-links-blog id: outreach  (1108px, a verbatim
+#     duplicate of content/outreach/_index.md)
+#       -> /outreach/ is unchanged and still linked from the footer.
 ---

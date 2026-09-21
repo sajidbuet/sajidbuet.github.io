@@ -216,7 +216,140 @@ phase and should ship before anything visual.
 
 ---
 
-## Phase 3 — Homepage
+## Phase 3 — Homepage ✅ COMPLETE
+
+**Completed 2026-09-22** on `redesign/phase-3-homepage`.
+
+### Homepage height
+
+| | Height @1440 | |
+|---|---|---|
+| Phase 1 baseline | 12,728 px | |
+| Pre-Phase-3 (after 2A) | **12,822 px** | measured baseline for this phase |
+| **After Phase 3** | **6,608 px** | **−48.5 %** |
+
+Target was ≤ 7,000 px. No viewport overflows; 390 px mobile is 9,254 px (from 19,322 px, −52 %).
+
+### Section-by-section
+
+| Section | Before | After | Note |
+|---|---|---|---|
+| Hero (`about`) | 709 | **631** | −11 % on its own, but it now also carries the stats |
+| Stats (`section-stats`) | 576 | **0** | folded into the hero strip |
+| *Hero + stats combined* | *1,285* | ***631*** | ***−51 %*** |
+| Research | 1,937 | **890** | −54 %; flat cards replace 192 px gradient headers |
+| Grants (`projects`) | 1,852 | **removed** | grants stay at `/projects/` until Phase 4 |
+| Team | 914 | **604** | −34 %; 290 px portrait → 112 px, horizontal layout |
+| Publications | 752 | **822** | +9 %; now 4 *curated* entries with links, was 3 recent |
+| Orphan CTA | 288 | **removed** | replaced by inline section links |
+| Teaching | 1,153 | **794** | −31 % |
+| News | 1,212 | **815** | −33 % |
+| Partners | 718 | **462** | −36 % |
+| Contact | 949 | **667** | −30 % |
+| Outreach duplicate | 1,108 | **removed** | `/outreach/` unchanged |
+| Projects portfolio | — | **270** | new, placeholder only |
+| **Blocks on page** | **12** | **9** | |
+
+### Other before/after
+
+| | Before | After |
+|---|---|---|
+| `<h1>` count | **0** | **1** |
+| Infinite animations | **14** | **0** |
+| Animations of any kind (settled) | 14 | **0** |
+| Grant entries rendered | 3 (full list) | **0** |
+| Duplicated Outreach section | present | **removed** |
+| Contrast failures, light / dark | 12 / 4 | **0 / 0** |
+| Interactive targets < 24 px | 48 | 38 |
+| DOM nodes | 1,525 | 1,271 |
+
+### What was done
+
+- **Hero:** real `<h1>` carrying the positioning (the wordmark states the name, so
+  the h1 no longer repeats it); `secondary_action` now renders; lede cut to
+  ~58ch; static radial wash replaced the animated gradient mesh.
+- **Wordmark:** one-shot. Plays `Lab → .BD → Lab` once, settles on **SAJID Lab**
+  and **removes the caret** (its CSS blink was `infinite`). Under reduced motion
+  the complete wordmark renders immediately with no caret. The three decorative
+  SVG pulses (`pulseS`, `wifiPulse`, `jNodePulse`) were `infinite`; now 3 iterations.
+- **Stats:** rule-separated `<dl>` inside the hero, 44 px figures (was 72 px/900),
+  plain markup with no reveal class — visible without JS and under reduced motion.
+- **Research:** flat surfaces, 1 px border, 8 px radius, 3 px accent rule.
+  The six per-item `gradient` values are deliberately ignored. Status is a dot +
+  text label, and `past` uses a hollow dot so state is not colour-only.
+- **Publications:** curated via `featured: true`, not most-recent.
+- **Projects:** placeholder block, see below.
+- **Removed:** full grant list, duplicated Outreach block, orphan CTA section.
+- **Section rhythm:** 96 px → 72 px desktop, set per block.
+
+### Selected-publications mechanism
+
+No `featured` flag existed anywhere in the publication content model, so the
+smallest maintainable mechanism was used: `featured: true` in the front matter of
+four bundles, consumed by `filters.featured_only` (already supported upstream).
+
+Seeded set — **chosen for topical breadth, and the user's to change**:
+
+| ID | Area |
+|---|---|
+| `j-028` | Photonics / metasurfaces (2026) |
+| `j-026` | Computing & AI + phase-change photonics (2025) |
+| `j-024` | Renewable / photovoltaics (2025) |
+| `j-021` | Photonic topological insulator / integrated optics (2024) |
+
+`j-029` (the newest paper) was **excluded on purpose**: its title contains raw
+LaTeX (`$[[7,1,3]]$`) which renders verbatim because `content.math.enable` is
+false. Featuring it would put visual-audit **P1-09** on the homepage. Re-include
+it once Phase 4 enables math rendering.
+
+> A YAML note for whoever edits these next: several publication titles are
+> **line-wrapped** across two lines. Inserting a key immediately after the
+> `title:` line corrupts the scalar. Add front-matter keys before the closing
+> `---`. This was hit and fixed during Phase 3.
+
+### Projects placeholder strategy
+
+`layouts/_partials/hbx/blocks/projects-featured/block.html` is data-driven and
+**cannot** display grants:
+
+```go
+{{ $portfolio := where site.RegularPages "Params.project_category" "!=" nil }}
+{{ $portfolio = where $portfolio "Section" "projects" }}
+```
+
+Grant bundles in `content/projects/` do not declare `project_category`, so they
+never match. With no portfolio content the block renders one compact editorial
+line (270 px, no cards, no empty grid) and **no link to `/projects/`** — the
+configured `cta` is only emitted when real items exist. Phase 4 needs no template
+change: create content with `project_category` set and the cards appear.
+
+### Deviations from the Phase 3 brief
+
+| Brief | Shipped | Why |
+|---|---|---|
+| Hero 35–45 % shorter | Hero block −11 %; hero **+ stats** −51 % | The stats section was folded in. Measured honestly both ways rather than claiming the narrow target. |
+| Separate "View all …" CTA blocks | Used the collection block's own `archive.text` | Avoided three extra 108 px sections and a duplicate CTA per section. |
+| — | Added `sj-home` body class | Lets Phase 3 fix `*-primary-600` contrast on the homepage without touching `/publication/`, `/authors/` or `/research/`, which are Phases 4–5. |
+
+### Overrides created
+
+**None.** No file was copied out of `_vendor/`. One new project-owned block
+(`projects-featured`) and one new stylesheet were added; everything else edited
+was already a project override or project-owned custom code.
+
+### Remaining homepage defects (deferred)
+
+- Teaching/News are ~800 px for three ~110 px rows; the remainder is the shared
+  collection block's wrapper chrome. Changing it affects other pages → Phase 5.
+- Dimensions citation badges sit outside the type system → Phase 8.
+- Search modal still contributes the first `H3` in the DOM and Pagefind still
+  404s → untouched by instruction.
+- 38 interactive targets remain under 24 px, mostly citation actions and footer
+  social icons → Phase 7.
+
+---
+
+## Phase 3 — Homepage *(original plan, superseded by the record above)*
 
 **Objective:** turn the 12,728 px index into a curated landing page.
 

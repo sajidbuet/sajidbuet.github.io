@@ -88,7 +88,7 @@
           .pulse-s {
             transform-box: fill-box;
             transform-origin: center;
-            animation: pulseS 1.8s ease-in-out infinite;
+            animation: pulseS 1.8s ease-in-out 3;
           }
 
           .wifi-1,
@@ -96,7 +96,7 @@
           .wifi-3 {
             transform-box: fill-box;
             transform-origin: center;
-            animation: wifiPulse 1.6s ease-in-out infinite;
+            animation: wifiPulse 1.6s ease-in-out 3;
           }
 
           .wifi-2 { animation-delay: 0.18s; }
@@ -105,7 +105,7 @@
           .j-node {
             transform-box: fill-box;
             transform-origin: center;
-            animation: jNodePulse 1.4s ease-in-out infinite;
+            animation: jNodePulse 1.4s ease-in-out 3;
           }
 
           .j-node.d2 { animation-delay: 0.18s; }
@@ -249,37 +249,66 @@
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (prefersReducedMotion) {
+        /* Complete wordmark immediately, caret removed. The caret's CSS blink
+           is `infinite`, so leaving it would violate the reduced-motion
+           contract even though the typing itself never starts. */
         suffixEl.textContent = 'Lab';
-        positionCursor();
+        if (cursorEl && cursorEl.parentNode) cursorEl.parentNode.removeChild(cursorEl);
         return;
       }
 
-      const words = ['Lab', '.BD'];
-      const typingDelay = 180;
-      const deletingDelay = 90;
-      const holdFullDelay = 2500;
-      const holdEmptyDelay = 320;
-      let wordIndex = 0;
-      let currentText = words[0];
+      /* Phase 3: ONE-SHOT.
+         The sequence plays a single Lab -> .BD -> Lab transformation and then
+         settles permanently on "SAJID Lab", removing the blinking cursor so no
+         infinite animation remains on the page. Previously this looped
+         forever, so the brand name was never stable and any screenshot,
+         print or social capture could catch a half-typed word. */
+      const sequence = ['.BD', 'Lab'];   // states to pass through, ending settled on Lab
+      const typingDelay = 150;
+      const deletingDelay = 80;
+      const holdFullDelay = 1500;
+      const holdEmptyDelay = 260;
+      let stepIndex = 0;
+      let displayed = 'Lab';             // the word currently on screen
+      let currentText = displayed;
       let charIndex = currentText.length;
       let isDeleting = false;
+      let settled = false;
+
+      function settle() {
+        settled = true;
+        suffixEl.textContent = 'Lab';
+        /* Remove the caret entirely: its CSS blink is `infinite`, and the
+           page must end with zero infinite animations. */
+        if (cursorEl && cursorEl.parentNode) cursorEl.parentNode.removeChild(cursorEl);
+      }
 
       function positionCursor() {
+        if (settled || !cursorEl || !cursorEl.parentNode) return;
         const textLength = suffixEl.getComputedTextLength();
         const x = 496.63 + (textLength / 0.94) + 6;
         cursorEl.setAttribute('transform', `translate(${x} 134.02) scale(0.94 1)`);
       }
 
       function tick() {
-        const target = words[wordIndex];
+        if (settled) return;
 
         if (!isDeleting) {
+          // Typing the word at sequence[stepIndex].
+          const target = sequence[stepIndex];
           charIndex += 1;
           currentText = target.slice(0, charIndex);
           suffixEl.textContent = currentText;
           positionCursor();
 
           if (currentText === target) {
+            displayed = target;
+            if (stepIndex >= sequence.length - 1) {
+              // Final state reached — settle and stop for good.
+              window.setTimeout(settle, holdEmptyDelay);
+              return;
+            }
+            stepIndex += 1;
             isDeleting = true;
             window.setTimeout(tick, holdFullDelay);
             return;
@@ -289,14 +318,15 @@
           return;
         }
 
+        // Deleting the word currently on screen — NOT the next target.
         charIndex -= 1;
-        currentText = target.slice(0, Math.max(0, charIndex));
+        currentText = displayed.slice(0, Math.max(0, charIndex));
         suffixEl.textContent = currentText;
         positionCursor();
 
-        if (charIndex === 0) {
+        if (charIndex <= 0) {
+          charIndex = 0;
           isDeleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
           window.setTimeout(tick, holdEmptyDelay);
           return;
         }
@@ -304,6 +334,8 @@
         window.setTimeout(tick, deletingDelay);
       }
 
+      // Start in a stable, complete state; begin the single transformation
+      // only after a pause, so the first paint is always "SAJID Lab".
       suffixEl.textContent = currentText;
       positionCursor();
       window.setTimeout(() => {

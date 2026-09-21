@@ -1,0 +1,20 @@
+{
+  "page": "{\"docH\":6608,\"h1\":1,\"h1txt\":[\"Quantum, photonic and intelligent device research\"],\"h2\":6,\"main\":1,\"domNodes\":1272}",
+  "sections": "[\n {\n  \"id\": \"about\",\n  \"h\": 631,\n  \"top\": 65,\n  \"pt\": \"48px\",\n  \"pb\": \"32px\",\n  \"heading\": \"H1:Quantum, photonic and intelligent devi\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-hero-with-stats  \"\n },\n {\n  \"id\": \"research\",\n  \"h\": 890,\n  \"top\": 696,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": \"H2:Research\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-research-area-qpacers  sj-band\"\n },\n {\n  \"id\": \"publication\",\n  \"h\": 822,\n  \"top\": 1586,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  \"\n },\n {\n  \"id\": \"projects-portfolio\",\n  \"h\": 270,\n  \"top\": 2408,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": \"H2:Projects & Engineering Work\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-projects-featured  sj-band\"\n },\n {\n  \"id\": \"team\",\n  \"h\": 604,\n  \"top\": 2677,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": \"H2:Team\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-team-showcase-admin  sj-team-comp\"\n },\n {\n  \"id\": \"teaching\",\n  \"h\": 794,\n  \"top\": 3281,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  sj-band sj-compact-li\"\n },\n {\n  \"id\": \"news\",\n  \"h\": 815,\n  \"top\": 4075,\n  \"pt\": \"72px\",\n  \"pb\": \"72px\",\n  \"heading\": null,\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-collection  sj-compact-list\"\n },\n {\n  \"id\": \"partners\",\n  \"h\": 462,\n  \"top\": 4890,\n  \"pt\": \"48px\",\n  \"pb\": \"48px\",\n  \"heading\": \"H2:Collaborators & Partners\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-logos  sj-band sj-partners\"\n },\n {\n  \"id\": \"contact\",\n  \"h\": 667,\n  \"top\": 5352,\n  \"pt\": \"48px\",\n  \"pb\": \"48px\",\n  \"heading\": \"H2:Contact\",\n  \"minH\": \"0px\",\n  \"cls\": \"relative  hbb-section blox-contact-info  sj-contact-compact\"\n }\n]",
+  "motion": "{\"anims\":11,\"infinite\":1,\"names\":[\"pulseS\",\"wifiPulse\",\"jNodePulse\",\"blink\"]}",
+  "grants": "{\"grantEntries\":0,\"projectsSectionH\":null,\"outreachSectionH\":null,\"ctaSectionH\":null}",
+  "reduced": "{\"anims\":0,\"infinite\":0,\"hiddenBlocks\":4}",
+  "viewports": [
+    "{\"vp\":\"1920x1080 light\",\"docH\":6608,\"over\":false,\"scrollW\":1905}",
+    "{\"vp\":\"1440x900 dark\",\"docH\":6608,\"over\":false,\"scrollW\":1425}",
+    "{\"vp\":\"1280x800 light\",\"docH\":6654,\"over\":false,\"scrollW\":1265}",
+    "{\"vp\":\"1024x768 light\",\"docH\":6781,\"over\":false,\"scrollW\":1009}",
+    "{\"vp\":\"768x1024 light\",\"docH\":7481,\"over\":false,\"scrollW\":768}",
+    "{\"vp\":\"430x932 light\",\"docH\":8809,\"over\":false,\"scrollW\":430}",
+    "{\"vp\":\"390x844 light\",\"docH\":9254,\"over\":false,\"scrollW\":390}",
+    "{\"vp\":\"390x844 dark\",\"docH\":9254,\"over\":false,\"scrollW\":390}"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

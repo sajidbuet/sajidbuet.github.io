@@ -11,158 +11,80 @@
 {{ $subtitle := $block.content.subtitle | emojify | $page.RenderString }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<div class="pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto">
-    
+{{/* Phase 3: densified. The section header no longer reserves a 12-16 unit
+     gap before the grid, and the cards below are flat surfaces rather than
+     192px gradient headers. */}}
+<div class="sj-research px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+
     {{/* Section Header */}}
-    <div class="max-w-5xl mx-auto mb-12 lg:mb-16">
+    <div class="sj-research__header">
       {{ with $title }}
-      <h2 class="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
-        {{ . }}
-      </h2>
+      <h2 class="sj-section__title">{{ . }}</h2>
       {{ end }}
-      
+
       {{ with $subtitle }}
-      <p class="text-center text-xl text-primary-600 dark:text-primary-400 font-medium mb-3">
-        {{ . }}
-      </p>
+      <p class="sj-section__subtitle">{{ . }}</p>
       {{ end }}
 
       {{ with $text }}
-      <div class="mt-6 flex flex-col items-center gap-4 lg:flex-row lg:items-center lg:justify-center lg:gap-6">
-        <div class="shrink-0">
+      <div class="sj-research__intro">
+        <div class="sj-research__mark">
           {{ partial "qpacer" $ }}
         </div>
-        <div class="max-w-3xl">
-          <p class="text-center lg:text-left text-lg text-gray-600 dark:text-gray-400">
-            {{ . }}
-          </p>
-        </div>
+        <p class="sj-research__lede">{{ . }}</p>
       </div>
       {{ end }}
     </div>
 
-    {{/* Cards Layout */}}
+    {{/* Cards — Phase 3.
+         Flat surface, 1px border, 8px radius, 3px accent rule at the top.
+         The six per-item `gradient` values in content/_index.md are
+         deliberately ignored: six unrelated saturated gradients were the
+         strongest "generic landing page" signal in the Phase 1 audit.
+         Status is carried by a dot glyph + text label as well as colour, so
+         it is never conveyed by colour alone. */}}
     {{ if eq $layout "cards" }}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+    <ul class="sj-research__grid">
       {{ range $idx, $item := $block.content.items }}
-      <div class="group relative">
-        <div class="h-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col">
-          
-          {{/* Card Image/Icon Header */}}
-          {{ $header_content := "" }}
-          {{ if $item.image }}
-            {{ $img := resources.Get (printf "media/%s" $item.image) }}
-            {{ if $img }}
-              {{ $img = $img.Fill "600x400 Center webp" }}
-              {{ $header_content = printf "<img src=\"%s\" alt=\"%s\" class=\"w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500\">" $img.RelPermalink $item.name }}
-            {{ end }}
-          {{ else if $item.icon }}
-            {{ $icon_html := partial "functions/get_icon" (dict "name" $item.icon "attributes" "class=\"w-24 h-24 text-white/80 group-hover:scale-110 transition-transform duration-300\"") }}
-            {{ $header_content = printf "<div class=\"absolute inset-0 flex items-center justify-center\">%s</div>" $icon_html }}
-          {{ end }}
+      {{ $href := $item.cta.url | default $item.url }}
+      <li class="sj-card">
+        <div class="sj-card__rule" aria-hidden="true"></div>
 
-          {{ if and $item.cta.url $header_content }}
-            <a href="{{ $item.cta.url }}" class="block relative h-48 bg-gradient-to-br {{ $item.gradient | default "from-primary-400 to-secondary-400" }} overflow-hidden">
-              {{ $header_content | safeHTML }}
-            </a>
-          {{ else }}
-            <div class="relative h-48 bg-gradient-to-br {{ $item.gradient | default "from-primary-400 to-secondary-400" }} overflow-hidden">
-              {{ $header_content | safeHTML }}
-            </div>
-          {{ end }}
-            
-          {{/* Status Badge */}}
-          {{ with $item.status }}
-          <div class="absolute top-4 right-4 z-10">
-            <span class="px-3 py-1 bg-white/90 dark:bg-gray-900/90 backdrop-blur text-xs font-semibold rounded-full
-              {{ if eq . "active" }}text-green-600 dark:text-green-400
-              {{ else if eq . "emerging" }}text-yellow-600 dark:text-yellow-400
-              {{ else if eq . "planning" }}text-blue-600 dark:text-blue-400
-              {{ else }}text-gray-600 dark:text-gray-300
-              {{ end }}">
-              {{ . | title }}
+        <div class="sj-card__head">
+          {{ with $item.icon }}
+            <span class="sj-card__icon" aria-hidden="true">
+              {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"sj-card__icon-svg\"") }}
             </span>
-          </div>
           {{ end }}
-
-          {{/* Card Content */}}
-          <div class="flex flex-col flex-1 p-6">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                {{ if $item.url }}
-                <a href="{{ $item.url }}" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  {{ $item.name }}
-                  {{ partial "functions/get_icon" (dict "name" "hero/arrow-top-right-on-square" "attributes" "class=\"inline-block w-4 h-4 ml-1\"") }}
-                </a>
-                {{ else }}
-                  {{ $item.name }}
-                {{ end }}
-              </h3>
-              
-              <p class="text-gray-600 dark:text-gray-400 mb-4">
-                {{ $item.description }}
-              </p>
-              
-              {{/* Key Topics/Keywords */}}
-              {{ with $item.topics }}
-              <div class="flex flex-wrap gap-2 mb-6">
-                {{ range first 3 . }}
-                <span class="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
-                  {{ . }}
-                </span>
-                {{ end }}
-                {{ if gt (len .) 3 }}
-                <span class="inline-block px-2 py-1 text-gray-500 dark:text-gray-400 text-xs">
-                  +{{ sub (len .) 3 }} more
-                </span>
-                {{ end }}
-              </div>
-              {{ end }}
-            </div>
-            
-            {{/* Footer */}}
-            <div class="mt-auto">
-              {{ if or $item.team_size $item.publications $item.funding }}
-              <div class="grid grid-cols-3 gap-3 pt-4 border-t border-gray-200 dark:border-gray-700 mb-4">
-                {{ with $item.team_size }}
-                <div class="flex flex-col items-center text-center text-gray-500 dark:text-gray-400">
-                  {{ partial "functions/get_icon" (dict "name" "hero/user-group" "attributes" "class=\"w-4 h-4 mx-auto mb-1\"") }}
-                  <span class="text-xs leading-tight">{{ . | replaceRE " researchers" "" }}</span>
-                  <span class="text-xs text-gray-400">team</span>
-                </div>
-                {{ end }}
-                {{ with $item.publications }}
-                <div class="flex flex-col items-center text-center text-gray-500 dark:text-gray-400">
-                  {{ partial "functions/get_icon" (dict "name" "hero/document-text" "attributes" "class=\"w-4 h-4 mx-auto mb-1\"") }}
-                  <span class="text-xs leading-tight">{{ . | replaceRE " papers" "" }}</span>
-                  <span class="text-xs text-gray-400">papers</span>
-                </div>
-                {{ end }}
-                {{ with $item.funding }}
-                <div class="flex flex-col items-center text-center text-gray-500 dark:text-gray-400">
-                  {{ partial "functions/get_icon" (dict "name" "hero/currency-dollar" "attributes" "class=\"w-4 h-4 mx-auto mb-1\"") }}
-                  <span class="text-xs leading-tight">{{ . }}</span>
-                  <span class="text-xs text-gray-400">funding</span>
-                </div>
-                {{ end }}
-              </div>
-              {{ end }}
-              
-              {{ with $item.cta }}
-              <a href="{{ .url }}"
-                 class="inline-flex items-center w-full justify-center px-4 py-2 bg-primary-50 dark:bg-primary-900/20 text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-all duration-300">
-                {{ .text }}
-                {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" "class=\"ml-1 w-4 h-4\"") }}
-              </a>
-              {{ end }}
-            </div>
-          </div>
+          {{ with $item.status }}
+            <span class="sj-status sj-status--{{ . }}">
+              <span class="sj-status__dot" aria-hidden="true"></span>{{ . | title }}
+            </span>
+          {{ end }}
         </div>
-      </div>
+
+        <h3 class="sj-card__title">
+          {{ if $href }}
+            {{/* One link per card wrapping the title only — the whole card is
+                 not a nested-link structure. */}}
+            <a href="{{ $href }}">{{ $item.name }}</a>
+          {{ else }}
+            {{ $item.name }}
+          {{ end }}
+        </h3>
+
+        <p class="sj-card__desc">{{ $item.description }}</p>
+
+        {{ with $item.topics }}
+        <ul class="sj-tags">
+          {{ range first 3 . }}<li class="sj-tag">{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </li>
       {{ end }}
-    </div>
-    
+    </ul>
+
     {{/* Hexagon Layout */}}
     {{ else if eq $layout "hexagon" }}
     <div class="flex flex-wrap justify-center gap-8 lg:gap-4">
@@ -210,17 +132,15 @@
     </div>
     {{ end }}
     
-    {{/* Global CTA */}}
+    {{/* Section CTA — a tertiary text action, not a second filled button.
+         One primary button per view lives in the hero. */}}
     {{ with $block.content.cta }}
-    <div class="mt-12 text-center">
-      <a href="{{ .url }}"
-         class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow hover:shadow-lg transition-all duration-300">
+    <p class="sj-section__more">
+      <a class="sj-more-link" href="{{ .url | relLangURL }}">
         {{ .text }}
-        {{ with .icon }}
-        {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"ml-2 w-5 h-5\"") }}
-        {{ end }}
+        <span class="sj-more-link__arrow" aria-hidden="true">&rarr;</span>
       </a>
-    </div>
+    </p>
     {{ end }}
   </div>
 </div>

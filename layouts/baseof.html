@@ -6,7 +6,9 @@
       data-wc-theme-default="{{ (lower site.Params.hugoblox.theme.mode) | default "system" }}"
       data-hbb-relurl="{{ "" | relURL }}">
   {{ partial "site_head" . }}
-  <body class="bg-[var(--color-background)] text-[var(--color-foreground)] page-wrapper" id="top">
+  {{/* `sj-home` scopes Phase 3 homepage styling without leaking to other
+       landing pages that share the same block markup. */}}
+  <body class="bg-[var(--color-background)] text-[var(--color-foreground)] page-wrapper{{ if .IsHome }} sj-home{{ end }}" id="top">
     <a class="sj-skip-link" href="#main">{{ i18n "skip_to_main" | default "Skip to main content" }}</a>
     <div id="page-bg"></div>
     <div class="page-header {{ if site.Params.hugoblox.header.sticky }}sticky top-0 z-30{{ end }}">
