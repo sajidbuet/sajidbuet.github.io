@@ -1,56 +1,29 @@
-<svg xmlns="https://www.w3.org/2000/svg" class="w-full h-auto transition duration-300 ease-out group-hover:opacity-95"  viewBox="0 0 776.28 213.14">
+{{/* SAJID.BD navbar wordmark.
+
+     Phase 2A accessibility/technical fixes (artwork itself unchanged):
+       - Removed the inline <style> block. Its text content was part of the
+         brand link's accessible name, so screen readers announced
+         ":root { --logo-navy: var(--hb-color-header-fg); ... }".
+         Styling now uses presentation attributes and the `sj-logo-*` classes
+         defined in assets/css/custom.css.
+       - That <style> also declared `:root`, which inside an inline SVG matches
+         the DOCUMENT root and leaked three custom properties site-wide.
+       - Added role="img" + <title> so the mark has a real accessible name.
+       - Corrected the SVG namespace (was https://, must be http://).
+
+     NOT changed in this phase (deferred by instruction): the <text> elements
+     still depend on Arial being installed. Outline conversion is deferred
+     pending cross-platform font-metric evidence. */}}
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="sj-logo w-full h-auto"
+     viewBox="0 0 776.28 213.14"
+     role="img"
+     aria-labelledby="sj-logo-title">
+  <title id="sj-logo-title">SAJID Lab</title>
 
   <defs>
-    <style>
-      :root {
-        --logo-navy: var(--hb-color-header-fg);
-        --logo-teal: var(--color-primary-600);
-        --logo-slate: #5B6475;
-      }
-
-      .no-fill { fill: none; }
-
-      .fill-navy { fill: var(--logo-navy); }
-      .fill-teal { fill: var(--logo-teal); }
-      .fill-slate { fill: var(--logo-slate); }
-
-      .stroke-teal-thin,
-      .stroke-teal {
-        fill: none;
-        stroke: var(--logo-teal);
-        stroke-miterlimit: 10;
-      }
-
-      .stroke-teal-thin {
-        stroke-linecap: round;
-        stroke-width: 3px;
-      }
-
-      .stroke-teal {
-        stroke-width: 6px;
-      }
-
-      .font-tagline,
-      .font-lab {
-        font-family: Arial-BoldMT, Arial, sans-serif;
-        font-weight: 700;
-      }
-
-      .font-tagline {
-        font-size: 35.71px;
-      }
-
-      .font-lab {
-        font-size: 156.22px;
-      }
-
-      .tight-space {
-        letter-spacing: -0.04em;
-      }
-    </style>
-
     <clipPath id="clip-chip" transform="translate(-37.7 -187.06)">
-      <rect class="no-fill" x="352.42" y="239.72" width="45.87" height="54.7"/>
+      <rect fill="none" x="352.42" y="239.72" width="45.87" height="54.7"/>
     </clipPath>
   </defs>
 

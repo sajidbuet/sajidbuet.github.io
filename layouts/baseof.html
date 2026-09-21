@@ -7,6 +7,7 @@
       data-hbb-relurl="{{ "" | relURL }}">
   {{ partial "site_head" . }}
   <body class="bg-[var(--color-background)] text-[var(--color-foreground)] page-wrapper" id="top">
+    <a class="sj-skip-link" href="#main">{{ i18n "skip_to_main" | default "Skip to main content" }}</a>
     <div id="page-bg"></div>
     <div class="page-header {{ if site.Params.hugoblox.header.sticky }}sticky top-0 z-30{{ end }}">
       {{/* Load header block */}}
@@ -23,9 +24,23 @@
       {{ end }}
     </div>
     {{ $cover := partial "functions/get_cover_image.html" . }}
-    <div class="page-body {{if and (ne .Type "landing") (not $cover)}} my-10{{end}}">
-      {{ block "main" . }}{{ end }}
-    </div>
+    {{/* Exactly one <main> landmark per page.
+         Single-page templates already emit their own <main>:
+           - _vendor .../blox/layouts/single.html   (Kind=page, non-landing)
+           - layouts/publication/single.html
+           - layouts/projects/single.html
+         Landing pages (landing/single.html, landing/list.html), sections
+         (layouts/list.html), taxonomies and terms do NOT. So the shell
+         supplies <main> for everything except non-landing page kinds.
+         Verified by measurement across all routes — see
+         docs/redesign/evidence/phase2a-landmarks.json */}}
+    {{- $has_inner_main := and (eq .Kind "page") (ne .Type "landing") -}}
+    {{- $body_class := printf "page-body%s" (cond (and (ne .Type "landing") (not $cover)) " my-10" "") -}}
+    {{ if $has_inner_main }}
+      <div id="main" tabindex="-1" class="{{ $body_class }}">{{ block "main" . }}{{ end }}</div>
+    {{ else }}
+      <main id="main" tabindex="-1" class="{{ $body_class }}">{{ template "main" . }}</main>
+    {{ end }}
     <div class="page-footer"> 
       {{ partial "site_footer" . }}
     </div>

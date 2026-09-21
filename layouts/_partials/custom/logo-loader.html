@@ -1,14 +1,16 @@
-<svg xmlns="https://www.w3.org/2000/svg"
-     class="w-full h-auto"
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="sj-logo-loader w-full h-auto"
      viewBox="0 0 776.28 213.14"
      role="img"
-     aria-label="SAJID Lab loading logo">
+     aria-label="SAJID Lab">
 
   <defs>
     <style>
-      :root {
+      /* Phase 2A: scoped from `:root` (which matched the document root from
+         inside this inline SVG) to the SVG element itself. */
+      .sj-logo-loader {
         --logo-navy: currentColor;
-        --logo-teal: var(--color-primary-600);
+        --logo-teal: var(--sj-brand, #0c96c8);
         --logo-slate: #5B6475;
       }
 

@@ -28,23 +28,19 @@
   @apply cursor-pointer;
 }
 
-/* navbar toggler */
-input#nav-toggle:checked + label #show-button {
-  @apply hidden;
-}
-
-input#nav-toggle:checked + label #hide-button {
-  @apply block;
-}
-
-input#nav-toggle:checked ~ #nav-menu {
-  @apply block;
-}
+/* navbar toggler
+   Phase 2A: the CSS checkbox hack was removed. The trigger is now a real
+   <button id="nav-toggle"> whose open/closed state is driven by
+   `aria-expanded` and the `.sj-open` class on #nav-menu — see
+   assets/css/custom.css and assets/js/sajid-nav.js. The former
+   `input#nav-toggle:checked` rules are gone because the input no longer
+   exists; they were dead selectors. */
 
 #site-header.header {
   background-color: var(--hb-color-header-bg);
   color: var(--hb-color-header-fg);
-  @apply py-3 shadow;
+  /* `shadow` removed: elevation is border-based in the Phase 2A system. */
+  @apply py-3;
 }
 
 /* navbar items */

@@ -6,7 +6,12 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: 'SAJID Lab'
 # Website URL
-baseURL: 'https://www.sajid.org.bd/'
+# Phase 2A: corrected from 'https://www.sajid.org.bd/', which does not resolve
+# (NXDOMAIN). Production was unaffected only because
+# .github/workflows/publish.yaml overrides --baseURL with the GitHub Pages
+# base_url; any build without that override emitted canonical, hreflang,
+# sitemap, RSS and Open Graph URLs pointing at a dead host.
+baseURL: 'https://www.sajid.bd/'
 
 ############################
 ## LANGUAGE

@@ -1,0 +1,197 @@
+/* ==========================================================================
+   SAJID.BD — Semantic design tokens
+   Phase 2A foundation. See docs/redesign/design-system-proposal.md
+
+   Rules:
+   1. Components consume SEMANTIC tokens (--sj-accent), never literals.
+   2. Every token is defined for BOTH light and dark at definition time.
+   3. Contrast ratios in comments were computed, not estimated
+      (docs/redesign/evidence/ — WCAG 2.x relative luminance).
+
+   Dark mode is driven by the `.dark` class that HugoBlox's hb-theme.js puts
+   on <html>; the `prefers-color-scheme` block is a no-JS safety net only.
+   ========================================================================== */
+
+:root {
+  /* --- Surfaces ------------------------------------------------------- */
+  --sj-background: #ffffff;
+  --sj-background-subtle: #f8fafc;
+  --sj-surface: #ffffff;
+  --sj-surface-raised: #ffffff;
+  /* Opaque on purpose. At 0.92 alpha, content scrolling under the sticky
+     header showed through it — a section heading passing behind the bar was
+     legible through the surface and read as a collision. A sticky header is
+     an occluding surface; it must actually occlude. */
+  --sj-surface-header: #ffffff;
+
+  /* --- Text ----------------------------------------------------------- */
+  --sj-text-primary: #0f172a;   /* 17.85:1 on background */
+  --sj-text-secondary: #475569; /*  7.58:1 on background */
+  --sj-text-tertiary: #64748b;  /*  4.76:1 on background, 4.55:1 on subtle */
+
+  /* --- Lines ---------------------------------------------------------- */
+  --sj-border: #e2e8f0;
+  --sj-border-strong: #cbd5e1;
+
+  /* --- Interactive ---------------------------------------------------- */
+  --sj-accent: #0e7490;          /* 5.36:1 on background */
+  --sj-accent-hover: #155e75;    /* 7.27:1 on background */
+  --sj-accent-contrast: #ffffff; /* 5.36:1 on --sj-accent */
+  --sj-accent-soft: rgba(14, 116, 144, 0.08);
+
+  /* --- Brand (logo + non-text graphics ONLY; never body text) --------- */
+  --sj-brand: #0c96c8;           /* 3.38:1 — meets non-text 3:1, fails text 4.5:1 */
+
+  /* Until Phase 2A this value was injected site-wide by an inline <style>
+     inside the hero logo SVG, which declared `:root { --color-primary-600 }`.
+     That leak is now scoped to the SVG, so the value is declared here
+     deliberately to keep the current appearance byte-identical.
+     NOTE: components still using Tailwind `*-primary-600` for TEXT remain at
+     3.38:1 and are migrated to --sj-accent in Phase 3. */
+  --color-primary-600: #0c96c8;
+
+  /* --- Focus ---------------------------------------------------------- */
+  --sj-focus-ring: #0e7490;
+  --sj-focus-width: 2px;
+  --sj-focus-offset: 2px;
+
+  /* --- Status --------------------------------------------------------- */
+  --sj-success: #15803d;
+  --sj-warning: #a16207;
+  --sj-danger: #b91c1c;
+
+  /* --- Radii ---------------------------------------------------------- */
+  --sj-radius-sm: 4px;
+  --sj-radius-md: 8px;
+  --sj-radius-lg: 12px;
+  --sj-radius-full: 9999px;
+
+  /* --- Spacing scale (4px base) --------------------------------------- */
+  --sj-space-1: 4px;
+  --sj-space-2: 8px;
+  --sj-space-3: 12px;
+  --sj-space-4: 16px;
+  --sj-space-6: 24px;
+  --sj-space-8: 32px;
+  --sj-space-12: 48px;
+  --sj-space-16: 64px;
+  --sj-space-24: 96px;
+  --sj-space-32: 128px;
+
+  /* --- Section rhythm -------------------------------------------------- */
+  --sj-section-sm: 32px;
+  --sj-section-md: 48px;  /* mobile default */
+  --sj-section-lg: 64px;
+
+  /* --- Containers ------------------------------------------------------ */
+  --sj-container-prose: 68ch;
+  --sj-container-content: 1120px;
+  --sj-container-wide: 1280px;
+
+  /* --- Type scale ------------------------------------------------------ */
+  --sj-text-2xs: 12px;
+  --sj-text-xs: 13px;
+  --sj-text-sm: 14px;
+  --sj-text-base: 16px;
+  --sj-text-lg: 18px;
+  --sj-text-xl: 20px;
+  --sj-text-2xl: 25px;
+  --sj-text-3xl: 31px;
+  --sj-text-4xl: 39px;
+  --sj-text-5xl: 48px;
+  --sj-leading-body: 1.65;
+  --sj-leading-tight: 1.25;
+
+  /* --- Shell ----------------------------------------------------------- */
+  --sj-header-height: 64px;
+
+  /* --- Motion ---------------------------------------------------------- */
+  --sj-duration-instant: 80ms;
+  --sj-duration-fast: 150ms;
+  --sj-duration-base: 240ms;
+  --sj-duration-slow: 400ms;
+  --sj-ease-out: cubic-bezier(0.2, 0.8, 0.3, 1);
+  --sj-ease-in: cubic-bezier(0.4, 0, 0.8, 0.2);
+  --sj-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Elevation (deliberately near-zero) ------------------------------ */
+  --sj-shadow-none: none;
+  --sj-shadow-overlay: 0 8px 24px -8px rgba(15, 23, 42, 0.18);
+
+  /* --- Bridge to HugoBlox header variables -----------------------------
+     assets/css/blox/navbar.css consumes these. Before Phase 2A they were
+     undefined (params.yaml hugoblox.theme.surfaces.header.* are empty
+     strings), which is why the logo's --logo-navy resolved to nothing. */
+  --hb-color-header-bg: var(--sj-surface-header);
+  --hb-color-header-fg: var(--sj-text-primary);
+}
+
+/* Desktop section rhythm */
+@media (min-width: 1024px) {
+  :root {
+    --sj-section-sm: 48px;
+    --sj-section-md: 72px; /* approved desktop default */
+    --sj-section-lg: 96px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Dark mode
+   -------------------------------------------------------------------------- */
+.dark {
+  --sj-background: #0f172a;
+  --sj-background-subtle: #0b1220;
+  --sj-surface: #111c2e;
+  --sj-surface-raised: #18263c;
+  --sj-surface-header: #0f172a; /* opaque — see the light-mode note */
+
+  --sj-text-primary: #f8fafc;   /* 17.06:1 on background */
+  --sj-text-secondary: #94a3b8; /*  6.96:1 on background */
+  --sj-text-tertiary: #8b9bb0;  /*  6.30:1 — NOT #64748b, which is 3.75:1 and fails */
+
+  --sj-border: #1e293b;
+  --sj-border-strong: #334155;
+
+  --sj-accent: #22d3ee;          /* 9.88:1 on background */
+  --sj-accent-hover: #67e8f9;    /* 12.32:1 on background */
+  --sj-accent-contrast: #0f172a; /* 9.88:1 on --sj-accent */
+  --sj-accent-soft: rgba(34, 211, 238, 0.12);
+
+  --sj-focus-ring: #22d3ee;
+
+  --sj-success: #4ade80;
+  --sj-warning: #fbbf24;
+  --sj-danger: #f87171;
+
+  --sj-shadow-overlay: 0 8px 24px -8px rgba(0, 0, 0, 0.6);
+
+  --hb-color-header-bg: var(--sj-surface-header);
+  --hb-color-header-fg: var(--sj-text-primary);
+}
+
+/* No-JS / pre-hydration safety net: only applies when the theme script has
+   not yet resolved a mode and the site default is `system`. */
+@media (prefers-color-scheme: dark) {
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) {
+    --sj-background: #0f172a;
+    --sj-background-subtle: #0b1220;
+    --sj-surface: #111c2e;
+    --sj-surface-raised: #18263c;
+    --sj-surface-header: #0f172a;
+    --sj-text-primary: #f8fafc;
+    --sj-text-secondary: #94a3b8;
+    --sj-text-tertiary: #8b9bb0;
+    --sj-border: #1e293b;
+    --sj-border-strong: #334155;
+    --sj-accent: #22d3ee;
+    --sj-accent-hover: #67e8f9;
+    --sj-accent-contrast: #0f172a;
+    --sj-accent-soft: rgba(34, 211, 238, 0.12);
+    --sj-focus-ring: #22d3ee;
+    --sj-success: #4ade80;
+    --sj-warning: #fbbf24;
+    --sj-danger: #f87171;
+    --hb-color-header-bg: var(--sj-surface-header);
+    --hb-color-header-fg: var(--sj-text-primary);
+  }
+}

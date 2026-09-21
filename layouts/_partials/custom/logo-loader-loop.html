@@ -1,20 +1,22 @@
-<svg xmlns="https://www.w3.org/2000/svg"
-     class="w-full h-auto"
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="sj-logo-loader w-full h-auto"
      viewBox="0 0 776.28 213.14"
      role="img"
-     aria-label="SAJID Lab loading logo">
+     aria-label="SAJID Lab">
 
   <defs>
 
 
   <style>
 
-
-
-    :root {
-      --color-primary-600: #0c96c8;
+    /* Phase 2A: these declarations were previously on `:root`. Inside an
+       inline SVG that matches the DOCUMENT root, so this block was silently
+       redefining --color-primary-600 for the whole site. Now scoped to the
+       SVG itself. The brand value is declared deliberately in
+       assets/css/tokens.css instead. Artwork unchanged. */
+    .sj-logo-loader {
       --logo-navy: currentColor;
-      --logo-teal: var(--color-primary-600);
+      --logo-teal: var(--sj-brand, #0c96c8);
       --logo-slate: #5B6475;
     }
 

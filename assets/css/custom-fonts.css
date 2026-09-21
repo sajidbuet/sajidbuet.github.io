@@ -1,9 +1,9 @@
-#site-header.header {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(14px) saturate(180%);
-    -webkit-backdrop-filter: blur(14px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  }
+/* Phase 2A: a duplicate copy of the hardcoded light-only header treatment
+   lived here as well as in custom.css. It is removed — the header surface is
+   now a semantic token (--sj-surface-header) defined in tokens.css.
+   NOTE: this file is not referenced by site_head.html or main.css, so it
+   appears to be unloaded; the Bengali @font-face below is therefore likely
+   inert. Flagged for a separate task rather than changed here. */
 
   @font-face {
     font-family: "BCC Purno Bangla";

@@ -1,31 +1,602 @@
+/* ==========================================================================
+   SAJID.BD — Global foundation (Phase 2A)
+
+   Loaded AFTER the Tailwind bundle, concatenated with tokens.css by
+   layouts/_partials/site_head.html. Plain CSS only — this file is not run
+   through Tailwind, so `@apply` is unavailable here by design.
+
+   Scope: global shell, focus, motion, primitives. Page-specific block
+   redesigns belong to Phase 3+.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Sticky-header scroll offset — one reusable rule, no per-page hacks
+
+   Any in-page anchor target must come to rest BELOW the sticky header, not
+   underneath it. Two complementary mechanisms:
+
+   - `scroll-padding-top` on the scroll container handles every anchor jump
+     (menu links, TOC links, `location.hash`, browser back/forward restore).
+   - `scroll-margin-top` on the elements that are actually targeted covers
+     `scrollIntoView()` calls made by scripts that bypass scroll padding.
+
+   Both derive from --sj-header-height, so changing the shell height in
+   tokens.css is the only edit ever required. HugoBlox's hb-nav.js also sets
+   `scrollPaddingTop` imperatively from the measured header height; that now
+   acts as a refinement on top of this CSS baseline rather than the only
+   thing standing between an anchor and the header.
+   -------------------------------------------------------------------------- */
+html {
+  scroll-padding-top: var(--sj-header-height);
+}
+
+/* These two DO stack: the target's margin box is aligned to the scrollport's
+   padding edge, so the total offset is header-height + this value.
+   `scroll-margin-top` is therefore a small comfort gap, not a second copy of
+   the header height — setting it to the full 64px landed anchors 129px down
+   with a band of dead space above the heading. */
+:target,
+main [id],
+section[id],
+.page-body [id] {
+  scroll-margin-top: var(--sj-space-2);
+}
+
+/* --------------------------------------------------------------------------
+   1. Skip link
+   -------------------------------------------------------------------------- */
+.sj-skip-link {
+  position: absolute;
+  left: var(--sj-space-4);
+  top: var(--sj-space-2);
+  z-index: 100;
+  transform: translateY(-200%);
+  display: inline-block;
+  padding: var(--sj-space-3) var(--sj-space-4);
+  border-radius: var(--sj-radius-md);
+  background-color: var(--sj-accent);
+  color: var(--sj-accent-contrast);
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--sj-shadow-overlay);
+  transition: transform var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-skip-link:focus-visible,
+.sj-skip-link:focus {
+  transform: translateY(0);
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: var(--sj-focus-offset);
+}
+
+/* --------------------------------------------------------------------------
+   2. Focus system — one coherent treatment, applied via :focus-visible only
+   -------------------------------------------------------------------------- */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: var(--sj-focus-offset);
+  border-radius: var(--sj-radius-sm);
+}
+
+/* Never remove focus without replacement. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. Header / shell
+   Replaces the previous hardcoded rgba(255,255,255,.65) + backdrop-filter,
+   which rendered white-on-white in dark mode (visual-audit P0-02).
+   -------------------------------------------------------------------------- */
 #site-header.header {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(14px) saturate(180%);
-    -webkit-backdrop-filter: blur(14px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: var(--sj-surface-header);
+  color: var(--sj-text-primary);
+  border-bottom: 1px solid var(--sj-border);
+  box-shadow: none;
+  /* Overrides `@apply py-3` in assets/css/blox/navbar.css. The shell height
+     is defined by .navbar's min-height alone, so it lands on the 64px target
+     rather than 64 + 2x12 padding = 88. */
+  padding-top: 0;
+  padding-bottom: 0;
+  /* backdrop-filter intentionally removed: 19 instances per page measured,
+     expensive to composite and the direct cause of the dark-mode failure. */
+}
+
+#site-header.header .navbar {
+  min-height: var(--sj-header-height);
+  gap: var(--sj-space-2);
+}
+
+/* Brand ------------------------------------------------------------------- */
+#site-header .navbar-brand {
+  color: var(--sj-text-primary);
+  border-radius: var(--sj-radius-sm);
+  transition: opacity var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+#site-header .navbar-brand:hover {
+  opacity: 0.85;
+  /* No lift, no scale — a brand mark should not move under the pointer. */
+  transform: none;
+}
+
+#site-header .navbar-brand svg {
+  height: auto;
+  max-height: 44px;
+  width: 100%;
+}
+
+/* Nav links + circuit-trace active indicator ------------------------------ */
+#site-header .nav-link {
+  position: relative;
+  color: var(--sj-text-secondary);
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  border-radius: var(--sj-radius-sm);
+  transition: color var(--sj-duration-instant) var(--sj-ease-out);
+}
+
+#site-header .nav-link:hover {
+  color: var(--sj-accent);
+}
+
+.dark #site-header .nav-link:hover {
+  color: var(--sj-accent);
+}
+
+#site-header .nav-link.active {
+  color: var(--sj-text-primary);
+}
+
+/* The one visual signature: a 2px accent trace terminating in a small node. */
+@media (min-width: 1024px) {
+  #site-header .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: var(--sj-space-2);
+    right: var(--sj-space-2);
+    bottom: 6px;
+    height: 2px;
+    background-color: var(--sj-accent);
+    border-radius: 1px;
   }
-  .hero-richtext a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-    background-position: 0 100%;
-    transition:
-      color 0.25s ease,
-      background-size 0.25s ease,
-      background-position 0.25s ease;
-    font-weight: 600;
+
+  #site-header .nav-link.active::before {
+    content: "";
+    position: absolute;
+    right: calc(var(--sj-space-2) - 2px);
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: var(--sj-radius-full);
+    background-color: var(--sj-accent);
   }
-  
-  .hero-richtext a:hover {
-    background-size: 100% 2px;
-    background-position: 0 calc(100% - 1px);
+}
+
+/* Mobile: the same circuit-trace vocabulary, rotated to the leading edge.
+   Deliberately SHORT — a 20px trace on a 48px row, plus its terminal node.
+   It marks the row without enclosing or underlining it. */
+@media (max-width: 1023.98px) {
+  #site-header #nav-menu .nav-link {
+    position: relative;
+    border-radius: var(--sj-radius-sm);
   }
-  
-  .hero-richtext a {
-    color: var(--color-primary-600);
+
+  #site-header #nav-menu .nav-link.active {
+    color: var(--sj-accent);
+    box-shadow: none;
   }
-  
-  .dark .hero-richtext a {
-    color: var(--color-primary-400);
+
+  /* the trace */
+  #site-header #nav-menu .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    width: 2px;
+    height: 20px;
+    margin-top: -10px;
+    border-radius: 1px;
+    background-color: var(--sj-accent);
   }
+
+  /* its terminal node */
+  #site-header #nav-menu .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -13px;
+    border-radius: var(--sj-radius-full);
+    background-color: var(--sj-accent);
+  }
+
+  /* Keyboard focus stays clearly visible but is CONTAINED within the row.
+     Previously `outline-offset: 2px` on a 366x48 block link drew a 2px ring
+     OUTSIDE the row, which read as two long cyan rules floating across the
+     panel. Inset by 2px with a soft tint it reads as a focused row.
+     Distinct from active: focus = tinted fill + ring, active = trace + node
+     + accent label. A row that is both shows both. */
+  #site-header #nav-menu .nav-link:focus-visible {
+    outline: 2px solid var(--sj-focus-ring);
+    outline-offset: -2px;
+    background-color: var(--sj-accent-soft);
+  }
+}
+
+/* Header icon controls ---------------------------------------------------- */
+#site-header .navbar button,
+#site-header .navbar .theme-toggle,
+#site-header [data-search-toggle] {
+  color: var(--sj-text-secondary);
+  border-radius: var(--sj-radius-sm);
+  transition: color var(--sj-duration-instant) var(--sj-ease-out);
+}
+
+#site-header .navbar button:hover,
+#site-header [data-search-toggle]:hover {
+  color: var(--sj-accent);
+}
+
+/* WCAG 2.2 SC 2.5.8 — the search and theme toggles measured 40x16 and 24x18. */
+#site-header [data-search-toggle],
+#site-header .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* The nav toggle gets the same target size, but MUST NOT declare `display`
+   here: `#site-header .sj-nav-toggle` (ID specificity) would beat Tailwind's
+   `lg:hidden` utility and leave the hamburger visible on desktop. Display is
+   set only inside the mobile media query below. */
+#site-header .sj-nav-toggle {
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 1023.98px) {
+  #site-header .sj-nav-toggle {
+    display: inline-flex;
+  }
+}
+
+#site-header .theme-toggle {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile navigation panel
+   -------------------------------------------------------------------------- */
+.sj-nav-toggle {
+  color: var(--sj-text-secondary);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.sj-nav-toggle:hover {
+  color: var(--sj-accent);
+}
+
+.sj-nav-toggle .sj-nav-icon-close {
+  display: none;
+}
+
+.sj-nav-toggle[aria-expanded="true"] .sj-nav-icon-open {
+  display: none;
+}
+
+.sj-nav-toggle[aria-expanded="true"] .sj-nav-icon-close {
+  display: block;
+}
+
+@media (max-width: 1023.98px) {
+  #nav-menu {
+    display: none;
+    border-top: 1px solid var(--sj-border);
+    margin-top: var(--sj-space-2);
+    padding-top: var(--sj-space-2);
+    padding-bottom: var(--sj-space-2);
+    max-height: calc(100vh - var(--sj-header-height) - var(--sj-space-8));
+    overflow-y: auto;
+  }
+
+  #nav-menu.sj-open {
+    display: block;
+  }
+
+  #nav-menu .nav-link {
+    display: block;
+    text-align: left;
+    font-size: var(--sj-text-base);
+    min-height: 48px;
+    line-height: 1.5;
+    padding: var(--sj-space-3) var(--sj-space-4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Surfaces — border-based elevation, near-zero shadow
+   -------------------------------------------------------------------------- */
+.sj-surface {
+  background-color: var(--sj-surface);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  box-shadow: var(--sj-shadow-none);
+  transition: border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-surface:hover {
+  border-color: var(--sj-border-strong);
+}
+
+/* --------------------------------------------------------------------------
+   6. Button and link primitives
+   -------------------------------------------------------------------------- */
+.sj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sj-space-2);
+  min-height: 44px;
+  padding: var(--sj-space-3) var(--sj-space-6);
+  border-radius: var(--sj-radius-md);
+  border: 1px solid transparent;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--sj-duration-instant) var(--sj-ease-out),
+    border-color var(--sj-duration-instant) var(--sj-ease-out),
+    color var(--sj-duration-instant) var(--sj-ease-out);
+}
+
+.sj-btn--primary {
+  background-color: var(--sj-accent);
+  color: var(--sj-accent-contrast);
+}
+
+.sj-btn--primary:hover {
+  background-color: var(--sj-accent-hover);
+}
+
+.sj-btn--secondary {
+  background-color: transparent;
+  border-color: var(--sj-border-strong);
+  color: var(--sj-text-primary);
+}
+
+.sj-btn--secondary:hover {
+  border-color: var(--sj-accent);
+  color: var(--sj-accent);
+}
+
+.sj-btn--tertiary {
+  min-height: 0;
+  padding: var(--sj-space-2) 0;
+  background: none;
+  color: var(--sj-accent);
+}
+
+.sj-btn--tertiary:hover {
+  color: var(--sj-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Prose links: never colour alone. */
+.prose :where(a):not(.sj-btn):not([class*="no-underline"]) {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.prose :where(a):not(.sj-btn):hover {
+  color: var(--sj-accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Typography foundation
+   -------------------------------------------------------------------------- */
+body {
+  font-size: var(--sj-text-base);
+  line-height: var(--sj-leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Long-form measure. Applied to prose containers only, so listing grids and
+   dashboards are unaffected. */
+.prose {
+  max-width: var(--sj-container-prose);
+}
+
+.prose :where(p, li) {
+  line-height: var(--sj-leading-body);
+}
+
+/* Headings bind to the content below them. */
+.prose :where(h2, h3, h4) {
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: var(--sj-leading-tight);
+}
+
+/* Layout containers */
+.sj-container-content {
+  max-width: var(--sj-container-content);
+  margin-inline: auto;
+  padding-inline: var(--sj-space-4);
+}
+
+.sj-container-wide {
+  max-width: var(--sj-container-wide);
+  margin-inline: auto;
+  padding-inline: var(--sj-space-4);
+}
+
+@media (min-width: 640px) {
+  .sj-container-content,
+  .sj-container-wide {
+    padding-inline: var(--sj-space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sj-container-content,
+  .sj-container-wide {
+    padding-inline: var(--sj-space-8);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Footer
+   -------------------------------------------------------------------------- */
+.page-footer {
+  background-color: var(--sj-background-subtle);
+  border-top: 1px solid var(--sj-border);
+  color: var(--sj-text-secondary);
+}
+
+.page-footer a {
+  color: var(--sj-text-secondary);
+  border-radius: var(--sj-radius-sm);
+  transition: color var(--sj-duration-instant) var(--sj-ease-out);
+}
+
+.page-footer a:hover {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   8b. Navbar wordmark
+   These rules previously lived in an inline <style> inside
+   layouts/_partials/custom/logo.html, where their text was announced by
+   screen readers as the brand link's accessible name and their `:root`
+   block leaked variables into the document. Artwork is unchanged.
+   -------------------------------------------------------------------------- */
+.sj-logo {
+  --logo-navy: var(--sj-text-primary);
+  --logo-teal: var(--sj-brand);
+  --logo-slate: var(--sj-text-secondary);
+}
+
+.sj-logo .no-fill { fill: none; }
+.sj-logo .fill-navy { fill: var(--logo-navy); }
+.sj-logo .fill-teal { fill: var(--logo-teal); }
+.sj-logo .fill-slate { fill: var(--logo-slate); }
+
+.sj-logo .stroke-teal-thin,
+.sj-logo .stroke-teal {
+  fill: none;
+  stroke: var(--logo-teal);
+  stroke-miterlimit: 10;
+}
+
+.sj-logo .stroke-teal-thin {
+  stroke-linecap: round;
+  stroke-width: 3px;
+}
+
+.sj-logo .stroke-teal {
+  stroke-width: 6px;
+}
+
+.sj-logo .font-tagline,
+.sj-logo .font-lab {
+  font-family: Arial-BoldMT, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.sj-logo .font-tagline { font-size: 35.71px; }
+.sj-logo .font-lab { font-size: 156.22px; }
+.sj-logo .tight-space { letter-spacing: -0.04em; }
+
+/* --------------------------------------------------------------------------
+   9. Hero rich text (retained from the previous custom.css, re-tokenised)
+   -------------------------------------------------------------------------- */
+.hero-richtext a {
+  text-decoration: none;
+  color: var(--sj-accent);
+  font-weight: 600;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  transition:
+    color var(--sj-duration-fast) var(--sj-ease-out),
+    background-size var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.hero-richtext a:hover {
+  color: var(--sj-accent-hover);
+  background-size: 100% 2px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Motion discipline
+   -------------------------------------------------------------------------- */
+
+/* No content surface moves simply because the pointer entered it. */
+.sj-surface:hover,
+.sj-btn:hover {
+  transform: none;
+}
+
+/* Global reduced-motion contract.
+   `animation-iteration-count: 1` rather than `animation: none` — this is
+   deliberate. A scroll-reveal that starts at opacity:0 and is switched off
+   entirely leaves its content permanently invisible (visual-audit P1-05).
+   Forcing a single near-instant iteration lets such animations run to their
+   end state, so content finishes VISIBLE. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Content must never be left hidden when motion is reduced.
+
+     `.stats-item` is the scroll-reveal marker applied by the upstream stats
+     block (_vendor/.../blox/blox/stats/block.html): it sets
+     `opacity: 0; transform: translateY(30px)` and relies on an
+     IntersectionObserver to add `.animate`. That block also tags
+     `[class*="grid"] > div` with the same class, so the homepage research
+     cards inherit the behaviour. With motion reduced the reveal is pointless
+     and the risk of content staying invisible is real, so the end state is
+     forced here. Verified by measurement, not assumption — see
+     docs/redesign/evidence/phase2a-qa.json (`reducedMotion`).
+
+     Deliberately NOT a blanket `[style*="opacity"]` or `* { opacity: 1 }`
+     rule: decorative hover overlays such as
+     `.absolute.inset-0.bg-gradient-to-br` legitimately rest at opacity 0. */
+  .stats-item,
+  [data-aos],
+  .reveal,
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0ms !important;
+  }
+}

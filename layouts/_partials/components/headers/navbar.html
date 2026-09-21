@@ -3,55 +3,108 @@
 {{- $show_logo := site.Params.hugoblox.header.show_logo | default true -}}
 {{- $show_title := site.Params.hugoblox.header.show_title | default true -}}
 {{- $navbar_title := site.Params.hugoblox.header.title | default $branding.name -}}
+
+{{/* ---------------------------------------------------------------------
+     Active-state resolution (Phase 2A).
+
+     The previous logic was `eq (.URL | absLangURL) (.Permalink | absLangURL)`,
+     which can never be true for an anchor menu item such as `/#research`,
+     so no item was EVER marked active.
+
+     Two cases are handled now:
+       1. Real page URLs  -> matched here, server-side, including descendants
+                             (a `/research/` item is active on
+                             `/research/photonics/`).
+       2. Homepage anchors -> cannot be resolved server-side; the item is
+                             tagged with `data-nav-anchor` and assets/js/
+                             sajid-nav.js applies `.active` via a scroll-spy.
+
+     No route semantics are changed.
+     --------------------------------------------------------------------- */}}
+{{- $pagePath := strings.TrimSuffix "/" .RelPermalink -}}
+{{- if eq $pagePath "" }}{{ $pagePath = "/" }}{{ end -}}
+{{- $homePath := strings.TrimSuffix "/" site.Home.RelPermalink -}}
+{{- if eq $homePath "" }}{{ $homePath = "/" }}{{ end -}}
+
 <header id="site-header" class="header">
-  <nav class="navbar px-3 flex justify-start">
-<div class="order-0 h-full">
-  <!-- Brand -->
-  <a
-    class="navbar-brand group inline-flex items-center transition duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02]"
-    href="{{ site.Home.RelPermalink }}"
-    title="{{ $branding.site_title }}">
+  <nav class="navbar px-3 flex justify-start" aria-label="{{ i18n "nav_primary" | default "Primary" }}">
+    <div class="order-0 h-full">
+      <!-- Brand -->
+      <a
+        class="navbar-brand group inline-flex items-center"
+        href="{{ site.Home.RelPermalink }}"
+        aria-label="{{ $branding.site_title }} — {{ i18n "home" | default "Home" }}">
 
-    {{ if $show_logo }}
-      <div class="block h-auto w-[220px] max-w-[38vw] sm:w-[260px] lg:w-[300px]
-                  transition duration-300 ease-out
-                  group-hover:drop-shadow-md">
-        {{ partial "custom/logo.html" . }}
-      </div>
-    {{ end }}
+        {{ if $show_logo }}
+          {{/* Brand width is stepped down at `lg` on purpose. Measured at
+               1024px: brand 260 + menu 637 + controls ~96 = 993+ and the
+               navbar wrapped to a second row (header grew 64 -> 116px).
+               200px at lg keeps the desktop menu on one line at 1024 without
+               moving the lg breakpoint. */}}
+          <div class="block h-auto w-[190px] max-w-[46vw] sm:w-[220px] lg:w-[200px] xl:w-[240px]">
+            {{ partial "custom/logo.html" . }}
+          </div>
+        {{ end }}
 
-    {{ if $show_title }}{{ $navbar_title }}{{ end }}
-  </a>
-</div>
-    <!-- Mobile menu -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-[var(--hb-color-header-fg)] lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Open Menu</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+        {{ if $show_title }}{{ $navbar_title }}{{ end }}
+      </a>
+    </div>
+
+    <!-- Mobile menu trigger: a real button (was a display:none checkbox +
+         non-focusable label, which made the menu unreachable by keyboard) -->
+    <button
+      type="button"
+      id="nav-toggle"
+      class="sj-nav-toggle order-3 lg:hidden lg:order-1"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="{{ i18n "nav_toggle" | default "Open menu" }}"
+      data-label-open="{{ i18n "nav_toggle" | default "Open menu" }}"
+      data-label-close="{{ i18n "nav_toggle_close" | default "Close menu" }}">
+      <svg class="sj-nav-icon-open h-6 w-6 fill-current" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0v-2z"></path>
       </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Close Menu</title>
+      <svg class="sj-nav-icon-close h-6 w-6 fill-current" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
         <polygon
           points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
           transform="rotate(45 10 10)"></polygon>
       </svg>
-    </label>
-    <!-- /Mobile menu -->
+    </button>
+    <!-- /Mobile menu trigger -->
 
     <!-- Main menu -->
     {{ $align_menu := site.Params.hugoblox.header.align | default "center" }}
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-start
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-1 lg:pb-0 xl:space-x-4 justify-start
       {{ if in (slice "l" "left") $align_menu }}mr-auto ml-6{{ else if (in (slice "r" "right") $align_menu) }}ml-auto mr-6{{end}}">
-      {{ $currentPage := . }}
       {{ range site.Menus.main }}
-      {{ $menuURL := .URL | absLangURL }}
-      {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-      {{ $active := eq $menuURL $pageURL }}
+      {{- $raw := .URL -}}
+      {{- $anchor := "" -}}
+      {{- if strings.Contains $raw "#" -}}
+        {{- $anchor = index (split $raw "#") 1 -}}
+      {{- end -}}
+
+      {{/* Resolve the href exactly as before — routes are unchanged. */}}
+      {{- $url := "" -}}
+      {{- if findRE `^#` $raw -}}
+        {{- $url = $raw -}}
+      {{- else -}}
+        {{- $url = $raw | relLangURL -}}
+      {{- end -}}
+
+      {{/* Static active resolution for real page destinations only. */}}
+      {{- $active := false -}}
+      {{- if not $anchor -}}
+        {{- $itemPath := strings.TrimSuffix "/" (urls.Parse ($raw | relLangURL)).Path -}}
+        {{- if eq $itemPath "" }}{{ $itemPath = "/" }}{{ end -}}
+        {{- if ne $itemPath "/" -}}
+          {{- $active = or (eq $pagePath $itemPath) (hasPrefix $pagePath (printf "%s/" $itemPath)) -}}
+        {{- else -}}
+          {{- $active = eq $pagePath $homePath -}}
+        {{- end -}}
+      {{- end -}}
+
       {{ if .HasChildren }}
       <li class="nav-item nav-dropdown group relative">
             <span
@@ -61,11 +114,11 @@
               aria-expanded="false"
               class="nav-link cursor-pointer select-none {{ range .Children }}
                 {{ $childURL := .URL | absLangURL }}
-                {{ $active := eq $childURL $pageURL }}
-                {{ if $active }}active{{ end }}
+                {{ $childActive := eq $childURL $.Permalink }}
+                {{ if $childActive }}active{{ end }}
               {{ end }} inline-flex items-center">
               {{ .Name }}
-              <svg class="h-4 w-4 fill-current inline-block" viewBox="0 0 20 20">
+              <svg class="h-4 w-4 fill-current inline-block" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                 <path
                   d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
@@ -74,23 +127,20 @@
           class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
           {{ range .Children }}
           {{ $childURL := .URL | absLangURL }}
-          {{ $active := eq $childURL $pageURL }}
-          {{ $url := "" }}
+          {{ $childActive := eq $childURL $.Permalink }}
+          {{ $curl := "" }}
           {{- if findRE `^#` .URL -}}
-            {{- if not $.IsHome -}}
-              {{- $url = site.Home.RelPermalink -}}
-            {{- end }}
-            {{- $url = .URL -}}
+            {{- $curl = .URL -}}
           {{- else -}}
-            {{- $url = .URL | relLangURL -}}
+            {{- $curl = .URL | relLangURL -}}
           {{- end -}}
           <li class="nav-dropdown-item">
             <a
-              class="nav-dropdown-link {{ if $active }}active{{- end -}}"
+              class="nav-dropdown-link {{ if $childActive }}active{{- end -}}"
               {{ if findRE `^http` .URL }}
               target="_blank" rel="noopener"
               {{ end }}
-              href="{{$url}}">
+              href="{{$curl}}">
               {{ .Name }}
             </a>
           </li>
@@ -98,18 +148,11 @@
         </ul>
       </li>
       {{ else }}
-      {{ $url := "" }}
-      {{- if findRE `^#` .URL -}}
-        {{- if not $.IsHome -}}
-          {{- $url = site.Home.RelPermalink -}}
-        {{- end }}
-        {{- $url = .URL -}}
-        {{- else -}}
-        {{- $url = .URL | relLangURL -}}
-      {{- end -}}
       <li class="nav-item">
         <a
-          class="nav-link {{ if $active }}active{{- end -}}"
+          class="nav-link {{ if $active }}active{{ end }}"
+          {{ if $active }}aria-current="page"{{ end }}
+          {{ with $anchor }}data-nav-anchor="{{ . }}"{{ end }}
           {{ if findRE `^http` .URL }}
           target="_blank" rel="noopener"
           {{ end }}
@@ -120,9 +163,9 @@
       {{ end }}
       {{ end }}
       {{ if site.Params.hugoblox.header.cta.enable }}
-      <li class="mt-4 inline-block lg:hidden">
+      <li class="mt-4 inline-block lg:hidden px-4">
         <a
-          class=""
+          class="sj-btn sj-btn--primary w-full"
           href="{{ site.Params.hugoblox.header.cta.url | relLangURL }}">
           {{ site.Params.hugoblox.header.cta.text }}
         </a>
@@ -130,32 +173,36 @@
       {{ end }}
     </ul>
 
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    <div class="order-1 ml-auto flex items-center gap-1 md:order-2 lg:ml-0">
 
       {{/* Show site search? */}}
       {{ $show_search := site.Params.hugoblox.header.search | default false }}
       {{ with $show_search }}
       <button
-        aria-label="toggle search"
-        class="inline-block px-3 text-xl text-[var(--hb-color-header-fg)] hover:text-primary-500 cursor-pointer"
+        type="button"
+        aria-label="{{ i18n "search" | default "Toggle search" }}"
+        class="cursor-pointer"
         data-search-toggle>
-        <svg xmlns="https://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       {{ end }}
 
       {{ $show_mode_toggle := site.Params.hugoblox.header.theme_toggle | default true }}
       {{ if $show_mode_toggle }}
-      <div class="px-3 text-[var(--hb-color-header-fg)] hover:text-primary-500
-            [&.active]:font-bold [&.active]:text-primary-500">
-        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
-          <svg id="moon" xmlns="https://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+        <button
+          type="button"
+          class="theme-toggle cursor-pointer"
+          accesskey="t"
+          aria-label="{{ i18n "appearance" | default "Toggle light and dark appearance" }}"
+          title="{{ i18n "appearance" | default "Appearance" }}">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class="block dark:hidden">
+               stroke-linejoin="round" class="block dark:hidden" aria-hidden="true" focusable="false">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-          <svg id="sun" xmlns="https://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class="hidden dark:block">
+               stroke-linejoin="round" class="hidden dark:block" aria-hidden="true" focusable="false">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -167,13 +214,12 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
         </button>
-      </div>
       {{ end }}
 
       {{/* Theme Picker */}}
       {{ if site.Params.hugoblox.header.theme_picker }}
       <div class="px-3">
-        <select onchange="document.documentElement.setAttribute('data-theme-pack', this.value); localStorage.setItem('hb-theme-pack', this.value);" class="bg-transparent text-[var(--hb-color-header-fg)] border-none focus:ring-0 cursor-pointer text-sm font-medium">
+        <select aria-label="{{ i18n "theme" | default "Theme" }}" onchange="document.documentElement.setAttribute('data-theme-pack', this.value); localStorage.setItem('hb-theme-pack', this.value);" class="bg-transparent text-[var(--hb-color-header-fg)] border-none focus:ring-0 cursor-pointer text-sm font-medium">
           <option value="">Theme</option>
           {{ range $name, $data := site.Data.themes }}
             <option value="{{ $name }}">{{ $name | humanize }}</option>
@@ -184,7 +230,6 @@
             const savedTheme = localStorage.getItem('hb-theme-pack');
             if (savedTheme) {
               document.documentElement.setAttribute('data-theme-pack', savedTheme);
-              // Defer selecting the option until DOM is ready
               document.addEventListener('DOMContentLoaded', () => {
                 const select = document.querySelector('select[onchange*="data-theme-pack"]');
                 if (select) select.value = savedTheme;
@@ -197,8 +242,7 @@
 
       {{ $show_translations := site.Params.hugoblox.header.language_switcher | default true }}
       {{ if .IsTranslated | and $show_translations }}
-      <div class="pl-1 mr-5 text-[var(--hb-color-header-fg)] hover:text-primary-500
-            [&.active]:font-bold [&.active]:text-primary-500">
+      <div class="pl-1 mr-2 text-[var(--hb-color-header-fg)]">
         {{- partial "components/language-chooser.html" (dict "page" .) -}}
       </div>
       {{ end }}
@@ -207,10 +251,7 @@
       {{ if site.Params.hugoblox.header.cta.enable }}
       <a
         href="{{ site.Params.hugoblox.header.cta.url | relLangURL }}"
-        class="inline-block rounded border px-5 py-2 font-semibold transition
-        md:ml-4 px-4 py-1.5 text-sm
-        border-black  hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white
-        hidden lg:inline-block">
+        class="sj-btn sj-btn--secondary ml-2 hidden lg:inline-flex">
         {{ site.Params.hugoblox.header.cta.text }}
       </a>
       {{ end }}
