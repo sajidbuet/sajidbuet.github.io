@@ -1,0 +1,26 @@
+{
+  "navToggleInput": "{\"display\":\"none\",\"visibility\":\"visible\",\"tabIndex\":0,\"focusable\":false,\"type\":\"checkbox\"}",
+  "mobileMenuAfterLabelClick": "{\"total\":9,\"visible\":9,\"menuRect\":[12,62,366,456],\"firstLinkH\":48,\"linkHeights\":[48,48,48,48,48,48,48,48,48],\"docScrollH\":19571,\"inner\":844,\"headerBg\":\"rgba(255, 255, 255, 0.65)\"}",
+  "keyboardCanOpenMenu": "{\"inputTabIndex\":0,\"inputDisplay\":\"none\",\"labelTabIndex\":-1,\"labelIsFocusable\":false,\"labelRole\":null,\"ariaExpanded\":null}",
+  "darkHeader": "{\"bg\":\"rgba(255, 255, 255, 0.65)\",\"backdrop\":\"blur(14px) saturate(1.8)\",\"borderBottom\":\"rgba(255, 255, 255, 0.18)\",\"position\":\"static\",\"top\":0,\"navLinkColor\":\"rgb(248, 250, 252)\",\"headerFgVar\":\"\"}",
+  "stickyChain": "[\"HEADER#site-header.header => static top:auto z:auto\",\"DIV.page-header sticky top-0 z-30 => sticky top:0px z:30\",\"BODY#top.bg-[var(--color-background)] text-[var(- => static top:auto z:auto\"]",
+  "pubList": "{\"h1\":[\"Publications\"],\"main\":false,\"itemCount\":173,\"docH\":8469,\"paginator\":false,\"filterUI\":false}",
+  "h1Scan": [
+    "{\"p\":\"/\",\"h1\":0,\"h1txt\":[],\"main\":0,\"title\":\"SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":12728}",
+    "{\"p\":\"/research/\",\"h1\":1,\"h1txt\":[\"Research\"],\"main\":0,\"title\":\"Research | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":3371}",
+    "{\"p\":\"/research/photonics/\",\"h1\":1,\"h1txt\":[\"Photonic Systems\"],\"main\":0,\"title\":\"Photonic-Systems | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":2459}",
+    "{\"p\":\"/publication/\",\"h1\":1,\"h1txt\":[\"Publications\"],\"main\":0,\"title\":\"Publications | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":8469}",
+    "{\"p\":\"/publication/j-029/\",\"h1\":1,\"h1txt\":[\"Steane $[[7,1,3]]$ outer coding for loss-tole\"],\"main\":1,\"title\":\"Steane $[[7,1,3]]$ outer coding for loss-tolerant one-way qu\",\"desc\":\"Long-distance quantum communication requires architectures t\",\"firstH\":\"H3:No results found\",\"docH\":2883}",
+    "{\"p\":\"/authors/\",\"h1\":0,\"h1txt\":[],\"main\":0,\"title\":\"Our Team | SAJID Lab\",\"desc\":\"Meet Our Research Team Our lab brings together talented rese\",\"firstH\":\"H3:No results found\",\"docH\":3603}",
+    "{\"p\":\"/authors/me/\",\"h1\":1,\"h1txt\":[\"Dr. Sajid Muhaimin Choudhury\"],\"main\":0,\"title\":\"SAJID Lab\",\"desc\":\"Dr. Sajid Choudhury is working as a Professor in the Departm\",\"firstH\":\"H3:No results found\",\"docH\":2127}",
+    "{\"p\":\"/teaching/\",\"h1\":1,\"h1txt\":[\"Courses Offered\"],\"main\":0,\"title\":\"Courses Offered | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":1580}",
+    "{\"p\":\"/teaching/jul2025_eee303/\",\"h1\":4,\"h1txt\":[\"EEE 303 (Jul 2025)\",\"Course Outcomes\",\"Textbooks\",\"Additional Resources\"],\"main\":1,\"title\":\"EEE 303 (Jul 2025) | SAJID Lab\",\"desc\":\"Digital Electronics\",\"firstH\":\"H3:No results found\",\"docH\":4061}",
+    "{\"p\":\"/projects/\",\"h1\":1,\"h1txt\":[\"Projects\"],\"main\":0,\"title\":\"Projects | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":1051}",
+    "{\"p\":\"/news/\",\"h1\":1,\"h1txt\":[\"Latest News\"],\"main\":0,\"title\":\"Latest News | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":7084}",
+    "{\"p\":\"/news/2025-09-24-puja-defends/\",\"h1\":1,\"h1txt\":[\"Puja Das Defends MSc Thesis\"],\"main\":1,\"title\":\"Puja Das Defends MSc Thesis | SAJID Lab\",\"desc\":\"Congratulations to Puja Das for defending MSc. Thesis Titled\",\"firstH\":\"H3:No results found\",\"docH\":1607}",
+    "{\"p\":\"/outreach/\",\"h1\":0,\"h1txt\":[],\"main\":0,\"title\":\"Outreach | SAJID Lab\",\"desc\":\"Smart and Advanced Junctions of Intelligent Devices. Researc\",\"firstH\":\"H3:No results found\",\"docH\":1690}",
+    "{\"p\":\"/outreach/blog/\",\"h1\":1,\"h1txt\":[\"Blog\"],\"main\":0,\"title\":\"Blog | SAJID Lab\",\"desc\":\"A collection of my blog articles\",\"firstH\":\"H3:No results found\",\"docH\":3448}",
+    "{\"p\":\"/outreach/templates/\",\"h1\":1,\"h1txt\":[\"Templates\"],\"main\":0,\"title\":\"Templates | SAJID Lab\",\"desc\":\"Templates from Q-PACERS Lab\",\"firstH\":\"H3:No results found\",\"docH\":1318}",
+    "{\"p\":\"/people/\",\"h1\":0,\"h1txt\":[],\"main\":0,\"title\":\"Our Team | SAJID Lab\",\"desc\":\"Meet Our Research Team Our lab brings together talented rese\",\"firstH\":\"H3:No results found\",\"docH\":3559}"
+  ]
+}

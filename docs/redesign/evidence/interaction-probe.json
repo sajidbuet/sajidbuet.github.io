@@ -1,0 +1,18 @@
+{
+  "statsBeforeScroll": "{\"opacity\":\"1\",\"visibility\":\"visible\",\"color\":\"rgb(17, 24, 39)\",\"transform\":\"none\",\"ancestorOpacity\":\"1\",\"ancestorTransform\":\"none\",\"rectTop\":1063,\"rectH\":72,\"wrapperOpacity\":[\"DIV.group relative bg-white dark:bg-gray-800 rounded-2=0\"]}",
+  "statsAfterScroll": "{\"opacity\":\"1\",\"color\":\"rgb(17, 24, 39)\",\"transform\":\"none\",\"top\":133,\"wrapperOpacity\":[]}",
+  "headerAfterScroll": "{\"top\":0,\"position\":\"static\",\"bg\":\"rgba(255, 255, 255, 0.65)\",\"zIndex\":\"auto\"}",
+  "tabOrder": [
+    "{\"tag\":\"A\",\"cls\":\"navbar-brand group inline-flex items-center transi\",\"txt\":\":root { --logo-navy: var(--hb-\",\"outline\":\"auto 1px rgb(16, 17, 18)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[12,12,300,50]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Home\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[358,13,60,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Research\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[450,13,80,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Funding\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[562,13,76,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Team\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[670,13,54,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Publications\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[756,13,104,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Teaching\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[892,13,80,48]}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"News\",\"outline\":\"auto 1px rgb(16, 16, 16)\",\"offset\":\"1px\",\"shadow\":\"none\",\"matchesFV\":true,\"rect\":[1004,13,56,48]}"
+  ],
+  "mobileToggle": "[{\"cls\":\"inline-block px-3 text-xl text-[var(--hb-color-header-fg)] h\",\"al\":\"toggle search\",\"ae\":null,\"ac\":null,\"r\":[40,16]},{\"cls\":\"theme-toggle mt-1\",\"al\":null,\"ae\":null,\"ac\":null,\"r\":[24,18]}]",
+  "mobileMenuState": "{\"navLinksTotal\":10,\"visible\":1,\"docScrollW\":390,\"inner\":390,\"bodyOverflow\":\"hidden\"}",
+  "zoom200": "{\"scrollW\":625,\"inner\":640,\"overflow\":false}"
+}

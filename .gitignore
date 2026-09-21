@@ -75,3 +75,15 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# ============================================================================
+# Redesign Artifacts
+# ============================================================================
+
+# Rendered QA screenshots (~43 MB of JPEGs). Kept on disk for review but not
+# committed, to avoid permanently adding binaries to history. Every finding's
+# underlying measurements are in docs/redesign/evidence/*.json, and the
+# capture drivers there regenerate the images on demand:
+#   hugo server --disableFastRender --port 1315
+#   node docs/redesign/evidence/phase2a-qa-driver.mjs
+docs/redesign/screenshots/
