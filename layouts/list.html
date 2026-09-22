@@ -31,6 +31,13 @@
 
 <div class="flex flex-col items-center">
 
+  {{/* Phase 5: the card views render each entry title as <h3>, so without a
+       heading here the document jumps h1 -> h3. A visually hidden <h2> names
+       the list region and repairs the outline without altering the design or
+       touching the shared card partials, which the homepage also uses (where
+       h3 under a section h2 is already correct). */}}
+  <h2 class="sj-sr-only">{{ .Params.list_heading | default (printf "All %s" (lower .Title)) }}</h2>
+
   {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
 
   {{ range $index, $item := $paginator.Pages }}

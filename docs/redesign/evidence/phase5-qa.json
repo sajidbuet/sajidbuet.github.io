@@ -1,0 +1,2317 @@
+{
+ "audits": {
+  "workshop-arm@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 75,
+   "namelessLinks": 27,
+   "imgsNoAlt": 0,
+   "docHeight": 57000,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 75,
+   "namelessLinks": 27,
+   "imgsNoAlt": 0,
+   "docHeight": 57000,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 75,
+   "namelessLinks": 27,
+   "imgsNoAlt": 0,
+   "docHeight": 57000,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 26,
+   "namelessLinks": 27,
+   "imgsNoAlt": 0,
+   "docHeight": 55922,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 153,
+   "namelessLinks": 28,
+   "imgsNoAlt": 0,
+   "docHeight": 43153,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 128,
+   "namelessLinks": 28,
+   "imgsNoAlt": 0,
+   "docHeight": 49048,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "workshop-arm@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 121,
+   "namelessLinks": 28,
+   "imgsNoAlt": 0,
+   "docHeight": 50724,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2305,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2305,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2305,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2353,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 5,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2129,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 5,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2411,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2530,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3616,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3616,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3616,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3514,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "docHeight": 3837,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@430x932": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "docHeight": 4348,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303@390x844": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "docHeight": 4493,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2319,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2319,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2319,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2367,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2648,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 3012,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 3182,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 4114,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 4114,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 4114,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 4162,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 5255,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7098,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7192,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 13,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3001,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 13,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3001,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 13,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3001,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 13,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3049,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3329,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3715,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3856,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1123,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1123,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1123,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1171,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1397,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1503,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1543,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3353,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3353,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3353,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3401,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3627,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3655,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3822,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1105,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1105,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1105,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1153,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1439,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1519,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1559,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7206,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7206,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7206,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7254,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7540,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 6867,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 6707,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1484,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1484,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1484,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1532,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1659,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1765,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1805,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7704,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7704,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7704,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7752,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 9,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 6245,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 9,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 6442,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 6556,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2262,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2262,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2262,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2310,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2564,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2725,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2833,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1080,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1038,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1038,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1086,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1312,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1392,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1472,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@1920x1080": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1107,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@1440x900": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1107,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@1280x800": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1107,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@1024x768": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1155,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@768x1024": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1381,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@430x932": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1487,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops@390x844": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1567,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  }
+ },
+ "responsive": [],
+ "dark": {
+  "workshop-arm": {
+   "h1": 1,
+   "h1text": [
+    "Instructions to Hardware: A Gentle Introduction to Computer Architectu"
+   ],
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 75,
+   "namelessLinks": 27,
+   "imgsNoAlt": 0,
+   "docHeight": 57000,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-curriculum": {
+   "h1": 1,
+   "h1text": [
+    "Curriculum & Laboratory Development"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2305,
+   "title": "Curriculum & Laboratory Development | SAJID Lab",
+   "lang": "en-us"
+  },
+  "course-eee303": {
+   "h1": 1,
+   "h1text": [
+    "EEE 303 (Jul 2025)"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 11,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3616,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 2319,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 4114,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 13,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 6,
+   "docHeight": 3001,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-academic": {
+   "h1": 1,
+   "h1text": [
+    "Academic Resources"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 3,
+   "namelessLinks": 2,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1123,
+   "title": "Academic Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-blog": {
+   "h1": 1,
+   "h1text": [
+    "Writing & Tutorials"
+   ],
+   "headings": 13,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 10,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 3353,
+   "title": "Writing & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-personal": {
+   "h1": 1,
+   "h1text": [
+    "Beyond Research"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 4,
+   "namelessLinks": 3,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1105,
+   "title": "Beyond Research | SAJID Lab",
+   "lang": "en-us"
+  },
+  "news": {
+   "h1": 1,
+   "h1text": [
+    "Latest News"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 10,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 7206,
+   "title": "Latest News | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-templates": {
+   "h1": 1,
+   "h1text": [
+    "Templates & Tools"
+   ],
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 2,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 4,
+   "docHeight": 1484,
+   "title": "Templates & Tools | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources-professional": {
+   "h1": 1,
+   "h1text": [
+    "Professional Activities"
+   ],
+   "headings": 17,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 7704,
+   "title": "Professional Activities | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-archive": {
+   "h1": 1,
+   "h1text": [
+    "Archive"
+   ],
+   "headings": 14,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 7,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 3,
+   "docHeight": 2262,
+   "title": "Archive | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-notes": {
+   "h1": 1,
+   "h1text": [
+    "Books & Lecture Notes"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1038,
+   "title": "Books & Lecture Notes | SAJID Lab",
+   "lang": "en-us"
+  },
+  "teaching-workshops": {
+   "h1": 1,
+   "h1text": [
+    "Workshops & Tutorials"
+   ],
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 1,
+   "namelessLinks": 1,
+   "imgsNoAlt": 0,
+   "lists": 2,
+   "docHeight": 1107,
+   "title": "Workshops & Tutorials | SAJID Lab",
+   "lang": "en-us"
+  }
+ },
+ "zoom": {
+  "teaching": {
+   "h1": 1,
+   "h1text": [
+    "Teaching"
+   ],
+   "headings": 12,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 6,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 2812,
+   "title": "Teaching | SAJID Lab",
+   "lang": "en-us"
+  },
+  "resources": {
+   "h1": 1,
+   "h1text": [
+    "Resources"
+   ],
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 12,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 3381,
+   "title": "Resources | SAJID Lab",
+   "lang": "en-us"
+  },
+  "team": {
+   "h1": 1,
+   "h1text": [
+    "Team"
+   ],
+   "headings": 18,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "subMinTargets": 8,
+   "namelessLinks": 0,
+   "imgsNoAlt": 0,
+   "docHeight": 5307,
+   "title": "Team | SAJID Lab",
+   "lang": "en-us"
+  }
+ },
+ "focus": {
+  "resources": {
+   "checked": 16,
+   "withoutVisibleRing": 15,
+   "sample": [
+    "SAJID Lab\n\n  \n    \n      \n    \n  \n\n  \n\n ",
+    "Home",
+    "Research",
+    "Publications",
+    "Projects",
+    "Teaching",
+    "Team",
+    "Resources",
+    "Contact",
+    "",
+    "",
+    "Academic Resources",
+    "Unicode Scientific Symbols Cheatsheet",
+    "LOR Request",
+    "Templates & Tools"
+   ]
+  }
+ },
+ "reducedMotion": {
+  "h1": 1,
+  "h1text": [
+   "Resources"
+  ],
+  "headings": 8,
+  "skips": [],
+  "overflowPx": 0,
+  "offenders": [],
+  "subMinTargets": 13,
+  "namelessLinks": 0,
+  "imgsNoAlt": 0,
+  "docHeight": 3001,
+  "title": "Resources | SAJID Lab",
+  "lang": "en-us"
+ },
+ "mobileMenu": {
+  "found": true,
+  "before": "false",
+  "after": "true",
+  "itemCount": 8,
+  "items": [
+   "Home",
+   "Research",
+   "Publications",
+   "Projects",
+   "Teaching",
+   "Team",
+   "Resources",
+   "Contact"
+  ]
+ },
+ "redirects": {
+  "/outreach/": "/resources/",
+  "/outreach/lor/": "/resources/academic/lor/",
+  "/outreach/blog/": "/resources/blog/",
+  "/outreach/songs/": "/resources/personal/songs/",
+  "/outreach/poetry/": "/resources/personal/poetry/",
+  "/outreach/hobbies/": "/resources/personal/hobbies/",
+  "/outreach/graphics/": "/resources/templates/graphics/",
+  "/outreach/templates/": "/resources/templates/",
+  "/outreach/professional/": "/resources/professional/",
+  "/outreach/scientific-typing/": "/resources/academic/scientific-typing/",
+  "/outreach/blog/20260811-bracu-arm-workshop/": "/teaching/workshops/bracu-arm-workshop/",
+  "/outreach/blog/20250511-ct-admin/": "/resources/blog/20250511-ct-admin/",
+  "/people/": "/authors/"
+ },
+ "consoleErrors": [
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "url": "http://127.0.0.1:1331/pagefind/pagefind.js",
+   "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  }
+ ]
+}

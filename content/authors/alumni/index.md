@@ -4,7 +4,23 @@ date: 2022-10-24
 
 type: landing
 
+description: "Former postgraduate and undergraduate members of SAJID Lab at BUET EEE, with their thesis topics and graduation years."
+
 sections:
+  # Phase 5: supplies the page's only <h1>; `type: landing` does not render
+  # `.Content`, so this page previously had no heading at all.
+  - block: markdown
+    id: intro
+    content:
+      text: |-
+        # Alumni
+
+        Postgraduate and undergraduate researchers who have completed their
+        work with the group.
+    design:
+      spacing:
+        padding: ["3rem", 0, "1rem", 0]
+
   - block: team-showcase
     content:
       title: PG Alumni

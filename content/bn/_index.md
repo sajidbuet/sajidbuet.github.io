@@ -365,7 +365,7 @@ sections:
       text: বিভিন্ন চিন্তাধারা ও উপকারী টুলসমূহের সংগ্রহ
       button:
         text: এখানে ক্লিক করুন
-        url: /outreach
+        url: /resources
     design:
       card:
         # Card background color (CSS class)

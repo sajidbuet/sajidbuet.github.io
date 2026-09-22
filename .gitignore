@@ -9,8 +9,11 @@
 # Generated site output
 public/
 
-# Hugo resources (processed assets)
-resources/
+# Hugo resources (processed assets).
+# Anchored to the repository root: an unanchored `resources/` also matched
+# `layouts/resources/`, which silently excluded the Phase 5 Resources section
+# template from the repository.
+/resources/
 
 # Hugo build lock
 .hugo_build.lock

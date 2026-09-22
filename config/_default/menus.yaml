@@ -8,12 +8,20 @@
 # only safe because the grants moved out of /projects/ first and every old
 # /projects/g-* URL is preserved by an alias.
 #
-# DEFERRED to Phase 5: `Outreach` becomes `Resources` at /resources/. That
-# route does not exist yet, so the item still points at /outreach/.
+# Phase 5: `Outreach` is now `Resources` at /resources/. Every old
+# /outreach/** URL is preserved by a Hugo alias — see
+# docs/redesign/phase-5-url-migration.md.
 #
-# DEFERRED: removing the textual `Home` item. Its preconditions
-# (information-architecture.md §4.1) are met on desktop, but Home is kept for
-# now because breadcrumbs are still not enabled site-wide.
+# STILL DEFERRED: removing the textual `Home` item. The logo is an accessible
+# Home link (navbar.html carries `aria-label="<site> - Home"`), but this menu
+# is rendered by a single `range site.Menus.main` that feeds both the desktop
+# bar and the mobile drawer, so dropping Home here would remove it from the
+# mobile menu too — which IA §4.1 requires to keep it. Site-wide breadcrumbs,
+# the other stated precondition, are also still not enabled.
+#
+# News is deliberately absent from this menu (it already was after Phase 4).
+# It stays reachable from the homepage feed, the footer "News Archive" link
+# and /news/index.xml.
 
 main:
   - name: Home
@@ -34,8 +42,8 @@ main:
   - name: Team
     url: '/authors/'
     weight: 60
-  - name: Outreach
-    url: '/outreach/'
+  - name: Resources
+    url: '/resources/'
     weight: 70
   - name: Contact
     url: '/#contact'

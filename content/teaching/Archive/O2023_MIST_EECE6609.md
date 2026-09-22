@@ -48,7 +48,7 @@ It would be expected that by the end of the course, you are able to do a compreh
 
 It is expected that students sign an honour pledge for the class and refrain from plagiarising. All reports would be checked with turnitin plagiarism checker and any plagiarized work would be dealt with a "F" grade in the entire course. 
 
-# Detailed Grading Policy
+## Detailed Grading Policy
 
 ## Final Project + Presentation (40%)
 For Final Project, you must do an original comprehensive literature review on a particular topic relevant to the course and write a minimum 1600 word **Review Article** on it, with at least 35 literature references. 

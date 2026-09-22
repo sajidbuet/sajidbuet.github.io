@@ -1,0 +1,79 @@
+{{ define "main" }}
+{{/* Teaching section index — Phase 5.
+
+     Course URLs are deliberately NOT moved. The flat `/teaching/<course>/`
+     routes are stable and meaningful, so this page reorganises the *landing*
+     only (roadmap §22: change a URL only when the change adds real meaning).
+     Current courses are therefore the section's own regular pages, and the
+     four thematic areas are real subsections ordered by front-matter weight.
+
+     Only areas that have content render: a subsection with neither body text
+     nor children is skipped rather than shown as an empty shelf. */}}
+
+{{ $courses := .RegularPages }}
+{{ $areas := (where .Sections "Params.weight" "!=" nil).ByWeight }}
+
+<div class="sj-container-wide sj-teaching">
+
+  <header class="sj-teaching__head">
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="sj-page-lede">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ with $courses }}
+    <section class="sj-res-group" aria-labelledby="t-current">
+      <h2 class="sj-res-group__title" id="t-current">{{ i18n "current_courses" | default "Current & Recent Courses" }}</h2>
+      <ul class="sj-course-list">
+        {{ range .ByDate.Reverse }}
+          <li class="sj-course">
+            <h3 class="sj-course__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="sj-course__meta">
+              {{ with .Params.summary }}{{ . }}{{ end }}
+              {{ with .Params.course_type }}<span class="sj-course__term">{{ . }}</span>{{ end }}
+            </p>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{ range $areas }}
+    {{ $kids := .Pages }}
+    {{ $many := gt (len $kids) 8 }}
+    {{ $hasBody := gt (len (trim (.Content | plainify) " \n\r\t")) 0 }}
+
+    {{/* Nothing to say and nothing to link — skip rather than render a shelf. */}}
+    {{ if or $hasBody $kids .Params.summary }}
+      {{ $aid := printf "t-%s" (.Title | urlize) }}
+      <section class="sj-res-group" aria-labelledby="{{ $aid }}">
+        <h2 class="sj-res-group__title" id="{{ $aid }}">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        {{ with .Params.summary }}<p class="sj-res-group__lede">{{ . }}</p>{{ end }}
+
+        {{ if $many }}
+          {{/* The archive is long; link to it with a count instead of listing it. */}}
+          <p class="sj-res-group__more">
+            <a href="{{ .RelPermalink }}">{{ i18n "browse" | default "Browse" }} {{ len $kids }} {{ i18n "past_offerings" | default "past offerings" }} &rarr;</a>
+          </p>
+        {{ else if $kids }}
+          <ul class="sj-res-list">
+            {{ range $kids.ByDate.Reverse }}
+              <li class="sj-res-list__item">
+                <a class="sj-res-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ with .Params.summary }}<span class="sj-res-list__desc">{{ . }}</span>{{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ else if not $hasBody }}
+          {{/* Structure exists, material does not yet. Say so plainly. */}}
+          <div class="sj-note-panel">
+            <p>{{ i18n "notes_pending" | default "Nothing is published here yet." }}</p>
+          </div>
+        {{ end }}
+      </section>
+    {{ end }}
+  {{ end }}
+
+</div>
+{{ end }}

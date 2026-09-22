@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{/* Resources section index — Phase 5.
+     Replaces content/outreach/_index.md, which was a verbatim copy of the
+     homepage outreach block (IA §9, audit item 6).
+
+     The page is driven entirely by the section tree: each direct subsection of
+     /resources/ becomes a group, ordered by its front-matter `weight`, and its
+     children are listed beneath it. Nothing is hardcoded here, so a group
+     disappears from the page when its content does — no empty shelves.
+
+     Lists, not cards: these are heterogeneous text links (IA §36). Cards are
+     reserved for pages that own an image. */}}
+
+{{ $groups := where .Sections "Params.weight" "!=" nil }}
+{{ $groups = $groups.ByWeight }}
+
+<div class="sj-container-wide sj-resources">
+
+  <header class="sj-resources__head">
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="sj-page-lede">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ range $groups }}
+    {{ $gid := printf "res-%s" (.Title | urlize) }}
+
+    {{/* A section whose regular pages are dated posts is a feed, not a menu:
+         show the most recent few and link to the rest. */}}
+    {{ $isFeed := gt (len .RegularPages) 5 }}
+    {{ $kids := slice }}
+    {{ if $isFeed }}
+      {{ $kids = first 5 .RegularPages.ByDate.Reverse }}
+    {{ else }}
+      {{ range .Sections.ByWeight }}{{ $kids = $kids | append . }}{{ end }}
+      {{ range .RegularPages.ByWeight }}{{ $kids = $kids | append . }}{{ end }}
+    {{ end }}
+
+    <section class="sj-res-group" aria-labelledby="{{ $gid }}">
+      <h2 class="sj-res-group__title" id="{{ $gid }}">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      {{ with .Params.summary }}<p class="sj-res-group__lede">{{ . }}</p>{{ end }}
+
+      {{ with $kids }}
+        <ul class="sj-res-list">
+          {{ range . }}
+            <li class="sj-res-list__item">
+              <a class="sj-res-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ with .Params.summary }}
+                <span class="sj-res-list__desc">{{ . }}</span>
+              {{ else }}
+                {{ with .Params.description }}<span class="sj-res-list__desc">{{ . }}</span>{{ end }}
+              {{ end }}
+              {{ if $isFeed }}
+                {{ with .Date }}
+                  <time class="sj-res-list__date" datetime="{{ .Format "2006-01-02" }}">{{ .Format "2 Jan 2006" }}</time>
+                {{ end }}
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ if $isFeed }}
+        <p class="sj-res-group__more">
+          <a href="{{ .RelPermalink }}">{{ i18n "view_all" | default "View all" }} {{ .Title | lower }} &rarr;</a>
+        </p>
+      {{ end }}
+    </section>
+  {{ end }}
+
+</div>
+{{ end }}

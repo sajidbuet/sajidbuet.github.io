@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Phase 5 — supporting content areas (Resources, Teaching, Team)
+   Consumes the Phase 2A semantic tokens only. No literal colours.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared section-landing shell
+   -------------------------------------------------------------------------- */
+.sj-resources,
+.sj-teaching,
+.sj-team { padding-block: var(--sj-section-md); }
+
+.sj-resources__head,
+.sj-teaching__head,
+.sj-team__head { margin-bottom: var(--sj-space-12); }
+
+/* --------------------------------------------------------------------------
+   Resource / teaching groups — a rule-separated stack, not a card grid.
+   The content is heterogeneous text links, so a list reads faster than cards
+   and does not imply every item carries an image.
+   -------------------------------------------------------------------------- */
+.sj-res-group {
+  padding-block: var(--sj-space-8);
+  border-top: 1px solid var(--sj-border);
+}
+.sj-res-group:first-of-type { border-top: 0; padding-top: 0; }
+
+.sj-res-group__title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 var(--sj-space-2);
+  color: var(--sj-text-primary);
+}
+.sj-res-group__title a { color: inherit; text-decoration: none; }
+.sj-res-group__title a:hover {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sj-res-group__lede {
+  margin: 0 0 var(--sj-space-6);
+  max-width: 68ch;
+  color: var(--sj-text-secondary);
+  line-height: 1.65;
+}
+
+.sj-res-group__more { margin: var(--sj-space-4) 0 0; }
+.sj-res-group__more a {
+  color: var(--sj-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.sj-res-group__more a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* --------------------------------------------------------------------------
+   Resource list
+   -------------------------------------------------------------------------- */
+.sj-res-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sj-space-4);
+}
+
+@media (min-width: 768px) {
+  .sj-res-list--split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.sj-res-list__item {
+  display: grid;
+  gap: var(--sj-space-1);
+  padding-left: var(--sj-space-4);
+  border-left: 2px solid var(--sj-border);
+}
+.sj-res-list__item:hover { border-left-color: var(--sj-accent); }
+
+.sj-res-list__link {
+  color: var(--sj-accent);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.sj-res-list__link:hover { color: var(--sj-accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+.sj-res-list__desc {
+  color: var(--sj-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.sj-res-list__date {
+  color: var(--sj-text-tertiary);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Teaching
+   -------------------------------------------------------------------------- */
+.sj-course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.sj-course {
+  display: grid;
+  gap: var(--sj-space-1);
+  padding-block: var(--sj-space-4);
+  border-bottom: 1px solid var(--sj-border);
+}
+.sj-course:first-child { border-top: 1px solid var(--sj-border); }
+
+@media (min-width: 768px) {
+  .sj-course {
+    grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+    column-gap: var(--sj-space-8);
+    align-items: baseline;
+  }
+}
+
+.sj-course__title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+.sj-course__title a { color: var(--sj-accent); text-decoration: none; font-weight: 600; }
+.sj-course__title a:hover { color: var(--sj-accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+.sj-course__meta {
+  margin: 0;
+  color: var(--sj-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sj-space-3);
+}
+
+/* Term badge carries a text label, never colour alone. */
+.sj-course__term {
+  display: inline-block;
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-full);
+  padding: 0 var(--sj-space-2);
+  font-size: 0.75rem;
+  color: var(--sj-text-secondary);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Notes / placeholder panel — honest empty state, not a fake shelf
+   -------------------------------------------------------------------------- */
+.sj-note-panel {
+  border: 1px dashed var(--sj-border-strong);
+  border-radius: var(--sj-radius-md);
+  padding: var(--sj-space-6);
+  background: var(--sj-background-subtle);
+  color: var(--sj-text-secondary);
+  max-width: 68ch;
+}
+.sj-note-panel p { margin: 0; line-height: 1.65; }
+
+/* --------------------------------------------------------------------------
+   Team landing
+   -------------------------------------------------------------------------- */
+.sj-team__intro { max-width: 68ch; margin-bottom: var(--sj-space-8); }
+
+/* --------------------------------------------------------------------------
+   Course tables
+   Replaces the <style> block that was duplicated inside three Teaching
+   Markdown files (EEE400, Jul2025_EEE303, Jul2025_EEE304). That block declared
+   :root custom properties and unscoped `table:not(.no-stripe)` rules from
+   inside page content, so it leaked to every element on those pages and
+   hardcoded #ffffff row backgrounds that inverted badly in dark mode.
+
+   Scoped here to the Teaching section via the body class set in baseof.html,
+   and expressed in semantic tokens so both themes work.
+   -------------------------------------------------------------------------- */
+.sj-section-teaching table:not(.no-stripe) {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--sj-border);
+  font-size: 0.9375rem;
+}
+
+.sj-section-teaching table:not(.no-stripe) th {
+  background: var(--sj-accent);
+  color: var(--sj-accent-contrast);
+  font-weight: 600;
+  text-align: left;
+}
+
+.sj-section-teaching table:not(.no-stripe) tr:nth-child(even) {
+  background: var(--sj-background-subtle);
+}
+
+.sj-section-teaching table:not(.no-stripe) th,
+.sj-section-teaching table:not(.no-stripe) td {
+  border: 1px solid var(--sj-border);
+  padding: 0.4em 0.6em;
+  vertical-align: top;
+}
+
+/* Word-pasted course-outcome tables carry their own inline widths and can
+   overflow on narrow screens; let them scroll rather than break the layout. */
+.sj-section-teaching .page-body table { display: block; overflow-x: auto; max-width: 100%; }
+@media (min-width: 768px) {
+  .sj-section-teaching .page-body table { display: table; }
+}
+
+/* --------------------------------------------------------------------------
+   Resources landing — two-column groups on wide screens
+
+   The lists are capped at a readable measure, so on a 1440px viewport a
+   single column left the whole right half empty while the group rules still
+   spanned full width. Splitting each group into "heading + lede" and "items"
+   uses the width without stretching any line of text past ~68ch.
+
+   Teaching is deliberately excluded: its course rows already span the full
+   width as a two-column title/summary table.
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .sj-resources .sj-res-group {
+    display: grid;
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    /* Row 1 is exactly the heading; row 2 absorbs the rest. Without this the
+       list, which spans both rows, distributes its height across them and
+       pushes the lede away from its heading. */
+    grid-template-rows: auto 1fr;
+    column-gap: var(--sj-space-16);
+    align-items: start;
+  }
+  .sj-resources .sj-res-group__title,
+  .sj-resources .sj-res-group__lede { grid-column: 1; }
+  .sj-resources .sj-res-group__lede { margin-bottom: 0; }
+  .sj-resources .sj-res-list { grid-column: 2; grid-row: 1 / span 2; }
+  .sj-resources .sj-res-group__more { grid-column: 2; margin-top: var(--sj-space-6); }
+}

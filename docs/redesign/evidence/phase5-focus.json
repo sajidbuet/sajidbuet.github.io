@@ -1,0 +1,242 @@
+{
+ "resources": {
+  "tabbed": 22,
+  "withRing": 22,
+  "withoutRing": 0,
+  "offenders": [],
+  "first8": [
+   {
+    "tag": "a",
+    "name": "Skip to main content",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 164,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "SAJID Lab — Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 240,
+    "h": 44,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 55,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Research",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Publications",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 94,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Projects",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 67,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Teaching",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Team",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 50,
+    "h": 47,
+    "matchesFV": true
+   }
+  ]
+ },
+ "teaching": {
+  "tabbed": 22,
+  "withRing": 22,
+  "withoutRing": 0,
+  "offenders": [],
+  "first8": [
+   {
+    "tag": "a",
+    "name": "Skip to main content",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 164,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "SAJID Lab — Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 240,
+    "h": 44,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 55,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Research",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Publications",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 94,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Projects",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 67,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Teaching",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Team",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 50,
+    "h": 47,
+    "matchesFV": true
+   }
+  ]
+ },
+ "team": {
+  "tabbed": 22,
+  "withRing": 22,
+  "withoutRing": 0,
+  "offenders": [],
+  "first8": [
+   {
+    "tag": "a",
+    "name": "Skip to main content",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 164,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "SAJID Lab — Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 240,
+    "h": 44,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Home",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 55,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Research",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Publications",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 94,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Projects",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 67,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Teaching",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 73,
+    "h": 47,
+    "matchesFV": true
+   },
+   {
+    "tag": "a",
+    "name": "Team",
+    "ring": true,
+    "outline": "rgb(14, 116, 144) solid 2px",
+    "w": 50,
+    "h": 47,
+    "matchesFV": true
+   }
+  ]
+ }
+}

@@ -308,5 +308,6 @@ sections:
 #       -> replaced by inline section links.
 #   * block: sajid-general-links-blog id: outreach  (1108px, a verbatim
 #     duplicate of content/outreach/_index.md)
-#       -> /outreach/ is unchanged and still linked from the footer.
+#       -> Phase 5: that section is now /resources/, linked from the navbar
+#          and the footer. /outreach/ remains only as an alias.
 ---

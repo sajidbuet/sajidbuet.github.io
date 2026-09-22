@@ -548,7 +548,174 @@ at 1440 / 390, light + dark.
 
 ---
 
-## Phase 5 — Supporting areas: Teaching, Team, Resources, News
+## Phase 5 — Supporting Content ✅ COMPLETE (one manual gate outstanding)
+
+**Branch:** `redesign/phase-5-supporting-content` · **Base:** `2fe07ba` · **Date:** 2026-09-22
+**Hugo:** 0.157.0 extended · **Browser evidence:** Chrome 153 headless over CDP
+
+Full migration record: `docs/redesign/phase-5-url-migration.md`.
+Review set: `docs/redesign/screenshots/phase-5/review/`.
+
+### Resources migration
+
+`/outreach/**` → `/resources/**`, with `/outreach/` itself aliased to `/resources/`.
+**21 aliases** generated and verified three ways (alias file exists → points at the
+intended canonical URL → target exists and is not itself an alias). PASS 21 / FAIL 0.
+
+| Old | New |
+|---|---|
+| `/outreach/` | `/resources/` |
+| `/outreach/lor/` | `/resources/academic/lor/` |
+| `/outreach/scientific-typing/` | `/resources/academic/scientific-typing/` |
+| `/outreach/templates/` | `/resources/templates/` |
+| `/outreach/graphics/` | `/resources/templates/graphics/` |
+| `/outreach/blog/` + 9 posts | `/resources/blog/` + 9 posts |
+| `/outreach/professional/` | `/resources/professional/` |
+| `/outreach/songs/`, `/poetry/`, `/hobbies/` | `/resources/personal/…` |
+| `/outreach/blog/20260811-bracu-arm-workshop/` | `/teaching/workshops/bracu-arm-workshop/` |
+| `/people/` | `/authors/` |
+
+`content/outreach/_index.md` — the verbatim copy of the homepage outreach block
+(audit item 6) — is **deleted**, replaced by a real section index driven by the
+content tree (`layouts/resources/overview.html`). Groups render only when they
+have content, so there are no empty shelves. Personal material (music, poetry,
+hobbies) is preserved under **Beyond Research**, not discarded.
+
+### Teaching
+
+Restructured **without moving a single course URL** (roadmap §22 — the flat
+`/teaching/<course>/` routes are stable and meaningful). New landing at
+`layouts/teaching/overview.html`:
+
+```
+Teaching
+├── Current & Recent Courses   4 courses, from the section's own pages
+├── Curriculum & Laboratory Development   /teaching/curriculum/   (new)
+├── Books & Lecture Notes                 /teaching/notes/        (new, honest placeholder)
+├── Workshops & Tutorials                 /teaching/workshops/    (new)
+└── Archive                               28 past offerings, linked by count
+```
+
+- **Curriculum & Lab Development** is written *only* from material already in the
+  repository — the EEE 416 ground-up redesign and the lab development proposal
+  described in `Archive/Jan2022_EEE416.md`. No achievement was invented; the page
+  says so explicitly and links its four EEE 416 offerings as evidence.
+- **Books & Lecture Notes** is a placeholder with no fake chapters.
+- **Workshop** moved out of the blog with its 11 asset files, history preserved.
+
+### Teaching content repairs
+
+| Issue | Files | Fix |
+|---|---|---|
+| `<style>` block declaring `:root` custom properties and unscoped `table:not(.no-stripe)` rules from inside page content | `EEE400.md`, `Jul2025_EEE303.md`, `Jul2025_EEE304.md` | Removed; rules moved to `assets/css/phase5.css`, scoped via a new `sj-section-<section>` body class and re-expressed in semantic tokens. The originals hardcoded `#ffffff` row backgrounds, which inverted badly in dark mode — now fixed |
+| `<span style="color:red">…</style>'` — a span closed with `</style>` plus a stray quote | same 3 files | Replaced with a semantic `> **Course announcements:** …` blockquote. Also removes colour-only emphasis |
+| Content-level `#` H1 duplicating the template H1 | 10 files | Demoted to `##` |
+| `##Heading` with no space — rendered as literal text, not a heading | 68 occurrences across Teaching + Resources | Space inserted. Fenced code and preprocessor directives skipped |
+| Blog post with **no front matter at all** and 7 content H1s | `20260224-Word-Lakh-Taka-BDT` | Title/summary/date/alias added; headings demoted |
+
+The three `<style>` tags in the EEE 416 files were **left alone** — they sit inside
+inline `<svg><defs>`, where they are legitimately SVG-scoped, not a global leak.
+The Word-pasted course-outcome tables (270 inline `style=` attributes each) were
+also left as-is: converting them risks losing course-outcome data for no
+rendering benefit. They now scroll rather than overflow on narrow screens.
+
+### Team
+
+- `/people/` **deleted** — it differed from `/authors/_index.md` by one line
+  (`subtitle`), verified with `diff` before removal. Aliased to `/authors/`.
+- The **`authors` taxonomy is not renamed** (IA §16). Navbar says "Team", route
+  stays `/authors/`. No author URL changed.
+- `/authors/` had **zero `<h1>`** (visual-audit P1-11): `type: landing` never
+  renders `.Content`, so the old `# Meet Our Research Team` body copy was silently
+  dropped. Fixed with a leading `markdown` block — no `_vendor` override needed.
+- `/authors/alumni/` had the same zero-`h1` problem; same fix.
+- `/authors/me/` shipped `<title>SAJID Lab</title>` with no name — the file had **no
+  front matter at all**. Added `title` + `description`.
+- Removed a link to `/opportunities`, which has never existed.
+
+### News
+
+**News was already absent from the navbar after Phase 4** — the roadmap item was
+stale. Verified it stays discoverable: homepage "View all news" collection, a new
+footer **News Archive** link, and `/news/index.xml` (15 KB). `/news/` was given a
+unique meta description; it had been inheriting the generic site one.
+
+### Navigation
+
+`Home · Research · Publications · Projects · Teaching · Team · Resources · Contact`
+
+**`Home` deliberately kept.** IA §4.1 requires the mobile menu to expose Home, and
+`navbar.html` renders desktop and mobile from a single `range site.Menus.main` —
+removing the item would strip it from both. Site-wide breadcrumbs, the other
+stated precondition, are also still not enabled. Recorded in `menus.yaml`.
+
+### Metadata
+
+All **15** section landings now carry exactly one `<h1>`, a unique `<title>`, a
+unique meta description and OG description. Before: `/authors/`, `/authors/alumni/`
+had no `h1`; `/authors/me/` had no title; `/news/` had the generic site description.
+
+### QA
+
+- **0** responsive anomalies across 15 routes × 7 viewports = **105 combinations** (1920/1440/1280/1024/768/430/390).
+- **0** `h1 != 1` and **0** heading-level skips across all 105 combinations, light and dark.
+- **0** horizontal overflow at 200 % zoom (640 px) on Teaching, Resources, Team.
+- Light **and** dark verified on every audited route; no literal colours introduced.
+- Keyboard focus: **66/66** tab stops across Resources, Teaching and Team show the
+  2 px `--sj-focus-ring` outline. (An earlier probe reporting 15/16 missing was
+  measuring programmatic `.focus()`, which by design does not match
+  `:focus-visible` — `custom.css:83` suppresses the ring for exactly that case.)
+- Mobile menu opens, `aria-expanded` toggles, all 8 items present including Home.
+- Internal-link crawl: **41,748** links over **599** pages — **0** resolving via an
+  alias, **0** broken attributable to Phase 5.
+- Production build passes, no new warnings.
+
+### A Phase 4 regression caught and fixed
+
+The first build after the move sent `/projects/g-03/` to
+`/research/funding/g-03-sajid-pc/`. OneDrive had left untracked `…-SAJID-PC`
+conflict copies inside `content/`, which Hugo published as real pages carrying
+duplicate `/projects/g-0*/` aliases (631 pages vs 626). All 11 were verified
+byte-identical to `HEAD`, backed up and removed; the Phase 4 aliases resolve
+correctly again.
+
+### A `.gitignore` trap caught before commit
+
+`.gitignore` had an unanchored `resources/`, which matched `layouts/resources/`
+and `content/resources/` as well as Hugo's generated root `resources/`. Four
+newly created Phase 5 files — the Resources landing, two group indexes and the
+section template — were invisible to git and would have been left out of the
+commit while their aliases still redirected traffic to them. Anchored to
+`/resources/`. Details in `phase-5-url-migration.md` §11.
+
+### Overrides created
+
+**None from `_vendor`.** New project-owned files only:
+`layouts/resources/overview.html`, `layouts/teaching/overview.html`,
+`assets/css/phase5.css`.
+Modified existing project-owned files: `layouts/baseof.html` (one body class),
+`layouts/_partials/site_head.html` (one CSS line), `layouts/_partials/site_footer.html`.
+
+### Deferred
+
+Site-wide breadcrumbs and removal of the textual `Home` item (needs the mobile
+menu to be split from the desktop loop) · full Books/Notes chapter engine (Phase 6) ·
+author profile detail templates (Phase 6) · sub-24 px targets, incl. 75 on the
+workshop handout (Phase 7) · Pagefind search still 404s · `/bn/resources/` and BN
+section nesting (Phase 8) · 6 files referenced by the workshop handout that were
+never committed (needs the author) · `content/authors/_index.md1` and
+`content/authors/me/_index.bn.md1`, stray tracked files Hugo ignores.
+
+### Outstanding manual gate
+
+**Production redirect verification.** Local alias files and localhost browser
+redirects both pass, but GitHub Pages behaviour cannot be proven locally. After
+deploy, check the five URLs listed in `phase-5-url-migration.md` §7 (allow for a
+Cloudflare purge).
+
+---
+
+## Phase 5 — Supporting areas: Teaching, Team, Resources, News *(original plan, superseded by the record above)*
 
 ⚠ **Also moves URLs** (`/outreach/**` → `/resources/**`).
 
@@ -715,6 +882,8 @@ they are created:
 |---|---|---|---|
 | _(none — Phase 1 created no overrides)_ | 1 | | |
 | _(none — Phase 2A created no new overrides)_ | 2A | Every file touched was already a project override or project-owned custom code | — |
+| _(none — Phase 4 created no `_vendor` shadows)_ | 4 | New project-owned templates only | — |
+| _(none — Phase 5 created no `_vendor` shadows)_ | 5 | New project-owned templates only: `layouts/resources/overview.html`, `layouts/teaching/overview.html`, `assets/css/phase5.css` | — |
 
 ### Files changed in Phase 2A, by category
 
