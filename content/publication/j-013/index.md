@@ -10,7 +10,9 @@ publishDate: '2026-09-01T16:20:40.404708Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
-doi: 10.1364/OE.410123
+hugoblox:
+  ids:
+    doi: 10.1364/OE.410123
 abstract: We present a gear-shaped plasmonic nano-structure with structural tunability
   and high RI sensitivity. New tunable geometric parameters of the gear-tooth give
   further flexibility for design. By using FDTD method, the reflection spectrum of

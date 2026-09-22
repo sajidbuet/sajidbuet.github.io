@@ -1,89 +1,142 @@
 {{ define "main" }}
-<main class="max-w-4xl mx-auto px-6 py-12">
-  <article class="prose prose-slate dark:prose-invert max-w-none">
-    
-    <header class="mb-8">
-      <h1 class="mb-2">{{ .Title }}</h1>
+{{/* Project detail — Phase 4.
 
-      {{ with .Params.grant_position }}
-        <p class="text-lg font-medium text-primary-600">{{ . }}</p>
-      {{ end }}
+     Every section is guarded: with only title/summary/status/date present the
+     page renders cleanly with no empty headings, no empty media frame and no
+     stray "Links" or "Technologies" label. */}}
 
-      {{ with .Params.grant_name }}
-        <p class="text-slate-600 dark:text-slate-300">{{ . }}</p>
-      {{ end }}
-    </header>
+{{ $links := .Params.project_links }}
+{{ $hasLinks := false }}
+{{ with $links }}{{ if or .repository .demo .documentation .release .package }}{{ $hasLinks = true }}{{ end }}{{ end }}
 
-    <div class="not-prose rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-      <dl class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
-        
-        {{ with .Params.funding_agency }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Funding Agency</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">{{ . }}</dd>
-        </div>
+{{ $img := "" }}
+{{ with .Params.image.filename }}{{ with $.Resources.GetMatch . }}{{ $img = . }}{{ end }}{{ end }}
+{{ if not $img }}{{ with .Resources.GetMatch "{thumbnail,featured,cover}.*" }}{{ $img = . }}{{ end }}{{ end }}
+
+<main id="main" tabindex="-1" class="sj-container-content sj-project">
+
+  <header class="sj-project__head">
+    <p class="sj-breadcrumb"><a href="{{ "/projects/" | relLangURL }}">{{ i18n "projects" | default "Projects" }}</a></p>
+
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+
+    {{ with .Params.summary }}<p class="sj-project__summary">{{ . }}</p>{{ end }}
+
+    {{ if or .Params.status .Params.project_category .Params.license }}
+      <ul class="sj-project__facts">
+        {{ with .Params.project_category }}
+          <li><span class="sj-card__cat">{{ . | humanize | title }}</span></li>
         {{ end }}
-
-        {{ with .Params.funding_award_amount }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Award Amount</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">{{ . }}</dd>
-        </div>
+        {{ with .Params.status }}
+          <li><span class="sj-status sj-status--{{ . }}"><span class="sj-status__dot" aria-hidden="true"></span>{{ . | title }}</span></li>
         {{ end }}
-
-        {{ with .Params.start_date }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Start Date</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">{{ time.Format "January 2006" . }}</dd>
-        </div>
+        {{ with .Params.license }}
+          <li class="sj-project__license">{{ i18n "license" | default "License" }}: {{ . }}</li>
         {{ end }}
-
-        {{ with .Params.end_date }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">End Date</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">{{ time.Format "January 2006" . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.funding_agency_address }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Agency Address</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">{{ . }}</dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.funding_agency_url }}
-        <div>
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Agency Website</dt>
-          <dd class="mt-1">
-            <a href="{{ . }}" target="_blank" rel="noopener" class="text-primary-600 hover:underline">
-              {{ . }}
-            </a>
-          </dd>
-        </div>
-        {{ end }}
-
-        {{ with .Params.authors }}
-        <div class="sm:col-span-2">
-          <dt class="text-sm font-semibold text-slate-500 dark:text-slate-400">Investigators</dt>
-          <dd class="mt-1 text-base text-slate-900 dark:text-slate-100">
-            {{ range $i, $author := . }}
-              {{ if $i }}, {{ end }}
-              {{ $author }}
-            {{ end }}
-          </dd>
-        </div>
-        {{ end }}
-
-      </dl>
-    </div>
-
-    {{ with .Content }}
-      <section class="mt-10">
-        {{ . }}
-      </section>
+      </ul>
     {{ end }}
 
-  </article>
+    {{ if $hasLinks }}
+      <p class="sj-project__links">
+        {{ with $links.repository }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repository" | default "Repository" }}</a>{{ end }}
+        {{ with $links.demo }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "demo" | default "Demo" }}</a>{{ end }}
+        {{ with $links.documentation }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "documentation" | default "Documentation" }}</a>{{ end }}
+        {{ with $links.release }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "download" | default "Download" }}</a>{{ end }}
+        {{ with $links.package }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "package" | default "Package" }}</a>{{ end }}
+      </p>
+    {{ end }}
+  </header>
+
+  {{ with $img }}
+    {{ $t := . }}
+    {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fit "1200x900 webp" }}{{ end }}
+    <figure class="sj-project__figure">
+      <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+           alt="{{ $.Params.image.caption | default (printf "%s screenshot" $.Title) }}" />
+      {{ with $.Params.image.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+  {{ end }}
+
+  {{ with .Content }}
+    <div class="prose dark:prose-invert sj-project__body">{{ . }}</div>
+  {{ end }}
+
+  {{ with .Params.technologies }}
+    <section class="sj-project__section">
+      <h2>{{ i18n "technologies" | default "Technologies" }}</h2>
+      <ul class="sj-tags">{{ range . }}<li class="sj-tag">{{ . }}</li>{{ end }}</ul>
+    </section>
+  {{ end }}
+
+  {{/* Additional screenshots beyond the lead image. */}}
+  {{ with .Params.screenshots }}
+    {{ $shots := slice }}
+    {{ range . }}{{ with $.Resources.GetMatch .file }}{{ $shots = $shots | append (dict "r" . "cap" $.file) }}{{ end }}{{ end }}
+    {{ with $shots }}
+      <section class="sj-project__section">
+        <h2>{{ i18n "screenshots" | default "Screenshots" }}</h2>
+        <div class="sj-project__shots">
+          {{ range . }}
+            {{ $r := .r }}{{ $t := $r }}
+            {{ if ne $r.MediaType.SubType "svg" }}{{ $t = $r.Fit "900x900 webp" }}{{ end }}
+            <figure>
+              <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy" />
+            </figure>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  {{/* Related publications — resolved against real pages only. */}}
+  {{ with .Params.related_publications }}
+    {{ $pubs := slice }}
+    {{ range . }}
+      {{ $id := . }}
+      {{ with (where site.RegularPages "Section" "publication") }}
+        {{ range . }}{{ if eq (path.Base .File.Dir) $id }}{{ $pubs = $pubs | append . }}{{ end }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with $pubs }}
+      <section class="sj-project__section">
+        <h2>{{ i18n "related_publications" | default "Related publications" }}</h2>
+        <ul class="sj-project__related">
+          {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.related_research }}
+    {{ $areas := slice }}
+    {{ range . }}
+      {{ with site.GetPage (printf "/research/%s" .) }}{{ $areas = $areas | append . }}{{ end }}
+    {{ end }}
+    {{ with $areas }}
+      <section class="sj-project__section">
+        <h2>{{ i18n "related_research" | default "Related research" }}</h2>
+        <ul class="sj-project__related">
+          {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.collaborators }}
+    {{ $people := slice }}
+    {{ range . }}
+      {{ $p := partial "functions/get_author_profile" (. | urlize) }}
+      {{ with $p.title }}{{ $people = $people | append $p }}{{ end }}
+    {{ end }}
+    {{ with $people }}
+      <section class="sj-project__section">
+        <h2>{{ i18n "collaborators" | default "Collaborators" }}</h2>
+        <ul class="sj-project__related">
+          {{ range . }}<li>{{ .title }}</li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+
 </main>
 {{ end }}

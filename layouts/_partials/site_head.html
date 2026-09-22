@@ -102,6 +102,7 @@
   {{ with resources.Get "css/tokens.css" }}{{ $project_css = $project_css | append . }}{{ end }}
   {{ with resources.Get "css/custom.css" }}{{ $project_css = $project_css | append . }}{{ end }}
   {{ with resources.Get "css/homepage.css" }}{{ $project_css = $project_css | append . }}{{ end }}
+  {{ with resources.Get "css/phase4.css" }}{{ $project_css = $project_css | append . }}{{ end }}
   {{ with $project_css }}
     {{ $styles := . | resources.Concat "css/sajid-foundation.css" | minify | fingerprint "sha256" }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
@@ -191,6 +192,15 @@
     {{ $title = .Title | default $branding.site_title }}
     {{ if ne $title $branding.site_title }}{{ $title = printf "%s | %s" $title $branding.site_title }}{{ end }}
   {{ end }}
+
+  {{/* Phase 4: strip TeX delimiters from plain-text title contexts.
+       Several publication titles carry inline math (e.g. "Steane $[[7,1,3]]$
+       outer coding..."). KaTeX renders that in the DOM, but <title>,
+       og:title and twitter:title are plain text that KaTeX can never reach,
+       so the raw `$` delimiters would otherwise show in the browser tab and
+       in social/search previews. This unwraps `$...$` keeping the content;
+       it is metadata sanitisation, not a math renderer. */}}
+  {{ $title = replaceRE `\$([^$]+)\$` `$1` $title }}
   <meta property="twitter:card" content="{{ $twitter_card }}" />
   {{ with site.Params.hugoblox.identity.social.twitter }}
     <meta property="twitter:site" content="@{{ . }}" />

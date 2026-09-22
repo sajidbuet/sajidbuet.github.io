@@ -1,0 +1,353 @@
+/* ==========================================================================
+   SAJID.BD — Projects, Funding and Research (Phase 4)
+   Phase 2A tokens only. No literal colours, no new motion vocabulary.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared page furniture
+   -------------------------------------------------------------------------- */
+.sj-page-title {
+  font-size: var(--sj-text-3xl);
+  font-weight: 700;
+  line-height: var(--sj-leading-tight);
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+  margin: 0 0 var(--sj-space-3);
+}
+
+.sj-page-lede {
+  max-width: 68ch;
+  color: var(--sj-text-secondary);
+}
+
+.sj-page-lede p { margin: 0 0 var(--sj-space-3); }
+
+.sj-breadcrumb {
+  margin: 0 0 var(--sj-space-3);
+  font-size: var(--sj-text-sm);
+}
+
+.sj-breadcrumb a {
+  color: var(--sj-accent);
+  text-decoration: none;
+}
+
+.sj-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.sj-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sj-ext {
+  margin-left: 2px;
+  font-size: 0.85em;
+}
+
+/* --------------------------------------------------------------------------
+   Projects listing
+   -------------------------------------------------------------------------- */
+/* The shell already adds `.page-body.my-10` (40px top and bottom) around
+   non-landing pages, so a symmetric 72px here produced a 112px gap between
+   the last card and the footer. Asymmetric padding lands the total at ~72px
+   below the grid while keeping the header spacing intact. */
+.sj-projects-page {
+  padding-top: var(--sj-section-md);
+  padding-bottom: var(--sj-space-8);
+}
+
+/* Same correction for the Funding listing and project detail pages, which
+   share the shell's my-10 margin. */
+.sj-funding,
+.sj-project {
+  padding-bottom: var(--sj-space-8);
+}
+
+/* --------------------------------------------------------------------------
+   Collaborations band (Research landing)
+   Four partners is a short list, so the band is sized for what exists rather
+   than reserving a showcase-height area.
+   -------------------------------------------------------------------------- */
+/* The logos block carries its own `py-16 sm:py-20 lg:py-24` wrapper — 96px
+   top and bottom at desktop — which stacks on top of the section spacing.
+   That reserved 192px of padding around 168px of content, which is what made
+   a four-logo band look like an unfinished showcase. Scoped to this section
+   so the homepage partner band is untouched. */
+#collaborations [class*="py-16"] {
+  padding-top: var(--sj-space-8);
+  padding-bottom: var(--sj-space-8);
+}
+
+#collaborations .text-center {
+  margin-bottom: var(--sj-space-6);
+}
+
+#collaborations [class*="grid"] {
+  align-items: center;
+}
+
+.sj-projects-page__head { margin-bottom: var(--sj-space-8); }
+
+.sj-projects-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sj-space-2);
+  margin-bottom: var(--sj-space-6);
+}
+
+.sj-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 var(--sj-space-3);
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-secondary);
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-sm);
+  text-decoration: none;
+}
+
+.sj-chip:hover { border-color: var(--sj-accent); color: var(--sj-accent); }
+.sj-chip--active { border-color: var(--sj-accent); color: var(--sj-accent); }
+
+.sj-projects__grid--more { margin-top: var(--sj-space-4); }
+
+/* --------------------------------------------------------------------------
+   Project card additions (base .sj-card comes from homepage.css)
+   -------------------------------------------------------------------------- */
+.sj-card--project { padding-top: var(--sj-space-4); }
+
+.sj-card__media {
+  display: block;
+  margin: 0 calc(-1 * var(--sj-space-6)) var(--sj-space-4);
+  border-bottom: 1px solid var(--sj-border);
+  background-color: var(--sj-background-subtle);
+}
+
+.sj-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.sj-card__cat {
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sj-text-tertiary);
+}
+
+.sj-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sj-space-4);
+  margin: var(--sj-space-4) 0 0;
+  padding-top: var(--sj-space-3);
+  border-top: 1px solid var(--sj-border);
+}
+
+.sj-card__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  color: var(--sj-accent);
+  text-decoration: none;
+}
+
+.sj-card__links a:hover { color: var(--sj-accent-hover); text-decoration: underline; text-underline-offset: 2px; }
+
+/* --------------------------------------------------------------------------
+   Project detail
+   -------------------------------------------------------------------------- */
+.sj-project { padding-block: var(--sj-section-md); }
+
+.sj-project__summary {
+  max-width: 68ch;
+  font-size: var(--sj-text-lg);
+  line-height: 1.5;
+  color: var(--sj-text-secondary);
+  margin: 0 0 var(--sj-space-4);
+}
+
+.sj-project__facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sj-space-3);
+  margin: 0 0 var(--sj-space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.sj-project__license {
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-secondary);
+}
+
+.sj-project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sj-space-3);
+  margin: 0 0 var(--sj-space-8);
+}
+
+.sj-project__figure {
+  margin: 0 0 var(--sj-space-8);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  overflow: hidden;
+  background-color: var(--sj-background-subtle);
+}
+
+.sj-project__figure img { display: block; width: 100%; height: auto; }
+
+.sj-project__figure figcaption {
+  padding: var(--sj-space-3) var(--sj-space-4);
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-secondary);
+  border-top: 1px solid var(--sj-border);
+}
+
+.sj-project__body { max-width: 68ch; }
+
+.sj-project__section {
+  margin-top: var(--sj-space-8);
+  padding-top: var(--sj-space-6);
+  border-top: 1px solid var(--sj-border);
+}
+
+.sj-project__section h2 {
+  font-size: var(--sj-text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--sj-text-primary);
+  margin: 0 0 var(--sj-space-4);
+}
+
+.sj-project__related {
+  margin: 0;
+  padding: 0 0 0 var(--sj-space-4);
+  color: var(--sj-text-secondary);
+}
+
+.sj-project__related a { color: var(--sj-accent); text-decoration: none; }
+.sj-project__related a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.sj-project__shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sj-space-4);
+}
+
+.sj-project__shots figure {
+  margin: 0;
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  overflow: hidden;
+}
+
+.sj-project__shots img { display: block; width: 100%; height: auto; }
+
+/* --------------------------------------------------------------------------
+   Grant rows (Funding & Grants)
+   Structured academic records, not cards.
+   -------------------------------------------------------------------------- */
+.sj-grant {
+  padding: var(--sj-space-6) 0;
+  border-bottom: 1px solid var(--sj-border);
+}
+
+.sj-grant:first-of-type { border-top: 1px solid var(--sj-border); }
+
+.sj-grant__title {
+  margin: 0 0 var(--sj-space-3);
+  font-size: var(--sj-text-lg);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--sj-text-primary);
+}
+
+.sj-grant__title a { color: inherit; text-decoration: none; }
+.sj-grant__title a:hover { color: var(--sj-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.sj-grant__meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sj-space-3) var(--sj-space-8);
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .sj-grant__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .sj-grant__meta { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.sj-grant__field dt {
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sj-text-tertiary);
+}
+
+.sj-grant__field dd {
+  margin: 2px 0 0;
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-primary);
+}
+
+.sj-grant__field dd a { color: var(--sj-accent); text-decoration: none; }
+.sj-grant__field dd a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.sj-grant__award { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Status vocabulary additions (base styles in homepage.css)
+   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Publication row actions, site-wide
+
+   Phase 3 fixed these only under `.sj-home`. They paint #0c96c8 at 12px
+   directly (3.38:1, below AA) and appear on /publication/ and every
+   publication detail page, so the fix is promoted out of the homepage scope.
+   Purely a token swap plus a larger hit area — no layout change, so the dense
+   academic list is unaffected.
+   -------------------------------------------------------------------------- */
+.hb-attachment-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--sj-accent);
+}
+
+.hb-attachment-link:hover { color: var(--sj-accent-hover); }
+
+/* --------------------------------------------------------------------------
+   Status vocabulary additions (base styles in homepage.css)
+   -------------------------------------------------------------------------- */
+.sj-status--maintained { color: var(--sj-accent); border-color: currentColor; }
+.sj-status--prototype  { color: var(--sj-warning); border-color: currentColor; }
+.sj-status--planned    { color: var(--sj-text-secondary); border-color: currentColor; }
+
+/* `archived` and `past` read as inactive: hollow dot, neutral colour, so the
+   set differs by shape as well as hue. */
+.sj-status--archived { color: var(--sj-text-secondary); border-color: currentColor; }
+.sj-status--archived .sj-status__dot,
+.sj-status--planned .sj-status__dot {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}

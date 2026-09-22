@@ -2,7 +2,7 @@
 title: Design and Low-cost Fabrication of Optical Biosensors for Virus Detection
 authors:
 - me
-date: '2008-01-01'
+date: '2021-01-01'
 start_date: '2021-01-01'
 end_date: '2022-01-01'
 grant_name: 'Basic Research Grant'
@@ -14,4 +14,7 @@ funding_agency_url: 'https://casrproposal.buet.ac.bd'
 publishDate: '2025-04-24T19:14:18.867342Z'
 tags:
 - misc
+aliases:
+  - /projects/g-01/
+type: grant
 ---

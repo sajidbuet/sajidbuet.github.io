@@ -10,7 +10,9 @@ publication_types:
 - paper-conference
 publication: '*2025 International Conference on Quantum Photonics, Artificial Intelligence,
   and Networking (QPAIN)*'
-doi: 10.1109/QPAIN66474.2025.11172078
+hugoblox:
+  ids:
+    doi: 10.1109/QPAIN66474.2025.11172078
 tags:
 - quantum
 ---

@@ -47,7 +47,13 @@ enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-disableAliases: true
+# Phase 4: enabled so Hugo emits front-matter `aliases:` as redirect stubs.
+# This site deploys to GitHub Pages, which ignores Netlify's `_redirects`
+# file, so alias stubs are the only working redirect mechanism here. They are
+# required to preserve the old /projects/g-* grant URLs after Funding moved to
+# /research/funding/. Verified against generated output — see
+# docs/redesign/phase-4-url-migration.md.
+disableAliases: false
 #permalinks:
 #  authors: '/people/:slug/'
 outputs:
@@ -63,6 +69,10 @@ taxonomies:
   author: authors
   tag: tags
   publication_type: publication_types
+  # Phase 4: project portfolio. Category is a taxonomy rather than a
+  # directory so re-categorising a project never changes its URL.
+  project_category: project_categories
+  technology: technologies
 markup:
   _merge: deep
   highlight:

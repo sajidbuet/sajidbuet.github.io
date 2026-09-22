@@ -11,7 +11,9 @@ publishDate: '2026-09-01T16:20:39.805822Z'
 publication_types:
 - paper-conference
 publication: '*2009 IEEE Antennas and Propagation Society International Symposium*'
-doi: 10.1109/APS.2009.5171493
+hugoblox:
+  ids:
+    doi: 10.1109/APS.2009.5171493
 tags:
 - antenna
 ---

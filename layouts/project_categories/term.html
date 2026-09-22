@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{/* Project taxonomy term — Phase 4.
+
+     Without this, project_categories/technologies term pages fall through to
+     layouts/list.html, which renders the `citation` view and then calls
+     HugoBlox's build_links against a project's front matter. That errored the
+     build, because projects are not publications. */}}
+<div class="sj-container-wide sj-projects-page">
+  <header class="sj-projects-page__head">
+    <p class="sj-breadcrumb"><a href="{{ "/projects/" | relLangURL }}">{{ i18n "projects" | default "Projects" }}</a></p>
+    <h1 class="sj-page-title">{{ .Title | humanize | title }}</h1>
+    <p class="sj-page-lede">
+      {{ len .Pages }} {{ if eq (len .Pages) 1 }}{{ i18n "project" | default "project" }}{{ else }}{{ i18n "projects_lower" | default "projects" }}{{ end }}
+    </p>
+  </header>
+
+  {{ with .Pages }}
+    <ul class="sj-projects__grid">
+      {{ range .ByDate.Reverse }}{{ partial "views/project-card.html" (dict "item" . "level" 2) }}{{ end }}
+    </ul>
+  {{ end }}
+</div>
+{{ end }}

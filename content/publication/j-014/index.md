@@ -10,7 +10,9 @@ publishDate: '2026-09-01T16:20:40.420345Z'
 publication_types:
 - article-journal
 publication: '*Sensing and Bio-Sensing Research*'
-doi: 10.1016/j.sbsr.2021.100429
+hugoblox:
+  ids:
+    doi: 10.1016/j.sbsr.2021.100429
 abstract: 'Due to changes in our climate and constant loss of habitat for animals,
   new pathogens for humans are constantly erupting. SARS-CoV-2 virus, become so infectious
   and deadly that they put new challenge to the whole technological advancement of

@@ -9,7 +9,9 @@ publishDate: '2026-09-01T16:20:40.675308Z'
 publication_types:
 - article-journal
 publication: '*RSC advances*'
-doi: 10.1039/D5RA04586J
+hugoblox:
+  ids:
+    doi: 10.1039/D5RA04586J
 abstract: The advent of graphene catalyzed extensive exploration into two-dimensional
   (2D) materials, owing to their extraordinary electronic, mechanical, and optical
   properties. Among these, two-dimensional silicon carbide (2D-SiC) has emerged as

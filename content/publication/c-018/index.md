@@ -11,7 +11,9 @@ publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
-doi: 10.1109/ICTP60248.2023.10491019
+hugoblox:
+  ids:
+    doi: 10.1109/ICTP60248.2023.10491019
 tags:
 - photonics
 ---

@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{/* Projects portfolio listing — Phase 4.
+     Only real portfolio bundles appear: a page must declare
+     `project_category`. Grant bundles never do, so a grant can never be
+     rendered here even if one were placed in this section by mistake. */}}
+
+{{ $projects := where .Pages "Params.project_category" "!=" nil }}
+{{ $featured := where $projects "Params.featured" true }}
+{{ $rest := where $projects "Params.featured" "!=" true }}
+
+<div class="sj-container-wide sj-projects-page">
+
+  <header class="sj-projects-page__head">
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="sj-page-lede">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ if gt (len $projects) 0 }}
+
+    {{/* A category filter is only worth showing once there is something to
+         filter. With two projects it would be noise. */}}
+    {{ $cats := slice }}
+    {{ range $projects }}{{ with .Params.project_category }}{{ $cats = $cats | append . }}{{ end }}{{ end }}
+    {{ $cats = $cats | uniq }}
+    {{ if ge (len $projects) 6 }}
+      <nav class="sj-projects-page__filters" aria-label="{{ i18n "filter_by_category" | default "Filter by category" }}">
+        <a class="sj-chip sj-chip--active" href="{{ .RelPermalink }}">{{ i18n "all" | default "All" }}</a>
+        {{ range $cats }}
+          <a class="sj-chip" href="{{ (printf "/project_categories/%s/" (. | urlize)) | relLangURL }}">{{ . | humanize | title }}</a>
+        {{ end }}
+      </nav>
+    {{ end }}
+
+    {{ with $featured }}
+      <ul class="sj-projects__grid">
+        {{ range .ByDate.Reverse }}{{ partial "views/project-card.html" (dict "item" . "level" 2) }}{{ end }}
+      </ul>
+    {{ end }}
+
+    {{ with $rest }}
+      <ul class="sj-projects__grid {{ if $featured }}sj-projects__grid--more{{ end }}">
+        {{ range .ByDate.Reverse }}{{ partial "views/project-card.html" (dict "item" . "level" 2) }}{{ end }}
+      </ul>
+    {{ end }}
+
+  {{ else }}
+    <p class="sj-projects__pending">
+      {{ i18n "projects_empty" | default "Project entries are being prepared." }}
+    </p>
+  {{ end }}
+
+</div>
+{{ end }}

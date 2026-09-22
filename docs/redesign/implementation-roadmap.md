@@ -389,7 +389,119 @@ Full-page `home` at all 7 viewports, light + dark; hero crop at 1440/768/390.
 
 ---
 
-## Phase 4 — Core content: Research, Projects, Publications
+## Phase 4 — Core Content ✅ COMPLETE (one manual gate outstanding)
+
+**Completed 2026-09-22** on `redesign/phase-4-core-content`.
+Full migration record: [`phase-4-url-migration.md`](phase-4-url-migration.md).
+
+### Funding migration — staged and gated
+
+| Gate | Result |
+|---|---|
+| A — inventory old `/projects/` routes from the build | ✅ 3 grant URLs + root + paginator |
+| B — `git mv` bundles, add aliases, fix dates | ✅ |
+| C — alias files exist in generated output | ✅ byte-inspected |
+| D — browser follows each legacy URL to the right page | ✅ against a **localhost-baseURL** build |
+| E — create `/projects/` portfolio | ✅ only after D passed |
+| **Production redirect verification** | ❌ **not possible — no branch preview exists.** Manual gate after first deploy |
+
+`/projects/g-01..03/` → `/research/funding/g-01..03/`, all verified.
+The `/projects/` **root** deliberately changes meaning and is not aliased —
+aliasing it would collide with the new portfolio's output path.
+
+### Configuration changes
+
+| Setting | Was | Now | Why |
+|---|---|---|---|
+| `disableAliases` | `true` | `false` | Alias stubs are the only redirect mechanism that works on GitHub Pages. Verified no content declared `aliases:` beforehand, so nothing unintended was introduced |
+| `taxonomies` | author, tag, publication_type | **+ project_category, technology** | Category as taxonomy, not directory, so re-categorising never changes a URL |
+| `content.math.enable` | `false` | `true` | Publication titles contain TeX that rendered raw |
+
+### Projects content model
+
+Page bundles at `content/projects/<slug>/`, category by taxonomy.
+Status vocabulary: `active · maintained · prototype · planned · archived`.
+Status is never colour-only — each carries a dot glyph and a text label, and
+inactive states use a hollow dot.
+
+**Categories started at two**, not five: `software`, `research-software`.
+`hardware`, `educational` and `automation` are deliberately absent until each
+can hold ~3 credible items.
+
+### Project entries created — real content only
+
+| Project | Category | Evidence |
+|---|---|---|
+| **CTAdmin** | software | `github.com/sajidbuet/CTAdmin` (verified 200, description "Class Test Seat Plan and Timing") + the author's own blog post |
+| **Scholar Profile Exporter** | research-software | `github.com/sajidbuet/scholar-profile-exporter` (verified 200, "Scholar Profile Exporter (CSV + BibTeX Link)") + the author's own blog post |
+
+Nothing was invented. Both descriptions draw only on the author's blog posts
+and the repositories' own GitHub descriptions.
+
+**Candidates that still need authoring by the user** (identified, not created,
+because no published artefact backs them):
+- Microsoft Teams bulk-add and BIIS-check PowerShell tooling (blog posts exist; no repo link)
+- `_pythonscripts/student-author-page-creator.py` and the author-YAML generator (in-repo, unpublished)
+- The Publish-or-Perish → BibTeX pipeline referenced in the citation-count post
+
+### Publications
+
+| Item | Outcome |
+|---|---|
+| URL | **Unchanged** at `/publication/` — deliberately not renamed |
+| Pagination | **Deferred, deliberately.** The filter renders all 62 entries into the DOM and toggles `.pub-hidden`; static pagination would leave filters searching only the current page. Correct behaviour beat the roadmap wording (§39) |
+| Filters | tag / type / year all intact, 63 rows in DOM |
+| Math | KaTeX enabled; 0 raw `$…$` visible in the rendered list |
+| `<title>` / `og:title` | Sanitised in `site_head.html` — KaTeX cannot reach plain-text metadata |
+| Duplicate `x-04` | Removed; byte-identical to `x-03` apart from a generated `publishDate`. Aliased |
+| Author normalisation | `Andrea Alu` → `Andrea Alù`; the `andrea-alu` duplicate-target-path warning is gone |
+| **DOI links** | **Fixed a pre-existing bug**: 100 files used the deprecated top-level `doi:`, which emitted `href="10.1007/..."` with no scheme — broken on every publication. Migrated to `hugoblox.ids.doi`; now `https://doi.org/…`. Also silenced ~100 build warnings |
+
+### Navigation
+
+Now: `Home · Research · Publications · Projects · Teaching · Team · Outreach · Contact`,
+all pointing at real pages instead of homepage anchors. **`Funding` removed**
+as a primary item.
+
+**Deferred to Phase 5:** `Outreach` → `Resources` (route does not exist yet).
+**Deferred:** removing the textual `Home` item and moving Contact to the header
+CTA — breadcrumbs are still not enabled site-wide, which was a stated precondition.
+
+### Overrides created
+
+**None from `_vendor`.** New project-owned files only:
+`layouts/projects/{list,single}.html`, `layouts/grant/{list,single}.html`
+(the latter moved from `layouts/projects/single.html`),
+`layouts/project_categories/term.html`, `layouts/technologies/term.html`,
+`layouts/_partials/views/project-card.html`,
+`layouts/_partials/hbx/blocks/grants-summary/block.html`, `assets/css/phase4.css`.
+
+### Two collisions found and resolved
+
+1. **`links:` front-matter key** — the proposed project schema used `links:`,
+   which is a reserved HugoBlox param expecting a *list*. A map broke the build
+   on taxonomy term pages. Renamed to **`project_links:`**.
+2. **`collection` block folder filter** — it filters on `.Section`, and the
+   grants' Section is `research`, so `folders: [research/funding]` matched
+   nothing and the Funding page rendered empty. Replaced with type-based
+   templates (`type: grant`) and a small `grants-summary` block.
+
+### QA
+
+0 contrast failures and 0 heading skips on `/research/`, `/research/funding/`,
+`/projects/`, `/projects/ctadmin/`, `/publication/`, in both themes.
+0 responsive anomalies across 7 viewports × 2 themes × 5 routes.
+0 stale `/projects/g-*` links in a 269-link crawl over 14 routes.
+Production build passes.
+
+### Deferred
+
+Pagination · ~296 sub-24 px targets on `/publication/` (Phase 7) ·
+Pagefind search · `content/bn` nesting (Phase 8) · Resources migration (Phase 5).
+
+---
+
+## Phase 4 — Core content: Research, Projects, Publications *(original plan)*
 
 ⚠ **This phase moves URLs. Highest-risk phase in the programme.**
 

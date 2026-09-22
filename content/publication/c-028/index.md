@@ -11,7 +11,9 @@ publishDate: '2026-09-01T16:20:40.204356Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'
-doi: 10.1109/PIERS-Spring66516.2025.11276753
+hugoblox:
+  ids:
+    doi: 10.1109/PIERS-Spring66516.2025.11276753
 tags:
 - photonics
 ---

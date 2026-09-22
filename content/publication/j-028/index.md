@@ -10,7 +10,9 @@ publishDate: '2026-09-01T16:20:40.692742Z'
 publication_types:
 - article-journal
 publication: '*J. Opt. Soc. Am. B*'
-doi: 10.1364/JOSAB.591582
+hugoblox:
+  ids:
+    doi: 10.1364/JOSAB.591582
 abstract: Metasurfaces have become a cornerstone of flat optics, enabling precise
   control over light propagation through nanoengineered materials. Dynamic and reconfigurable
   metalenses are key to next-generation flat-optics platforms, yet their practical

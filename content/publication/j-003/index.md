@@ -12,7 +12,9 @@ publishDate: '2026-09-01T16:20:40.250158Z'
 publication_types:
 - article-journal
 publication: '*Journal of Engineering Science & Technology Review*'
-doi: 10.25103/jestr.041.10
+hugoblox:
+  ids:
+    doi: 10.25103/jestr.041.10
 tags:
 - antenna
 ---

@@ -10,7 +10,9 @@ publishDate: '2026-09-01T16:20:40.636406Z'
 publication_types:
 - article-journal
 publication: '*Physica B: Condensed Matter*'
-doi: 10.1016/j.physb.2024.416670
+hugoblox:
+  ids:
+    doi: 10.1016/j.physb.2024.416670
 abstract: Researchers have shown considerable interest in two-dimensional silicon
   carbide recently because of its relatively high exciton binding energy and wide
   bandgap. This article focuses on analyzing and studying first-principles density

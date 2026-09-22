@@ -14,4 +14,6 @@ tags:
 links:
 - name: URL
   url: ''
+aliases:
+  - /publication/x-04/
 ---

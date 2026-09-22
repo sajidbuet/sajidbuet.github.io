@@ -12,7 +12,9 @@ publishDate: '2026-09-01T16:20:40.000304Z'
 publication_types:
 - paper-conference
 publication: '*Conference on Lasers and Electro-Optics*'
-doi: 10.1364/CLEO_QELS.2016.FF1D.8
+hugoblox:
+  ids:
+    doi: 10.1364/CLEO_QELS.2016.FF1D.8
 abstract: We design and fabricate a Pancharatnam-Berry phase manipulating metasurface
   to experimentally demonstrate a three-color RGB pattern. The color pattern is produced
   by illuminating a nanostructured silver metasurface hologram with a white light

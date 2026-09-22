@@ -9,7 +9,9 @@ publishDate: '2026-09-01T16:20:40.704422Z'
 publication_types:
 - article-journal
 publication: '*Quantum Information Processing*'
-doi: 10.1007/s11128-026-05327-6
+hugoblox:
+  ids:
+    doi: 10.1007/s11128-026-05327-6
 abstract: Long-distance quantum communication requires architectures that withstand
   photon loss and operational noise without relying on two-way classical signalling
   that incurs round-trip latency. Motivated by recent hybrid designs combining photonic

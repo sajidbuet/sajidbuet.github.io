@@ -11,7 +11,9 @@ publication_types:
 - paper-conference
 publication: '*2024 2nd International Conference on Information and Communication
   Technology (ICICT)*'
-doi: 10.1109/ICICT64387.2024.10839649
+hugoblox:
+  ids:
+    doi: 10.1109/ICICT64387.2024.10839649
 tags:
 - embedded
 ---

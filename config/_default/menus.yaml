@@ -1,40 +1,42 @@
 # Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
+#
+# Phase 4: items now point at real pages instead of homepage anchors, and
+# `Funding` is gone as a primary item — funding lives under Research at
+# /research/funding/ since the grant migration.
+#
+# `Projects` now points at the genuine software/engineering portfolio. That is
+# only safe because the grants moved out of /projects/ first and every old
+# /projects/g-* URL is preserved by an alias.
+#
+# DEFERRED to Phase 5: `Outreach` becomes `Resources` at /resources/. That
+# route does not exist yet, so the item still points at /outreach/.
+#
+# DEFERRED: removing the textual `Home` item. Its preconditions
+# (information-architecture.md §4.1) are met on desktop, but Home is kept for
+# now because breadcrumbs are still not enabled site-wide.
 
 main:
   - name: Home
-    url: '/#about'
+    url: '/'
     weight: 10
   - name: Research
-    url: '/#research'
+    url: '/research/'
     weight: 20
-  - name: Funding
-    url: '/#projects'
-    weight: 25
-  - name: Team
-    url: '/#team'
-    weight: 30
   - name: Publications
-    url: '/#publication'
+    url: '/publication/'
+    weight: 30
+  - name: Projects
+    url: '/projects/'
     weight: 40
   - name: Teaching
-    url: '/#teaching'
-    weight: 45
-  - name: News
-    url: '/#news'
+    url: '/teaching/'
     weight: 50
-  - name: Outreach
-    url: '/#outreach'
+  - name: Team
+    url: '/authors/'
     weight: 60
+  - name: Outreach
+    url: '/outreach/'
+    weight: 70
   - name: Contact
     url: '/#contact'
-    weight: 70
-
-
-# Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
-#  - name: CV
-#    url: uploads/resume.pdf
-#    weight: 80
+    weight: 80

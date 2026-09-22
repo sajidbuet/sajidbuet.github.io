@@ -16,7 +16,9 @@ publishDate: '2026-09-01T16:20:40.348261Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'
-doi: 10.1063/1.5110051
+hugoblox:
+  ids:
+    doi: 10.1063/1.5110051
 abstract: Since ancient times, plasmonic structural coloring has inspired humanity;
   glassmakers achieved vibrant colors by doping glass with metal nanoparticles to
   craft beautiful objects such as the Roman Lycurgus cup and stained glass. These

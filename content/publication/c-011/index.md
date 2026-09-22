@@ -7,14 +7,16 @@ authors:
 - Aveek Dutta
 - ' me'
 - Alexander V. Kildishev
-- Andrea Alu
+- Andrea Alù
 - Alexandra Boltasseva
 date: '2014-01-01'
 publishDate: '2026-09-01T16:20:39.947798Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
-doi: 10.1364/CLEO_QELS.2014.FF2C.2
+hugoblox:
+  ids:
+    doi: 10.1364/CLEO_QELS.2014.FF2C.2
 abstract: Transparent Conducting Oxides (TCOs) enable the realization of practical
   plasmonic and metamaterial devices at the telecommunication frequency due to their
   low optical loss and CMOS compatibility. By employing a conventional dry-etching

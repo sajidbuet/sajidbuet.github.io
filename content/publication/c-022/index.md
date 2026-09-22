@@ -9,7 +9,9 @@ publishDate: '2026-09-01T16:20:40.110198Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE Photonics Conference (IPC)*'
-doi: 10.1109/IPC57732.2023.10360477
+hugoblox:
+  ids:
+    doi: 10.1109/IPC57732.2023.10360477
 tags:
 - photonics
 ---

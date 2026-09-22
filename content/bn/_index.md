@@ -185,7 +185,7 @@ sections:
       text: আমাদের চলমান ও সম্পন্ন গবেষণা অনুদানসমূহ দেখতে নিচের লিংকে ক্লিক করুন।
       button:
         text: সকল গবেষণা অনুদান দেখুন
-        url: /projects/
+        url: /research/funding/
     design:
       card:
         css_class: 'bg-primary-300 dark:bg-primary-700'

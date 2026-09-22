@@ -2,7 +2,7 @@
 title: Structurally Tunable Gear-Shaped Plasmonic Sensor
 authors:
 - Sajid Muhaimin Choudhury
-date: '2008-01-01'
+date: '2023-01-01'
 start_date: '2023-01-01'
 end_date: '2024-01-01'
 grant_name: 'Basic Research Grant'
@@ -14,4 +14,7 @@ funding_agency_url: 'https://www.buet.ac.bd'
 publishDate: '2025-04-24T19:14:18.867342Z'
 tags:
 - misc
+aliases:
+  - /projects/g-02/
+type: grant
 ---

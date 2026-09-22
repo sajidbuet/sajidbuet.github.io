@@ -12,7 +12,9 @@ publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
-doi: 10.1109/ICELCE.2010.5700749
+hugoblox:
+  ids:
+    doi: 10.1109/ICELCE.2010.5700749
 tags:
 - antenna
 ---

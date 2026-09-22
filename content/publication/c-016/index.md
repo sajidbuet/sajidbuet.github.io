@@ -12,7 +12,9 @@ publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
   (ACES)*'
-doi: 10.23919/ROPACES.2018.8364134
+hugoblox:
+  ids:
+    doi: 10.23919/ROPACES.2018.8364134
 tags:
 - photonics
 ---

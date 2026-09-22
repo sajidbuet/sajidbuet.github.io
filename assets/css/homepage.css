@@ -554,11 +554,21 @@
 /* --------------------------------------------------------------------------
    Partners
    -------------------------------------------------------------------------- */
+/* Partner logos.
+
+   `width: auto` + `max-height` made each logo depend on its decoded intrinsic
+   size. The logos are lazy-loaded and sit below the fold, so until they
+   decoded their computed width was 0px and the band appeared to contain a
+   single logo. Giving the image an explicit box and `object-fit: contain`
+   reserves the space up front: no dependence on decode, no layout shift,
+   aspect ratio still preserved, and nothing is stretched. */
 .sj-partners img,
 .sj-partners svg {
-  max-height: 44px;
-  width: auto;
+  width: 100%;
+  height: 40px;
+  max-height: 40px;
   object-fit: contain;
+  object-position: center;
 }
 
 /* --------------------------------------------------------------------------

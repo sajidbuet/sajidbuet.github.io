@@ -1,5 +1,16 @@
-{{ $item := .item }}
+{{/* Grant row — Phase 4.
 
+     Replaces the previous card treatment (rounded-2xl, shadow-sm, hover lift,
+     six nested tinted panels). Grants are structured academic records, so
+     they render as a compact row: title, then a definition list of agency,
+     role, period and award. Phase 2A tokens only; no literal colours.
+*/}}
+
+{{ $item := .item }}
+{{/* Heading level keeps the outline contiguous: the Funding listing sits
+     directly under the page h1 and passes 2; the Research summary already
+     supplies an h2 and uses the default 3. */}}
+{{ $level := .level | default 3 }}
 {{ $link := $item.RelPermalink }}
 {{ $target := "" }}
 {{ if $item.Params.external_link }}
@@ -8,139 +19,61 @@
 {{ end }}
 
 {{ $start := "" }}
-{{ with $item.Params.start_date }}
-  {{ $start = time.AsTime . | time.Format "Jan 2006" }}
-{{ end }}
-
+{{ with $item.Params.start_date }}{{ $start = time.AsTime . | time.Format "Jan 2006" }}{{ end }}
 {{ $end := "" }}
-{{ with $item.Params.end_date }}
-  {{ $end = time.AsTime . | time.Format "Jan 2006" }}
-{{ end }}
-
+{{ with $item.Params.end_date }}{{ $end = time.AsTime . | time.Format "Jan 2006" }}{{ end }}
 {{ $period := "" }}
-{{ if and $start $end }}
-  {{ $period = printf "%s – %s" $start $end }}
-{{ else if $start }}
-  {{ $period = $start }}
-{{ else if $end }}
-  {{ $period = $end }}
-{{ end }}
+{{ if and $start $end }}{{ $period = printf "%s – %s" $start $end }}
+{{ else if $start }}{{ $period = $start }}
+{{ else if $end }}{{ $period = $end }}{{ end }}
 
-{{ $agencyHost := "" }}
-{{ with $item.Params.funding_agency_url }}
-  {{ $agencyHost = replaceRE "^https?://([^/]+)/?.*$" "$1" . }}
-{{ end }}
+<article class="sj-grant">
+  {{ if eq $level 2 }}
+    <h2 class="sj-grant__title"><a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a></h2>
+  {{ else }}
+    <h3 class="sj-grant__title"><a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a></h3>
+  {{ end }}
 
-<div class="group w-full max-w-none h-full rounded-2xl border border-slate-200/70 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-  <div class="flex h-full flex-col">
+  <dl class="sj-grant__meta">
+    {{ with $item.Params.funding_agency }}
+      <div class="sj-grant__field">
+        <dt>{{ i18n "funding_agency" | default "Agency" }}</dt>
+        <dd>
+          {{ with $item.Params.funding_agency_url }}
+            <a href="{{ . }}" target="_blank" rel="noopener">{{ $item.Params.funding_agency }}</a>
+          {{ else }}
+            {{ . }}
+          {{ end }}
+        </dd>
+      </div>
+    {{ end }}
+
+    {{ with $item.Params.grant_position }}
+      <div class="sj-grant__field">
+        <dt>{{ i18n "role" | default "Role" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+    {{ end }}
+
+    {{ with $period }}
+      <div class="sj-grant__field">
+        <dt>{{ i18n "period" | default "Period" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+    {{ end }}
+
+    {{ with $item.Params.funding_award_amount }}
+      <div class="sj-grant__field">
+        <dt>{{ i18n "award" | default "Award" }}</dt>
+        <dd class="sj-grant__award">{{ . }}</dd>
+      </div>
+    {{ end }}
 
     {{ with $item.Params.grant_name }}
-      <div class="mb-3">
-        <span class="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-semibold text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">
-          {{ . }}
-        </span>
+      <div class="sj-grant__field">
+        <dt>{{ i18n "scheme" | default "Scheme" }}</dt>
+        <dd>{{ . }}</dd>
       </div>
     {{ end }}
-
-    <div class="mb-4">
-      <h3 class="text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-primary-600 dark:text-slate-100 dark:group-hover:text-primary-400">
-        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hover:underline">
-          {{ $item.Title }}
-        </a>
-      </h3>
-    </div>
-
-    <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
-      {{ with $item.Params.funding_award_amount }}
-        <div class="min-w-0 rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Award
-          </div>
-          <div class="mt-1 text-xl font-bold text-slate-900 dark:text-slate-100 break-words">
-            {{ . }}
-          </div>
-        </div>
-      {{ end }}
-
-      {{ with $period }}
-        <div class="min-w-0 rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Project Period
-          </div>
-          <div class="mt-1 text-sm font-semibold text-slate-900 dark:text-slate-100 break-words">
-            {{ . }}
-          </div>
-        </div>
-      {{ end }}
-
-      {{ with $item.Params.grant_position }}
-        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700">
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Role
-          </div>
-          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
-            {{ . }}
-          </div>
-        </div>
-      {{ end }}
-
-      {{ with $item.Params.funding_agency }}
-        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700">
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Agency
-          </div>
-          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
-            {{ . }}
-          </div>
-        </div>
-      {{ end }}
-
-      {{ with $item.Params.funding_agency_address }}
-        <div class="min-w-0 rounded-xl border border-slate-200/70 p-3 dark:border-slate-700 md:col-span-2">
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Location
-          </div>
-          <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
-            {{ . }}
-          </div>
-        </div>
-      {{ end }}
-    </div>
-
-    {{ with $item.Params.authors }}
-      <div class="mt-4 border-t border-slate-200 pt-3 dark:border-slate-800">
-        <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          Investigator{{ if gt (len .) 1 }}s{{ end }}
-        </div>
-        <div class="mt-1 text-sm text-slate-800 dark:text-slate-200 break-words">
-          {{ range $i, $a := . }}
-            {{ if $i }}, {{ end }}
-            {{ $slug := $a | urlize }}
-            {{ $profile := partial "functions/get_author_profile" $slug }}
-            {{ if $profile.title }}
-              {{ $profile.title }}
-            {{ else }}
-              {{ $a }}
-            {{ end }}
-          {{ end }}
-        </div>
-      </div>
-    {{ end }}
-
-    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 pt-1">
-      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 transition-colors hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
-        <span>View Details</span>
-        <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
-
-      {{ with $item.Params.funding_agency_url }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="text-xs text-slate-500 hover:text-primary-600 dark:text-slate-400 dark:hover:text-primary-400 break-all">
-          {{ $agencyHost | default . }}
-        </a>
-      {{ end }}
-    </div>
-
-  </div>
-</div>
+  </dl>
+</article>

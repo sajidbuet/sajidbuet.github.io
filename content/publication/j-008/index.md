@@ -13,7 +13,9 @@ publishDate: '2026-09-01T16:20:40.333725Z'
 publication_types:
 - article-journal
 publication: '*Nanophotonics*'
-doi: 10.1515/nanoph-2017-0130
+hugoblox:
+  ids:
+    doi: 10.1515/nanoph-2017-0130
 abstract: Optical metasurfaces are judicously engineered electromagnetic interfaces
   that can control and manipulate many of light’s quintessential properties, such
   as amplitude, phase, and polarization. These artificial surfaces are composed of
