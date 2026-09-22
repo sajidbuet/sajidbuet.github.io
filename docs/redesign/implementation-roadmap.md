@@ -757,7 +757,141 @@ at 1440 / 390.
 
 ---
 
-## Phase 6 — Detail templates
+## Phase 6 — Detail Templates ✅ COMPLETE
+
+**Branch:** `redesign/phase-6-detail-templates` · **Base:** `6b518eb` · **Date:** 2026-09-22
+**Hugo:** 0.157.0 extended · **Browser evidence:** Chrome 153 headless over CDP
+
+Full QA report: `docs/redesign/phase-6-detail-template-qa.md`.
+Template inventory: `docs/redesign/phase-6-detail-template-map.md`.
+Review set: `docs/redesign/screenshots/phase-6/review/`.
+
+### The finding that shaped the phase
+
+**Six of the twelve detail types had no project-owned template at all** —
+courses, archived courses, workshops, blog articles, news posts and personal
+pages all fell through to `_vendor/.../blox/layouts/single.html`. That is where
+the missing breadcrumbs and the unbounded reading width both came from, and it
+is why `layouts/single.html` is the one `_vendor` shadow this phase created.
+
+### Publication detail (6.1)
+
+**The action row had been dead since Phase 4.** The template read `.Params.doi`,
+`.Params.url` and `.Params.pdf`; no publication carries any of those — Phase 4
+moved DOIs to `hugoblox.ids.doi`, publisher links live in `links:`, the one PDF
+is `url_pdf`. Every publication page shipped with **zero** external actions.
+
+| | Before | After |
+|---|---|---|
+| DOI button | 0 | **52** |
+| Publisher URL button | 0 | **8** |
+| PDF button | 0 | **1** |
+| No external action | 61 | **4** (correctly — they have no such data) |
+
+Also: two empty `<p>` elements removed; the inline `<style>` block moved to
+`assets/css/phase6.css` and re-expressed in Phase 2A tokens (its dark rule ended
+in `rgba(255,255,255,1)`, painting a white band across the hero); figure support
+with explicit dimensions and non-cropping `Fit`; breadcrumb. **No publication
+bundle contains an image**, so figure support is capability only.
+
+### Project detail (6.2)
+
+Phase 4's layout already covered the sequence, so this repaired rather than
+rewrote it. The screenshot loop read its caption from `$.file` — the *page's*
+File object, always nil — and emitted `alt=""` for every image; both fixed.
+Breadcrumb upgraded from a hardcoded single link.
+
+Narrative sections stay author-written Markdown. Neither project has body
+content or screenshots, and inventing an architecture section from a repository
+name is what the brief forbids.
+
+### Course detail (6.3)
+
+New `layouts/teaching/single.html`. Across 33 course files there are **zero**
+uses of `outcomes`, `schedule`, `materials`, `announcement` or `assessment` in
+front matter — that structure is authored in Markdown. The template therefore
+supplies the header, metadata strip, archived notice, TOC and table treatment,
+and renders the body as written. `instructor:` is supported and set by no course.
+
+**Page weight:** the vendor template's `page_related` partial emitted a link to
+*every publication in both languages* on every course page.
+`/teaching/jul2025_eee303/` went from **250 internal links to 23**.
+
+### Team profile (6.4)
+
+Publications and Projects sections added; profiles gained breadcrumbs.
+`/authors/me/` lists 8 of **59** papers with a count link. 146 of 164 author
+pages gained a related section, **0** with an empty list.
+
+**Supervision was not built — no supervision data exists** in any of the 19
+author files, and inferring it from co-authorship is not permitted.
+
+Two data quirks were worked around template-side rather than silently changed:
+all 59 publications write `' me'` with a leading space (minting a phantom
+`/authors/-me/`), and student profiles live at `/authors/<id>-<name>/` while
+their credits create `/authors/<name>/`. Fixing either at source means editing
+59 files or renaming the author taxonomy — the latter an explicit stop condition.
+
+### Article / news (6.5)
+
+New `layouts/single.html`. Measured reading width **68 ch** on article, news,
+workshop and chapter pages; figures, tables, code and display math break out
+wider. Six blog articles began at `###`/`####` and produced an `h1 → h3` skip —
+all now start at `##`.
+
+### Books & Notes (6.6)
+
+Architecture and templates complete and validated; **content deliberately not
+created**. `layouts/notes/list.html` serves both the shelf and a book landing;
+`layouts/notes/single.html` gives the chapter view with sidebar and prev/next
+ordered by page `weight`. `type: notes` is **cascaded** from the section index —
+without it, chapters inherit `type: teaching` and render as courses.
+
+Validated against a temporary 3-chapter fixture (first chapter has no previous,
+last has no next, sidebar marks the current entry), which was **deleted before
+completion**. `/teaching/notes/` shows an honest empty state. **Full-book PDF
+export is not implemented and is not claimed** — no PDF engine was added.
+
+### Breadcrumbs (6.7)
+
+`layouts/_partials/breadcrumbs.html` rewritten as `<nav aria-label>` + `<ol>`,
+current page unlinked with `aria-current="page"`, wrapping at 390 px, depth ≥ 2
+only. Two inadequate implementations already existed: the project one was unused
+and emitted a `◎` glyph plus a non-existent icon; the vendor one is a `<div>`
+with `whitespace-nowrap overflow-hidden` gated behind a flag no page sets.
+**13/13** real detail routes pass all structural checks.
+
+### Images (6.8)
+
+**0 of 354** `<img>` tags across 316 detail pages lack `width`/`height`. The one
+offender was the footer `BUET_LOGO.svg`; Hugo cannot report SVG dimensions, so
+its intrinsic size came from the file's own `viewBox` rather than a guess.
+
+### QA
+
+18 routes × 3 viewports + dark at 1440. **0** horizontal overflow, **0**
+`h1 != 1`, **0** heading skips, **0** images without dimensions, **0** empty
+lists. Focus: **26/26** tab stops ringed. Mobile chapter sidebar collapses
+52 px / 259 px. Crawl: 27,872 links over 599 pages, **0 stale**, 0 new breakage.
+Production build passes. One console error, pre-existing (Pagefind 404).
+
+### Overrides created
+
+**One `_vendor` shadow:** `layouts/single.html`. Other new project-owned files:
+`layouts/teaching/single.html`, `layouts/notes/{list,single}.html`,
+`assets/css/phase6.css`.
+
+### Deferred
+
+`' me'` leading-space cleanup across 59 publications and the resulting
+`/authors/-me/` duplicate · author identity consolidation (needs taxonomy work) ·
+supervision data model · full-book PDF export · real book/notes content ·
+missing student portraits · Pagefind · `/bn/` detail routes (Phase 8) ·
+sub-24 px targets (Phase 7).
+
+---
+
+## Phase 6 — Detail templates *(original plan, superseded by the record above)*
 
 **Objective:** the pages people actually land on from Google.
 
@@ -884,6 +1018,7 @@ they are created:
 | _(none — Phase 2A created no new overrides)_ | 2A | Every file touched was already a project override or project-owned custom code | — |
 | _(none — Phase 4 created no `_vendor` shadows)_ | 4 | New project-owned templates only | — |
 | _(none — Phase 5 created no `_vendor` shadows)_ | 5 | New project-owned templates only: `layouts/resources/overview.html`, `layouts/teaching/overview.html`, `assets/css/phase5.css` | — |
+| `layouts/single.html` | 6 | Shadows `_vendor/github.com/HugoBlox/kit/modules/blox/layouts/single.html`. Six detail types (courses, workshops, blog articles, news, personal pages) had no project template and fell through to it. The upstream version gates breadcrumbs behind `show_breadcrumb`, which no page sets, and renders prose in a `max-w-6xl` column with no reading measure. | HugoBlox kit, vendored copy at `6b518eb` |
 
 ### Files changed in Phase 2A, by category
 

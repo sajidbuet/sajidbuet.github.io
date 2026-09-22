@@ -18,92 +18,52 @@
   {{ $pubTypeLabel = "Manuscript" }}
 {{ end }}
 
-{{/* ---------- Links / resources ---------- */}}
-{{ $doi := .Params.doi }}
-{{ $url := .Params.url | default .Params.external_link }}
+{{/* ---------- Links / resources ----------
+     Phase 6 fix. This block previously read `.Params.doi`, `.Params.url` and
+     `.Params.pdf`. No publication in the repository carries any of those:
+     Phase 4 migrated every DOI to `hugoblox.ids.doi` (52 of 61 papers), the
+     publisher link lives in `links: [{name, url}]` (10 papers) and the one
+     PDF is `url_pdf`. The result was that the DOI, URL and PDF buttons never
+     rendered at all — only "Cite" and "BibTeX" ever appeared. */}}
 
+{{ $doi := "" }}
+{{ with .Params.hugoblox }}{{ with .ids }}{{ with .doi }}{{ $doi = . }}{{ end }}{{ end }}{{ end }}
+{{ if not $doi }}{{ with .Params.doi }}{{ $doi = . }}{{ end }}{{ end }}
+
+{{ $url := "" }}
 {{ $pdf := "" }}
-{{ with .Params.pdf }}
-  {{ $pdf = . }}
-{{ else }}
-  {{ with .Resources.GetMatch "*.pdf" }}
-    {{ $pdf = .RelPermalink }}
-  {{ end }}
+{{ range .Params.links }}
+  {{ $n := lower (.name | default "") }}
+  {{ if and (not $pdf) (eq $n "pdf") }}{{ $pdf = .url }}
+  {{ else if and (not $url) (.url) }}{{ $url = .url }}{{ end }}
 {{ end }}
+{{ if not $url }}{{ with .Params.url }}{{ $url = . }}{{ else }}{{ with .Params.external_link }}{{ $url = . }}{{ end }}{{ end }}{{ end }}
+{{ if not $pdf }}{{ with .Params.url_pdf }}{{ $pdf = . }}{{ end }}{{ end }}
+{{ if not $pdf }}{{ with .Params.pdf }}{{ $pdf = . }}{{ end }}{{ end }}
+{{ if not $pdf }}{{ with .Resources.GetMatch "*.pdf" }}{{ $pdf = .RelPermalink }}{{ end }}{{ end }}
 
 {{ $bibContent := "" }}
 {{ with .Resources.GetMatch "cite.bib" }}
   {{ $bibContent = .Content }}
 {{ end }}
 
-{{ $featured := "" }}
+{{ $featuredRes := "" }}
 {{ with .Resources.GetMatch "*featured*" }}
-  {{ $featured = .RelPermalink }}
+  {{ $featuredRes = . }}
 {{ else }}
   {{ with .Resources.GetMatch "{cover,hero,thumbnail}*" }}
-    {{ $featured = .RelPermalink }}
+    {{ $featuredRes = . }}
   {{ end }}
 {{ end }}
 
 {{ $authors := .Params.authors }}
 
-<style>
-  .pub-accent {
-    color: rgb(var(--color-primary-600));
-  }
-  .dark .pub-accent {
-    color: rgb(var(--color-primary-400));
-  }
-
-  .pub-accent-bg {
-    background-color: rgb(var(--color-primary-600));
-    
-  }
-  .pub-accent-bg:hover {
-    background-color: rgb(var(--color-primary-700));
-  }
-  .dark .pub-accent-bg {
-    background-color: rgb(var(--color-primary-500));
-    color: rgb(255 255 255);
-  }
-  .dark .pub-accent-bg:hover {
-    background-color: rgb(var(--color-primary-400));
-  }
-
-  .pub-accent-soft {
-    background-color: rgb(var(--color-primary-50));
-    color: rgb(var(--color-primary-700));
-    border-color: rgb(var(--color-primary-200));
-  }
-  .dark .pub-accent-soft {
-    background-color: rgba(var(--color-primary-400), 0.10);
-    color: rgb(var(--color-primary-300));
-    border-color: rgba(var(--color-primary-400), 0.20);
-  }
-
-  .pub-hero {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(var(--color-primary-500), 0.08) 0%,
-        rgba(var(--color-primary-500), 0.03) 45%,
-        rgba(0,0,0,0) 100%
-      );
-  }
-  .dark .pub-hero {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(var(--color-primary-400), 0.12) 0%,
-        rgba(var(--color-primary-400), 0.05) 45%,
-        rgba(255, 255, 255, 1 ) 100%
-      );
-  }
-</style>
 
 <section class="pub-hero border-b border-slate-200/70 dark:border-slate-800/70">
   <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
     <div class="max-w-5xl">
+
+      {{ partial "breadcrumbs.html" (dict "page" . "label" .Title) }}
 
       <div class="mb-5 flex flex-wrap gap-2">
         {{ if $pubTypeLabel }}
@@ -229,15 +189,23 @@
           </div>
         {{ end }}
 
-        {{ with $featured }}
-          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <img
-              src="{{ . }}"
-              alt="{{ $page.Title }}"
-              class="w-full h-auto"
-              loading="lazy"
-            >
-          </div>
+        {{/* Publication figures. No publication bundle currently ships an
+             image, so this renders for none of them today; the capability is
+             here, with explicit dimensions, for when figures are added.
+             Scientific figures are never cropped — `Fit` preserves the
+             native aspect ratio. */}}
+        {{ with $featuredRes }}
+          {{ $t := . }}
+          {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fit "1200x1200 webp" }}{{ end }}
+          <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+            <img src="{{ $t.RelPermalink }}"
+                 width="{{ $t.Width }}" height="{{ $t.Height }}"
+                 alt="{{ $page.Params.image.alt_text | default (printf "Figure from %s" ($page.Title | plainify)) }}"
+                 class="w-full h-auto" loading="lazy">
+            {{ with $page.Params.image.caption }}
+              <figcaption class="px-6 py-3 text-sm text-slate-600 dark:text-slate-400">{{ . | markdownify }}</figcaption>
+            {{ end }}
+          </figure>
         {{ end }}
 
         {{ if .Content }}
@@ -256,9 +224,6 @@
         <div id="citation" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
             <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">Citation</h2>
-            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-              
-            </p>
           </div>
           <div class="px-6 py-5">
             <div class="prose prose-slate max-w-none dark:prose-invert">
@@ -271,9 +236,6 @@
           <div id="bibtex" class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <div class="border-b border-slate-200 px-6 py-4 dark:border-slate-800">
               <h2 class="text-2xl font-semibold text-slate-900 dark:text-slate-100">BibTeX</h2>
-              <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                
-              </p>
             </div>
             <div class="px-6 py-5">
               <pre class="overflow-x-auto rounded-xl bg-slate-100 p-4 text-sm leading-relaxed text-slate-800 dark:bg-slate-950 dark:text-slate-100"><code>{{ $bibContent }}</code></pre>

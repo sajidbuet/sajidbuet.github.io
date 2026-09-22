@@ -71,6 +71,9 @@
   "skills" "Skills"
   "present" "Present"
   "language" "Language"
+  "publications" "Publications"
+  "all_publications" "All publications"
+  "projects" "Projects"
 }}
 {{ if eq $lang "bn" }}
   {{ $t = dict
@@ -81,10 +84,15 @@
     "skills" "দক্ষতা"
     "present" "বর্তমান"
     "language" "ভাষা"
+    "publications" "প্রকাশনা"
+    "all_publications" "সকল প্রকাশনা"
+    "projects" "প্রকল্প"
   }}
 {{ end }}
 
 <section class="max-w-6xl mx-auto px-6 py-10">
+
+  {{ partial "breadcrumbs.html" (dict "page" . "label" (or $profile.title .Title .Data.Term)) }}
 
   {{/* TEMP DEBUG: remove after testing 
   <div class="mb-4 rounded-lg border border-yellow-300 bg-yellow-50 px-4 py-3 text-sm text-yellow-900">
@@ -230,6 +238,88 @@
               </div>
             {{ end }}
           </div>
+        </div>
+      {{ end }}
+
+      {{/* ---------- Authored publications (Phase 6) ----------
+           Matched on the author name as written in publication front matter,
+           normalised, rather than on the taxonomy term alone. Two data quirks
+           make the plain term lookup insufficient:
+
+             * every publication writes `' me'` with a leading space, so Hugo
+               mints a phantom term `/authors/-me/` and the real `/authors/me/`
+               term page has no pages attached;
+             * student profiles live at `/authors/0421062344-ayon-sarker/`
+               while their publication credits create `/authors/ayon-sarker/`.
+
+           Matching the profile's display name as well as the term slug
+           resolves both without renaming the taxonomy, which is out of scope.
+           See docs/redesign/phase-6-detail-template-map.md items 11-12. */}}
+      {{ $titleSlug := "" }}
+      {{ with $profile.title }}{{ $titleSlug = . | urlize }}{{ end }}
+      {{ $authored := slice }}
+      {{ range where site.RegularPages "Section" "publication" }}
+        {{ $hit := false }}
+        {{ range .Params.authors }}
+          {{ $a := . | strings.TrimSpace | urlize }}
+          {{ if or (eq $a $slug) (and $titleSlug (eq $a $titleSlug)) }}{{ $hit = true }}{{ end }}
+        {{ end }}
+        {{ if $hit }}{{ $authored = $authored | append . }}{{ end }}
+      {{ end }}
+
+      {{ with $authored }}
+        {{ $sorted := sort . "Date" "desc" }}
+        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <h2 class="text-xl font-semibold mb-5">{{ index $t "publications" }}</h2>
+          <ul class="sj-profile-rel__list">
+            {{ range first 8 $sorted }}
+              <li class="sj-profile-rel__item">
+                <a class="sj-profile-rel__link" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                {{/* The separator only appears when there is a venue to
+                     separate from — nine papers carry no `publication`
+                     field, which otherwise left a stray leading dot. */}}
+                {{ $venue := .Params.publication }}
+                {{ if or $venue (not .Date.IsZero) }}
+                  <span class="sj-profile-rel__meta">
+                    {{ with $venue }}{{ . | markdownify }}{{ end }}
+                    {{ if not .Date.IsZero }}{{ with $venue }}<span aria-hidden="true">&middot;</span>{{ end }}{{ .Date.Format "2006" }}{{ end }}
+                  </span>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+          {{ if gt (len $sorted) 8 }}
+            <p class="sj-profile-rel__more">
+              <a href="{{ "/publication/" | relLangURL }}">{{ index $t "all_publications" }} ({{ len $sorted }}) &rarr;</a>
+            </p>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{/* ---------- Projects (Phase 6) ----------
+           Driven by the explicit `collaborators` list in project front matter.
+           Nothing is inferred from git history or co-occurrence. */}}
+      {{ $built := slice }}
+      {{ range where site.RegularPages "Section" "projects" }}
+        {{ $hit := false }}
+        {{ range .Params.collaborators }}
+          {{ $c := . | strings.TrimSpace | urlize }}
+          {{ if or (eq $c $slug) (and $titleSlug (eq $c $titleSlug)) }}{{ $hit = true }}{{ end }}
+        {{ end }}
+        {{ if $hit }}{{ $built = $built | append . }}{{ end }}
+      {{ end }}
+
+      {{ with $built }}
+        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+          <h2 class="text-xl font-semibold mb-5">{{ index $t "projects" }}</h2>
+          <ul class="sj-profile-rel__list">
+            {{ range sort . "Date" "desc" }}
+              <li class="sj-profile-rel__item">
+                <a class="sj-profile-rel__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ with .Params.summary }}<span class="sj-profile-rel__meta">{{ . }}</span>{{ end }}
+              </li>
+            {{ end }}
+          </ul>
         </div>
       {{ end }}
 

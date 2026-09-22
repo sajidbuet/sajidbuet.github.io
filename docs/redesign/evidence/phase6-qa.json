@@ -1,0 +1,1566 @@
+{
+ "audits": {
+  "workshop-detail@1440x900": {
+   "h1": 1,
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 45094,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab"
+  },
+  "workshop-detail@768x1024": {
+   "h1": 1,
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 45460,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab"
+  },
+  "workshop-detail@390x844": {
+   "h1": 1,
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 52689,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab"
+  },
+  "notes-index@1440x900": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1250,
+   "title": "Books & Lecture Notes | SAJID Lab"
+  },
+  "notes-index@768x1024": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1556,
+   "title": "Books & Lecture Notes | SAJID Lab"
+  },
+  "notes-index@390x844": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1744,
+   "title": "Books & Lecture Notes | SAJID Lab"
+  },
+  "book-index@1440x900": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1638,
+   "title": "QA Fixture — Template Validation Only | SAJID Lab"
+  },
+  "book-index@768x1024": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1971,
+   "title": "QA Fixture — Template Validation Only | SAJID Lab"
+  },
+  "book-index@390x844": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2322,
+   "title": "QA Fixture — Template Validation Only | SAJID Lab"
+  },
+  "book-chapter@1440x900": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 4,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1442,
+   "title": "Second Chapter With A Deliberately Long Title To Test Sidebar And Pager Wrapping Behaviour | SAJID Lab"
+  },
+  "book-chapter@768x1024": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 4,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1995,
+   "title": "Second Chapter With A Deliberately Long Title To Test Sidebar And Pager Wrapping Behaviour | SAJID Lab"
+  },
+  "book-chapter@390x844": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 4,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2420,
+   "title": "Second Chapter With A Deliberately Long Title To Test Sidebar And Pager Wrapping Behaviour | SAJID Lab"
+  },
+  "grant-detail@1440x900": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1595,
+   "title": "Design and Low-cost Fabrication of Optical Biosensors for Virus Detection | SAJID Lab"
+  },
+  "grant-detail@768x1024": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1949,
+   "title": "Design and Low-cost Fabrication of Optical Biosensors for Virus Detection | SAJID Lab"
+  },
+  "grant-detail@390x844": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2340,
+   "title": "Design and Low-cost Fabrication of Optical Biosensors for Virus Detection | SAJID Lab"
+  },
+  "publication-detail@1440x900": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3019,
+   "title": "Concentric annular-hexagonal plasmonic resonator with nanorod vertices for dual-band absorption in NIR and MIR for sensing applications | SAJID Lab"
+  },
+  "publication-detail@768x1024": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3700,
+   "title": "Concentric annular-hexagonal plasmonic resonator with nanorod vertices for dual-band absorption in NIR and MIR for sensing applications | SAJID Lab"
+  },
+  "publication-detail@390x844": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 4350,
+   "title": "Concentric annular-hexagonal plasmonic resonator with nanorod vertices for dual-band absorption in NIR and MIR for sensing applications | SAJID Lab"
+  },
+  "publication-sparse@1440x900": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2186,
+   "title": "HBT Perovskite/CdS Solar Cell Reaching Efficiency Over 35% Using Periodic Triangular Gratings | SAJID Lab"
+  },
+  "publication-sparse@768x1024": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2709,
+   "title": "HBT Perovskite/CdS Solar Cell Reaching Efficiency Over 35% Using Periodic Triangular Gratings | SAJID Lab"
+  },
+  "publication-sparse@390x844": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2984,
+   "title": "HBT Perovskite/CdS Solar Cell Reaching Efficiency Over 35% Using Periodic Triangular Gratings | SAJID Lab"
+  },
+  "project-detail@1440x900": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2002,
+   "title": "CTAdmin | SAJID Lab"
+  },
+  "project-detail@768x1024": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2308,
+   "title": "CTAdmin | SAJID Lab"
+  },
+  "project-detail@390x844": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2603,
+   "title": "CTAdmin | SAJID Lab"
+  },
+  "project-max@1440x900": {
+   "h1": 1,
+   "headings": 9,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2167,
+   "title": "QA Max — An Extremely Long Project Title Intended To Stress Wrapping Behaviour In The Detail Header At Narrow Viewports Without Producing Horizontal Overflow | SAJID Lab"
+  },
+  "project-max@768x1024": {
+   "h1": 1,
+   "headings": 9,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2598,
+   "title": "QA Max — An Extremely Long Project Title Intended To Stress Wrapping Behaviour In The Detail Header At Narrow Viewports Without Producing Horizontal Overflow | SAJID Lab"
+  },
+  "project-max@390x844": {
+   "h1": 1,
+   "headings": 9,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3237,
+   "title": "QA Max — An Extremely Long Project Title Intended To Stress Wrapping Behaviour In The Detail Header At Narrow Viewports Without Producing Horizontal Overflow | SAJID Lab"
+  },
+  "project-min@1440x900": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1166,
+   "title": "QA Min | SAJID Lab"
+  },
+  "project-min@768x1024": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1472,
+   "title": "QA Min | SAJID Lab"
+  },
+  "project-min@390x844": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1608,
+   "title": "QA Min | SAJID Lab"
+  },
+  "course-detail@1440x900": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 64,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3195,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab"
+  },
+  "course-detail@768x1024": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 64,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3501,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab"
+  },
+  "course-detail@390x844": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 39,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 4058,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab"
+  },
+  "course-archive@1440x900": {
+   "h1": 1,
+   "headings": 15,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 1,
+   "docHeight": 7444,
+   "title": "EEE 416 (January 2023) | SAJID Lab"
+  },
+  "course-archive@768x1024": {
+   "h1": 1,
+   "headings": 15,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 1,
+   "docHeight": 7750,
+   "title": "EEE 416 (January 2023) | SAJID Lab"
+  },
+  "course-archive@390x844": {
+   "h1": 1,
+   "headings": 15,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 1,
+   "docHeight": 10307,
+   "title": "EEE 416 (January 2023) | SAJID Lab"
+  },
+  "course-min@1440x900": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1212,
+   "title": "QA Course | SAJID Lab"
+  },
+  "course-min@768x1024": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1518,
+   "title": "QA Course | SAJID Lab"
+  },
+  "course-min@390x844": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1654,
+   "title": "QA Course | SAJID Lab"
+  },
+  "team-profile@1440x900": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3558,
+   "title": "Dr. Sajid Muhaimin Choudhury | SAJID Lab"
+  },
+  "team-profile@768x1024": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 4721,
+   "title": "Dr. Sajid Muhaimin Choudhury | SAJID Lab"
+  },
+  "team-profile@390x844": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 6084,
+   "title": "Dr. Sajid Muhaimin Choudhury | SAJID Lab"
+  },
+  "team-profile-student@1440x900": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1797,
+   "title": "Ayon Sarker | SAJID Lab"
+  },
+  "team-profile-student@768x1024": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2723,
+   "title": "Ayon Sarker | SAJID Lab"
+  },
+  "team-profile-student@390x844": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2951,
+   "title": "Ayon Sarker | SAJID Lab"
+  },
+  "article-detail@1440x900": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [
+    "Getting Citation Count - From Publish or Perish to (h1) -> Background (h3)"
+   ],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1943,
+   "title": "Getting Citation Count - From Publish or Perish to TamperMonkey | SAJID Lab"
+  },
+  "article-detail@768x1024": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [
+    "Getting Citation Count - From Publish or Perish to (h1) -> Background (h3)"
+   ],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2288,
+   "title": "Getting Citation Count - From Publish or Perish to TamperMonkey | SAJID Lab"
+  },
+  "article-detail@390x844": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [
+    "Getting Citation Count - From Publish or Perish to (h1) -> Background (h3)"
+   ],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2927,
+   "title": "Getting Citation Count - From Publish or Perish to TamperMonkey | SAJID Lab"
+  },
+  "article-min@1440x900": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1143,
+   "title": "QA Article | SAJID Lab"
+  },
+  "article-min@768x1024": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1449,
+   "title": "QA Article | SAJID Lab"
+  },
+  "article-min@390x844": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1611,
+   "title": "QA Article | SAJID Lab"
+  },
+  "news-detail@1440x900": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1307,
+   "title": "New PG Course on Quantum Photonics and Computing Offered | SAJID Lab"
+  },
+  "news-detail@768x1024": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1652,
+   "title": "New PG Course on Quantum Photonics and Computing Offered | SAJID Lab"
+  },
+  "news-detail@390x844": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 358,
+    "ch": 42,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1921,
+   "title": "New PG Course on Quantum Photonics and Computing Offered | SAJID Lab"
+  }
+ },
+ "overflow": [],
+ "dark": {
+  "workshop-detail": {
+   "h1": 1,
+   "headings": 87,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 45094,
+   "title": "Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog | SAJID Lab"
+  },
+  "notes-index": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1250,
+   "title": "Books & Lecture Notes | SAJID Lab"
+  },
+  "book-index": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1638,
+   "title": "QA Fixture — Template Validation Only | SAJID Lab"
+  },
+  "book-chapter": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 4,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1442,
+   "title": "Second Chapter With A Deliberately Long Title To Test Sidebar And Pager Wrapping Behaviour | SAJID Lab"
+  },
+  "grant-detail": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1595,
+   "title": "Design and Low-cost Fabrication of Optical Biosensors for Virus Detection | SAJID Lab"
+  },
+  "publication-detail": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3019,
+   "title": "Concentric annular-hexagonal plasmonic resonator with nanorod vertices for dual-band absorption in NIR and MIR for sensing applications | SAJID Lab"
+  },
+  "publication-sparse": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2186,
+   "title": "HBT Perovskite/CdS Solar Cell Reaching Efficiency Over 35% Using Periodic Triangular Gratings | SAJID Lab"
+  },
+  "project-detail": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2002,
+   "title": "CTAdmin | SAJID Lab"
+  },
+  "project-max": {
+   "h1": 1,
+   "headings": 9,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 2167,
+   "title": "QA Max — An Extremely Long Project Title Intended To Stress Wrapping Behaviour In The Detail Header At Narrow Viewports Without Producing Horizontal Overflow | SAJID Lab"
+  },
+  "project-min": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1166,
+   "title": "QA Min | SAJID Lab"
+  },
+  "course-detail": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 64,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3195,
+   "title": "EEE 303 (Jul 2025) | SAJID Lab"
+  },
+  "course-archive": {
+   "h1": 1,
+   "headings": 15,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 1,
+   "docHeight": 7444,
+   "title": "EEE 416 (January 2023) | SAJID Lab"
+  },
+  "course-min": {
+   "h1": 1,
+   "headings": 4,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1212,
+   "title": "QA Course | SAJID Lab"
+  },
+  "team-profile": {
+   "h1": 1,
+   "headings": 8,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 3558,
+   "title": "Dr. Sajid Muhaimin Choudhury | SAJID Lab"
+  },
+  "team-profile-student": {
+   "h1": 1,
+   "headings": 7,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": null,
+   "crumbs": null,
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1797,
+   "title": "Ayon Sarker | SAJID Lab"
+  },
+  "article-detail": {
+   "h1": 1,
+   "headings": 6,
+   "skips": [
+    "Getting Citation Count - From Publish or Perish to (h1) -> Background (h3)"
+   ],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1943,
+   "title": "Getting Citation Count - From Publish or Perish to TamperMonkey | SAJID Lab"
+  },
+  "article-min": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 3,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1143,
+   "title": "QA Article | SAJID Lab"
+  },
+  "news-detail": {
+   "h1": 1,
+   "headings": 3,
+   "skips": [],
+   "overflowPx": 0,
+   "offenders": [],
+   "measure": {
+    "px": 587,
+    "ch": 68,
+    "maxWidth": "586.5px"
+   },
+   "crumbs": {
+    "isNav": true,
+    "label": "Breadcrumb",
+    "list": true,
+    "items": 2,
+    "currentNotLinked": true
+   },
+   "imgsNoDim": 0,
+   "imgsNoAlt": 0,
+   "emptyHeadings": 0,
+   "docHeight": 1307,
+   "title": "New PG Course on Quantum Photonics and Computing Offered | SAJID Lab"
+  }
+ },
+ "consoleErrors": [
+  "http://127.0.0.1:1332/pagefind/pagefind.js :: Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ],
+ "focus": {
+  "tabbed": 26,
+  "withRing": 26,
+  "withoutRing": []
+ },
+ "mobileSidebar": {
+  "found": true,
+  "summaryVisible": true,
+  "collapses": true,
+  "closedH": 52,
+  "openH": 259
+ }
+}

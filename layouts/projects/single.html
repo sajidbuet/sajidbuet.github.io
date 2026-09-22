@@ -16,7 +16,7 @@
 <main id="main" tabindex="-1" class="sj-container-content sj-project">
 
   <header class="sj-project__head">
-    <p class="sj-breadcrumb"><a href="{{ "/projects/" | relLangURL }}">{{ i18n "projects" | default "Projects" }}</a></p>
+    {{ partial "breadcrumbs.html" . }}
 
     <h1 class="sj-page-title">{{ .Title }}</h1>
 
@@ -71,16 +71,24 @@
   {{/* Additional screenshots beyond the lead image. */}}
   {{ with .Params.screenshots }}
     {{ $shots := slice }}
-    {{ range . }}{{ with $.Resources.GetMatch .file }}{{ $shots = $shots | append (dict "r" . "cap" $.file) }}{{ end }}{{ end }}
+    {{ range . }}
+      {{ $entry := . }}
+      {{ with $.Resources.GetMatch $entry.file }}
+        {{ $shots = $shots | append (dict "r" . "cap" $entry.caption "alt" $entry.alt) }}
+      {{ end }}
+    {{ end }}
     {{ with $shots }}
       <section class="sj-project__section">
         <h2>{{ i18n "screenshots" | default "Screenshots" }}</h2>
         <div class="sj-project__shots">
           {{ range . }}
             {{ $r := .r }}{{ $t := $r }}
+            {{ $cap := .cap }}
             {{ if ne $r.MediaType.SubType "svg" }}{{ $t = $r.Fit "900x900 webp" }}{{ end }}
             <figure>
-              <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="" loading="lazy" />
+              <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+                   alt="{{ .alt | default $cap | default "" }}" loading="lazy" />
+              {{ with $cap }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
             </figure>
           {{ end }}
         </div>

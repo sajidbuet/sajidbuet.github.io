@@ -1,10 +1,51 @@
-<ul id="breadcrumbs">
-    {{- range .Ancestors.Reverse }}
-    <li><a href="{{ .RelPermalink }}">    {{- if eq .Title "" -}}
-        {{ partial "blox-core/functions/get_page_title" . }}
-    {{- else -}}
-        {{ .Title }}
-    {{- end -}}</a></li>
+{{/* Accessible breadcrumb trail — Phase 6.
+
+     Replaces the previous unused implementation, which emitted a bare
+     `<ul id="breadcrumbs">` containing a `◎` glyph and a `fas fa-page` icon
+     that does not exist in the icon set.
+
+     Deliberately NOT the vendor partial
+     (_vendor/.../components/breadcrumb.html): that one is a `<div>` soup with
+     `whitespace-nowrap overflow-hidden`, so it is neither a navigation
+     landmark nor able to wrap on a 390px screen. This is the single
+     breadcrumb implementation for the site — see the Phase 6 template map.
+
+     Renders only at depth >= 2 (roadmap 6.7): a page whose only ancestor is
+     the homepage gets nothing, so section landings stay uncluttered.
+
+     The current page is named but not linked to itself, and carries
+     aria-current="page".
+
+     Usage:  {{ partial "breadcrumbs.html" . }}
+             {{ partial "breadcrumbs.html" (dict "page" . "label" "Publications") }}
+     `label` overrides the trail's leaf when a taxonomy term page would
+     otherwise show a raw slug. */}}
+
+{{- $page := . -}}
+{{- $leaf := "" -}}
+{{- if reflect.IsMap . -}}
+  {{- $page = .page -}}
+  {{- $leaf = .label -}}
+{{- end -}}
+
+{{- $crumbs := slice -}}
+{{- range $page.Ancestors.Reverse -}}
+  {{- if not .IsHome -}}
+    {{- $crumbs = $crumbs | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $crumbs -}}
+<nav class="sj-crumbs" aria-label="{{ i18n "breadcrumb" | default "Breadcrumb" }}">
+  <ol class="sj-crumbs__list">
+    {{- range $crumbs }}
+      <li class="sj-crumbs__item">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle | default .Title }}</a>
+      </li>
     {{- end }}
-    <li class="nostart"><a href="{{ .RelPermalink }}">◎<i class="fas fa-page"></i></a></li>
-</ul>
+    <li class="sj-crumbs__item sj-crumbs__item--current">
+      <span aria-current="page">{{ $leaf | default $page.LinkTitle | default $page.Title }}</span>
+    </li>
+  </ol>
+</nav>
+{{- end -}}

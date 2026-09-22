@@ -1,0 +1,90 @@
+{{ define "main" }}
+{{/* Course detail — Phase 6.
+
+     A working academic page, not a marketing page (roadmap 6.3): it answers
+     what the course is, when it ran, what it covers and what material exists,
+     with no decorative hero band.
+
+     Course structure genuinely lives in the Markdown body — across 33 course
+     files there are 0 uses of `outcomes`, `schedule`, `materials`,
+     `announcement`, `instructor` or `assessment` in front matter, and the
+     content is authored as `## Course Outcomes`, `## Syllabus`, `## Textbooks`
+     and HTML tables. So this template supplies the header, the metadata strip
+     and the table/prose treatment, and renders the body as authored. It does
+     not invent front-matter-driven sections that no course would populate. */}}
+
+{{ $page := . }}
+{{ $isArchived := strings.Contains .RelPermalink "/archive/" }}
+{{ $showToc := gt (len .TableOfContents) 220 }}
+
+<main id="main" tabindex="-1" class="sj-container-content sj-course-page">
+
+  <header class="sj-course-page__head">
+    {{ partial "breadcrumbs.html" . }}
+
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+
+    {{ with .Params.summary }}<p class="sj-course-page__subject">{{ . }}</p>{{ end }}
+
+    {{ $facts := slice }}
+    {{ with .Params.course_type }}{{ $facts = $facts | append . }}{{ end }}
+    {{ if or $facts .Date $isArchived }}
+      <ul class="sj-course-page__facts">
+        {{ range $facts }}
+          <li><span class="sj-course__term">{{ . }}</span></li>
+        {{ end }}
+        {{ if not .Date.IsZero }}
+          <li class="sj-course-page__offered">
+            {{ i18n "offered" | default "Offered" }}
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+          </li>
+        {{ end }}
+        {{ if $isArchived }}
+          {{/* Text label, never colour alone. */}}
+          <li><span class="sj-course-page__archived">{{ i18n "archived_offering" | default "Archived offering" }}</span></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{/* Instructor. No course currently sets `instructor`, so this renders
+         for none of them today rather than assuming the site owner teaches
+         every listed course. It is here so the field works the moment a
+         course declares it. */}}
+    {{ with .Params.instructor }}
+      <p class="sj-course-page__instructor">
+        {{ i18n "instructor" | default "Instructor" }}:
+        {{ range $i, $slug := . }}
+          {{ if $i }}, {{ end }}
+          {{ $prof := partial "functions/get_author_profile" ($slug | urlize) }}
+          {{ if $prof.title }}
+            <a href="{{ (printf "/authors/%s/" ($slug | urlize)) | relLangURL }}">{{ $prof.title }}</a>
+          {{ else }}{{ $slug }}{{ end }}
+        {{ end }}
+      </p>
+    {{ end }}
+
+    {{ with .Params.syllabus }}
+      <p class="sj-course-page__syllabus">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ if $isArchived }}
+      <p class="sj-note-panel sj-course-page__notice">
+        {{ i18n "archived_course_note" | default "This page records a past offering and is kept as it was delivered. Current courses are listed on the Teaching page." }}
+        <a href="{{ "/teaching/" | relLangURL }}">{{ i18n "teaching" | default "Teaching" }}</a>
+      </p>
+    {{ end }}
+  </header>
+
+  {{ if $showToc }}
+    <details class="sj-toc">
+      <summary class="sj-toc__summary">{{ i18n "toc" | default "On this page" }}</summary>
+      <div class="sj-toc__body">{{ .TableOfContents }}</div>
+    </details>
+  {{ end }}
+
+  <div class="sj-prose prose dark:prose-invert" data-pagefind-body>
+    {{ .Content }}
+  </div>
+
+</main>
+{{ end }}

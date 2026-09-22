@@ -1,0 +1,438 @@
+/* ==========================================================================
+   Phase 6 — detail templates
+   Semantic tokens only. No literal colours.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared detail shell
+   -------------------------------------------------------------------------- */
+.sj-article,
+.sj-course-page,
+.sj-note-page { padding-block: var(--sj-section-md); }
+
+.sj-article__head,
+.sj-course-page__head,
+.sj-note-page__head { margin-bottom: var(--sj-space-8); }
+
+/* --------------------------------------------------------------------------
+   Breadcrumbs
+   Wraps rather than truncating: a deep trail on a 390px screen must stay
+   readable, so no white-space:nowrap on the list.
+   -------------------------------------------------------------------------- */
+.sj-crumbs { margin-bottom: var(--sj-space-4); }
+
+.sj-crumbs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--sj-space-2);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.sj-crumbs__item { display: inline-flex; align-items: baseline; gap: var(--sj-space-2); min-width: 0; }
+
+.sj-crumbs__item + .sj-crumbs__item::before {
+  content: "/";
+  color: var(--sj-text-tertiary);
+  flex: none;
+}
+
+.sj-crumbs__item a { color: var(--sj-text-secondary); text-decoration: none; }
+.sj-crumbs__item a:hover { color: var(--sj-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.sj-crumbs__item--current span { color: var(--sj-text-primary); font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   Long-form reading measure
+
+   Body copy is held at 68ch (roadmap 6.5). Media that genuinely needs the
+   room — figures, tables, code, math scrollers — breaks out to the full
+   container instead, because squeezing a wide course-outcome table into 68ch
+   makes it less readable, not more.
+   -------------------------------------------------------------------------- */
+.sj-prose { max-width: 68ch; }
+
+.sj-prose > figure,
+.sj-prose > table,
+.sj-prose > pre,
+.sj-prose > .table-wrap,
+.sj-prose > .katex-display { max-width: none; width: 100%; }
+
+.sj-prose > h2,
+.sj-prose > h3,
+.sj-prose > h4 { max-width: 68ch; }
+
+/* Tables: scroll inside their own wrapper, never the page. */
+.sj-prose table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .sj-prose table { display: table; }
+}
+
+.sj-prose th,
+.sj-prose td {
+  border: 1px solid var(--sj-border);
+  padding: 0.45em 0.7em;
+  vertical-align: top;
+}
+
+.sj-prose thead th,
+.sj-prose table th:first-child:not(:only-child) {
+  background: var(--sj-background-subtle);
+  font-weight: 600;
+  text-align: left;
+}
+
+.sj-prose img { height: auto; }
+
+/* --------------------------------------------------------------------------
+   Article metadata
+   -------------------------------------------------------------------------- */
+.sj-article__summary,
+.sj-course-page__subject {
+  margin: var(--sj-space-3) 0 0;
+  max-width: 68ch;
+  color: var(--sj-text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.sj-article__meta {
+  margin: var(--sj-space-4) 0 0;
+  color: var(--sj-text-tertiary);
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--sj-space-2);
+}
+.sj-article__meta a { color: var(--sj-accent); text-decoration: none; }
+.sj-article__meta a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.sj-article__sep { color: var(--sj-border-strong); }
+
+.sj-article__figure,
+.sj-note-page__figure { margin: var(--sj-space-8) 0; }
+.sj-article__figure img { display: block; width: 100%; height: auto; border-radius: var(--sj-radius-md); }
+.sj-article__figure figcaption,
+.sj-prose figcaption {
+  margin-top: var(--sj-space-2);
+  color: var(--sj-text-tertiary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Table of contents disclosure
+   -------------------------------------------------------------------------- */
+.sj-toc {
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  padding: var(--sj-space-3) var(--sj-space-4);
+  margin-bottom: var(--sj-space-8);
+  max-width: 68ch;
+  background: var(--sj-background-subtle);
+}
+.sj-toc__summary { font-weight: 600; cursor: pointer; color: var(--sj-text-primary); }
+.sj-toc__summary:focus-visible { outline: var(--sj-focus-width) solid var(--sj-focus-ring); outline-offset: 2px; }
+.sj-toc__body { margin-top: var(--sj-space-3); font-size: 0.9375rem; }
+.sj-toc__body ul { list-style: none; margin: 0; padding-left: var(--sj-space-4); }
+.sj-toc__body > ul { padding-left: 0; }
+.sj-toc__body li { margin: var(--sj-space-1) 0; }
+.sj-toc__body a { color: var(--sj-accent); text-decoration: none; }
+.sj-toc__body a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* --------------------------------------------------------------------------
+   Course page
+   -------------------------------------------------------------------------- */
+.sj-course-page__facts {
+  list-style: none;
+  margin: var(--sj-space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sj-space-3);
+  font-size: 0.875rem;
+  color: var(--sj-text-secondary);
+}
+
+.sj-course-page__archived {
+  display: inline-block;
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-full);
+  padding: 0 var(--sj-space-2);
+  font-size: 0.75rem;
+  color: var(--sj-text-secondary);
+}
+
+.sj-course-page__syllabus {
+  margin: var(--sj-space-4) 0 0;
+  max-width: 68ch;
+  color: var(--sj-text-secondary);
+  line-height: 1.65;
+}
+
+.sj-course-page__notice { margin-top: var(--sj-space-6); font-size: 0.9375rem; }
+.sj-course-page__notice a { color: var(--sj-accent); }
+
+/* --------------------------------------------------------------------------
+   Publication detail
+
+   These four classes were declared in an inline <style> block inside
+   layouts/publication/single.html, built on `--color-primary-*` literals
+   rather than the Phase 2A semantic tokens. Lifted here and re-expressed in
+   tokens so light and dark both follow the approved palette. The dark rule
+   for .pub-hero also ended in `rgba(255,255,255,1)`, which painted a white
+   band across the bottom of the hero in dark mode.
+   -------------------------------------------------------------------------- */
+.pub-accent { color: var(--sj-accent); }
+
+.pub-accent-bg {
+  background-color: var(--sj-accent);
+  color: var(--sj-accent-contrast);
+}
+.pub-accent-bg:hover { background-color: var(--sj-accent-hover); }
+
+.pub-accent-soft {
+  background-color: var(--sj-accent-soft);
+  color: var(--sj-accent);
+  border-color: var(--sj-accent);
+}
+
+.pub-hero {
+  background: linear-gradient(
+    180deg,
+    var(--sj-accent-soft) 0%,
+    transparent 100%
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Author profile — related content added in Phase 6
+   -------------------------------------------------------------------------- */
+.sj-profile-rel { margin-top: var(--sj-space-6); }
+
+.sj-profile-rel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sj-space-4);
+}
+
+.sj-profile-rel__item {
+  padding-left: var(--sj-space-4);
+  border-left: 2px solid var(--sj-border);
+}
+.sj-profile-rel__item:hover { border-left-color: var(--sj-accent); }
+
+.sj-profile-rel__link {
+  color: var(--sj-accent);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.sj-profile-rel__link:hover { color: var(--sj-accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+.sj-profile-rel__meta {
+  display: block;
+  margin-top: var(--sj-space-1);
+  color: var(--sj-text-tertiary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.sj-profile-rel__more { margin-top: var(--sj-space-4); font-size: 0.9375rem; }
+.sj-profile-rel__more a { color: var(--sj-accent); font-weight: 600; text-decoration: none; }
+.sj-profile-rel__more a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* --------------------------------------------------------------------------
+   Books & Lecture Notes
+   -------------------------------------------------------------------------- */
+.sj-book__status { margin: var(--sj-space-3) 0 0; }
+
+.sj-book__status-badge {
+  display: inline-block;
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-full);
+  padding: 0 var(--sj-space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sj-text-secondary);
+}
+.sj-book__status-badge--inline { margin-left: var(--sj-space-2); }
+
+.sj-book__toc,
+.sj-book__shelf,
+.sj-book__downloads { margin-top: var(--sj-space-12); }
+
+.sj-book__chapters {
+  list-style: none;
+  counter-reset: sj-ch;
+  margin: var(--sj-space-6) 0 0;
+  padding: 0;
+}
+
+.sj-book__chapter {
+  counter-increment: sj-ch;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: var(--sj-space-2) var(--sj-space-3);
+  padding-block: var(--sj-space-4);
+  border-bottom: 1px solid var(--sj-border);
+}
+.sj-book__chapter:first-child { border-top: 1px solid var(--sj-border); }
+
+.sj-book__chapter::before {
+  content: counter(sj-ch);
+  grid-row: 1 / span 2;
+  color: var(--sj-text-tertiary);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.sj-book__chapter-link { color: var(--sj-accent); text-decoration: none; font-weight: 600; }
+.sj-book__chapter-link:hover { color: var(--sj-accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+.sj-book__chapter-desc {
+  grid-column: 2;
+  color: var(--sj-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Chapter page: sidebar + body
+   -------------------------------------------------------------------------- */
+.sj-chapter { padding-block: var(--sj-section-md); }
+
+.sj-chapter__grid { display: block; }
+
+@media (min-width: 1024px) {
+  .sj-chapter__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    column-gap: var(--sj-space-16);
+    align-items: start;
+  }
+}
+
+.sj-book-nav {
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  padding: var(--sj-space-3) var(--sj-space-4);
+  margin-bottom: var(--sj-space-8);
+  background: var(--sj-background-subtle);
+}
+
+.sj-book-nav__summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--sj-text-primary);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sj-space-3);
+}
+.sj-book-nav__summary:focus-visible { outline: var(--sj-focus-width) solid var(--sj-focus-ring); outline-offset: 2px; }
+.sj-book-nav__count { color: var(--sj-text-tertiary); font-variant-numeric: tabular-nums; font-weight: 400; }
+
+.sj-book-nav__body { margin-top: var(--sj-space-4); }
+.sj-book-nav__book { margin: 0 0 var(--sj-space-3); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.sj-book-nav__book a { color: var(--sj-text-tertiary); text-decoration: none; }
+.sj-book-nav__book a:hover { color: var(--sj-accent); }
+
+.sj-book-nav__list {
+  list-style: none;
+  counter-reset: sj-nav;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9375rem;
+}
+
+.sj-book-nav__item {
+  counter-increment: sj-nav;
+  padding: var(--sj-space-2) 0 var(--sj-space-2) var(--sj-space-3);
+  border-left: 2px solid var(--sj-border);
+  line-height: 1.45;
+}
+.sj-book-nav__item a { color: var(--sj-text-secondary); text-decoration: none; }
+.sj-book-nav__item a:hover { color: var(--sj-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Current chapter carries weight and a rule, not colour alone. */
+.sj-book-nav__item--current {
+  border-left-color: var(--sj-accent);
+  font-weight: 600;
+}
+.sj-book-nav__item--current span { color: var(--sj-text-primary); }
+
+/* Desktop: a permanent column. The disclosure control is irrelevant there, so
+   the summary is hidden and the list is shown regardless of `open` state —
+   which also means collapsing on mobile then widening cannot strand it shut. */
+@media (min-width: 1024px) {
+  .sj-book-nav {
+    position: sticky;
+    top: calc(var(--navbar-height, 4rem) + var(--sj-space-6));
+    margin-bottom: 0;
+    background: transparent;
+    border: 0;
+    border-right: 1px solid var(--sj-border);
+    border-radius: 0;
+    padding: 0 var(--sj-space-6) 0 0;
+  }
+  .sj-book-nav__summary { display: none; }
+  .sj-book-nav__body { display: block; margin-top: 0; }
+}
+
+.sj-chapter__head { margin-bottom: var(--sj-space-8); }
+.sj-chapter__body { min-width: 0; }
+
+/* --------------------------------------------------------------------------
+   Previous / next pager
+   -------------------------------------------------------------------------- */
+.sj-pager {
+  margin-top: var(--sj-space-16);
+  padding-top: var(--sj-space-6);
+  border-top: 1px solid var(--sj-border);
+  display: grid;
+  gap: var(--sj-space-4);
+}
+
+@media (min-width: 640px) {
+  .sj-pager { grid-template-columns: 1fr 1fr; }
+  .sj-pager__link--next { text-align: right; }
+  .sj-pager__link--next:only-child { grid-column: 2; }
+}
+
+.sj-pager__link {
+  display: grid;
+  gap: var(--sj-space-1);
+  padding: var(--sj-space-4);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  text-decoration: none;
+}
+.sj-pager__link:hover { border-color: var(--sj-accent); }
+
+.sj-pager__dir { color: var(--sj-text-tertiary); font-size: 0.8125rem; }
+.sj-pager__title { color: var(--sj-accent); font-weight: 600; line-height: 1.4; }
+.sj-pager__link:hover .sj-pager__title { color: var(--sj-accent-hover); }
+
+.sj-course-page__instructor {
+  margin: var(--sj-space-4) 0 0;
+  color: var(--sj-text-secondary);
+  font-size: 0.9375rem;
+}
+.sj-course-page__instructor a { color: var(--sj-accent); text-decoration: none; }
+.sj-course-page__instructor a:hover { text-decoration: underline; text-underline-offset: 2px; }

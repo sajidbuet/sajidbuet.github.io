@@ -1,0 +1,110 @@
+{{ define "main" }}
+{{/* Book chapter — Phase 6.
+
+     Ordering comes from Hugo page weights, never from a hardcoded list
+     (roadmap 6.6): `.Parent.RegularPages.ByWeight` is the single source of
+     truth for the sidebar, the previous/next pair and the chapter number, so
+     adding a chapter is a content change only.
+
+     The sidebar is static HTML. On desktop it is a permanent column; on
+     mobile the same markup collapses into a <details> disclosure so it does
+     not eat screen width. That switch is pure CSS — no JavaScript, and the
+     chapter list is in the DOM either way, so it survives with JS disabled. */}}
+
+{{ $book := .Parent }}
+{{ $chapters := $book.RegularPages.ByWeight }}
+
+{{/* Locate this chapter within its book to derive prev/next and position. */}}
+{{ $idx := -1 }}
+{{ range $i, $c := $chapters }}
+  {{ if eq $c.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}
+{{ end }}
+{{ $prev := "" }}{{ $next := "" }}
+{{ if ge $idx 0 }}
+  {{ if gt $idx 0 }}{{ $prev = index $chapters (sub $idx 1) }}{{ end }}
+  {{ if lt $idx (sub (len $chapters) 1) }}{{ $next = index $chapters (add $idx 1) }}{{ end }}
+{{ end }}
+
+{{ $showToc := gt (len .TableOfContents) 220 }}
+
+<main id="main" tabindex="-1" class="sj-container-wide sj-chapter">
+
+  <div class="sj-chapter__grid">
+
+    {{/* ---------- Chapter navigation ---------- */}}
+    <details class="sj-book-nav" open>
+      <summary class="sj-book-nav__summary">
+        {{ i18n "chapters" | default "Chapters" }}
+        <span class="sj-book-nav__count">{{ if ge $idx 0 }}{{ add $idx 1 }}/{{ end }}{{ len $chapters }}</span>
+      </summary>
+      <nav class="sj-book-nav__body" aria-label="{{ i18n "chapters" | default "Chapters" }}">
+        <p class="sj-book-nav__book"><a href="{{ $book.RelPermalink }}">{{ $book.Title }}</a></p>
+        <ol class="sj-book-nav__list">
+          {{ range $i, $c := $chapters }}
+            {{ $current := eq $c.RelPermalink $.RelPermalink }}
+            <li class="sj-book-nav__item{{ if $current }} sj-book-nav__item--current{{ end }}">
+              {{ if $current }}
+                <span aria-current="page">{{ $c.Title }}</span>
+              {{ else }}
+                <a href="{{ $c.RelPermalink }}">{{ $c.Title }}</a>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      </nav>
+    </details>
+
+    {{/* ---------- Chapter body ---------- */}}
+    <article class="sj-chapter__body">
+
+      <header class="sj-chapter__head">
+        {{ partial "breadcrumbs.html" . }}
+        <h1 class="sj-page-title">{{ .Title }}</h1>
+        {{ with .Params.summary }}<p class="sj-article__summary">{{ . }}</p>{{ end }}
+      </header>
+
+      {{ if $showToc }}
+        <details class="sj-toc">
+          <summary class="sj-toc__summary">{{ i18n "toc" | default "On this page" }}</summary>
+          <div class="sj-toc__body">{{ .TableOfContents }}</div>
+        </details>
+      {{ end }}
+
+      <div class="sj-prose prose dark:prose-invert" data-pagefind-body>
+        {{ .Content }}
+      </div>
+
+      {{ with .Resources.ByType "application" }}
+        <section class="sj-book__downloads">
+          <h2 class="sj-res-group__title">{{ i18n "downloads" | default "Downloads" }}</h2>
+          <ul class="sj-res-list">
+            {{ range . }}
+              <li class="sj-res-list__item">
+                <a class="sj-res-list__link" href="{{ .RelPermalink }}" download>{{ path.Base .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ if or $prev $next }}
+        <nav class="sj-pager" aria-label="{{ i18n "chapter_nav" | default "Chapter navigation" }}">
+          {{ with $prev }}
+            <a class="sj-pager__link sj-pager__link--prev" href="{{ .RelPermalink }}" rel="prev">
+              <span class="sj-pager__dir">&larr; {{ i18n "previous" | default "Previous" }}</span>
+              <span class="sj-pager__title">{{ .Title }}</span>
+            </a>
+          {{ end }}
+          {{ with $next }}
+            <a class="sj-pager__link sj-pager__link--next" href="{{ .RelPermalink }}" rel="next">
+              <span class="sj-pager__dir">{{ i18n "next" | default "Next" }} &rarr;</span>
+              <span class="sj-pager__title">{{ .Title }}</span>
+            </a>
+          {{ end }}
+        </nav>
+      {{ end }}
+
+    </article>
+  </div>
+</main>
+{{ end }}

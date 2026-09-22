@@ -1,0 +1,109 @@
+{{ define "main" }}
+{{/* Books & Lecture Notes — index, Phase 6.
+
+     One template serves two levels, because they are the same shape:
+
+       /teaching/notes/              lists the books that exist
+       /teaching/notes/<book>/       lists that book's chapters
+
+     Which one renders is decided by the content tree, not by a flag: a page
+     with child sections is the shelf, a page with child pages is a book.
+
+     Nothing is invented. If no book exists, the shelf says so plainly instead
+     of showing a fake cover or a placeholder chapter list (roadmap 6.6 and
+     the Phase 5 rule against fake Books/Notes material). */}}
+
+{{ $books := .Sections }}
+{{ $chapters := .RegularPages }}
+{{ $isBook := gt (len $chapters) 0 }}
+
+{{/* Downloads: a `downloads` child section, plus any file resources that are
+     genuinely attached to this bundle. Never a fabricated link. */}}
+{{ $downloads := slice }}
+{{ range .Resources.ByType "application" }}{{ $downloads = $downloads | append . }}{{ end }}
+
+<main id="main" tabindex="-1" class="sj-container-content sj-note-page">
+
+  <header class="sj-note-page__head">
+    {{ partial "breadcrumbs.html" . }}
+
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+
+    {{ with .Params.status }}
+      <p class="sj-book__status"><span class="sj-book__status-badge">{{ . | title }}</span></p>
+    {{ end }}
+
+    {{ with .Params.summary }}<p class="sj-article__summary">{{ . }}</p>{{ end }}
+
+    {{ if $isBook }}
+      <p class="sj-article__meta">
+        {{ with .Params.authors }}<span>{{ delimit . ", " }}</span>{{ end }}
+        {{ if not .Lastmod.IsZero }}
+          {{ with .Params.authors }}<span class="sj-article__sep" aria-hidden="true">·</span>{{ end }}
+          <span>{{ i18n "updated" | default "Updated" }}
+            <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 Jan 2006" }}</time>
+          </span>
+        {{ end }}
+      </p>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}<div class="sj-prose prose dark:prose-invert">{{ . }}</div>{{ end }}
+
+  {{/* ---------- A book: its chapters ---------- */}}
+  {{ if $isBook }}
+    <section class="sj-book__toc">
+      <h2 class="sj-res-group__title">{{ i18n "chapters" | default "Chapters" }}</h2>
+      <ol class="sj-book__chapters">
+        {{ range $chapters.ByWeight }}
+          <li class="sj-book__chapter">
+            <a class="sj-book__chapter-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.summary }}<span class="sj-book__chapter-desc">{{ . }}</span>{{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    </section>
+  {{ end }}
+
+  {{/* ---------- The shelf: books that exist ---------- */}}
+  {{ with $books }}
+    <section class="sj-book__shelf">
+      <ul class="sj-res-list">
+        {{ range .ByWeight }}
+          <li class="sj-res-list__item">
+            <a class="sj-res-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.status }}<span class="sj-book__status-badge sj-book__status-badge--inline">{{ . | title }}</span>{{ end }}
+            {{ with .Params.summary }}<span class="sj-res-list__desc">{{ . }}</span>{{ end }}
+            {{ with .RegularPages }}
+              <span class="sj-res-list__desc">{{ len . }} {{ i18n "chapters" | default "chapters" | lower }}</span>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{/* ---------- Downloads: only real attached files ---------- */}}
+  {{ with $downloads }}
+    <section class="sj-book__downloads">
+      <h2 class="sj-res-group__title">{{ i18n "downloads" | default "Downloads" }}</h2>
+      <ul class="sj-res-list">
+        {{ range . }}
+          <li class="sj-res-list__item">
+            <a class="sj-res-list__link" href="{{ .RelPermalink }}" download>{{ path.Base .Name }}</a>
+            <span class="sj-res-list__desc">{{ strings.ToUpper (strings.TrimPrefix "." (path.Ext .Name)) }}</span>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  {{/* ---------- Honest empty state ---------- */}}
+  {{ if and (not $isBook) (not $books) }}
+    <div class="sj-note-panel">
+      <p>{{ i18n "notes_pending" | default "Nothing is published here yet." }}</p>
+    </div>
+  {{ end }}
+
+</main>
+{{ end }}
