@@ -80,13 +80,252 @@
   border-bottom: 1px solid var(--sj-border);
 }
 
+/* --------------------------------------------------------------------------
+   Phase 8 — hero flush under the navbar
+
+   The hero block's outer <section class="hbb-section blox-hero-with-stats">
+   used to carry `padding: 3rem 0 2rem 0` from `design.spacing.padding` in
+   content/_index.md. HugoBlox puts that on the SECTION, but the gradient is on
+   the inner `.sj-hero`, so those 48px rendered as bare page background between
+   the navbar's bottom border and the top of the gradient: a white band, at
+   every viewport, in both themes.
+
+   The section's top padding is now 0 and the same 48px lives here, inside the
+   gradient. Net effect on the wordmark: none — it stays at the same y. The
+   gradient simply extends up to meet the navbar.
+
+   `.sj-hero-section` is the `css_class` set on that one block instance, so this
+   pairing is explicit and cannot leak. The Bengali homepage uses the same
+   partial but keeps the default section padding, and nothing else on the site
+   uses `.sj-hero` at all.
+
+   The bottom (`2rem`) is deliberately left on the section: it is spacing
+   *between* the hero and the next section, which is what section padding is
+   for, and the hero's own border-bottom already closes the band.
+   -------------------------------------------------------------------------- */
+.sj-hero-section .sj-hero__inner {
+  padding-block-start: 3rem;
+}
+
+/* --------------------------------------------------------------------------
+   Phase 8 — hero research-field background
+
+   A sparse quantum-photonics / device-network figure behind the hero content:
+   nodes, thin curved connections, wavefront arcs and a couple of circuit
+   traces. Markup in layouts/_partials/custom/hero-field.html.
+
+   Rules this obeys:
+     - it is decorative and must stay subordinate to the wordmark, h1, lede,
+       CTAs and stats. Perceived opacity lands in the 4-10% band;
+     - tokens only, no new palette;
+     - no `animation` property anywhere, so it cannot leave an infinite
+       animation running. The intro is CSS TRANSITIONS, which are finite;
+     - strokes, gradients and opacity — no blur, no glow;
+     - hidden shapes are `display: none`, so they are never painted.
+   -------------------------------------------------------------------------- */
+.sj-hero__field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  /* The field is a fixed-size absolutely-positioned overlay whose contents can
+     never affect anything outside it, so containment is free and lets the
+     engine skip its style/layout work when laying out the hero. */
+  contain: layout style paint;
+  /* Weaker immediately behind the centred text, stronger toward the outer
+     edges. A mask keeps this relative to the rendered hero box rather than to
+     the viewBox, so the `slice` crop cannot move it off-centre. Applied in CSS
+     rather than as an SVG <mask> for exactly that reason. Cheap: a gradient
+     mask composites, unlike filter: blur(). */
+  -webkit-mask-image: radial-gradient(76% 62% at 50% 44%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 46%, #000 78%);
+          mask-image: radial-gradient(76% 62% at 50% 44%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 46%, #000 78%);
+}
+
+/* The hero's own content must sit above the field. */
+.sj-hero__inner { position: relative; z-index: 1; }
+
+.sj-hero__field .hf-node  { fill: var(--sj-accent); opacity: 0.16; }
+.sj-hero__field .hf-link  { fill: none; stroke: var(--sj-accent); stroke-width: 1; opacity: 0.11; }
+.sj-hero__field .hf-arc   { fill: none; stroke: var(--sj-accent); stroke-width: 1.1; opacity: 0.085; }
+.sj-hero__field .hf-trace { fill: none; stroke: var(--sj-brand);  stroke-width: 1.2; opacity: 0.075;
+                            stroke-linejoin: round; stroke-linecap: round; }
+
+/* Dark mode: --sj-accent flips to #22d3ee, which reads considerably brighter
+   on #0f172a than #0e7490 does on #ffffff. Trimmed so the perceived weight
+   matches the light theme instead of shouting. */
+.dark .sj-hero__field .hf-node  { opacity: 0.13; }
+.dark .sj-hero__field .hf-link  { opacity: 0.085; }
+.dark .sj-hero__field .hf-arc   { opacity: 0.07; }
+.dark .sj-hero__field .hf-trace { opacity: 0.09; }
+
+@media (prefers-color-scheme: dark) {
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-node  { opacity: 0.13; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-link  { opacity: 0.085; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-arc   { opacity: 0.07; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-trace { opacity: 0.09; }
+}
+
+/* --- density by breakpoint ------------------------------------------------
+   Not a scaled-down copy of the desktop artwork: shapes are authored in three
+   tiers and the ones that do not belong at a width are removed from the render
+   tree entirely.
+       mobile  (<768px)   7 nodes ·  4 links · 1 arc · 0 traces
+       tablet  (>=768px) 12 nodes ·  9 links · 2 arcs · 1 trace
+       desktop (>=1024) 21 nodes · 15 links · 3 arcs · 2 traces
+   -------------------------------------------------------------------------- */
+.sj-hero__field .hf--t,
+.sj-hero__field .hf--d { display: none; }
+
+@media (min-width: 768px) {
+  .sj-hero__field .hf--t { display: inline; }
+}
+
+@media (min-width: 1024px) {
+  .sj-hero__field .hf--d { display: inline; }
+}
+
+/* --- intro: one shot, ~1.15s, then settled -------------------------------
+   `hf-anim` is added by the inline script during parse, before first paint, and
+   only when reduced motion is NOT requested. Without it — no JS, or reduced
+   motion — the declarations above already describe the finished state, so the
+   field renders complete and immediately.
+   -------------------------------------------------------------------------- */
+.sj-hero__field.hf-anim { opacity: 0; transition: opacity 320ms var(--sj-ease-out, ease-out); }
+.sj-hero__field.hf-anim.hf-revealed { opacity: 1; }
+
+/* pathLength="1" on every stroked path, so one dash rule fits every length */
+.sj-hero__field.hf-anim .hf-link,
+.sj-hero__field.hf-anim .hf-arc,
+.sj-hero__field.hf-anim .hf-trace {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.sj-hero__field.hf-anim.hf-revealed .hf-link,
+.sj-hero__field.hf-anim.hf-revealed .hf-arc,
+.sj-hero__field.hf-anim.hf-revealed .hf-trace {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 680ms var(--sj-ease-out, ease-out);
+}
+
+/* Stagger the draw. Six buckets is enough to read as sequential without
+   authoring a delay per element. */
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+1) { transition-delay: 150ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+2) { transition-delay: 210ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+3) { transition-delay: 270ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+4) { transition-delay: 330ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+5) { transition-delay: 390ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+6) { transition-delay: 450ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-arc                    { transition-delay: 260ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-trace                  { transition-delay: 380ms; }
+
+/* Nodes appear in sequence. transform-box/origin so the scale is about each
+   circle's own centre rather than the SVG origin. */
+.sj-hero__field.hf-anim .hf-node {
+  opacity: 0;
+  transform: scale(0.35);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.sj-hero__field.hf-anim.hf-revealed .hf-node {
+  opacity: 0.16;
+  transform: scale(1);
+  transition: opacity 260ms var(--sj-ease-out, ease-out), transform 260ms var(--sj-ease-out, ease-out);
+}
+
+.dark .sj-hero__field.hf-anim.hf-revealed .hf-node { opacity: 0.13; }
+
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+1) { transition-delay: 250ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+2) { transition-delay: 305ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+3) { transition-delay: 360ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+4) { transition-delay: 415ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+5) { transition-delay: 470ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+6) { transition-delay: 525ms; }
+.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+7) { transition-delay: 580ms; }
+
+/* --- pointer parallax, desktop mouse only ---------------------------------
+   --hf-x / --hf-y are set by the inline script (range -1..1) only while a mouse
+   is over the hero, and reset to 0 on pointerleave. The return to equilibrium
+   is this transition, not a JS easing loop, so nothing runs while idle.
+   Maximum displacement is 5px on the front layer.
+   -------------------------------------------------------------------------- */
+.sj-hero__field .hf-layer {
+  transform: translate3d(calc(var(--hf-x, 0) * var(--hf-depth, 0px)), calc(var(--hf-y, 0) * var(--hf-depth, 0px)), 0);
+  transition: transform 620ms var(--sj-ease-out, ease-out);
+  will-change: auto;
+}
+
+.sj-hero__field .hf-layer--back  { --hf-depth: 2px; }
+.sj-hero__field .hf-layer--mid   { --hf-depth: 3px; }
+.sj-hero__field .hf-layer--front { --hf-depth: 5px; }
+
+/* Touch and coarse pointers never get parallax; the field is static after the
+   reveal. Belt and braces with the script's `(pointer: fine)` guard. */
+@media (hover: none), (pointer: coarse) {
+  .sj-hero__field .hf-layer { transform: none; transition: none; }
+}
+
+/* --- reduced motion -------------------------------------------------------
+   The script already declines to add `hf-anim`, so this is the second line of
+   defence for a preference that changes after load. Everything is forced to its
+   settled state: no draw-on, no node sequence, no parallax, full content.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  /* `!important` here is not decoration. The Phase 3 homepage motion rule
+     further down this file forces `.sj-hero * { opacity: 1 !important }` so
+     that no hero CONTENT can be left invisible when a reveal does not run.
+     That selector also catches this decorative field, which was measured
+     rendering at full opacity under reduced motion — far too strong.
+
+     The field's resting opacity is a design value, not an unfinished
+     animation, so it is re-asserted at higher specificity
+     (`.sj-hero__field .hf-node` = 0,2,0 vs `.sj-hero *` = 0,1,0) and the
+     content guarantee is left exactly as it was.
+
+     Written WITHOUT `.hf-anim` so it also covers the case where the preference
+     is turned on after load, when the class is already on the element. */
+  .sj-hero__field,
+  .sj-hero__field.hf-anim { opacity: 1 !important; transition: none !important; }
+
+  .sj-hero__field .hf-link,
+  .sj-hero__field .hf-arc,
+  .sj-hero__field .hf-trace {
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+  }
+
+  .sj-hero__field .hf-node {
+    opacity: 0.16 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .sj-hero__field .hf-link  { opacity: 0.11 !important; }
+  .sj-hero__field .hf-arc   { opacity: 0.085 !important; }
+  .sj-hero__field .hf-trace { opacity: 0.075 !important; }
+
+  .dark .sj-hero__field .hf-node  { opacity: 0.13 !important; }
+  .dark .sj-hero__field .hf-link  { opacity: 0.085 !important; }
+  .dark .sj-hero__field .hf-arc   { opacity: 0.07 !important; }
+  .dark .sj-hero__field .hf-trace { opacity: 0.09 !important; }
+
+  .sj-hero__field .hf-layer { transform: none !important; transition: none !important; }
+}
+
 .sj-hero__mark {
   margin-inline: auto;
 }
 
 /* The h1 is the dominant text in the hero; the lede supports it. */
+/* Phase 8: 20px -> 16px. The wordmark SVG carries ~12px of its own bottom
+     whitespace inside its viewBox, so the PERCEIVED gap here was ~32px. 16px
+     brings the measured gap to 16 and the perceived one to ~28. */
 .sj-hero__title {
-  margin: var(--sj-space-5, 20px) auto 0;
+  margin: var(--sj-space-4) auto 0;
   max-width: 22ch;
   font-size: var(--sj-text-2xl);
   font-weight: 700;
@@ -120,7 +359,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--sj-space-3);
-  margin-top: var(--sj-space-8);
+  /* Phase 8: 32px -> 24px. */
+  margin-top: var(--sj-space-6);
 }
 
 .sj-btn__icon {
@@ -135,7 +375,9 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--sj-space-4) 0;
-  margin: var(--sj-space-12) 0 0;
+  /* Phase 8: 48px -> 32px. The 24px padding above the rule is kept, so the
+     strip still reads as a separated band rather than a crowded footer. */
+  margin: var(--sj-space-8) 0 0;
   padding-top: var(--sj-space-6);
   border-top: 1px solid var(--sj-border);
 }
@@ -635,6 +877,11 @@
    left invisible, and nothing may loop.
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
+  /* Phase 8 note: `.sj-hero *` deliberately still matches everything, including
+     the decorative field. The field's own resting opacities are re-asserted
+     with `!important` at higher specificity in the field's reduced-motion block
+     further up this file — see "hero research-field background". Narrowing this
+     selector instead would weaken the guarantee it exists for. */
   .sj-hero *,
   .sj-stats,
   .sj-stats * {

@@ -109,4 +109,19 @@
     {{ end }}
 
   </div>
+
+  {{/* Phase 8: decorative research-field background.
+
+       DELIBERATELY LAST IN THE DOM, not first. It is `position: absolute;
+       inset: 0` with `z-index: 0` against the inner column's `z-index: 1`, so
+       stacking is controlled entirely by CSS and paint order is identical
+       either way — but parse order is not. With the field emitted first,
+       Lighthouse measured the hero lede's LCP element render delay rise from
+       238ms to 409ms, costing 3 performance points, because 41 extra SVG
+       shapes had to be parsed and styled before the hero text could paint.
+       Emitting it after the content removes that from the critical path.
+
+       Clipped by the hero's own `overflow-hidden`, so it can never contribute
+       document overflow. */}}
+  {{ partial "custom/hero-field.html" . }}
 </div>

@@ -1,0 +1,173 @@
+{{/* SAJID.BD hero background — quantum-photonics / device network field.
+
+     Phase 8 polish. Decorative only: `aria-hidden` + `role="presentation"`, no
+     text, no interactive children, never announced and never a tab stop.
+
+     WHY INLINE SVG, AND NOTHING ELSE
+     No video, no Three.js, no WebGL, no particle library, no raster asset. One
+     inline <svg> of ~45 shapes, ~2 KB of CSS and ~30 lines of vanilla JS. The
+     intro is driven by CSS transitions on `stroke-dashoffset`, `opacity` and
+     `transform`, so it is compositor-friendly and finite by construction —
+     there is no `animation` property anywhere in this feature and therefore no
+     way for it to leave an infinite animation running (visual-qa-baseline A1).
+
+     GEOMETRY AND THE `slice` CROP
+     viewBox is 1200x600 with `xMidYMid slice`, so the SVG covers the hero and
+     the crop tightens as the viewport narrows. Measured visible viewBox window:
+        1440x599 hero  ->  x 0-1200,    y 51-549
+         768x617 hero  ->  x 227-973,   y 0-600
+         390x739 hero  ->  x 442-758,   y 0-600
+     Elements are therefore placed inside the band that survives at the
+     breakpoint they belong to. `hf--m` shapes sit inside x 442-758 so they are
+     still on screen at 390px; `hf--t` inside x 227-973; `hf--d` anywhere.
+
+     DENSITY BY BREAKPOINT (see homepage.css — display:none, so hidden shapes
+     are not painted at all)
+        mobile  < 768px   7 nodes ·  4 connections · 1 wavefront · 0 traces
+        tablet >= 768px  12 nodes ·  9 connections · 2 wavefronts · 1 trace
+        desktop >= 1024  21 nodes · 15 connections · 3 wavefronts · 2 traces
+
+     `pathLength="1"` on every stroked path normalises the dash geometry, so the
+     draw-on effect is one CSS rule instead of measuring each path in JS.
+*/}}
+
+<svg class="sj-hero__field" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"
+     aria-hidden="true" focusable="false" role="presentation">
+
+  {{/* ---- back layer: wavefronts and circuit traces, least parallax ---- */}}
+  <g class="hf-layer hf-layer--back">
+    {{/* interference / wavefronts */}}
+    <path class="hf-arc hf--m" pathLength="1" d="M546 576 Q640 500 734 576"/>
+    <path class="hf-arc hf--t" pathLength="1" d="M250 190 Q370 300 250 410"/>
+    <path class="hf-arc hf--d" pathLength="1" d="M1090 180 Q970 300 1090 420"/>
+
+    {{/* circuit-like traces */}}
+    <path class="hf-trace hf--t" pathLength="1" d="M780 470 H860 V420 H930 V380"/>
+    <path class="hf-trace hf--d" pathLength="1" d="M90 150 H150 V110 H220 V75"/>
+  </g>
+
+  {{/* ---- mid layer: connections ---- */}}
+  <g class="hf-layer hf-layer--mid">
+    {{/* mobile-tier: all inside x 442-758 */}}
+    <path class="hf-link hf--m" pathLength="1" d="M470 78 Q540 48 610 58"/>
+    <path class="hf-link hf--m" pathLength="1" d="M610 58 Q690 70 735 120"/>
+    <path class="hf-link hf--m" pathLength="1" d="M470 78 Q480 120 520 148"/>
+    <path class="hf-link hf--m" pathLength="1" d="M480 492 Q555 540 640 545"/>
+
+    {{/* tablet-tier */}}
+    <path class="hf-link hf--t" pathLength="1" d="M355 62 Q410 58 470 78"/>
+    <path class="hf-link hf--t" pathLength="1" d="M262 132 Q300 88 355 62"/>
+    <path class="hf-link hf--t" pathLength="1" d="M735 120 Q820 96 905 96"/>
+    <path class="hf-link hf--t" pathLength="1" d="M640 545 Q700 512 742 458"/>
+    <path class="hf-link hf--t" pathLength="1" d="M300 505 Q390 484 480 492"/>
+
+    {{/* desktop-tier */}}
+    <path class="hf-link hf--d" pathLength="1" d="M130 96 Q190 104 262 132"/>
+    <path class="hf-link hf--d" pathLength="1" d="M60 210 Q80 140 130 96"/>
+    <path class="hf-link hf--d" pathLength="1" d="M210 300 Q120 268 60 210"/>
+    <path class="hf-link hf--d" pathLength="1" d="M42 420 Q100 484 175 520"/>
+    <path class="hf-link hf--d" pathLength="1" d="M905 96 Q1040 118 1148 180"/>
+    <path class="hf-link hf--d" pathLength="1" d="M980 240 Q1040 262 1080 300"/>
+  </g>
+
+  {{/* ---- front layer: nodes, most parallax ---- */}}
+  <g class="hf-layer hf-layer--front">
+    {{/* mobile-tier: all inside x 442-758, kept clear of the vertical middle */}}
+    <circle class="hf-node hf--m" cx="470" cy="78"  r="3.5"/>
+    <circle class="hf-node hf--m" cx="610" cy="58"  r="2.6"/>
+    <circle class="hf-node hf--m" cx="735" cy="120" r="3"/>
+    <circle class="hf-node hf--m" cx="520" cy="148" r="2.4"/>
+    <circle class="hf-node hf--m" cx="480" cy="492" r="3.2"/>
+    <circle class="hf-node hf--m" cx="640" cy="545" r="2.6"/>
+    <circle class="hf-node hf--m" cx="742" cy="458" r="3"/>
+
+    {{/* tablet-tier */}}
+    <circle class="hf-node hf--t" cx="262" cy="132" r="3.4"/>
+    <circle class="hf-node hf--t" cx="355" cy="62"  r="2.6"/>
+    <circle class="hf-node hf--t" cx="905" cy="96"  r="3.6"/>
+    <circle class="hf-node hf--t" cx="300" cy="505" r="2.8"/>
+    <circle class="hf-node hf--t" cx="880" cy="520" r="3.2"/>
+
+    {{/* desktop-tier */}}
+    <circle class="hf-node hf--d" cx="60"   cy="210" r="3.6"/>
+    <circle class="hf-node hf--d" cx="130"  cy="96"  r="2.6"/>
+    <circle class="hf-node hf--d" cx="42"   cy="420" r="3"/>
+    <circle class="hf-node hf--d" cx="175"  cy="520" r="2.6"/>
+    <circle class="hf-node hf--d" cx="1148" cy="180" r="3.4"/>
+    <circle class="hf-node hf--d" cx="1080" cy="300" r="2.8"/>
+    <circle class="hf-node hf--d" cx="1160" cy="455" r="3.2"/>
+    <circle class="hf-node hf--d" cx="980"  cy="240" r="2.6"/>
+    <circle class="hf-node hf--d" cx="210"  cy="300" r="3"/>
+  </g>
+</svg>
+
+{{/* Runs during parse, before first paint, so there is no flash of the final
+     state before the reveal starts.
+
+     Order matters and is deliberate:
+       - CSS default state is the FINAL, settled state. With JS disabled, or if
+         this script throws, the field is simply there — fully visible.
+       - Under `prefers-reduced-motion: reduce` this script does nothing at all:
+         no `hf-anim` class, so no initial hidden state, no draw-on, no node
+         sequence and no pointer parallax. The static field renders immediately.
+       - Otherwise `hf-anim` installs the pre-reveal state and an
+         IntersectionObserver fires the one-shot reveal, then disconnects.
+
+     Pointer parallax is mouse-only and idle-free: a rAF is scheduled only in
+     response to a pointer event, never as a standing loop, and the return to
+     equilibrium is a CSS transition rather than JS easing. The hero rect is
+     read once per hover session on `pointerenter`, so `pointermove` never
+     forces a layout read.
+*/}}
+<script>
+(function () {
+  var f = document.currentScript && document.currentScript.previousElementSibling;
+  if (!f || f.tagName.toLowerCase() !== 'svg') { f = document.querySelector('.sj-hero__field'); }
+  if (!f) return;
+  try {
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  } catch (e) { return; }
+
+  f.classList.add('hf-anim');
+
+  var reveal = function () {
+    requestAnimationFrame(function () { f.classList.add('hf-revealed'); });
+    parallax();
+  };
+
+  var parallax = function () {
+    try { if (!matchMedia('(pointer: fine)').matches) return; } catch (e) { return; }
+    var hero = f.closest ? f.closest('.sj-hero') : null;
+    if (!hero) return;
+    var rect = null, queued = false, x = 0, y = 0;
+    var write = function () { queued = false; f.style.setProperty('--hf-x', x); f.style.setProperty('--hf-y', y); };
+    var schedule = function () { if (!queued) { queued = true; requestAnimationFrame(write); } };
+    hero.addEventListener('pointerenter', function (e) {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      rect = hero.getBoundingClientRect();
+    }, { passive: true });
+    hero.addEventListener('pointermove', function (e) {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      if (!rect) rect = hero.getBoundingClientRect();
+      x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      schedule();
+    }, { passive: true });
+    hero.addEventListener('pointerleave', function () { x = 0; y = 0; rect = null; schedule(); }, { passive: true });
+  };
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) { io.disconnect(); reveal(); return; }
+      }
+    }, { threshold: 0.05 });
+    io.observe(f);
+    /* Safety net: if the observer never fires (edge cases around bfcache and
+       print), do not leave the field stuck in its hidden pre-reveal state. */
+    setTimeout(function () { if (!f.classList.contains('hf-revealed')) { io.disconnect(); reveal(); } }, 1600);
+  } else {
+    reveal();
+  }
+})();
+</script>

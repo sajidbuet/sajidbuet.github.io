@@ -41,9 +41,24 @@ sections:
         - value: '6'
           label: Research areas
     design:
-      css_class: ''
+      # Phase 8 polish. The top padding is deliberately 0 here and supplied
+      # INSIDE the hero instead (see .sj-hero-section .sj-hero__inner in
+      # assets/css/homepage.css).
+      #
+      # HugoBlox emits `design.spacing.padding` as an inline style on the outer
+      # <section class="hbb-section ...">, but the hero's gradient lives on the
+      # inner `.sj-hero` div. With '3rem' here those 48px rendered as bare page
+      # background between the navbar's bottom border and the top of the
+      # gradient - a white band at every viewport, in both themes. Moving the
+      # same 48px inside the gradient makes the hero start flush under the
+      # navbar without moving the wordmark a single pixel.
+      #
+      # `sj-hero-section` scopes that internal padding to this block instance,
+      # so the Bengali homepage (which keeps the default section padding) and
+      # every inner page are unaffected.
+      css_class: 'sj-hero-section'
       spacing:
-        padding: ['3rem', 0, '2rem', 0]
+        padding: [0, 0, '2rem', 0]
 
   # ── 2. Research at a Glance ───────────────────────────────────────────
   - block: research-area-qpacers

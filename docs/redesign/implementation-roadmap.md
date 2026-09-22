@@ -1050,6 +1050,145 @@ numeric columns with no scrolling or truncation — recorded rather than forced.
 | 8.11 | Fix `rel="noopener"`, generic "Read more" link texts, `lang` attribute | P3-01…03 |
 | 8.12 | Style the Dimensions badge into the type system | P3-05 |
 | 8.13 | Record the Hugo 0.152.1 → 0.158+ upgrade path (`.Site.LanguageCode` deprecation is **upstream**, in `_vendor/`) | P2-09 |
+| 8.14 | ✅ **Done** — homepage hero flush under the navbar. See below |
+| 8.15 | Remove the committed OneDrive conflict copies. See below |
+| 8.16 | ✅ **Done** — hero research-field background + hero rhythm. See below |
+
+### 8.14 — Hero/navbar gap (done)
+
+A blank white band sat between the navbar's bottom border and the top of the hero gradient: **48 px,
+at every viewport, in both themes**.
+
+**Root cause.** `content/_index.md` gave the `hero-with-stats` block
+`design.spacing.padding: ['3rem', 0, '2rem', 0]`. HugoBlox emits that as an inline style on the outer
+`<section class="hbb-section blox-hero-with-stats">`, but the gradient lives on the inner `.sj-hero`
+div, and `.sj-hero__inner` had no vertical padding of its own. So the 48 px rendered as bare page
+background *above* the gradient. The `.home-section-bg` layer inside the section is transparent for
+this block, so nothing filled the band.
+
+Not a header-compensation problem, not a margin collapse, not an empty wrapper. No negative margin
+was used.
+
+**Fix.** The 48 px moved from outside the gradient to inside it:
+
+```yaml
+# content/_index.md — hero block
+css_class: 'sj-hero-section'
+spacing:
+  padding: [0, 0, '2rem', 0]
+```
+```css
+/* assets/css/homepage.css */
+.sj-hero-section .sj-hero__inner { padding-block-start: 3rem; }
+```
+
+`sj-hero-section` scopes the internal padding to that one block instance, so the pairing is explicit
+and cannot leak. The section's `2rem` bottom padding is deliberately kept: it is spacing *between*
+the hero and the next section, and the hero's own `border-bottom` already closes the band.
+
+**Verified.** Gap 0 at 1440 / 768 / 390, light and dark. The wordmark does not move — it stays at
+`y = 113` at every viewport, exactly where it was; only the gradient extends up to `y = 65`. Homepage
+height unchanged at 6,905 px. Sticky header still sticks and stays opaque after scrolling. `#contact`
+and the other anchors still land clear of the header (`secTop 73`, heading below the header bottom).
+`/research/`, `/publication/`, `/teaching/<course>/`, `/authors/me/` and `/resources/` are untouched
+(`.sj-hero-section` is absent from all of them). Phase 7 gates re-run on the homepage across 7
+viewports × 2 themes: 0 overflow, 0 contrast failures, 0 duplicate ids, 0 overlaps, 0 infinite
+animations.
+
+**Still open:** the Bengali homepage has the same defect (96 px gap) but a different hero
+configuration — it keeps the default section padding and still enables the `gradient_mesh` background
+that Phase 3 removed from the English hero. It was deliberately left alone; it belongs with 8.9.
+
+### 8.16 — Hero research-field background (done)
+
+A sparse quantum-photonics / device-network figure behind the hero: nodes, thin curved
+connections, wavefront arcs and circuit traces. Inline SVG plus project-owned CSS and ~30 lines of
+vanilla JS. No video, no Three.js, no WebGL, no particle library, no raster asset, no third-party
+dependency.
+
+**Files:** `layouts/_partials/custom/hero-field.html` (new), `assets/css/homepage.css`,
+`layouts/_partials/hbx/blocks/hero-with-stats/block.html`.
+
+**Density by breakpoint** — three authored tiers, `display: none` on the ones that do not belong at a
+width, so hidden shapes are never painted. Not a scaled-down copy of the desktop artwork.
+
+| | Nodes | Connections | Arcs | Traces |
+|---|---|---|---|---|
+| Mobile `<768px` | **7** | 4 | 1 | 0 |
+| Tablet `≥768px` | **12** | 9 | 2 | 1 |
+| Desktop `≥1024px` | **21** | 15 | 3 | 2 |
+
+`viewBox` is `1200×600` with `xMidYMid slice`, so the crop tightens as the viewport narrows; each
+tier's shapes are authored inside the band that survives at its breakpoint (measured: x 442–758 at
+390px, x 227–973 at 768px).
+
+**Animation.** CSS transitions only — there is no `animation` property anywhere in the feature, so it
+cannot leave an infinite animation running. `pathLength="1"` on every stroked path normalises the dash
+geometry so the draw-on is one rule rather than per-path JS measurement. Intro completes in ~0.8–1.2 s
+and settles; measured `document.getAnimations()` at rest: **0 running, 0 infinite**.
+
+**Idle JS.** None. A rAF is scheduled only in response to a pointer event; the return to equilibrium is
+a CSS transition. Parallax is mouse-only (`pointer: fine`), maximum displacement measured 1.98 px
+(back layer) / 2.98 px (mid) / 4.96 px (front), returning to exactly 0 on `pointerleave`.
+
+**Reduced motion.** The inline script declines to arm the animation at all, so the settled field
+renders immediately with no draw-on, no node sequence and no parallax. A second CSS guard covers the
+preference changing after load.
+
+**A bug this surfaced.** Phase 3's `@media (prefers-reduced-motion: reduce) { .sj-hero * { opacity: 1
+!important } }` — which exists so no hero *content* is left invisible — also caught the decorative
+field and rendered it at full strength. The field's resting opacities are now re-asserted at higher
+specificity inside its own reduced-motion block; the content guarantee is untouched.
+
+**Performance.** Measured with Lighthouse 13.5.0 against a static server over `hugo --minify`, median
+of 3 runs, desktop form factor.
+
+| Build | Perf | A11y | Best practices | Observed LCP | TBT | CLS |
+|---|---|---|---|---|---|---|
+| No field (first measurement) | 61 | 100 | 96 | 247 ms | 18 ms | 0.0027 |
+| No field (same bytes, re-measured later) | **58** | 100 | 96 | — | 19 ms | 0.0027 |
+| Empty field element, 0 shapes, no script | **57** | 100 | 96 | — | 88 ms | 0.0027 |
+| **With the field (shipped)** | **58** | **100** | **96** | 267 ms | 17 ms | 0.0027 |
+
+The first no-field run scored 61 and a later run of **the identical bytes** scored 58, and a control
+build containing an *empty* field element scored 57 — so the 61 is an outlier and the score difference
+is inside this machine's noise floor, not a regression. Isolation runs also ruled out the CSS mask
+(58), the inline script (58 with it stripped) and CSS containment (58) as causes.
+
+The deterministic cost, which does not vary: **+4,269 B of HTML (+1,122 B gzipped, +2.4 % of the
+document)**, +4,620 B of minified CSS, 41 SVG elements, and **+20 ms of observed LCP element render
+delay** (239 → 261 ms). CLS and TBT are unchanged.
+
+One structural fix came out of that measurement: the field is emitted **after** the hero content in the
+DOM, not before. It is `position: absolute` with `z-index: 0` against the content's `z-index: 1`, so
+stacking is identical either way — but with it first, the hero lede's render delay rose to 410 ms
+because 41 SVG shapes had to be parsed and styled before the hero text could paint.
+
+**Hero rhythm**, tightened in the same pass: mark→h1 20→16 px, support→CTAs 32→24 px, CTAs→stats
+48→32 px. Hero 599 → 571 px at 1440; homepage 6,905 → 6,877 px.
+
+**QA.** 1440 / 1024 / 768 / 430 / 390, light and dark, Chromium 153 and Firefox 155: density correct,
+0 document overflow, 0 infinite animations, 0 tab stops inside the field, navbar→hero gap 0. Reduced
+motion correct in both engines. Keyboard: 14 stops walked, none inside the field, all ringed. Zoom
+200 % (720 CSS px) and 400 % (360 CSS px): 0 overflow, h1 and CTA visible.
+
+### 8.15 — Committed OneDrive conflict copies
+
+The `redesign-phase-7` commit (`29b0db6`) included 29 `…-SAJID-PC` conflict copies and the restored
+pre-Phase-5 `content/outreach/` directory. They were excluded from the Phase 7 measurements via
+`HUGO_IGNOREFILES` and were not in the recommended `git add` list, but they are now tracked and will
+deploy. Effect on the production build:
+
+| | Pages | Aliases |
+|---|---|---|
+| Expected (Phase 5–7 baseline) | 626 | 51 |
+| Current `main` | **642** | **53** |
+
+Three stale routes are published that should not exist — `/outreach/templates/graphics/` (the
+pre-Phase-5 page, shadowing the Phase 5 alias target), `/projects/_index-sajid-pc/` and
+`/research/funding/_index-sajid-pc/` — plus two duplicate `/projects/g-0*` aliases, the same collision
+class that broke Phase 4's redirects once already. `assets/css/{homepage,phase4}-SAJID-PC.css` are
+dead copies that no template references.
 
 ### Validation
 Lighthouse ≥ 95 performance / ≥ 95 a11y / 100 best-practices on 5 routes.
