@@ -4,8 +4,42 @@
 |---|---|
 | **Phase 1 — Audit & Design** | ✅ Complete. No production code changed. |
 | **Phase 2A — Visual Foundation & Application Shell** | ✅ Complete (2026-09-21). Foundation implemented; no content or route touched. |
-| **Phase 2B — Navigation IA Migration** | ⏸ Deferred by design — runs with Phases 4–5. |
-| Phases 3–8 | Not started. |
+| **Phase 2B — Navigation IA Migration** | ✅ Delivered across Phases 4–5 (the menu now points at real pages). |
+| **Phase 3 — Homepage** | ✅ Complete (2026-09-22). 12,822 → 6,608 px; 0 infinite animations. |
+| **Phase 4 — Core content** | ✅ Complete (2026-09-22). Funding → `/research/funding/`, new `/projects/` portfolio. One manual gate: production redirects. |
+| **Phase 5 — Supporting content** | ✅ Complete (2026-09-22). `/outreach/` → `/resources/`, Teaching restructured, `/people/` retired. One manual gate: production redirects. |
+| **Phase 6 — Detail templates** | ✅ Complete (2026-09-22). Twelve detail types; one `_vendor` shadow. |
+| **Phase 7 — Responsive / a11y / cross-browser** | ✅ **PASS WITH MANUAL CHECKS REMAINING** (2026-09-22). See [`phase-7-validation.md`](phase-7-validation.md). |
+| **Phase 8 — Polish & performance** | ⬜ Not started. |
+
+### Phase 7 at a glance
+
+210 Chromium cells (7 viewports × 2 themes × 15 routes) · 120 Firefox 155 cells ·
+120 Brave cells · 32 zoom cells · 597 keyboard tab stops · 24,788 links crawled.
+
+**Zero** contrast failures, **zero** horizontal overflow, **zero** duplicate ids,
+**zero** images without dimensions, **zero** infinite animations, **zero** unnamed
+interactive elements, **zero** positional drift between Gecko and Blink.
+Lighthouse **Accessibility 100** on all five audited routes.
+
+Eleven defects were found and fixed, including two contrast failures that made
+course-table headers literally invisible, a site-wide 3.38:1 accent colour, a
+duplicate `id="main"` on 67 routes, and 61 invalid zero-size links per publication
+listing.
+
+**Still outstanding, and not claimed as passed:**
+
+1. **NVDA screen-reader smoke test** — cannot be operated from an agent session.
+   Procedure in `phase-7-validation.md` §11.1. **This blocks the `redesign-phase-7` tag.**
+2. Production redirect verification (carried forward from Phases 4–5).
+3. Brave + Shields against the production deploy, where Cloudflare injects its
+   beacon and `email-decode.min.js` at the edge.
+4. Four 2020 course PDFs and six BRACU workshop files that were never committed.
+
+> **Build note.** OneDrive `…-SAJID-PC` conflict copies are present again and add
+> two duplicate aliases. They are untracked user files and were not deleted; set
+> `$env:HUGO_IGNOREFILES = "-SAJID-PC\.,outreach[\\/]templates"` before building
+> until they are cleaned up.
 
 **Phase 2A closed:** P0-01 (mobile nav keyboard), P0-02 (dark-mode header), P1-03 (logo accessible
 name), P1-13 (`<main>` + skip link), P1-14 (reduced motion), P2-01 (focus ring), P2-06 (`baseURL`),
@@ -27,6 +61,10 @@ Phase 2A evidence: `screenshots/phase2a/` (39 captures + 6 inspectable crops),
 | [`design-system-proposal.md`](design-system-proposal.md) | Brand direction, principles, tokens, type, colour, layout, motion, navigation |
 | [`implementation-roadmap.md`](implementation-roadmap.md) | Phases 2–8: objectives, files, validation, rollback |
 | [`visual-qa-baseline.md`](visual-qa-baseline.md) | Acceptance criteria every later phase must pass, with Phase-1 baselines |
+| [`phase-4-url-migration.md`](phase-4-url-migration.md) | Funding → `/research/funding/` move record and alias verification |
+| [`phase-5-url-migration.md`](phase-5-url-migration.md) | `/outreach/` → `/resources/` move record and alias verification |
+| [`phase-6-detail-template-map.md`](phase-6-detail-template-map.md) · [`phase-6-detail-template-qa.md`](phase-6-detail-template-qa.md) | Detail-template inventory and QA |
+| [`phase-7-validation.md`](phase-7-validation.md) | **Phase 7 gate report** — responsive matrix, keyboard, contrast, motion, zoom, touch, Chromium/Firefox/Brave, Lighthouse, and what remains manual |
 
 **Read in this order for review:** `visual-audit` → `information-architecture` →
 `design-system-proposal` → `implementation-roadmap`.
@@ -119,12 +157,12 @@ become materially more consistent.
 - Pre-existing uncommitted work (`cv/papers.bib`, four untracked logo assets) left exactly as found.
 - All new files are confined to `docs/redesign/`.
 
-### Known limitations
+### Known limitations *(as recorded in Phase 1 — most are now closed; see the Phase 7 column)*
 
-- **Firefox was not tested** — Gecko is not installed and installing Playwright was not authorised.
-  Phase 7 must cover it. Risk areas are listed in `visual-qa-baseline.md` §8.
-- **Brave was not separately driven** — same engine as Chrome, but Shields behaviour needs a manual pass.
-- **Safari/WebKit** unavailable on Windows.
-- Screen-reader behaviour was **inferred from the accessibility tree**, not verified with NVDA/JAWS.
-- Lighthouse was not run (no Chrome-launcher tooling present without an install); the equivalent
-  measurements were taken directly via CDP.
+| Phase 1 limitation | Now |
+|---|---|
+| **Firefox was not tested** — Gecko not installed, Playwright not authorised | ✅ Closed in Phase 7. Playwright added as a devDependency; Firefox 155 driven over 120 cells, 0 drift vs Chromium |
+| **Brave was not separately driven** | ✅ Closed in Phase 7. 120 cells in Brave itself, with and without the hosts Shields blocks. The production edge injections remain a manual check |
+| **Safari/WebKit** unavailable on Windows | ⬜ Still untested, still not claimed |
+| Screen-reader behaviour **inferred from the accessibility tree** | ⬜ Still inferred. Phase 7 automated every static equivalent and reads names from Chromium's real AX tree, but NVDA cannot be operated from an agent session — procedure in `phase-7-validation.md` §11.1 |
+| **Lighthouse was not run** | ✅ Closed in Phase 7. Lighthouse 13.5.0 via `npx` on 5 routes: Accessibility 100 ×5, Best Practices 96 ×5 |

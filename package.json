@@ -15,7 +15,9 @@
     "tailwindcss": "^4.1.12"
   },
   "description": "Research Lab starter template for Hugo Blox with Tailwind CSS v4 - Perfect for research groups and academic laboratories",
-  "devDependencies": {},
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  },
   "name": "hugo-blox-research-lab-starter",
   "packageManager": "pnpm@10.14.0",
   "private": true,

@@ -22,11 +22,52 @@
   {{ else if $item.Params.publication }}
     {{- $item.Params.publication | markdownify -}}.
   {{ end }}
-  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }} 
-    <a class="btn btn-page-header btn-sm" href="{{ $item.Params.doi}}" target="_blank" rel="noopener">
-    <span class="__dimensions_badge_embed__" data-doi="{{ $item.Params.doi}}" data-hide-zero-citations="true" data-legend="hover-bottom" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-  </a>
-  </p>
+  {{/* ---------- Phase 7: Dimensions badge ----------
+       This block previously emitted, unconditionally and on every citation row:
+
+         <a class="btn btn-page-header btn-sm" href="{{ $item.Params.doi }}"
+            target="_blank" rel="noopener"><span class="__dimensions_badge_embed__" …>
+
+       Three defects, all measured:
+
+       1. `.Params.doi` is EMPTY for every English publication — Phase 4 moved
+          DOIs to `hugoblox.ids.doi` (the same bug Phase 6 fixed in
+          publication/single.html, but this shared listing view was missed).
+          So `href=""`, which is a link to the current page. 61 of them on
+          /publication/ alone.
+       2. Where a DOI *was* present (the Bengali mirror, which shares the English
+          taxonomy terms) it produced `href="10.1364/…"` — no scheme, so a
+          relative path that 404s. 90 broken links across 29 taxonomy pages.
+       3. The anchor wraps only the badge <span>, which the Dimensions script
+          fills in asynchronously. Until then it is a 0x0, focusable, keyboard-
+          reachable link with NO accessible name. Confirmed in Chromium's
+          accessibility tree: 61 unnamed links on /publication/.
+
+       RESOLUTION: the badge block is removed from the listing view, not repaired.
+
+       Phase 7 is a verification phase, so the change had to be the one that fixes
+       the measured defect without altering what the site does. Both alternatives
+       were built and measured before choosing:
+
+       - Repairing the href (resolve the DOI the way single.html does) also
+         REACTIVATES badge.js, because the span's `data-doi` comes from the same
+         empty value. Measured consequences on /publication/ and /: a new dark-mode
+         contrast failure (`.__db_score`, #222 on #0f172a = 1.12:1, third-party
+         markup this project cannot restyle safely), 37 injected <img> elements
+         with no width/height (M4), and ~90 extra tab stops. That is a feature
+         change with regressions, not a verification fix.
+       - Keeping the span with its empty `data-doi` leaves markup that has rendered
+         nothing at all since Phase 4 and an anchor that is still invalid.
+
+       Removing it changes nothing a visitor sees — the badge has produced no
+       output since Phase 4 moved DOIs to `hugoblox.ids.doi` — while removing 61
+       invalid tab stops from /publication/ and 3 from /. The DOI itself is not
+       lost: `page_links` above already renders a real "DOI" button.
+
+       Re-enabling the badge properly belongs to roadmap item 8.12, which already
+       owns "style the Dimensions badge into the type system"; it now also needs
+       the `hugoblox.ids.doi` source, dark-mode colours and image dimensions. */}}
+  <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }}</p>
 
   {{/* MLA Style */}}
   {{ else }}

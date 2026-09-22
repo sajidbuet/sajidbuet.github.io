@@ -34,7 +34,7 @@ Windows typically comes with PowerShell pre-installed. To open it:
 1. Click **Start** and type **PowerShell**.
 2. Right-click **Windows PowerShell** and choose **Run as administrator**.
 
-If you need to install the latest PowerShell version, download it [here](https://github.com/PowerShell/PowerShell/releases).
+If you need to install the latest PowerShell version, download it from the [PowerShell releases page](https://github.com/PowerShell/PowerShell/releases).
 
 ### macOS/Linux Users
 

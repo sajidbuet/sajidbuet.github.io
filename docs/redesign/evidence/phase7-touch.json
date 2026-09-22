@@ -1,0 +1,2372 @@
+{
+ "meta": {
+  "browser": {
+   "Browser": "Chrome/153.0.8010.53",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "V8-Version": "15.3.76.13",
+   "WebKit-Version": "537.36 (@792bf6722e73a45aa9e47c163b9901bdc17f3230)",
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9442/devtools/browser/51e9ed22-9677-4c43-8e71-994005454c32"
+  },
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T16:04:22.946Z",
+  "threshold": 44
+ },
+ "byCell": {
+  "home|768x1024": {
+   "total": 104,
+   "under44": 25,
+   "under44Inline": 16,
+   "under44Actionable": 9,
+   "under24Actionable": 5,
+   "actionable": [
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 290,
+     "h": 27,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me/",
+     "under24": false,
+     "html": "<a href=\"/authors/me/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Dr. Sajid Muhaimin Choudhury </a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 579,
+     "h": 43,
+     "name": "Instructions to Hardware: A Gentle Intro",
+     "href": "/teaching/workshops/bracu-arm-workshop/",
+     "under24": false,
+     "html": "<a href=\"/teaching/workshops/bracu-arm-workshop/\">Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog<"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 303 (Jul 2025)",
+     "href": "/teaching/jul2025_eee303/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee303/\">EEE 303 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 304 (Jul 2025)",
+     "href": "/teaching/jul2025_eee304/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee304/\">EEE 304 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 211,
+     "h": 21,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\">Puja Das Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 236,
+     "h": 21,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\">Ayon Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 245,
+     "h": 21,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\">Soikot Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a.text-gray-700.dark:text-gray-300.hover:text-primary-600",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 150,
+     "h": 26,
+     "name": "sajid@eee.buet.ac.bd",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\" class=\"text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> s"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "home|430x932": {
+   "total": 104,
+   "under44": 20,
+   "under44Inline": 13,
+   "under44Actionable": 7,
+   "under24Actionable": 5,
+   "actionable": [
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 290,
+     "h": 27,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me/",
+     "under24": false,
+     "html": "<a href=\"/authors/me/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Dr. Sajid Muhaimin Choudhury </a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 303 (Jul 2025)",
+     "href": "/teaching/jul2025_eee303/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee303/\">EEE 303 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 304 (Jul 2025)",
+     "href": "/teaching/jul2025_eee304/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee304/\">EEE 304 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 211,
+     "h": 21,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\">Puja Das Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 236,
+     "h": 21,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\">Ayon Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 245,
+     "h": 21,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\">Soikot Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a.text-gray-700.dark:text-gray-300.hover:text-primary-600",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 150,
+     "h": 26,
+     "name": "sajid@eee.buet.ac.bd",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\" class=\"text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> s"
+    }
+   ]
+  },
+  "home|390x844": {
+   "total": 104,
+   "under44": 20,
+   "under44Inline": 14,
+   "under44Actionable": 6,
+   "under24Actionable": 5,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 303 (Jul 2025)",
+     "href": "/teaching/jul2025_eee303/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee303/\">EEE 303 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 21,
+     "name": "EEE 304 (Jul 2025)",
+     "href": "/teaching/jul2025_eee304/",
+     "under24": true,
+     "html": "<a href=\"/teaching/jul2025_eee304/\">EEE 304 (Jul 2025)</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 211,
+     "h": 21,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\">Puja Das Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 236,
+     "h": 21,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\">Ayon Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 245,
+     "h": 21,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": true,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\">Soikot Sarkar Defends MSc Thesis</a>"
+    },
+    {
+     "el": "a.text-gray-700.dark:text-gray-300.hover:text-primary-600",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 150,
+     "h": 26,
+     "name": "sajid@eee.buet.ac.bd",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\" class=\"text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> s"
+    }
+   ]
+  },
+  "research|768x1024": {
+   "total": 58,
+   "under44": 15,
+   "under44Inline": 7,
+   "under44Actionable": 8,
+   "under24Actionable": 3,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 703,
+     "h": 24,
+     "name": "Synergizing Deep Learning and Topology O",
+     "href": "/research/funding/g-03/",
+     "under24": false,
+     "html": "<a href=\"/research/funding/g-03/\">Synergizing Deep Learning and Topology Optimization for Tunable Meta-lens Design</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 19,
+     "name": "BUET",
+     "href": "https://rise.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://rise.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 427,
+     "h": 24,
+     "name": "Structurally Tunable Gear-Shaped Plasmon",
+     "href": "/research/funding/g-02/",
+     "under24": false,
+     "html": "<a href=\"/research/funding/g-02/\">Structurally Tunable Gear-Shaped Plasmonic Sensor</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 295,
+     "h": 42,
+     "name": "Research and Innovation Centre for Scien",
+     "href": "https://www.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"https://www.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Research and Innovation Centre for Science and Engineering (RISE), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 611,
+     "h": 24,
+     "name": "Design and Low-cost Fabrication of Optic",
+     "href": "/research/funding/g-01/",
+     "under24": false,
+     "html": "<a href=\"/research/funding/g-01/\">Design and Low-cost Fabrication of Optical Biosensors for Virus Detection</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 336,
+     "h": 19,
+     "name": "Center for Advanced Study and Research (",
+     "href": "https://casrproposal.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://casrproposal.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Center for Advanced Study and Research (CASR), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 284,
+     "h": 21,
+     "name": "Contact Dr. Sajid Muhaimin Choudhury",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\">Contact Dr. Sajid Muhaimin Choudhury</a>"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "research|430x932": {
+   "total": 58,
+   "under44": 11,
+   "under44Inline": 7,
+   "under44Actionable": 4,
+   "under24Actionable": 3,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 19,
+     "name": "BUET",
+     "href": "https://rise.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://rise.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 372,
+     "h": 42,
+     "name": "Research and Innovation Centre for Scien",
+     "href": "https://www.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"https://www.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Research and Innovation Centre for Science and Engineering (RISE), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 336,
+     "h": 19,
+     "name": "Center for Advanced Study and Research (",
+     "href": "https://casrproposal.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://casrproposal.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Center for Advanced Study and Research (CASR), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 284,
+     "h": 21,
+     "name": "Contact Dr. Sajid Muhaimin Choudhury",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\">Contact Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "research|390x844": {
+   "total": 58,
+   "under44": 10,
+   "under44Inline": 6,
+   "under44Actionable": 4,
+   "under24Actionable": 3,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 19,
+     "name": "BUET",
+     "href": "https://rise.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://rise.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 295,
+     "h": 42,
+     "name": "Research and Innovation Centre for Scien",
+     "href": "https://www.buet.ac.bd",
+     "under24": false,
+     "html": "<a href=\"https://www.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Research and Innovation Centre for Science and Engineering (RISE), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 336,
+     "h": 19,
+     "name": "Center for Advanced Study and Research (",
+     "href": "https://casrproposal.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://casrproposal.buet.ac.bd\" target=\"_blank\" rel=\"noopener\">Center for Advanced Study and Research (CASR), BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 284,
+     "h": 21,
+     "name": "Contact Dr. Sajid Muhaimin Choudhury",
+     "href": "mailto:sajid@eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\">Contact Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "research-area|768x1024": {
+   "total": 66,
+   "under44": 16,
+   "under44Inline": 15,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "research-area|430x932": {
+   "total": 66,
+   "under44": 11,
+   "under44Inline": 11,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "research-area|390x844": {
+   "total": 66,
+   "under44": 9,
+   "under44Inline": 9,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "publication-list|768x1024": {
+   "total": 538,
+   "under44": 281,
+   "under44Inline": 280,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "publication-list|430x932": {
+   "total": 538,
+   "under44": 227,
+   "under44Inline": 227,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "publication-list|390x844": {
+   "total": 538,
+   "under44": 227,
+   "under44Inline": 227,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "publication-detail|768x1024": {
+   "total": 49,
+   "under44": 6,
+   "under44Inline": 4,
+   "under44Actionable": 2,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a.pub-accent.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 19,
+     "name": "10.1007/s11128-026-05327-6",
+     "href": "https://doi.org/10.1007/s11128-026-05327-6",
+     "under24": true,
+     "html": "<a href=\"https://doi.org/10.1007/s11128-026-05327-6\" target=\"_blank\" rel=\"noopener\" class=\"pub-accent hover:underline\"> 10.1007/s11128-026-05327-6 </a"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "publication-detail|430x932": {
+   "total": 49,
+   "under44": 5,
+   "under44Inline": 4,
+   "under44Actionable": 1,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a.pub-accent.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 19,
+     "name": "10.1007/s11128-026-05327-6",
+     "href": "https://doi.org/10.1007/s11128-026-05327-6",
+     "under24": true,
+     "html": "<a href=\"https://doi.org/10.1007/s11128-026-05327-6\" target=\"_blank\" rel=\"noopener\" class=\"pub-accent hover:underline\"> 10.1007/s11128-026-05327-6 </a"
+    }
+   ]
+  },
+  "publication-detail|390x844": {
+   "total": 49,
+   "under44": 4,
+   "under44Inline": 3,
+   "under44Actionable": 1,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a.pub-accent.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 19,
+     "name": "10.1007/s11128-026-05327-6",
+     "href": "https://doi.org/10.1007/s11128-026-05327-6",
+     "under24": true,
+     "html": "<a href=\"https://doi.org/10.1007/s11128-026-05327-6\" target=\"_blank\" rel=\"noopener\" class=\"pub-accent hover:underline\"> 10.1007/s11128-026-05327-6 </a"
+    }
+   ]
+  },
+  "projects|768x1024": {
+   "total": 39,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "projects|430x932": {
+   "total": 39,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "projects|390x844": {
+   "total": 39,
+   "under44": 2,
+   "under44Inline": 2,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "project-detail|768x1024": {
+   "total": 37,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "project-detail|430x932": {
+   "total": 37,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "project-detail|390x844": {
+   "total": 37,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "teaching|768x1024": {
+   "total": 44,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "teaching|430x932": {
+   "total": 44,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "teaching|390x844": {
+   "total": 44,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "course-detail|768x1024": {
+   "total": 42,
+   "under44": 3,
+   "under44Inline": 2,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "course-detail|430x932": {
+   "total": 42,
+   "under44": 3,
+   "under44Inline": 3,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "course-detail|390x844": {
+   "total": 42,
+   "under44": 2,
+   "under44Inline": 2,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "team|768x1024": {
+   "total": 64,
+   "under44": 13,
+   "under44Inline": 1,
+   "under44Actionable": 12,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 290,
+     "h": 27,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me/",
+     "under24": false,
+     "html": "<a href=\"/authors/me/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Dr. Sajid Muhaimin Choudhury </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 214,
+     "h": 27,
+     "name": "Mir Md. Aminuzzaman",
+     "href": "/authors/1024064011-mir-md-aminuzzaman/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024064011-mir-md-aminuzzaman/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Mir Md. Aminuzzaman </"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 151,
+     "h": 27,
+     "name": "Abu Md. Raihan",
+     "href": "/authors/0423062522-abu-md-raihan/",
+     "under24": false,
+     "html": "<a href=\"/authors/0423062522-abu-md-raihan/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Abu Md. Raihan </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 203,
+     "h": 27,
+     "name": "Md Al Shahriar Shakil",
+     "href": "/authors/0424062324-shahriar-shakil/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062324-shahriar-shakil/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Md Al Shahriar Shakil </a"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 27,
+     "name": "Naved Sadat Yamin",
+     "href": "/authors/0424062379-naved-sadat-yamin/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062379-naved-sadat-yamin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Naved Sadat Yamin </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 129,
+     "h": 27,
+     "name": "Purbayan Das",
+     "href": "/authors/0421062341-purbayan-das/",
+     "under24": false,
+     "html": "<a href=\"/authors/0421062341-purbayan-das/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Purbayan Das </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 27,
+     "name": "Tanvir Ahmed",
+     "href": "/authors/1024062144-tanvir-ahmed/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024062144-tanvir-ahmed/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Tanvir Ahmed </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 155,
+     "h": 27,
+     "name": "Zaheer Al Jamee",
+     "href": "/authors/0424062139-zaheer-al-jamee/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062139-zaheer-al-jamee/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Zaheer Al Jamee </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 183,
+     "h": 27,
+     "name": "Addrita Basak Nodi",
+     "href": "/authors/2106147-addrita-basak-nodi/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106147-addrita-basak-nodi/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Addrita Basak Nodi </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 108,
+     "h": 27,
+     "name": "Gopal Gosh",
+     "href": "/authors/2106136-gopal-gosh/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106136-gopal-gosh/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Gopal Gosh </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 176,
+     "h": 27,
+     "name": "Ramima Mumtarin",
+     "href": "/authors/2106173-ramima-mumtarin/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106173-ramima-mumtarin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Ramima Mumtarin </a>"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "team|430x932": {
+   "total": 64,
+   "under44": 12,
+   "under44Inline": 1,
+   "under44Actionable": 11,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 290,
+     "h": 27,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me/",
+     "under24": false,
+     "html": "<a href=\"/authors/me/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Dr. Sajid Muhaimin Choudhury </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 214,
+     "h": 27,
+     "name": "Mir Md. Aminuzzaman",
+     "href": "/authors/1024064011-mir-md-aminuzzaman/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024064011-mir-md-aminuzzaman/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Mir Md. Aminuzzaman </"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 151,
+     "h": 27,
+     "name": "Abu Md. Raihan",
+     "href": "/authors/0423062522-abu-md-raihan/",
+     "under24": false,
+     "html": "<a href=\"/authors/0423062522-abu-md-raihan/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Abu Md. Raihan </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 203,
+     "h": 27,
+     "name": "Md Al Shahriar Shakil",
+     "href": "/authors/0424062324-shahriar-shakil/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062324-shahriar-shakil/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Md Al Shahriar Shakil </a"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 27,
+     "name": "Naved Sadat Yamin",
+     "href": "/authors/0424062379-naved-sadat-yamin/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062379-naved-sadat-yamin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Naved Sadat Yamin </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 129,
+     "h": 27,
+     "name": "Purbayan Das",
+     "href": "/authors/0421062341-purbayan-das/",
+     "under24": false,
+     "html": "<a href=\"/authors/0421062341-purbayan-das/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Purbayan Das </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 27,
+     "name": "Tanvir Ahmed",
+     "href": "/authors/1024062144-tanvir-ahmed/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024062144-tanvir-ahmed/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Tanvir Ahmed </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 155,
+     "h": 27,
+     "name": "Zaheer Al Jamee",
+     "href": "/authors/0424062139-zaheer-al-jamee/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062139-zaheer-al-jamee/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Zaheer Al Jamee </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 183,
+     "h": 27,
+     "name": "Addrita Basak Nodi",
+     "href": "/authors/2106147-addrita-basak-nodi/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106147-addrita-basak-nodi/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Addrita Basak Nodi </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 108,
+     "h": 27,
+     "name": "Gopal Gosh",
+     "href": "/authors/2106136-gopal-gosh/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106136-gopal-gosh/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Gopal Gosh </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 176,
+     "h": 27,
+     "name": "Ramima Mumtarin",
+     "href": "/authors/2106173-ramima-mumtarin/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106173-ramima-mumtarin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Ramima Mumtarin </a>"
+    }
+   ]
+  },
+  "team|390x844": {
+   "total": 64,
+   "under44": 11,
+   "under44Inline": 1,
+   "under44Actionable": 10,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 214,
+     "h": 27,
+     "name": "Mir Md. Aminuzzaman",
+     "href": "/authors/1024064011-mir-md-aminuzzaman/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024064011-mir-md-aminuzzaman/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Mir Md. Aminuzzaman </"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 151,
+     "h": 27,
+     "name": "Abu Md. Raihan",
+     "href": "/authors/0423062522-abu-md-raihan/",
+     "under24": false,
+     "html": "<a href=\"/authors/0423062522-abu-md-raihan/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Abu Md. Raihan </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 203,
+     "h": 27,
+     "name": "Md Al Shahriar Shakil",
+     "href": "/authors/0424062324-shahriar-shakil/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062324-shahriar-shakil/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Md Al Shahriar Shakil </a"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 182,
+     "h": 27,
+     "name": "Naved Sadat Yamin",
+     "href": "/authors/0424062379-naved-sadat-yamin/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062379-naved-sadat-yamin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Naved Sadat Yamin </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 129,
+     "h": 27,
+     "name": "Purbayan Das",
+     "href": "/authors/0421062341-purbayan-das/",
+     "under24": false,
+     "html": "<a href=\"/authors/0421062341-purbayan-das/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Purbayan Das </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 131,
+     "h": 27,
+     "name": "Tanvir Ahmed",
+     "href": "/authors/1024062144-tanvir-ahmed/",
+     "under24": false,
+     "html": "<a href=\"/authors/1024062144-tanvir-ahmed/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Tanvir Ahmed </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 155,
+     "h": 27,
+     "name": "Zaheer Al Jamee",
+     "href": "/authors/0424062139-zaheer-al-jamee/",
+     "under24": false,
+     "html": "<a href=\"/authors/0424062139-zaheer-al-jamee/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Zaheer Al Jamee </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 183,
+     "h": 27,
+     "name": "Addrita Basak Nodi",
+     "href": "/authors/2106147-addrita-basak-nodi/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106147-addrita-basak-nodi/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Addrita Basak Nodi </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 108,
+     "h": 27,
+     "name": "Gopal Gosh",
+     "href": "/authors/2106136-gopal-gosh/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106136-gopal-gosh/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Gopal Gosh </a>"
+    },
+    {
+     "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 176,
+     "h": 27,
+     "name": "Ramima Mumtarin",
+     "href": "/authors/2106173-ramima-mumtarin/",
+     "under24": false,
+     "html": "<a href=\"/authors/2106173-ramima-mumtarin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Ramima Mumtarin </a>"
+    }
+   ]
+  },
+  "team-profile|768x1024": {
+   "total": 57,
+   "under44": 5,
+   "under44Inline": 1,
+   "under44Actionable": 4,
+   "under24Actionable": 2,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "breadcrumb",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 44,
+     "name": "Team",
+     "href": "/authors/",
+     "under24": false,
+     "html": "<a href=\"/authors/\">Team</a>"
+    },
+    {
+     "el": "a.underline.underline-offset-4",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 177,
+     "h": 21,
+     "name": "Department of EEE, BUET",
+     "href": "https://eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://eee.buet.ac.bd\" class=\"underline underline-offset-4\">Department of EEE, BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 190,
+     "h": 21,
+     "name": "Download the detailed CV",
+     "href": "cv.pdf",
+     "under24": true,
+     "html": "<a href=\"cv.pdf\">Download the detailed CV</a>"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "team-profile|430x932": {
+   "total": 57,
+   "under44": 4,
+   "under44Inline": 1,
+   "under44Actionable": 3,
+   "under24Actionable": 2,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "breadcrumb",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 44,
+     "name": "Team",
+     "href": "/authors/",
+     "under24": false,
+     "html": "<a href=\"/authors/\">Team</a>"
+    },
+    {
+     "el": "a.underline.underline-offset-4",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 177,
+     "h": 21,
+     "name": "Department of EEE, BUET",
+     "href": "https://eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://eee.buet.ac.bd\" class=\"underline underline-offset-4\">Department of EEE, BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 190,
+     "h": 21,
+     "name": "Download the detailed CV",
+     "href": "cv.pdf",
+     "under24": true,
+     "html": "<a href=\"cv.pdf\">Download the detailed CV</a>"
+    }
+   ]
+  },
+  "team-profile|390x844": {
+   "total": 57,
+   "under44": 4,
+   "under44Inline": 1,
+   "under44Actionable": 3,
+   "under24Actionable": 2,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "breadcrumb",
+     "inline": false,
+     "icon": false,
+     "w": 32,
+     "h": 44,
+     "name": "Team",
+     "href": "/authors/",
+     "under24": false,
+     "html": "<a href=\"/authors/\">Team</a>"
+    },
+    {
+     "el": "a.underline.underline-offset-4",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 177,
+     "h": 21,
+     "name": "Department of EEE, BUET",
+     "href": "https://eee.buet.ac.bd",
+     "under24": true,
+     "html": "<a href=\"https://eee.buet.ac.bd\" class=\"underline underline-offset-4\">Department of EEE, BUET</a>"
+    },
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 190,
+     "h": 21,
+     "name": "Download the detailed CV",
+     "href": "cv.pdf",
+     "under24": true,
+     "html": "<a href=\"cv.pdf\">Download the detailed CV</a>"
+    }
+   ]
+  },
+  "news|768x1024": {
+   "total": 65,
+   "under44": 8,
+   "under44Inline": 1,
+   "under44Actionable": 7,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 259,
+     "h": 27,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\" class=\"hover:underline\"> Puja Das Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 291,
+     "h": 27,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\" class=\"hover:underline\"> Ayon Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 301,
+     "h": 27,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\" class=\"hover:underline\"> Soikot Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 369,
+     "h": 27,
+     "name": "Asif Hossain Bhuiyan Defends MSc Thesis",
+     "href": "/news/2025-05-19-asif-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-05-19-asif-defends/\" class=\"hover:underline\"> Asif Hossain Bhuiyan Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 411,
+     "h": 27,
+     "name": "Predefense of Three Members - PGS2025041",
+     "href": "/news/2025-04-10-three-predefense/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-04-10-three-predefense/\" class=\"hover:underline\"> Predefense of Three Members - PGS20250419 </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 194,
+     "h": 27,
+     "name": "Mahfuz Defends Final",
+     "href": "/news/2025-03-05-mahfuz-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-03-05-mahfuz-defends/\" class=\"hover:underline\"> Mahfuz Defends Final </a>"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "news|430x932": {
+   "total": 65,
+   "under44": 5,
+   "under44Inline": 1,
+   "under44Actionable": 4,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 259,
+     "h": 27,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\" class=\"hover:underline\"> Puja Das Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 291,
+     "h": 27,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\" class=\"hover:underline\"> Ayon Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 301,
+     "h": 27,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\" class=\"hover:underline\"> Soikot Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 194,
+     "h": 27,
+     "name": "Mahfuz Defends Final",
+     "href": "/news/2025-03-05-mahfuz-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-03-05-mahfuz-defends/\" class=\"hover:underline\"> Mahfuz Defends Final </a>"
+    }
+   ]
+  },
+  "news|390x844": {
+   "total": 65,
+   "under44": 5,
+   "under44Inline": 1,
+   "under44Actionable": 4,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 259,
+     "h": 27,
+     "name": "Puja Das Defends MSc Thesis",
+     "href": "/news/2025-09-24-puja-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-09-24-puja-defends/\" class=\"hover:underline\"> Puja Das Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 291,
+     "h": 27,
+     "name": "Ayon Sarkar Defends MSc Thesis",
+     "href": "/news/2025-07-05-ayon-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-07-05-ayon-defends/\" class=\"hover:underline\"> Ayon Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 301,
+     "h": 27,
+     "name": "Soikot Sarkar Defends MSc Thesis",
+     "href": "/news/2025-06-01-soikot-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-06-01-soikot-defends/\" class=\"hover:underline\"> Soikot Sarkar Defends MSc Thesis </a>"
+    },
+    {
+     "el": "a.hover:underline",
+     "zone": "other",
+     "inline": false,
+     "icon": false,
+     "w": 194,
+     "h": 27,
+     "name": "Mahfuz Defends Final",
+     "href": "/news/2025-03-05-mahfuz-defends/",
+     "under24": false,
+     "html": "<a href=\"/news/2025-03-05-mahfuz-defends/\" class=\"hover:underline\"> Mahfuz Defends Final </a>"
+    }
+   ]
+  },
+  "news-detail|768x1024": {
+   "total": 36,
+   "under44": 3,
+   "under44Inline": 1,
+   "under44Actionable": 2,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 216,
+     "h": 21,
+     "name": "See the EEE 6002 course page",
+     "href": "/teaching/archive/a2024_eee6002q/",
+     "under24": true,
+     "html": "<a href=\"/teaching/archive/a2024_eee6002q/\">See the EEE 6002 course page</a>"
+    },
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "news-detail|430x932": {
+   "total": 36,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 216,
+     "h": 21,
+     "name": "See the EEE 6002 course page",
+     "href": "/teaching/archive/a2024_eee6002q/",
+     "under24": true,
+     "html": "<a href=\"/teaching/archive/a2024_eee6002q/\">See the EEE 6002 course page</a>"
+    }
+   ]
+  },
+  "news-detail|390x844": {
+   "total": 36,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 1,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "prose",
+     "inline": false,
+     "icon": false,
+     "w": 216,
+     "h": 21,
+     "name": "See the EEE 6002 course page",
+     "href": "/teaching/archive/a2024_eee6002q/",
+     "under24": true,
+     "html": "<a href=\"/teaching/archive/a2024_eee6002q/\">See the EEE 6002 course page</a>"
+    }
+   ]
+  },
+  "resources|768x1024": {
+   "total": 51,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "resources|430x932": {
+   "total": 51,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "resources|390x844": {
+   "total": 51,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "blog-post|768x1024": {
+   "total": 37,
+   "under44": 2,
+   "under44Inline": 1,
+   "under44Actionable": 1,
+   "under24Actionable": 0,
+   "actionable": [
+    {
+     "el": "a",
+     "zone": "footer",
+     "inline": false,
+     "icon": false,
+     "w": 413,
+     "h": 40,
+     "name": "Dr. Sajid Muhaimin Choudhury",
+     "href": "/authors/me",
+     "under24": false,
+     "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+    }
+   ]
+  },
+  "blog-post|430x932": {
+   "total": 37,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  },
+  "blog-post|390x844": {
+   "total": 37,
+   "under44": 1,
+   "under44Inline": 1,
+   "under44Actionable": 0,
+   "under24Actionable": 0,
+   "actionable": []
+  }
+ },
+ "mobileMenuOpen": {
+  "total": 104,
+  "under44": 20,
+  "under44Inline": 14,
+  "under44Actionable": 6,
+  "under24Actionable": 5,
+  "actionable": [
+   {
+    "el": "a",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 131,
+    "h": 21,
+    "name": "EEE 303 (Jul 2025)",
+    "href": "/teaching/jul2025_eee303/",
+    "under24": true,
+    "html": "<a href=\"/teaching/jul2025_eee303/\">EEE 303 (Jul 2025)</a>"
+   },
+   {
+    "el": "a",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 131,
+    "h": 21,
+    "name": "EEE 304 (Jul 2025)",
+    "href": "/teaching/jul2025_eee304/",
+    "under24": true,
+    "html": "<a href=\"/teaching/jul2025_eee304/\">EEE 304 (Jul 2025)</a>"
+   },
+   {
+    "el": "a",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 211,
+    "h": 21,
+    "name": "Puja Das Defends MSc Thesis",
+    "href": "/news/2025-09-24-puja-defends/",
+    "under24": true,
+    "html": "<a href=\"/news/2025-09-24-puja-defends/\">Puja Das Defends MSc Thesis</a>"
+   },
+   {
+    "el": "a",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 236,
+    "h": 21,
+    "name": "Ayon Sarkar Defends MSc Thesis",
+    "href": "/news/2025-07-05-ayon-defends/",
+    "under24": true,
+    "html": "<a href=\"/news/2025-07-05-ayon-defends/\">Ayon Sarkar Defends MSc Thesis</a>"
+   },
+   {
+    "el": "a",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 245,
+    "h": 21,
+    "name": "Soikot Sarkar Defends MSc Thesis",
+    "href": "/news/2025-06-01-soikot-defends/",
+    "under24": true,
+    "html": "<a href=\"/news/2025-06-01-soikot-defends/\">Soikot Sarkar Defends MSc Thesis</a>"
+   },
+   {
+    "el": "a.text-gray-700.dark:text-gray-300.hover:text-primary-600",
+    "zone": "other",
+    "inline": false,
+    "icon": false,
+    "w": 150,
+    "h": 26,
+    "name": "sajid@eee.buet.ac.bd",
+    "href": "mailto:sajid@eee.buet.ac.bd",
+    "under24": false,
+    "html": "<a href=\"mailto:sajid@eee.buet.ac.bd\" class=\"text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> s"
+   }
+  ]
+ },
+ "uniqueActionable": [
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "BUET",
+   "size": "32x19",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "breadcrumb",
+   "el": "a",
+   "name": "Team",
+   "size": "32x44",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team-profile|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a",
+   "name": "EEE 303 (Jul 2025)",
+   "size": "131x21",
+   "icon": false,
+   "under24": true,
+   "n": 6,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Gopal Gosh",
+   "size": "108x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.pub-accent.hover:underline",
+   "name": "10.1007/s11128-026-05327-6",
+   "size": "182x19",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "publication-detail|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Purbayan Das",
+   "size": "129x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Tanvir Ahmed",
+   "size": "131x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.underline.underline-offset-4",
+   "name": "Department of EEE, BUET",
+   "size": "177x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "team-profile|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.text-gray-700.dark:text-gray-300.hover:text-primary-600",
+   "name": "sajid@eee.buet.ac.bd",
+   "size": "150x26",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Download the detailed CV",
+   "size": "190x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "team-profile|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Abu Md. Raihan",
+   "size": "151x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Zaheer Al Jamee",
+   "size": "155x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a",
+   "name": "Puja Das Defends MSc Thesis",
+   "size": "211x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "See the EEE 6002 course page",
+   "size": "216x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "news-detail|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Ramima Mumtarin",
+   "size": "176x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Naved Sadat Yamin",
+   "size": "182x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Addrita Basak Nodi",
+   "size": "183x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a",
+   "name": "Ayon Sarkar Defends MSc Thesis",
+   "size": "236x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a",
+   "name": "Soikot Sarkar Defends MSc Thesis",
+   "size": "245x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Mahfuz Defends Final",
+   "size": "194x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Md Al Shahriar Shakil",
+   "size": "203x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Mir Md. Aminuzzaman",
+   "size": "214x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "team|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Contact Dr. Sajid Muhaimin Choudhury",
+   "size": "284x21",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Center for Advanced Study and Research (",
+   "size": "336x19",
+   "icon": false,
+   "under24": true,
+   "n": 3,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Puja Das Defends MSc Thesis",
+   "size": "259x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+   "name": "Dr. Sajid Muhaimin Choudhury",
+   "size": "290x27",
+   "icon": false,
+   "under24": false,
+   "n": 4,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Ayon Sarkar Defends MSc Thesis",
+   "size": "291x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Soikot Sarkar Defends MSc Thesis",
+   "size": "301x27",
+   "icon": false,
+   "under24": false,
+   "n": 3,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Asif Hossain Bhuiyan Defends MSc Thesis",
+   "size": "369x27",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Structurally Tunable Gear-Shaped Plasmon",
+   "size": "427x24",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a.hover:underline",
+   "name": "Predefense of Three Members - PGS2025041",
+   "size": "411x27",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "news|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Research and Innovation Centre for Scien",
+   "size": "295x42",
+   "icon": false,
+   "under24": false,
+   "n": 2,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Design and Low-cost Fabrication of Optic",
+   "size": "611x24",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Research and Innovation Centre for Scien",
+   "size": "372x42",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "research|430x932"
+  },
+  {
+   "zone": "footer",
+   "el": "a",
+   "name": "Dr. Sajid Muhaimin Choudhury",
+   "size": "413x40",
+   "icon": false,
+   "under24": false,
+   "n": 15,
+   "eg": "home|768x1024"
+  },
+  {
+   "zone": "prose",
+   "el": "a",
+   "name": "Synergizing Deep Learning and Topology O",
+   "size": "703x24",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "research|768x1024"
+  },
+  {
+   "zone": "other",
+   "el": "a",
+   "name": "Instructions to Hardware: A Gentle Intro",
+   "size": "579x43",
+   "icon": false,
+   "under24": false,
+   "n": 1,
+   "eg": "home|768x1024"
+  }
+ ],
+ "summary": {
+  "cells": 45,
+  "worstRoute": [
+   "team|768x1024",
+   {
+    "total": 64,
+    "under44": 13,
+    "under44Inline": 1,
+    "under44Actionable": 12,
+    "under24Actionable": 0,
+    "actionable": [
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 290,
+      "h": 27,
+      "name": "Dr. Sajid Muhaimin Choudhury",
+      "href": "/authors/me/",
+      "under24": false,
+      "html": "<a href=\"/authors/me/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Dr. Sajid Muhaimin Choudhury </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 214,
+      "h": 27,
+      "name": "Mir Md. Aminuzzaman",
+      "href": "/authors/1024064011-mir-md-aminuzzaman/",
+      "under24": false,
+      "html": "<a href=\"/authors/1024064011-mir-md-aminuzzaman/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Mir Md. Aminuzzaman </"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 151,
+      "h": 27,
+      "name": "Abu Md. Raihan",
+      "href": "/authors/0423062522-abu-md-raihan/",
+      "under24": false,
+      "html": "<a href=\"/authors/0423062522-abu-md-raihan/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Abu Md. Raihan </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 203,
+      "h": 27,
+      "name": "Md Al Shahriar Shakil",
+      "href": "/authors/0424062324-shahriar-shakil/",
+      "under24": false,
+      "html": "<a href=\"/authors/0424062324-shahriar-shakil/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Md Al Shahriar Shakil </a"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 182,
+      "h": 27,
+      "name": "Naved Sadat Yamin",
+      "href": "/authors/0424062379-naved-sadat-yamin/",
+      "under24": false,
+      "html": "<a href=\"/authors/0424062379-naved-sadat-yamin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Naved Sadat Yamin </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 129,
+      "h": 27,
+      "name": "Purbayan Das",
+      "href": "/authors/0421062341-purbayan-das/",
+      "under24": false,
+      "html": "<a href=\"/authors/0421062341-purbayan-das/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Purbayan Das </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 131,
+      "h": 27,
+      "name": "Tanvir Ahmed",
+      "href": "/authors/1024062144-tanvir-ahmed/",
+      "under24": false,
+      "html": "<a href=\"/authors/1024062144-tanvir-ahmed/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Tanvir Ahmed </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 155,
+      "h": 27,
+      "name": "Zaheer Al Jamee",
+      "href": "/authors/0424062139-zaheer-al-jamee/",
+      "under24": false,
+      "html": "<a href=\"/authors/0424062139-zaheer-al-jamee/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Zaheer Al Jamee </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 183,
+      "h": 27,
+      "name": "Addrita Basak Nodi",
+      "href": "/authors/2106147-addrita-basak-nodi/",
+      "under24": false,
+      "html": "<a href=\"/authors/2106147-addrita-basak-nodi/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Addrita Basak Nodi </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 108,
+      "h": 27,
+      "name": "Gopal Gosh",
+      "href": "/authors/2106136-gopal-gosh/",
+      "under24": false,
+      "html": "<a href=\"/authors/2106136-gopal-gosh/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Gopal Gosh </a>"
+     },
+     {
+      "el": "a.hover:text-primary-600.dark:hover:text-primary-400.transition-colors",
+      "zone": "other",
+      "inline": false,
+      "icon": false,
+      "w": 176,
+      "h": 27,
+      "name": "Ramima Mumtarin",
+      "href": "/authors/2106173-ramima-mumtarin/",
+      "under24": false,
+      "html": "<a href=\"/authors/2106173-ramima-mumtarin/\" class=\"hover:text-primary-600 dark:hover:text-primary-400 transition-colors\"> Ramima Mumtarin </a>"
+     },
+     {
+      "el": "a",
+      "zone": "footer",
+      "inline": false,
+      "icon": false,
+      "w": 413,
+      "h": 40,
+      "name": "Dr. Sajid Muhaimin Choudhury",
+      "href": "/authors/me",
+      "under24": false,
+      "html": "<a href=\"/authors/me\">Dr. Sajid Muhaimin Choudhury</a>"
+     }
+    ]
+   }
+  ],
+  "totalUnder44": 990,
+  "totalInlineExempt": 878,
+  "totalActionable": 112,
+  "uniqueActionable": 37,
+  "byZone": {
+   "prose": 10,
+   "breadcrumb": 1,
+   "other": 25,
+   "footer": 1
+  }
+ }
+}

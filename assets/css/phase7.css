@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Phase 7 — responsive / accessibility / cross-browser corrections
+
+   Phase 7 is a verification phase. Everything here exists because a measured
+   defect required it; nothing here is a restyle. Each block names the route,
+   viewport and measurement that produced it.
+
+   Loaded last in the project bundle (site_head.html), after tokens, custom and
+   phase4–6, so it can correct upstream `_vendor` CSS without patching _vendor.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Focus ring on publication action controls            (X3, WCAG 2.4.7)
+
+   `_vendor/.../assets/css/views/attachments.css` applies Tailwind's
+   `outline-none` AND `focus:outline-none` to `.hb-attachment-link`. The
+   keyboard walk measured 40 of 140 tab stops on /publication/ landing on
+   DOI / URL / PDF / Cite controls whose computed outline was
+   `none 2px rgb(14,116,144)` — the ring colour was inherited from the Phase 2A
+   focus system but `outline-style` had been forced to `none`, so nothing drew.
+   `e.matches(':focus-visible')` returned true throughout, so this is a paint
+   suppression, not a focus-detection problem.
+
+   _vendor is never edited (roadmap §0), so the ring is restored here at equal
+   specificity from a later stylesheet, with `!important` on the style only —
+   the width, colour and offset still come from the design tokens.
+   -------------------------------------------------------------------------- */
+.hb-attachment-link:focus-visible,
+a.btn-page-header:focus-visible {
+  outline-style: solid !important;
+  outline-width: var(--sj-focus-width);
+  outline-color: var(--sj-focus-ring);
+  outline-offset: var(--sj-focus-offset);
+  border-radius: var(--sj-radius-sm);
+}
+
+/* Kept for the publication DETAIL page, which still embeds the Dimensions badge.
+   badge.js injects `<a class="__dimensions_Link">` at run time with its own
+   styling. The Phase 2A focus rule uses `:where(...)`, which has ZERO specificity
+   by design, so the third-party rule wins and the injected link focused with a
+   computed `outline: none 3px rgb(34,34,34)` — a keyboard stop with no ring.
+   This is the one place a third-party class is named explicitly; the ring's
+   width, colour and offset still come from the design tokens. */
+a.__dimensions_Link:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring) !important;
+  outline-offset: var(--sj-focus-offset);
+  border-radius: var(--sj-radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   2. Touch targets                                        (X7, roadmap 7.6)
+
+   Measured at 768x1024, 430x932 and 390x844 across all 15 routes.
+   Scoped to coarse pointers so the desktop layout is bit-identical: these are
+   hit-area corrections, not a visual inflation of the interface. Every rule
+   below grows the tappable box with padding or min-height and leaves the icon,
+   the type size and the surrounding rhythm alone — which is exactly the
+   allowance the brief gives ("padding may be used to enlarge the hit area
+   while keeping the visual icon appropriately sized").
+
+   The navbar toggle, search and theme controls already measured 44x44 from
+   Phase 2A and are deliberately not touched.
+   -------------------------------------------------------------------------- */
+/* 2.0 Icon-only controls, ALL pointer types.
+   WCAG 2.5.8 (Target Size Minimum, AA) applies regardless of input device, and
+   Lighthouse — which audits at desktop form factor — reported `target-size` on
+   the /authors/me/ profile icon rail, where the links measured 20x16 to 24x16.
+   24px is the AA floor; the 44px AAA/roadmap figure is applied under a coarse
+   pointer below. Padding only, so the glyphs keep their drawn size. */
+a.pr-2.transition-transform,
+a.w-10.h-10,
+a.inline-flex.h-10.w-10,
+.sj-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+@media (pointer: coarse) {
+
+  /* 2a. Icon-only controls.
+     Measured: 20x16 / 22x16 / 24x16 / 40x16 in the author profile strip,
+     20x20 in the team-showcase rail, 40x40 in the contact block and the footer.
+     Selectors are the classes actually present in the rendered markup — an
+     earlier pass guessed at names like `.sj-social-rail` that do not exist,
+     which is why the first re-measurement showed no improvement. */
+  a.w-10.h-10,
+  a.inline-flex.h-10.w-10,
+  a.pr-2.transition-transform,
+  a.text-gray-500.hover\:text-primary-600,
+  .sj-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* 2b. Publication row actions — DOI / URL / PDF / Cite / BibTeX.
+     Measured 34x32 … 48x32. phase4.css already set min-height:32px.
+     `.sj-home` is listed explicitly because homepage.css:620 scopes its own
+     `min-height: 32px` at (0,2,0), which outranks the bare class — the Cite
+     button on the homepage was the one control still measuring 48x32 after the
+     first pass, while the identical button on /publication/ measured 44x44. */
+  .hb-attachment-link,
+  .sj-home .hb-attachment-link {
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    padding-inline: var(--sj-space-1);
+  }
+
+  /* 2c. Pagination. Measured 46x21 on "Next »" / "« Prev", and 71x38 on the
+     HugoBlox `relative inline-flex … border-gray-300` prev/next buttons. */
+  .pagination .page-link,
+  a.page-link,
+  .page-item > a,
+  a.relative.inline-flex.items-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* 2d. Breadcrumb links. Measured 32x21 and 75x21.
+     Block axis only, so the crumb row keeps its horizontal rhythm and still
+     wraps at 390px as Phase 6 established. A 32x44 text crumb is intentional:
+     forcing 44px of WIDTH onto the word "Team" would be the interface inflation
+     the brief rules out, and the criterion's concern is the tap band. */
+  .sj-crumbs a,
+  .sj-crumbs [aria-current="page"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* 2d-bis. Disclosure summaries — the course "On this page" table of contents
+     and the chapter sidebar. Measured 26px tall; full-width, so only the block
+     axis is short. */
+  .sj-toc__summary,
+  .sj-book-nav__summary {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* 2e. Language switcher pills. Measured 58x30 / 70x30. */
+  a.rounded-full.border {
+    min-height: 44px;
+  }
+
+  /* 2f. Publication detail action row (Phase 6 DOI / URL / PDF buttons).
+     Measured 57x38 / 59x38 — the real class is `.pub-accent-bg` for the
+     primary and the bordered variant beside it. */
+  .pub-accent-bg,
+  a.inline-flex.items-center.rounded-lg {
+    min-height: 44px;
+  }
+
+  /* 2g. Card action rows and stacked link lists — project "Code ↗" / "Demo ↗",
+     card titles, resource shelves, course TOCs, footer columns, the "Read more"
+     row on news cards. Measured 19–32px tall.
+     Inline links in running prose are deliberately NOT included: WCAG 2.5.5 and
+     2.5.8 both exempt them and padding them would break the line box. */
+  .sj-card__links a,
+  .sj-card__title a,
+  .sj-res-group__title a,
+  .sj-res-group__more a,
+  .sj-res-list__link,
+  .sj-profile-rel__link,
+  .sj-profile-rel__more a,
+  .sj-course__title a,
+  .sj-more-link,
+  .sj-toc a,
+  .sj-book-nav a,
+  .sj-course-list a,
+  .sj-readmore,
+  footer nav a,
+  footer li > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. The wordmark caret                                        (A1, A9)
+
+   `#brand-cursor` carries `animation: blink 0.9s step-end infinite`. The
+   Phase 3 script removes the node once the one-shot wordmark settles, but the
+   sequence runs for ~5s, so `document.getAnimations()` reports one infinite
+   animation for the whole of that window — and if the script fails or is
+   blocked (Brave Shields blocking inline script, a CSP, a JS error) the caret
+   blinks forever. Belt and braces: the animation is bounded in CSS as well, so
+   the "zero infinite animations" guarantee no longer depends on JavaScript
+   running to completion.
+   -------------------------------------------------------------------------- */
+#brand-cursor {
+  animation-iteration-count: 6;
+  animation-fill-mode: forwards;
+}
+
+/* Decorative SVG icons are handled in markup, not here: the search-modal shadow
+   marks its eight icons `aria-hidden`, and the logo, research-map and social
+   rails carry either a <title> or an aria-label. No CSS is involved. */

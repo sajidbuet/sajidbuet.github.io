@@ -87,7 +87,10 @@
       <!-- Metadata section -->
       {{ if $hasMeta }}
       <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800">
-        <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-500 flex-wrap mb-3">
+        {{/* Phase 7: dark was `text-zinc-500` on the dark card surface — 3.69:1,
+             below AA for the date and read-time metadata on /news/.
+             zinc-400 measures 6.97:1 on --sj-background. Light is unchanged. */}}
+        <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400 flex-wrap mb-3">
           {{ if $item.Params.authors }}
           <div class="flex items-center gap-2 min-w-0">
             {{ $slug := index $item.Params.authors 0 | urlize }}
@@ -131,8 +134,11 @@
         <!-- Read More with arrow - properly separated -->
         {{ if $showReadMore }}
         <div class="pt-2 border-t border-zinc-200/50 dark:border-zinc-700/50">
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-all duration-300 group/link">
-            <span>{{ i18n "read_more" | default "Read more" }}</span>
+          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="sj-readmore inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-all duration-300 group/link">
+            {{/* Phase 7 (X14): "Read more" x10 on /news/ was not meaningful out of
+                 context. The card title is appended for assistive technology only,
+                 so the visible label and layout are unchanged. */}}
+            <span>{{ i18n "read_more" | default "Read more" }}<span class="sr-only"> — {{ $item.Title | plainify }}</span></span>
             <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>

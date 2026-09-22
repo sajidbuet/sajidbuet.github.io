@@ -1,0 +1,40 @@
+{{/* Phase 7 — intrinsic width/height for an SVG resource, read from its own viewBox.
+
+     Hugo cannot report .Width/.Height for an SVG, so every upstream template that
+     guards dimensions with `{{ if not $isSVG }}` silently ships <img> tags with no
+     width and no height. The Phase 7 audit measured 4 such images on `/` and 4 on
+     `/research/` (the partner logos), failing visual-qa-baseline M4 and the
+     Lighthouse "image elements do not have explicit width and height" audit.
+
+     Phase 6 solved the same problem for the footer BUET logo by hardcoding that
+     one file's viewBox. This generalises it so no value is ever guessed: the
+     numbers come from the file, and a file with no parseable viewBox yields
+     nothing rather than a made-up aspect ratio.
+
+     Returns a dict {w, h} of integers, or an empty dict. Returning values rather
+     than markup keeps the caller in charge of escaping — emitting a pre-built
+     `width="..." height="..."` string from here is escaped to `width=&#34;316&#34;`
+     however it is marked, because the partial's own body is a text context.
+
+     Usage:
+       {{ $d := partial "functions/svg_dimensions" $img }}
+       {{ with $d.w }}width="{{ . }}" height="{{ $d.h }}"{{ end }}
+*/}}
+{{- $out := dict -}}
+{{- with . -}}
+  {{- if eq .MediaType.SubType "svg" -}}
+    {{- $m := findRE `viewBox\s*=\s*["'][^"']+["']` .Content 1 -}}
+    {{- with $m -}}
+      {{- $raw := replaceRE `viewBox\s*=\s*["']|["']` "" (index . 0) -}}
+      {{- $nums := split (replaceRE `[,\s]+` " " (trim $raw " ")) " " -}}
+      {{- if eq (len $nums) 4 -}}
+        {{- $w := math.Round (float (index $nums 2)) -}}
+        {{- $h := math.Round (float (index $nums 3)) -}}
+        {{- if and (gt $w 0.0) (gt $h 0.0) -}}
+          {{- $out = dict "w" (int $w) "h" (int $h) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

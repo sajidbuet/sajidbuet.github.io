@@ -1,0 +1,154 @@
+{
+ "meta": {
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T16:12:59.992Z",
+  "tool": "npx lighthouse"
+ },
+ "routes": {
+  "home": {
+   "route": "/",
+   "lighthouseVersion": "13.5.0",
+   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "scores": {
+    "accessibility": 100,
+    "best-practices": 96
+   },
+   "failedAudits": [
+    {
+     "id": "errors-in-console",
+     "title": "Browser errors were logged to the console",
+     "score": 0,
+     "items": [
+      "console.error",
+      "network"
+     ]
+    },
+    {
+     "id": "label-content-name-mismatch",
+     "title": "Elements with visible text labels do not have matching accessible names.",
+     "score": 0,
+     "items": [
+      "<a class=\"navbar-brand group inline-flex items-center\" href=\"/\" aria-label=\"SAJID Lab — Home\">"
+     ]
+    }
+   ],
+   "manualAuditCount": 10
+  },
+  "publication-list": {
+   "route": "/publication/",
+   "lighthouseVersion": "13.5.0",
+   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "scores": {
+    "accessibility": 100,
+    "best-practices": 96
+   },
+   "failedAudits": [
+    {
+     "id": "errors-in-console",
+     "title": "Browser errors were logged to the console",
+     "score": 0,
+     "items": [
+      "console.error",
+      "network"
+     ]
+    },
+    {
+     "id": "label-content-name-mismatch",
+     "title": "Elements with visible text labels do not have matching accessible names.",
+     "score": 0,
+     "items": [
+      "<a class=\"navbar-brand group inline-flex items-center\" href=\"/\" aria-label=\"SAJID Lab — Home\">"
+     ]
+    }
+   ],
+   "manualAuditCount": 10
+  },
+  "publication-detail": {
+   "route": "/publication/j-029/",
+   "lighthouseVersion": "13.5.0",
+   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "scores": {
+    "accessibility": 100,
+    "best-practices": 96
+   },
+   "failedAudits": [
+    {
+     "id": "errors-in-console",
+     "title": "Browser errors were logged to the console",
+     "score": 0,
+     "items": [
+      "console.error",
+      "network"
+     ]
+    },
+    {
+     "id": "label-content-name-mismatch",
+     "title": "Elements with visible text labels do not have matching accessible names.",
+     "score": 0,
+     "items": [
+      "<a class=\"navbar-brand group inline-flex items-center\" href=\"/\" aria-label=\"SAJID Lab — Home\">"
+     ]
+    }
+   ],
+   "manualAuditCount": 10
+  },
+  "course-detail": {
+   "route": "/teaching/jul2025_eee303/",
+   "lighthouseVersion": "13.5.0",
+   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "scores": {
+    "accessibility": 100,
+    "best-practices": 96
+   },
+   "failedAudits": [
+    {
+     "id": "errors-in-console",
+     "title": "Browser errors were logged to the console",
+     "score": 0,
+     "items": [
+      "console.error",
+      "network"
+     ]
+    },
+    {
+     "id": "label-content-name-mismatch",
+     "title": "Elements with visible text labels do not have matching accessible names.",
+     "score": 0,
+     "items": [
+      "<a class=\"navbar-brand group inline-flex items-center\" href=\"/\" aria-label=\"SAJID Lab — Home\">"
+     ]
+    }
+   ],
+   "manualAuditCount": 10
+  },
+  "team-profile": {
+   "route": "/authors/me/",
+   "lighthouseVersion": "13.5.0",
+   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "scores": {
+    "accessibility": 100,
+    "best-practices": 96
+   },
+   "failedAudits": [
+    {
+     "id": "errors-in-console",
+     "title": "Browser errors were logged to the console",
+     "score": 0,
+     "items": [
+      "console.error",
+      "network"
+     ]
+    },
+    {
+     "id": "label-content-name-mismatch",
+     "title": "Elements with visible text labels do not have matching accessible names.",
+     "score": 0,
+     "items": [
+      "<a class=\"navbar-brand group inline-flex items-center\" href=\"/\" aria-label=\"SAJID Lab — Home\">"
+     ]
+    }
+   ],
+   "manualAuditCount": 10
+  }
+ }
+}

@@ -34,7 +34,7 @@ sections:
     id: intro
     content:
       text: |-
-        # Team
+        # Team {#team-intro}
 
         SAJID Lab brings together undergraduate, MSc and PhD researchers at the
         Department of EEE, BUET. The group works across photonics, quantum

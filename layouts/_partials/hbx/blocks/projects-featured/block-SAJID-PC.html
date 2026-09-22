@@ -1,0 +1,81 @@
+{{/* SAJID.BD — Featured Projects (Phase 3 placeholder, Phase 4 ready)
+
+     IMPORTANT, and the reason this block exists at all:
+
+     `content/projects/` currently holds RESEARCH GRANTS (g-01..g-03), not
+     software projects. The real Projects portfolio is created in Phase 4,
+     when Funding migrates to /research/funding/ and the `projects`
+     namespace is freed.
+
+     So this block MUST NOT:
+       - render the grant bundles as if they were software projects;
+       - link to /projects/ under a "Projects" label;
+       - invent placeholder project cards.
+
+     Behaviour:
+       1. If a real portfolio collection exists (a page bundle carrying
+          `project_category`, the taxonomy Phase 4 introduces), render up to
+          `count` of them as project cards.
+       2. Otherwise render a single compact editorial line — two rows of
+          text, no cards, no empty grid — stating what will appear here.
+
+     Switching this on in Phase 4 requires no template change: create the
+     content with `project_category` set and the cards appear.
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $count := $block.content.count | default 3 }}
+
+{{/* Real portfolio items only: a page that declares `project_category`.
+     Grant bundles in content/projects/ do not, so they can never match. */}}
+{{ $portfolio := where site.RegularPages "Params.project_category" "!=" nil }}
+{{ $portfolio = where $portfolio "Section" "projects" }}
+{{ $featured := where $portfolio "Params.featured" true }}
+{{ $items := cond (gt (len $featured) 0) $featured $portfolio }}
+{{ $items = first $count ($items.ByDate.Reverse) }}
+
+<div class="sj-projects px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="sj-section__head">
+      {{ with $block.content.title }}<h2 class="sj-section__title">{{ . }}</h2>{{ end }}
+      {{ with $block.content.subtitle }}<p class="sj-section__subtitle">{{ . }}</p>{{ end }}
+    </div>
+
+    {{ if gt (len $items) 0 }}
+      {{/* ---- Phase 4 onwards: real portfolio ---- */}}
+      <ul class="sj-projects__grid">
+        {{ range $items }}
+        <li class="sj-card">
+          <div class="sj-card__rule" aria-hidden="true"></div>
+          {{ with .Params.status }}
+          <div class="sj-card__head">
+            <span class="sj-status sj-status--{{ . }}">
+              <span class="sj-status__dot" aria-hidden="true"></span>{{ . | title }}
+            </span>
+          </div>
+          {{ end }}
+          <h3 class="sj-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with .Params.summary }}<p class="sj-card__desc">{{ . }}</p>{{ end }}
+          {{ with .Params.technologies }}
+          <ul class="sj-tags">{{ range first 3 . }}<li class="sj-tag">{{ . }}</li>{{ end }}</ul>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ with $block.content.cta }}
+      <p class="sj-section__more">
+        <a class="sj-more-link" href="{{ .url | relLangURL }}">{{ .text }}
+          <span class="sj-more-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </p>
+      {{ end }}
+    {{ else }}
+      {{/* ---- Phase 3: honest, compact placeholder ---- */}}
+      <p class="sj-projects__pending">
+        {{ with $block.content.text }}{{ . | $page.RenderString }}{{ end }}
+      </p>
+    {{ end }}
+
+  </div>
+</div>

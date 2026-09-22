@@ -12,7 +12,9 @@ publishDate: '2026-05-02T15:32:10.879804Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
-doi: 10.1364/OE.25.012295
+hugoblox:
+  ids:
+    doi: 10.1364/OE.25.012295
 abstract: Bound hybrid plasmon-polariton modes supported by waveguides, which are
   formed by gold coating of ridges etched into a silica substrate, are analyzed using
   numerical simulations and investigated experimentally using near-field microscopy

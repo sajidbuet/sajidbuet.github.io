@@ -1,0 +1,58 @@
+{
+  "math": "{\"h1Text\":\"Steane [[7,1,3]][[7,1,3]][[7,1,3]]  outer coding for loss-tolerant one\",\"katexNodes\":4,\"rawDollarInH1\":false,\"docTitle\":\"Steane [[7,1,3]] outer coding for loss-tolerant one-way quantum repeat\"}",
+  "mathList": "{\"katexNodes\":4,\"rawDollarsVisible\":0}",
+  "filters": "{\"filterGroups\":[\"tag\",\"type\",\"year\"],\"totalRowsInDom\":63,\"hasPagination\":false}",
+  "homeProjects": "{\"height\":525,\"cards\":2,\"titles\":[\"Scholar Profile Exporter\",\"CTAdmin\"],\"linksToOldProjects\":0}",
+  "linkCrawl": {
+    "uniqueInternalLinks": 269,
+    "broken": [
+      "quantum (fetch failed)",
+      "photonics (fetch failed)",
+      "antenna (fetch failed)",
+      "computing (fetch failed)",
+      "embedded (fetch failed)",
+      "renewable (fetch failed)"
+    ],
+    "staleGrantLinks": []
+  },
+  "pages": [
+    {
+      "name": "research",
+      "contrastFails": 0,
+      "worst": [],
+      "smallTargets": 2,
+      "headingSkips": []
+    },
+    {
+      "name": "funding",
+      "contrastFails": 0,
+      "worst": [],
+      "smallTargets": 2,
+      "headingSkips": []
+    },
+    {
+      "name": "projects",
+      "contrastFails": 0,
+      "worst": [],
+      "smallTargets": 1,
+      "headingSkips": []
+    },
+    {
+      "name": "project-detail",
+      "contrastFails": 0,
+      "worst": [],
+      "smallTargets": 2,
+      "headingSkips": []
+    },
+    {
+      "name": "publications",
+      "contrastFails": 0,
+      "worst": [],
+      "smallTargets": 296,
+      "headingSkips": []
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

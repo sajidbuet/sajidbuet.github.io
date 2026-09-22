@@ -1,4 +1,8 @@
-{{/* Hugo Blox: Team Showcase Admin */}}
+{{/* Phase 7: readable accessible names for the icon-only profile links.
+     The raw icon id was used as the label, so a screen reader announced
+     "link, hero slash envelope" / "link, brands slash google-scholar".
+     Prefers an authored `label`; otherwise strips the icon namespace and
+     title-cases what is left. */}}{{/* Hugo Blox: Team Showcase Admin */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
 
@@ -138,7 +142,7 @@
                   
                   <a href="{{ $l | safeURL }}" 
                      {{ $target | safeHTMLAttr }} 
-                     aria-label="{{ .icon }}"
+                     aria-label="{{ $n := .icon | default "" }}{{ if strings.Contains $n "/" }}{{ $n = index (last 1 (split $n "/")) 0 }}{{ end }}{{ .label | default (replace $n "-" " " | title) | default "Profile link" }}"
                      {{ with .label }} title="{{ . }}"{{ end }}
                      class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
                     {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
@@ -214,7 +218,7 @@
                 {{ else if in (slice "http" "https") $scheme }}
                   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
                 {{ end }}
-                <a href="{{ $l | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}" {{ with .label }} title="{{ . }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
+                <a href="{{ $l | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $n := .icon | default "" }}{{ if strings.Contains $n "/" }}{{ $n = index (last 1 (split $n "/")) 0 }}{{ end }}{{ .label | default (replace $n "-" " " | title) | default "Profile link" }}" {{ with .label }} title="{{ . }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
                   {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
                 </a>
                 {{ end }}

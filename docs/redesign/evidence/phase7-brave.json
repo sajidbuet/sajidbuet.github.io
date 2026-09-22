@@ -1,0 +1,6082 @@
+{
+ "meta": {
+  "browser": {
+   "Browser": "Chrome/153.0.8010.53",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "V8-Version": "15.3.76.13",
+   "WebKit-Version": "537.36 (@b395074596c663e344272cde7f7d7bd3d496e7e)",
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9460/devtools/browser/22196fce-3470-4300-a7f5-48d8dbefdf25"
+  },
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T16:14:19.093Z",
+  "blocked": [
+   "*cloudflareinsights.com*",
+   "*static.cloudflareinsights.com*",
+   "*/cdn-cgi/scripts/*",
+   "*email-decode.min.js*",
+   "*google-analytics.com*",
+   "*googletagmanager.com*",
+   "*badge.dimensions.ai*"
+  ]
+ },
+ "shieldsOff": {
+  "home|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6905,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 5223,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 0,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6905,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 5223,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 0,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 10203,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 5157,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 0,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 10203,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 5157,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 0,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "research|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3317,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 0,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3317,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 0,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6597,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3249,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 0,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6597,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3249,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 0,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2613,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2169,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2613,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2169,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3835,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2101,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3835,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2101,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 8713,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 15518,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 8713,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 15518,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 15856,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 15450,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 15856,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 15450,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3119,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4640,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3119,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4640,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4516,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4572,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4516,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4572,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1389,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1197,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1389,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1197,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2312,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1129,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2312,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1129,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2002,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1449,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2002,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1449,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2690,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1381,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2690,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1381,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2319,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1851,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2319,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1851,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3363,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1783,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3363,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1783,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3195,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2807,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3195,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2807,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4163,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2739,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4163,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2739,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4114,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1463,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4114,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1463,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7280,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1395,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7280,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1395,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3480,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4098,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3480,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4098,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6012,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4030,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6012,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4030,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7206,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3694,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7206,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3694,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3369,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3369,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1307,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1049,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1307,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1049,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2010,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 981,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2010,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 981,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2601,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2892,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 21,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2601,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2892,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 21,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4144,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2824,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 16,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4144,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2824,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 16,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1987,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2518,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1987,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2518,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3059,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2450,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3059,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2450,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  }
+ },
+ "shieldsOn": {
+  "home|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6905,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 5223,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 3,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6905,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 5223,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 3,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 10203,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 5155,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 3,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "home|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 10203,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 5155,
+   "links": 93,
+   "images": 6,
+   "imagesLoaded": 3,
+   "svgs": 54,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 3,
+   "animations": 11,
+   "infinite": 0
+  },
+  "research|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3317,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3317,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6597,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3249,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6597,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3249,
+   "links": 51,
+   "images": 5,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 7,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2613,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2169,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2613,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2169,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3835,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2101,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "research-area|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3835,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2101,
+   "links": 54,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 34,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 8713,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 15518,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 8713,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 15518,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 15856,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 15450,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-list|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 15856,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 15450,
+   "links": 433,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 147,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3119,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4640,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3119,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4640,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4516,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4572,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "publication-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4516,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 4,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4572,
+   "links": 40,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 23,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1389,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1197,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1389,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1197,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2312,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1129,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "projects|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2312,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1129,
+   "links": 32,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2002,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1449,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2002,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1449,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2690,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1381,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "project-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2690,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1381,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2319,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1851,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2319,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1851,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3363,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1783,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "teaching|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3363,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1783,
+   "links": 37,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 8,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3195,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2807,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3195,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2807,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4163,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2739,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "course-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4163,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2739,
+   "links": 34,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4114,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1463,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4114,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1463,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7280,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1395,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7280,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 1395,
+   "links": 57,
+   "images": 12,
+   "imagesLoaded": 7,
+   "svgs": 28,
+   "grids": 5,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3480,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4098,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3480,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 4098,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6012,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4030,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "team-profile|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6012,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 4030,
+   "links": 50,
+   "images": 2,
+   "imagesLoaded": 2,
+   "svgs": 27,
+   "grids": 4,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 2,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7206,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3694,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 7206,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 3694,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3369,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 6965,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 21,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 3369,
+   "links": 58,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 40,
+   "grids": 2,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1307,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1049,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1307,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 1049,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2010,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 981,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "news-detail|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2010,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 981,
+   "links": 29,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2601,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2892,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 21,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 2601,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2892,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 21,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4144,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2824,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 16,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "resources|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 4144,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2824,
+   "links": 44,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 16,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|1440x900|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1987,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2518,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|1440x900|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 1987,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 240,
+    "h": 44
+   },
+   "textChars": 2518,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|390x844|light": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3059,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(255, 255, 255)",
+   "bodyColor": "rgb(17, 24, 39)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(255, 255, 255)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2450,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  },
+  "blog-post|390x844|dark": {
+   "isBrave": true,
+   "overflowPx": 0,
+   "docHeight": 3059,
+   "devicePixelRatio": 1,
+   "zoomProxy": 1,
+   "bodyBg": "rgb(15, 23, 42)",
+   "bodyColor": "rgb(248, 250, 252)",
+   "bodyFont": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+   "bodySize": "16px",
+   "h1": 1,
+   "headerH": 65,
+   "headerBg": "rgb(15, 23, 42)",
+   "backdropSupported": true,
+   "backdropEls": 1,
+   "logoSvgText": [
+    {
+     "txt": "\n    Smart &",
+     "w": 156,
+     "h": 7,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    },
+    {
+     "txt": "Lab",
+     "w": 54,
+     "h": 36,
+     "font": "Arial-BoldMT, Arial, sans-serif"
+    }
+   ],
+   "logoBox": {
+    "w": 179,
+    "h": 44
+   },
+   "textChars": 2450,
+   "links": 30,
+   "images": 1,
+   "imagesLoaded": 1,
+   "svgs": 20,
+   "grids": 1,
+   "gapSample": [
+    "8px",
+    "4px",
+    "12px",
+    "8px"
+   ],
+   "emailProtected": 0,
+   "mailtoLinks": 1,
+   "animations": 0,
+   "infinite": 0
+  }
+ },
+ "diff": {
+  "home|1440x900|light": {
+   "imagesLoaded": "0 -> 3"
+  },
+  "home|1440x900|dark": {
+   "imagesLoaded": "0 -> 3"
+  },
+  "home|390x844|light": {
+   "textChars": "5157 -> 5155",
+   "imagesLoaded": "0 -> 3"
+  },
+  "home|390x844|dark": {
+   "textChars": "5157 -> 5155",
+   "imagesLoaded": "0 -> 3"
+  },
+  "research|1440x900|light": {
+   "imagesLoaded": "0 -> 2"
+  },
+  "research|1440x900|dark": {
+   "imagesLoaded": "0 -> 2"
+  },
+  "research|390x844|light": {
+   "imagesLoaded": "0 -> 2"
+  },
+  "research|390x844|dark": {
+   "imagesLoaded": "0 -> 2"
+  }
+ },
+ "summary": {
+  "isBrave": true,
+  "cells": 120,
+  "backdropSupported": true,
+  "maxBackdropEls": 21,
+  "devicePixelRatio": 1,
+  "overflowCellsUnblocked": [],
+  "overflowCellsBlocked": [],
+  "cellsChangedByBlocking": 8,
+  "emailProtectedFound": 0,
+  "mailtoLinks": 80,
+  "infiniteAnimations": 0,
+  "logoTextSample": [
+   {
+    "txt": "\n    Smart &",
+    "w": 156,
+    "h": 7,
+    "font": "Arial-BoldMT, Arial, sans-serif"
+   },
+   {
+    "txt": "Lab",
+    "w": 54,
+    "h": 36,
+    "font": "Arial-BoldMT, Arial, sans-serif"
+   }
+  ]
+ }
+}

@@ -1,0 +1,221 @@
+{
+  "landmarks": [
+    "{\"p\":\"/\",\"main\":1,\"mainId\":true,\"h1\":0,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[\"Home\"],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/research/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/research/photonics/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/publication/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/publication/j-029/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/authors/\",\"main\":1,\"mainId\":true,\"h1\":0,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[\"Team\"],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/authors/me/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/teaching/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/teaching/jul2025_eee303/\",\"main\":1,\"mainId\":true,\"h1\":4,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/projects/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/news/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/news/2025-09-24-puja-defends/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/outreach/\",\"main\":1,\"mainId\":true,\"h1\":0,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[\"Outreach\"],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/outreach/blog/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/outreach/templates/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/outreach/lor/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/people/\",\"main\":1,\"mainId\":true,\"h1\":0,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[\"Team\"],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/tags/\",\"main\":1,\"mainId\":true,\"h1\":1,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[],\"brandName\":\"SAJID Lab — Home\",\"overflow\":false}",
+    "{\"p\":\"/bn/\",\"main\":1,\"mainId\":true,\"h1\":0,\"skip\":\"#main\",\"skipFirst\":true,\"headerBg\":\"rgba(255, 255, 255, 0.92)\",\"headerShadow\":\"none\",\"backdrop\":\"none\",\"activeNav\":[\"হোম\"],\"brandName\":\"SAJID Lab — হোম পেজ\",\"overflow\":false}"
+  ],
+  "contrast": [
+    {
+      "route": "/",
+      "theme": "light",
+      "checked": 81,
+      "fails": 12,
+      "worst": [
+        "2.94 12px rgb(202, 138, 4) on rgb(255,255,255) | span.px-3.py-1.bg-white/90.dark:bg-gray-900/90 | Emerging",
+        "3.3 12px rgb(22, 163, 74) on rgb(255,255,255) | span.px-3.py-1.bg-white/90.dark:bg-gray-900/90 | Active",
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | span | Meet the Team",
+        "3.38 14px rgb(12, 150, 200) on rgb(255,255,255) | a.inline-flex.items-center.w-full.justify-center | Explore Research",
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | a.inline-flex.items-center.px-6.py-3 | View All Research Activities",
+        "3.38 14px rgb(12, 150, 200) on rgb(255,255,255) | span | View Details"
+      ],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/publication/",
+      "theme": "light",
+      "checked": 23,
+      "fails": 2,
+      "worst": [
+        "3.38 12px rgb(12, 150, 200) on rgb(255,255,255) | a.hb-attachment-link.hb-attachment-link-small | URL",
+        "3.38 12px rgb(12, 150, 200) on rgb(255,255,255) | span | Cite"
+      ],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/research/",
+      "theme": "light",
+      "checked": 24,
+      "fails": 1,
+      "worst": [
+        "3.38 14px rgb(12, 150, 200) on rgb(255,255,255) | span | View Details"
+      ],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/teaching/",
+      "theme": "light",
+      "checked": 14,
+      "fails": 0,
+      "worst": [],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/authors/",
+      "theme": "light",
+      "checked": 21,
+      "fails": 1,
+      "worst": [
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | a.inline-flex.items-center.px-6.py-3 | View Group Alumni"
+      ],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/outreach/",
+      "theme": "light",
+      "checked": 24,
+      "fails": 2,
+      "worst": [
+        "3.38 12px rgb(12, 150, 200) on rgb(255,255,255) | span.inline-flex.items-center.font-medium.text-primary-600 | Read more",
+        "3.38 14px rgb(12, 150, 200) on rgb(255,255,255) | a.inline-flex.items-center.text-sm.font-medium | View all blog posts"
+      ],
+      "headerBg": "rgba(255, 255, 255, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(255, 255, 255)"
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "checked": 72,
+      "fails": 4,
+      "worst": [
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | span | Meet the Team",
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | a.inline-flex.items-center.px-6.py-3 | View All Research Activities",
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | a.inline-flex.items-center.px-4.py-2 | Email Dr. Sajid",
+        "3.69 12px rgb(113, 113, 122) on rgb(15,23,42) | time.hidden.sm:inline.whitespace-nowrap | Sep 24, 2025"
+      ],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    },
+    {
+      "route": "/publication/",
+      "theme": "dark",
+      "checked": 21,
+      "fails": 1,
+      "worst": [
+        "1.12 12px rgb(34, 34, 34) on rgb(15,23,42) | div.__db_score.__db_score_normal | 264"
+      ],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    },
+    {
+      "route": "/research/",
+      "theme": "dark",
+      "checked": 23,
+      "fails": 0,
+      "worst": [],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    },
+    {
+      "route": "/teaching/",
+      "theme": "dark",
+      "checked": 15,
+      "fails": 0,
+      "worst": [],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    },
+    {
+      "route": "/authors/",
+      "theme": "dark",
+      "checked": 21,
+      "fails": 1,
+      "worst": [
+        "3.38 16px rgb(255, 255, 255) on rgb(12,150,200) | a.inline-flex.items-center.px-6.py-3 | View Group Alumni"
+      ],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    },
+    {
+      "route": "/outreach/",
+      "theme": "dark",
+      "checked": 22,
+      "fails": 0,
+      "worst": [],
+      "headerBg": "rgba(15, 23, 42, 0.92)",
+      "overflow": false,
+      "bodyBg": "rgb(15, 23, 42)"
+    }
+  ],
+  "focus": [
+    "{\"tag\":\"A\",\"cls\":\"sj-skip-link\",\"txt\":\"Skip to main content\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}",
+    "{\"tag\":\"A\",\"cls\":\"navbar-brand group inline-flex i\",\"txt\":\"SAJID Lab — Home\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link active\",\"txt\":\"Home\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Research\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Funding\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}",
+    "{\"tag\":\"A\",\"cls\":\"nav-link \",\"txt\":\"Team\",\"outline\":\"solid 2px rgb(14, 116, 144)\",\"offset\":\"2px\",\"fv\":true,\"visible\":true}"
+  ],
+  "mobileMenu": {
+    "reachedToggleByTab": true,
+    "afterOpen": "{\"expanded\":\"true\",\"ariaControls\":\"nav-menu\",\"ariaLabel\":\"Close menu\",\"menuOpenClass\":true,\"visibleLinks\":9,\"minRowHeight\":48,\"focusMovedInto\":true,\"toggleBox\":[44,44],\"overflow\":false}",
+    "afterEsc": "{\"expanded\":\"false\",\"menuOpenClass\":false,\"focusReturned\":true,\"ariaLabel\":\"Open menu\"}"
+  },
+  "darkHeader": "{\"bg\":\"rgba(15, 23, 42, 0.92)\",\"backdrop\":\"none\",\"border\":\"rgb(30, 41, 59)\",\"shadow\":\"none\",\"navLinkColor\":\"rgb(148, 163, 184)\",\"headerFgVar\":\"#f8fafc\",\"accentVar\":\"#22d3ee\",\"top\":0,\"height\":65}",
+  "reducedMotion": "{\"total\":0,\"infinite\":0,\"zeroOpacityBlocks\":8,\"samples\":[\"DIV.absolute inset-0 bg-gradient-to-br from-\",\"DIV.absolute inset-0 bg-gradient-to-br from-\",\"DIV.absolute inset-0 bg-gradient-to-br from-\",\"DIV.absolute inset-0 bg-gradient-to-br from-\",\"DIV.absolute bottom-full left-1/2 transform \",\"DIV.absolute bottom-full left-1/2 transform \",\"DIV.absolute bottom-full left-1/2 transform \",\"DIV.absolute bottom-full left-1/2 transform \"]}",
+  "overflow": [
+    "{\"vp\":\"1920x1080\",\"theme\":\"light\",\"scrollW\":1920,\"inner\":1920,\"over\":false,\"navWraps\":1,\"headerH\":65}",
+    "{\"vp\":\"1440x900\",\"theme\":\"light\",\"scrollW\":1440,\"inner\":1440,\"over\":false,\"navWraps\":1,\"headerH\":65}",
+    "{\"vp\":\"1280x800\",\"theme\":\"light\",\"scrollW\":1280,\"inner\":1280,\"over\":false,\"navWraps\":1,\"headerH\":65}",
+    "{\"vp\":\"1024x768\",\"theme\":\"light\",\"scrollW\":1024,\"inner\":1024,\"over\":false,\"navWraps\":1,\"headerH\":65}",
+    "{\"vp\":\"768x1024\",\"theme\":\"light\",\"scrollW\":768,\"inner\":768,\"over\":false,\"navWraps\":0,\"headerH\":65}",
+    "{\"vp\":\"430x932\",\"theme\":\"light\",\"scrollW\":430,\"inner\":430,\"over\":false,\"navWraps\":0,\"headerH\":65}",
+    "{\"vp\":\"390x844\",\"theme\":\"light\",\"scrollW\":390,\"inner\":390,\"over\":false,\"navWraps\":0,\"headerH\":65}",
+    "{\"vp\":\"1440x900\",\"theme\":\"dark\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"390x844\",\"theme\":\"dark\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"research 1440x900 light\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"research 768x1024 light\",\"scrollW\":768,\"inner\":768,\"over\":false}",
+    "{\"vp\":\"research 390x844 light\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"research 1440x900 dark\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"research 390x844 dark\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"publication 1440x900 light\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"publication 768x1024 light\",\"scrollW\":768,\"inner\":768,\"over\":false}",
+    "{\"vp\":\"publication 390x844 light\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"publication 1440x900 dark\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"publication 390x844 dark\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"teaching 1440x900 light\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"teaching 768x1024 light\",\"scrollW\":768,\"inner\":768,\"over\":false}",
+    "{\"vp\":\"teaching 390x844 light\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"teaching 1440x900 dark\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"teaching 390x844 dark\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"team 1440x900 light\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"team 768x1024 light\",\"scrollW\":768,\"inner\":768,\"over\":false}",
+    "{\"vp\":\"team 390x844 light\",\"scrollW\":390,\"inner\":390,\"over\":false}",
+    "{\"vp\":\"team 1440x900 dark\",\"scrollW\":1440,\"inner\":1440,\"over\":false}",
+    "{\"vp\":\"team 390x844 dark\",\"scrollW\":390,\"inner\":390,\"over\":false}"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "zoom200": "{\"scrollW\":625,\"inner\":640,\"over\":false}"
+}

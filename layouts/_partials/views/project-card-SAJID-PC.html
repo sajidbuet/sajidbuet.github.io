@@ -1,0 +1,70 @@
+{{/* Project card — Phase 4.
+
+     Cards are appropriate here (heterogeneous items that benefit from a
+     thumbnail). Flat surface, 1px border, 8px radius, 3px accent rule — the
+     same vocabulary as the homepage research cards.
+
+     Accessibility: the card is NOT one giant link. The title carries the
+     single navigational link; repository/demo links are separate controls.
+*/}}
+{{/* `level` lets the caller keep the heading outline contiguous: the projects
+     list and taxonomy terms sit directly under the page h1 and pass 2, while
+     the homepage block already provides an h2 and uses the default 3. */}}
+{{ $item := .item }}
+{{ $level := .level | default 3 }}
+{{ $img := "" }}
+{{ with $item.Params.image.filename }}
+  {{ with $item.Resources.GetMatch . }}{{ $img = . }}{{ end }}
+{{ end }}
+{{ if not $img }}{{ with $item.Resources.GetMatch "{thumbnail,featured,cover}.*" }}{{ $img = . }}{{ end }}{{ end }}
+
+<li class="sj-card sj-card--project">
+  <div class="sj-card__rule" aria-hidden="true"></div>
+
+  {{ with $img }}
+    {{ $t := . }}
+    {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fill "640x360 Center webp" }}{{ end }}
+    <a class="sj-card__media" href="{{ $item.RelPermalink }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+           alt="" loading="lazy" />
+    </a>
+  {{ end }}
+
+  {{/* Head renders only if there is something to put in it. */}}
+  {{ if or $item.Params.status $item.Params.project_category }}
+    <div class="sj-card__head">
+      {{ with $item.Params.project_category }}
+        <span class="sj-card__cat">{{ . | humanize | title }}</span>
+      {{ end }}
+      {{ with $item.Params.status }}
+        <span class="sj-status sj-status--{{ . }}">
+          <span class="sj-status__dot" aria-hidden="true"></span>{{ . | title }}
+        </span>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if eq $level 2 }}
+    <h2 class="sj-card__title"><a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a></h2>
+  {{ else }}
+    <h3 class="sj-card__title"><a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a></h3>
+  {{ end }}
+
+  {{ with $item.Params.summary }}<p class="sj-card__desc">{{ . }}</p>{{ end }}
+
+  {{ with $item.Params.technologies }}
+    <ul class="sj-tags">{{ range first 3 . }}<li class="sj-tag">{{ . }}</li>{{ end }}</ul>
+  {{ end }}
+
+  {{ $links := $item.Params.project_links }}
+  {{ if or $links.repository $links.demo }}
+    <p class="sj-card__links">
+      {{ with $links.repository }}
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "code" | default "Code" }}<span class="sj-ext" aria-hidden="true">↗</span><span class="sj-sr-only"> ({{ i18n "opens_new_tab" | default "opens in a new tab" }})</span></a>
+      {{ end }}
+      {{ with $links.demo }}
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "demo" | default "Demo" }}<span class="sj-ext" aria-hidden="true">↗</span><span class="sj-sr-only"> ({{ i18n "opens_new_tab" | default "opens in a new tab" }})</span></a>
+      {{ end }}
+    </p>
+  {{ end }}
+</li>

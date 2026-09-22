@@ -940,31 +940,96 @@ Each detail type renders correctly with **minimal** front matter (no missing-fie
 
 ---
 
-## Phase 7 — Responsive, accessibility, cross-browser
+## Phase 7 — Responsive, accessibility, cross-browser ✅ COMPLETE (NVDA outstanding)
 
-**No new features. Verification only.**
+**Branch:** `redesign/phase-7-responsive-accessibility-cross-browser` · **Base:** `e17a415` · **Date:** 2026-09-22
+**Hugo:** 0.158.0 extended · **Chromium:** Chrome 153 · **Gecko:** Firefox 155 (Playwright) · **Brave:** 153.1.95.104
+**Lighthouse:** 13.5.0 via `npx`
 
-| # | Task |
-|---|---|
-| 7.1 | Full matrix: 7 viewports × light/dark × 12 routes, captured **and inspected** |
-| 7.2 | Keyboard-only traversal of every interactive component; document tab order |
-| 7.3 | Re-run `audit-instrument.js` across all routes; contrast must be zero-fail |
-| 7.4 | Reduced-motion pass — confirm content remains visible |
-| 7.5 | 200 % and 400 % zoom reflow |
-| 7.6 | Touch targets ≥ 44 px on every control |
-| 7.7 | **Firefox (Gecko)** — requires either a manual pass or approval to install Playwright |
-| 7.8 | **Brave** manual pass with Shields on (Cloudflare beacon, `backdrop-filter`, fingerprint protection) |
-| 7.9 | Screen-reader smoke test (NVDA on Windows): landmarks, headings, nav, forms |
-| 7.10 | Lighthouse a11y + best-practices on 5 representative routes |
+Full report: [`phase-7-validation.md`](phase-7-validation.md).
+Raw evidence: `docs/redesign/evidence/phase7-*.json`. Drivers: `evidence/phase7-*.mjs`.
 
-> **7.7 is a decision point.** No Firefox is installed on this machine and no Playwright. Gecko-specific
-> risk is concentrated in `backdrop-filter`, `:focus-visible` rendering, the nav toggle, and SVG `<text>`
-> metrics. Either approve a Playwright + Firefox install, or schedule a manual pass.
+**Status: PASS WITH MANUAL CHECKS REMAINING.** Every automatable criterion passes.
+**Do not create the `redesign-phase-7` tag until the NVDA smoke test (7.9) has been run.**
+
+| # | Task | Result |
+|---|---|---|
+| 7.1 | Matrix 7 viewports × light/dark × routes | ✅ **210 cells**, 15 routes (the baseline's 12 with its "and" pairs expanded), captured **and** inspected |
+| 7.2 | Keyboard traversal; document tab order | ✅ **597/597** stops show the focus ring, 0 order inversions, 0 traps, skip link first on all 9 walks; orders recorded in `phase7-keyboard.json` |
+| 7.3 | `audit-instrument.js`, contrast zero-fail | ✅ **0 failures** across all 210 cells, both themes (8 unique defects at the start of the phase) |
+| 7.4 | Reduced motion | ✅ **0** infinite animations under reduced *and* normal motion; visible text identical in both states |
+| 7.5 | 200 % / 400 % zoom | ✅ 32 cells, **0** horizontal scrolling; zoom not disabled |
+| 7.6 | Touch targets ≥ 44 px | ✅ **every control** ≥ 44×44 at coarse pointer; the 38 remaining targets are inline-exempt text links |
+| 7.7 | **Firefox (Gecko)** | ✅ Playwright installed as a devDependency (approved). Firefox 155, **120 cells**, 0 overflow, 0 contrast failures, **0 positional drift vs Chromium** |
+| 7.8 | **Brave + Shields** | ✅ 120 cells in Brave itself (`navigator.brave` confirmed), run with and without the blocked hosts; nothing depends on them. Production edge injections remain manual |
+| 7.9 | **NVDA smoke test** | ⬜ **MANUAL VERIFICATION REQUIRED** — NVDA cannot be operated from an agent session. Static equivalents automated; procedure in `phase-7-validation.md` §11.1 |
+| 7.10 | Lighthouse a11y + best practices, 5 routes | ✅ **Accessibility 100 on all five**; Best Practices 96, held there solely by the pre-existing Pagefind 404 |
+
+### Defects found and fixed
+
+Eleven. The four that mattered most:
+
+1. **Course-table column headers were invisible** — `#ffffff` on `#f8fafc` (1.05:1) in light and
+   `#0f172a` on `#0b1220` in dark, caused by a specificity split where the background came from
+   `phase6.css` (0,3,2) and the colour from `phase5.css` (0,2,2). A second instance in `tbody` row
+   headers was caught later by Lighthouse, which the in-house instrument had missed because it
+   de-duplicates by tag + colour + size.
+2. **`--color-primary-600` still failed AA site-wide** at 3.38:1 — the migration `tokens.css` promised
+   for Phase 3 had only been applied to the homepage. Remapped to the accent already approved in
+   `design-system-proposal` §2.13 (`#0e7490`, 5.36:1), with 700 moved to `#155e75` so the hover step
+   survives. `--sj-brand` is unchanged.
+3. **67 routes shipped a duplicate `id="main"`** — a regression against the X13 ✅ baseline, created
+   when Phase 6 gave every detail template the `id`/`tabindex` that Phase 2A had put on the shell
+   wrapper. `/teaching/notes/` additionally had two nested `<main>` landmarks.
+4. **61 invalid, unnamed, zero-size links per publication listing** — `views/citation.html` still read
+   `.Params.doi`, empty since Phase 4, emitting `href=""` and, on taxonomy pages, scheme-less
+   `href="10.1364/…"` (90 broken links over 29 pages). Repairing the href also reactivated the
+   Dimensions badge, which measurably introduced a dark-mode contrast failure, 37 dimensionless
+   images and nested anchors — so the dormant block was removed instead and folded into item 8.12.
+
+### Overrides created
+
+**Four new `_vendor` shadows** — the first since Phase 6. Each is a verbatim copy with one commented,
+minimal change. See the register at the end of this document.
+
+### Deferred (and why)
+
+Pagefind 404 (item 2.15 — the author's decision; it is the only console error and the only thing
+holding Best Practices below 100) · `backdrop-filter` × 21 (8.3; supported in all three engines) ·
+animation durations > 400 ms (8.1) · the logo's Arial dependency (2.16 — a brand-asset change) ·
+`/bn/` link breakage (8.9) · the Dimensions badge (8.12) · 12 inline text links at 19–21 px ·
+the `/news/` single-column card grid.
+
+### Outstanding manual gates
+
+1. **NVDA smoke test** — blocks the checkpoint tag.
+2. **Production redirect verification** — carried forward from Phases 4 and 5; GitHub Pages behaviour
+   still cannot be proven locally.
+3. **Brave + Shields in production** — the Cloudflare beacon and `email-decode.min.js` are injected at
+   the edge and do not exist on a local build.
+4. Four 2020 course PDFs and six BRACU workshop files that were never committed (needs the author) —
+   the only 10 remaining broken English links.
+5. Confirm whether `/news/2024-02-17-call-for-research/` should point at grant `g-03`.
+
+### A working-tree hazard
+
+OneDrive had again produced `…-SAJID-PC` conflict copies and restored a pre-Phase-5
+`content/outreach/templates/graphics/`. Together they added 16 pages and **2 duplicate aliases** —
+the same collision class that broke Phase 4's redirects once already. The files are untracked user
+work and were **not** deleted; they are excluded at build time with
+
+```powershell
+$env:HUGO_IGNOREFILES = "-SAJID-PC\.,outreach[\\/]templates"
+```
+
+which touches nothing on disk. Any shell building this repository needs it until they are cleaned up.
 
 ### Validation
-`visual-qa-baseline.md` passes in full, on Chromium **and** Firefox.
+`visual-qa-baseline.md` passes in full on Chromium **and** Firefox, except X16 (screen reader), which
+is outstanding, and X9's "single column at 400 %" for the homepage stat strip, which stays two short
+numeric columns with no scrolling or truncation — recorded rather than forced.
 
-### Checkpoint `redesign-phase-7`.
+### Checkpoint `redesign-phase-7` — **not yet created.** Blocked on 7.9.
 
 ---
 
@@ -1019,6 +1084,10 @@ they are created:
 | _(none — Phase 4 created no `_vendor` shadows)_ | 4 | New project-owned templates only | — |
 | _(none — Phase 5 created no `_vendor` shadows)_ | 5 | New project-owned templates only: `layouts/resources/overview.html`, `layouts/teaching/overview.html`, `assets/css/phase5.css` | — |
 | `layouts/single.html` | 6 | Shadows `_vendor/github.com/HugoBlox/kit/modules/blox/layouts/single.html`. Six detail types (courses, workshops, blog articles, news, personal pages) had no project template and fell through to it. The upstream version gates breadcrumbs behind `show_breadcrumb`, which no page sets, and renders prose in a `max-w-6xl` column with no reading measure. | HugoBlox kit, vendored copy at `6b518eb` |
+| `layouts/_partials/components/search-modal.html` | 7 | Shadows `_vendor/…/blox/layouts/_partials/components/search-modal.html`. The search input had no label, no `aria-label` and no `<label for>` — an unlabelled form control on all 626 routes (baseline X10). Also marks eight decorative SVGs `aria-hidden`, names the close button, and corrects `type="text"` to `type="search"`. Nothing else changed. | HugoBlox kit, vendored copy at `e17a415` |
+| `layouts/_partials/hbx/blocks/logos/block.html` | 7 | Shadows `_vendor/…/blox/blox/logos/block.html`. All five `<img>` sites guard `width`/`height` behind `{{ if not $isSVG }}`, and every partner logo is an SVG, so four images on `/` and four on `/research/` shipped with no intrinsic dimensions (M4). Adds an `{{ else }}` branch delegating to `functions/svg_dimensions`. Nothing else changed. | HugoBlox kit, vendored copy at `e17a415` |
+| `layouts/_partials/hbx/blocks/contact-info/block.html` | 7 | Shadows `_vendor/…/blox/blox/contact-info/block.html`. The three social links contain only an inline SVG and carried no accessible name — confirmed unnamed in Chromium's accessibility tree. Adds a derived `aria-label` and hides the icon. Nothing else changed. | HugoBlox kit, vendored copy at `e17a415` |
+| `layouts/_partials/views/card.html` | 7 | Shadows `_vendor/…/blox/layouts/_partials/views/card.html`. The image-placeholder anchor had no name and duplicated the card title's destination — 10 unnamed, redundant tab stops on `/news/`. Also fixes `dark:text-zinc-500` metadata (3.69:1) and gives "Read more" its item title for assistive technology. Nothing else changed. | HugoBlox kit, vendored copy at `e17a415` |
 
 ### Files changed in Phase 2A, by category
 

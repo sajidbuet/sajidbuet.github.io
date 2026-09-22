@@ -14,7 +14,9 @@ publishDate: '2026-05-02T15:32:10.967362Z'
 publication_types:
 - article-journal
 publication: '*Photonics Research*'
-doi: 10.1364/PRJ.7.000815
+hugoblox:
+  ids:
+    doi: 10.1364/PRJ.7.000815
 tags:
 - photonics
 ---

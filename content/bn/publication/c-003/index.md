@@ -11,7 +11,9 @@ publishDate: '2026-05-02T15:32:10.258233Z'
 publication_types:
 - paper-conference
 publication: '*2009 Loughborough Antennas & Propagation Conference*'
-doi: 10.1109/LAPC.2009.5352533
+hugoblox:
+  ids:
+    doi: 10.1109/LAPC.2009.5352533
 tags:
 - antenna
 ---

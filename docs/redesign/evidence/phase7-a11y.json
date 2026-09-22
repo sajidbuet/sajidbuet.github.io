@@ -1,0 +1,2385 @@
+{
+ "meta": {
+  "browser": {
+   "Browser": "Chrome/153.0.8010.53",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "V8-Version": "15.3.76.13",
+   "WebKit-Version": "537.36 (@792bf6722e73a45aa9e47c163b9901bdc17f3230)",
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9441/devtools/browser/106fb704-0243-47f0-bfac-0ca44ec23785"
+  },
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T15:55:11.749Z"
+ },
+ "zoom": {
+  "home|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 91,
+   "textNodes": 194,
+   "multiColumn": [
+    {
+     "el": "dl.sj-stats",
+     "cols": "296px 296px"
+    },
+    {
+     "el": "ul.sj-research__grid",
+     "cols": "288px 288px"
+    },
+    {
+     "el": "ul.sj-projects__grid",
+     "cols": "288px 288px"
+    },
+    {
+     "el": "div.grid.grid-cols-2",
+     "cols": "176px 176px 176px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "home|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 91,
+   "textNodes": 195,
+   "multiColumn": [
+    {
+     "el": "dl.sj-stats",
+     "cols": "296px 296px"
+    },
+    {
+     "el": "ul.sj-research__grid",
+     "cols": "288px 288px"
+    },
+    {
+     "el": "ul.sj-projects__grid",
+     "cols": "288px 288px"
+    },
+    {
+     "el": "div.grid.grid-cols-2",
+     "cols": "176px 176px 176px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "home|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 1,
+   "bleedDisallowed": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "right": 333,
+     "w": 185
+    }
+   ],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 91,
+   "textNodes": 195,
+   "multiColumn": [
+    {
+     "el": "dl.sj-stats",
+     "cols": "144px 144px"
+    },
+    {
+     "el": "div.grid.grid-cols-2",
+     "cols": "128px 128px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "home|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 1,
+   "bleedDisallowed": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "right": 333,
+     "w": 185
+    }
+   ],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 91,
+   "textNodes": 195,
+   "multiColumn": [
+    {
+     "el": "dl.sj-stats",
+     "cols": "144px 144px"
+    },
+    {
+     "el": "div.grid.grid-cols-2",
+     "cols": "128px 128px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-list|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 522,
+   "textNodes": 775,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-list|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 522,
+   "textNodes": 775,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-list|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 522,
+   "textNodes": 775,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-list|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 522,
+   "textNodes": 775,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-detail|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 13,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 36,
+   "textNodes": 96,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-detail|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 13,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 36,
+   "textNodes": 96,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-detail|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 51,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 36,
+   "textNodes": 96,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "publication-detail|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 51,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 36,
+   "textNodes": 96,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "course-detail|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 28,
+   "textNodes": 101,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "course-detail|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 28,
+   "textNodes": 101,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "course-detail|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 24,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 28,
+   "textNodes": 101,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "course-detail|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 24,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 28,
+   "textNodes": 101,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "team-profile|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 44,
+   "textNodes": 115,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "team-profile|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 44,
+   "textNodes": 115,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "team-profile|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 44,
+   "textNodes": 115,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "team-profile|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 44,
+   "textNodes": 115,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "resources|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 38,
+   "textNodes": 84,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "resources|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 38,
+   "textNodes": 84,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "resources|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 38,
+   "textNodes": 84,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "resources|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 38,
+   "textNodes": 84,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "projects|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 26,
+   "textNodes": 64,
+   "multiColumn": [
+    {
+     "el": "ul.sj-projects__grid",
+     "cols": "288px 288px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "projects|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 26,
+   "textNodes": 64,
+   "multiColumn": [
+    {
+     "el": "ul.sj-projects__grid",
+     "cols": "288px 288px"
+    }
+   ],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "projects|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 26,
+   "textNodes": 64,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "projects|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 26,
+   "textNodes": 64,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "blog-post|200|light": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 24,
+   "textNodes": 58,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "blog-post|200|dark": {
+   "cssPx": 640,
+   "docScrollW": 640,
+   "docClientW": 640,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 24,
+   "textNodes": 58,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "blog-post|400|light": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 24,
+   "textNodes": 58,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  },
+  "blog-post|400|dark": {
+   "cssPx": 320,
+   "docScrollW": 320,
+   "docClientW": 320,
+   "horizontalScroll": false,
+   "bleedTotal": 0,
+   "bleedDisallowed": [],
+   "navToggleVisible": true,
+   "headerVisible": true,
+   "mainVisible": true,
+   "footerReachable": true,
+   "interactiveVisible": 24,
+   "textNodes": 58,
+   "multiColumn": [],
+   "userScalable": "width=device-width, initial-scale=1"
+  }
+ },
+ "motion": {
+  "home|normal": {
+   "running": 11,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 13,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "g.[object SVGAnimatedString]",
+     "dur": "1.8s",
+     "name": "pulseS"
+    },
+    {
+     "el": "path.[object SVGAnimatedString]",
+     "dur": "1.6s",
+     "name": "wifiPulse"
+    },
+    {
+     "el": "path.[object SVGAnimatedString]",
+     "dur": "1.6s",
+     "name": "wifiPulse"
+    },
+    {
+     "el": "path.[object SVGAnimatedString]",
+     "dur": "1.6s",
+     "name": "wifiPulse"
+    },
+    {
+     "el": "circle.[object SVGAnimatedString]",
+     "dur": "1.4s",
+     "name": "jNodePulse"
+    },
+    {
+     "el": "circle.[object SVGAnimatedString]",
+     "dur": "1.4s",
+     "name": "jNodePulse"
+    },
+    {
+     "el": "circle.[object SVGAnimatedString]",
+     "dur": "1.4s",
+     "name": "jNodePulse"
+    },
+    {
+     "el": "circle.[object SVGAnimatedString]",
+     "dur": "1.4s",
+     "name": "jNodePulse"
+    }
+   ],
+   "visibleTextChars": 5227
+  },
+  "home|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 5225
+  },
+  "home|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 5157
+  },
+  "research|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 3317
+  },
+  "research|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 3317
+  },
+  "research|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Bangladesh University of Engineering and"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "Purdue University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "BRAC University"
+    },
+    {
+     "el": "div.absolute.bottom-full.left-1/2",
+     "opacity": "0",
+     "txt": "United International University"
+    }
+   ],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 3249
+  },
+  "projects|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 1197
+  },
+  "projects|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1197
+  },
+  "projects|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1129
+  },
+  "publication-list|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 15518
+  },
+  "publication-list|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 15518
+  },
+  "publication-list|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 15450
+  },
+  "teaching|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 1851
+  },
+  "teaching|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1851
+  },
+  "teaching|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1783
+  },
+  "team|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 1463
+  },
+  "team|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1463
+  },
+  "team|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 1395
+  },
+  "resources|normal": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    },
+    {
+     "el": "svg.[object SVGAnimatedString]",
+     "dur": "1s",
+     "name": "spin"
+    }
+   ],
+   "visibleTextChars": 2892
+  },
+  "resources|reduced": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 2892
+  },
+  "resources|reduced-390-dark": {
+   "running": 0,
+   "infinite": 0,
+   "infiniteDetail": [],
+   "hiddenContent": [],
+   "offscreenContent": [
+    {
+     "el": "a.sj-skip-link",
+     "transform": "matrix(1, 0, 0, 1, 0, -94.1875)"
+    },
+    {
+     "el": "text.[object SVGAnimatedString]",
+     "transform": "matrix(0.9, 0, 0, 1, 0, 187.22)"
+    }
+   ],
+   "animElements": 2,
+   "durationsOver400ms": [],
+   "visibleTextChars": 2824
+  }
+ },
+ "semantics": {
+  "home": {
+   "route": "/",
+   "title": "SAJID Lab",
+   "titleLen": 9,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 20,
+   "headingOutline": [
+    "H1 Quantum, photonic and intelligent device resea",
+    "H2 Research",
+    "H3 Quantum Computing & Quantum Photonics",
+    "H3 Photonics & Nanophotonics",
+    "H3 Antenna & Electromagnetic Systems",
+    "H3 Computing & AI for Physical Systems",
+    "H3 Embedded Systems & IoT",
+    "H3 Renewable Energy & Sustainable Systems",
+    "H2 Projects & Engineering Work",
+    "H3 Scholar Profile Exporter",
+    "H3 CTAdmin",
+    "H2 Team",
+    "H3 Dr. Sajid Muhaimin Choudhury",
+    "H2 Collaborators & Partners",
+    "H2 Contact",
+    "H3 Visit Office",
+    "H3 Connect Online",
+    "H4 Follow Us",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 20,
+   "iconOnlyWithoutName": [
+    "a.block.mb-5"
+   ],
+   "linksNoHref": 7,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 6,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 4,
+   "svgAriaHidden": 25,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "research": {
+   "route": "/research/",
+   "title": "Research | SAJID Lab",
+   "titleLen": 20,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 15,
+   "headingOutline": [
+    "H1 Research",
+    "H2 Research Areas",
+    "H3 Quantum Computing & Quantum Photonics",
+    "H3 Photonics & Nanophotonics",
+    "H3 Antenna & Electromagnetic Systems",
+    "H3 Computing & AI for Physical Systems",
+    "H3 Embedded Systems & IoT",
+    "H3 Renewable Energy & Sustainable Systems",
+    "H2 Funding & Grants",
+    "H3 Synergizing Deep Learning and Topology Optimiz",
+    "H3 Structurally Tunable Gear-Shaped Plasmonic Sen",
+    "H3 Design and Low-cost Fabrication of Optical Bio",
+    "H2 Collaborations",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 7,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 5,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 1,
+   "svgAriaHidden": 19,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "research-area": {
+   "route": "/research/photonics/",
+   "title": "Photonic-Systems | SAJID Lab",
+   "titleLen": 28,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 3,
+   "headingOutline": [
+    "H1 Photonic Systems",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 7,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 1,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "publication-list": {
+   "route": "/publication/",
+   "title": "Publications | SAJID Lab",
+   "titleLen": 24,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 3,
+   "headingOutline": [
+    "H1 Publications",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 16,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "publication-detail": {
+   "route": "/publication/j-029/",
+   "title": "Steane [[7,1,3]] outer coding for loss-tolerant one-way quantum repeaters | SAJID Lab",
+   "titleLen": 85,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 7,
+   "headingOutline": [
+    "H1 Steane [[7,1,3]][[7,1,3]][[7,1,3]] outer codin",
+    "H2 Abstract",
+    "H2 Citation",
+    "H2 BibTeX",
+    "H2 Publication Info",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "projects": {
+   "route": "/projects/",
+   "title": "Projects | SAJID Lab",
+   "titleLen": 20,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 5,
+   "headingOutline": [
+    "H1 Projects",
+    "H2 Scholar Profile Exporter",
+    "H2 CTAdmin",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "project-detail": {
+   "route": "/projects/ctadmin/",
+   "title": "CTAdmin | SAJID Lab",
+   "titleLen": 19,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 8,
+   "headingOutline": [
+    "H1 CTAdmin",
+    "H2 Motivation",
+    "H2 What it does",
+    "H2 Status",
+    "H2 Technologies",
+    "H2 Collaborators",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "teaching": {
+   "route": "/teaching/",
+   "title": "Teaching | SAJID Lab",
+   "titleLen": 20,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 12,
+   "headingOutline": [
+    "H1 Teaching",
+    "H2 Current & Recent Courses",
+    "H3 EEE 304 (Jul 2025)",
+    "H3 EEE 303 (Jul 2025)",
+    "H3 EEE 6516 - (April 2025)",
+    "H3 EEE 400",
+    "H2 Curriculum & Laboratory Development",
+    "H2 Books & Lecture Notes",
+    "H2 Workshops & Tutorials",
+    "H2 Archive",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "course-detail": {
+   "route": "/teaching/jul2025_eee303/",
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "titleLen": 30,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 4,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 6,
+   "headingOutline": [
+    "H1 EEE 303 (Jul 2025)",
+    "H2 Course Outcomes",
+    "H2 Textbooks",
+    "H2 Additional Resources",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [
+    {
+     "hasThead": true,
+     "ths": 9,
+     "scoped": 0,
+     "caption": false,
+     "rows": 4
+    }
+   ],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "team": {
+   "route": "/authors/",
+   "title": "Team | SAJID Lab",
+   "titleLen": 16,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 18,
+   "headingOutline": [
+    "H1 Team",
+    "H2 Meet Our Team",
+    "H3 Dr. Sajid Muhaimin Choudhury",
+    "H3 PhD Students",
+    "H3 Mir Md. Aminuzzaman",
+    "H3 MSc Students",
+    "H3 Abu Md. Raihan",
+    "H3 Md Al Shahriar Shakil",
+    "H3 Naved Sadat Yamin",
+    "H3 Purbayan Das",
+    "H3 Tanvir Ahmed",
+    "H3 Zaheer Al Jamee",
+    "H3 Undergrad Students",
+    "H3 Addrita Basak Nodi",
+    "H3 Gopal Gosh",
+    "H3 Ramima Mumtarin",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 27,
+   "iconOnlyWithoutName": [
+    "a.block.mb-5",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative",
+    "a.block.relative"
+   ],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 12,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 14,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "team-profile": {
+   "route": "/authors/me/",
+   "title": "Dr. Sajid Muhaimin Choudhury | SAJID Lab",
+   "titleLen": 40,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 8,
+   "headingOutline": [
+    "H1 Dr. Sajid Muhaimin Choudhury",
+    "H2 Research Interests",
+    "H2 Education",
+    "H2 Publications",
+    "H2 Projects",
+    "H2 Experience",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 16,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 2,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 14,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "news": {
+   "route": "/news/",
+   "title": "Latest News | SAJID Lab",
+   "titleLen": 23,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 14,
+   "headingOutline": [
+    "H1 Latest News",
+    "H2 All news items",
+    "H3 Puja Das Defends MSc Thesis",
+    "H3 Ayon Sarkar Defends MSc Thesis",
+    "H3 Soikot Sarkar Defends MSc Thesis",
+    "H3 Asif Hossain Bhuiyan Defends MSc Thesis",
+    "H3 Predefense of Three Members - PGS20250419",
+    "H3 Mahfuz Defends Final",
+    "H3 Polarization Insensitive Electrically Reconfig",
+    "H3 Reconfigurable Metasurface for Quantum Emitter",
+    "H3 DFT Analysis of Strain Effects on Monolayer Si",
+    "H3 Synergizing Deep Learning and Phase Change Mat",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 19,
+   "iconOnlyWithoutName": [
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full",
+    "a.block.w-full"
+   ],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 23,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "news-detail": {
+   "route": "/news/2024-05-09-new-pg-course/",
+   "title": "New PG Course on Quantum Photonics and Computing Offered | SAJID Lab",
+   "titleLen": 68,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 3,
+   "headingOutline": [
+    "H1 New PG Course on Quantum Photonics and Computi",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "resources": {
+   "route": "/resources/",
+   "title": "Resources | SAJID Lab",
+   "titleLen": 21,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 8,
+   "headingOutline": [
+    "H1 Resources",
+    "H2 Academic Resources",
+    "H2 Templates & Tools",
+    "H2 Writing & Tutorials",
+    "H2 Professional Activities",
+    "H2 Beyond Research",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "blog-post": {
+   "route": "/resources/blog/20260124-citation-count/",
+   "title": "Getting Citation Count - From Publish or Perish to TamperMonkey | SAJID Lab",
+   "titleLen": 75,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 3,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 6,
+   "headingOutline": [
+    "H1 Getting Citation Count - From Publish or Peris",
+    "H2 Background",
+    "H2 What I want",
+    "H2 The plugin",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 9,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "home@390": {
+   "route": "/",
+   "title": "SAJID Lab",
+   "titleLen": 9,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 1,
+    "nav": 2,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 20,
+   "headingOutline": [
+    "H1 Quantum, photonic and intelligent device resea",
+    "H2 Research",
+    "H3 Quantum Computing & Quantum Photonics",
+    "H3 Photonics & Nanophotonics",
+    "H3 Antenna & Electromagnetic Systems",
+    "H3 Computing & AI for Physical Systems",
+    "H3 Embedded Systems & IoT",
+    "H3 Renewable Energy & Sustainable Systems",
+    "H2 Projects & Engineering Work",
+    "H3 Scholar Profile Exporter",
+    "H3 CTAdmin",
+    "H2 Team",
+    "H3 Dr. Sajid Muhaimin Choudhury",
+    "H2 Collaborators & Partners",
+    "H2 Contact",
+    "H3 Visit Office",
+    "H3 Connect Online",
+    "H4 Follow Us",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 21,
+   "iconOnlyWithoutName": [
+    "a.block.mb-5"
+   ],
+   "linksNoHref": 7,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [],
+   "badLists": 0,
+   "images": {
+    "total": 6,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 4,
+   "svgAriaHidden": 25,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  },
+  "course-detail@390": {
+   "route": "/teaching/jul2025_eee303/",
+   "title": "EEE 303 (Jul 2025) | SAJID Lab",
+   "titleLen": 30,
+   "lang": "en-us",
+   "langOnPassages": 0,
+   "landmarks": {
+    "main": 1,
+    "header": 2,
+    "nav": 4,
+    "footer": 1,
+    "navLabels": [
+     "Primary",
+     "Breadcrumb",
+     "(unlabelled)",
+     "(unlabelled)"
+    ]
+   },
+   "h1": 1,
+   "headingCount": 6,
+   "headingOutline": [
+    "H1 EEE 303 (Jul 2025)",
+    "H2 Course Outcomes",
+    "H2 Textbooks",
+    "H2 Additional Resources",
+    "H2 Dr. Sajid Muhaimin Choudhury",
+    "H3 Important Links"
+   ],
+   "headingSkips": [],
+   "dupIds": [],
+   "positiveTabindex": 0,
+   "iconOnlyControls": 10,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
+   "linksAsButtons": [],
+   "buttonsNavigating": 0,
+   "expandables": [
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "nav-menu",
+     "targetExists": true,
+     "name": "Open menu"
+    }
+   ],
+   "redundantRole": [],
+   "ariaRefsBroken": [],
+   "tables": [
+    {
+     "hasThead": true,
+     "ths": 9,
+     "scoped": 0,
+     "caption": false,
+     "rows": 4
+    }
+   ],
+   "badLists": 0,
+   "images": {
+    "total": 1,
+    "noAlt": 0,
+    "decorativeEmptyAlt": 0,
+    "noDims": 0,
+    "noDimsSrc": []
+   },
+   "svgNoName": 0,
+   "svgAriaHidden": 13,
+   "formControlsUnlabelled": 0,
+   "blankNoNoopener": 0,
+   "genericLinkText": 0
+  }
+ }
+}

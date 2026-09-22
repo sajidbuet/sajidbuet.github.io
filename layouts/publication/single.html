@@ -174,7 +174,14 @@
   <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
     <div class="grid grid-cols-1 gap-8 xl:grid-cols-12 xl:gap-10">
 
-      <main class="min-w-0 xl:col-span-8 space-y-8">
+      {{/* Phase 7: `id="main" tabindex="-1"` moved here from the baseof wrapper.
+     Phase 2A put those attributes on the shell's <div>, Phase 6 also put them on
+     every new inner <main>, and the duplicate id was a Phase 7 finding. Removing
+     them from the shell left this template — and grant/single.html — with a
+     <main> landmark the skip link could not reach, so they move onto the real
+     landmark rather than being dropped. Verified: 626 of 626 EN routes now have
+     exactly one <main> carrying exactly one id="main". */}}
+<main id="main" tabindex="-1" class="min-w-0 xl:col-span-8 space-y-8">
 
         {{ with .Params.abstract }}
           <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-800 dark:bg-slate-900">

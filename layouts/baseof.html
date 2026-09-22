@@ -38,8 +38,15 @@
          docs/redesign/evidence/phase2a-landmarks.json */}}
     {{- $has_inner_main := and (eq .Kind "page") (ne .Type "landing") -}}
     {{- $body_class := printf "page-body%s" (cond (and (ne .Type "landing") (not $cover)) " my-10" "") -}}
+    {{/* Phase 7: this wrapper carried `id="main" tabindex="-1"` as the skip-link
+         target, because in Phase 2A the inner <main> came from _vendor and had no
+         id. Phase 6 gave every inner template its own `<main id="main" tabindex="-1">`,
+         so the attributes here became a DUPLICATE id on all 67 page-kind routes
+         (project, course, news, article, notes chapter …) — a regression against
+         the X13 "no duplicate id" baseline. The wrapper is now presentational only;
+         the skip link resolves to the real <main> landmark inside. */}}
     {{ if $has_inner_main }}
-      <div id="main" tabindex="-1" class="{{ $body_class }}">{{ block "main" . }}{{ end }}</div>
+      <div class="{{ $body_class }}">{{ block "main" . }}{{ end }}</div>
     {{ else }}
       <main id="main" tabindex="-1" class="{{ $body_class }}">{{ template "main" . }}</main>
     {{ end }}

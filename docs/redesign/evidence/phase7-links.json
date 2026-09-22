@@ -1,0 +1,6805 @@
+{
+ "meta": {
+  "root": "C:\\Users\\Sajid\\OneDrive\\Documents\\Website\\sajidbuet\\sajidbuet.github.io\\public_p7",
+  "at": "2026-09-22T16:16:14.650Z",
+  "htmlPages": 661,
+  "aliasPages": 62,
+  "totalFiles": 1431
+ },
+ "broken": [
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  }
+ ],
+ "brokenImages": [],
+ "staleLinks": [],
+ "badAnchors": [],
+ "aliasCheck": {
+  "total": 62,
+  "pass": 62,
+  "fail": []
+ },
+ "counts": {
+  "links": 24788,
+  "internal": 17592,
+  "external": 5352,
+  "images": 671,
+  "mailto": 611
+ },
+ "legacyRoutes": {
+  "/projects/g-01/": "ALIAS -> https://www.sajid.bd/research/funding/g-01/",
+  "/projects/g-02/": "ALIAS -> https://www.sajid.bd/research/funding/g-02/",
+  "/projects/g-03/": "ALIAS -> https://www.sajid.bd/research/funding/g-03/",
+  "/outreach/": "ALIAS -> https://www.sajid.bd/resources/",
+  "/outreach/lor/": "ALIAS -> https://www.sajid.bd/resources/academic/lor/",
+  "/outreach/scientific-typing/": "ALIAS -> https://www.sajid.bd/resources/academic/scientific-typing/",
+  "/outreach/templates/": "ALIAS -> https://www.sajid.bd/resources/templates/",
+  "/outreach/graphics/": "ALIAS -> https://www.sajid.bd/resources/templates/graphics/",
+  "/outreach/blog/": "ALIAS -> https://www.sajid.bd/resources/blog/",
+  "/outreach/professional/": "ALIAS -> https://www.sajid.bd/resources/professional/",
+  "/outreach/songs/": "ALIAS -> https://www.sajid.bd/resources/personal/songs/",
+  "/outreach/poetry/": "ALIAS -> https://www.sajid.bd/resources/personal/poetry/",
+  "/outreach/hobbies/": "ALIAS -> https://www.sajid.bd/resources/personal/hobbies/",
+  "/people/": "ALIAS -> https://www.sajid.bd/authors/",
+  "/outreach/blog/20260811-bracu-arm-workshop/": "ALIAS -> https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/"
+ },
+ "brokenEn": [
+  {
+   "page": "/teaching/archive/j2020_eee303/",
+   "href": "/courses/EEE_303_2020/Lecture_1.pdf"
+  },
+  {
+   "page": "/teaching/archive/j2020_eee303/",
+   "href": "/courses/EEE_303_2020/Lecture_2-3.pdf"
+  },
+  {
+   "page": "/teaching/archive/j2020_eee303/",
+   "href": "/courses/EEE_303_2020/Lecture_4-6.pdf"
+  },
+  {
+   "page": "/teaching/archive/j2020_eee303/",
+   "href": "/courses/EEE_303_2020/Lecture_7-8.pdf"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/memfile.dat"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/reference/add.c"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/reference/simple_alu.v"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/reference/tb_simple_alu.v"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/reference/simple_sum.s"
+  },
+  {
+   "page": "/teaching/workshops/bracu-arm-workshop/",
+   "href": "files/reference/memfile.dat"
+  }
+ ],
+ "brokenBn": [
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/404.html",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/-me/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/a.-h.-chowdhury/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/abdul-mukit/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/abdullah-jubair-bin-iqbal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexander-v-kildishev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexander-v.-kildishev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/alexandra-boltasseva/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/amr-shaltout/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ana-daaz-rubio/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/andrea-ala/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/andrea-alu/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/anindya-kishore-choudhury/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/anthony-grbic/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/arnold-toppo/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/aveek-dutta/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ayon-sarker/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/babak-memarzadeh/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/bejoy-sikder/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/christophe-caloz/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/christophe-craeye/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/clayton-devault/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/daniel-sievenpiper/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/deesha-shah/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/di-wang/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/dipika-rani-nath/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ehsanul-karim/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/enrica-martini/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/esteban-marinero-caceres/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/eva-rajo-iglesias/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/farhan-sadik-sium/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/fariba-islam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/francisco-medina/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/francisco-mesa/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/gabriele-minatti/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/george-v-eleftheriades/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/guido-valerio/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/gurkan-gok/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/harsha-reddy/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/himaddri-roy/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/honglin-yu/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/hongsheng-chen/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/hossein-mosallaei/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/huan-jiang/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/jongbum-kim/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/joseph-pekny/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/junayet-hossain/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/kaniz-fatema-supti/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/krishnakali-chaudhuri/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/kushol-roy-pritom/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/lei-zhou/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ludmila-j.-prokopeva/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m-a-awal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.-a.-zaman/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.-gaffar/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.-s.-hussain/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.-shah-alam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/m.a.-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ma-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/ma-zaman/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/maowen-song/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-a-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-al-shahriar-shakil/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-asif-hossain-bhuiyan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-gaffar/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-m-alam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-mahfuzul-haque/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-mushfiqul-alam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-sabbir-hossen-bijoy/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md-tareq-mahmud/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-abdul-matin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-asif-hossain-bhuiyan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-ehsanul-karim/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-gaffar/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-imran-momtaz/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-kawsar-alam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-mahfuzul-haque/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-rasidul-islam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/md.-redwanul-karim/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "..cv.pdf"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/me/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mehedi-hasan-himel/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/michael-chen/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mohammad-asif-zaman/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mohammad-ishfaque-jahan-rafee/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mohammad-muntasir-hassan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mohammad-tahsin-alam/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/mohammed-imamul-hasan-bhuiyan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/naved-sadat-yamin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/nikitas-papasimakis/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/nikolay-i-zheludev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/oscar-quevedo-teruel/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/parvez-ahmmed/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/peng-xiao/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/piotr-nyga/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/prithu-mahmud/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/puja-das/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/purbayan-das/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/qiong-he/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/raul-rodraguez-berral/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/s.-m.-l.-kabir/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sa-mamun/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sadat-tahmeed-azad/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sadid-muneer/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/saleh-ahmed-khan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/samuel-peana/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sayed-ashraf-mamun/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sergei-bozhevolnyi/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sergei-tretyakov/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sergey-i.-bozhevolnyi/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/shamima-akter-mitu/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sm-choudhury/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/soham-saha/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/soikot-sarkar/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/stefano-maci/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/subhan-zawad-bihan/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/sujoy-mondal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/swati-pol/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/tanvir-ahmed/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/tiasa-mondal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/urcan-guler/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/victor-asadchy/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/vladimir-a.-zenin/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m-shalaev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/vladimir-m.-shalaev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/vladimir-shalaev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/yang-zhao/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/yasir-fatha-abed/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/yasir-mahmud/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/yongyuan-jiang/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zabir-ahmed/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zafrin-jahan-nikita/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a-kudyshev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-a.-kudyshev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zhaxylyk-kudyshev/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/authors/zvonimir-sipus/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/research/funding/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/resources"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/project_categories/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-001/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-002/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-003/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-004/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-005/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-006/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-007/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-008/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-009/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-010/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-011/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-012/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-013/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-014/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-015/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-016/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-018/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-019/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-020/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-021/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-022/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-023/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-024/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-025/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-026/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-027/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/c-028/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-001/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-002/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-003/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-004/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-005/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-006/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-007/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-008/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-009/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-010/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-011/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-012/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-013/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-014/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-015/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-016/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-017/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-018/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-019/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-020/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-021/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-022/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-023/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-025/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-026/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/j-027/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/p-01/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/p-02/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/x-01/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/x-02/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/x-03/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication/x-04/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/2/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/article-journal/page/3/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/manuscript/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/2/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/paper-conference/page/3/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/publication_types/patent/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/antenna/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/computing/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/embedded/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/photonics/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/quantum/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/research/renewable/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/antenna/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/antenna/page/2/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/computing/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/embedded/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/misc/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/photonics/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/2/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/3/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/photonics/page/4/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/quantum/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/tags/renewable/",
+   "href": "/bn/news/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/cv.pdf"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/resources/academic/lor/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/resources/academic/scientific-typing/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/resources/blog/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/teaching/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/resources/"
+  },
+  {
+   "page": "/bn/technologies/",
+   "href": "/bn/news/"
+  }
+ ],
+ "summary": {
+  "pagesScanned": 599,
+  "links": 24788,
+  "internal": 17592,
+  "external": 5352,
+  "broken": 1620,
+  "brokenEn": 10,
+  "brokenBn": 1610,
+  "brokenEnUnique": [
+   "/courses/EEE_303_2020/Lecture_1.pdf",
+   "/courses/EEE_303_2020/Lecture_2-3.pdf",
+   "/courses/EEE_303_2020/Lecture_4-6.pdf",
+   "/courses/EEE_303_2020/Lecture_7-8.pdf",
+   "files/memfile.dat",
+   "files/reference/add.c",
+   "files/reference/simple_alu.v",
+   "files/reference/tb_simple_alu.v",
+   "files/reference/simple_sum.s",
+   "files/reference/memfile.dat"
+  ],
+  "brokenBnUnique": [
+   "/bn/cv.pdf",
+   "/bn/resources/academic/lor/",
+   "/bn/resources/academic/scientific-typing/",
+   "/bn/resources/blog/",
+   "/bn/teaching/",
+   "/bn/resources/",
+   "/bn/news/",
+   "..cv.pdf",
+   "/bn/research/funding/",
+   "/bn/resources"
+  ],
+  "brokenImages": 0,
+  "badAnchors": 0,
+  "staleLinks": 0,
+  "aliasPass": 62,
+  "aliasFail": 0
+ }
+}

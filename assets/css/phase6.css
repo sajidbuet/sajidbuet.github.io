@@ -87,9 +87,32 @@
   vertical-align: top;
 }
 
-.sj-prose thead th,
-.sj-prose table th:first-child:not(:only-child) {
+/* Phase 7 fix — the row-header treatment is scoped to `tbody`.
+   Unscoped, `.sj-prose table th:first-child:not(:only-child)` (0,3,2) also matched
+   the FIRST CELL OF A THEAD and outranked
+   `.sj-section-teaching table:not(.no-stripe) th` (0,2,2) from phase5.css.
+   The result was a split declaration: background from here, colour from there —
+   `#ffffff` on `#f8fafc` in light and `#0f172a` on `#0b1220` in dark, both 1.05:1.
+   On /teaching/jul2025_eee303/ the "CO No." column heading was literally
+   invisible. Confirmed in the rendered capture, not just the contrast numbers. */
+.sj-prose thead th {
   background: var(--sj-background-subtle);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Row headers (a <th> as the first cell of a tbody row) carry BOTH properties.
+   Setting only the background here was the second half of the same bug: at
+   specificity (0,3,2) this rule outranks phase5.css's
+   `.sj-section-teaching table:not(.no-stripe) th` (0,2,2) for `background`,
+   while `color` continued to come from phase5 — white on #f8fafc, 1.04:1.
+   Lighthouse caught this on /teaching/jul2025_eee303/ after the thead case was
+   fixed; the in-house instrument missed it because it de-duplicates by
+   tag+colour+size and had already recorded a passing <th>. Background and
+   foreground now always travel together. */
+.sj-prose tbody th:first-child:not(:only-child) {
+  background: var(--sj-background-subtle);
+  color: var(--sj-text-primary);
   font-weight: 600;
   text-align: left;
 }

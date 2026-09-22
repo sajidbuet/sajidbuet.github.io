@@ -1,0 +1,54 @@
+{
+  "matrix": [
+    "{\"vp\":\"1920x1080\",\"theme\":\"light\",\"docH\":6608,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1920x1080\",\"theme\":\"dark\",\"docH\":6608,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1440x900\",\"theme\":\"light\",\"docH\":6608,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1440x900\",\"theme\":\"dark\",\"docH\":6608,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1280x800\",\"theme\":\"light\",\"docH\":6631,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1280x800\",\"theme\":\"dark\",\"docH\":6631,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1024x768\",\"theme\":\"light\",\"docH\":6781,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"1024x768\",\"theme\":\"dark\",\"docH\":6781,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"768x1024\",\"theme\":\"light\",\"docH\":7481,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"768x1024\",\"theme\":\"dark\",\"docH\":7481,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"430x932\",\"theme\":\"light\",\"docH\":8809,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"430x932\",\"theme\":\"dark\",\"docH\":8809,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"390x844\",\"theme\":\"light\",\"docH\":9254,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}",
+    "{\"vp\":\"390x844\",\"theme\":\"dark\",\"docH\":9254,\"over\":false,\"h1\":1,\"wordmark\":\"Lab\",\"caret\":false}"
+  ],
+  "a11y": "{\"h1\":[\"Quantum, photonic and intelligent device research\"],\"headingOutline\":[\"H3: No results found\",\"H1: Quantum, photonic and intelligent device r\",\"H2: Research\",\"H3: Quantum Computing & Quantum Photonics\",\"H3: Photonics & Nanophotonics\",\"H3: Antenna & Electromagnetic Systems\",\"H3: Computing & AI for Physical Systems\",\"H3: Embedded Systems & IoT\",\"H3: Renewable Energy & Sustainable Systems\",\"H2: Projects & Engineering Work\",\"H2: Team\",\"H3: Dr. Sajid Muhaimin Choudhury\",\"H2: Collaborators & Partners\",\"H2: Contact\",\"H3: Visit Office\",\"H3: Connect Online\",\"H2: Dr. Sajid Muhaimin Choudhury\",\"H3: Important Links\"],\"skips\":[],\"main\":1,\"skipLink\":true,\"genericLinks\":0,\"imgsNoAlt\":0,\"nestedLinkCards\":0,\"statusHasText\":true,\"domNodes\":1271}",
+  "motion": "{\"total\":0,\"infinite\":0,\"wordmark\":\"Lab\",\"caretRemoved\":true}",
+  "contrast": null,
+  "zoom": "{\"scrollW\":625,\"inner\":640,\"over\":false}",
+  "focus": [
+    "{\"txt\":\"Skip to main content\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"SAJID Lab — Home\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Home\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Research\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Funding\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Team\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Publications\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Teaching\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"News\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Outreach\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Contact\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Search\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Toggle light and dark appearan\",\"outline\":\"solid 2px\",\"fv\":true}",
+    "{\"txt\":\"Dr. Sajid Muhaimin Choudhury\",\"outline\":\"solid 2px\",\"fv\":true}"
+  ],
+  "reducedMotion": "{\"total\":0,\"infinite\":0,\"wordmark\":\"Lab\",\"hidden\":[\"DIV.absolute bottom-full left-1/2 transform -tra\",\"DIV.absolute bottom-full left-1/2 transform -tra\",\"DIV.absolute bottom-full left-1/2 transform -tra\",\"DIV.absolute bottom-full left-1/2 transform -tra\"]}",
+  "contrast_light": {
+    "checked": 57,
+    "fails": 0,
+    "worst": [],
+    "smallTargets": 38
+  },
+  "contrast_dark": {
+    "checked": 53,
+    "fails": 0,
+    "worst": [],
+    "smallTargets": 38
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

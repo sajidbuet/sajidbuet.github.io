@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{/* Funding & Grants listing — Phase 4.
+
+     Uses the section's own .Pages rather than HugoBlox's `collection` block.
+     That block filters with `where $query "Section" "in" $folders`, and the
+     Section of content/research/funding/g-01/ is "research", so a
+     `folders: [research/funding]` filter silently matched nothing and the
+     page rendered an empty list. Filtering here is by the pages that actually
+     live in this section. */}}
+
+{{ $grants := .Pages.ByParam "start_date" }}
+{{ $grants = $grants.Reverse }}
+
+<div class="sj-container-content sj-funding">
+  <header class="sj-funding__head">
+    <h1 class="sj-page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="sj-page-lede">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ if $grants }}
+    <div class="sj-funding__list">
+      {{ range $grants }}
+        {{ partial "views/grant.html" (dict "item" . "level" 2) }}
+      {{ end }}
+    </div>
+  {{ else }}
+    <p class="sj-page-lede">{{ i18n "no_grants" | default "No grants are listed yet." }}</p>
+  {{ end }}
+</div>
+{{ end }}

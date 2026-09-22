@@ -1,0 +1,29 @@
+{{/* Funding summary for the Research landing — Phase 4.
+
+     Selects grants by `type: grant` rather than by folder, because HugoBlox's
+     `collection` block filters on `.Section` and the grants' Section is
+     "research", not "research/funding". */}}
+
+{{ $block := .wcBlock }}
+{{ $count := $block.content.count | default 3 }}
+{{ $grants := where site.RegularPages "Type" "grant" }}
+{{ $grants = ($grants.ByParam "start_date").Reverse }}
+{{ $shown := first $count $grants }}
+
+<div class="sj-container-content sj-funding-summary">
+  {{ with $block.content.title }}<h2 class="sj-section__title">{{ . }}</h2>{{ end }}
+  {{ with $block.content.text }}<p class="sj-page-lede">{{ . }}</p>{{ end }}
+
+  {{ if $shown }}
+    <div class="sj-funding__list">
+      {{ range $shown }}{{ partial "views/grant.html" (dict "item" .) }}{{ end }}
+    </div>
+
+    {{ with $block.content.cta }}
+      <p class="sj-section__more">
+        <a class="sj-more-link" href="{{ .url | relLangURL }}">{{ .text }}
+          <span class="sj-more-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </p>
+    {{ end }}
+  {{ end }}
+</div>

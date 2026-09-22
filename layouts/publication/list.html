@@ -344,8 +344,14 @@
   <section class="mb-8 rounded-2xl border border-black/10 bg-white/50 p-4 md:p-5 shadow-sm dark:border-white/10 dark:bg-white/5">
     <div class="pub-toolbar">
       <div class="pub-toolbar-left">
-        <details class="pub-filter" data-filter-group="tag">
-          <summary class="pub-filter-button" aria-label="Filter by topic tag">
+        {{/* Phase 7: the aria-label was removed from each filter <summary>.
+     Visible text is "Tag / All tags / (63)" but the accessible name was
+     "Filter by topic tag", which does not contain it — WCAG 2.5.3 Label in Name,
+     reported by Lighthouse on /publication/. A speech-input user saying the
+     visible word could not activate the control. The name now comes from the
+     visible content, which satisfies 2.5.3 by construction. */}}
+<details class="pub-filter" data-filter-group="tag">
+          <summary class="pub-filter-button">
             <span class="pub-filter-label-wrap">
               <span class="pub-filter-name">Tag</span>
               <span class="pub-filter-selected" data-filter-selected="tag">All tags</span>
@@ -372,7 +378,7 @@
         </details>
 
         <details class="pub-filter" data-filter-group="type">
-          <summary class="pub-filter-button" aria-label="Filter by publication type">
+          <summary class="pub-filter-button">
             <span class="pub-filter-label-wrap">
               <span class="pub-filter-name">Type</span>
               <span class="pub-filter-selected" data-filter-selected="type">All types</span>
@@ -399,7 +405,7 @@
         </details>
 
         <details class="pub-filter" data-filter-group="year">
-          <summary class="pub-filter-button" aria-label="Filter by year">
+          <summary class="pub-filter-button">
             <span class="pub-filter-label-wrap">
               <span class="pub-filter-name">Year</span>
               <span class="pub-filter-selected" data-filter-selected="year">All years</span>

@@ -45,10 +45,25 @@
   /* Until Phase 2A this value was injected site-wide by an inline <style>
      inside the hero logo SVG, which declared `:root { --color-primary-600 }`.
      That leak is now scoped to the SVG, so the value is declared here
-     deliberately to keep the current appearance byte-identical.
-     NOTE: components still using Tailwind `*-primary-600` for TEXT remain at
-     3.38:1 and are migrated to --sj-accent in Phase 3. */
-  --color-primary-600: #0c96c8;
+     deliberately.
+
+     PHASE 7 — the migration this note promised is now complete.
+     Phase 3 only fixed the homepage (scoped under `.sj-home`); Phases 4–6 left
+     the rest, and the Phase 7 audit still measured 3.38:1 on `/authors/`
+     ("View Group Alumni", white on `bg-primary-600`), `/authors/me/` (the
+     language pills) and `/news/` ("Read more") — in BOTH themes.
+     Remapping the Tailwind palette entry to the accent already approved in
+     design-system-proposal §2.13 fixes every `*-primary-600` consumer at once
+     without editing thirty components, and without touching --sj-brand, which
+     is what the logo actually uses.
+       text on --sj-background : 3.38:1 -> 5.36:1
+       white on the 600 fill   : 3.38:1 -> 5.36:1
+     700 moves with it so `hover:bg-primary-700` still reads as a state change
+     (#0e7490 is Tailwind cyan-700, so leaving 700 alone would have collapsed
+     the hover step to no visible change). Dark mode already used
+     `*-primary-400` (#22d3ee, 9.88:1) and is unchanged. */
+  --color-primary-600: #0e7490;
+  --color-primary-700: #155e75;
 
   /* --- Focus ---------------------------------------------------------- */
   --sj-focus-ring: #0e7490;

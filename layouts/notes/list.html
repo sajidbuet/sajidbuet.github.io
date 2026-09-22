@@ -22,7 +22,12 @@
 {{ $downloads := slice }}
 {{ range .Resources.ByType "application" }}{{ $downloads = $downloads | append . }}{{ end }}
 
-<main id="main" tabindex="-1" class="sj-container-content sj-note-page">
+{{/* Phase 7: this was `<main id="main" tabindex="-1">`, but list.html serves
+     branch kinds (the shelf and each book landing), for which baseof.html already
+     emits the page's <main>. /teaching/notes/ therefore shipped TWO <main>
+     landmarks nested inside each other and a duplicate id. A plain wrapper here
+     leaves exactly one <main>, supplied by the shell. */}}
+<div class="sj-container-content sj-note-page">
 
   <header class="sj-note-page__head">
     {{ partial "breadcrumbs.html" . }}
@@ -105,5 +110,5 @@
     </div>
   {{ end }}
 
-</main>
+</div>
 {{ end }}

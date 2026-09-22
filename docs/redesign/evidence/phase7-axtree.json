@@ -1,0 +1,793 @@
+{
+ "meta": {
+  "browser": {
+   "Browser": "Chrome/153.0.8010.53",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+   "V8-Version": "15.3.76.13",
+   "WebKit-Version": "537.36 (@792bf6722e73a45aa9e47c163b9901bdc17f3230)",
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9443/devtools/browser/8849a50d-7acf-4f46-ae14-4f03cb3518ff"
+  },
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T16:14:19.536Z"
+ },
+ "routes": {
+  "home": {
+   "route": "/",
+   "interactive": 105,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 20,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h2 Research",
+    "h2 Projects & Engineering Work",
+    "h2 Team",
+    "h2 Contact",
+    "h3 Visit Office",
+    "h3 Connect Online",
+    "h4 Follow Us",
+    "h1 Quantum, photonic and intelligent device research",
+    "h3 Quantum Computing & Quantum Photonics",
+    "h3 Photonics & Nanophotonics",
+    "h3 Antenna & Electromagnetic Systems",
+    "h3 Computing & AI for Physical Systems",
+    "h3 Embedded Systems & IoT",
+    "h3 Renewable Energy & Sustainable Systems",
+    "h3 Scholar Profile Exporter",
+    "h3 CTAdmin",
+    "h3 Dr. Sajid Muhaimin Choudhury",
+    "h2 Collaborators & Partners"
+   ]
+  },
+  "research": {
+   "route": "/research/",
+   "interactive": 59,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 15,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Research",
+    "h2 Research Areas",
+    "h2 Funding & Grants",
+    "h3 Synergizing Deep Learning and Topology Optimizatio",
+    "h3 Structurally Tunable Gear-Shaped Plasmonic Sensor",
+    "h3 Design and Low-cost Fabrication of Optical Biosens",
+    "h3 Quantum Computing & Quantum Photonics",
+    "h3 Photonics & Nanophotonics",
+    "h3 Antenna & Electromagnetic Systems",
+    "h3 Computing & AI for Physical Systems",
+    "h3 Embedded Systems & IoT",
+    "h3 Renewable Energy & Sustainable Systems",
+    "h2 Collaborations"
+   ]
+  },
+  "research-area": {
+   "route": "/research/photonics/",
+   "interactive": 67,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 3,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Photonic Systems"
+   ]
+  },
+  "publication-list": {
+   "route": "/publication/",
+   "interactive": 496,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 3,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Publications"
+   ]
+  },
+  "publication-detail": {
+   "route": "/publication/j-029/",
+   "interactive": 42,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    },
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 7,
+   "headingOutline": [
+    "h1 Steane [[7,1,3]][[7,1,3]] outer coding for loss-to",
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h2 Abstract",
+    "h2 Citation",
+    "h2 BibTeX",
+    "h2 Publication Info"
+   ]
+  },
+  "projects": {
+   "route": "/projects/",
+   "interactive": 33,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 5,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Projects",
+    "h2 Scholar Profile Exporter",
+    "h2 CTAdmin"
+   ]
+  },
+  "project-detail": {
+   "route": "/projects/ctadmin/",
+   "interactive": 31,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 8,
+   "headingOutline": [
+    "h2 Motivation",
+    "h2 What it does",
+    "h2 Status",
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 CTAdmin",
+    "h2 Technologies",
+    "h2 Collaborators"
+   ]
+  },
+  "teaching": {
+   "route": "/teaching/",
+   "interactive": 38,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "region",
+     "name": "Current & Recent Courses"
+    },
+    {
+     "role": "region",
+     "name": "Curriculum & Laboratory Development"
+    },
+    {
+     "role": "region",
+     "name": "Books & Lecture Notes"
+    },
+    {
+     "role": "region",
+     "name": "Workshops & Tutorials"
+    },
+    {
+     "role": "region",
+     "name": "Archive"
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 12,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Teaching",
+    "h2 Current & Recent Courses",
+    "h2 Curriculum & Laboratory Development",
+    "h2 Books & Lecture Notes",
+    "h2 Workshops & Tutorials",
+    "h2 Archive",
+    "h3 EEE 304 (Jul 2025)",
+    "h3 EEE 303 (Jul 2025)",
+    "h3 EEE 6516 - (April 2025)",
+    "h3 EEE 400"
+   ]
+  },
+  "course-detail": {
+   "route": "/teaching/jul2025_eee303/",
+   "interactive": 32,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 6,
+   "headingOutline": [
+    "h2 Course Outcomes",
+    "h2 Textbooks",
+    "h2 Additional Resources",
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 EEE 303 (Jul 2025)"
+   ]
+  },
+  "team": {
+   "route": "/authors/",
+   "interactive": 58,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 18,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Team",
+    "h2 Meet Our Team",
+    "h3 PhD Students",
+    "h3 MSc Students",
+    "h3 Undergrad Students",
+    "h3 Dr. Sajid Muhaimin Choudhury",
+    "h3 Mir Md. Aminuzzaman",
+    "h3 Abu Md. Raihan",
+    "h3 Md Al Shahriar Shakil",
+    "h3 Naved Sadat Yamin",
+    "h3 Purbayan Das",
+    "h3 Tanvir Ahmed",
+    "h3 Zaheer Al Jamee",
+    "h3 Addrita Basak Nodi",
+    "h3 Gopal Gosh",
+    "h3 Ramima Mumtarin"
+   ]
+  },
+  "team-profile": {
+   "route": "/authors/me/",
+   "interactive": 51,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 8,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Dr. Sajid Muhaimin Choudhury",
+    "h2 Research Interests",
+    "h2 Education",
+    "h2 Publications",
+    "h2 Projects",
+    "h2 Experience"
+   ]
+  },
+  "news": {
+   "route": "/news/",
+   "interactive": 49,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 14,
+   "headingOutline": [
+    "h2 All news items",
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Latest News",
+    "h3 Puja Das Defends MSc Thesis",
+    "h3 Ayon Sarkar Defends MSc Thesis",
+    "h3 Soikot Sarkar Defends MSc Thesis",
+    "h3 Asif Hossain Bhuiyan Defends MSc Thesis",
+    "h3 Predefense of Three Members - PGS20250419",
+    "h3 Mahfuz Defends Final",
+    "h3 Polarization Insensitive Electrically Reconfigurab",
+    "h3 Reconfigurable Metasurface for Quantum Emitter Con",
+    "h3 DFT Analysis of Strain Effects on Monolayer Silico",
+    "h3 Synergizing Deep Learning and Phase Change Materia"
+   ]
+  },
+  "news-detail": {
+   "route": "/news/2024-05-09-new-pg-course/",
+   "interactive": 30,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 3,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 New PG Course on Quantum Photonics and Computing O"
+   ]
+  },
+  "resources": {
+   "route": "/resources/",
+   "interactive": 45,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "region",
+     "name": "Academic Resources"
+    },
+    {
+     "role": "region",
+     "name": "Templates & Tools"
+    },
+    {
+     "role": "region",
+     "name": "Writing & Tutorials"
+    },
+    {
+     "role": "region",
+     "name": "Professional Activities"
+    },
+    {
+     "role": "region",
+     "name": "Beyond Research"
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 8,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Resources",
+    "h2 Academic Resources",
+    "h2 Templates & Tools",
+    "h2 Writing & Tutorials",
+    "h2 Professional Activities",
+    "h2 Beyond Research"
+   ]
+  },
+  "blog-post": {
+   "route": "/resources/blog/20260124-citation-count/",
+   "interactive": 31,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 6,
+   "headingOutline": [
+    "h2 Background",
+    "h2 What I want",
+    "h2 The plugin",
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Getting Citation Count - From Publish or Perish to"
+   ]
+  },
+  "home@390": {
+   "route": "/",
+   "interactive": 98,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    }
+   ],
+   "headingCount": 20,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h2 Research",
+    "h2 Projects & Engineering Work",
+    "h2 Team",
+    "h2 Contact",
+    "h3 Visit Office",
+    "h3 Connect Online",
+    "h4 Follow Us",
+    "h1 Quantum, photonic and intelligent device research",
+    "h3 Quantum Computing & Quantum Photonics",
+    "h3 Photonics & Nanophotonics",
+    "h3 Antenna & Electromagnetic Systems",
+    "h3 Computing & AI for Physical Systems",
+    "h3 Embedded Systems & IoT",
+    "h3 Renewable Energy & Sustainable Systems",
+    "h3 Scholar Profile Exporter",
+    "h3 CTAdmin",
+    "h3 Dr. Sajid Muhaimin Choudhury",
+    "h2 Collaborators & Partners"
+   ]
+  },
+  "notes": {
+   "route": "/teaching/notes/",
+   "interactive": 29,
+   "unnamedCount": 0,
+   "unnamed": [],
+   "landmarks": [
+    {
+     "role": "main",
+     "name": ""
+    },
+    {
+     "role": "contentinfo",
+     "name": ""
+    },
+    {
+     "role": "banner",
+     "name": ""
+    },
+    {
+     "role": "navigation",
+     "name": "Footer"
+    },
+    {
+     "role": "navigation",
+     "name": "Primary"
+    },
+    {
+     "role": "navigation",
+     "name": "Breadcrumb"
+    }
+   ],
+   "headingCount": 3,
+   "headingOutline": [
+    "h2 Dr. Sajid Muhaimin Choudhury",
+    "h3 IMPORTANT LINKS",
+    "h1 Books & Lecture Notes"
+   ]
+  }
+ },
+ "summary": {
+  "home": "0/105",
+  "research": "0/59",
+  "research-area": "0/67",
+  "publication-list": "0/496",
+  "publication-detail": "0/42",
+  "projects": "0/33",
+  "project-detail": "0/31",
+  "teaching": "0/38",
+  "course-detail": "0/32",
+  "team": "0/58",
+  "team-profile": "0/51",
+  "news": "0/49",
+  "news-detail": "0/30",
+  "resources": "0/45",
+  "blog-post": "0/31",
+  "home@390": "0/98",
+  "notes": "0/29"
+ }
+}

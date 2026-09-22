@@ -1,0 +1,645 @@
+/* ==========================================================================
+   SAJID.BD — Homepage (Phase 3)
+
+   Scoped to homepage blocks. Consumes the Phase 2A token layer only; it
+   introduces no new colours, radii, shadows or motion vocabulary.
+   Loaded after tokens.css and custom.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared section furniture
+   -------------------------------------------------------------------------- */
+.sj-section__title {
+  font-size: var(--sj-text-3xl);
+  font-weight: 700;
+  line-height: var(--sj-leading-tight);
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+  margin: 0 0 var(--sj-space-2);
+}
+
+.sj-section__subtitle {
+  font-size: var(--sj-text-base);
+  color: var(--sj-text-secondary);
+  margin: 0;
+}
+
+.sj-section__head {
+  margin-bottom: var(--sj-space-8);
+}
+
+.sj-section__more {
+  margin: var(--sj-space-8) 0 0;
+}
+
+/* Tertiary "more" affordance — a text link with a trace, never a filled
+   button. Only the hero carries a primary button. */
+.sj-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sj-space-2);
+  min-height: 44px;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  color: var(--sj-accent);
+  text-decoration: none;
+  border-radius: var(--sj-radius-sm);
+}
+
+.sj-more-link::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--sj-accent);
+  transition: width var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-more-link:hover {
+  color: var(--sj-accent-hover);
+}
+
+.sj-more-link:hover::before {
+  width: 28px;
+}
+
+/* Alternating band, so dark mode is not one uniform navy wall. */
+.sj-band {
+  background-color: var(--sj-background-subtle);
+  border-top: 1px solid var(--sj-border);
+  border-bottom: 1px solid var(--sj-border);
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.sj-hero {
+  background:
+    radial-gradient(120% 90% at 50% -10%, var(--sj-accent-soft) 0%, transparent 62%),
+    var(--sj-background);
+  border-bottom: 1px solid var(--sj-border);
+}
+
+.sj-hero__mark {
+  margin-inline: auto;
+}
+
+/* The h1 is the dominant text in the hero; the lede supports it. */
+.sj-hero__title {
+  margin: var(--sj-space-5, 20px) auto 0;
+  max-width: 22ch;
+  font-size: var(--sj-text-2xl);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+  text-wrap: balance;
+}
+
+.sj-hero__lede {
+  margin: var(--sj-space-4) auto 0;
+  max-width: 58ch;              /* ~55-65 characters per line */
+  font-size: var(--sj-text-base);
+  line-height: 1.55;
+  color: var(--sj-text-secondary);
+}
+
+.sj-hero__lede p { margin: 0; }
+
+.sj-hero__support {
+  margin: var(--sj-space-3) auto 0;
+  max-width: 58ch;
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-secondary);
+}
+
+.sj-hero__support p { margin: 0; }
+
+.sj-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sj-space-3);
+  margin-top: var(--sj-space-8);
+}
+
+.sj-btn__icon {
+  width: 1em;
+  height: 1em;
+}
+
+/* --- Credibility strip ---------------------------------------------------
+   Rule-separated, not four boxes. Plain markup, no reveal class, so it is
+   visible without JS and under reduced motion. */
+.sj-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sj-space-4) 0;
+  margin: var(--sj-space-12) 0 0;
+  padding-top: var(--sj-space-6);
+  border-top: 1px solid var(--sj-border);
+}
+
+.sj-stats__item {
+  padding: 0 var(--sj-space-4);
+  text-align: center;
+}
+
+/* Hairline separators between items, not card edges. */
+.sj-stats__item + .sj-stats__item {
+  box-shadow: inset 1px 0 0 0 var(--sj-border);
+}
+
+.sj-stats__value {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.sj-stats__label {
+  margin: var(--sj-space-1) 0 0;
+  font-size: var(--sj-text-xs);
+  line-height: 1.35;
+  color: var(--sj-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .sj-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* Approved quieter metric size (was 72px/900 in Phase 1). */
+  .sj-stats__value { font-size: 44px; }
+  .sj-hero__title { font-size: var(--sj-text-3xl); max-width: 26ch; }
+  .sj-hero__lede { font-size: var(--sj-text-lg); }
+}
+
+/* On mobile the 2x2 grid needs its vertical rule only between columns. */
+@media (max-width: 767.98px) {
+  .sj-stats__item:nth-child(odd) { box-shadow: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Research
+   -------------------------------------------------------------------------- */
+.sj-research__header {
+  margin-bottom: var(--sj-space-8);
+}
+
+.sj-research__intro {
+  display: flex;
+  align-items: center;
+  gap: var(--sj-space-6);
+  margin-top: var(--sj-space-4);
+}
+
+.sj-research__mark {
+  flex: 0 0 auto;
+  width: 84px;
+}
+
+.sj-research__mark svg,
+.sj-research__mark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sj-research__lede {
+  margin: 0;
+  max-width: 68ch;
+  font-size: var(--sj-text-base);
+  color: var(--sj-text-secondary);
+}
+
+.sj-research__grid,
+.sj-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--sj-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .sj-research__grid,
+  .sj-projects__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .sj-research__grid,
+  .sj-projects__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* --- Card: flat surface, 1px border, 8px radius, 3px accent rule -------- */
+.sj-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sj-space-6);
+  background-color: var(--sj-surface);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  box-shadow: var(--sj-shadow-none);
+  overflow: hidden;
+  transition: border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+/* No lift, no scale, no shadow bloom. */
+.sj-card:hover {
+  border-color: var(--sj-border-strong);
+  transform: none;
+}
+
+.sj-card__rule {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background-color: var(--sj-accent);
+  opacity: 0.85;
+}
+
+.sj-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sj-space-3);
+  margin-bottom: var(--sj-space-4);
+}
+
+.sj-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--sj-accent);
+}
+
+.sj-card__icon-svg {
+  width: 26px;
+  height: 26px;
+}
+
+.sj-card__title {
+  margin: 0 0 var(--sj-space-2);
+  font-size: var(--sj-text-lg);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--sj-text-primary);
+}
+
+.sj-card__title a {
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--sj-radius-sm);
+}
+
+.sj-card__title a:hover {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sj-card__desc {
+  margin: 0 0 var(--sj-space-4);
+  font-size: var(--sj-text-sm);
+  line-height: 1.55;
+  color: var(--sj-text-secondary);
+}
+
+/* --- Status: colour + dot + label, never colour alone -------------------- */
+.sj-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sj-space-2);
+  padding: 3px var(--sj-space-2);
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-sm);
+  color: var(--sj-text-secondary);
+  white-space: nowrap;
+}
+
+.sj-status__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--sj-radius-full);
+  background-color: currentColor;
+  flex: 0 0 auto;
+}
+
+.sj-status--active   { color: var(--sj-success); border-color: currentColor; }
+.sj-status--emerging { color: var(--sj-warning); border-color: currentColor; }
+.sj-status--planning { color: var(--sj-accent);  border-color: currentColor; }
+/* `past` keeps the neutral secondary colour, and is additionally marked by a
+   hollow dot so the four states differ by shape as well as hue. */
+.sj-status--past .sj-status__dot {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+/* --- Tags ---------------------------------------------------------------- */
+.sj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sj-space-2);
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sj-tag {
+  padding: 2px var(--sj-space-2);
+  font-size: var(--sj-text-2xs);
+  color: var(--sj-text-tertiary);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Projects placeholder
+   -------------------------------------------------------------------------- */
+.sj-projects__pending {
+  margin: 0;
+  max-width: 68ch;
+  font-size: var(--sj-text-base);
+  color: var(--sj-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Collection block corrections (homepage only)
+
+   The upstream collection block wraps items in
+   `flex flex-col items-center max-w-prose mx-auto`. `items-center` shrinks
+   each row to its own content width, which rendered the Teaching and News
+   lists as a ~210px ribbon floating in the middle of a 1440px viewport with
+   large dead space above and below. Stretch them instead.
+   -------------------------------------------------------------------------- */
+.sj-compact-list .max-w-prose,
+#publication .max-w-prose {
+  align-items: stretch;
+  max-width: 46rem;
+  width: 100%;
+  gap: 0;
+}
+
+/* The block's own archive link ("View all publications" etc.) is used as the
+   single section CTA, restyled from a bordered button into the tertiary
+   text affordance the design system specifies. */
+#publication .max-w-screen-lg,
+.sj-compact-list .max-w-screen-lg {
+  padding-bottom: 0;
+}
+
+#publication .max-w-screen-lg .mt-10,
+.sj-compact-list .max-w-screen-lg .mt-10 {
+  margin-top: var(--sj-space-6);
+  justify-content: flex-start;
+}
+
+#publication .max-w-screen-lg a,
+.sj-compact-list .max-w-screen-lg a {
+  border: 0;
+  background: none;
+  padding: 0;
+  min-height: 44px;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  color: var(--sj-accent);
+}
+
+#publication .max-w-screen-lg a:hover,
+.sj-compact-list .max-w-screen-lg a:hover {
+  background: none;
+  color: var(--sj-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Keep the archive link aligned with the list it belongs to. */
+#publication .max-w-screen-lg,
+.sj-compact-list .max-w-screen-lg {
+  max-width: 46rem;
+}
+
+/* --------------------------------------------------------------------------
+   Team snapshot
+   The shared card renders a 50%-width circular avatar inside a max-w-xl card,
+   producing a ~290px portrait and a ~650px card for a single PI. On the
+   homepage it becomes a compact horizontal snapshot.
+   -------------------------------------------------------------------------- */
+.sj-team-compact .rounded-2xl {
+  border-radius: var(--sj-radius-md);
+  box-shadow: var(--sj-shadow-none);
+  border: 1px solid var(--sj-border);
+  background-color: var(--sj-surface);
+}
+
+.sj-team-compact .rounded-2xl:hover {
+  box-shadow: var(--sj-shadow-none);
+  border-color: var(--sj-border-strong);
+}
+
+/* Portrait: 1:1, modest footprint. */
+.sj-team-compact .rounded-full {
+  width: 112px !important;
+  max-width: 112px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  box-shadow: var(--sj-shadow-none);
+}
+
+.sj-team-compact .rounded-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  /* Horizontal layout: portrait beside the details rather than stacked. */
+  .sj-team-compact .rounded-2xl > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: var(--sj-space-6);
+    text-align: left;
+    padding: var(--sj-space-6);
+  }
+
+  .sj-team-compact .rounded-full {
+    margin-inline: 0;
+    flex: 0 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Compact list sections (Teaching, News)
+   -------------------------------------------------------------------------- */
+.sj-compact-list .view-compact {
+  display: flex;
+  gap: var(--sj-space-4);
+  padding: var(--sj-space-4) 0;
+  border-bottom: 1px solid var(--sj-border);
+}
+
+.sj-compact-list .view-compact:last-of-type {
+  border-bottom: 0;
+}
+
+.sj-compact-list .view-compact .article-title,
+.sj-compact-list .view-compact .section-subheading {
+  font-size: var(--sj-text-base);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.sj-compact-list .view-compact .article-title a {
+  color: var(--sj-text-primary);
+  text-decoration: none;
+}
+
+.sj-compact-list .view-compact .article-title a:hover {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sj-compact-list .view-compact .article-style,
+.sj-compact-list .view-compact .article-metadata {
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-secondary);
+  margin-top: var(--sj-space-1);
+}
+
+/* Thumbnails in compact rows stay small and never drive row height. */
+.sj-compact-list .view-compact img {
+  max-width: 72px;
+  height: auto;
+  border-radius: var(--sj-radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Inline CTA rows (replace the removed standalone CTA section)
+   -------------------------------------------------------------------------- */
+.sj-inline-cta {
+  text-align: left;
+}
+
+.sj-inline-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sj-space-2);
+  min-height: 44px;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  color: var(--sj-accent);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.sj-inline-cta a:hover {
+  color: var(--sj-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Partners
+   -------------------------------------------------------------------------- */
+/* Partner logos.
+
+   `width: auto` + `max-height` made each logo depend on its decoded intrinsic
+   size. The logos are lazy-loaded and sit below the fold, so until they
+   decoded their computed width was 0px and the band appeared to contain a
+   single logo. Giving the image an explicit box and `object-fit: contain`
+   reserves the space up front: no dependence on decode, no layout shift,
+   aspect ratio still preserved, and nothing is stretched. */
+.sj-partners img,
+.sj-partners svg {
+  width: 100%;
+  height: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+.sj-contact-compact {
+  border-top: 1px solid var(--sj-border);
+}
+
+/* --------------------------------------------------------------------------
+   Accent remap (homepage only)
+
+   Several shared blocks still paint text and fills with Tailwind's
+   `*-primary-600`, which is the BRAND value #0c96c8 and measures 3.38:1 —
+   below AA for normal text. Phase 2A introduced --sj-accent for exactly this
+   reason but deferred the component migration.
+
+   Scoped to `.sj-home` so the fix lands on the sections this phase owns
+   without altering /publication/, /authors/ or /research/, which are
+   redesigned in Phases 4-5.
+   -------------------------------------------------------------------------- */
+.sj-home .text-primary-600,
+.sj-home .text-primary-700 {
+  color: var(--sj-accent);
+}
+
+/* A filled accent must also carry the paired contrast colour. In dark mode
+   --sj-accent is #22d3ee, so the inherited `text-white` measured 1.81:1. */
+.sj-home .bg-primary-600,
+.sj-home .bg-primary-600 * {
+  color: var(--sj-accent-contrast);
+}
+
+.sj-home .bg-primary-600 {
+  background-color: var(--sj-accent);
+}
+
+.sj-home .hover\:bg-primary-700:hover {
+  background-color: var(--sj-accent-hover);
+}
+
+.dark .sj-home .text-primary-400,
+.dark .sj-home .text-primary-300 {
+  color: var(--sj-accent);
+}
+
+/* Publication row actions (URL / Cite / DOI). These paint #0c96c8 at 12px
+   directly rather than via a Tailwind class — 3.38:1, and a ~20px target. */
+.sj-home .hb-attachment-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--sj-accent);
+  font-size: var(--sj-text-xs);
+}
+
+.sj-home .hb-attachment-link:hover {
+  color: var(--sj-accent-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Homepage motion discipline
+   Reinforces the global rule at the homepage level: nothing here may be
+   left invisible, and nothing may loop.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .sj-hero *,
+  .sj-stats,
+  .sj-stats * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
