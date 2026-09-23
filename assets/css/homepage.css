@@ -334,7 +334,7 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--sj-text-secondary);
-  opacity: 0.32;
+  opacity: 0.0;
   transition: opacity 280ms var(--sj-ease-out), color 280ms var(--sj-ease-out);
   white-space: nowrap;
 }
