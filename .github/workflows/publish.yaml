@@ -83,6 +83,21 @@ jobs:
         run: |
           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      # Phase 8 item 8.20. `header.search: true` (config/_default/params.yaml)
+      # ships the search modal and hb-search.js on every page, and that script
+      # dynamically imports /pagefind/pagefind.js. Nothing ever generated that
+      # bundle, so every page loaded the search UI and then logged
+      #   Failed to initialize Pagefind: TypeError: Failed to fetch dynamically
+      #   imported module: …/pagefind/pagefind.js
+      # — a 404 on every route, a permanently broken search box, and the only
+      # console error standing between the site and Lighthouse Best Practices 100.
+      # Pagefind is a self-contained binary, so it is pinned via npx rather than
+      # added to package.json; nothing else in the toolchain changes.
+      - name: Build the Pagefind search index
+        run: |
+          npx --yes pagefind@1.4.0 --site public
+          test -f public/pagefind/pagefind.js
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

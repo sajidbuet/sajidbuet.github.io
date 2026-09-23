@@ -10,9 +10,9 @@
 | **Phase 5 — Supporting content** | ✅ Complete (2026-09-22). `/outreach/` → `/resources/`, Teaching restructured, `/people/` retired. One manual gate: production redirects. |
 | **Phase 6 — Detail templates** | ✅ Complete (2026-09-22). Twelve detail types; one `_vendor` shadow. |
 | **Phase 7 — Responsive / a11y / cross-browser** | ✅ **PASS WITH MANUAL CHECKS REMAINING** (2026-09-22). See [`phase-7-validation.md`](phase-7-validation.md). |
-| **Phase 8 — Polish & performance** | 🟡 In progress. Items 8.14, 8.16, 8.17 and 8.18 delivered; see the roadmap. |
+| **Phase 8 — Polish & performance** | ✅ **COMPLETE WITH NON-BLOCKING LIMITATIONS** (2026-09-23). Validation complete: 22/22 checklist, no Phase 1–7 regressions. See [`phase-8-validation.md`](phase-8-validation.md). |
 
-### Phase 8 so far
+### Phase 8
 
 | # | Item |
 |---|---|
@@ -20,6 +20,35 @@
 | 8.16 | Hero background figure (superseded by 8.18) and hero vertical rhythm |
 | 8.17 | Navbar brand hidden at the top of the homepage, revealed once the hero wordmark clears the sticky header |
 | 8.18 | **Interactive research-circuit hero** — PCB/waveguide schematic, six research domains on hover/focus/tap, finite pulses, pointer spotlight, reduced-motion and mobile variants |
+| 8.19 | **KaTeX gated per page** — 602 of 602 pages → 77 of 599, with 0 pages rendering TeX without it |
+| 8.20 | **Site search made to work** — no Pagefind index had ever been generated, so it 404'd on every route. Coverage 0 → 489 pages |
+| 8.21 | **Seven links at up to 11×11 px** on the homepage, from reusing the interactive research map as an 84 px decoration |
+| 8.22–8.24 | Theme bootstrap inlined, three stylesheets merged into one, Alpine loaded on first search intent |
+| 8.26–8.27 | 24 px target floor for standalone list links; the decorative Q-PACERS mark made inert |
+| 8.28 | **Document-wide CSS leak** — an unscoped `.dark { fill }` inside the Q-PACERS inline `<style>` was setting `fill` on `<html>`, `<body>` and `<header>` in dark mode |
+| 8.29 | SVG namespace corrected (`https://` → `http://`) |
+
+**Result:** homepage Performance **81 → 90**, Best Practices **96 → 100**,
+Accessibility **100**, transfer **207 KB → 115 KB**, console errors **1 → 0** on
+every route. Manual checklist **22/22 PASS**; Phase 1–7 regression suite shows
+**no regressions**.
+
+| Route | Perf | A11y | BP | Transfer |
+|---|---|---|---|---|
+| `/` | 90 | 100 | 100 | 115 KB |
+| `/publication/` | 75 | 100 | 100 | 269 KB |
+| `/teaching/jul2025_eee303/` | 94 | 100 | 100 | 64 KB |
+
+Performance ≥ 95 was not reached on two routes. Both causes were measured and the
+remaining cost is legitimate: deleting the Q-PACERS artwork outright is worth
+**one point** (control build: 92 vs 91), and `/publication/` needs its KaTeX for
+titles that contain real mathematics. §E of the validation report has the
+evidence.
+
+**Still open:** 8.25, a WCAG 2.5.3 Label-in-Name finding on the navbar brand whose
+only real fixes change brand artwork — left as documented, by your decision. And
+`HEAD` contains 1,464 generated files from a stray `public_p8/` commit that was
+never pushed; §H.0 of the report has the fix if you want it.
 
 Homepage hero content changed with 8.18: the old heading and the
 publications/citations/h-index strip are gone, replaced by an institutional
@@ -79,6 +108,7 @@ Phase 2A evidence: `screenshots/phase2a/` (39 captures + 6 inspectable crops),
 | [`phase-5-url-migration.md`](phase-5-url-migration.md) | `/outreach/` → `/resources/` move record and alias verification |
 | [`phase-6-detail-template-map.md`](phase-6-detail-template-map.md) · [`phase-6-detail-template-qa.md`](phase-6-detail-template-qa.md) | Detail-template inventory and QA |
 | [`phase-7-validation.md`](phase-7-validation.md) | **Phase 7 gate report** — responsive matrix, keyboard, contrast, motion, zoom, touch, Chromium/Firefox/Brave, Lighthouse, and what remains manual |
+| [`phase-8-validation.md`](phase-8-validation.md) | **Phase 8 gate report** — what was wrong and what changed, Phase 1–7 regression evidence, per-route Lighthouse, why the Performance target was missed, findings left open, and the exact git commands |
 
 **Read in this order for review:** `visual-audit` → `information-architecture` →
 `design-system-proposal` → `implementation-roadmap`.

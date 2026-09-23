@@ -1,0 +1,205 @@
+{
+ "base": "http://127.0.0.1:8099",
+ "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "when": "2026-09-23T11:21:32.888Z",
+ "rows": [
+  {
+   "route": "/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/publication/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 5,
+   "katex": 4,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/publication/j-029/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 6,
+   "katex": 5,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/publication/j-019/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 6,
+   "katex": 4,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/publication/j-022/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 7,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/authors/me/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 1,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/authors/purbayan-das/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 1,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/authors/0421062341-purbayan-das/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 1,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/tags/photonics/",
+   "expectKatex": true,
+   "minRendered": 0,
+   "katexReqs": 7,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/tags/photonics/page/3/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 4,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/publication_types/article-journal/",
+   "expectKatex": true,
+   "minRendered": 1,
+   "katexReqs": 7,
+   "katex": 1,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/research/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/research/photonics/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/teaching/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/news/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/authors/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/resources/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  },
+  {
+   "route": "/projects/",
+   "expectKatex": false,
+   "minRendered": 0,
+   "katexReqs": 0,
+   "katex": 0,
+   "err": 0,
+   "raw": 0,
+   "sample": "",
+   "ok": true
+  }
+ ]
+}

@@ -295,22 +295,41 @@
         'docs': {{ i18n "docs" | default "Documentation" | jsonify }}
       },
       
-      async init() {
-        // Initialize Pagefind
-        try {
-          this.pagefind = await import(this.pagefindModulePath);
-          await this.pagefind.init();
-          console.log('✓ Pagefind initialized');
-          
-          // Load available filters
-          await this.loadFilters();
-        } catch (error) {
-          console.error('Failed to initialize Pagefind:', error);
+      /* SAJID.BD override — Phase 8 item 8.20.
+
+         Upstream did the Pagefind import, `pagefind.init()` and `loadFilters()`
+         inline in `init()`, so every page in the site downloaded and started the
+         search engine during load whether or not anybody opened the search box.
+         Measured on the homepage (Lighthouse 13.5.0, desktop, median of three):
+         total blocking time 87 ms -> 306 ms once a real /pagefind/ index existed
+         for it to find. Nothing is removed — the work simply moves to the moment
+         the modal is first opened, which is the first moment its result can
+         matter. `pagefindReady` memoises the promise so re-opening the modal,
+         and a search racing the open, share one initialisation. */
+      pagefindReady: null,
+
+      ensurePagefind() {
+        if (!this.pagefindReady) {
+          this.pagefindReady = (async () => {
+            try {
+              this.pagefind = await import(this.pagefindModulePath);
+              await this.pagefind.init();
+              await this.loadFilters();
+            } catch (error) {
+              console.error('Failed to initialize Pagefind:', error);
+              this.pagefindReady = null;   // let the next open retry
+              throw error;
+            }
+          })();
         }
-        
+        return this.pagefindReady;
+      },
+
+      async init() {
         // Keyboard navigation
         this.$watch('$store.search.open', (open) => {
           if (open) {
+            this.ensurePagefind().catch(() => {});
             this.$nextTick(() => this.$refs.searchInput?.focus());
             document.body.style.overflow = 'hidden';
           } else {
@@ -419,8 +438,13 @@
         
         this.loading = true;
         this.hasSearched = false;  // Reset until search completes
-        
+
         try {
+          /* Pagefind is now loaded on first open rather than on page load, so a
+             query typed before that promise settles has to wait for it. This is
+             the same memoised promise the open handler started. */
+          await this.ensurePagefind();
+
           const options = {};
           
           // Apply active filter if selected
@@ -430,14 +454,11 @@
           }
           
           const search = await this.pagefind.search(this.query, options);
-          console.log('Search results:', search);
-          console.log('Search filters:', search.filters);
-          
+
           // Process results
           this.results = await Promise.all(
             search.results.slice(0, 10).map(async (result) => {
               const data = await result.data();
-              console.log('Result data:', data);
               return {
                 id: data.url,
                 url: data.url,
@@ -455,8 +476,7 @@
           } else {
             this.availableFilters = this.buildFilters(filterCounts);
           }
-          console.log('Final availableFilters array:', this.availableFilters);
-          
+
           // Set first result as selected for keyboard navigation
           if (this.results.length > 0) {
             this.selectedIndex = 0;
@@ -474,12 +494,10 @@
         // Pre-load available filters from the full Pagefind index
         try {
           const filterIndex = await this.pagefind.filters();
-          console.log('Available Pagefind filters:', filterIndex);
 
           const filters = this.buildFilters(filterIndex);
           this.allFilters = filters;
           this.availableFilters = filters;
-          console.log('Processed filters:', this.availableFilters);
         } catch (error) {
           console.error('Failed to load filters:', error);
         }

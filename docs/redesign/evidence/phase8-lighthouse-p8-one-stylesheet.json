@@ -1,0 +1,60 @@
+{
+ "label": "p8-one-stylesheet",
+ "url": "http://127.0.0.1:8099/",
+ "at": "2026-09-23T06:08:54.523Z",
+ "runs": 5,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 84,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1206,
+  "lcpMs": 1843,
+  "tbtMs": 166,
+  "cls": 0.0027,
+  "speedIndexMs": 1253,
+  "mainThreadMs": 3238,
+  "transferKB": 131
+ },
+ "allScores": [
+  {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 81,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "total-blocking-time",
+  "max-potential-fid",
+  "interactive",
+  "mainthread-work-breakdown",
+  "cache-insight",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

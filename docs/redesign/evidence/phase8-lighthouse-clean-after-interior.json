@@ -1,0 +1,57 @@
+{
+ "label": "clean-after-interior",
+ "url": "http://127.0.0.1:8091/teaching/jul2025_eee303/",
+ "at": "2026-09-23T11:48:36.202Z",
+ "runs": 5,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 94,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1058,
+  "lcpMs": 1359,
+  "tbtMs": 0,
+  "cls": 0,
+  "speedIndexMs": 1058,
+  "mainThreadMs": 634,
+  "transferKB": 64
+ },
+ "allScores": [
+  {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 93,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "max-potential-fid",
+  "interactive",
+  "label-content-name-mismatch",
+  "cache-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

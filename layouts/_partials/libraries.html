@@ -34,20 +34,114 @@
 
 {{/* Load Alpine JS extension? */}}
 {{/* Alpine is needed for search modal and other interactive components */}}
-{{ if or (.Page.Store.Get "has_alpine") $show_search }}
-  <script>console.log('✓ Alpine.js loading on demand');</script>
-  {{ $alpine_js := resources.Get "dist/lib/alpinejs/cdn.min.js" }}
-  {{ $alpine_js = $alpine_js | resources.Fingerprint "sha256" }}
+{{ $alpine_js := "" }}
+{{ with resources.Get "dist/lib/alpinejs/cdn.min.js" }}
+  {{ $alpine_js = . | resources.Fingerprint "sha256" }}
+{{ end }}
+
+{{ $needs_alpine_now := .Page.Store.Get "has_alpine" }}
+
+{{ if $needs_alpine_now }}
+  {{/* A block on this page declared an Alpine dependency, so it has to be here
+       before the block is interacted with. Loaded eagerly, as upstream does.
+       (Upstream also emitted <script>console.log('✓ Alpine.js loading on
+       demand');</script> here — a line of debug noise in every visitor's
+       console, removed.) */}}
   <script src="{{ $alpine_js.RelPermalink }}" integrity="{{ $alpine_js.Data.Integrity }}" defer></script>
 {{ end }}
 
 {{/* Hugo Blox Search JavaScript (CSS is in main.css) */}}
-{{ if $show_search }}
-{{ $search_js := resources.Get "js/hb-search.js" | resources.Minify }}
-{{- if hugo.IsProduction -}}
-  {{ $search_js = $search_js | fingerprint "sha256" }}
-{{- end -}}
-<script defer src="{{ $search_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $search_js.Data.Integrity }}"{{ end }}></script>
+{{ if and $show_search (not $needs_alpine_now) }}
+  {{/* ── Search, loaded on intent ──────────────────────────────────────────
+       Phase 8 item 8.24.
+
+       Upstream loads Alpine (44.8 KB, ~87 ms of evaluation) and hb-search.js
+       (~54 ms) on EVERY page, because the search modal is Alpine-driven. Nobody
+       searches on most page views, and measured on the homepage those two were
+       the largest remaining main-thread items once KaTeX was gone.
+
+       The modal markup stays server-rendered and stays hidden by `[x-cloak]`,
+       so nothing about the page changes. What changes is when the engine
+       arrives: on the first actual intent to search. Both ways in are preserved,
+       and the Alpine bindings that normally provide them (@keydown.ctrl.k.window
+       in search-modal.html) cannot fire before Alpine exists, so this bootstrap
+       owns them until it does:
+
+         * a click on any [data-search-toggle], including the data-search-query
+           pre-fill that hb-search.js used to handle — which is all hb-search.js
+           did, so it is no longer shipped at all;
+         * Ctrl+K / Cmd+K.
+
+       After Alpine is running its own @keydown handler takes over, so the
+       bootstrap detaches its shortcut listener to avoid toggling twice.
+
+       If the load fails the modal simply never opens, which is what already
+       happened when the script 404'd — no worse, and now it does not also
+       cost every visitor the download. */}}
+  <script>
+    (() => {
+      const SRC = {{ $alpine_js.RelPermalink }};
+      const INTEGRITY = {{ $alpine_js.Data.Integrity }};
+      let booting = null;
+
+      const open = (prefill) => {
+        const store = window.Alpine && window.Alpine.store('search');
+        if (!store) return;
+        store.open = true;
+        if (!prefill) return;
+        requestAnimationFrame(() => {
+          const input = document.querySelector('[x-ref="searchInput"]');
+          if (!input) return;
+          input.value = prefill;
+          input.dispatchEvent(new Event('input'));
+        });
+      };
+
+      const boot = () => {
+        if (booting) return booting;
+        booting = new Promise((resolve, reject) => {
+          /* Alpine dispatches this once it has walked the DOM, which is the
+             first moment Alpine.store('search') exists. */
+          document.addEventListener('alpine:initialized', () => {
+            window.removeEventListener('keydown', onKey);
+            resolve();
+          }, { once: true });
+          const s = document.createElement('script');
+          s.src = SRC;
+          s.integrity = INTEGRITY;
+          s.crossOrigin = 'anonymous';
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+        return booting;
+      };
+
+      const onKey = (e) => {
+        if (e.key !== 'k' && e.key !== 'K') return;
+        if (!e.ctrlKey && !e.metaKey) return;
+        e.preventDefault();
+        boot().then(() => open()).catch(() => {});
+      };
+
+      document.addEventListener('click', (e) => {
+        const t = e.target.closest && e.target.closest('[data-search-toggle]');
+        if (!t) return;
+        e.preventDefault();
+        boot().then(() => open(t.dataset.searchQuery)).catch(() => {});
+      });
+
+      window.addEventListener('keydown', onKey);
+    })();
+  </script>
+{{ end }}
+
+{{/* Search still needs its click handler when Alpine was loaded eagerly above. */}}
+{{ if and $show_search $needs_alpine_now }}
+  {{ $search_js := resources.Get "js/hb-search.js" | resources.Minify }}
+  {{- if hugo.IsProduction -}}
+    {{ $search_js = $search_js | fingerprint "sha256" }}
+  {{- end -}}
+  <script defer src="{{ $search_js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $search_js.Data.Integrity }}"{{ end }}></script>
 {{ end }}
 
 {{/* Mermaid */}}
@@ -85,7 +179,27 @@
 {{ end }}
 
 {{/* Katex */}}
-{{ if (.Page.HasShortcode "math") | or .Params.math | or site.Params.hugoblox.content.math.enable }}
+{{/*
+  SAJID.BD override — Phase 8 item 8.19.
+
+  Upstream line was:
+
+      {{ if (.Page.HasShortcode "math") | or .Params.math | or site.Params.hugoblox.content.math.enable }}
+
+  `site.Params.hugoblox.content.math.enable` is true (config/_default/params.yaml)
+  because publication titles carry real TeX, so that condition was true for every
+  page and shipped 270 KB of katex.min.js + 23 KB of CSS to all 602 rendered
+  pages. Only 50 of them contain any maths.
+
+  The two explicit opt-ins keep working exactly as upstream, unconditionally.
+  Only the site-wide boolean is narrowed: it now resolves per page — see
+  layouts/_partials/functions/needs_katex.html for the rules and the measurement.
+
+  This file is a shadow of
+  _vendor/github.com/HugoBlox/kit/modules/blox/layouts/_partials/libraries.html.
+  Nothing else in it is modified. Re-diff it after any `hugo mod vendor`.
+*/}}
+{{ if or (.Page.HasShortcode "math") .Params.math (and site.Params.hugoblox.content.math.enable (partial "functions/needs_katex.html" .)) }}
   {{ $katex_css := resources.Get "dist/lib/katex/katex.min.css" }}
   {{ $katex_css = $katex_css | resources.Fingerprint "sha256" }}
   <link type="text/css" rel="stylesheet" href="{{ $katex_css.RelPermalink }}" integrity="{{ $katex_css.Data.Integrity }}" />

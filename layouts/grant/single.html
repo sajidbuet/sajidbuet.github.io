@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{/* Phase 7: see the note in publication/single.html — the skip-link target moved
      off the baseof wrapper (duplicate id) and onto the real <main> landmark. */}}
-<main id="main" tabindex="-1" class="max-w-4xl mx-auto px-6 py-12">
+{{/* Phase 8 item 8.20: see the note in layouts/publication/single.html. */}}
+<main id="main" tabindex="-1" data-pagefind-body class="max-w-4xl mx-auto px-6 py-12">
   <article class="prose prose-slate dark:prose-invert max-w-none">
     
     <header class="mb-8">

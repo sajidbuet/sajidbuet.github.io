@@ -1055,6 +1055,31 @@ numeric columns with no scrolling or truncation — recorded rather than forced.
 | 8.16 | ✅ **Done** — hero research-field background + hero rhythm. See below |
 | 8.17 | ✅ **Done** — navbar brand scroll-reveal on the homepage. See below |
 | 8.18 | ✅ **Done** — interactive research-circuit hero (replaces 8.16). See below |
+| 8.19 | ✅ **Done** — KaTeX gated per page. 602 of 602 pages → **77 of 599**; 0 pages render TeX without it. New `layouts/_partials/functions/needs_katex.html`, shadow of `libraries.html` |
+| 8.20 | ✅ **Done** — site search made to work at all. No Pagefind index had ever been generated, so `/pagefind/pagefind.js` 404'd on every route: the search box could never return anything and this was the only console error on the site. Index now built in CI (`publish.yaml`) and locally (`pnpm run search-index`); `data-pagefind-body` added to the publication, project, grant and author templates, taking coverage from **65 pages to 489**; Pagefind initialises on first open instead of on every page load |
+| 8.21 | ✅ **Done** — the interactive Q-PACERS map was reused as an 84 px decoration on the homepage, putting **seven tab stops of 11×11 to 34×35 px** there. Anchors stripped for the decorative instance; the full-size interactive one is untouched. New driver `phase8-svg-targets.mjs` — Phase 7 never measured links inside `<svg>` |
+| 8.22 | ✅ **Done** — theme bootstrap inlined. 1,387 bytes were costing a render-blocking round trip (302 ms) |
+| 8.23 | ✅ **Done** — three render-blocking stylesheets merged into one. Verified style-identical: 142,940 computed values across 12 routes × 2 themes, **0 cascade differences** (`phase8-css-parity.mjs`) |
+| 8.24 | ✅ **Done** — Alpine loads on first search intent, not on every page. It has exactly one consumer site-wide (the search modal). Ctrl+K and the toggle button both preserved by an inline bootstrap, since Alpine's own bindings cannot fire before Alpine exists |
+| 8.25 | ⬜ **Found, not fixed — needs a brand decision.** `label-content-name-mismatch` (WCAG 2.5.3 Label in Name) on the navbar brand. The wordmark draws real SVG `<text>` — the tagline and "Lab" — so those are the link's visible text, and they are not in its `aria-label`. `aria-hidden` does **not** fix it (2.5.3 compares against what is rendered on screen); tried, verified, reverted. Fixes: convert the `<text>` to outlines — which also ends the Arial dependency already deferred in `custom/logo.html` — or drop the tagline at navbar scale where it is ~6 px tall |
+| 8.26 | ✅ **Done** — 24 px target floor for standalone list links, the residue Phase 7 recommended closing. Under-24 actionable targets **36 → 21**; the 7 remaining unique are inline-in-a-sentence links, exempt under WCAG 2.5.5/2.5.8 |
+| 8.27 | ✅ **Done** — `pointer-events: none` on the decorative Q-PACERS mark. 8.21 removed its anchors but not the artwork's own `cursor: pointer` and `:hover` rules, leaving an 84 px decoration that showed a hand cursor and repainted ~137 shapes on mouseover with nothing to activate |
+| 8.28 | ✅ **Done** — **document-wide CSS leak** in `qpacer.html`. A `<style>` inside an inline SVG is a document stylesheet: its unscoped `.dark { fill: #d1d5db }` matched `<html class="dark">`, and `fill` is inherited, so in dark mode `<html>`, `<body>` and `<header>` all computed `fill: rgb(209,213,219)` on the homepage and all seven research pages. Scoped to `.dark .qpacer`; appearance inside the diagram verified identical across 216 shapes × 2 themes × 2 instances. Same class of defect as the Phase 2A `:root` leak in `custom/logo.html` |
+| 8.29 | ✅ **Done** — `xmlns` on the Q-PACERS SVG was `https://www.w3.org/2000/svg`; the namespace is spelled `http://`. Harmless for inline SVG (the HTML parser ignores it) but wrong, already fixed once in `logo.html` in Phase 2A, and a blocker if the file is ever served as a standalone `.svg` |
+
+**Phase 8 closure (2026-09-23).** Status **COMPLETE WITH NON-BLOCKING
+LIMITATIONS**. 22/22 manual checklist items PASS; Phase 1–7 regression suite
+shows no regressions; homepage Lighthouse **81 → 90** performance, **96 → 100**
+best practices, accessibility 100, transfer **207 KB → 115 KB**.
+
+Targeted optimisation was investigated and declined on evidence: a control build
+with the Q-PACERS mark **removed entirely** scores 92 against 91, so no
+optimisation of that artwork can be worth more than one point, and externalising
+it would freeze `var(--hb-color-header-fg)` into static files. `/publication/`
+retains 117 KB of KaTeX because its titles contain real mathematics; 18 of 20
+font faces are already never fetched and the only removable piece is the engine,
+which would require build-time maths rendering across every template that prints
+a title. Both retained. See [`phase-8-validation.md`](phase-8-validation.md).
 
 ### 8.14 — Hero/navbar gap (done)
 

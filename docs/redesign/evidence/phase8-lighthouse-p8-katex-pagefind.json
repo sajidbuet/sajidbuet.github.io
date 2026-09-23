@@ -1,0 +1,50 @@
+{
+ "label": "p8-katex-pagefind",
+ "url": "http://127.0.0.1:8099/",
+ "at": "2026-09-23T02:51:12.842Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 67,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1358,
+  "lcpMs": 2710,
+  "tbtMs": 306,
+  "cls": 0.0027,
+  "speedIndexMs": 1529,
+  "mainThreadMs": 4510,
+  "transferKB": 199
+ },
+ "allScores": [
+  {
+   "performance": 81,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 67,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 53,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "max-potential-fid",
+  "interactive",
+  "mainthread-work-breakdown",
+  "bf-cache",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight",
+  "total-blocking-time"
+ ]
+}

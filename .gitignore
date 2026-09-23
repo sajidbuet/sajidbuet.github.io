@@ -6,8 +6,14 @@
 # Hugo Build Artifacts
 # ============================================================================
 
-# Generated site output
+# Generated site output.
+# `public/` alone was not enough: every phase builds to its own scratch
+# destination (`hugo --destination public_p8`) so it can be diffed against the
+# previous one, and those escaped the pattern. Commit efebb36 added 1,464
+# generated files from `public_p8/` to the repository as a result. Match any
+# `public*` directory at the root instead.
 public/
+/public_*/
 
 # Hugo resources (processed assets).
 # Anchored to the repository root: an unanchored `resources/` also matched

@@ -1,0 +1,57 @@
+/* ===========================================================================
+   Phase 8 — final polish.
+
+   Loaded last in the concatenated bundle (see layouts/_partials/site_head.html),
+   so everything here wins against Tailwind and against phase4–7.css.
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   8.26 — 24px target floor for standalone list links.
+
+   Phase 7 measured 12 actionable targets under 24px tall and recommended a 24px
+   floor for them (phase-7-validation.md §"Touch targets"). Seven of the twelve
+   are links inside running prose — "BUET" in a sentence, "Download the detailed
+   CV", the DOI on a publication page — and those are covered by the "Inline"
+   exception that WCAG 2.5.5 and 2.5.8 both grant to targets in a sentence.
+   Enlarging them would break the line they sit in for no benefit.
+
+   The other five are not in a sentence. They are the whole content of their row
+   in the homepage teaching and news lists — "EEE 303 (Jul 2025)", "Puja Das
+   Defends MSc Thesis" — and they measured 131x21 to 245x21. A standalone list
+   link gets no exception, so at 21px they fail WCAG 2.5.8 (AA, 24x24).
+
+   padding rather than min-height or a display change: the elements are inline,
+   so min-height does nothing to them, and making them inline-block would change
+   how their text wraps. Block padding grows the hit box that target-size is
+   measured against — getBoundingClientRect includes padding — without altering
+   the line box, so nothing reflows. 21 + 2 + 2 = 25px.
+
+   Scoped to coarse pointers, where the criterion bites and where the rows are
+   already tall enough that the padded boxes cannot overlap: line-height 1.5 at
+   16px leaves ~10px between adjacent rows, and this consumes 4.
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  .view-compact .article-title a,
+  .sj-compact-list .article-title a {
+    padding-block: 2px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   8.27 — the decorative Q-PACERS mark must not behave as if it were clickable.
+
+   8.21 stripped the seven anchors out of the homepage instance and marked it
+   aria-hidden, which fixed the target-size and tab-order failures. What it did
+   not do is stop the artwork's own <style> from reacting to the pointer: that
+   block still declares `cursor: pointer` and `:hover { fill-opacity: 1 }` on the
+   six domain groups. The result was an 84px decoration that showed a hand
+   cursor and lit up on hover while having nothing to activate — a false
+   affordance, and a repaint of ~137 shapes on every mouseover.
+
+   pointer-events: none turns the whole mark back into what it now is: a picture.
+   It also removes those hover repaints. The full-size interactive instance on
+   the research pages is a different wrapper and is untouched.
+   -------------------------------------------------------------------------- */
+.sj-research__mark {
+  pointer-events: none;
+}

@@ -1,0 +1,112 @@
+{{- /*
+  Phase 8 (8.19) — does THIS page actually contain TeX?
+
+  Upstream gates KaTeX on `site.Params.hugoblox.content.math.enable`, which is a
+  site-wide boolean. Phase 4 had to switch it on because a handful of publication
+  titles carry real maths (`$\mu$`, `$\mathrm{Sb_2S_3}$`, the `$[[7,1,3]]$` code),
+  so every one of the 602 rendered pages then paid 270 KB of katex.min.js +
+  23 KB of CSS + ~420 ms of script evaluation.
+
+  A scan of the built site found TeX on 50 pages. The homepage renders zero KaTeX
+  spans, so 293 KB of its payload was pure waste. This partial replaces the
+  site-wide boolean with a per-page probe:
+
+    1. explicit opt-in  — `math: true` or the `math` shortcode;
+    2. the page's own words — title, abstract, summary and rendered body;
+    3. the words the page BORROWS — list, section and taxonomy-term pages render
+       other pages' titles, so `/publication/`, `/authors/<person>/`,
+       `/tags/photonics/page/3/` and friends need KaTeX even though their own
+       content has none. Pagination is covered automatically because `.Pages` is
+       the unpaginated set.
+    4. the homepage separately, because its `collection` block renders
+       `featured_only` publications rather than `.Pages`.
+
+  `site.Params.hugoblox.content.math.enable` is kept as the master switch: set it
+  to false and no page loads KaTeX at all. Set to true (the current setting) it
+  now means "resolve maths where maths exists" instead of "load KaTeX always".
+
+  Returns a boolean. Callers: layouts/_partials/libraries.html.
+*/ -}}
+{{- $p := .Page -}}
+{{- /* $$…$$, $…$, \[ and \( — the four delimiters katex-config.js is configured for. */ -}}
+{{- $re := `\$\$|\$[^$\n]{1,200}\$|\\\[|\\\(` -}}
+{{- $needs := false -}}
+
+{{- if or ($p.HasShortcode "math") $p.Params.math -}}
+  {{- $needs = true -}}
+{{- end -}}
+
+{{- /* One page, not worth probing, and it lists publication titles. */ -}}
+{{- if and (not $needs) (eq $p.Kind "404") -}}
+  {{- $needs = true -}}
+{{- end -}}
+
+{{- if not $needs -}}
+  {{- $own := printf "%s %s %s %s"
+      ($p.Title | default "")
+      ($p.Params.abstract | default "")
+      ($p.Params.summary | default "")
+      ($p.Plain | default "") -}}
+  {{- if findRE $re $own 1 -}}{{- $needs = true -}}{{- end -}}
+{{- end -}}
+
+{{- /*
+   Author term pages are a special case: layouts/authors/term.html does NOT
+   render `.Pages`. Two data quirks (publications write `' me'` with a leading
+   space, and student profiles live at /authors/<roll>-<name>/ while their
+   publication credits mint /authors/<name>/) mean the taxonomy term has the
+   wrong pages attached, so that template matches on the normalised author name
+   instead — see its comment at "Authored publications (Phase 6)". The same
+   matching has to happen here or seven author pages show raw `$\mu$`.
+
+   Ordered cheaply: the author lists are only walked for the handful of
+   publications whose TITLE contains maths.
+*/ -}}
+{{- if and (not $needs) (eq $p.Kind "term") (eq $p.Data.Plural "authors") -}}
+  {{- $slug := "" -}}
+  {{- with $p.Params.slug }}{{ $slug = . | urlize }}{{ end -}}
+  {{- if not $slug -}}
+    {{- with $p.File -}}
+      {{- $dir := path.Base (strings.TrimSuffix "/" .Dir) -}}
+      {{- if ne $dir "." }}{{ $slug = $dir | urlize }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $slug -}}{{- with $p.Data.Term }}{{ $slug = . | urlize }}{{ end -}}{{- end -}}
+
+  {{- $names := slice $slug -}}
+  {{- $data := or (index site.Data.authors $slug) dict -}}
+  {{- $display := or $data.name.display $data.title "" -}}
+  {{- with $display }}{{ $names = $names | append (. | urlize) }}{{ end -}}
+
+  {{- range where site.RegularPages "Section" "publication" -}}
+    {{- if and (not $needs) (findRE $re (.Title | default "") 1) -}}
+      {{- range .Params.authors -}}
+        {{- if in $names (. | strings.TrimSpace | urlize) }}{{ $needs = true }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $needs -}}
+  {{- $listed := slice -}}
+  {{- if $p.IsHome -}}
+    {{- $listed = where site.RegularPages "Params.featured" true -}}
+  {{- else if not $p.IsPage -}}
+    {{- $listed = $p.Pages -}}
+  {{- end -}}
+  {{- /*
+     TITLE ONLY, deliberately. Every list view in this site (the `citation`
+     view on /publication/ and the homepage, `compact`, and the author and
+     taxonomy term templates) renders a linked title, never the abstract.
+     Probing abstracts here pulled in the homepage and three taxonomy terms
+     whose listed TITLES are plain — 4 pages of KaTeX for nothing. If a list
+     view ever starts rendering abstracts or summaries, widen this.
+  */ -}}
+  {{- range $listed -}}
+    {{- if not $needs -}}
+      {{- if findRE $re (.Title | default "") 1 -}}{{- $needs = true -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $needs -}}

@@ -6,10 +6,10 @@
    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
    "V8-Version": "15.3.76.13",
    "WebKit-Version": "537.36 (@792bf6722e73a45aa9e47c163b9901bdc17f3230)",
-   "webSocketDebuggerUrl": "ws://127.0.0.1:9441/devtools/browser/106fb704-0243-47f0-bfac-0ca44ec23785"
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9503/devtools/browser/baf203f1-19b8-4870-9b9e-75a6c3ce64c8"
   },
-  "base": "http://127.0.0.1:1337",
-  "at": "2026-09-22T15:55:11.749Z"
+  "base": "http://127.0.0.1:8099",
+  "at": "2026-09-23T11:13:19.211Z"
  },
  "zoom": {
   "home|200|light": {
@@ -17,19 +17,66 @@
    "docScrollW": 640,
    "docClientW": 640,
    "horizontalScroll": false,
-   "bleedTotal": 0,
-   "bleedDisallowed": [],
+   "bleedTotal": 22,
+   "bleedDisallowed": [
+    {
+     "el": "g",
+     "right": 740,
+     "w": 839
+    },
+    {
+     "el": "g",
+     "right": 740,
+     "w": 839
+    },
+    {
+     "el": "path",
+     "right": 736,
+     "w": 114
+    },
+    {
+     "el": "path",
+     "right": 740,
+     "w": 87
+    },
+    {
+     "el": "path",
+     "right": 738,
+     "w": 114
+    },
+    {
+     "el": "path",
+     "right": 688,
+     "w": 35
+    },
+    {
+     "el": "g",
+     "right": 648,
+     "w": 138
+    },
+    {
+     "el": "path",
+     "right": 648,
+     "w": 138
+    },
+    {
+     "el": "g",
+     "right": 649,
+     "w": 152
+    },
+    {
+     "el": "path",
+     "right": 649,
+     "w": 133
+    }
+   ],
    "navToggleVisible": true,
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 91,
-   "textNodes": 194,
+   "interactiveVisible": 93,
+   "textNodes": 224,
    "multiColumn": [
-    {
-     "el": "dl.sj-stats",
-     "cols": "296px 296px"
-    },
     {
      "el": "ul.sj-research__grid",
      "cols": "288px 288px"
@@ -43,26 +90,73 @@
      "cols": "176px 176px 176px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "home|200|dark": {
    "cssPx": 640,
    "docScrollW": 640,
    "docClientW": 640,
    "horizontalScroll": false,
-   "bleedTotal": 0,
-   "bleedDisallowed": [],
+   "bleedTotal": 22,
+   "bleedDisallowed": [
+    {
+     "el": "g",
+     "right": 740,
+     "w": 839
+    },
+    {
+     "el": "g",
+     "right": 740,
+     "w": 839
+    },
+    {
+     "el": "path",
+     "right": 736,
+     "w": 114
+    },
+    {
+     "el": "path",
+     "right": 740,
+     "w": 87
+    },
+    {
+     "el": "path",
+     "right": 738,
+     "w": 114
+    },
+    {
+     "el": "path",
+     "right": 688,
+     "w": 35
+    },
+    {
+     "el": "g",
+     "right": 648,
+     "w": 138
+    },
+    {
+     "el": "path",
+     "right": 648,
+     "w": 138
+    },
+    {
+     "el": "g",
+     "right": 649,
+     "w": 152
+    },
+    {
+     "el": "path",
+     "right": 649,
+     "w": 133
+    }
+   ],
    "navToggleVisible": true,
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 91,
-   "textNodes": 195,
+   "interactiveVisible": 93,
+   "textNodes": 224,
    "multiColumn": [
-    {
-     "el": "dl.sj-stats",
-     "cols": "296px 296px"
-    },
     {
      "el": "ul.sj-research__grid",
      "cols": "288px 288px"
@@ -76,69 +170,151 @@
      "cols": "176px 176px 176px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "home|400|light": {
    "cssPx": 320,
    "docScrollW": 320,
    "docClientW": 320,
    "horizontalScroll": false,
-   "bleedTotal": 1,
+   "bleedTotal": 57,
    "bleedDisallowed": [
     {
-     "el": "div.absolute.bottom-full.left-1/2",
-     "right": 333,
-     "w": 185
+     "el": "g",
+     "right": 657,
+     "w": 994
+    },
+    {
+     "el": "g",
+     "right": 657,
+     "w": 994
+    },
+    {
+     "el": "path",
+     "right": 652,
+     "w": 135
+    },
+    {
+     "el": "path",
+     "right": 657,
+     "w": 103
+    },
+    {
+     "el": "path",
+     "right": 655,
+     "w": 135
+    },
+    {
+     "el": "path",
+     "right": 596,
+     "w": 42
+    },
+    {
+     "el": "g",
+     "right": 548,
+     "w": 164
+    },
+    {
+     "el": "path",
+     "right": 528,
+     "w": 143
+    },
+    {
+     "el": "path",
+     "right": 528,
+     "w": 143
+    },
+    {
+     "el": "path",
+     "right": 548,
+     "w": 164
     }
    ],
    "navToggleVisible": true,
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 91,
-   "textNodes": 195,
+   "interactiveVisible": 93,
+   "textNodes": 224,
    "multiColumn": [
-    {
-     "el": "dl.sj-stats",
-     "cols": "144px 144px"
-    },
     {
      "el": "div.grid.grid-cols-2",
      "cols": "128px 128px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "home|400|dark": {
    "cssPx": 320,
    "docScrollW": 320,
    "docClientW": 320,
    "horizontalScroll": false,
-   "bleedTotal": 1,
+   "bleedTotal": 57,
    "bleedDisallowed": [
     {
-     "el": "div.absolute.bottom-full.left-1/2",
-     "right": 333,
-     "w": 185
+     "el": "g",
+     "right": 657,
+     "w": 994
+    },
+    {
+     "el": "g",
+     "right": 657,
+     "w": 994
+    },
+    {
+     "el": "path",
+     "right": 652,
+     "w": 135
+    },
+    {
+     "el": "path",
+     "right": 657,
+     "w": 103
+    },
+    {
+     "el": "path",
+     "right": 655,
+     "w": 135
+    },
+    {
+     "el": "path",
+     "right": 596,
+     "w": 42
+    },
+    {
+     "el": "g",
+     "right": 548,
+     "w": 164
+    },
+    {
+     "el": "path",
+     "right": 528,
+     "w": 143
+    },
+    {
+     "el": "path",
+     "right": 528,
+     "w": 143
+    },
+    {
+     "el": "path",
+     "right": 548,
+     "w": 164
     }
    ],
    "navToggleVisible": true,
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 91,
-   "textNodes": 195,
+   "interactiveVisible": 93,
+   "textNodes": 224,
    "multiColumn": [
-    {
-     "el": "dl.sj-stats",
-     "cols": "144px 144px"
-    },
     {
      "el": "div.grid.grid-cols-2",
      "cols": "128px 128px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-list|200|light": {
    "cssPx": 640,
@@ -152,9 +328,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 522,
-   "textNodes": 775,
+   "textNodes": 772,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-list|200|dark": {
    "cssPx": 640,
@@ -168,9 +344,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 522,
-   "textNodes": 775,
+   "textNodes": 772,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-list|400|light": {
    "cssPx": 320,
@@ -184,9 +360,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 522,
-   "textNodes": 775,
+   "textNodes": 772,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-list|400|dark": {
    "cssPx": 320,
@@ -200,9 +376,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 522,
-   "textNodes": 775,
+   "textNodes": 772,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-detail|200|light": {
    "cssPx": 640,
@@ -216,9 +392,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 36,
-   "textNodes": 96,
+   "textNodes": 93,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-detail|200|dark": {
    "cssPx": 640,
@@ -232,9 +408,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 36,
-   "textNodes": 96,
+   "textNodes": 93,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-detail|400|light": {
    "cssPx": 320,
@@ -248,9 +424,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 36,
-   "textNodes": 96,
+   "textNodes": 93,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "publication-detail|400|dark": {
    "cssPx": 320,
@@ -264,9 +440,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 36,
-   "textNodes": 96,
+   "textNodes": 93,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "course-detail|200|light": {
    "cssPx": 640,
@@ -280,9 +456,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 28,
-   "textNodes": 101,
+   "textNodes": 98,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "course-detail|200|dark": {
    "cssPx": 640,
@@ -296,9 +472,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 28,
-   "textNodes": 101,
+   "textNodes": 98,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "course-detail|400|light": {
    "cssPx": 320,
@@ -312,9 +488,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 28,
-   "textNodes": 101,
+   "textNodes": 98,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "course-detail|400|dark": {
    "cssPx": 320,
@@ -328,9 +504,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 28,
-   "textNodes": 101,
+   "textNodes": 98,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "team-profile|200|light": {
    "cssPx": 640,
@@ -344,9 +520,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 44,
-   "textNodes": 115,
+   "textNodes": 112,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "team-profile|200|dark": {
    "cssPx": 640,
@@ -360,9 +536,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 44,
-   "textNodes": 115,
+   "textNodes": 112,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "team-profile|400|light": {
    "cssPx": 320,
@@ -376,9 +552,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 44,
-   "textNodes": 115,
+   "textNodes": 112,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "team-profile|400|dark": {
    "cssPx": 320,
@@ -392,9 +568,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 44,
-   "textNodes": 115,
+   "textNodes": 112,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "resources|200|light": {
    "cssPx": 640,
@@ -408,9 +584,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 38,
-   "textNodes": 84,
+   "textNodes": 81,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "resources|200|dark": {
    "cssPx": 640,
@@ -424,9 +600,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 38,
-   "textNodes": 84,
+   "textNodes": 81,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "resources|400|light": {
    "cssPx": 320,
@@ -440,9 +616,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 38,
-   "textNodes": 84,
+   "textNodes": 81,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "resources|400|dark": {
    "cssPx": 320,
@@ -456,9 +632,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 38,
-   "textNodes": 84,
+   "textNodes": 81,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "projects|200|light": {
    "cssPx": 640,
@@ -472,14 +648,14 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 26,
-   "textNodes": 64,
+   "textNodes": 61,
    "multiColumn": [
     {
      "el": "ul.sj-projects__grid",
      "cols": "288px 288px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "projects|200|dark": {
    "cssPx": 640,
@@ -493,14 +669,14 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 26,
-   "textNodes": 64,
+   "textNodes": 61,
    "multiColumn": [
     {
      "el": "ul.sj-projects__grid",
      "cols": "288px 288px"
     }
    ],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "projects|400|light": {
    "cssPx": 320,
@@ -514,9 +690,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 26,
-   "textNodes": 64,
+   "textNodes": 61,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "projects|400|dark": {
    "cssPx": 320,
@@ -530,9 +706,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 26,
-   "textNodes": 64,
+   "textNodes": 61,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "blog-post|200|light": {
    "cssPx": 640,
@@ -546,9 +722,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 24,
-   "textNodes": 58,
+   "textNodes": 55,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "blog-post|200|dark": {
    "cssPx": 640,
@@ -562,9 +738,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 24,
-   "textNodes": 58,
+   "textNodes": 55,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "blog-post|400|light": {
    "cssPx": 320,
@@ -578,9 +754,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 24,
-   "textNodes": 58,
+   "textNodes": 55,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   },
   "blog-post|400|dark": {
    "cssPx": 320,
@@ -594,9 +770,9 @@
    "mainVisible": true,
    "footerReachable": true,
    "interactiveVisible": 24,
-   "textNodes": 58,
+   "textNodes": 55,
    "multiColumn": [],
-   "userScalable": "width=device-width, initial-scale=1"
+   "userScalable": "width=device-width,initial-scale=1"
   }
  },
  "motion": {
@@ -605,6 +781,11 @@
    "infinite": 0,
    "infiniteDetail": [],
    "hiddenContent": [
+    {
+     "el": "g",
+     "opacity": "0",
+     "txt": "{{/* Ambient routing: reads as board con"
+    },
     {
      "el": "div.absolute.bottom-full.left-1/2",
      "opacity": "0",
@@ -693,7 +874,7 @@
      "name": "jNodePulse"
     }
    ],
-   "visibleTextChars": 5227
+   "visibleTextChars": 5165
   },
   "home|reduced": {
    "running": 0,
@@ -733,7 +914,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 5225
+   "visibleTextChars": 5163
   },
   "home|reduced-390-dark": {
    "running": 0,
@@ -773,7 +954,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 5157
+   "visibleTextChars": 5034
   },
   "research|normal": {
    "running": 0,
@@ -824,7 +1005,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 3317
+   "visibleTextChars": 3316
   },
   "research|reduced": {
    "running": 0,
@@ -864,7 +1045,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 3317
+   "visibleTextChars": 3316
   },
   "research|reduced-390-dark": {
    "running": 0,
@@ -904,7 +1085,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 3249
+   "visibleTextChars": 3248
   },
   "projects|normal": {
    "running": 0,
@@ -934,7 +1115,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 1197
+   "visibleTextChars": 1196
   },
   "projects|reduced": {
    "running": 0,
@@ -953,7 +1134,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1197
+   "visibleTextChars": 1196
   },
   "projects|reduced-390-dark": {
    "running": 0,
@@ -972,7 +1153,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1129
+   "visibleTextChars": 1128
   },
   "publication-list|normal": {
    "running": 0,
@@ -1002,7 +1183,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 15518
+   "visibleTextChars": 15517
   },
   "publication-list|reduced": {
    "running": 0,
@@ -1021,7 +1202,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 15518
+   "visibleTextChars": 15517
   },
   "publication-list|reduced-390-dark": {
    "running": 0,
@@ -1040,7 +1221,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 15450
+   "visibleTextChars": 15449
   },
   "teaching|normal": {
    "running": 0,
@@ -1070,7 +1251,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 1851
+   "visibleTextChars": 1850
   },
   "teaching|reduced": {
    "running": 0,
@@ -1089,7 +1270,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1851
+   "visibleTextChars": 1850
   },
   "teaching|reduced-390-dark": {
    "running": 0,
@@ -1108,7 +1289,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1783
+   "visibleTextChars": 1782
   },
   "team|normal": {
    "running": 0,
@@ -1138,7 +1319,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 1463
+   "visibleTextChars": 1462
   },
   "team|reduced": {
    "running": 0,
@@ -1157,7 +1338,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1463
+   "visibleTextChars": 1462
   },
   "team|reduced-390-dark": {
    "running": 0,
@@ -1176,7 +1357,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1395
+   "visibleTextChars": 1394
   },
   "resources|normal": {
    "running": 0,
@@ -1206,7 +1387,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 2892
+   "visibleTextChars": 2891
   },
   "resources|reduced": {
    "running": 0,
@@ -1225,7 +1406,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 2892
+   "visibleTextChars": 2891
   },
   "resources|reduced-390-dark": {
    "running": 0,
@@ -1244,7 +1425,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 2824
+   "visibleTextChars": 2823
   }
  },
  "semantics": {
@@ -1261,13 +1442,13 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
    "headingCount": 20,
    "headingOutline": [
-    "H1 Quantum, photonic and intelligent device resea",
+    "H1 SAJID Lab — Smart & Advanced Junction of Intel",
     "H2 Research",
     "H3 Quantum Computing & Quantum Photonics",
     "H3 Photonics & Nanophotonics",
@@ -1292,10 +1473,8 @@
    "dupIds": [],
    "positiveTabindex": 0,
    "iconOnlyControls": 20,
-   "iconOnlyWithoutName": [
-    "a.block.mb-5"
-   ],
-   "linksNoHref": 7,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
    "linksAsButtons": [],
    "buttonsNavigating": 0,
    "expandables": [
@@ -1305,6 +1484,48 @@
      "controls": "nav-menu",
      "targetExists": true,
      "name": "Open menu"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-photonics",
+     "targetExists": true,
+     "name": "Photonics"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-quantum",
+     "targetExists": true,
+     "name": "Quantum"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-embedded",
+     "targetExists": true,
+     "name": "Embedded Systems"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-antennas",
+     "targetExists": true,
+     "name": "Antennas"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-computing",
+     "targetExists": true,
+     "name": "Computing"
+    },
+    {
+     "tag": "button",
+     "state": "false",
+     "controls": "sj-domain-desc-energy",
+     "targetExists": true,
+     "name": "Energy"
     }
    ],
    "redundantRole": [],
@@ -1318,8 +1539,8 @@
     "noDims": 0,
     "noDimsSrc": []
    },
-   "svgNoName": 4,
-   "svgAriaHidden": 25,
+   "svgNoName": 3,
+   "svgAriaHidden": 26,
    "formControlsUnlabelled": 0,
    "blankNoNoopener": 0,
    "genericLinkText": 0
@@ -1337,7 +1558,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1387,7 +1608,7 @@
     "noDims": 0,
     "noDimsSrc": []
    },
-   "svgNoName": 1,
+   "svgNoName": 0,
    "svgAriaHidden": 19,
    "formControlsUnlabelled": 0,
    "blankNoNoopener": 0,
@@ -1406,7 +1627,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1444,7 +1665,7 @@
     "noDims": 0,
     "noDimsSrc": []
    },
-   "svgNoName": 1,
+   "svgNoName": 0,
    "svgAriaHidden": 13,
    "formControlsUnlabelled": 0,
    "blankNoNoopener": 0,
@@ -1463,7 +1684,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1521,7 +1742,7 @@
     "navLabels": [
      "Primary",
      "Breadcrumb",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1582,7 +1803,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1642,7 +1863,7 @@
     "navLabels": [
      "Primary",
      "Breadcrumb",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1704,7 +1925,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1772,7 +1993,7 @@
      "Primary",
      "Breadcrumb",
      "(unlabelled)",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1840,7 +2061,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1869,19 +2090,7 @@
    "dupIds": [],
    "positiveTabindex": 0,
    "iconOnlyControls": 27,
-   "iconOnlyWithoutName": [
-    "a.block.mb-5",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative",
-    "a.block.relative"
-   ],
+   "iconOnlyWithoutName": [],
    "linksNoHref": 0,
    "linksAsButtons": [],
    "buttonsNavigating": 0,
@@ -1925,7 +2134,7 @@
     "navLabels": [
      "Primary",
      "Breadcrumb",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -1988,7 +2197,7 @@
     "navLabels": [
      "Primary",
      "(unlabelled)",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -2068,7 +2277,7 @@
     "navLabels": [
      "Primary",
      "Breadcrumb",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -2125,7 +2334,7 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -2188,7 +2397,7 @@
     "navLabels": [
      "Primary",
      "Breadcrumb",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
@@ -2248,13 +2457,13 @@
     "footer": 1,
     "navLabels": [
      "Primary",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,
    "headingCount": 20,
    "headingOutline": [
-    "H1 Quantum, photonic and intelligent device resea",
+    "H1 SAJID Lab — Smart & Advanced Junction of Intel",
     "H2 Research",
     "H3 Quantum Computing & Quantum Photonics",
     "H3 Photonics & Nanophotonics",
@@ -2279,10 +2488,8 @@
    "dupIds": [],
    "positiveTabindex": 0,
    "iconOnlyControls": 21,
-   "iconOnlyWithoutName": [
-    "a.block.mb-5"
-   ],
-   "linksNoHref": 7,
+   "iconOnlyWithoutName": [],
+   "linksNoHref": 0,
    "linksAsButtons": [],
    "buttonsNavigating": 0,
    "expandables": [
@@ -2305,8 +2512,8 @@
     "noDims": 0,
     "noDimsSrc": []
    },
-   "svgNoName": 4,
-   "svgAriaHidden": 25,
+   "svgNoName": 3,
+   "svgAriaHidden": 26,
    "formControlsUnlabelled": 0,
    "blankNoNoopener": 0,
    "genericLinkText": 0
@@ -2326,7 +2533,7 @@
      "Primary",
      "Breadcrumb",
      "(unlabelled)",
-     "(unlabelled)"
+     "Footer"
     ]
    },
    "h1": 1,

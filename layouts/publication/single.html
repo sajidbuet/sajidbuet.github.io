@@ -181,7 +181,12 @@
      <main> landmark the skip link could not reach, so they move onto the real
      landmark rather than being dropped. Verified: 626 of 626 EN routes now have
      exactly one <main> carrying exactly one id="main". */}}
-<main id="main" tabindex="-1" class="min-w-0 xl:col-span-8 space-y-8">
+{{/* Phase 8 item 8.20: `data-pagefind-body`. Pagefind indexes only the
+     elements carrying this attribute once ANY page on the site has one, and
+     until now only the three prose templates did — so the search box covered
+     65 of 626 pages and returned nothing at all for publications. The attribute
+     is inert: no styling, no script, no layout effect. */}}
+<main id="main" tabindex="-1" data-pagefind-body class="min-w-0 xl:col-span-8 space-y-8">
 
         {{ with .Params.abstract }}
           <div class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm dark:border-slate-800 dark:bg-slate-900">

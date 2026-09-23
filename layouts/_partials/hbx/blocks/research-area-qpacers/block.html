@@ -29,8 +29,27 @@
 
       {{ with $text }}
       <div class="sj-research__intro">
-        <div class="sj-research__mark">
-          {{ partial "qpacer" $ }}
+        {{/* Phase 8 item 8.21 — the Q-PACERS diagram, decorative.
+
+             `qpacer.html` is the INTERACTIVE research map: seven <a> elements
+             over the six domain glyphs and the centre. That is right where the
+             diagram is rendered full size (the hero-qpacers block on the
+             research pages). Here it is an 84px mark beside the lede, and
+             reusing it verbatim put seven tab stops on the homepage measuring
+             33.9x13.2, 29.8x25.6, 15.1x34.6, 17.9x35.3, 30.9x26.8, 31.8x19.5
+             and 11x11 CSS px — every one under the 44x44 of WCAG 2.5.5, six of
+             the seven under even the 24x24 of 2.5.8, and the same on a coarse
+             pointer. Phase 7's touch-target audit measured HTML elements and
+             never descended into SVG, so this was missed.
+
+             Stripping the anchors here rather than adding a flag to the 409-line
+             partial keeps one copy of the artwork. Nothing is lost: the six
+             destinations are the six cards immediately below, at full size and
+             properly labelled, and the seventh pointed at the page you are on.
+             aria-hidden follows because a decorative duplicate of those cards
+             has nothing to tell a screen reader. */}}
+        <div class="sj-research__mark" aria-hidden="true">
+          {{ partial "qpacer" $ | replaceRE `</?a\b[^>]*>` "" | safeHTML }}
         </div>
         <p class="sj-research__lede">{{ . }}</p>
       </div>

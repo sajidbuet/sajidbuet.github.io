@@ -1,0 +1,46 @@
+{
+ "label": "route-course-detail",
+ "url": "http://127.0.0.1:8099/teaching/jul2025_eee303/",
+ "at": "2026-09-23T06:19:02.748Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 94,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1056,
+  "lcpMs": 1431,
+  "tbtMs": 0,
+  "cls": 0,
+  "speedIndexMs": 1056,
+  "mainThreadMs": 622,
+  "transferKB": 64
+ },
+ "allScores": [
+  {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "interactive",
+  "label-content-name-mismatch",
+  "cache-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

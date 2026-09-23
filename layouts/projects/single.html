@@ -13,7 +13,8 @@
 {{ with .Params.image.filename }}{{ with $.Resources.GetMatch . }}{{ $img = . }}{{ end }}{{ end }}
 {{ if not $img }}{{ with .Resources.GetMatch "{thumbnail,featured,cover}.*" }}{{ $img = . }}{{ end }}{{ end }}
 
-<main id="main" tabindex="-1" class="sj-container-content sj-project">
+{{/* Phase 8 item 8.20: see the note in layouts/publication/single.html. */}}
+<main id="main" tabindex="-1" data-pagefind-body class="sj-container-content sj-project">
 
   <header class="sj-project__head">
     {{ partial "breadcrumbs.html" . }}

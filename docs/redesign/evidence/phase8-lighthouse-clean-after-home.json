@@ -1,0 +1,60 @@
+{
+ "label": "clean-after-home",
+ "url": "http://127.0.0.1:8091/",
+ "at": "2026-09-23T11:43:47.194Z",
+ "runs": 5,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 90,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1208,
+  "lcpMs": 1730,
+  "tbtMs": 9,
+  "cls": 0.0027,
+  "speedIndexMs": 1208,
+  "mainThreadMs": 3067,
+  "transferKB": 115
+ },
+ "allScores": [
+  {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "interactive",
+  "mainthread-work-breakdown",
+  "cache-insight",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight",
+  "max-potential-fid",
+  "total-blocking-time"
+ ]
+}

@@ -1,0 +1,86 @@
+[
+ {
+  "n": 1,
+  "name": "No white band between navbar and hero",
+  "verdict": "PASS",
+  "detail": "gap between header bottom (65px) and hero top (65px) = 0px"
+ },
+ {
+  "n": 2,
+  "name": "Navbar logo hidden at homepage top",
+  "verdict": "PASS",
+  "detail": "scrollY=0: visibility=hidden, opacity=0, removed from tab order=true"
+ },
+ {
+  "n": 3,
+  "name": "Navbar logo appears after scrolling",
+  "verdict": "PASS",
+  "detail": "scrollY=1400: visibility=visible, opacity=1"
+ },
+ {
+  "n": 4,
+  "name": "Navbar does not shift when logo appears",
+  "verdict": "PASS",
+  "detail": "header height at top 65px vs scrolled 65px (delta 0.00px); brand box reserved at top = 240x44"
+ },
+ {
+  "n": 5,
+  "name": "Hero metrics absent",
+  "verdict": "PASS",
+  "detail": ".sj-stats* elements in hero: 0; publication/citation/h-index wording present: false"
+ },
+ {
+  "n": 6,
+  "name": "Redundant hero logo absent",
+  "verdict": "PASS",
+  "detail": "wordmarks inside hero: 1 (the <h1>); navbar brand simultaneously visible: false — exactly one brand mark on screen at the top"
+ },
+ {
+  "n": 7,
+  "name": "Generic old hero headline absent",
+  "verdict": "PASS",
+  "detail": "hero text does not contain a generic headline. Hero copy: \"SAJID Lab — Smart & Advanced Junction of Intelligent Devices Smart &Advanced Junction of Intelligent Devices Lab | DEPARTMENT OF EEE · BUET From recon…\""
+ },
+ {
+  "n": 8,
+  "name": "\"Sajid Lab\" retained",
+  "verdict": "PASS",
+  "detail": "h1 accessible name: \"SAJID Lab — Smart & Advanced Junction of Intelligent Devices Smart &Advanced Jun\""
+ },
+ {
+  "n": 9,
+  "name": "\"Department of EEE, BUET\" retained",
+  "verdict": "PASS",
+  "detail": "hero eyebrow text found: DEPARTMENT OF EEE · BUET From reconfigurable photonic devices and quantum technologies to embedded computing, antennas, and energy systems — we design, simulate, fabricate, and build"
+ },
+ {
+  "n": 10,
+  "name": "\"Led by Prof. Sajid Muhaimin Choudhury, PhD\" retained",
+  "verdict": "PASS",
+  "detail": "Led by Prof. Sajid Muhaimin Choudhury, PhD Explore Our Research Me"
+ },
+ {
+  "n": 11,
+  "name": "Research imagery subdued while idle",
+  "verdict": "PASS",
+  "detail": "idle: base layer opacity 0.13, spotlight layer 0, individual trace 1, data-active=null, 78 traces, 6 domain controls"
+ },
+ {
+  "n": 12,
+  "name": "Research imagery becomes prominent on interaction",
+  "verdict": "PASS",
+  "detail": "reached \"Photonics\" by Tab x15: base layer opacity 0.13 (idle) -> 0.42 (domain \"photonics\" active)"
+ },
+ {
+  "n": 13,
+  "name": "Relevant research label appears/emphasizes on interaction",
+  "verdict": "PASS",
+  "detail": "label \"Photonics\" opacity 1 while its domain is active"
+ },
+ {
+  "n": 14,
+  "name": "PCB traces respond appropriately",
+  "verdict": "PASS",
+  "detail": "1 traces tagged \"photonics\" at opacity 1; a non-active trace group is dimmed to 0.55 (idle groups: 1)"
+ }
+]

@@ -1,0 +1,60 @@
+{
+ "label": "p8-after-svg-a11y",
+ "url": "http://127.0.0.1:8099/",
+ "at": "2026-09-23T05:58:03.603Z",
+ "runs": 5,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 85,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1355,
+  "lcpMs": 1782,
+  "tbtMs": 151,
+  "cls": 0.0027,
+  "speedIndexMs": 1402,
+  "mainThreadMs": 2807,
+  "transferKB": 132
+ },
+ "allScores": [
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 85,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 87,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "total-blocking-time",
+  "max-potential-fid",
+  "interactive",
+  "mainthread-work-breakdown",
+  "bf-cache",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

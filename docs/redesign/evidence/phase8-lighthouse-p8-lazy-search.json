@@ -1,0 +1,50 @@
+{
+ "label": "p8-lazy-search",
+ "url": "http://127.0.0.1:8099/",
+ "at": "2026-09-23T02:56:55.224Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 71,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1359,
+  "lcpMs": 1858,
+  "tbtMs": 362,
+  "cls": 0.0027,
+  "speedIndexMs": 1565,
+  "mainThreadMs": 5194,
+  "transferKB": 132
+ },
+ "allScores": [
+  {
+   "performance": 71,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 64,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 87,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "total-blocking-time",
+  "max-potential-fid",
+  "interactive",
+  "mainthread-work-breakdown",
+  "bf-cache",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

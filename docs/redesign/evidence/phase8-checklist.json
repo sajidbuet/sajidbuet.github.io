@@ -1,0 +1,1398 @@
+{
+ "base": "http://127.0.0.1:8099",
+ "when": "2026-09-23T11:10:40.089Z",
+ "checklist": [
+  {
+   "n": 1,
+   "name": "No white band between navbar and hero",
+   "verdict": "PASS",
+   "detail": "gap between header bottom (65px) and hero top (65px) = 0px"
+  },
+  {
+   "n": 2,
+   "name": "Navbar logo hidden at homepage top",
+   "verdict": "PASS",
+   "detail": "scrollY=0: visibility=hidden, opacity=0, removed from tab order=true"
+  },
+  {
+   "n": 3,
+   "name": "Navbar logo appears after scrolling",
+   "verdict": "PASS",
+   "detail": "scrollY=1400: visibility=visible, opacity=1"
+  },
+  {
+   "n": 4,
+   "name": "Navbar does not shift when logo appears",
+   "verdict": "PASS",
+   "detail": "header height at top 65px vs scrolled 65px (delta 0.00px); brand box reserved at top = 240x44"
+  },
+  {
+   "n": 5,
+   "name": "Hero metrics absent",
+   "verdict": "PASS",
+   "detail": ".sj-stats* elements in hero: 0; publication/citation/h-index wording present: false"
+  },
+  {
+   "n": 6,
+   "name": "Redundant hero logo absent",
+   "verdict": "PASS",
+   "detail": "wordmarks inside hero: 1 (the <h1>); navbar brand simultaneously visible: false — exactly one brand mark on screen at the top"
+  },
+  {
+   "n": 7,
+   "name": "Generic old hero headline absent",
+   "verdict": "PASS",
+   "detail": "hero text does not contain a generic headline. Hero copy: \"SAJID Lab — Smart & Advanced Junction of Intelligent Devices Smart &Advanced Junction of Intelligent Devices Lab | DEPARTMENT OF EEE · BUET From recon…\""
+  },
+  {
+   "n": 8,
+   "name": "\"Sajid Lab\" retained",
+   "verdict": "PASS",
+   "detail": "h1 accessible name: \"SAJID Lab — Smart & Advanced Junction of Intelligent Devices Smart &Advanced Jun\""
+  },
+  {
+   "n": 9,
+   "name": "\"Department of EEE, BUET\" retained",
+   "verdict": "PASS",
+   "detail": "hero eyebrow text found: DEPARTMENT OF EEE · BUET From reconfigurable photonic devices and quantum technologies to embedded computing, antennas, and energy systems — we design, simulate, fabricate, and build"
+  },
+  {
+   "n": 10,
+   "name": "\"Led by Prof. Sajid Muhaimin Choudhury, PhD\" retained",
+   "verdict": "PASS",
+   "detail": "Led by Prof. Sajid Muhaimin Choudhury, PhD Explore Our Research Me"
+  },
+  {
+   "n": 11,
+   "name": "Research imagery subdued while idle",
+   "verdict": "PASS",
+   "detail": "idle: base layer opacity 0.13, spotlight layer 0, individual trace 1, data-active=null, 78 traces, 6 domain controls"
+  },
+  {
+   "n": 12,
+   "name": "Research imagery becomes prominent on interaction",
+   "verdict": "PASS",
+   "detail": "reached \"Photonics\" by Tab x15: base layer opacity 0.13 (idle) -> 0.42 (domain \"photonics\" active)"
+  },
+  {
+   "n": 13,
+   "name": "Relevant research label appears/emphasizes on interaction",
+   "verdict": "PASS",
+   "detail": "label \"Photonics\" opacity 1 while its domain is active"
+  },
+  {
+   "n": 14,
+   "name": "PCB traces respond appropriately",
+   "verdict": "PASS",
+   "detail": "1 traces tagged \"photonics\" at opacity 1; a non-active trace group is dimmed to 0.55 (idle groups: 1)"
+  },
+  {
+   "n": 15,
+   "name": "Hero remains readable at all tested viewport sizes",
+   "verdict": "PASS",
+   "detail": "14 homepage cells (7 widths x 2 themes): lede font 16-18px and visible everywhere; wordmark 293-380px wide, inside the viewport in every cell; eyebrow and both CTAs present and unclipped everywhere"
+  },
+  {
+   "n": 16,
+   "name": "Touch/mobile experience does not depend on hover",
+   "verdict": "PASS",
+   "detail": "390x844, pointer:coarse=true, any-hover:none=true. Synthesised tap on the \"photonics\" control (62x51px): data-active null -> \"photonics\". 6 tap targets present"
+  },
+  {
+   "n": 17,
+   "name": "Reduced-motion mode works",
+   "verdict": "PASS",
+   "detail": "prefers-reduced-motion honoured=true; infinite animations=0; running animations=0; hero parts hidden by the reduced-motion path=[] (content must stay visible, not just still)"
+  },
+  {
+   "n": 18,
+   "name": "No horizontal overflow",
+   "verdict": "PASS",
+   "detail": "44 cells measured (homepage at 375/430/768/1024/1280/1440/1920 x light+dark, plus 10 interior routes at mobile/tablet/desktop): 0 with document scrollWidth > clientWidth"
+  },
+  {
+   "n": 19,
+   "name": "No new console errors",
+   "verdict": "PASS",
+   "detail": "0 console errors across every navigation in this run (44 viewport cells + reduced-motion + 5 dark-mode routes + mobile menu). none"
+  },
+  {
+   "n": 20,
+   "name": "Dark mode remains legible",
+   "verdict": "PASS",
+   "detail": "WCAG 1.4.3 contrast computed for every leaf text node on 5 routes in dark mode: 0 below threshold. [\"/:0\",\"/publication/:0\",\"/authors/me/:0\",\"/teaching/jul2025_eee303/:0\",\"/resources/:0\"]"
+  },
+  {
+   "n": 21,
+   "name": "Keyboard navigation works",
+   "verdict": "PASS",
+   "detail": "25 consecutive Tab stops on the homepage: 25 had a visible focus indicator, 0 did not. First stop is the skip link: true. Mobile (390px) menu toggle is focusable=true, aria-expanded false->true, menu visible=true with 8 links"
+  },
+  {
+   "n": 22,
+   "name": "No Phase 1-7 URL/IA regressions",
+   "verdict": "PASS",
+   "detail": "19 Phase 1-7 canonical routes + 8 distinct primary-nav destinations fetched: 0 non-200. all 200"
+  }
+ ],
+ "matrix": [
+  {
+   "route": "/",
+   "viewport": "375x812",
+   "theme": "light",
+   "vw": 375,
+   "docScrollW": 375,
+   "docClientW": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 375,
+   "footerOverflows": false,
+   "footerH": 1254,
+   "hero": {
+    "ledeFont": 16,
+    "ledeVisible": true,
+    "markW": 293,
+    "markH": 80,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "375x812",
+   "theme": "dark",
+   "vw": 375,
+   "docScrollW": 375,
+   "docClientW": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 375,
+   "footerOverflows": false,
+   "footerH": 1254,
+   "hero": {
+    "ledeFont": 16,
+    "ledeVisible": true,
+    "markW": 293,
+    "markH": 80,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "430x932",
+   "theme": "light",
+   "vw": 430,
+   "docScrollW": 430,
+   "docClientW": 430,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 430,
+   "footerOverflows": false,
+   "footerH": 1126,
+   "hero": {
+    "ledeFont": 16,
+    "ledeVisible": true,
+    "markW": 335,
+    "markH": 92,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "430x932",
+   "theme": "dark",
+   "vw": 430,
+   "docScrollW": 430,
+   "docClientW": 430,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 430,
+   "footerOverflows": false,
+   "footerH": 1126,
+   "hero": {
+    "ledeFont": 16,
+    "ledeVisible": true,
+    "markW": 335,
+    "markH": 92,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "768x1024",
+   "theme": "dark",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 3,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1024x768",
+   "theme": "light",
+   "vw": 1024,
+   "docScrollW": 1024,
+   "docClientW": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1024,
+   "footerOverflows": false,
+   "footerH": 660,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1024x768",
+   "theme": "dark",
+   "vw": 1024,
+   "docScrollW": 1024,
+   "docClientW": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1024,
+   "footerOverflows": false,
+   "footerH": 660,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1280x800",
+   "theme": "light",
+   "vw": 1280,
+   "docScrollW": 1280,
+   "docClientW": 1280,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1280,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1280x800",
+   "theme": "dark",
+   "vw": 1280,
+   "docScrollW": 1280,
+   "docClientW": 1280,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1280,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1440x900",
+   "theme": "dark",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1920x1080",
+   "theme": "light",
+   "vw": 1920,
+   "docScrollW": 1920,
+   "docClientW": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1920,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/",
+   "viewport": "1920x1080",
+   "theme": "dark",
+   "vw": 1920,
+   "docScrollW": 1920,
+   "docClientW": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": 0,
+   "heroOverlapsHeader": false,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 10,
+   "footerW": 1920,
+   "footerOverflows": false,
+   "footerH": 612,
+   "hero": {
+    "ledeFont": 18,
+    "ledeVisible": true,
+    "markW": 380,
+    "markH": 104,
+    "markFits": true,
+    "eyebrowVisible": true,
+    "actions": [
+     [
+      207,
+      44
+     ],
+     [
+      156,
+      44
+     ]
+    ],
+    "actionsWrapOk": true
+   }
+  },
+  {
+   "route": "/research/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/research/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/research/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/publication/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/publication/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/publication/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/publication/j-029/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/publication/j-029/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/publication/j-029/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/teaching/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/teaching/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/teaching/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/teaching/jul2025_eee303/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/teaching/jul2025_eee303/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/teaching/jul2025_eee303/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/authors/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/authors/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/authors/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/authors/me/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/authors/me/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/authors/me/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/news/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/news/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/news/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/resources/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/resources/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/resources/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  },
+  {
+   "route": "/projects/",
+   "viewport": "390x844",
+   "theme": "light",
+   "vw": 390,
+   "docScrollW": 390,
+   "docClientW": 390,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 390,
+   "footerOverflows": false,
+   "footerH": 1166
+  },
+  {
+   "route": "/projects/",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "docScrollW": 768,
+   "docClientW": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 1,
+   "navItemCount": 4,
+   "footerW": 768,
+   "footerOverflows": false,
+   "footerH": 998
+  },
+  {
+   "route": "/projects/",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "docScrollW": 1440,
+   "docClientW": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "bleedCount": 0,
+   "headerH": 65,
+   "heroGap": null,
+   "heroOverlapsHeader": null,
+   "navClipped": [],
+   "navRows": 2,
+   "navItemCount": 11,
+   "footerW": 1440,
+   "footerOverflows": false,
+   "footerH": 612
+  }
+ ],
+ "routeStatus": [
+  {
+   "route": "/",
+   "status": 200
+  },
+  {
+   "route": "/research/",
+   "status": 200
+  },
+  {
+   "route": "/research/photonics/",
+   "status": 200
+  },
+  {
+   "route": "/research/quantum/",
+   "status": 200
+  },
+  {
+   "route": "/research/antenna/",
+   "status": 200
+  },
+  {
+   "route": "/research/computing/",
+   "status": 200
+  },
+  {
+   "route": "/research/embedded/",
+   "status": 200
+  },
+  {
+   "route": "/research/renewable/",
+   "status": 200
+  },
+  {
+   "route": "/research/funding/",
+   "status": 200
+  },
+  {
+   "route": "/publication/",
+   "status": 200
+  },
+  {
+   "route": "/publication/j-029/",
+   "status": 200
+  },
+  {
+   "route": "/projects/",
+   "status": 200
+  },
+  {
+   "route": "/teaching/",
+   "status": 200
+  },
+  {
+   "route": "/teaching/jul2025_eee303/",
+   "status": 200
+  },
+  {
+   "route": "/authors/",
+   "status": 200
+  },
+  {
+   "route": "/authors/me/",
+   "status": 200
+  },
+  {
+   "route": "/news/",
+   "status": 200
+  },
+  {
+   "route": "/resources/",
+   "status": 200
+  },
+  {
+   "route": "/resources/blog/20260124-citation-count/",
+   "status": 200
+  }
+ ],
+ "navStatus": [
+  {
+   "href": "/",
+   "status": 200
+  },
+  {
+   "href": "/research/",
+   "status": 200
+  },
+  {
+   "href": "/publication/",
+   "status": 200
+  },
+  {
+   "href": "/projects/",
+   "status": 200
+  },
+  {
+   "href": "/teaching/",
+   "status": 200
+  },
+  {
+   "href": "/authors/",
+   "status": 200
+  },
+  {
+   "href": "/resources/",
+   "status": 200
+  },
+  {
+   "href": "/#contact",
+   "status": 200
+  }
+ ]
+}

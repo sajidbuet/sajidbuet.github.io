@@ -22,8 +22,9 @@
   "packageManager": "pnpm@10.14.0",
   "private": true,
   "scripts": {
-    "build": "hugo --minify",
-    "dev": "hugo server --disableFastRender"
+    "build": "hugo --minify && pnpm run search-index",
+    "dev": "hugo server --disableFastRender",
+    "search-index": "npx --yes pagefind@1.4.0 --site public"
   },
   "version": "1.0.0"
 }

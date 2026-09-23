@@ -63,52 +63,55 @@
     {{ partial "functions/demo_theme_styles.html" (dict "typography" $theme_config.typography "layout" $theme_config.layout) }}
   {{ end }}
 
-  {{/* Tailwind CSS v4 Processing */}}
-  {{/* Use templates.Defer to process CSS after all content is analyzed */}}
+  {{/* ── Stylesheets ────────────────────────────────────────────────────────
+       Phase 8 item 8.23: ONE render-blocking stylesheet, not three.
+
+       Every stylesheet here is render-blocking by nature — they style the first
+       paint — so the cost that can actually be removed is the per-request one.
+       Upstream linked the Tailwind build and the community blox bundle
+       separately, and Phase 2A added a third link for the project CSS. Lighthouse
+       13.5.0 charged 452 ms to main.css and a further 302 ms to
+       sajid-foundation.css, most of which is a second round trip for a file the
+       browser can only discover after the first one is already in flight.
+
+       Concatenation order IS the cascade and must not change:
+         1. Tailwind (utilities and preflight)
+         2. community blox (upstream block styles)
+         3. tokens.css   — defines the custom properties everything else reads
+         4. custom.css, homepage.css, phase4–8.css — project overrides, which
+            have to win against Tailwind, hence last.
+       This is the exact order the three <link> elements produced, so the
+       computed styles are unchanged; only the number of requests differs. */}}
+  {{ $css := slice }}
+
   {{ with resources.Get "css/main.css" }}
-  {{ $opts := dict
-    "inlineImports" true
-    "minify" (not hugo.IsDevelopment)
-  }}
-  {{ with . | css.TailwindCSS $opts }}
+    {{ $opts := dict "inlineImports" true "minify" (not hugo.IsDevelopment) }}
+    {{ with . | css.TailwindCSS $opts }}{{ $css = $css | append . }}{{ end }}
+  {{ end }}
+
+  {{ with resources.Match "dist/community/blox/**.css" }}
+    {{ $css = $css | append . }}
+  {{ end }}
+
+  {{/* tokens.css must precede custom.css: custom.css consumes its variables. */}}
+  {{ range slice "css/tokens.css" "css/custom.css" "css/homepage.css"
+                 "css/phase4.css" "css/phase5.css" "css/phase6.css"
+                 "css/phase7.css" "css/phase8.css" }}
+    {{ with resources.Get . }}{{ $css = $css | append . }}{{ end }}
+  {{ end }}
+
+  {{ with $css }}
+    {{ $bundle := . | resources.Concat "css/sajid.css" }}
     {{ if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" />
+      <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
     {{ else }}
-      {{ with . | fingerprint }}
-        <link
-          rel="stylesheet"
-          href="{{ .RelPermalink }}"
-          integrity="{{ .Data.Integrity }}"
-          crossorigin="anonymous" />
-      {{ end }}
+      {{ $bundle = $bundle | minify | fingerprint "sha256" }}
+      <link
+        rel="stylesheet"
+        href="{{ $bundle.RelPermalink }}"
+        integrity="{{ $bundle.Data.Integrity }}"
+        crossorigin="anonymous" />
     {{ end }}
-  {{ end }}
-{{ end }}
-
-  {{/* Load community blox styles */}}
-  {{ $hb_community_styles := resources.Match "dist/community/blox/**.css" }}
-  {{ with $hb_community_styles }}
-    {{ $hb_community_styles = $hb_community_styles | resources.Concat "css/community-hugo-blox.css" }}
-    {{- if hugo.IsProduction -}}
-      {{- $hb_community_styles = $hb_community_styles | minify | fingerprint "sha256" -}}
-    {{- end -}}
-    <link href="{{ $hb_community_styles.RelPermalink }}" rel="stylesheet" />
-  {{ end }}
-
-  {{/* SAJID.BD project stylesheets.
-       tokens.css must precede custom.css: custom.css consumes its variables.
-       Concatenated into one request rather than linked separately. */}}
-  {{ $project_css := slice }}
-  {{ with resources.Get "css/tokens.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/custom.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/homepage.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/phase4.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/phase5.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/phase6.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with resources.Get "css/phase7.css" }}{{ $project_css = $project_css | append . }}{{ end }}
-  {{ with $project_css }}
-    {{ $styles := . | resources.Concat "css/sajid-foundation.css" | minify | fingerprint "sha256" }}
-    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
   {{ end }}
 
   {{/* Phase 8 — no-JS fallback for the homepage navbar brand reveal.
@@ -126,12 +129,25 @@
     <noscript><style>.sj-home .navbar-brand{visibility:visible;opacity:1;transform:none}</style></noscript>
   {{ end }}
 
-  {{/* Externalized init scripts for CSP-friendly head */}}
+  {{/* Theme bootstrap — INLINED. Phase 8 item 8.22.
+
+       hb-head.js sets `window.hbb` and applies the stored dark/light class to
+       <html>. It has to run before first paint or the page flashes the wrong
+       theme, so it is a synchronous script in <head> and blocks rendering by
+       design. Upstream also ships it as a SEPARATE FILE, which means the blocking
+       is a whole network round trip rather than a parse: Lighthouse 13.5.0
+       attributed 302 ms of render-blocking to it — for 1,387 bytes, the smallest
+       resource on the page. Inlining keeps the pre-paint guarantee and removes
+       the round trip.
+
+       `js.Build` emits a self-contained IIFE, so there is nothing left to
+       resolve at run time. The dropped `integrity`/`crossorigin` attributes are
+       meaningless for inline script, and the site sets no Content-Security-Policy
+       (no meta, no _headers file, and GitHub Pages cannot add one), so the
+       "CSP-friendly head" that upstream's comment was protecting does not exist
+       here. If a CSP is ever added, this must go back to a file or gain a hash. */}}
   {{- $hb_head := resources.Get "js/hb-head.js" | js.Build | resources.Minify -}}
-  {{- if hugo.IsProduction -}}
-    {{- $hb_head = $hb_head | fingerprint "sha256" -}}
-  {{- end -}}
-  <script src="{{ $hb_head.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $hb_head.Data.Integrity }}" crossorigin="anonymous"{{ end }}></script>
+  <script>{{ $hb_head.Content | safeJS }}</script>
 
   {{/* Analytics & Verification */}}
   {{/* !CACHED! All analytics and verification code is at site level partialCached */}}

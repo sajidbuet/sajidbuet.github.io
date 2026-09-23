@@ -1,4 +1,15 @@
-<svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" viewBox="0 0 386.53 356.56" width="100%" height="100%">
+{{/* Phase 8 closure — two corrections to this element, no change to the artwork.
+
+     1. xmlns was "https://www.w3.org/2000/svg". The SVG namespace is an opaque
+        identifier and is spelled http://, not https://. An HTML parser ignores
+        xmlns on inline SVG, which is why this rendered anyway, but the value was
+        wrong and the same mistake was already fixed in custom/logo.html in
+        Phase 2A. It also has to be right before this file could ever be served
+        as a standalone .svg — with https:// it would not render at all.
+
+     2. `class="qpacer"` exists so the <style> below can scope itself. See the
+        note on the .dark rule in that block. */}}
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="qpacer" viewBox="0 0 386.53 356.56" width="100%" height="100%">
   {{/* Phase 7: the diagram is an interactive map of the six research areas,
        so it must NOT be role="img" (that would hide its seven links). A <title>
        gives it an accessible name while leaving the links exposed. */}}
@@ -117,9 +128,33 @@
         fill: var(--hb-color-header-fg);
       }
 
-    .dark {
+    /* Phase 8 closure — this rule used to read `.dark { fill: #d1d5db; }`.
+
+       A <style> inside an INLINE svg is a document stylesheet, not a scoped one.
+       No element in this diagram carries class="dark" — the class is on <html>
+       — so that selector only ever matched the document root, and `fill` is an
+       inherited property. Measured on the built site: in dark mode, on every
+       page carrying this diagram, <html>, <body> AND <header> all computed
+       `fill: rgb(209, 213, 219)`; on pages without it they correctly computed
+       `rgb(0, 0, 0)`. Any SVG on the homepage or the seven research pages that
+       relied on the initial `fill` therefore changed colour in dark mode only.
+
+       This is the same class of defect Phase 2A fixed in custom/logo.html, where
+       an inline <style> declared `:root` and leaked three custom properties
+       site-wide.
+
+       Scoping it to the diagram keeps the effect identical INSIDE the svg —
+       unclassed shapes still inherit #d1d5db from the svg root instead of from
+       <html> — and removes it from everything else.
+
+       The remaining selectors here (.home, .Q, .P, .A, .C, .E, .R, .arrow) are
+       also unscoped global names. None of them currently matches anything
+       outside this svg, verified on five routes, so they are a latent collision
+       risk rather than a live defect, and scoping all of them is a rewrite this
+       closure pass deliberately does not do. */
+    .dark .qpacer {
       fill: #d1d5db;
-    }  
+    }
     .dark  .cls-16 {
         fill: #272934;
       }

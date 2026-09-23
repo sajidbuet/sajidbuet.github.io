@@ -1,0 +1,49 @@
+{
+ "label": "route-team-profile",
+ "url": "http://127.0.0.1:8099/authors/me/",
+ "at": "2026-09-23T06:19:54.313Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 84,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1358,
+  "lcpMs": 2183,
+  "tbtMs": 27,
+  "cls": 0,
+  "speedIndexMs": 1358,
+  "mainThreadMs": 872,
+  "transferKB": 172
+ },
+ "allScores": [
+  {
+   "performance": 85,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "max-potential-fid",
+  "interactive",
+  "label-content-name-mismatch",
+  "unused-javascript",
+  "cache-insight",
+  "lcp-discovery-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

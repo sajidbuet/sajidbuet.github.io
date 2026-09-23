@@ -1,0 +1,50 @@
+{
+ "label": "route-publication-list",
+ "url": "http://127.0.0.1:8099/publication/",
+ "at": "2026-09-23T06:17:21.358Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 75,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1513,
+  "lcpMs": 3507,
+  "tbtMs": 56,
+  "cls": 0,
+  "speedIndexMs": 1513,
+  "mainThreadMs": 1245,
+  "transferKB": 269
+ },
+ "allScores": [
+  {
+   "performance": 75,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 75,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 75,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "max-potential-fid",
+  "interactive",
+  "label-content-name-mismatch",
+  "unused-javascript",
+  "cache-insight",
+  "font-display-insight",
+  "forced-reflow-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

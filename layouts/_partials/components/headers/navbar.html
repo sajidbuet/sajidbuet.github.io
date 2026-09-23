@@ -41,6 +41,30 @@
                navbar wrapped to a second row (header grew 64 -> 116px).
                200px at lg keeps the desktop menu on one line at 1024 without
                moving the lg breakpoint. */}}
+          {{/* Phase 8 finding 8.25, NOT fixed here — see the Phase 8 report.
+
+               axe-core (via Lighthouse 13.5.0) reports `label-content-name-
+               mismatch` — WCAG 2.5.3 Label in Name — on this link, on every
+               route where the brand is visible. The wordmark draws two real SVG
+               <text> elements, the "Smart & Advanced Junction of Intelligent
+               Devices" tagline and "Lab", so those glyphs are the link's VISIBLE
+               text; the accessible name is aria-label="SAJID Lab — Home", which
+               does not contain the tagline.
+
+               aria-hidden on this wrapper does not fix it and was reverted:
+               2.5.3 compares the accessible name against what is rendered on
+               screen, precisely so that hiding something from assistive tech
+               cannot paper over it. Verified — the audit still failed with the
+               wrapper hidden.
+
+               The two real fixes are (a) convert those <text> elements to
+               outlines, which is the conversion already deferred in
+               custom/logo.html and would also end the wordmark's dependency on
+               Arial being installed, or (b) stop rendering the tagline at navbar
+               scale, where it is about 6px tall and illegible anyway. Both
+               change brand artwork, so both are the owner's call, not a polish
+               pass's. Lighthouse weights this audit 0, so Accessibility still
+               scores 100 — the finding is real, the score does not show it. */}}
           <div class="block h-auto w-[190px] max-w-[46vw] sm:w-[220px] lg:w-[200px] xl:w-[240px]">
             {{ partial "custom/logo.html" . }}
           </div>

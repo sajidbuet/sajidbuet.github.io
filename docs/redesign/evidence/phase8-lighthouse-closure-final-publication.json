@@ -1,0 +1,54 @@
+{
+ "label": "closure-final-publication",
+ "url": "http://127.0.0.1:8099/publication/",
+ "at": "2026-09-23T11:29:12.827Z",
+ "runs": 3,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 35,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1291,
+  "lcpMs": 4673,
+  "tbtMs": 3649,
+  "cls": 0.0023,
+  "speedIndexMs": 4983,
+  "mainThreadMs": 8876,
+  "transferKB": 269
+ },
+ "allScores": [
+  {
+   "performance": 35,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 34,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 45,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "total-blocking-time",
+  "max-potential-fid",
+  "interactive",
+  "mainthread-work-breakdown",
+  "bootup-time",
+  "label-content-name-mismatch",
+  "unused-javascript",
+  "cache-insight",
+  "font-display-insight",
+  "forced-reflow-insight",
+  "lcp-breakdown-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}
