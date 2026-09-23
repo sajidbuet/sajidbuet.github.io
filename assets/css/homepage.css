@@ -107,215 +107,444 @@
   padding-block-start: 3rem;
 }
 
-/* --------------------------------------------------------------------------
-   Phase 8 — hero research-field background
+/* Removing the stats strip left the hero 390px tall at 1440 — not enough room
+   for the research circuit to read as a composition, and the CTAs sat hard
+   against the bottom edge. A minimum height restores the proportions of the
+   design reference and gives the six domains vertical separation. Capped
+   against the viewport so it can never push the fold off a short laptop
+   screen, and left to content height on phones, where a tall hero is a cost
+   rather than a feature. */
+@media (min-width: 768px) {
+  .sj-hero-section .sj-hero {
+    display: flex;
+    align-items: center;
+    min-height: min(74vh, 620px);
+  }
 
-   A sparse quantum-photonics / device-network figure behind the hero content:
-   nodes, thin curved connections, wavefront arcs and a couple of circuit
-   traces. Markup in layouts/_partials/custom/hero-field.html.
+  .sj-hero-section .sj-hero__inner {
+    width: 100%;
+    padding-block: var(--sj-space-8);
+  }
+}
 
-   Rules this obeys:
-     - it is decorative and must stay subordinate to the wordmark, h1, lede,
-       CTAs and stats. Perceived opacity lands in the 4-10% band;
-     - tokens only, no new palette;
-     - no `animation` property anywhere, so it cannot leave an infinite
-       animation running. The intro is CSS TRANSITIONS, which are finite;
-     - strokes, gradients and opacity — no blur, no glow;
-     - hidden shapes are `display: none`, so they are never painted.
-   -------------------------------------------------------------------------- */
-.sj-hero__field {
+/* ==========================================================================
+   Hero — interactive research circuit
+   Markup: layouts/_partials/custom/hero-circuit.html
+   Behaviour: assets/js/sajid-hero-circuit.js
+
+   A PCB / photonic-waveguide schematic rather than a particle field. Design
+   rules, in priority order:
+     1. the central identity always dominates — the circuit is background;
+     2. idle is nearly invisible (traces 8-15%, icons 10-18%, descriptions 0);
+     3. hover/focus raises ONE domain at a time;
+     4. no `animation` runs forever — every pulse is a finite, JS-triggered run;
+     5. nothing here can intercept a click meant for the CTAs.
+   ========================================================================== */
+.sj-circuit {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  /* The background must never take a click meant for the hero. Only the six
+     domain buttons opt back in, below. */
+  pointer-events: none;
+}
+
+.sj-circuit__svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  /* The field is a fixed-size absolutely-positioned overlay whose contents can
-     never affect anything outside it, so containment is free and lets the
-     engine skip its style/layout work when laying out the hero. */
-  contain: layout style paint;
-  /* Weaker immediately behind the centred text, stronger toward the outer
-     edges. A mask keeps this relative to the rendered hero box rather than to
-     the viewBox, so the `slice` crop cannot move it off-centre. Applied in CSS
-     rather than as an SVG <mask> for exactly that reason. Cheap: a gradient
-     mask composites, unlike filter: blur(). */
-  -webkit-mask-image: radial-gradient(76% 62% at 50% 44%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 46%, #000 78%);
-          mask-image: radial-gradient(76% 62% at 50% 44%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 46%, #000 78%);
+  /* Quiet zone. The traces fade out behind the wordmark, eyebrow, lede, PI line
+     and CTAs instead of a visible panel being drawn behind them. A mask keeps
+     this relative to the rendered hero box, so the `slice` crop cannot pull it
+     off-centre. */
+  -webkit-mask-image: radial-gradient(74% 64% at 50% 46%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.38) 44%, #000 76%);
+          mask-image: radial-gradient(74% 64% at 50% 46%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.38) 44%, #000 76%);
 }
 
-/* The hero's own content must sit above the field. */
-.sj-hero__inner { position: relative; z-index: 1; }
-
-.sj-hero__field .hf-node  { fill: var(--sj-accent); opacity: 0.16; }
-.sj-hero__field .hf-link  { fill: none; stroke: var(--sj-accent); stroke-width: 1; opacity: 0.11; }
-.sj-hero__field .hf-arc   { fill: none; stroke: var(--sj-accent); stroke-width: 1.1; opacity: 0.085; }
-.sj-hero__field .hf-trace { fill: none; stroke: var(--sj-brand);  stroke-width: 1.2; opacity: 0.075;
-                            stroke-linejoin: round; stroke-linecap: round; }
-
-/* Dark mode: --sj-accent flips to #22d3ee, which reads considerably brighter
-   on #0f172a than #0e7490 does on #ffffff. Trimmed so the perceived weight
-   matches the light theme instead of shouting. */
-.dark .sj-hero__field .hf-node  { opacity: 0.13; }
-.dark .sj-hero__field .hf-link  { opacity: 0.085; }
-.dark .sj-hero__field .hf-arc   { opacity: 0.07; }
-.dark .sj-hero__field .hf-trace { opacity: 0.09; }
-
-@media (prefers-color-scheme: dark) {
-  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-node  { opacity: 0.13; }
-  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-link  { opacity: 0.085; }
-  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-arc   { opacity: 0.07; }
-  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-hero__field .hf-trace { opacity: 0.09; }
+/* --- trace network ------------------------------------------------------- */
+.sj-trace {
+  fill: none;
+  stroke: var(--sj-circuit-ink, #94a9c4);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
 }
 
-/* --- density by breakpoint ------------------------------------------------
-   Not a scaled-down copy of the desktop artwork: shapes are authored in three
-   tiers and the ones that do not belong at a width are removed from the render
-   tree entirely.
-       mobile  (<768px)   7 nodes ·  4 links · 1 arc · 0 traces
-       tablet  (>=768px) 12 nodes ·  9 links · 2 arcs · 1 trace
-       desktop (>=1024) 21 nodes · 15 links · 3 arcs · 2 traces
+.sj-trace--guide { stroke: var(--sj-accent); opacity: 0.75; }
+
+.sj-net--base { opacity: 0.13; }
+
+/* Pointer spotlight: the same geometry again, brighter, revealed only inside a
+   radial mask that tracks the cursor. `--sj-spot-x/y` are written by the JS
+   module once per animation frame — no per-path distance maths, no layout
+   reads, and the compositor does the work. */
+.sj-net--glow {
+  opacity: 0;
+  transition: opacity 260ms var(--sj-ease-out);
+  -webkit-mask-image: radial-gradient(190px 190px at var(--sj-spot-x, -500px) var(--sj-spot-y, -500px), #000 0%, rgba(0,0,0,0.5) 55%, transparent 72%);
+          mask-image: radial-gradient(190px 190px at var(--sj-spot-x, -500px) var(--sj-spot-y, -500px), #000 0%, rgba(0,0,0,0.5) 55%, transparent 72%);
+}
+
+.sj-circuit.is-pointer .sj-net--glow { opacity: 0.4; }
+.sj-circuit.is-pointer .sj-net--glow .sj-trace { stroke: var(--sj-accent); }
+
+/* --- vias, pads, luminous nodes ------------------------------------------ */
+.sj-via {
+  fill: none;
+  stroke: var(--sj-circuit-ink, #94a9c4);
+  stroke-width: 1;
+  opacity: 0.16;
+  vector-effect: non-scaling-stroke;
+}
+
+.sj-pad { fill: var(--sj-circuit-ink, #94a9c4); opacity: 0.16; }
+.sj-lumen { fill: var(--sj-accent); opacity: 0.22; }
+
+/* --- per-domain highlight ------------------------------------------------
+   Only the hovered/focused domain's traces brighten. Everything else holds at
+   its idle value, so one domain is dominant at a time. */
+.sj-trace-group {
+  opacity: 1;
+  transition: opacity 320ms var(--sj-ease-out);
+}
+
+.sj-circuit[data-active] .sj-net--base .sj-trace-group { opacity: 0.55; }
+
+.sj-circuit[data-active="photonics"] .sj-net--base [data-trace-domain="photonics"],
+.sj-circuit[data-active="quantum"]   .sj-net--base [data-trace-domain="quantum"],
+.sj-circuit[data-active="embedded"]  .sj-net--base [data-trace-domain="embedded"],
+.sj-circuit[data-active="antennas"]  .sj-net--base [data-trace-domain="antennas"],
+.sj-circuit[data-active="computing"] .sj-net--base [data-trace-domain="computing"],
+.sj-circuit[data-active="energy"]    .sj-net--base [data-trace-domain="energy"] {
+  opacity: 1;
+}
+
+.sj-circuit[data-active="photonics"] [data-trace-domain="photonics"] .sj-trace,
+.sj-circuit[data-active="quantum"]   [data-trace-domain="quantum"] .sj-trace,
+.sj-circuit[data-active="embedded"]  [data-trace-domain="embedded"] .sj-trace,
+.sj-circuit[data-active="antennas"]  [data-trace-domain="antennas"] .sj-trace,
+.sj-circuit[data-active="computing"] [data-trace-domain="computing"] .sj-trace,
+.sj-circuit[data-active="energy"]    [data-trace-domain="energy"] .sj-trace {
+  stroke: var(--sj-accent);
+  stroke-width: 1.35;
+}
+
+/* Raise the whole base layer while a domain is active so its traces land in the
+   35-65% band the brief asks for, without lifting the idle network with it. */
+.sj-circuit[data-active] .sj-net--base { opacity: 0.42; }
+
+/* --- signal pulse --------------------------------------------------------
+   One short bright dash travelling a trace. `pathLength="1"` is not used here
+   because each path is a different length and a length-proportional pulse looks
+   more like real propagation. The animation is added and removed by JS, and is
+   finite — no infinite iteration anywhere in this feature. */
+.sj-trace--signal.is-pulsing {
+  stroke: var(--sj-accent);
+  stroke-width: 1.6;
+  stroke-dasharray: 38 2000;
+  animation: sj-pulse 1400ms var(--sj-ease-standard) 1 forwards;
+}
+
+@keyframes sj-pulse {
+  from { stroke-dashoffset: 38; opacity: 0; }
+  12%  { opacity: 0.95; }
+  80%  { opacity: 0.85; }
+  to   { stroke-dashoffset: -2000; opacity: 0; }
+}
+
+/* --- the six domains -----------------------------------------------------
+   Real HTML, positioned with custom properties, so each breakpoint can place
+   them where they fit and each one is a proper <button> with a real accessible
+   name. */
+.sj-circuit__domains {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sj-domain {
+  position: absolute;
+  top: var(--sj-dy);
+  max-width: 15rem;
+  --sj-icon-w: 74px;
+}
+
+.sj-domain--left  { left: var(--sj-dx); }
+.sj-domain--right { right: var(--sj-dx); }
+
+/* Only the domain buttons take pointer events back from the container. */
+.sj-domain__hit {
+  display: flex;
+  align-items: center;
+  gap: var(--sj-space-3);
+  padding: var(--sj-space-2);
+  margin: calc(var(--sj-space-2) * -1);
+  background: none;
+  border: 0;
+  border-radius: var(--sj-radius-md);
+  cursor: pointer;
+  pointer-events: auto;
+  text-align: start;
+  color: inherit;
+  font: inherit;
+}
+
+/* Left domains read title-then-icon so the label sits outboard; right domains
+   are icon-then-title for the same reason. DOM order is icon, title. */
+.sj-domain--left  .sj-domain__hit { flex-direction: row-reverse; }
+.sj-domain--right .sj-domain__hit { flex-direction: row; }
+.sj-domain--left  { text-align: right; }
+.sj-domain--left  .sj-domain__hit { justify-content: flex-end; }
+
+.sj-domain__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: var(--sj-icon-w);
+  opacity: 0.14;
+  transform: scale(1);
+  transition:
+    opacity 340ms var(--sj-ease-out),
+    transform 340ms var(--sj-ease-out);
+}
+
+.sj-domain__icon svg { display: block; width: 100%; height: auto; }
+
+.sj-ico__line {
+  fill: none;
+  stroke: var(--sj-circuit-ink, #94a9c4);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.sj-ico__pin  { fill: none; stroke: var(--sj-circuit-ink, #94a9c4); stroke-width: 1.4; stroke-linecap: round; }
+.sj-ico__rf   { fill: none; stroke: var(--sj-accent); stroke-width: 1.4; stroke-linecap: round; opacity: 0.8; }
+.sj-ico__bits { fill: none; stroke: var(--sj-accent); stroke-width: 1.4; stroke-linecap: round; opacity: 0.7; }
+.sj-ico__solid { fill: var(--sj-circuit-ink, #94a9c4); opacity: 0.5; }
+.sj-ico__spark { fill: var(--sj-accent); }
+
+.sj-domain__title {
+  display: block;
+  font-size: var(--sj-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--sj-text-secondary);
+  opacity: 0.32;
+  transition: opacity 280ms var(--sj-ease-out), color 280ms var(--sj-ease-out);
+  white-space: nowrap;
+}
+
+/* Descriptions are fully hidden at idle — not faint, hidden — and `visibility`
+   keeps them out of the accessibility tree until the domain is opened, so a
+   screen-reader user is not read eighteen list items they did not ask for. */
+.sj-domain__desc {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 300ms var(--sj-ease-out),
+    transform 300ms var(--sj-ease-out),
+    visibility 0s linear 300ms;
+}
+
+/* The description sits under the LABEL, not under the whole row. Without this
+   offset it ran beneath the icon, which reads as a collision even though
+   nothing actually overlaps. The inset matches the icon column plus its gap. */
+.sj-domain--left  .sj-domain__desc { padding-inline-end: calc(var(--sj-icon-w) + var(--sj-space-3)); }
+.sj-domain--right .sj-domain__desc { padding-inline-start: calc(var(--sj-icon-w) + var(--sj-space-3)); }
+
+.sj-domain__desc ul {
+  margin: var(--sj-space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sj-domain__desc li {
+  font-size: var(--sj-text-xs);
+  line-height: 1.7;
+  color: var(--sj-text-tertiary);
+  white-space: nowrap;
+}
+
+/* --- active domain ------------------------------------------------------- */
+.sj-domain.is-active .sj-domain__icon { opacity: 0.88; transform: scale(1.03); }
+.sj-domain.is-active .sj-domain__title { opacity: 1; color: var(--sj-text-primary); }
+
+.sj-domain.is-active .sj-domain__desc {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 300ms var(--sj-ease-out),
+    transform 300ms var(--sj-ease-out),
+    visibility 0s linear 0s;
+}
+
+/* Keyboard focus gets the designed Phase 2A ring, not a bespoke one. */
+.sj-domain__hit:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- placement ------------------------------------------------------------
+   Desktop shows all six. Tablet drops to four and pulls them inboard, because
+   the SVG `slice` crop tightens and the hero narrows. Mobile keeps two symbols
+   and no labels at all.
    -------------------------------------------------------------------------- */
-.sj-hero__field .hf--t,
-.sj-hero__field .hf--d { display: none; }
+.sj-domain--photonics { --sj-dx: 3.5%; --sj-dy: 16%; }
+.sj-domain--quantum   { --sj-dx: 3.5%; --sj-dy: 45%; }
+.sj-domain--embedded  { --sj-dx: 4.5%; --sj-dy: 73%; }
+.sj-domain--antennas  { --sj-dx: 3.5%; --sj-dy: 16%; }
+.sj-domain--computing { --sj-dx: 3.5%; --sj-dy: 45%; }
+.sj-domain--energy    { --sj-dx: 4%;   --sj-dy: 73%; }
+
+/* Tier: m = shown from mobile up, t = tablet up, d = desktop only. */
+.sj-domain--tier-t,
+.sj-domain--tier-d { display: none; }
 
 @media (min-width: 768px) {
-  .sj-hero__field .hf--t { display: inline; }
+  .sj-domain--tier-t { display: block; }
 }
 
-@media (min-width: 1024px) {
-  .sj-hero__field .hf--d { display: inline; }
+@media (min-width: 1200px) {
+  .sj-domain--tier-d { display: block; }
 }
 
-/* --- intro: one shot, ~1.15s, then settled -------------------------------
-   `hf-anim` is added by the inline script during parse, before first paint, and
-   only when reduced motion is NOT requested. Without it — no JS, or reduced
-   motion — the declarations above already describe the finished state, so the
-   field renders complete and immediately.
-   -------------------------------------------------------------------------- */
-.sj-hero__field.hf-anim { opacity: 0; transition: opacity 320ms var(--sj-ease-out, ease-out); }
-.sj-hero__field.hf-anim.hf-revealed { opacity: 1; }
-
-/* pathLength="1" on every stroked path, so one dash rule fits every length */
-.sj-hero__field.hf-anim .hf-link,
-.sj-hero__field.hf-anim .hf-arc,
-.sj-hero__field.hf-anim .hf-trace {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
+/* Tablet: fewer domains, pulled inboard, labels only (no description reflow
+   problems), smaller icons. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .sj-domain { max-width: 11rem; --sj-icon-w: 58px; }
+  .sj-domain--photonics { --sj-dx: 2%; --sj-dy: 14%; }
+  .sj-domain--quantum   { --sj-dx: 2%; --sj-dy: 48%; }
+  .sj-domain--antennas  { --sj-dx: 2%; --sj-dy: 14%; }
+  .sj-domain--computing { --sj-dx: 2%; --sj-dy: 48%; }
+  .sj-domain__desc li { font-size: 11px; }
 }
 
-.sj-hero__field.hf-anim.hf-revealed .hf-link,
-.sj-hero__field.hf-anim.hf-revealed .hf-arc,
-.sj-hero__field.hf-anim.hf-revealed .hf-trace {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 680ms var(--sj-ease-out, ease-out);
+/* Mobile: two abstract symbols, no labels, no descriptions, no crowding. The
+   hero is already tall on a phone; adding six labels would wreck it. */
+@media (max-width: 767.98px) {
+  .sj-domain { max-width: none; --sj-icon-w: 46px; }
+  .sj-domain__icon { opacity: 0.12; }
+  .sj-domain__title,
+  .sj-domain__desc { display: none; }
+  .sj-domain--photonics { --sj-dx: 2%; --sj-dy: 8%; }
+  .sj-domain--quantum   { --sj-dx: 2%; --sj-dy: 78%; }
+  .sj-domain--antennas  { --sj-dx: 2%; --sj-dy: 8%; }
+  .sj-domain.is-active .sj-domain__icon { opacity: 0.6; transform: none; }
+
+  /* A tap has to say something. Brightening a 12%-opacity icon to 60% is not a
+     discoverable response on a phone, so the label appears too — the
+     descriptions stay hidden, which is what keeps the mobile hero from
+     becoming six stacked lists. */
+  .sj-domain.is-active .sj-domain__title {
+    display: block;
+    opacity: 1;
+    color: var(--sj-text-primary);
+    font-size: var(--sj-text-xs);
+  }
 }
 
-/* Stagger the draw. Six buckets is enough to read as sequential without
-   authoring a delay per element. */
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+1) { transition-delay: 150ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+2) { transition-delay: 210ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+3) { transition-delay: 270ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+4) { transition-delay: 330ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+5) { transition-delay: 390ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-link:nth-of-type(6n+6) { transition-delay: 450ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-arc                    { transition-delay: 260ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-trace                  { transition-delay: 380ms; }
+/* --- dark mode -----------------------------------------------------------
+   Existing tokens only. `--sj-accent` already flips to #22d3ee, which reads
+   much brighter on navy, so the circuit ink and the idle opacities come down
+   to keep the perceived weight the same as in light mode. */
+/* `.dark` only. An earlier `:root:not(.light)` companion selector was a bug:
+   with the theme script idle the <html> element carries neither class, so it
+   matched in LIGHT mode too and the circuit rendered with the dark ink. The
+   system-preference case is handled by the media query below, exactly as the
+   rest of this file does it. */
+.dark .sj-circuit { --sj-circuit-ink: #64748b; }
 
-/* Nodes appear in sequence. transform-box/origin so the scale is about each
-   circle's own centre rather than the SVG origin. */
-.sj-hero__field.hf-anim .hf-node {
-  opacity: 0;
-  transform: scale(0.35);
-  transform-box: fill-box;
-  transform-origin: center;
+.dark .sj-net--base { opacity: 0.16; }
+.dark .sj-lumen { opacity: 0.3; }
+.dark .sj-domain__icon { opacity: 0.16; }
+.dark .sj-domain__title { opacity: 0.38; }
+.dark .sj-circuit.is-pointer .sj-net--glow { opacity: 0.34; }
+.dark .sj-circuit[data-active] .sj-net--base { opacity: 0.4; }
+
+@media (prefers-color-scheme: dark) {
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-circuit { --sj-circuit-ink: #64748b; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-net--base { opacity: 0.16; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-domain__icon { opacity: 0.16; }
+  html[data-wc-theme-default="system"]:not(.light):not(.dark) .sj-domain__title { opacity: 0.38; }
 }
 
-.sj-hero__field.hf-anim.hf-revealed .hf-node {
-  opacity: 0.16;
-  transform: scale(1);
-  transition: opacity 260ms var(--sj-ease-out, ease-out), transform 260ms var(--sj-ease-out, ease-out);
-}
-
-.dark .sj-hero__field.hf-anim.hf-revealed .hf-node { opacity: 0.13; }
-
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+1) { transition-delay: 250ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+2) { transition-delay: 305ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+3) { transition-delay: 360ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+4) { transition-delay: 415ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+5) { transition-delay: 470ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+6) { transition-delay: 525ms; }
-.sj-hero__field.hf-anim.hf-revealed .hf-node:nth-of-type(7n+7) { transition-delay: 580ms; }
-
-/* --- pointer parallax, desktop mouse only ---------------------------------
-   --hf-x / --hf-y are set by the inline script (range -1..1) only while a mouse
-   is over the hero, and reset to 0 on pointerleave. The return to equilibrium
-   is this transition, not a JS easing loop, so nothing runs while idle.
-   Maximum displacement is 5px on the front layer.
-   -------------------------------------------------------------------------- */
-.sj-hero__field .hf-layer {
-  transform: translate3d(calc(var(--hf-x, 0) * var(--hf-depth, 0px)), calc(var(--hf-y, 0) * var(--hf-depth, 0px)), 0);
-  transition: transform 620ms var(--sj-ease-out, ease-out);
-  will-change: auto;
-}
-
-.sj-hero__field .hf-layer--back  { --hf-depth: 2px; }
-.sj-hero__field .hf-layer--mid   { --hf-depth: 3px; }
-.sj-hero__field .hf-layer--front { --hf-depth: 5px; }
-
-/* Touch and coarse pointers never get parallax; the field is static after the
-   reveal. Belt and braces with the script's `(pointer: fine)` guard. */
-@media (hover: none), (pointer: coarse) {
-  .sj-hero__field .hf-layer { transform: none; transition: none; }
-}
-
-/* --- reduced motion -------------------------------------------------------
-   The script already declines to add `hf-anim`, so this is the second line of
-   defence for a preference that changes after load. Everything is forced to its
-   settled state: no draw-on, no node sequence, no parallax, full content.
+/* --- reduced motion ------------------------------------------------------
+   Mandatory. No travelling pulses, no pointer spotlight, no entrance, no
+   transforms. The static schematic stays, and hover/focus still reveals a
+   domain — instantly, because a state change is information, not motion.
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  /* `!important` here is not decoration. The Phase 3 homepage motion rule
-     further down this file forces `.sj-hero * { opacity: 1 !important }` so
-     that no hero CONTENT can be left invisible when a reveal does not run.
-     That selector also catches this decorative field, which was measured
-     rendering at full opacity under reduced motion — far too strong.
-
-     The field's resting opacity is a design value, not an unfinished
-     animation, so it is re-asserted at higher specificity
-     (`.sj-hero__field .hf-node` = 0,2,0 vs `.sj-hero *` = 0,1,0) and the
-     content guarantee is left exactly as it was.
-
-     Written WITHOUT `.hf-anim` so it also covers the case where the preference
-     is turned on after load, when the class is already on the element. */
-  .sj-hero__field,
-  .sj-hero__field.hf-anim { opacity: 1 !important; transition: none !important; }
-
-  .sj-hero__field .hf-link,
-  .sj-hero__field .hf-arc,
-  .sj-hero__field .hf-trace {
-    stroke-dasharray: none !important;
-    stroke-dashoffset: 0 !important;
-    transition: none !important;
+  .sj-trace--signal.is-pulsing { animation: none; stroke-dasharray: none; }
+  .sj-net--glow { display: none; }
+  .sj-domain__icon,
+  .sj-domain__title,
+  .sj-domain__desc,
+  .sj-trace-group {
+    transition: none;
+    transform: none;
   }
-
-  .sj-hero__field .hf-node {
-    opacity: 0.16 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-
-  .sj-hero__field .hf-link  { opacity: 0.11 !important; }
-  .sj-hero__field .hf-arc   { opacity: 0.085 !important; }
-  .sj-hero__field .hf-trace { opacity: 0.075 !important; }
-
-  .dark .sj-hero__field .hf-node  { opacity: 0.13 !important; }
-  .dark .sj-hero__field .hf-link  { opacity: 0.085 !important; }
-  .dark .sj-hero__field .hf-arc   { opacity: 0.07 !important; }
-  .dark .sj-hero__field .hf-trace { opacity: 0.09 !important; }
-
-  .sj-hero__field .hf-layer { transform: none !important; transition: none !important; }
+  .sj-domain.is-active .sj-domain__icon { transform: none; }
+  .sj-domain.is-active .sj-domain__desc { transform: none; }
 }
 
+/* --------------------------------------------------------------------------
+   Phase 8 — navbar brand reveal on scroll (homepage only)
+
+   At the top of the homepage the hero already carries a large SAJID Lab
+   wordmark, so a second one in the navbar is duplicate branding. The navbar
+   brand is therefore hidden at rest and takes over as the persistent identity
+   once the hero wordmark scrolls up behind the sticky header.
+
+   WHY `visibility`, NOT JUST `opacity`
+   `visibility: hidden` keeps the element's box — so the 190–240px brand slot
+   stays reserved and the menu, search and theme controls never move (zero
+   layout shift) — while ALSO removing it from the tab order and the
+   accessibility tree. Accessibility state therefore matches visual state
+   exactly, instead of leaving an invisible link tabbable. `opacity` and
+   `transform` do the visible work; neither affects layout.
+
+   The asymmetric `visibility` delay is the standard pattern: on reveal it
+   flips at 0s so the fade is visible; on hide it flips only after the fade has
+   finished, so the element does not vanish mid-transition.
+
+   Scoped to `.sj-home`, which is set by baseof.html on `.IsHome` only, so every
+   other route keeps the brand visible immediately with no JS involvement.
+   -------------------------------------------------------------------------- */
+.sj-home .navbar-brand {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition:
+    opacity var(--sj-duration-base, 240ms) var(--sj-ease-out),
+    transform var(--sj-duration-base, 240ms) var(--sj-ease-out),
+    visibility 0s linear var(--sj-duration-base, 240ms);
+}
+
+.sj-home .navbar-brand.sj-brand--shown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity var(--sj-duration-base, 240ms) var(--sj-ease-out),
+    transform var(--sj-duration-base, 240ms) var(--sj-ease-out),
+    visibility 0s linear 0s;
+}
+
+/* Same hide/reveal logic, no animated transition. */
+@media (prefers-reduced-motion: reduce) {
+  .sj-home .navbar-brand,
+  .sj-home .navbar-brand.sj-brand--shown {
+    transition: none;
+    transform: none;
+  }
+}
 .sj-hero__mark {
   margin-inline: auto;
 }
@@ -333,6 +562,17 @@
   letter-spacing: -0.02em;
   color: var(--sj-text-primary);
   text-wrap: balance;
+}
+
+/* Institutional line under the wordmark. Small caps, wide tracking — a
+   schematic label, not a subtitle competing with the lede. */
+.sj-hero__eyebrow {
+  margin: var(--sj-space-3) auto 0;
+  font-size: var(--sj-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sj-text-secondary);
 }
 
 .sj-hero__lede {

@@ -44,17 +44,29 @@
     {{/* Identity ------------------------------------------------------- */}}
     <div class="flex flex-col items-center text-center">
 
+      {{/* The wordmark IS the <h1>.
+
+           Phase 8 removed the separate "Engineering light, computation and
+           intelligent hardware" heading, but the page still needs exactly one
+           <h1> — zero h1 on the homepage was visual-audit P0-03, Phase 3 fixed
+           it, and Phase 7 gates on `h1 === 1` across 210 cells. So the heading
+           now wraps the wordmark and takes its accessible name from
+           `content.title`, which is read by assistive technology and search
+           engines while the mark carries the visual weight. */}}
       {{ if $show_logo }}
-        <div class="sj-hero__mark" style="width:min(78vw,380px);">
-          {{ partial "custom/logo-loader-loop.html" . }}
-        </div>
+        <h1 class="sj-hero__mark" style="width:min(78vw,380px);">
+          <span class="sj-sr-only">{{ $block.content.title | default $branding.site_title | plainify }}</span>
+          <span aria-hidden="true">{{ partial "custom/logo-loader-loop.html" . }}</span>
+        </h1>
+      {{ else }}
+        {{ with $block.content.title }}
+          <h1 class="sj-hero__title">{{ . | markdownify | emojify }}</h1>
+        {{ end }}
       {{ end }}
 
-      {{/* The one and only <h1>. Visually restrained because the wordmark
-           above already carries the visual weight, but present, unique and
-           readable by assistive technology and search engines. */}}
-      {{ with $block.content.title }}
-        <h1 class="sj-hero__title">{{ . | markdownify | emojify }}</h1>
+      {{/* Eyebrow: institutional line, directly under the wordmark. */}}
+      {{ with $block.content.eyebrow }}
+        <p class="sj-hero__eyebrow">{{ . | markdownify | emojify }}</p>
       {{ end }}
 
       {{ with $block.content.text }}
@@ -110,18 +122,20 @@
 
   </div>
 
-  {{/* Phase 8: decorative research-field background.
+  {{/* Interactive research circuit.
 
-       DELIBERATELY LAST IN THE DOM, not first. It is `position: absolute;
-       inset: 0` with `z-index: 0` against the inner column's `z-index: 1`, so
-       stacking is controlled entirely by CSS and paint order is identical
-       either way — but parse order is not. With the field emitted first,
-       Lighthouse measured the hero lede's LCP element render delay rise from
-       238ms to 409ms, costing 3 performance points, because 41 extra SVG
-       shapes had to be parsed and styled before the hero text could paint.
-       Emitting it after the content removes that from the critical path.
+       Replaces the earlier "network field" rather than layering on top of it —
+       that one read as a generic AI/particle background.
+
+       DELIBERATELY LAST IN THE DOM, not first. It is absolutely positioned with
+       `z-index: 0` against the inner column's `z-index: 1`, so stacking is
+       controlled entirely by CSS and paint order is identical either way — but
+       parse order is not. With the previous background emitted first, Lighthouse
+       measured the hero lede's LCP element render delay rise from 238ms to
+       409ms because the SVG had to be parsed and styled before the hero text
+       could paint. Emitting it after the content keeps it off that path.
 
        Clipped by the hero's own `overflow-hidden`, so it can never contribute
        document overflow. */}}
-  {{ partial "custom/hero-field.html" . }}
+  {{ partial "custom/hero-circuit.html" . }}
 </div>

@@ -14,32 +14,27 @@ sections:
   - block: hero-with-stats
     id: about
     content:
-      # The wordmark above already states the name, so the h1 carries the
-      # positioning rather than repeating it.
-      title: 'Quantum, photonic and intelligent device research'
+      # This title is no longer rendered as a visible heading. The wordmark IS the
+      # <h1> now (see hero-with-stats/block.html) and this string is its
+      # accessible name, so the page keeps exactly one h1 — zero h1 on the
+      # homepage was visual-audit P0-03 and Phase 7 gates on h1 === 1.
+      title: 'SAJID Lab — Smart & Advanced Junction of Intelligent Devices'
+      eyebrow: 'Department of EEE · BUET'
       text: |
-        Six domains — quantum, photonics, antennas, computing and AI, embedded systems and renewable energy — investigated together and built in the lab.
+        From reconfigurable photonic devices and quantum technologies to embedded computing, antennas, and energy systems — we design, simulate, fabricate, and build.
       details: |
-        Led by [Dr. Sajid Muhaimin Choudhury](/authors/me), [Department of EEE, BUET](https://eee.buet.ac.bd).
+        Led by [Prof. Sajid Muhaimin Choudhury, PhD](/authors/me)
       primary_action:
-        text: Explore Research
+        text: Explore Our Research
         url: '/research/'
         icon: hero/beaker
       secondary_action:
-        text: Meet the Team
+        text: Meet the Lab
         url: '/authors/'
         icon: hero/user-group
-      # Compact credibility strip, folded into the hero.
-      # Values mirror the previous stats block — no new claims.
-      items:
-        - value: '50+'
-          label: Peer-reviewed publications
-        - value: '1300+'
-          label: Scholarly citations
-        - value: '13'
-          label: h-index (Google Scholar)
-        - value: '6'
-          label: Research areas
+      # items removed on purpose: publication / citation / h-index metrics no
+      # longer belong in the hero. The figures still live on /publication/ and
+      # /authors/me/, so nothing is lost.
     design:
       # Phase 8 polish. The top padding is deliberately 0 here and supplied
       # INSIDE the hero instead (see .sj-hero-section .sj-hero__inner in

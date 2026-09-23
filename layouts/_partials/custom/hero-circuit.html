@@ -1,0 +1,263 @@
+{{/* SAJID.BD hero — interactive research circuit.
+
+     Replaces the Phase 8 "network field" (sparse nodes + curved links), which
+     read as a generic AI/particle background. This is a PCB / photonic-waveguide
+     schematic: orthogonal and 45-degree routing, vias, junction rings and a few
+     curved waveguides, with six research domains feeding the centre. The centre
+     is the "junction" the lab is named after.
+
+     ARCHITECTURE — and why it is split in two
+
+     1. `<svg class="sj-circuit__svg">` — the trace network, full-bleed,
+        `xMidYMid slice`, viewBox 1440x620. Purely decorative, `aria-hidden`,
+        `pointer-events: none`.
+     2. `<ul class="sj-circuit__domains">` — the six domains as real HTML,
+        positioned with CSS custom properties.
+
+     The domains are NOT inside the SVG. `slice` crops hard as the viewport
+     narrows (measured visible viewBox window: x 224-1216 at 1024px, x 547-893
+     at 390px), so anything authored at the edges of the viewBox disappears on
+     smaller screens. Positioning the domains with CSS instead lets each
+     breakpoint place them where they fit, keeps their labels as selectable,
+     translatable HTML text, and lets each one be a real <button> with a proper
+     accessible name instead of SVG text that screen readers handle poorly.
+
+     The traces stay decorative: they read as "coming from that side toward the
+     centre" rather than joining each icon pixel-exactly, which is what lets the
+     two layers scale independently.
+
+     The pointer spotlight is a second `<use>` of the same geometry, masked by a
+     radial gradient that follows the cursor. That means brightening traces near
+     the pointer costs no per-path distance maths and no layout reads — JS sets
+     two custom properties and the compositor does the rest.
+*/}}
+
+{{- $domains := slice
+  (dict "id" "photonics" "title" "Photonics" "side" "left" "tier" "m"
+        "items" (slice "Metasurfaces" "Flat optics" "Phase-change devices"))
+  (dict "id" "quantum" "title" "Quantum" "side" "left" "tier" "m"
+        "items" (slice "Quantum emitters" "Quantum devices" "Quantum computing"))
+  (dict "id" "embedded" "title" "Embedded Systems" "side" "left" "tier" "d"
+        "items" (slice "Microcontrollers" "IoT and Edge AI" "Intelligent systems"))
+  (dict "id" "antennas" "title" "Antennas" "side" "right" "tier" "m"
+        "items" (slice "RF and Microwave" "Wireless systems" "Electromagnetic design"))
+  (dict "id" "computing" "title" "Computing" "side" "right" "tier" "t"
+        "items" (slice "Computer architecture" "Hardware acceleration" "AI for engineering"))
+  (dict "id" "energy" "title" "Energy" "side" "right" "tier" "d"
+        "items" (slice "Photovoltaics" "Renewable systems" "Sustainable hardware"))
+-}}
+
+<div class="sj-circuit" data-sj-circuit>
+
+  <svg class="sj-circuit__svg" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice"
+       aria-hidden="true" focusable="false" role="presentation">
+
+    <defs>
+      {{/* ---- domain icons, referenced by the HTML list below ---- */}}
+
+      {{/* Photonics: a metasurface slab with light fanning out of it. */}}
+      <symbol id="sjico-photonics" viewBox="0 0 96 72">
+        <rect class="sj-ico__solid" x="10" y="12" width="9" height="48" rx="2"/>
+        <path class="sj-ico__line" d="M19 24C36 24 44 18 62 18M19 30C38 30 48 26 68 26M19 36C40 36 52 36 74 36M19 42C38 42 48 46 68 46M19 48C36 48 44 54 62 54"/>
+        <path class="sj-ico__line" d="M10 12v48"/>
+        <circle class="sj-ico__spark" cx="19" cy="36" r="3"/>
+      </symbol>
+
+      {{/* Quantum: coupled emitter, two orbital ellipses, no cliché atom. */}}
+      <symbol id="sjico-quantum" viewBox="0 0 96 72">
+        <ellipse class="sj-ico__line" cx="44" cy="36" rx="30" ry="13"/>
+        <ellipse class="sj-ico__line" cx="44" cy="36" rx="30" ry="13" transform="rotate(58 44 36)"/>
+        <circle class="sj-ico__spark" cx="44" cy="36" r="5"/>
+        <circle class="sj-ico__solid" cx="72" cy="22" r="2.5"/>
+        <circle class="sj-ico__solid" cx="17" cy="51" r="2.5"/>
+        <path class="sj-ico__line" d="M74 36h14"/>
+      </symbol>
+
+      {{/* Embedded: microcontroller outline with pins. */}}
+      <symbol id="sjico-embedded" viewBox="0 0 96 72">
+        <rect class="sj-ico__line" x="26" y="18" width="40" height="38" rx="3"/>
+        <rect class="sj-ico__solid" x="36" y="28" width="20" height="18" rx="2"/>
+        <path class="sj-ico__pin" d="M26 26h-9M26 34h-9M26 42h-9M26 50h-9M66 26h9M66 34h9M66 42h9M66 50h9M34 18v-8M44 18v-8M54 18v-8M34 56v8M44 56v8M54 56v8"/>
+      </symbol>
+
+      {{/* Antennas: radiating element with RF arcs. */}}
+      <symbol id="sjico-antennas" viewBox="0 0 96 72">
+        <path class="sj-ico__line" d="M48 22v34M36 62l12-40 12 40M40 48h16"/>
+        <circle class="sj-ico__spark" cx="48" cy="20" r="3.5"/>
+        <path class="sj-ico__rf" d="M60 14a18 18 0 0 1 0 22"/>
+        <path class="sj-ico__rf" d="M68 7a29 29 0 0 1 0 36"/>
+        <path class="sj-ico__rf" d="M36 14a18 18 0 0 0 0 22"/>
+        <path class="sj-ico__rf" d="M28 7a29 29 0 0 0 0 36"/>
+      </symbol>
+
+      {{/* Computing: processor with a data bus. */}}
+      <symbol id="sjico-computing" viewBox="0 0 96 72">
+        <rect class="sj-ico__line" x="18" y="16" width="42" height="42" rx="3"/>
+        <rect class="sj-ico__solid" x="29" y="27" width="20" height="20" rx="2"/>
+        <path class="sj-ico__pin" d="M18 25h-8M18 34h-8M18 43h-8M18 52h-8M60 25h8M60 34h8M60 43h8M60 52h8M27 16v-8M36 16v-8M45 16v-8M27 58v8M36 58v8M45 58v8"/>
+        <path class="sj-ico__bits" d="M72 24h16M72 34h12M72 44h16"/>
+      </symbol>
+
+      {{/* Energy: photovoltaic panel with an illumination motif. */}}
+      <symbol id="sjico-energy" viewBox="0 0 96 72">
+        <path class="sj-ico__line" d="M22 60 32 28h34l10 32z"/>
+        <path class="sj-ico__line" d="M27 44h44M49 28v32M38 44l-3 16M60 44l3 16M35 36h28"/>
+        <circle class="sj-ico__spark" cx="70" cy="14" r="4.5"/>
+        <path class="sj-ico__rf" d="M70 4v3M70 21v3M60 14h3M77 14h3M63 7l2 2M75 19l2 2M77 7l-2 2M65 19l-2 2"/>
+      </symbol>
+
+      {{/* ---- the trace network -------------------------------------------
+           Held in a variable and emitted TWICE below: once as the base layer,
+           once as the pointer-spotlight layer. It cannot be a <defs> + <use>
+           pair, which is where this started: <use> clones its target into a
+           shadow tree, so neither `.sj-net--base [data-trace-domain="x"]` in
+           CSS nor querySelector in JS can reach the rendered geometry. Both the
+           per-domain highlighting and the pulse animation silently did nothing.
+           One source of truth in the template, two real subtrees in the DOM. */}}
+      {{- $net := `
+        {{/* Ambient routing: reads as board context, belongs to no domain. */}}
+        <g class="sj-trace-group" data-trace-domain="ambient">
+          <path class="sj-trace" d="M40 88h104l30 30h74"/>
+          <path class="sj-trace" d="M40 246h74v58"/>
+          <path class="sj-trace" d="M34 566h104l28-28h68"/>
+          <path class="sj-trace" d="M1400 88h-96l-28 28h-62"/>
+          <path class="sj-trace" d="M1406 300h-80v60h-62"/>
+          <path class="sj-trace" d="M1404 566h-98l-26-26h-62"/>
+          <path class="sj-trace" d="M120 120v78h56"/>
+          <path class="sj-trace" d="M1322 200v-64h-58"/>
+        </g>
+
+        {{/* PHOTONICS — orthogonal routing plus two curved waveguides. */}}
+        <g class="sj-trace-group" data-trace-domain="photonics">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M214 140h84l32 32h82"/>
+          <path class="sj-trace" d="M214 164h68l32 32h84"/>
+          <path class="sj-trace" d="M238 118V96h112l28 28h34"/>
+          <path class="sj-trace sj-trace--guide" d="M216 152c64 0 84 38 152 38 30 0 44 8 60 18"/>
+          <path class="sj-trace sj-trace--guide" d="M216 176c58 0 80 54 142 54h58"/>
+          <path class="sj-trace" d="M190 188h58l18 18v36h92"/>
+        </g>
+
+        {{/* QUANTUM */}}
+        <g class="sj-trace-group" data-trace-domain="quantum">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M252 320h78l26 26h62"/>
+          <path class="sj-trace" d="M252 342h48l26-26h92"/>
+          <path class="sj-trace" d="M226 302v-40h72"/>
+          <path class="sj-trace" d="M226 362v40h92l24 24h76"/>
+          <path class="sj-trace" d="M270 330h148"/>
+        </g>
+
+        {{/* EMBEDDED SYSTEMS */}}
+        <g class="sj-trace-group" data-trace-domain="embedded">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M252 486h78l26-26h62"/>
+          <path class="sj-trace" d="M252 502h88l26 26h64"/>
+          <path class="sj-trace" d="M252 518h58v44h88"/>
+          <path class="sj-trace" d="M216 470v-40h84l22-22h76"/>
+          <path class="sj-trace" d="M300 542h60l20 20h60"/>
+        </g>
+
+        {{/* ANTENNAS */}}
+        <g class="sj-trace-group" data-trace-domain="antennas">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M1228 140h-78l-30 30h-90"/>
+          <path class="sj-trace" d="M1228 166h-52l-30 30h-116"/>
+          <path class="sj-trace" d="M1256 118V92h-156l-24 24h-46"/>
+          <path class="sj-trace" d="M1198 188h-48v46h-92"/>
+          <path class="sj-trace" d="M1170 150h-124"/>
+        </g>
+
+        {{/* COMPUTING */}}
+        <g class="sj-trace-group" data-trace-domain="computing">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M1198 320h-78l-26-26h-68"/>
+          <path class="sj-trace" d="M1198 338h-98l-26 26h-48"/>
+          <path class="sj-trace" d="M1238 300v-34h-118"/>
+          <path class="sj-trace" d="M1198 354h-58v44h-90l-20 20"/>
+          <path class="sj-trace" d="M1158 330h-132"/>
+        </g>
+
+        {{/* ENERGY */}}
+        <g class="sj-trace-group" data-trace-domain="energy">
+          <path class="sj-trace sj-trace--signal" data-pulse d="M1218 486h-78l-26-26h-74"/>
+          <path class="sj-trace" d="M1218 506h-98l-26 26h-64"/>
+          <path class="sj-trace" d="M1258 470v-34h-118l-22-22h-78"/>
+          <path class="sj-trace" d="M1178 542h-78v24h-90"/>
+          <path class="sj-trace" d="M1148 506h-108"/>
+        </g>
+      ` -}}
+    </defs>
+
+    {{/* Base network. */}}
+    <g class="sj-net sj-net--base">{{ $net | safeHTML }}</g>
+
+    {{/* Pointer spotlight: the same geometry again, brighter, revealed only
+         inside a CSS radial mask that tracks the cursor (see homepage.css).
+         A CSS mask rather than an SVG <mask> because SVG gradient coordinates
+         cannot be driven by custom properties reliably across engines, and
+         because `mask-image` is already proven in both Chromium and Gecko in
+         this codebase. It sits at opacity 0 until the pointer enters, so the
+         second copy costs nothing to paint at idle. */}}
+    <g class="sj-net sj-net--glow" aria-hidden="true">{{ $net | safeHTML }}</g>
+
+    {{/* Junction rings and vias where the traces reach the central quiet zone.
+         These are the "junction" the lab is named after — the paths stop here
+         rather than crossing the hero text. */}}
+    <g class="sj-vias">
+      <circle class="sj-via" cx="412" cy="172" r="4"/>
+      <circle class="sj-via" cx="412" cy="196" r="4"/>
+      <circle class="sj-via" cx="418" cy="330" r="4"/>
+      <circle class="sj-via" cx="420" cy="346" r="4"/>
+      <circle class="sj-via" cx="418" cy="460" r="4"/>
+      <circle class="sj-via" cx="420" cy="528" r="4"/>
+      <circle class="sj-via" cx="1030" cy="170" r="4"/>
+      <circle class="sj-via" cx="1030" cy="196" r="4"/>
+      <circle class="sj-via" cx="1026" cy="294" r="4"/>
+      <circle class="sj-via" cx="1026" cy="364" r="4"/>
+      <circle class="sj-via" cx="1040" cy="460" r="4"/>
+      <circle class="sj-via" cx="1030" cy="532" r="4"/>
+      <circle class="sj-pad" cx="298" cy="140" r="2.5"/>
+      <circle class="sj-pad" cx="330" cy="172" r="2.5"/>
+      <circle class="sj-pad" cx="330" cy="320" r="2.5"/>
+      <circle class="sj-pad" cx="330" cy="486" r="2.5"/>
+      <circle class="sj-pad" cx="1150" cy="140" r="2.5"/>
+      <circle class="sj-pad" cx="1120" cy="320" r="2.5"/>
+      <circle class="sj-pad" cx="1140" cy="486" r="2.5"/>
+      <circle class="sj-pad" cx="176" cy="118" r="2.5"/>
+      <circle class="sj-pad" cx="1276" cy="116" r="2.5"/>
+    </g>
+
+    {{/* A handful of luminous nodes. Sparse on purpose. */}}
+    <g class="sj-lumens">
+      <circle class="sj-lumen" cx="412" cy="172" r="3"/>
+      <circle class="sj-lumen" cx="1030" cy="196" r="3"/>
+      <circle class="sj-lumen" cx="418" cy="330" r="3"/>
+      <circle class="sj-lumen" cx="1026" cy="364" r="3"/>
+      <circle class="sj-lumen" cx="420" cy="528" r="3"/>
+    </g>
+  </svg>
+
+  {{/* ---- the six research domains ---- */}}
+  <ul class="sj-circuit__domains">
+    {{- range $domains }}
+      <li class="sj-domain sj-domain--{{ .id }} sj-domain--{{ .side }} sj-domain--tier-{{ .tier }}"
+          data-research-domain="{{ .id }}">
+        {{/* `aria-label` rather than relying on the visible title: below 768px
+             the title is `display: none`, which left these buttons with no
+             accessible name at all (caught by Lighthouse `button-name`). The
+             label is the same string as the visible one, so WCAG 2.5.3 Label in
+             Name still holds wherever the title IS rendered. */}}
+        <button type="button" class="sj-domain__hit"
+                aria-label="{{ .title }}"
+                aria-expanded="false"
+                aria-controls="sj-domain-desc-{{ .id }}">
+          <span class="sj-domain__icon" aria-hidden="true">
+            <svg viewBox="0 0 96 72" focusable="false"><use href="#sjico-{{ .id }}"/></svg>
+          </span>
+          <span class="sj-domain__title">{{ .title }}</span>
+        </button>
+        <div class="sj-domain__desc" id="sj-domain-desc-{{ .id }}">
+          <ul>
+            {{- range .items }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      </li>
+    {{- end }}
+  </ul>
+</div>

@@ -1053,6 +1053,8 @@ numeric columns with no scrolling or truncation — recorded rather than forced.
 | 8.14 | ✅ **Done** — homepage hero flush under the navbar. See below |
 | 8.15 | Remove the committed OneDrive conflict copies. See below |
 | 8.16 | ✅ **Done** — hero research-field background + hero rhythm. See below |
+| 8.17 | ✅ **Done** — navbar brand scroll-reveal on the homepage. See below |
+| 8.18 | ✅ **Done** — interactive research-circuit hero (replaces 8.16). See below |
 
 ### 8.14 — Hero/navbar gap (done)
 
@@ -1171,6 +1173,168 @@ because 41 SVG shapes had to be parsed and styled before the hero text could pai
 0 document overflow, 0 infinite animations, 0 tab stops inside the field, navbar→hero gap 0. Reduced
 motion correct in both engines. Keyboard: 14 stops walked, none inside the field, all ringed. Zoom
 200 % (720 CSS px) and 400 % (360 CSS px): 0 overflow, h1 and CTA visible.
+
+### 8.17 — Navbar brand scroll-reveal, homepage only (done)
+
+At the top of the homepage the hero already carries a large SAJID Lab wordmark, so the navbar one is
+duplicate branding. It is now hidden at rest and takes over as the persistent identity once the hero
+wordmark scrolls up behind the sticky header. This completes the sequence started by 8.14 and 8.16:
+the hero begins flush under the navbar, the big wordmark is the identity on load, and the small one
+takes over as the hero leaves — one continuous handover rather than two unrelated effects.
+
+**Files:** `assets/js/sajid-nav.js` (new `initBrandReveal()`), `assets/css/homepage.css`,
+`layouts/_partials/site_head.html` (no-JS fallback).
+
+**Trigger.** An `IntersectionObserver` on `.sj-hero__mark` — the hero wordmark, not the whole hero —
+with the root box inset from the top by the sticky header's measured height
+(`rootMargin: "-65px 0px 0px 0px"`). The brand reveals the moment the wordmark passes *behind* the
+header. Observing the whole hero would have left a stretch of page with no SAJID Lab identity at all.
+No hard-coded pixel threshold, no scroll listener, no rAF. The one `resize` listener is passive and
+debounced at 200 ms, and only re-observes when the header height actually changes.
+
+Measured reveal points: scrollY **152** at 1440 and 768, **132** at 390 (hero mark bottom minus the
+65 px header).
+
+**Classes.** `.sj-home .navbar-brand` is the hidden rest state; `.sj-brand--shown` is added by the
+observer. Both scoped to `.sj-home`, which `baseof.html` sets on `.IsHome` only.
+
+**Why `visibility`, not just `opacity`.** `visibility: hidden` keeps the element's box, so the
+190–240 px brand slot stays reserved and nothing else in the navbar moves — *and* it removes the link
+from the tab order and the accessibility tree, so the a11y state matches the visual state instead of
+leaving an invisible link tabbable. `opacity` and `transform: translateY(-3px)` do the visible work;
+neither affects layout. Transition is `--sj-duration-base` (240 ms) with `--sj-ease-out`; `visibility`
+flips at 0 s on reveal and only after the fade on hide.
+
+**Reduced motion.** Same hide/reveal logic, no animation. Phase 2A's global
+`transition-duration: 0.01ms !important` wins over a plain `transition: none`, so the measured
+duration is 0.01 ms rather than literally `none` — an immediate state change either way. `transform`
+is forced to `none`.
+
+**No-JS.** A `<noscript><style>` block in `site_head.html`, emitted on the homepage only, restores the
+brand. Without it, scripting-off visitors would lose both the branding and the link home permanently.
+The JS also fails open: if the hero mark or `IntersectionObserver` is missing, it reveals immediately.
+
+**QA — Chromium 153 and Firefox 155**
+
+| Check | Result |
+|---|---|
+| Fresh load at the top | hidden (`visibility: hidden`, opacity 0) at 1440 / 768 / 390 |
+| Slow scroll through the hero | still hidden at the trigger − 20 px; revealed at trigger + 20 px |
+| Fast jump past the hero (scrollY 6000) | visible |
+| Scroll back to the top | hidden again |
+| Reload at a restored scrollY 2500 | **visible** — IntersectionObserver fires on observe |
+| Deep link `/#contact` (lands at scrollY 5444) | **visible** |
+| `/research/`, `/publication/`, `/teaching/<course>/`, `/authors/me/` | visible immediately, no class, no JS involved |
+| Nav link x-position, hidden vs shown | **0 px movement** |
+| Brand box width, hidden vs shown | **0 px change** |
+| Header height, hidden vs shown | **0 px change** |
+| **Cumulative layout shift** over a scripted scroll | **0** (browser `LayoutShift` API) |
+| Brand in the tab order at the top | **no** |
+| Brand in the tab order when shown | **yes** — Shift+Tab from "Home" lands on it |
+| Brand in the accessibility tree | 0 nodes at the top, 1 node when shown |
+| Reduced motion | state changes, 0.01 ms duration, `transform: none` |
+| Mobile menu at 390 | toggle at x = 334 before *and* after opening, 8 items, panel visible, 0 document overflow |
+| Console errors | only the pre-existing Pagefind 404 |
+
+Phase 7 gates re-run on the homepage, 7 viewports × 2 themes: 0 overflow, 0 contrast failures,
+0 duplicate ids, 0 overlaps, 0 infinite animations, height 6,877 px.
+
+Evidence: `docs/redesign/evidence/phase8-brand-reveal-qa.{mjs,json}`,
+`phase8-brand-reveal-firefox.mjs`, captures in `docs/redesign/screenshots/phase-8/brand-reveal/`.
+
+**Two measurement traps worth recording**, because both produced convincing false negatives:
+`document.body.focus()` without `preventScroll: true` scrolls the page back to 0 (the same trap
+Phase 2A hit with the scroll-spy), and tabbing *forward* from the top of the document lands on the
+skip link, which is not sticky, so the browser scrolls to 0 to reveal it — at which point the brand is
+correctly hidden and the walk reports it as untabbable. The shown state has to be probed by walking
+backwards from a control inside the sticky header.
+
+### 8.18 — Interactive research-circuit hero (done)
+
+Replaces the 8.16 "network field" rather than layering on it: that background read as a generic
+AI/particle effect. The hero now carries an abstract PCB / photonic-waveguide schematic with six
+research domains feeding traces toward the centre — the "junction" the lab is named after. Built from
+one inline SVG, project CSS and a ~200-line vanilla JS module. No WebGL, no Three.js, no canvas, no
+animation library, no new dependency.
+
+**Hero content also changed**, at the author's direction: the "Quantum, photonic and intelligent
+device research" heading and the publications / citations / h-index strip are gone; a
+`Department of EEE · BUET` eyebrow, a new lede, `Led by Prof. Sajid Muhaimin Choudhury, PhD` and the
+`Explore Our Research` / `Meet the Lab` CTAs replace them.
+
+> **The `<h1>` needed handling.** Dropping the heading would have taken the homepage back to zero
+> `<h1>`, which is visual-audit **P0-03** and a Phase 7 gate (`h1 === 1` across 210 cells). The
+> wordmark is now the `<h1>`, with `content.title` as its accessible name and the SVG marked
+> `aria-hidden`. Measured: exactly one `<h1>` at every viewport, in both engines.
+
+**Architecture.** The trace network is a full-bleed SVG (`viewBox 1440x620`, `xMidYMid slice`); the six
+domains are ordinary HTML positioned with CSS custom properties. They are deliberately not inside the
+SVG: `slice` crops hard as the viewport narrows (visible viewBox window measured at x 224-1216 on a
+1024px screen, x 547-893 at 390px), so edge-authored content disappears on small screens. Keeping the
+domains in HTML lets each breakpoint place them where they fit, keeps labels as selectable,
+translatable text, and makes each one a real `<button>` with a proper accessible name.
+
+**A `<use>` trap worth recording.** The network was first written as `<defs><g id="sj-net">` plus two
+`<use>` elements. `<use>` clones its target into a shadow tree, so neither
+`.sj-net--base [data-trace-domain="x"]` in CSS nor `querySelector` in JS could reach the rendered
+geometry — the per-domain highlighting and every pulse silently did nothing while the markup looked
+correct. The network is now held in a Hugo variable and emitted twice as real subtrees: one source of
+truth in the template, two addressable subtrees in the DOM.
+
+**Interaction.** Hover, focus and tap all activate exactly one domain; icon 0.14 → 0.88 with a 1.03
+scale, title → solid, three descriptive lines fade in, and only that domain's traces go to the accent
+colour while the others hold at 0.55. Pointer proximity brightens traces within ~190px via a radial
+CSS mask over the second network copy — no per-path distance maths, no layout reads, two custom
+properties written per animation frame. Idle pulses fire on a jittered 3–7s timer. Measured pulse
+count over 12s: 3. Over 9s with the hero scrolled out of view: **0**.
+
+**Density by breakpoint:** 6 domains desktop (≥1200), 4 tablet (768–1199), 3 symbols mobile with
+labels only on tap and descriptions hidden throughout. 46 authored traces, 78 rendered path elements
+across both layers.
+
+**Idle restraint, measured:** traces 0.13 light / 0.16 dark, icons 0.12–0.16, titles 0.32 / 0.38,
+descriptions `visibility: hidden`. Within the 8-18% band the brief specifies.
+
+**Two bugs this surfaced and fixed**
+
+1. `:root:not(.light) .sj-circuit` was written as a companion to `.dark` for the dark palette. With
+   the theme script idle `<html>` carries neither class, so it matched in **light** mode too and the
+   circuit rendered with dark ink. Replaced by `.dark` plus the existing `prefers-color-scheme` block.
+2. Below 768px the visible label is `display: none`, which left the domain buttons with **no
+   accessible name** — Lighthouse `button-name`, accessibility 100 → 95. Fixed with an explicit
+   `aria-label` matching the visible string (so WCAG 2.5.3 still holds where the label renders), and
+   the disclosure semantics are now attached only at widths where a description actually exists.
+
+**Performance.** Lighthouse 13.5.0, median of 3, production build over a static server:
+
+| | Performance | Accessibility | Best practices | CLS | TBT |
+|---|---|---|---|---|---|
+| Previous hero (8.16 field) | 58 | 100 | 96 | 0.0027 | 17 ms |
+| **Research circuit** | **58** | **100** | **96** | **0.0027** | 19 ms |
+
+Transfer 852 KB → 869 KB (+17 KB). No measurable performance cost.
+
+**QA — Chromium 153 and Firefox 155.** 1920 / 1536 / 1440 / 1366 / 1024 / 390 / 360, light and dark:
+0 horizontal overflow, 0 infinite animations, `h1 === 1`, 0 contrast failures, 0 duplicate ids,
+homepage 6,926 px (budget 7,000). Hover verified on all six domains; one domain dominant at a time
+(own group 1.0, others 0.55). Keyboard: 6 domain stops, all with the focus ring, all revealing their
+description. Touch: tap activates, tap away clears. Click safety: both CTAs reachable, the circuit
+never the top element over hero text. Reduced motion: glow layer `display: none`, 0 pulses, 0 running
+animations, `transform: none`, hover still reveals.
+
+> **Touch needs `pointerup`, not `click`.** A synthesised tap on these buttons produces
+> pointerdown/touchstart/pointerup/touchend but **no** follow-up `click` — verified with
+> `Input.synthesizeTapGesture`. A click-only implementation did nothing on a phone. Both are now
+> handled, with a short suppression window so a tap cannot toggle twice.
+
+Evidence: `docs/redesign/evidence/phase8-circuit-qa.{mjs,json}`,
+`phase8-circuit-firefox.mjs`, `phase8-lighthouse-circuit.json`; captures in
+`docs/redesign/screenshots/phase-8/circuit/`.
+
+**Remaining limitations.** The "Scroll to explore" affordance in the design reference was not built —
+§2 of the brief enumerates the hero content and does not include it. The Bengali homepage uses the
+same block and therefore gets the circuit too, but its hero still carries the older `gradient_mesh`
+configuration and its own spacing; `/bn/` remains item 8.9.
 
 ### 8.15 — Committed OneDrive conflict copies
 

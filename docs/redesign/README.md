@@ -10,7 +10,21 @@
 | **Phase 5 — Supporting content** | ✅ Complete (2026-09-22). `/outreach/` → `/resources/`, Teaching restructured, `/people/` retired. One manual gate: production redirects. |
 | **Phase 6 — Detail templates** | ✅ Complete (2026-09-22). Twelve detail types; one `_vendor` shadow. |
 | **Phase 7 — Responsive / a11y / cross-browser** | ✅ **PASS WITH MANUAL CHECKS REMAINING** (2026-09-22). See [`phase-7-validation.md`](phase-7-validation.md). |
-| **Phase 8 — Polish & performance** | ⬜ Not started. |
+| **Phase 8 — Polish & performance** | 🟡 In progress. Items 8.14, 8.16, 8.17 and 8.18 delivered; see the roadmap. |
+
+### Phase 8 so far
+
+| # | Item |
+|---|---|
+| 8.14 | Hero flush under the navbar — the 48 px white band was the block's section padding landing outside the hero's gradient |
+| 8.16 | Hero background figure (superseded by 8.18) and hero vertical rhythm |
+| 8.17 | Navbar brand hidden at the top of the homepage, revealed once the hero wordmark clears the sticky header |
+| 8.18 | **Interactive research-circuit hero** — PCB/waveguide schematic, six research domains on hover/focus/tap, finite pulses, pointer spotlight, reduced-motion and mobile variants |
+
+Homepage hero content changed with 8.18: the old heading and the
+publications/citations/h-index strip are gone, replaced by an institutional
+eyebrow, a new lede, the PI credit and two CTAs. The wordmark now carries the
+page's single `<h1>`.
 
 ### Phase 7 at a glance
 
