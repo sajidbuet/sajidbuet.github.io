@@ -1,0 +1,1309 @@
+{
+ "base": "http://127.0.0.1:8099",
+ "when": "2026-09-23T14:10:02.685Z",
+ "cells": [
+  {
+   "viewport": "320x568",
+   "theme": "light",
+   "vw": 320,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "320x568",
+   "theme": "dark",
+   "vw": 320,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 288,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "375x812",
+   "theme": "light",
+   "vw": 375,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 343,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 343,
+     "h": 318,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 343,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 343,
+     "h": 318,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "375x812",
+   "theme": "dark",
+   "vw": 375,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 343,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 343,
+     "h": 318,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 343,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 343,
+     "h": 318,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "768x1024",
+   "theme": "dark",
+   "vw": 768,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 352,
+     "h": 339,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1024x768",
+   "theme": "light",
+   "vw": 1024,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1024x768",
+   "theme": "dark",
+   "vw": 1024,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 309,
+     "h": 307,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 87,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1440x900",
+   "theme": "dark",
+   "vw": 1440,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1920x1080",
+   "theme": "light",
+   "vw": 1920,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  },
+  {
+   "viewport": "1920x1080",
+   "theme": "dark",
+   "vw": 1920,
+   "cards": [
+    {
+     "name": "OMRFlow",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 147,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/OMRflow",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Alpha",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Scholar Profile Exporter",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 141,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "Pi Web Kiosk",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 142,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/pi-web-kiosk",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    },
+    {
+     "name": "CTAdmin",
+     "w": 395,
+     "h": 285,
+     "overflowsViewport": false,
+     "titleOverflows": false,
+     "headOverlapsTitle": false,
+     "descH": 65,
+     "descChars": 128,
+     "tagRows": 1,
+     "tagsOverflow": false,
+     "links": [
+      {
+       "text": "Code↗ (opens in a new tab)",
+       "href": "https://github.com/sajidbuet/CTAdmin",
+       "target": "_blank",
+       "rel": "noopener",
+       "name": "Code↗ (opens in a new tab)"
+      }
+     ],
+     "statusText": "Active",
+     "statusColorOnly": false
+    }
+   ],
+   "horizontalScroll": false,
+   "columns": 1,
+   "gapFromNav": 40
+  }
+ ],
+ "contrast": [
+  {
+   "theme": "light",
+   "failures": []
+  },
+  {
+   "theme": "dark",
+   "failures": []
+  }
+ ],
+ "keyboard": {
+  "total": 30,
+  "cardStops": 8,
+  "noRing": 0,
+  "stops": [
+   {
+    "tag": "A",
+    "href": "/projects/omrflow/",
+    "name": "OMRFlow",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "https://github.com/sajidbuet/OMRflow",
+    "name": "Code↗ (opens in a new tab)",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "/projects/scholar-profile-exporter/",
+    "name": "Scholar Profile Exporter",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "https://github.com/sajidbuet/scholar-profile-exporter",
+    "name": "Code↗ (opens in a new tab)",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "/projects/pi-web-kiosk/",
+    "name": "Pi Web Kiosk",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "https://github.com/sajidbuet/pi-web-kiosk",
+    "name": "Code↗ (opens in a new tab)",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "/projects/ctadmin/",
+    "name": "CTAdmin",
+    "ring": true,
+    "inCard": true
+   },
+   {
+    "tag": "A",
+    "href": "https://github.com/sajidbuet/CTAdmin",
+    "name": "Code↗ (opens in a new tab)",
+    "ring": true,
+    "inCard": true
+   }
+  ]
+ },
+ "consoleErrors": [],
+ "reducedMotion": {
+  "transition": "border-color 1e-05s cubic-bezier(0.2, 0.8, 0.3, 1)",
+  "transform": "none",
+  "infinite": 0
+ }
+}

@@ -55,3 +55,23 @@
 .sj-research__mark {
   pointer-events: none;
 }
+
+/* ---------------------------------------------------------------------------
+   8.30 — `alpha` joins the status vocabulary.
+
+   Base styles live in homepage.css; phase4.css added maintained / prototype /
+   planned / archived. OMRFlow ships an alpha release, and that is a meaningful
+   distinction from `active` that the site had no word for: the existing set
+   jumps straight from `prototype` to `active`.
+
+   It takes the same warning colour as `prototype`, because it carries the same
+   message — usable, not yet settled — and reuses the existing token rather than
+   introducing a colour. The dot is solid, as `prototype` and `active` are: the
+   hollow dot in this vocabulary means inactive (`archived`, `planned`, `past`),
+   which alpha is not.
+
+   Status is never conveyed by colour alone anywhere on this site — the badge
+   always prints its own word next to the dot — so this rule adds emphasis, not
+   information.
+   -------------------------------------------------------------------------- */
+.sj-status--alpha { color: var(--sj-warning); border-color: currentColor; }
