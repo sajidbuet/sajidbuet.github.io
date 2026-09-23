@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom"><channel><title>Projects | SAJID Lab</title><link>https://www.sajid.bd/projects/</link><atom:link href="https://www.sajid.bd/projects/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.sajid.bd/media/logo.svg</url><title>Projects</title><link>https://www.sajid.bd/projects/</link></image><item><title>Scholar Profile Exporter</title><link>https://www.sajid.bd/projects/scholar-profile-exporter/</link><pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><guid>https://www.sajid.bd/projects/scholar-profile-exporter/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Keeping per-article citation counts in a CV or publication list is tedious to do
+by hand. The Publish or Perish desktop tool used to fill that role, but Google
+Scholar increasingly requires a signed-in session or a CAPTCHA, which that
+tool does not handle.&lt;/p&gt;
+&lt;h2 id="what-it-does"&gt;What it does&lt;/h2&gt;
+&lt;p&gt;The script runs as a TamperMonkey userscript on top of a loaded Google Scholar
+profile page — so it works within an ordinary signed-in browser session — and
+exports the profile in a Publish-or-Perish-style CSV, together with BibTeX
+links. That CSV is the input format an existing set of scripts already expects,
+so the downstream publication-list and BibTeX update workflow is unchanged.&lt;/p&gt;
+&lt;h2 id="status"&gt;Status&lt;/h2&gt;
+&lt;p&gt;Active. Source is on GitHub; it requires the TamperMonkey browser extension.&lt;/p&gt;</description></item><item><title>CTAdmin</title><link>https://www.sajid.bd/projects/ctadmin/</link><pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate><guid>https://www.sajid.bd/projects/ctadmin/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Seating students in roll-number order during a class test discourages groups of
+students who might otherwise sit together and collaborate. Producing that
+seating chart by hand in PowerPoint or Excel before every test is slow and has
+to be repeated for each room and each cohort.&lt;/p&gt;
+&lt;h2 id="what-it-does"&gt;What it does&lt;/h2&gt;
+&lt;p&gt;CTAdmin generates the seat plan from a roll-number list and provides the timing
+function needed while the test is running, so both parts of running a class test
+are handled by one tool rather than a spreadsheet plus the operating system&amp;rsquo;s
+timer app.&lt;/p&gt;
+&lt;h2 id="status"&gt;Status&lt;/h2&gt;
+&lt;p&gt;Active. Source and documentation are on GitHub.&lt;/p&gt;</description></item><item><title>Projects</title><link>https://www.sajid.bd/projects/_index-sajid-pc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.sajid.bd/projects/_index-sajid-pc/</guid><description>&lt;p&gt;Software, research tools, educational technology and engineering work built in
+the lab. Research funding and grants are listed separately under
+.&lt;/p&gt;</description></item></channel></rss>

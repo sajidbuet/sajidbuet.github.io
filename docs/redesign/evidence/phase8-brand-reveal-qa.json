@@ -1,0 +1,518 @@
+{
+ "meta": {
+  "base": "http://127.0.0.1:1337",
+  "at": "2026-09-22T21:43:56.314Z"
+ },
+ "journey": {
+  "390": {
+   "markBottom": 197,
+   "headerH": 65,
+   "triggerScrollY": 132,
+   "steps": {
+    "load@0": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 0
+    },
+    "y=53": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 53
+    },
+    "y=112": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 112
+    },
+    "y=152": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 152
+    },
+    "y=264": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 264
+    },
+    "y=4000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 4000
+    },
+    "fastJump6000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 6000
+    },
+    "backToTop": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 179,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 334,
+     "navVisible": true,
+     "scrollY": 0
+    }
+   }
+  },
+  "768": {
+   "markBottom": 217,
+   "headerH": 65,
+   "triggerScrollY": 152,
+   "steps": {
+    "load@0": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 0
+    },
+    "y=61": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 61
+    },
+    "y=132": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 132
+    },
+    "y=172": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 172
+    },
+    "y=304": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 304
+    },
+    "y=4000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 4000
+    },
+    "fastJump6000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 6000
+    },
+    "backToTop": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 220,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 0,
+     "toggleX": 712,
+     "navVisible": true,
+     "scrollY": 0
+    }
+   }
+  },
+  "1440": {
+   "markBottom": 217,
+   "headerH": 65,
+   "triggerScrollY": 152,
+   "steps": {
+    "load@0": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 0
+    },
+    "y=61": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 61
+    },
+    "y=132": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 132
+    },
+    "y=172": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 172
+    },
+    "y=304": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 304
+    },
+    "y=4000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 4000
+    },
+    "fastJump6000": {
+     "shown": true,
+     "visibility": "visible",
+     "opacity": 1,
+     "transform": "matrix(1, 0, 0, 1, 0, 0)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 5977
+    },
+    "backToTop": {
+     "shown": false,
+     "visibility": "hidden",
+     "opacity": 0,
+     "transform": "matrix(1, 0, 0, 1, 0, -3)",
+     "transition": "0.15s",
+     "boxW": 240,
+     "boxH": 44,
+     "boxReserved": true,
+     "headerH": 65,
+     "firstNavLinkX": 459,
+     "toggleX": 0,
+     "navVisible": true,
+     "scrollY": 0
+    }
+   }
+  }
+ },
+ "layoutShift": {
+  "hidden": {
+   "brandBoxW": 240,
+   "firstNavLinkX": 459,
+   "headerH": 65
+  },
+  "shown": {
+   "brandBoxW": 240,
+   "firstNavLinkX": 459,
+   "headerH": 65
+  },
+  "navLinkMovedPx": 0,
+  "brandBoxChangedPx": 0,
+  "headerHeightChangedPx": 0
+ },
+ "cumulativeLayoutShift": 0,
+ "reloadAtScroll": {
+  "shown": true,
+  "visibility": "visible",
+  "opacity": 1,
+  "transform": "matrix(1, 0, 0, 1, 0, 0)",
+  "transition": "0.15s",
+  "boxW": 240,
+  "boxH": 44,
+  "boxReserved": true,
+  "headerH": 65,
+  "firstNavLinkX": 459,
+  "toggleX": 0,
+  "navVisible": true,
+  "scrollY": 2500
+ },
+ "deepLinkAnchor": {
+  "shown": true,
+  "visibility": "visible",
+  "opacity": 1,
+  "transform": "matrix(1, 0, 0, 1, 0, 0)",
+  "transition": "0.15s",
+  "boxW": 240,
+  "boxH": 44,
+  "boxReserved": true,
+  "headerH": 65,
+  "firstNavLinkX": 459,
+  "toggleX": 0,
+  "navVisible": true,
+  "scrollY": 5444
+ },
+ "innerRoutes": {
+  "/research/": {
+   "visibility": "visible",
+   "opacity": 1,
+   "shownClass": false,
+   "boxW": 240
+  },
+  "/publication/": {
+   "visibility": "visible",
+   "opacity": 1,
+   "shownClass": false,
+   "boxW": 240
+  },
+  "/teaching/jul2025_eee303/": {
+   "visibility": "visible",
+   "opacity": 1,
+   "shownClass": false,
+   "boxW": 240
+  },
+  "/authors/me/": {
+   "visibility": "visible",
+   "opacity": 1,
+   "shownClass": false,
+   "boxW": 240
+  }
+ },
+ "keyboard": {
+  "atTop": [
+   "Skip to main content",
+   "Home",
+   "Research",
+   "Publications",
+   "Projects"
+  ],
+  "brandTabbableAtTop": false,
+  "scrolled": [
+   "Home @y1500",
+   "BRAND:SAJID Lab — Home @y1050"
+  ],
+  "brandTabbableWhenShown": true
+ },
+ "axBrandExposedAtTop": 0,
+ "axBrandExposedWhenShown": 1,
+ "reducedMotion": {
+  "atTop": {
+   "shown": false,
+   "visibility": "hidden",
+   "opacity": 0,
+   "transform": "none",
+   "transition": "1e-05s",
+   "boxW": 240,
+   "boxH": 44,
+   "boxReserved": true,
+   "headerH": 65,
+   "firstNavLinkX": 459,
+   "toggleX": 0,
+   "navVisible": true,
+   "scrollY": 0
+  },
+  "scrolled": {
+   "shown": true,
+   "visibility": "visible",
+   "opacity": 1,
+   "transform": "none",
+   "transition": "1e-05s",
+   "boxW": 240,
+   "boxH": 44,
+   "boxReserved": true,
+   "headerH": 65,
+   "firstNavLinkX": 459,
+   "toggleX": 0,
+   "navVisible": true,
+   "scrollY": 1500
+  }
+ },
+ "mobileMenu": {
+  "brandHiddenBeforeOpen": true,
+  "toggleXBefore": 334,
+  "afterOpen": "{\"expanded\":\"true\",\"panelVisible\":true,\"items\":8,\"toggleX\":334,\"docOverflow\":0}"
+ },
+ "consoleErrors": [
+  "Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ]
+}

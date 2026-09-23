@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom"><channel><title>TamperMonkey | SAJID Lab</title><link>https://www.sajid.bd/technologies/tampermonkey/</link><atom:link href="https://www.sajid.bd/technologies/tampermonkey/index.xml" rel="self" type="application/rss+xml"/><description>TamperMonkey</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.sajid.bd/media/logo.svg</url><title>TamperMonkey</title><link>https://www.sajid.bd/technologies/tampermonkey/</link></image><item><title>Scholar Profile Exporter</title><link>https://www.sajid.bd/projects/scholar-profile-exporter/</link><pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><guid>https://www.sajid.bd/projects/scholar-profile-exporter/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Keeping per-article citation counts in a CV or publication list is tedious to do
+by hand. The Publish or Perish desktop tool used to fill that role, but Google
+Scholar increasingly requires a signed-in session or a CAPTCHA, which that
+tool does not handle.&lt;/p&gt;
+&lt;h2 id="what-it-does"&gt;What it does&lt;/h2&gt;
+&lt;p&gt;The script runs as a TamperMonkey userscript on top of a loaded Google Scholar
+profile page — so it works within an ordinary signed-in browser session — and
+exports the profile in a Publish-or-Perish-style CSV, together with BibTeX
+links. That CSV is the input format an existing set of scripts already expects,
+so the downstream publication-list and BibTeX update workflow is unchanged.&lt;/p&gt;
+&lt;h2 id="status"&gt;Status&lt;/h2&gt;
+&lt;p&gt;Active. Source is on GitHub; it requires the TamperMonkey browser extension.&lt;/p&gt;</description></item></channel></rss>

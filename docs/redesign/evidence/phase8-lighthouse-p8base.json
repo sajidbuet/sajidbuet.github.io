@@ -1,0 +1,46 @@
+{
+ "label": "p8base",
+ "url": "http://127.0.0.1:1338/",
+ "at": "2026-09-23T02:21:12.840Z",
+ "runs": 1,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 26,
+  "accessibility": 100,
+  "bestPractices": 96,
+  "fcpMs": 3705,
+  "lcpMs": 7163,
+  "tbtMs": 4045,
+  "cls": 0.0027,
+  "speedIndexMs": 7953,
+  "mainThreadMs": 11977,
+  "transferKB": 869
+ },
+ "allScores": [
+  {
+   "performance": 26,
+   "accessibility": 100,
+   "best-practices": 96
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "total-blocking-time",
+  "max-potential-fid",
+  "errors-in-console",
+  "interactive",
+  "mainthread-work-breakdown",
+  "bootup-time",
+  "unused-css-rules",
+  "unused-javascript",
+  "bf-cache",
+  "document-latency-insight",
+  "forced-reflow-insight",
+  "image-delivery-insight",
+  "lcp-breakdown-insight",
+  "network-dependency-tree-insight",
+  "render-blocking-insight"
+ ]
+}

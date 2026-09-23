@@ -154,9 +154,90 @@
     });
   }
 
+  /* --------------------------------------------------------------------
+     Navbar brand reveal (homepage only)
+
+     homepage.css hides `.sj-home .navbar-brand` at rest. This reveals it once
+     the HERO WORDMARK — not the whole hero — has scrolled up behind the sticky
+     header, so the small navbar brand takes over at the moment the large one
+     stops being the page's identity. Waiting for the entire hero to clear the
+     viewport would leave a stretch of page with no SAJID Lab identity at all.
+
+     Structural trigger, not a magic pixel value: an IntersectionObserver whose
+     root box is inset from the top by the sticky header's own height, watching
+     the hero mark. No scroll listener, no rAF, nothing running while idle.
+
+     IntersectionObserver fires once on observe, so the state is correct
+     immediately for a reload that restores a non-zero scroll position, for a
+     deep link to an anchor further down the page, and for a bfcache restore.
+     -------------------------------------------------------------------- */
+  function initBrandReveal() {
+    var brand = document.querySelector(".navbar-brand");
+    if (!brand) return;
+    if (!document.body || document.body.className.indexOf("sj-home") === -1) return;
+
+    var SHOWN = "sj-brand--shown";
+    function show() { brand.classList.add(SHOWN); }
+
+    // Anything that stops the observer from working must fail OPEN: a hidden
+    // brand is a missing link home, which is worse than duplicate branding.
+    var mark = document.querySelector(".sj-hero__mark") || document.querySelector(".sj-hero");
+    if (!mark || !("IntersectionObserver" in window)) {
+      show();
+      return;
+    }
+
+    // The sticky header covers the top of the viewport, so the mark is
+    // effectively gone once it passes BEHIND the header, not once it passes the
+    // viewport edge. Inset the observer root by the header's own height.
+    var header = document.querySelector(".page-header") || document.getElementById("site-header");
+    function headerHeight() {
+      return header ? Math.round(header.getBoundingClientRect().height) : 64;
+    }
+
+    function onIntersect(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        brand.classList.toggle(SHOWN, !entries[i].isIntersecting);
+      }
+    }
+
+    var headerH = headerHeight();
+    var observer = null;
+
+    function observe() {
+      if (observer) observer.disconnect();
+      observer = new IntersectionObserver(onIntersect, {
+        rootMargin: "-" + headerH + "px 0px 0px 0px",
+        threshold: 0
+      });
+      observer.observe(mark);
+    }
+    observe();
+
+    // The brand steps down at `lg` and the header reflows on rotate, so the
+    // inset can change. Re-observe on a debounced resize rather than assuming
+    // the first measurement holds forever. One layout read per settled resize —
+    // no scroll listener and nothing running while idle.
+    var resizeTimer = null;
+    window.addEventListener(
+      "resize",
+      function () {
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          var h = headerHeight();
+          if (h === headerH) return;
+          headerH = h;
+          observe();
+        }, 200);
+      },
+      { passive: true }
+    );
+  }
+
   function init() {
     initMobileNav();
     initScrollSpy();
+    initBrandReveal();
   }
 
   if (document.readyState === "loading") {

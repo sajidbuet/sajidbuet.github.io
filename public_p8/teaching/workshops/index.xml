@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom"><channel><title>Workshops &amp; Tutorials | SAJID Lab</title><link>https://www.sajid.bd/teaching/workshops/</link><atom:link href="https://www.sajid.bd/teaching/workshops/index.xml" rel="self" type="application/rss+xml"/><description>Workshops &amp; Tutorials</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.sajid.bd/media/logo.svg</url><title>Workshops &amp; Tutorials</title><link>https://www.sajid.bd/teaching/workshops/</link></image><item><title>Instructions to Hardware: A Gentle Introduction to Computer Architecture, ARM Assembly, and Verilog</title><link>https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/</link><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/</guid><description>&lt;p&gt;&lt;a id="top"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This handout is designed to be followed from top to bottom during the workshop and reused later as a laboratory reference. The presentation is the primary source for the sequence, terminology, examples, and commands. Where the software-installation details were checked against current online documentation, those items are marked as &lt;strong&gt;web-verified&lt;/strong&gt; and linked to official project or vendor pages.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="The translation path from C source to hardware"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/source-to-hardware_hu_f36f4669244e31ba.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/source-to-hardware_hu_c319d7bc48e63256.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/source-to-hardware_hu_7fc543f2516761a4.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/source-to-hardware_hu_f36f4669244e31ba.webp"
+width="760"
+height="262"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Workshop question:&lt;/strong&gt; How does a statement such as &lt;code&gt;z = x + y;&lt;/code&gt; become an electrical operation inside a processor?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="table-of-contents"&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a id="1-workshop-overview"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="1-workshop-overview"&gt;1. Workshop Overview&lt;/h2&gt;
+&lt;p&gt;The workshop connects five views of the same computation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;C source
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ARM assembly
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;32-bit machine code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;single-cycle datapath
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verilog/SystemVerilog model + simulation waveform
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The emphasis is not memorizing ARM encoding or HDL syntax. The goal is to see how software-visible instructions map onto registers, an ALU, memories, control logic, and observable digital signals.&lt;/p&gt;
+&lt;p&gt;The presentation introduces the layers in this order: source code, ARM assembly, machine code, instruction fields, a simplified processor, Verilog/SystemVerilog, testbenches, Icarus Verilog, and GTKWave. This handout keeps that teaching progression but moves the &lt;code&gt;simple_sum.s → memfile.dat&lt;/code&gt; generation immediately before the full-processor simulation so that the laboratory workflow is executable from start to finish.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Suggested live-workshop use:&lt;/strong&gt; follow the numbered hands-on procedures. Explanatory subsections can be read in more detail after the workshop.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="2-learning-objectives-and-scope"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="2-learning-objectives-and-scope"&gt;2. Learning Objectives and Scope&lt;/h2&gt;
+&lt;p&gt;By the end of the workshop, you should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;explain the path &lt;strong&gt;C → assembly → machine code → datapath → HDL simulation&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;recognize the roles of basic AArch32 registers such as &lt;code&gt;r0&lt;/code&gt;, &lt;code&gt;r1&lt;/code&gt;, &lt;code&gt;r2&lt;/code&gt;, &lt;code&gt;sp&lt;/code&gt;, &lt;code&gt;lr&lt;/code&gt;, and &lt;code&gt;pc&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;explain the load–operate–store mental model;&lt;/li&gt;
+&lt;li&gt;generate A32 assembly using &lt;code&gt;arm-none-eabi-gcc&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;inspect machine-code words with &lt;code&gt;arm-none-eabi-objdump&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;describe and simulate a small combinational ALU;&lt;/li&gt;
+&lt;li&gt;distinguish a design module from a simulation testbench;&lt;/li&gt;
+&lt;li&gt;compile the supplied single-cycle processor and its &lt;strong&gt;separate&lt;/strong&gt; testbench using Icarus Verilog;&lt;/li&gt;
+&lt;li&gt;change simulation length using &lt;code&gt;+CYCLES=N&lt;/code&gt; without recompiling;&lt;/li&gt;
+&lt;li&gt;inspect the ARM execution in GTKWave and identify the successful final store.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is deliberately a gentle introduction. The workshop does &lt;strong&gt;not&lt;/strong&gt; attempt to cover pipelines, hazards, caches, speculative execution, virtual memory, detailed ABI rules, synthesis, place-and-route, or timing closure. Real Arm processors are much more sophisticated than the educational single-cycle model used here.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="3-required-software"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="3-required-software"&gt;3. Required Software&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Recommended platform:&lt;/strong&gt; Windows 10/11, 64-bit, using the &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt; terminal. The presentation uses this Windows-native setup to avoid switching between Windows and WSL during a short laboratory session. MSYS2 documents UCRT64 as its modern Universal C Runtime environment and made it the default over MINGW64; the current package pages provide all tools used here.&lt;/p&gt;
+&lt;h3 id="31-software-and-official-pages"&gt;3.1 Software and official pages&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;th&gt;Purpose in this workshop&lt;/th&gt;
+&lt;th&gt;Official page&lt;/th&gt;
+&lt;th&gt;Recommended installation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MSYS2&lt;/td&gt;
+&lt;td&gt;UCRT64 terminal and &lt;code&gt;pacman&lt;/code&gt; package manager&lt;/td&gt;
+&lt;td&gt;
+/
+&lt;/td&gt;
+&lt;td&gt;Current 64-bit installer; open &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Native GCC&lt;/td&gt;
+&lt;td&gt;General C compiler used in the workshop toolchain&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;UCRT64 package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Arm bare-metal GCC&lt;/td&gt;
+&lt;td&gt;Generates A32 assembly and assembles &lt;code&gt;simple_sum.s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;UCRT64 package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Icarus Verilog&lt;/td&gt;
+&lt;td&gt;Compiles Verilog/SystemVerilog designs and testbenches&lt;/td&gt;
+&lt;td&gt;
+/
+&lt;/td&gt;
+&lt;td&gt;UCRT64 package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GTKWave&lt;/td&gt;
+&lt;td&gt;Opens VCD waveform files&lt;/td&gt;
+&lt;td&gt;
+/
+&lt;/td&gt;
+&lt;td&gt;UCRT64 package&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Web-verified on 2026-08-11:&lt;/strong&gt; the MSYS2 repository listed Arm GCC 16.1.0-1, Icarus Verilog 13.0-2, and GTKWave 3.3.127-1 in UCRT64. Exact package versions can change; use the current MSYS2 packages rather than pinning these versions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="32-install-msys2"&gt;3.2 Install MSYS2&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the current 64-bit installer from the
+.&lt;/li&gt;
+&lt;li&gt;Install to the default short path such as &lt;code&gt;C:\msys64&lt;/code&gt;, unless your laboratory has a managed-software policy.&lt;/li&gt;
+&lt;li&gt;From the Windows Start menu, open &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt;. Do not use the plain &lt;strong&gt;MSYS2 MSYS&lt;/strong&gt; shell for these package commands.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="33-update-the-package-database-and-installed-packages"&gt;3.3 Update the package database and installed packages&lt;/h3&gt;
+&lt;p&gt;Run in &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If MSYS2 asks you to close the terminal after updating core components, close all MSYS2 windows, reopen &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt;, and run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;again.&lt;/p&gt;
+&lt;h3 id="34-install-the-workshop-packages"&gt;3.4 Install the workshop packages&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pacman -S --needed &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw-w64-ucrt-x86_64-gcc &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw-w64-ucrt-x86_64-arm-none-eabi-gcc &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw-w64-ucrt-x86_64-iverilog &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; mingw-w64-ucrt-x86_64-gtkwave
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The Arm GCC package also pulls in the corresponding Arm binutils, including &lt;code&gt;arm-none-eabi-objdump&lt;/code&gt;. The Icarus package contains both &lt;code&gt;iverilog&lt;/code&gt; and &lt;code&gt;vvp&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="35-verify-the-installation"&gt;3.5 Verify the installation&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gcc --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-objdump --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;iverilog -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gtkwave --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Pass condition:&lt;/strong&gt; each command prints version information rather than &lt;code&gt;command not found&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="36-create-a-workshop-folder"&gt;3.6 Create a workshop folder&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir -p ~/workshop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/workshop
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You may instead use another writable folder. The important rule for the processor simulation is that &lt;code&gt;arm_single.sv&lt;/code&gt;, &lt;code&gt;arm_single_tb.sv&lt;/code&gt;, and &lt;code&gt;memfile.dat&lt;/code&gt; must be in the working folder when you run the simulation.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="4-workshop-files"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="4-workshop-files"&gt;4. Workshop Files&lt;/h2&gt;
+&lt;p&gt;Before beginning the processor simulation, download the three required processor files and place them in the &lt;strong&gt;same working folder&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id="41-required-processor-files"&gt;4.1 Required processor files&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;File&lt;/th&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;th&gt;Download&lt;/th&gt;
+&lt;th&gt;Place it in&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;arm_single.sv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Single-cycle ARM processor plus instruction and data memories&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;~/workshop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;arm_single_tb.sv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Separate simulation testbench containing clock/reset generation, &lt;code&gt;+CYCLES=N&lt;/code&gt; control, self-checking, and waveform dumping&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;~/workshop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;memfile.dat&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ARM machine-code program loaded by the processor&amp;rsquo;s instruction memory&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;~/workshop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;After downloading, your workshop directory should contain:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;workshop/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── arm_single.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── arm_single_tb.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="42-files-students-create-or-generate-during-the-workshop"&gt;4.2 Files students create or generate during the workshop&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;File&lt;/th&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;add.c&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Tiny C function for compiler observation&lt;/td&gt;
+&lt;td&gt;Create during Hands-on 1;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;add_armv7a.s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Compiler-generated assembly&lt;/td&gt;
+&lt;td&gt;Generated by GCC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;simple_alu.v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;4-bit combinational ALU&lt;/td&gt;
+&lt;td&gt;Create during Hands-on 2;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tb_simple_alu.v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ALU testbench&lt;/td&gt;
+&lt;td&gt;Create during Hands-on 2;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;alu_sim&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Compiled Icarus simulation&lt;/td&gt;
+&lt;td&gt;Generated by &lt;code&gt;iverilog&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;alu.vcd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ALU waveform&lt;/td&gt;
+&lt;td&gt;Generated by &lt;code&gt;vvp&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;simple_sum.s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Deterministic A32 demo program&lt;/td&gt;
+&lt;td&gt;Create during Hands-on 3;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;simple_sum.o&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Assembled object file&lt;/td&gt;
+&lt;td&gt;Generated by GCC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;memfile.dat&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;One machine-code word per line for instruction memory&lt;/td&gt;
+&lt;td&gt;Generate from &lt;code&gt;simple_sum.o&lt;/code&gt;;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;arm_single.out&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Compiled processor simulation&lt;/td&gt;
+&lt;td&gt;Generated by &lt;code&gt;iverilog&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;arm_single.vcd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Full processor waveform&lt;/td&gt;
+&lt;td&gt;Generated automatically by the revised testbench&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Recovery aid:&lt;/strong&gt; the reference copies are included so a student who loses time to an editing error can rejoin the workshop. The live exercise is more useful if you create the files yourself first.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="5-toolchain-overview"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="5-toolchain-overview"&gt;5. Toolchain Overview&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Windows-native workshop toolchain"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/toolchain-map_hu_96590b1e41c34d56.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/toolchain-map_hu_6e13a50552c1ddeb.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/toolchain-map_hu_bdc5eead5cbc224f.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/toolchain-map_hu_96590b1e41c34d56.webp"
+width="760"
+height="329"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The tools play different roles:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;C source ──arm-none-eabi-gcc──&amp;gt; ARM assembly
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ARM .s ──arm-none-eabi-gcc -c──&amp;gt; object file
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;object file ──arm-none-eabi-objdump──&amp;gt; assembly + machine words
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verilog/SystemVerilog sources ──iverilog──&amp;gt; compiled simulation
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;compiled simulation ──vvp──&amp;gt; execution + VCD file
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;VCD file ──gtkwave──&amp;gt; waveform inspection
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Why this matters:&lt;/strong&gt; &lt;code&gt;iverilog&lt;/code&gt; and &lt;code&gt;vvp&lt;/code&gt; are separate steps. Icarus documentation describes &lt;code&gt;iverilog&lt;/code&gt; as the compiler/driver and &lt;code&gt;vvp&lt;/code&gt; as the runtime that executes the compiled simulation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="6-what-is-an-arm-instruction"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="6-what-is-an-arm-instruction"&gt;6. What Is an ARM Instruction?&lt;/h2&gt;
+&lt;p&gt;An instruction is a compact command specifying an operation and its operands. Consider:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ADD&lt;/code&gt; is the &lt;strong&gt;mnemonic&lt;/strong&gt;: what operation to perform.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r2&lt;/code&gt; is the &lt;strong&gt;destination&lt;/strong&gt;: where the result is written.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r0&lt;/code&gt; and &lt;code&gt;r1&lt;/code&gt; are the &lt;strong&gt;source operands&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In A32 state, the instruction is represented by a 32-bit machine word. Assembly is written for humans; the processor fetches the encoded word.&lt;/p&gt;
+&lt;p&gt;The workshop deliberately requests A32/Arm-state output with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-marm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;rather than Thumb output.&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Check yourself:&lt;/strong&gt; Which token selects the ALU operation in &lt;code&gt;ADD r2, r0, r1&lt;/code&gt;?&lt;br&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt; the mnemonic/opcode, &lt;code&gt;ADD&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="7-arm-registers-and-loadstore-architecture"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="7-arm-registers-and-loadstore-architecture"&gt;7. ARM Registers and Load/Store Architecture&lt;/h2&gt;
+&lt;p&gt;AArch32 exposes registers &lt;code&gt;r0&lt;/code&gt; through &lt;code&gt;r15&lt;/code&gt;. For this workshop, the most useful names are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r0&lt;/code&gt;–&lt;code&gt;r3&lt;/code&gt;: commonly used for early function arguments, temporaries, and return values under common AArch32 calling conventions;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r13 / sp&lt;/code&gt;: stack pointer;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r14 / lr&lt;/code&gt;: link register, commonly holding a return address;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r15 / pc&lt;/code&gt;: program counter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The architecture defines registers and instructions. A calling convention defines how software uses registers during function calls.&lt;/p&gt;
+&lt;h3 id="71-load--operate--store"&gt;7.1 Load → operate → store&lt;/h3&gt;
+&lt;p&gt;ARM is presented here as a load/store architecture: arithmetic operates on register values, while &lt;code&gt;LDR&lt;/code&gt; and &lt;code&gt;STR&lt;/code&gt; move data between registers and memory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;LDR&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;r4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#8] @ r0 &amp;lt;- memory[r4 + 8]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r1&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt; &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt; &lt;span class="err"&gt;+&lt;/span&gt; &lt;span class="no"&gt;r1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;STR&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;r4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#12] @ memory[r4 + 12] &amp;lt;- r2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The simple mental model is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Load → operate → store
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Do not worry about the full set of ARM addressing modes today. For the workshop, base register plus immediate offset is sufficient.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="8-hands-on-1--generate-arm-assembly-from-c"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="8-hands-on-1--generate-arm-assembly-from-c"&gt;8. Hands-on 1 — Generate ARM Assembly from C&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Estimated time from the presentation: about 10 minutes.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="objective"&gt;Objective&lt;/h3&gt;
+&lt;p&gt;Compile a small C function to ARMv7-A A32 assembly and identify the function label, registers, arithmetic operation, and return sequence.&lt;/p&gt;
+&lt;h3 id="procedure"&gt;Procedure&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In the MSYS2 UCRT64 terminal, make sure you are in your workshop folder:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/workshop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Create the file:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;notepad.exe add.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Enter exactly:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;li&gt;
+&lt;p&gt;Save and close Notepad.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generate unoptimized assembly:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc -S &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -march&lt;span class="o"&gt;=&lt;/span&gt;armv7-a -marm -O0 &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; add.c -o add_armv7a.s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="6"&gt;
+&lt;li&gt;Display the assembly:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat add_armv7a.s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="7"&gt;
+&lt;li&gt;Find four features:
+&lt;ol&gt;
+&lt;li&gt;the function label &lt;code&gt;add:&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;registers carrying or temporarily holding the two input values;&lt;/li&gt;
+&lt;li&gt;an &lt;code&gt;add&lt;/code&gt; instruction or equivalent arithmetic operation;&lt;/li&gt;
+&lt;li&gt;the return sequence, commonly ending in &lt;code&gt;bx lr&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Presentation consistency note:&lt;/strong&gt; the teaching discussion in the deck explicitly explains the verbose &lt;code&gt;-O0&lt;/code&gt; case and then compares optimization. This handout therefore uses ASCII &lt;code&gt;-O0&lt;/code&gt; for the first run. Use &lt;code&gt;-O1&lt;/code&gt; in the comparison below.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="what-the-options-mean"&gt;What the options mean&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Option&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-S&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stop after compilation and emit assembly source&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-march=armv7-a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Target the ARMv7-A architecture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-marm&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Generate A32/Arm-state instructions rather than Thumb&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-O0&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Disable optimization for a more direct compiler output&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-o add_armv7a.s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Name the output file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="9-read-the-generated-assembly"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="9-read-the-generated-assembly"&gt;9. Read the Generated Assembly&lt;/h2&gt;
+&lt;p&gt;Compiler output is not guaranteed to match the slide line for line. GCC version, optimization, and compiler decisions can change register allocation, stack-frame construction, directives, and comments.&lt;/p&gt;
+&lt;p&gt;A trimmed semantic pattern may look like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nl"&gt;add:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;...&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;optional&lt;/span&gt; &lt;span class="no"&gt;prologue&lt;/span&gt; &lt;span class="err"&gt;/&lt;/span&gt; &lt;span class="no"&gt;argument&lt;/span&gt; &lt;span class="no"&gt;handling&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;add&lt;/span&gt; &lt;span class="no"&gt;r3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r3&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;arithmetic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;mov&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r3&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;place&lt;/span&gt; &lt;span class="no"&gt;return&lt;/span&gt; &lt;span class="no"&gt;value&lt;/span&gt; &lt;span class="no"&gt;in&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;...&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;optional&lt;/span&gt; &lt;span class="no"&gt;epilogue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;bx&lt;/span&gt; &lt;span class="no"&gt;lr&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Focus on meaning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Inputs:&lt;/strong&gt; the first two integer arguments commonly arrive in &lt;code&gt;r0&lt;/code&gt; and &lt;code&gt;r1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Computation:&lt;/strong&gt; at &lt;code&gt;-O0&lt;/code&gt;, the compiler may copy, spill, and reload values before the actual &lt;code&gt;ADD&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Return:&lt;/strong&gt; the result commonly ends in &lt;code&gt;r0&lt;/code&gt;; &lt;code&gt;bx lr&lt;/code&gt; returns to the caller.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="compare-with-optimization"&gt;Compare with optimization&lt;/h3&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc -S &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -march&lt;span class="o"&gt;=&lt;/span&gt;armv7-a -marm -O1 &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; add.c -o add_armv7a_O1.s
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat add_armv7a_O1.s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ask yourself:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which instructions disappeared?&lt;/li&gt;
+&lt;li&gt;Is the observable C behavior unchanged?&lt;/li&gt;
+&lt;li&gt;Which lines are the actual arithmetic and which support function entry/exit?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="optional-machine-code-view"&gt;Optional machine-code view&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc -c &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -march&lt;span class="o"&gt;=&lt;/span&gt;armv7-a -marm -O0 &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; add.c -o add_armv7a.o
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-objdump -d add_armv7a.o
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This links the human-readable assembly to encoded instructions without requiring you to hand-encode every field.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="10-machine-code-and-memfiledat"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="10-machine-code-and-memfiledat"&gt;10. Machine Code and &lt;code&gt;memfile.dat&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The simplified processor does not read &lt;code&gt;.s&lt;/code&gt; assembly source. Its instruction memory uses &lt;code&gt;$readmemh&lt;/code&gt; to read machine-code words from &lt;code&gt;memfile.dat&lt;/code&gt; when the simulation starts.&lt;/p&gt;
+&lt;p&gt;Each line is one 32-bit instruction represented by &lt;strong&gt;8 hexadecimal digits&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Assembly Machine code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ADD R3, R1, R2 E0813002
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;STR R3, [R0, #248] E58030F8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;B halt EAFFFFFE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Assembly source to memfile.dat and instruction memory"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/assembly-to-memfile_hu_56b82f47bce6d558.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/assembly-to-memfile_hu_d451d419436f4bbe.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/assembly-to-memfile_hu_bd58b04c6273e3f5.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/assembly-to-memfile_hu_56b82f47bce6d558.webp"
+width="760"
+height="261"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The workflow used later is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;assembly source
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;object file
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;objdump
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;machine-code words
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;instruction memory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Why this matters:&lt;/strong&gt; compiler-generated C assembly is excellent for learning. For the educational processor, however, a short handwritten &lt;code&gt;.s&lt;/code&gt; file gives a deterministic instruction sequence that stays within the processor&amp;rsquo;s supported subset.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="11-a-quick-look-at-a32-instruction-fields"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="11-a-quick-look-at-a32-instruction-fields"&gt;11. A Quick Look at A32 Instruction Fields&lt;/h2&gt;
+&lt;p&gt;You do &lt;strong&gt;not&lt;/strong&gt; need to memorize full ARM encoding. The presentation uses only enough decoding to connect a 32-bit word to the processor&amp;rsquo;s controller.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="A32 fields used in the workshop"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/a32-instruction-fields_hu_34de44a9e80a19cb.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/a32-instruction-fields_hu_d6422f3557d678ec.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/a32-instruction-fields_hu_da1bac8f00e05389.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/a32-instruction-fields_hu_34de44a9e80a19cb.webp"
+width="760"
+height="451"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="111-condition-field"&gt;11.1 Condition field&lt;/h3&gt;
+&lt;p&gt;Bits &lt;code&gt;31:28&lt;/code&gt; are the condition field. In the workshop program, the instructions use condition code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1110 = E = always execute
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="112-main-operation-class"&gt;11.2 Main operation class&lt;/h3&gt;
+&lt;p&gt;The simplified controller uses bits &lt;code&gt;27:26&lt;/code&gt; to distinguish broad instruction classes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;00 data processing
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;01 memory access (LDR / STR)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;10 branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="113-example-add-r3-r1-r2"&gt;11.3 Example: &lt;code&gt;ADD R3, R1, R2&lt;/code&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E0813002
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Important fields are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;condition = &lt;code&gt;E&lt;/code&gt; / always;&lt;/li&gt;
+&lt;li&gt;operation class = data processing;&lt;/li&gt;
+&lt;li&gt;data-processing opcode = &lt;code&gt;ADD&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rn = R1&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rd = R3&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;register operand &lt;code&gt;Rm = R2&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="114-memory-and-branch-examples"&gt;11.4 Memory and branch examples&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;LDR&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#0] @ E5901000
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;STR&lt;/span&gt; &lt;span class="no"&gt;R3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#248] @ E58030F8
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;B&lt;/span&gt; &lt;span class="no"&gt;halt&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;EAFFFFFE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The single-cycle processor does not implement an &lt;code&gt;OUT&lt;/code&gt; or &lt;code&gt;HLT&lt;/code&gt; instruction. The workshop models output as a store to a watched address and models halting as an infinite branch plus testbench-controlled &lt;code&gt;$finish&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="12-the-simplified-arm-processor"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="12-the-simplified-arm-processor"&gt;12. The Simplified ARM Processor&lt;/h2&gt;
+&lt;p&gt;The supplied processor is an educational A32-compatible subset. Its decoder supports the instructions used in the presentation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ADD
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SUB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;AND
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ORR
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;LDR
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;STR
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;B
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The source contains a controller, datapath, register file, ALU, immediate extender, multiplexers, PC logic, instruction memory, and data memory.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a complete modern Arm core. Its purpose is to make instruction execution traceable.&lt;/p&gt;
+&lt;p&gt;The full demonstration program conceptually performs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mem[0] = 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mem[1] = 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;R1 = mem[0]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;R2 = mem[1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;R3 = R1 + R2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;store R3 to address 0xF8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;branch forever
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The data memory is not initialized from &lt;code&gt;memfile.dat&lt;/code&gt;, so the program first writes &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;4&lt;/code&gt; into &lt;code&gt;mem[0]&lt;/code&gt; and &lt;code&gt;mem[1]&lt;/code&gt; before loading them back.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="13-the-single-cycle-datapath"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="13-the-single-cycle-datapath"&gt;13. The Single-Cycle Datapath&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;microarchitecture&lt;/strong&gt; is the hardware organization used to implement an architecture. In this teaching model, each instruction completes through the datapath in a single clock cycle.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Simplified single-cycle ARM datapath"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/simplified-single-cycle-datapath_hu_2296d76793ac9819.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/simplified-single-cycle-datapath_hu_654cce220302b6af.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/simplified-single-cycle-datapath_hu_3c9d48a2c1bbc88d.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/simplified-single-cycle-datapath_hu_2296d76793ac9819.webp"
+width="760"
+height="352"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;For a register-to-register instruction such as:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;r2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;r1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;trace the operation as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Fetch:&lt;/strong&gt; the PC selects a word in instruction memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decode:&lt;/strong&gt; instruction fields select &lt;code&gt;r0&lt;/code&gt;, &lt;code&gt;r1&lt;/code&gt;, and destination &lt;code&gt;r2&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Read operands:&lt;/strong&gt; the register file presents the current source values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute:&lt;/strong&gt; control selects the ADD function and the ALU computes the sum.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write back:&lt;/strong&gt; the ALU result is written to &lt;code&gt;r2&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;No data-memory access is needed for this register-to-register ADD.&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Check yourself:&lt;/strong&gt; Which major datapath block is present but bypassed for &lt;code&gt;ADD r2, r0, r1&lt;/code&gt;?&lt;br&gt;
+&lt;strong&gt;Answer:&lt;/strong&gt; data memory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="14-verilogsystemverilog-essentials"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="14-verilogsystemverilog-essentials"&gt;14. Verilog/SystemVerilog Essentials&lt;/h2&gt;
+&lt;p&gt;Verilog describes hardware, not a sequential list of software commands. A module represents logic that exists concurrently.&lt;/p&gt;
+&lt;p&gt;Three ideas are sufficient for this workshop:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Module interface:&lt;/strong&gt; inputs and outputs are signals crossing the hardware boundary.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Combinational behavior:&lt;/strong&gt; &lt;code&gt;always @(*)&lt;/code&gt; describes logic whose output responds to current inputs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testbench:&lt;/strong&gt; a separate simulation-only module drives inputs, observes outputs, and can request waveform recording.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A combinational decision network can be written as:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;always&lt;/span&gt; &lt;span class="p"&gt;@(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// ...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;endcase&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The full processor source uses SystemVerilog constructs such as &lt;code&gt;logic&lt;/code&gt;, &lt;code&gt;always_comb&lt;/code&gt;, and &lt;code&gt;always_ff&lt;/code&gt;. Therefore the processor compile command uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-g2012
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Icarus documents &lt;code&gt;-g2012&lt;/code&gt; as enabling the IEEE 1800-2012 SystemVerilog language level.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="15-hands-on-2a--build-the-4-bit-alu"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="15-hands-on-2a--build-the-4-bit-alu"&gt;15. Hands-on 2A — Build the 4-bit ALU&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Estimated time from the presentation: about 8 minutes.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="objective-1"&gt;Objective&lt;/h3&gt;
+&lt;p&gt;Create a four-operation combinational ALU with two 4-bit inputs, a 2-bit operation selector, and a 4-bit result.&lt;/p&gt;
+&lt;h3 id="operation-table"&gt;Operation table&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;code&gt;op&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;Operation&lt;/th&gt;
+&lt;th&gt;Expression&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;00&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ADD&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;a + b&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;01&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;SUB&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;a - b&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;AND&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;a &amp;amp; b&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;11&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;OR&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;a | b&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Because &lt;code&gt;y&lt;/code&gt; is only four bits wide, arithmetic wraps modulo 16.&lt;/p&gt;
+&lt;h3 id="procedure-1"&gt;Procedure&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create the source file:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;notepad.exe simple_alu.v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="n"&gt;simple_alu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;input&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;input&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;input&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;output&lt;/span&gt; &lt;span class="kt"&gt;reg&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;always&lt;/span&gt; &lt;span class="p"&gt;@(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b00&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b01&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;endcase&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;endmodule&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Save and close the file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Before simulating, predict the outputs for:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;a = 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;b = 3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="16-hands-on-2b--test-and-inspect-the-alu"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="16-hands-on-2b--test-and-inspect-the-alu"&gt;16. Hands-on 2B — Test and Inspect the ALU&lt;/h2&gt;
+&lt;h3 id="create-the-testbench"&gt;Create the testbench&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;notepad.exe tb_simple_alu.v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="n"&gt;tb_simple_alu&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;reg&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;reg&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;wire&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;simple_alu&lt;/span&gt; &lt;span class="n"&gt;uut&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;initial&lt;/span&gt; &lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;$dumpfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;alu.vcd&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;$dumpvars&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tb_simple_alu&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt;&lt;span class="mi"&gt;&amp;#39;d6&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt;&lt;span class="mi"&gt;&amp;#39;d3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b00&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="mh"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b01&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="mh"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="mh"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b11&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="mh"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;$finish&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;endmodule&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="compile-simulate-inspect"&gt;Compile, simulate, inspect&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compile:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;iverilog -o alu_sim simple_alu.v tb_simple_alu.v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Run:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp alu_sim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Confirm the waveform exists:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l alu.vcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;li&gt;Open GTKWave:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gtkwave alu.vcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="5"&gt;
+&lt;li&gt;In GTKWave, select hierarchy &lt;code&gt;tb_simple_alu&lt;/code&gt;, then add:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;a
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;b
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;op
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="6"&gt;
+&lt;li&gt;Zoom to the full &lt;code&gt;0–40&lt;/code&gt; interval.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Expected behavior:&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Expected ALU behavior for a=6 and b=3"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/expected-alu-behavior_hu_931ada5193facf89.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/expected-alu-behavior_hu_29b401679ddad680.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/expected-alu-behavior_hu_f0fd44a5a90592e6.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/expected-alu-behavior_hu_931ada5193facf89.webp"
+width="760"
+height="321"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;op&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;Operation&lt;/th&gt;
+&lt;th style="text-align: right"&gt;&lt;code&gt;y&lt;/code&gt; decimal&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;y&lt;/code&gt; binary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0–10&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;00&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;ADD&lt;/td&gt;
+&lt;td style="text-align: right"&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;1001&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10–20&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;01&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;SUB&lt;/td&gt;
+&lt;td style="text-align: right"&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0011&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20–30&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;AND&lt;/td&gt;
+&lt;td style="text-align: right"&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0010&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30–40&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;11&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;OR&lt;/td&gt;
+&lt;td style="text-align: right"&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;0111&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Engineering habit:&lt;/strong&gt; predict → edit → compile → simulate → inspect → explain. A tool completing without error is not, by itself, proof that the design is correct.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="17-hands-on-3a--write-the-deterministic-arm-program"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="17-hands-on-3a--write-the-deterministic-arm-program"&gt;17. Hands-on 3A — Write the Deterministic ARM Program&lt;/h2&gt;
+&lt;p&gt;The C example was useful for observing the compiler, but the simplified processor supports only a small instruction subset. For a deterministic full-processor demonstration, write the exact assembly program used by the presentation.&lt;/p&gt;
+&lt;h3 id="procedure-2"&gt;Procedure&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In &lt;code&gt;~/workshop&lt;/code&gt;, create:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;notepad.exe simple_sum.s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Enter exactly:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-asm" data-lang="asm"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;.syntax&lt;/span&gt; &lt;span class="no"&gt;unified&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;.arch&lt;/span&gt; &lt;span class="no"&gt;armv7-a&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;.arm&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;.global&lt;/span&gt; &lt;span class="no"&gt;_start&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nl"&gt;_start:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;SUB&lt;/span&gt; &lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R15&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;R0&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#3 @ R1 = 3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;STR&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#0] @ mem[0] = 3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;R2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#4 @ R2 = 4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;STR&lt;/span&gt; &lt;span class="no"&gt;R2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#4] @ mem[1] = 4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;LDR&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#0] @ R1 = mem[0]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;LDR&lt;/span&gt; &lt;span class="no"&gt;R2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#4] @ R2 = mem[1]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;ADD&lt;/span&gt; &lt;span class="no"&gt;R3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;R2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;R3&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="no"&gt;R1&lt;/span&gt; &lt;span class="err"&gt;+&lt;/span&gt; &lt;span class="no"&gt;R2&lt;/span&gt; &lt;span class="err"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;STR&lt;/span&gt; &lt;span class="no"&gt;R3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;R0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#248] @ write result to testbench output address
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nl"&gt;halt:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;B&lt;/span&gt; &lt;span class="no"&gt;halt&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;pseudo-HLT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="what-the-program-does"&gt;What the program does&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SUB R0, R15, R15&lt;/code&gt; makes &lt;code&gt;R0 = 0&lt;/code&gt; and uses it as the base address.&lt;/li&gt;
+&lt;li&gt;The first two &lt;code&gt;STR&lt;/code&gt; instructions initialize data-memory words 0 and 1.&lt;/li&gt;
+&lt;li&gt;The two &lt;code&gt;LDR&lt;/code&gt; instructions read back &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;4&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ADD R3, R1, R2&lt;/code&gt; produces &lt;code&gt;7&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The final &lt;code&gt;STR&lt;/code&gt; writes &lt;code&gt;7&lt;/code&gt; to byte address &lt;code&gt;248 = 0xF8&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;B halt&lt;/code&gt; loops forever as a pseudo-halt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Why initialize memory in software?&lt;/strong&gt; The supplied &lt;code&gt;dmem&lt;/code&gt; array is not loaded by &lt;code&gt;$readmemh&lt;/code&gt;; only the instruction memory &lt;code&gt;imem&lt;/code&gt; reads &lt;code&gt;memfile.dat&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="18-hands-on-3b--generate-memfiledat"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="18-hands-on-3b--generate-memfiledat"&gt;18. Hands-on 3B — Generate &lt;code&gt;memfile.dat&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id="procedure-3"&gt;Procedure&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Assemble the handwritten program:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc -c &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -march&lt;span class="o"&gt;=&lt;/span&gt;armv7-a -marm &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; simple_sum.s -o simple_sum.o
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Inspect assembly and machine code side by side:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-objdump -d simple_sum.o
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Export one machine-code word per line:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-objdump -d simple_sum.o &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; awk &lt;span class="s1"&gt;&amp;#39;/^[[:space:]]*[0-9a-f]+:/ {print toupper($2)}&amp;#39;&lt;/span&gt; &amp;gt; memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;li&gt;Inspect the result:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Expected file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E04F000F
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E2801003
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E5801000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E2802004
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E5802004
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E5901000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E5902004
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E0813002
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;E58030F8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;EAFFFFFE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="5"&gt;
+&lt;li&gt;Verify that the processor files and machine-code file are together:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l arm_single.sv arm_single_tb.sv memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Expected result:&lt;/strong&gt; the last two lines are &lt;code&gt;E58030F8&lt;/code&gt; and &lt;code&gt;EAFFFFFE&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="19-separated-processor-and-testbench-architecture"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="19-separated-processor-and-testbench-architecture"&gt;19. Separated Processor and Testbench Architecture&lt;/h2&gt;
+&lt;p&gt;The revised workshop workflow keeps the processor design and simulation scaffolding in separate files.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Separated processor and testbench architecture"
+srcset="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/processor-file-structure_hu_9676d1e3ab11b343.webp 320w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/processor-file-structure_hu_1e6bf7cd41457a91.webp 480w, https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/processor-file-structure_hu_32c9bf4aee8883f3.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://www.sajid.bd/teaching/workshops/bracu-arm-workshop/images/processor-file-structure_hu_9676d1e3ab11b343.webp"
+width="760"
+height="264"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm_single.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; processor + memories
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── top
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── arm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ ├── controller
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; │ └── datapath
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ├── imem
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └── dmem
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm_single_tb.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; clock generation
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; reset generation
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; +CYCLES=N run-time control
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; success self-check
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; waveform dumping
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ARM machine-code program
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The exact supplied processor uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-systemverilog" data-lang="systemverilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;initial&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;$readmemh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;memfile.dat&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;RAM&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;inside &lt;code&gt;imem&lt;/code&gt;. The revised testbench already contains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-systemverilog" data-lang="systemverilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;$dumpfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;arm_single.vcd&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;$dumpvars&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mh"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;testbench&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Therefore &lt;strong&gt;do not manually add &lt;code&gt;$dumpfile&lt;/code&gt; or &lt;code&gt;$dumpvars&lt;/code&gt;&lt;/strong&gt; to the processor source.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="20-hands-on-3c--compile-and-run-the-processor"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="20-hands-on-3c--compile-and-run-the-processor"&gt;20. Hands-on 3C — Compile and Run the Processor&lt;/h2&gt;
+&lt;h3 id="procedure-4"&gt;Procedure&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Confirm the folder contains:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm_single.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm_single_tb.sv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Compile both SystemVerilog files together:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;iverilog -g2012 -Wall -s testbench &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -o arm_single.out arm_single.sv arm_single_tb.sv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Run for 25 active processor cycles:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;li&gt;
+&lt;p&gt;Observe the terminal messages. A successful run should report that the success condition was seen and then complete at the selected cycle limit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Confirm the waveform was generated:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l arm_single.vcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="6"&gt;
+&lt;li&gt;Open it:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gtkwave arm_single.vcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="what-the-compile-options-mean"&gt;What the compile options mean&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-g2012&lt;/code&gt; — enable SystemVerilog 2012 syntax used by the source.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-Wall&lt;/code&gt; — enable a broad set of Icarus warnings.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-s testbench&lt;/code&gt; — select &lt;code&gt;testbench&lt;/code&gt; as the top-level root module.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-o arm_single.out&lt;/code&gt; — name the compiled simulation.&lt;/li&gt;
+&lt;li&gt;both &lt;code&gt;.sv&lt;/code&gt; files are listed because the design and testbench are separate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Expected result:&lt;/strong&gt; the testbench watches for a store of decimal &lt;code&gt;7&lt;/code&gt; to byte address &lt;code&gt;0xF8&lt;/code&gt;. It records success but continues until the requested number of post-reset cycles has completed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="21-runtime-cycle-control-and-recompilation-rules"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="21-runtime-cycle-control-and-recompilation-rules"&gt;21. Runtime Cycle Control and Recompilation Rules&lt;/h2&gt;
+&lt;p&gt;The revised testbench reads a plusarg at run time:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the argument is omitted:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;the testbench uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;DEFAULT_CYCLES = 25
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="211-what-cycles-counts"&gt;21.1 What &lt;code&gt;CYCLES&lt;/code&gt; counts&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;CYCLES&lt;/code&gt; counts rising-edge processor cycles &lt;strong&gt;after reset is released&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The supplied testbench uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;clock period = 10 ns
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;reset high for first 22 ns
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The first active rising edge is therefore after the reset pulse has ended.&lt;/p&gt;
+&lt;h3 id="212-when-to-recompile"&gt;21.2 When to recompile&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Recompile with &lt;code&gt;iverilog&lt;/code&gt; when:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;arm_single.sv&lt;/code&gt; changes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;arm_single_tb.sv&lt;/code&gt; changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Run again:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;iverilog -g2012 -Wall -s testbench &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -o arm_single.out arm_single.sv arm_single_tb.sv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Do not recompile when only &lt;code&gt;+CYCLES=N&lt;/code&gt; changes.&lt;/strong&gt; Simply rerun:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="213-what-if-only-memfiledat-changes"&gt;21.3 What if only &lt;code&gt;memfile.dat&lt;/code&gt; changes?&lt;/h3&gt;
+&lt;p&gt;You also &lt;strong&gt;do not need to recompile&lt;/strong&gt;. &lt;code&gt;$readmemh(&amp;quot;memfile.dat&amp;quot;, RAM)&lt;/code&gt; is executed when the simulation starts, so the next &lt;code&gt;vvp&lt;/code&gt; run reads the current contents of &lt;code&gt;memfile.dat&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Use:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;again after regenerating &lt;code&gt;memfile.dat&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="22-gtkwave-inspection-of-the-arm-execution"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="22-gtkwave-inspection-of-the-arm-execution"&gt;22. GTKWave Inspection of the ARM Execution&lt;/h2&gt;
+&lt;p&gt;Open:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gtkwave arm_single.vcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="221-navigate-the-hierarchy"&gt;22.1 Navigate the hierarchy&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In the hierarchy pane, expand &lt;code&gt;testbench&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Select &lt;code&gt;dut&lt;/code&gt; for top-level processor-system signals.&lt;/li&gt;
+&lt;li&gt;Expand &lt;code&gt;dut.arm&lt;/code&gt; and &lt;code&gt;dut.arm.dp&lt;/code&gt; if you want deeper datapath signals.&lt;/li&gt;
+&lt;li&gt;Append the required traces to the waveform panel.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="222-recommended-signals"&gt;22.2 Recommended signals&lt;/h3&gt;
+&lt;p&gt;Start with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;clk
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;reset
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.PC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.Instr
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.DataAdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.WriteData
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.MemWrite
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.ReadData
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The presentation also recommends useful internal signals where available:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.arm.ALUResult
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.arm.dp.ReadData
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.arm.dp.SrcA
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.arm.dp.SrcB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dut.arm.dp.ALUResult
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="223-change-buses-to-hexadecimal"&gt;22.3 Change buses to hexadecimal&lt;/h3&gt;
+&lt;p&gt;For 32-bit buses, hexadecimal is easier to compare with assembly and &lt;code&gt;memfile.dat&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In GTKWave:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;select a bus trace;&lt;/li&gt;
+&lt;li&gt;right-click;&lt;/li&gt;
+&lt;li&gt;choose &lt;strong&gt;Data Format → Hex&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;GTKWave documentation supports displaying multi-bit vectors in bases including hexadecimal.&lt;/p&gt;
+&lt;h3 id="224-zoom-and-follow-the-instruction-stream"&gt;22.4 Zoom and follow the instruction stream&lt;/h3&gt;
+&lt;p&gt;Use &lt;strong&gt;Zoom Full&lt;/strong&gt; first. Then zoom around the final &lt;code&gt;MemWrite&lt;/code&gt; pulse.&lt;/p&gt;
+&lt;p&gt;Look for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reset&lt;/code&gt; starting high and then falling low;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PC&lt;/code&gt; progressing through byte addresses &lt;code&gt;0x00&lt;/code&gt;, &lt;code&gt;0x04&lt;/code&gt;, &lt;code&gt;0x08&lt;/code&gt;, &amp;hellip;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Instr&lt;/code&gt; matching the successive 32-bit words in &lt;code&gt;memfile.dat&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;store pulses on &lt;code&gt;MemWrite&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ReadData&lt;/code&gt; showing &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;4&lt;/code&gt; during the two &lt;code&gt;LDR&lt;/code&gt; instructions;&lt;/li&gt;
+&lt;li&gt;the ALU result becoming &lt;code&gt;7&lt;/code&gt; after &lt;code&gt;ADD R3, R1, R2&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;the final successful store.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="23-expected-processor-behaviour-and-verification-checklist"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="23-expected-processor-behaviour-and-verification-checklist"&gt;23. Expected Processor Behaviour and Verification Checklist&lt;/h2&gt;
+&lt;p&gt;The demonstration program is successful when this transaction appears:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MemWrite = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;DataAdr = 0x000000F8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;WriteData = 0x00000007
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Why &lt;code&gt;0xF8&lt;/code&gt;?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;word index = 62
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;byte address = 62 × 4 bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; = 248 decimal
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; = 0xF8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The data memory uses:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-systemverilog" data-lang="systemverilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;RAM&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mh"&gt;31&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;so the external byte address &lt;code&gt;0xF8&lt;/code&gt; selects internal word 62.&lt;/p&gt;
+&lt;h3 id="verification-checklist"&gt;Verification checklist&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;reset&lt;/code&gt; begins high and then goes low.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;PC&lt;/code&gt; starts at &lt;code&gt;0&lt;/code&gt; after reset and normally advances by four bytes per instruction.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;Instr&lt;/code&gt; follows the words in &lt;code&gt;memfile.dat&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;MemWrite&lt;/code&gt; pulses for &lt;code&gt;STR R1,[R0,#0]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;MemWrite&lt;/code&gt; pulses for &lt;code&gt;STR R2,[R0,#4]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;ReadData&lt;/code&gt; shows &lt;code&gt;0x00000003&lt;/code&gt; during the first load.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;code&gt;ReadData&lt;/code&gt; shows &lt;code&gt;0x00000004&lt;/code&gt; during the second load.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; the ADD result reaches &lt;code&gt;0x00000007&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; the final store has &lt;code&gt;DataAdr = 0x000000F8&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; the final store has &lt;code&gt;WriteData = 0x00000007&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; the testbench prints that the success condition was observed.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; the &lt;code&gt;B halt&lt;/code&gt; instruction causes repeated execution of the halt loop until the cycle limit ends the simulation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Minimum useful GTKWave trace:&lt;/strong&gt; &lt;code&gt;clk&lt;/code&gt;, &lt;code&gt;reset&lt;/code&gt;, &lt;code&gt;PC&lt;/code&gt;, &lt;code&gt;Instr&lt;/code&gt;, &lt;code&gt;DataAdr/ALUResult&lt;/code&gt;, &lt;code&gt;WriteData&lt;/code&gt;, &lt;code&gt;MemWrite&lt;/code&gt;, and &lt;code&gt;ReadData&lt;/code&gt;, with 32-bit buses displayed in hexadecimal.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="24-troubleshooting"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="24-troubleshooting"&gt;24. Troubleshooting&lt;/h2&gt;
+&lt;h3 id="arm-none-eabi-gcc-command-not-found"&gt;&lt;code&gt;arm-none-eabi-gcc: command not found&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Check that you opened &lt;strong&gt;MSYS2 UCRT64&lt;/strong&gt;, then install the Arm GCC package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pacman -S mingw-w64-ucrt-x86_64-arm-none-eabi-gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Close and reopen UCRT64 if the path still has not refreshed.&lt;/p&gt;
+&lt;h3 id="iverilog-command-not-found-or-vvp-command-not-found"&gt;&lt;code&gt;iverilog: command not found&lt;/code&gt; or &lt;code&gt;vvp: command not found&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Install the Icarus UCRT64 package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pacman -S mingw-w64-ucrt-x86_64-iverilog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The package includes both executables.&lt;/p&gt;
+&lt;h3 id="unable-to-open-memfiledat--readmemh-error"&gt;&lt;code&gt;Unable to open memfile.dat&lt;/code&gt; / &lt;code&gt;$readmemh&lt;/code&gt; error&lt;/h3&gt;
+&lt;p&gt;The instruction memory opens &lt;code&gt;memfile.dat&lt;/code&gt; using a relative path. Run &lt;code&gt;vvp&lt;/code&gt; from the folder containing the file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l arm_single.sv arm_single_tb.sv memfile.dat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="file-appears-missing-even-though-you-saved-it-in-notepad"&gt;File appears missing even though you saved it in Notepad&lt;/h3&gt;
+&lt;p&gt;Windows may have saved a hidden &lt;code&gt;.txt&lt;/code&gt; extension. Check:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Look for names such as &lt;code&gt;add.c.txt&lt;/code&gt; or &lt;code&gt;simple_alu.v.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="verilog-syntax-error-in-the-alu-exercise"&gt;Verilog syntax error in the ALU exercise&lt;/h3&gt;
+&lt;p&gt;Check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;semicolons;&lt;/li&gt;
+&lt;li&gt;matching &lt;code&gt;begin&lt;/code&gt; / &lt;code&gt;end&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;case&lt;/code&gt; / &lt;code&gt;endcase&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;module&lt;/code&gt; / &lt;code&gt;endmodule&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;straight ASCII quotation marks;&lt;/li&gt;
+&lt;li&gt;exact literal syntax such as &lt;code&gt;2'b00&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="arm_singlevcd-is-not-created"&gt;&lt;code&gt;arm_single.vcd&lt;/code&gt; is not created&lt;/h3&gt;
+&lt;p&gt;The revised testbench already contains the VCD dump statements. Check that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;arm_single_tb.sv&lt;/code&gt; was included in the compile command;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-s testbench&lt;/code&gt; selected the correct top module;&lt;/li&gt;
+&lt;li&gt;compilation succeeded;&lt;/li&gt;
+&lt;li&gt;you actually ran &lt;code&gt;vvp arm_single.out ...&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Do &lt;strong&gt;not&lt;/strong&gt; add another &lt;code&gt;$dumpfile&lt;/code&gt; or &lt;code&gt;$dumpvars&lt;/code&gt; to &lt;code&gt;arm_single.sv&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="gtkwave-opens-but-no-traces-are-visible"&gt;GTKWave opens but no traces are visible&lt;/h3&gt;
+&lt;p&gt;Opening a VCD does not automatically append every signal to the wave panel. Select the appropriate hierarchy, select the signals, and use &lt;strong&gt;Append&lt;/strong&gt; or &lt;strong&gt;Insert&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id="bus-values-are-hard-to-read"&gt;Bus values are hard to read&lt;/h3&gt;
+&lt;p&gt;Change 32-bit buses to hexadecimal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Right-click → Data Format → Hex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="unknown-x-values-appear"&gt;Unknown &lt;code&gt;x&lt;/code&gt; values appear&lt;/h3&gt;
+&lt;p&gt;Uninitialized registers or memory words can legitimately appear as &lt;code&gt;x&lt;/code&gt; until they are written. In this processor, the data RAM is not pre-initialized. The demo program explicitly writes &lt;code&gt;3&lt;/code&gt; and &lt;code&gt;4&lt;/code&gt; before loading those locations.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;x&lt;/code&gt; values remain on values that should already have been initialized, verify the instruction sequence and the earlier write pulses.&lt;/p&gt;
+&lt;h3 id="the-final-value-is-wrong"&gt;The final value is wrong&lt;/h3&gt;
+&lt;p&gt;Check in this order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cat memfile.dat&lt;/code&gt; and compare it with the expected ten words;&lt;/li&gt;
+&lt;li&gt;verify &lt;code&gt;simple_sum.s&lt;/code&gt; exactly matches the workshop program;&lt;/li&gt;
+&lt;li&gt;confirm the simulation ran long enough;&lt;/li&gt;
+&lt;li&gt;inspect &lt;code&gt;PC&lt;/code&gt; and &lt;code&gt;Instr&lt;/code&gt; to ensure the program is being fetched correctly;&lt;/li&gt;
+&lt;li&gt;inspect the two initialization stores;&lt;/li&gt;
+&lt;li&gt;inspect the two loads (&lt;code&gt;ReadData = 3&lt;/code&gt;, then &lt;code&gt;4&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;inspect the ADD result;&lt;/li&gt;
+&lt;li&gt;inspect the final &lt;code&gt;MemWrite&lt;/code&gt;, &lt;code&gt;DataAdr&lt;/code&gt;, and &lt;code&gt;WriteData&lt;/code&gt; together.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="the-c-generated-assembly-differs-from-the-handout"&gt;The C-generated assembly differs from the handout&lt;/h3&gt;
+&lt;p&gt;That is expected. Compiler version and optimization choices affect prologues, temporary registers, and exact instruction sequences. Identify the function label, addition, result placement, and return semantics rather than comparing every line.&lt;/p&gt;
+&lt;h3 id="fast-recovery-sequence"&gt;Fast recovery sequence&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ls -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-gcc --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;arm-none-eabi-objdump --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;iverilog -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="25-suggested-exercises-and-extensions"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="25-suggested-exercises-and-extensions"&gt;25. Suggested Exercises and Extensions&lt;/h2&gt;
+&lt;p&gt;These are deliberately small extensions. Keep the same workflow: &lt;strong&gt;predict → edit → compile → simulate → inspect → explain&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id="exercise-a--change-the-alu-inputs"&gt;Exercise A — change the ALU inputs&lt;/h3&gt;
+&lt;p&gt;Change:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt;&lt;span class="mi"&gt;&amp;#39;d9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt;&lt;span class="mi"&gt;&amp;#39;d2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Predict before simulating.&lt;/p&gt;
+&lt;p&gt;Expected values:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ADD = 11
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SUB = 7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;AND = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OR = 11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explain &lt;code&gt;9 AND 2&lt;/code&gt; bit by bit using:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1001
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0010
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;----
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="exercise-b--demonstrate-xor"&gt;Exercise B — demonstrate XOR&lt;/h3&gt;
+&lt;p&gt;A 2-bit selector already has only four encodings. For a minimal demonstration, temporarily replace AND:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="mh"&gt;2&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;^&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A more complete extension would widen &lt;code&gt;op&lt;/code&gt; and update the testbench.&lt;/p&gt;
+&lt;h3 id="exercise-c--add-a-zero-flag"&gt;Exercise C — add a zero flag&lt;/h3&gt;
+&lt;p&gt;Add an output and drive it high whenever &lt;code&gt;y&lt;/code&gt; is zero:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-verilog" data-lang="verilog"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;output&lt;/span&gt; &lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;assign&lt;/span&gt; &lt;span class="n"&gt;zero&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mh"&gt;4&lt;/span&gt;&lt;span class="mb"&gt;&amp;#39;b0000&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then update the testbench and inspect &lt;code&gt;zero&lt;/code&gt; in GTKWave.&lt;/p&gt;
+&lt;h3 id="exercise-d--change-only-the-processor-run-length"&gt;Exercise D — change only the processor run length&lt;/h3&gt;
+&lt;p&gt;Without changing source files, compare:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;vvp arm_single.out +CYCLES&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which run first contains the successful store? Why is recompilation unnecessary?&lt;/p&gt;
+&lt;h3 id="exercise-e--relate-machine-code-to-waveform"&gt;Exercise E — relate machine code to waveform&lt;/h3&gt;
+&lt;p&gt;Pick one instruction from &lt;code&gt;memfile.dat&lt;/code&gt;, find the same value on &lt;code&gt;dut.Instr&lt;/code&gt;, and explain what changes in the datapath during that cycle.&lt;/p&gt;
+&lt;h3 id="beyond-this-workshop"&gt;Beyond this workshop&lt;/h3&gt;
+&lt;p&gt;A natural curriculum path is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ALU
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;register file
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;control decoder
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;memory interface
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;single-cycle processor
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;instruction extension / FPGA project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The supplied educational processor is intentionally a stepping stone rather than an endpoint.&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id="26-summary-and-references"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="26-summary-and-references"&gt;26. Summary and References&lt;/h2&gt;
+&lt;h3 id="three-takeaways"&gt;Three takeaways&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Code becomes instructions.&lt;/strong&gt; A compiler translates C into instructions encoded for a target architecture.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Datapaths execute instructions.&lt;/strong&gt; Registers, ALU, memory interfaces, multiplexers, and control logic cooperate to change architectural state.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Verilog/SystemVerilog makes hardware observable.&lt;/strong&gt; A design plus a testbench can be compiled, simulated, and inspected before hardware implementation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="workshop-and-textbook-reference"&gt;Workshop and textbook reference&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sarah L. Harris and David Money Harris, &lt;em&gt;Digital Design and Computer Architecture: ARM Edition&lt;/em&gt;, 1st ed., Morgan Kaufmann/Elsevier, 2015. The presentation uses Chapters 6–7 as its conceptual foundation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="official-technical-references"&gt;Official technical references&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Arm, &lt;em&gt;ARM Architecture Reference Manual, ARMv7-A and ARMv7-R edition&lt;/em&gt;, DDI 0406:
+&lt;/li&gt;
+&lt;li&gt;GCC, ARM target options:
+&lt;/li&gt;
+&lt;li&gt;GCC, overall compilation options including &lt;code&gt;-S&lt;/code&gt;:
+&lt;/li&gt;
+&lt;li&gt;Icarus Verilog:
+&lt;/li&gt;
+&lt;li&gt;Icarus Verilog:
+&lt;/li&gt;
+&lt;li&gt;GTKWave:
+&lt;/li&gt;
+&lt;li&gt;MSYS2:
+&lt;/li&gt;
+&lt;li&gt;MSYS2:
+&lt;/li&gt;
+&lt;li&gt;MSYS2:
+&lt;/li&gt;
+&lt;li&gt;MSYS2 UCRT64 packages:
+,
+,
+,
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;</description></item></channel></rss>
