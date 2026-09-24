@@ -1,0 +1,998 @@
+{
+ "base": "http://127.0.0.1:8099",
+ "when": "2026-09-24T14:32:01.393Z",
+ "cells": [
+  {
+   "page": "academic",
+   "viewport": "320x568",
+   "theme": "light",
+   "vw": 320,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 320,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 2,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    163,
+    232
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "320x568",
+   "theme": "dark",
+   "vw": 320,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 320,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 2,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    163,
+    232
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "375x812",
+   "theme": "light",
+   "vw": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 375,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    141,
+    210
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "375x812",
+   "theme": "dark",
+   "vw": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 375,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    141,
+    210
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 768,
+   "gapFromHeader": 40,
+   "titlePx": 38,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    141,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "768x1024",
+   "theme": "dark",
+   "vw": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 768,
+   "gapFromHeader": 40,
+   "titlePx": 38,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 1,
+   "cardHeights": [
+    141,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1024x768",
+   "theme": "light",
+   "vw": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1024,
+   "gapFromHeader": 40,
+   "titlePx": 43,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1024x768",
+   "theme": "dark",
+   "vw": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1024,
+   "gapFromHeader": 40,
+   "titlePx": 43,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1440x900",
+   "theme": "dark",
+   "vw": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1920x1080",
+   "theme": "light",
+   "vw": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "academic",
+   "viewport": "1920x1080",
+   "theme": "dark",
+   "vw": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 2,
+   "cardColumns": 2,
+   "cardHeights": [
+    163,
+    163
+   ],
+   "downloadRows": 0,
+   "rowColumns": 0,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [],
+   "cardLinkTargets": [
+    1,
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "320x568",
+   "theme": "light",
+   "vw": 320,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 320,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    208
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "320x568",
+   "theme": "dark",
+   "vw": 320,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 320,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    208
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "375x812",
+   "theme": "light",
+   "vw": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 375,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    185
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "375x812",
+   "theme": "dark",
+   "vw": 375,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 375,
+   "gapFromHeader": 40,
+   "titlePx": 32,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    185
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "768x1024",
+   "theme": "light",
+   "vw": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 768,
+   "gapFromHeader": 40,
+   "titlePx": 38,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "768x1024",
+   "theme": "dark",
+   "vw": 768,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 768,
+   "gapFromHeader": 40,
+   "titlePx": 38,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 1,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1024x768",
+   "theme": "light",
+   "vw": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1024,
+   "gapFromHeader": 40,
+   "titlePx": 43,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1024x768",
+   "theme": "dark",
+   "vw": 1024,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1024,
+   "gapFromHeader": 40,
+   "titlePx": 43,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1440x900",
+   "theme": "light",
+   "vw": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1440x900",
+   "theme": "dark",
+   "vw": 1440,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1920x1080",
+   "theme": "light",
+   "vw": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  },
+  {
+   "page": "templates",
+   "viewport": "1920x1080",
+   "theme": "dark",
+   "vw": 1920,
+   "horizontalScroll": false,
+   "bleed": [],
+   "found": true,
+   "containerW": 1280,
+   "gapFromHeader": 40,
+   "titlePx": 48,
+   "titleLines": 1,
+   "h1Count": 1,
+   "headingSkips": [],
+   "dupIds": [],
+   "cards": 1,
+   "cardColumns": 0,
+   "cardHeights": [
+    163
+   ],
+   "downloadRows": 4,
+   "rowColumns": 2,
+   "citationJunk": false,
+   "hasToc": false,
+   "badges": [
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"PPTX\"",
+    "\"↗\""
+   ],
+   "cardLinkTargets": [
+    1
+   ],
+   "footerGap": 121
+  }
+ ],
+ "contrast": [
+  {
+   "page": "academic",
+   "theme": "light",
+   "failures": []
+  },
+  {
+   "page": "academic",
+   "theme": "dark",
+   "failures": []
+  },
+  {
+   "page": "templates",
+   "theme": "light",
+   "failures": []
+  },
+  {
+   "page": "templates",
+   "theme": "dark",
+   "failures": []
+  }
+ ],
+ "keyboard": [
+  {
+   "page": "academic",
+   "inPage": 2,
+   "noRing": 0,
+   "stops": [
+    {
+     "tag": "A",
+     "inCard": true,
+     "inContent": false,
+     "name": "LOR Request",
+     "ring": true
+    },
+    {
+     "tag": "A",
+     "inCard": true,
+     "inContent": false,
+     "name": "Unicode Scientific Symbols Cheatsheet",
+     "ring": true
+    }
+   ]
+  },
+  {
+   "page": "templates",
+   "inPage": 5,
+   "noRing": 0,
+   "stops": [
+    {
+     "tag": "A",
+     "inCard": false,
+     "inContent": true,
+     "name": "Conference Presentation Template (pptx",
+     "ring": true
+    },
+    {
+     "tag": "A",
+     "inCard": false,
+     "inContent": true,
+     "name": "Group Presentation Template (pptx)",
+     "ring": true
+    },
+    {
+     "tag": "A",
+     "inCard": false,
+     "inContent": true,
+     "name": "PI Presentation Template (pptx)",
+     "ring": true
+    },
+    {
+     "tag": "A",
+     "inCard": false,
+     "inContent": true,
+     "name": "PG Review Template (GitHub)",
+     "ring": true
+    },
+    {
+     "tag": "A",
+     "inCard": true,
+     "inContent": false,
+     "name": "Graphics",
+     "ring": true
+    }
+   ]
+  }
+ ],
+ "links": [
+  {
+   "href": "/resources/",
+   "status": 200
+  },
+  {
+   "href": "Conference_Template_QPACERS.pptx",
+   "status": 200
+  },
+  {
+   "href": "Group_Presentation_QPACERS.pptx",
+   "status": 200
+  },
+  {
+   "href": "PI_Presentation_QPACERS.pptx",
+   "status": 200
+  },
+  {
+   "href": "https://github.com/sajidbuet/pg-review-template",
+   "status": 200
+  },
+  {
+   "href": "/resources/templates/graphics/",
+   "status": 200
+  }
+ ],
+ "regression": [
+  {
+   "route": "/resources/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": false
+  },
+  {
+   "route": "/resources/blog/20260224-word-lakh-taka-bdt/",
+   "cat": false,
+   "h1": 9,
+   "main": 1,
+   "toc": true,
+   "overflow": false,
+   "citation": false
+  },
+  {
+   "route": "/publication/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": true
+  },
+  {
+   "route": "/projects/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": false
+  },
+  {
+   "route": "/teaching/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": false
+  },
+  {
+   "route": "/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": true
+  },
+  {
+   "route": "/news/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": false
+  },
+  {
+   "route": "/resources/blog/",
+   "cat": false,
+   "h1": 1,
+   "main": 1,
+   "toc": false,
+   "overflow": false,
+   "citation": false
+  }
+ ],
+ "consoleErrors": []
+}

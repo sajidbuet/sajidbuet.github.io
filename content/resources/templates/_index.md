@@ -5,12 +5,16 @@ title: "Templates & Tools"
 summary: "Presentation templates used by the lab, and a review-paper template for the graduate course."
 description: "Q-PACERS Lab conference, group and PI presentation templates in PowerPoint format, plus a LaTeX review-paper template used in the postgraduate review course."
 weight: 20
+
+# Resource directory layout — see layouts/resources/category.html. The authored
+# groups below render above the generated list of child resources.
+layout: category
 ---
 
-## Designated Template for Lab
+## Presentation templates
 * [Conference Presentation Template (pptx)](Conference_Template_QPACERS.pptx)
 * [Group Presentation Template (pptx)](Group_Presentation_QPACERS.pptx)
 * [PI Presentation Template (pptx)](PI_Presentation_QPACERS.pptx)
 
-## Review Paper Template
-* [PG Review Template](https://github.com/sajidbuet/pg-review-template) - template for writing review in my grad course.
+## Review paper template
+* [PG Review Template (GitHub)](https://github.com/sajidbuet/pg-review-template) - template for writing review in my grad course.

@@ -1,0 +1,297 @@
+/* ===========================================================================
+   Resources category pages — /resources/academic/, /resources/templates/,
+   and any future nested category that sets `layout: category`.
+
+   Every selector is under .sj-resource-category, which only
+   layouts/resources/category.html emits. Nothing here can reach an article,
+   a publication list, the /resources/ overview, or any other page.
+
+   Semantic tokens only — both themes come for free.
+   =========================================================================== */
+
+.sj-resource-category {
+  /* The shell already contributes `my-10` (40px). The padding here is the
+     remainder: about 64px from the header on desktop, less on mobile, which is
+     roughly half what the generic list template used to leave.
+
+     No min-height anywhere in this file — these are short pages and the footer
+     sits wherever normal flow puts it. */
+  padding-block: var(--sj-space-4) var(--sj-space-12);
+}
+
+@media (min-width: 768px) {
+  .sj-resource-category { padding-block: var(--sj-space-6) var(--sj-space-16); }
+}
+
+/* --------------------------------------------------------------------------
+   Header — compact by design
+   -------------------------------------------------------------------------- */
+.sj-resource-category__header { margin-bottom: var(--sj-space-8); }
+
+/* The breadcrumb is orientation, not a headline. .sj-crumbs already carries the
+   site's breadcrumb styling from phase6.css; this only sets it back from the
+   title. */
+.sj-resource-category__header .sj-crumbs { margin-bottom: var(--sj-space-3); }
+
+.sj-resource-category__title {
+  /* Tops out at 48px. Deliberately not the lg:text-6xl the generic list
+     template used, which made a two-word title the loudest thing on screen.
+     No text-wrap: balance — "Academic Resources" and "Templates & Tools" both
+     fit on one line at every desktop width, and balancing can break them. */
+  margin: 0;
+  font-size: clamp(2rem, 1.35rem + 2.1vw, 3rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+}
+
+.sj-resource-category__lede {
+  margin: var(--sj-space-4) 0 0;
+  max-width: 68ch;
+  font-size: var(--sj-text-lg);
+  line-height: 1.55;
+  color: var(--sj-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Authored body
+
+   Only the elements this content actually produces: h2, p, ul, li, a. Scoped
+   rather than reusing .sj-prose, whose measure and vertical rhythm belong to
+   long-form articles.
+   -------------------------------------------------------------------------- */
+.sj-resource-category__content > *:first-child { margin-top: 0; }
+
+.sj-resource-category__content h2,
+.sj-resource-category__heading {
+  margin: var(--sj-space-12) 0 var(--sj-space-4);
+  padding-bottom: var(--sj-space-2);
+  border-bottom: 1px solid var(--sj-border);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--sj-text-primary);
+}
+
+.sj-resource-category__content > h2:first-child { margin-top: 0; }
+
+.sj-resource-category__content p {
+  margin: var(--sj-space-3) 0;
+  max-width: 68ch;
+  color: var(--sj-text-secondary);
+}
+
+/* Authored link lists become download rows that sit in the same visual family
+   as the generated cards below them: same border, same radius, same hover. */
+.sj-resource-category__content ul {
+  display: grid;
+  gap: var(--sj-space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .sj-resource-category__content ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.sj-resource-category__content li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sj-space-2);
+  margin: 0;
+  padding: var(--sj-space-4);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  font-size: var(--sj-text-sm);
+  color: var(--sj-text-tertiary);
+  transition: border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-resource-category__content li:hover { border-color: var(--sj-border-strong); }
+
+.sj-resource-category__content li > a {
+  font-size: var(--sj-text-base);
+  font-weight: 500;
+  color: var(--sj-accent);
+  text-decoration: none;
+}
+
+.sj-resource-category__content li > a:hover {
+  color: var(--sj-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sj-resource-category__content li > a:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--sj-radius-sm);
+}
+
+/* File-type badge, driven off the href so no template or Markdown parsing is
+   involved. Decorative only: every one of these links already says "(pptx)" in
+   its own text, so the badge repeats information rather than carrying it. */
+.sj-resource-category__content li > a[href$=".pptx"]::after,
+.sj-resource-category__content li > a[href$=".docx"]::after,
+.sj-resource-category__content li > a[href$=".pdf"]::after,
+.sj-resource-category__content li > a[href$=".zip"]::after {
+  content: "PPTX";
+  display: inline-block;
+  margin-inline-start: var(--sj-space-2);
+  padding: 1px 6px;
+  border: 1px solid var(--sj-border-strong);
+  border-radius: var(--sj-radius-sm);
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--sj-text-tertiary);
+  /* Never the cause of a horizontal scrollbar on a narrow screen. */
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.sj-resource-category__content li > a[href$=".docx"]::after { content: "DOCX"; }
+.sj-resource-category__content li > a[href$=".pdf"]::after  { content: "PDF"; }
+.sj-resource-category__content li > a[href$=".zip"]::after  { content: "ZIP"; }
+
+/* External destinations. The link text names the destination, so this glyph is
+   reinforcement, not the only signal. */
+.sj-resource-category__content li > a[href^="http"]::after {
+  /* U+2197 followed by U+FE0E, the text variation selector. Without it the
+     arrow picked an emoji font and rendered as a blue box instead of a glyph.
+     font-variant-emoji says the same thing to browsers that support it. */
+  content: "\2197\FE0E";
+  font-variant-emoji: text;
+  margin-inline-start: 4px;
+  font-size: 0.85em;
+  color: var(--sj-text-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   Generated resource grid
+   -------------------------------------------------------------------------- */
+.sj-resource-category__section { margin-top: var(--sj-space-12); }
+
+.sj-resource-grid {
+  display: grid;
+  gap: var(--sj-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .sj-resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.sj-resource-card {
+  /* `position: relative` is what lets the title link stretch over the card. */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sj-space-6);
+  /* Transparent, not filled: the border carries the shape. */
+  background: transparent;
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+  transition: border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-resource-card:hover { border-color: var(--sj-accent); }
+
+/* The focus ring belongs on the card, because the card is the click target. */
+.sj-resource-card:has(.sj-resource-card__link:focus-visible) {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 2px;
+  border-color: var(--sj-accent);
+}
+
+/* Fallback for engines without :has() — the ring lands on the link instead of
+   the card, which is less pretty but never invisible. */
+.sj-resource-card__link:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--sj-radius-sm);
+}
+
+.sj-resource-card__kicker {
+  margin: 0 0 var(--sj-space-2);
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sj-text-tertiary);
+}
+
+.sj-resource-card__title {
+  margin: 0;
+  font-size: var(--sj-text-lg);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.sj-resource-card__link {
+  color: var(--sj-text-primary);
+  text-decoration: none;
+}
+
+/* Stretches the link over the whole card. Padding-right leaves the arrow
+   uncovered visually, though it is inside the same target. */
+.sj-resource-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.sj-resource-card:hover .sj-resource-card__link { color: var(--sj-accent); }
+
+.sj-resource-card__desc {
+  margin: var(--sj-space-3) 0 0;
+  /* Pushes the arrow to the bottom, so cards in a row stay level even when one
+     description is a line longer. */
+  flex: 1 1 auto;
+  font-size: var(--sj-text-sm);
+  line-height: 1.6;
+  color: var(--sj-text-secondary);
+}
+
+.sj-resource-card__meta {
+  margin: var(--sj-space-3) 0 0;
+  font-size: var(--sj-text-xs);
+  color: var(--sj-text-tertiary);
+}
+
+.sj-resource-card__arrow {
+  margin-top: var(--sj-space-4);
+  align-self: flex-start;
+  font-size: var(--sj-text-base);
+  line-height: 1;
+  color: var(--sj-text-tertiary);
+  transition: transform var(--sj-duration-fast) var(--sj-ease-out),
+              color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-resource-card:hover .sj-resource-card__arrow {
+  color: var(--sj-accent);
+  transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sj-resource-card,
+  .sj-resource-card__arrow,
+  .sj-resource-category__content li,
+  .sj-resource-category__content li > a { transition: none; }
+  .sj-resource-card:hover .sj-resource-card__arrow { transform: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Touch
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  /* The card is the target and is far taller than 44px; this is for the
+     authored download rows, whose text is a single line. */
+  .sj-resource-category__content li { min-height: 44px; }
+}

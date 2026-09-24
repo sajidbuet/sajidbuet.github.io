@@ -1,0 +1,77 @@
+{{ define "main" }}
+{{/* Resources category page — a directory of resources, not a feed.
+
+     WHY THIS EXISTS
+     Nested sections under /resources/ had no template of their own, so they fell
+     through to layouts/list.html, whose `$view := .Params.view | default
+     "citation"` rendered each child as a bibliography entry:
+
+         [Lor] (2025). LOR Request.
+         [Scientifictyping] (0001). Unicode Scientific Symbols Cheatsheet.
+         [Graphics] (0001). Graphics.
+
+     The bracketed word is the folder name standing in for an author, and (0001)
+     is Go's zero time formatted as a year. Neither is information. Changing the
+     default in list.html would have fixed these two pages and altered every
+     other section that legitimately uses the citation view, so this is a
+     separate, Resources-scoped template instead.
+
+     LOOKUP
+     Selected by `layout: category` in a section's _index.md. Hugo resolves
+     layouts/<type>/<layout>.html, and every page beneath /resources/ inherits
+     Type "resources", so nested sections find this file. That is the same
+     mechanism /resources/ itself uses with `layout: overview`.
+
+     Reusable as-is: any future category under /resources/ gets this layout by
+     adding one front-matter line. Nothing here names a specific page.
+
+     NOT a list of `.RegularPages`: two of the children are branch pages
+     (scientific-typing, graphics are written as articles but stored as
+     _index.md), so `.Pages` is used, which covers regular pages and subsections
+     alike. */}}
+
+{{ $kids := .Pages.ByWeight }}
+
+{{/* An authored body means the page has hand-written groups of its own — the
+     presentation templates on /resources/templates/, for instance. The child
+     grid then sits below them under a heading that says so. */}}
+{{ $hasContent := gt (len (trim .Content " \n\r\t")) 0 }}
+
+{{/* A <div>, not a <main>. These pages are sections, and baseof.html already
+     wraps a section's "main" block in <main id="main" tabindex="-1">. Emitting
+     one here too produced a duplicate id and a nested landmark. Letting the
+     shell own the landmark keeps this template free of that coupling — the
+     alternative was another page type listed in baseof's $has_inner_main. */}}
+<div class="sj-resource-category sj-container-wide">
+
+  <header class="sj-resource-category__header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="sj-resource-category__title">{{ .Title }}</h1>
+    {{ with or .Params.summary .Description }}
+      <p class="sj-resource-category__lede">{{ . | markdownify }}</p>
+    {{ end }}
+  </header>
+
+  {{ if $hasContent }}
+    {{/* Scoped, not `.sj-prose`: this is a short directory page, and the
+         article measure and rhythm would be wrong for it. resources-category.css
+         styles the handful of elements this content actually produces. */}}
+    <div class="sj-resource-category__content">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  {{ with $kids }}
+    {{ $heading := cond $hasContent (i18n "additional_resources" | default "Additional resources") (i18n "resources" | default "Resources") }}
+    <section class="sj-resource-category__section" aria-labelledby="sj-resource-list">
+      <h2 class="sj-resource-category__heading" id="sj-resource-list">{{ $heading }}</h2>
+      <ul class="sj-resource-grid">
+        {{ range . }}
+          {{ partial "resources/resource-item.html" . }}
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+</div>
+{{ end }}

@@ -98,7 +98,8 @@
        `.sj-prose` rules defined there, scoped to `.sj-article--blog`. */}}
   {{ range slice "css/tokens.css" "css/custom.css" "css/homepage.css"
                  "css/phase4.css" "css/phase5.css" "css/phase6.css"
-                 "css/phase7.css" "css/phase8.css" "css/blog-article.css" }}
+                 "css/phase7.css" "css/phase8.css" "css/blog-article.css"
+                 "css/resources-category.css" }}
     {{ with resources.Get . }}{{ $css = $css | append . }}{{ end }}
   {{ end }}
 

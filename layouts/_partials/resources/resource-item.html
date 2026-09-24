@@ -1,0 +1,48 @@
+{{/* One resource in a category grid.
+
+     Context is the child page. Everything shown comes from that page's own
+     front matter — nothing is derived, inferred or invented.
+
+     ONE interactive element per card. The title link is stretched over the
+     whole card in CSS (::after with inset: 0), so the card is clickable without
+     a second tab stop, a wrapping <a>, or any JavaScript. Keyboard focus lands
+     on the title link and the card draws the focus ring around itself.
+
+     Everything optional is genuinely optional:
+
+       kicker      `kicker: GUIDE` in front matter. No page sets one today, and
+                   none is fabricated from the folder name or the page kind —
+                   inventing a category label is what produced "[Lor]" in the
+                   first place.
+
+       date        Shown only when the page opts in with `show_date: true` AND
+                   carries a real date. These are evergreen references; a date
+                   on them is noise, and Go's zero time is what rendered as
+                   "(0001)". Never printed from an unset date. */}}
+
+{{ $summary := or .Params.summary .Description }}
+{{ $showDate := and (eq .Params.show_date true) (not .Date.IsZero) }}
+
+<li class="sj-resource-card">
+  {{ with .Params.kicker }}
+    <p class="sj-resource-card__kicker">{{ . }}</p>
+  {{ end }}
+
+  <h3 class="sj-resource-card__title">
+    <a class="sj-resource-card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h3>
+
+  {{ with $summary }}
+    <p class="sj-resource-card__desc">{{ . }}</p>
+  {{ end }}
+
+  {{ if $showDate }}
+    <p class="sj-resource-card__meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    </p>
+  {{ end }}
+
+  {{/* Decorative: the title link is the accessible target and already says
+       where it goes. */}}
+  <span class="sj-resource-card__arrow" aria-hidden="true">&rarr;</span>
+</li>
