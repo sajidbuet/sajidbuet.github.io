@@ -5,6 +5,10 @@ title: Graphics
 summary: "BUET and BUET-EEE logo files in vector and raster formats, traced and maintained for institutional and academic use."
 description: "Downloadable BUET and BUET-EEE logos in SVG, PNG, EMF and WMF, in colour, white and black variants, with usage and licensing notes."
 weight: 10
+
+# Renders with the article layout: reading column plus an automatic
+# "On this page" rail. See layouts/blogpost/ and the README.
+type: blogpost
 ---
 
 ## Graphics

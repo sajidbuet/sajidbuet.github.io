@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{/* Branch pages typed `blogpost`.
+
+     Some Resources pages are written as articles but stored as `_index.md`, so
+     Hugo treats them as sections and reaches for list.html rather than
+     single.html. /resources/academic/scientific-typing/ and
+     /resources/templates/graphics/ are both of these: long reference documents
+     with no child pages at all.
+
+     This renders the page's own content exactly as the single template does,
+     and deliberately does NOT list descendants — these sections have none, and
+     a page that opts into `type: blogpost` is saying "I am an article".
+     A section that needs a listing should not use this type.
+
+     The `blogpost` name is historical: the layout was built for the blog and
+     then adopted by these reference pages. It is the type name, not a claim
+     about the content. */}}
+{{ partial "article-toc-layout.html" . }}
+{{ end }}

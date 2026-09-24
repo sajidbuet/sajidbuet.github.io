@@ -19,6 +19,13 @@ const ARTICLES = [
   ['long-nested', '/resources/blog/20230424-ai-tools/'],
   ['short-no-toc', '/resources/blog/20230707-excelhacks/'],
   ['images-code', '/resources/blog/20250407-microsoft-teams-bulkadd/'],
+  /* Branch pages (`_index.md`) that opt into the same layout via `type:
+     blogpost`. Hugo renders these through list.html, so they exercise the other
+     half of the template pair. scientific-typing is the stress case: 33 TOC
+     entries and a page built almost entirely of wide Unicode tables. */
+  ['section-tables', '/resources/academic/scientific-typing/'],
+  ['section-images', '/resources/templates/graphics/'],
+  ['page-downloads', '/resources/academic/lor/'],
 ];
 
 const REGRESSION = ['/', '/research/', '/publication/', '/projects/', '/teaching/',

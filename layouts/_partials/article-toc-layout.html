@@ -1,0 +1,142 @@
+{{/* Article with an "On this page" rail — the whole body of the layout.
+
+     Lives in a partial because two page KINDS use it. Hugo picks single.html for
+     a leaf bundle and list.html for a branch page, and three of the pages that
+     want this layout are branch pages that happen to have no children:
+     /resources/academic/scientific-typing/ and /resources/templates/graphics/
+     are written as articles but stored as `_index.md`. Rather than keep two
+     copies of the markup in sync, both templates are one line that calls this.
+
+     Context is the page. Everything it reads — .Content, .TableOfContents,
+     .Params, .Resources, .Date — is available on a section page exactly as it is
+     on a regular one.
+
+     The rail appears only when it earns its place (see $showToc), so a short
+     page renders as a single centred column rather than beside an almost-empty
+     sidebar. Exactly one <main id="main" tabindex="-1"> and one <h1>, which the
+     Phase 7 audit gates on. */}}
+
+{{ $page := . }}
+
+{{/* Lead image: front-matter filename first, then a conventional resource. */}}
+{{ $img := "" }}
+{{ with .Params.image.filename }}{{ with $page.Resources.GetMatch . }}{{ $img = . }}{{ end }}{{ end }}
+{{ if not $img }}{{ with .Resources.GetMatch "{featured,thumbnail,cover,hero}.*" }}{{ $img = . }}{{ end }}{{ end }}
+
+{{/* Should the rail exist at all?
+
+     Counted from Hugo's own generated TOC markup, which is always a nested
+     <ul>/<li> tree — one <li> per entry, at every level. That is a single regex
+     against output Hugo controls, not a parse of anybody's Markdown.
+
+     `.Fragments.Headings` would look like the tidier answer and is not: it
+     returns the ROOT of the heading tree, so a page whose sections are all `##`
+     reports 1, and a page using `#` sections reports 8. It does not answer
+     "how many entries will this table of contents have".
+
+     Below three entries a table of contents is just a restatement of the page,
+     so it renders as a single centred column instead.
+
+     `toc: false` in front matter suppresses it outright; `toc: true` forces it
+     on. Neither is required. */}}
+{{ $tocItems := len (findRE "<li" .TableOfContents) }}
+{{ $tocParam := .Params.toc }}
+{{ $showToc := cond (ne $tocParam nil) (eq $tocParam true) (ge $tocItems 3) }}
+
+{{/* Hugo hard-codes `id="TableOfContents"` on the <nav> it generates. This page
+     renders that markup twice — the small-screen disclosure and the desktop
+     rail — which produced two elements with the same id. Only one is ever
+     displayed, but a duplicate id is invalid either way and the Phase 7 audit
+     gates on there being none. Stripping the id costs nothing: the rail is
+     addressed by `[data-sj-toc]` and styled by class. */}}
+{{ $toc := .TableOfContents | replaceRE `\sid="TableOfContents"` "" | safeHTML }}
+
+{{ $showDate := and .Date (not .Params.hide_date) }}
+{{ $tags := .Params.tags }}
+
+<div class="sj-blog{{ if $showToc }} sj-blog--with-toc{{ end }}">
+
+  <main id="main" tabindex="-1" class="sj-blog__main">
+    <article class="sj-article sj-article--blog">
+
+      <header class="sj-article__head sj-blog__head">
+        {{ partial "breadcrumbs.html" . }}
+
+        <h1 class="sj-blog__title">{{ .Title | markdownify }}</h1>
+
+        {{ with or .Params.summary .Description }}
+          <p class="sj-blog__lede">{{ . | markdownify }}</p>
+        {{ end }}
+
+        {{/* The row renders only if it has something in it, so a page with no
+             date and no tags leaves no empty band above the rule. */}}
+        {{ if or $showDate $tags }}
+          <div class="sj-blog__meta">
+            {{ if $showDate }}
+              {{/* No calendar glyph: assets/media/icons/hero/ has no calendar,
+                   and adding an icon asset for decoration is not worth it. The
+                   date reads perfectly well on its own. */}}
+              <time class="sj-blog__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+            {{ end }}
+            {{ with $tags }}
+              {{ if $showDate }}<span class="sj-blog__meta-sep" aria-hidden="true">|</span>{{ end }}
+              <ul class="sj-tags sj-blog__tags">
+                {{ range . }}
+                  <li><a class="sj-tag sj-tag--link" href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a></li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </div>
+        {{ end }}
+      </header>
+
+      <hr class="sj-blog__rule" />
+
+      {{ with $img }}
+        {{ $t := . }}
+        {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fit "1200x900 webp" }}{{ end }}
+        <figure class="sj-article__figure">
+          <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+               alt="{{ $page.Params.image.alt_text | default "" }}" fetchpriority="high" />
+          {{ with $page.Params.image.caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+        </figure>
+      {{ end }}
+
+      {{/* Small-screen table of contents.
+
+           A <details> rather than a second <nav>: the rail below is the page's
+           table-of-contents landmark, and two landmarks with the same name are
+           worse than one. Only one of the two is ever in the accessibility tree,
+           because the other is display:none at every width. It works with
+           scripting off — that is the whole reason it is a disclosure element
+           and not a button. */}}
+      {{ if $showToc }}
+        <details class="sj-toc sj-toc--inline">
+          <summary class="sj-toc__summary">{{ i18n "toc" | default "On this page" }}</summary>
+          <div class="sj-toc__body">{{ $toc }}</div>
+        </details>
+      {{ end }}
+
+      <div class="sj-prose prose dark:prose-invert" data-pagefind-body>
+        {{ .Content }}
+      </div>
+
+    </article>
+  </main>
+
+  {{ if $showToc }}
+    <aside class="sj-blog__aside">
+      {{/* aria-labelledby, not aria-label: the accessible name is then the same
+           text the reader can see, which is what WCAG 2.5.3 asks for. */}}
+      <nav class="sj-toc-rail" aria-labelledby="sj-toc-rail-title" data-sj-toc>
+        <p class="sj-toc-rail__title" id="sj-toc-rail-title">{{ i18n "toc" | default "On this page" }}</p>
+        <div class="sj-toc-rail__body">{{ $toc }}</div>
+        <a class="sj-toc-rail__top" href="#main">
+          <span class="sj-toc-rail__top-icon" aria-hidden="true">&uarr;</span>
+          {{ i18n "back_to_top" | default "Back to top" }}
+        </a>
+      </nav>
+    </aside>
+  {{ end }}
+
+</div>

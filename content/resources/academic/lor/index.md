@@ -6,6 +6,10 @@ summary: Guidelines to get Letter of Recommendation
 date: 2025-01-01
 description: "How to request a letter of recommendation, what information to supply, expected turnaround, and the required request form and CV template."
 weight: 10
+
+# Renders with the article layout: reading column plus an automatic
+# "On this page" rail. See layouts/blogpost/ and the README.
+type: blogpost
 ---
 
 ## Foreword

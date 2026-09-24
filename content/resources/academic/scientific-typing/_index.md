@@ -5,47 +5,13 @@ Title: Unicode Scientific Symbols Cheatsheet
 summary: Greek letters, subscripts/superscripts, and a broad catalog of mathematical, logical, and operator symbols (Unicode).
 description: "A Unicode reference for scientific writing: the full Greek alphabet, subscripts, superscripts, mathematical operators, logic symbols and arrows, ready to paste into Markdown or HTML."
 weight: 20
+
+# Renders with the article layout: reading column plus an automatic
+# "On this page" rail. See layouts/blogpost/ and the README.
+type: blogpost
 ---
 
 This page lists commonly used scientific symbols you can paste directly into Markdown/HTML. Rendering depends on the font; for best coverage use modern fonts (e.g., Noto Sans/Serif).
-
----
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [1. Greek alphabet](#1-greek-alphabet)
-  - [1.1 Full alphabet table](#11-full-alphabet-table)
-  - [1.2 Variant Greek forms](#12-variant-greek-forms)
-- [2. Unicode subscripts and superscripts](#2-unicode-subscripts-and-superscripts)
-  - [2.1 Digits](#21-digits)
-  - [2.2 Signs and parentheses](#22-signs-and-parentheses)
-  - [2.3 Common superscript letters](#23-common-superscript-letters)
-  - [2.4 Common subscript letters](#24-common-subscript-letters)
-  - [2.5 Combining-mark tip (fallback)](#25-combining-mark-tip-fallback)
-- [3. Core constants and special symbols](#3-core-constants-and-special-symbols)
-- [4. Arithmetic operators and basic math](#4-arithmetic-operators-and-basic-math)
-- [5. Relational operators](#5-relational-operators)
-- [6. Set theory and common math objects](#6-set-theory-and-common-math-objects)
-- [7. Logic symbols](#7-logic-symbols)
-- [8. Calculus and analysis operators](#8-calculus-and-analysis-operators)
-- [9. Linear algebra, vectors, and matrices](#9-linear-algebra-vectors-and-matrices)
-- [10. Probability and statistics](#10-probability-and-statistics)
-- [11. Common arrows](#11-common-arrows)
-- [12. Operator catalog](#12-operator-catalog)
-  - [12.1 Algebraic and binary operators](#121-algebraic-and-binary-operators)
-  - [12.2 Bitwise and logic-like operators](#122-bitwise-and-logic-like-operators)
-  - [12.3 Set operators](#123-set-operators)
-  - [12.4 Comparison and ordering operators](#124-comparison-and-ordering-operators)
-  - [12.5 Calculus operators](#125-calculus-operators)
-- [13. Physics and engineering symbols](#13-physics-and-engineering-symbols)
-  - [Maxwell’s equations (differential form)](#maxwells-equations-differential-form)
-  - [Maxwell’s equations (integral form)](#maxwells-equations-integral-form)
-  - [Schrödinger equation](#schrödinger-equation)
-  - [Poisson’s equation](#poissons-equation)
-- [14. Quantum information staples](#14-quantum-information-staples)
-- [15. Quick copy block](#15-quick-copy-block)
-- [16. Notes for Markdown users](#16-notes-for-markdown-users)
 
 ---
 

@@ -94,34 +94,54 @@ that state change is information rather than decoration.
 QA drivers and recorded results: `docs/redesign/evidence/phase8-circuit-*.mjs`
 and the matching `.json` files.
 
-## Blog article layout
+## Article layout
 
-Individual articles under `/resources/blog/` render with a reading column plus a
-persistent **On this page** rail. Nothing has to be declared per post: the
-section's `_index.md` carries a `cascade` that sets `type: blogpost` on every
-`kind: page` beneath it, which is what selects the template. The blog listing and
-the rest of `/resources/` are unaffected and keep `layouts/single.html`.
+Long-form pages render with a reading column plus a persistent **On this page**
+rail. It is selected by `type: blogpost`, which pages get in one of two ways:
+
+- **Every article under `/resources/blog/`**, automatically. That section's
+  `_index.md` carries a `cascade` setting the type on every `kind: page` beneath
+  it, so posts need no front matter of their own — existing or future.
+- **Individually**, by setting `type: blogpost` in front matter. Currently
+  `/resources/academic/lor/`, `/resources/academic/scientific-typing/` and
+  `/resources/templates/graphics/`.
+
+The blog listing and every other page under `/resources/` are unaffected and keep
+`layouts/single.html`.
+
+Two of those opted-in pages are stored as `_index.md` — they are written as
+articles but Hugo treats them as sections — so the layout exists as a pair:
+`single.html` for regular pages, `list.html` for branch pages, both one line
+calling `_partials/article-toc-layout.html`. The list template deliberately does
+not list descendants; a section that needs a listing should not use this type.
+
+The type name is historical. The layout was built for the blog and then adopted
+by the reference pages; it is a template selector, not a claim about the content.
 
 The table of contents is Hugo's own `.TableOfContents`, so it follows whatever
-headings a post actually has — no headings are listed anywhere in the template.
+headings a page actually has — no headings are listed anywhere in the template.
 `markup.tableOfContents.startLevel` is 1 rather than Hugo's default of 2, because
-several posts use `#` for their major sections and `##` for subsections; starting
+several pages use `#` for their major sections and `##` for subsections; starting
 at 2 silently dropped every major section from their contents list.
 
 **The rail appears only when it is useful.** Fewer than three entries and the
-article renders as a single centred column instead — no stranded sidebar. Set
-`toc: false` in a post's front matter to suppress it regardless, or `toc: true`
-to force it on. Neither is required.
+page renders as a single centred column instead — no stranded sidebar. Set
+`toc: false` in front matter to suppress it regardless, or `toc: true` to force
+it on. Neither is required.
 
 Below 1100px the rail is replaced by a collapsible `<details>` disclosure placed
 after the article metadata, which works with scripting disabled.
+
+Adopting this layout also puts a page into the site search: the body carries
+`data-pagefind-body`, which the previous section template did not.
 
 ### Principal files
 
 | Path | Role |
 |---|---|
-| `layouts/blogpost/single.html` | the article template |
-| `content/resources/blog/_index.md` | the `cascade` that routes posts to it |
+| `layouts/_partials/article-toc-layout.html` | the layout itself |
+| `layouts/blogpost/single.html` · `list.html` | one line each; regular vs branch pages |
+| `content/resources/blog/_index.md` | the `cascade` that routes blog posts to it |
 | `assets/css/blog-article.css` | grid, typography, rail, disclosure, both themes |
 | `assets/js/sajid-toc.js` | active-section indicator; exits at once on every other page |
 | `config/_default/hugo.yaml` | `markup.tableOfContents.startLevel` |

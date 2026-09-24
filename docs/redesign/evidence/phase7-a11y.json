@@ -6,10 +6,10 @@
    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
    "V8-Version": "15.3.76.13",
    "WebKit-Version": "537.36 (@792bf6722e73a45aa9e47c163b9901bdc17f3230)",
-   "webSocketDebuggerUrl": "ws://127.0.0.1:9503/devtools/browser/baf203f1-19b8-4870-9b9e-75a6c3ce64c8"
+   "webSocketDebuggerUrl": "ws://127.0.0.1:9532/devtools/browser/97d8dfcc-0916-4c73-9f4c-5745739f8308"
   },
   "base": "http://127.0.0.1:8099",
-  "at": "2026-09-23T11:13:19.211Z"
+  "at": "2026-09-24T13:32:08.767Z"
  },
  "zoom": {
   "home|200|light": {
@@ -74,8 +74,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 93,
-   "textNodes": 224,
+   "interactiveVisible": 94,
+   "textNodes": 230,
    "multiColumn": [
     {
      "el": "ul.sj-research__grid",
@@ -154,8 +154,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 93,
-   "textNodes": 224,
+   "interactiveVisible": 94,
+   "textNodes": 231,
    "multiColumn": [
     {
      "el": "ul.sj-research__grid",
@@ -234,8 +234,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 93,
-   "textNodes": 224,
+   "interactiveVisible": 94,
+   "textNodes": 231,
    "multiColumn": [
     {
      "el": "div.grid.grid-cols-2",
@@ -306,8 +306,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 93,
-   "textNodes": 224,
+   "interactiveVisible": 94,
+   "textNodes": 231,
    "multiColumn": [
     {
      "el": "div.grid.grid-cols-2",
@@ -519,8 +519,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 44,
-   "textNodes": 112,
+   "interactiveVisible": 46,
+   "textNodes": 116,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -535,8 +535,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 44,
-   "textNodes": 112,
+   "interactiveVisible": 46,
+   "textNodes": 116,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -551,8 +551,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 44,
-   "textNodes": 112,
+   "interactiveVisible": 46,
+   "textNodes": 116,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -567,8 +567,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 44,
-   "textNodes": 112,
+   "interactiveVisible": 46,
+   "textNodes": 116,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -647,8 +647,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 26,
-   "textNodes": 61,
+   "interactiveVisible": 30,
+   "textNodes": 79,
    "multiColumn": [
     {
      "el": "ul.sj-projects__grid",
@@ -668,8 +668,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 26,
-   "textNodes": 61,
+   "interactiveVisible": 30,
+   "textNodes": 79,
    "multiColumn": [
     {
      "el": "ul.sj-projects__grid",
@@ -689,8 +689,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 26,
-   "textNodes": 61,
+   "interactiveVisible": 30,
+   "textNodes": 79,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -705,8 +705,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 26,
-   "textNodes": 61,
+   "interactiveVisible": 30,
+   "textNodes": 79,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -721,8 +721,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 24,
-   "textNodes": 55,
+   "interactiveVisible": 27,
+   "textNodes": 65,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -737,8 +737,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 24,
-   "textNodes": 55,
+   "interactiveVisible": 27,
+   "textNodes": 65,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -753,8 +753,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 24,
-   "textNodes": 55,
+   "interactiveVisible": 27,
+   "textNodes": 65,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   },
@@ -769,8 +769,8 @@
    "headerVisible": true,
    "mainVisible": true,
    "footerReachable": true,
-   "interactiveVisible": 24,
-   "textNodes": 55,
+   "interactiveVisible": 27,
+   "textNodes": 65,
    "multiColumn": [],
    "userScalable": "width=device-width,initial-scale=1"
   }
@@ -785,6 +785,36 @@
      "el": "g",
      "opacity": "0",
      "txt": "{{/* Ambient routing: reads as board con"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Photonics"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Quantum"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Embedded Systems"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Antennas"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Computing"
+    },
+    {
+     "el": "span.sj-domain__title",
+     "opacity": "0",
+     "txt": "Energy"
     },
     {
      "el": "div.absolute.bottom-full.left-1/2",
@@ -874,7 +904,7 @@
      "name": "jNodePulse"
     }
    ],
-   "visibleTextChars": 5165
+   "visibleTextChars": 5375
   },
   "home|reduced": {
    "running": 0,
@@ -914,7 +944,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 5163
+   "visibleTextChars": 5373
   },
   "home|reduced-390-dark": {
    "running": 0,
@@ -954,7 +984,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 5034
+   "visibleTextChars": 5244
   },
   "research|normal": {
    "running": 0,
@@ -1115,7 +1145,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 1196
+   "visibleTextChars": 1644
   },
   "projects|reduced": {
    "running": 0,
@@ -1134,7 +1164,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1196
+   "visibleTextChars": 1644
   },
   "projects|reduced-390-dark": {
    "running": 0,
@@ -1153,7 +1183,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 1128
+   "visibleTextChars": 1576
   },
   "publication-list|normal": {
    "running": 0,
@@ -1387,7 +1417,7 @@
      "name": "spin"
     }
    ],
-   "visibleTextChars": 2891
+   "visibleTextChars": 2933
   },
   "resources|reduced": {
    "running": 0,
@@ -1406,7 +1436,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 2891
+   "visibleTextChars": 2933
   },
   "resources|reduced-390-dark": {
    "running": 0,
@@ -1425,7 +1455,7 @@
    ],
    "animElements": 2,
    "durationsOver400ms": [],
-   "visibleTextChars": 2823
+   "visibleTextChars": 2865
   }
  },
  "semantics": {
@@ -1446,7 +1476,7 @@
     ]
    },
    "h1": 1,
-   "headingCount": 20,
+   "headingCount": 21,
    "headingOutline": [
     "H1 SAJID Lab — Smart & Advanced Junction of Intel",
     "H2 Research",
@@ -1457,8 +1487,9 @@
     "H3 Embedded Systems & IoT",
     "H3 Renewable Energy & Sustainable Systems",
     "H2 Projects & Engineering Work",
+    "H3 OMRFlow",
     "H3 Scholar Profile Exporter",
-    "H3 CTAdmin",
+    "H3 Pi Web Kiosk",
     "H2 Team",
     "H3 Dr. Sajid Muhaimin Choudhury",
     "H2 Collaborators & Partners",
@@ -1807,10 +1838,12 @@
     ]
    },
    "h1": 1,
-   "headingCount": 5,
+   "headingCount": 7,
    "headingOutline": [
     "H1 Projects",
+    "H2 OMRFlow",
     "H2 Scholar Profile Exporter",
+    "H2 Pi Web Kiosk",
     "H2 CTAdmin",
     "H2 Dr. Sajid Muhaimin Choudhury",
     "H3 Important Links"
@@ -2392,11 +2425,14 @@
    "landmarks": {
     "main": 1,
     "header": 2,
-    "nav": 3,
+    "nav": 6,
     "footer": 1,
     "navLabels": [
      "Primary",
      "Breadcrumb",
+     "(unlabelled)",
+     "(unlabelled)",
+     "(unlabelled)",
      "Footer"
     ]
    },
@@ -2461,7 +2497,7 @@
     ]
    },
    "h1": 1,
-   "headingCount": 20,
+   "headingCount": 21,
    "headingOutline": [
     "H1 SAJID Lab — Smart & Advanced Junction of Intel",
     "H2 Research",
@@ -2472,8 +2508,9 @@
     "H3 Embedded Systems & IoT",
     "H3 Renewable Energy & Sustainable Systems",
     "H2 Projects & Engineering Work",
+    "H3 OMRFlow",
     "H3 Scholar Profile Exporter",
-    "H3 CTAdmin",
+    "H3 Pi Web Kiosk",
     "H2 Team",
     "H3 Dr. Sajid Muhaimin Choudhury",
     "H2 Collaborators & Partners",

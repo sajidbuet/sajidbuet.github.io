@@ -36,7 +36,14 @@
          supplies <main> for everything except non-landing page kinds.
          Verified by measurement across all routes — see
          docs/redesign/evidence/phase2a-landmarks.json */}}
-    {{- $has_inner_main := and (eq .Kind "page") (ne .Type "landing") -}}
+    {{/* `type: blogpost` is the exception to the kind rule above: the article
+         layout emits its own <main id="main" tabindex="-1">, and two of the
+         pages using it are BRANCH pages (/resources/academic/scientific-typing/
+         and /resources/templates/graphics/ are written as articles but stored
+         as _index.md). Keying only on Kind gave those two a shell <main>
+         wrapping the template's own — a duplicate id AND a nested landmark.
+         See layouts/_partials/article-toc-layout.html. */}}
+    {{- $has_inner_main := or (and (eq .Kind "page") (ne .Type "landing")) (eq .Type "blogpost") -}}
     {{- $body_class := printf "page-body%s" (cond (and (ne .Type "landing") (not $cover)) " my-10" "") -}}
     {{/* Phase 7: this wrapper carried `id="main" tabindex="-1"` as the skip-link
          target, because in Phase 2A the inner <main> came from _vendor and had no
