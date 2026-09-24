@@ -1,0 +1,355 @@
+/* ===========================================================================
+   Blog article — two-column reading layout for /resources/blog/*
+
+   Scoped entirely under .sj-blog, which only layouts/blogpost/single.html
+   emits. Nothing here can reach another page.
+
+   Semantic tokens only, so both themes come for free: every colour below is a
+   variable that tokens.css already redefines under .dark.
+   =========================================================================== */
+
+.sj-blog {
+  /* Wider than .sj-container-content (1120px) because this container holds the
+     article AND the rail. The grid inside is centred, so on a screen narrower
+     than the full 1240 the two columns stay together rather than drifting. */
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: var(--sj-space-4);
+  /* Asymmetric on purpose: --sj-section-md above the title left a 112px band
+     between the header's bottom border and the article, which read as a gap
+     rather than as breathing room. The shell this sits in contributes its own
+     margin, so the measured distance from the header is about 40px more than
+     the value here. */
+  padding-block: var(--sj-space-4) var(--sj-space-24);
+}
+
+@media (min-width: 768px) {
+  .sj-blog { padding-block-start: var(--sj-space-6); }
+}
+
+.sj-blog__main {
+  min-width: 0;                    /* lets a wide <pre> shrink instead of pushing the grid */
+  /* The measure is capped here, not only by the grid track, so the article
+     never stretches in the band between the tablet layout and the 1100px
+     two-column breakpoint — it measured 992px there before this. */
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Two columns
+
+   1100px, not a token breakpoint, because that is where 800 + 64 + 240 plus
+   the page gutters actually stops fitting. Below it the rail is removed
+   entirely and the article takes the full width rather than being squeezed
+   into a column too narrow to read comfortably.
+   -------------------------------------------------------------------------- */
+@media (min-width: 1100px) {
+  .sj-blog--with-toc {
+    display: grid;
+    /* `1fr`, not `minmax(0, 800px)`. A max-capped track is still content-sized
+       under `justify-content: center`, so an article with short lines shrank
+       its own column — measured 732px on one post against 800px on another,
+       which made the two read as different layouts. A fraction of a container
+       whose width is chosen below always resolves to the same number, so every
+       article gets the same measure. */
+    grid-template-columns: minmax(0, 1fr) 248px;
+    column-gap: 72px;
+    align-items: start;
+    /* 1160 - 32 gutters - 72 gap - 248 rail = 808px of article. */
+    max-width: 1160px;
+  }
+
+  /* Inside the grid the track defines the measure, so the standalone cap that
+     serves the narrower layouts must not also apply here. */
+  .sj-blog--with-toc .sj-blog__main {
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+
+/* Without a rail the article is simply a centred column of its own — there is
+   no second column, so there is never a large empty area beside it. The
+   max-width that does this now lives on .sj-blog__main above, which also
+   covers the widths between the tablet layout and the two-column breakpoint. */
+
+/* --------------------------------------------------------------------------
+   Article header
+   -------------------------------------------------------------------------- */
+.sj-article--blog { padding-block: 0; }        /* the container owns the rhythm now */
+
+.sj-blog__head { margin-bottom: var(--sj-space-6); }
+
+.sj-blog__title {
+  margin: var(--sj-space-3) 0 0;
+  font-size: clamp(1.9rem, 1.35rem + 2.1vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--sj-text-primary);
+  text-wrap: balance;
+}
+
+.sj-blog__lede {
+  margin: var(--sj-space-4) 0 0;
+  max-width: 62ch;
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  line-height: 1.55;
+  color: var(--sj-text-secondary);
+}
+
+.sj-blog__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sj-space-2) var(--sj-space-3);
+  margin-top: var(--sj-space-6);
+  font-size: 0.9375rem;
+  color: var(--sj-text-tertiary);
+}
+
+.sj-blog__date {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sj-space-2);
+}
+
+.sj-blog__meta-sep { color: var(--sj-border-strong); }
+
+.sj-blog__tags { margin: 0; }
+
+/* The chip is the shared .sj-tag; this only makes the linked variant behave
+   like a control without changing how it looks at rest. */
+.sj-tag--link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--sj-text-tertiary);
+  transition: color var(--sj-duration-fast) var(--sj-ease-out),
+              border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+.sj-tag--link:hover {
+  color: var(--sj-accent);
+  border-color: var(--sj-accent);
+}
+.sj-tag--link:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 2px;
+}
+
+.sj-blog__rule {
+  margin: 0 0 var(--sj-space-8);
+  border: 0;
+  border-top: 1px solid var(--sj-border);
+}
+
+/* --------------------------------------------------------------------------
+   Body typography
+
+   Scoped to the blog article so the rest of the site keeps its current scale.
+   -------------------------------------------------------------------------- */
+.sj-article--blog .sj-prose {
+  font-size: 1.0625rem;          /* 17px */
+  line-height: 1.7;
+  color: var(--sj-text-primary);
+}
+
+@media (min-width: 1100px) {
+  .sj-article--blog .sj-prose { font-size: 1.125rem; }   /* 18px */
+}
+
+.sj-article--blog .sj-prose > * + * { margin-top: var(--sj-space-6); }
+
+.sj-article--blog .sj-prose > h2 {
+  margin-top: var(--sj-space-12);
+  margin-bottom: var(--sj-space-4);
+  padding-bottom: var(--sj-space-2);
+  border-bottom: 1px solid var(--sj-border);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.sj-article--blog .sj-prose > h3 {
+  margin-top: var(--sj-space-8);
+  margin-bottom: var(--sj-space-3);
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+
+.sj-article--blog .sj-prose > h4 {
+  margin-top: var(--sj-space-6);
+  margin-bottom: var(--sj-space-2);
+  font-size: 1.0625rem;
+}
+
+.sj-article--blog .sj-prose > ul,
+.sj-article--blog .sj-prose > ol { padding-left: var(--sj-space-6); }
+
+.sj-article--blog .sj-prose li + li { margin-top: var(--sj-space-2); }
+
+.sj-article--blog .sj-prose > blockquote {
+  margin-inline: 0;
+  padding: var(--sj-space-3) var(--sj-space-6);
+  border-left: 3px solid var(--sj-accent);
+  background: var(--sj-background-subtle);
+  border-radius: 0 var(--sj-radius-sm) var(--sj-radius-sm) 0;
+  color: var(--sj-text-secondary);
+}
+
+.sj-article--blog .sj-prose > figure { margin-block: var(--sj-space-8); }
+.sj-article--blog .sj-prose img { max-width: 100%; height: auto; }
+
+/* Several posts link bare URLs, and a Twitter status URL is a single 518px
+   unbreakable token — at 390px it pushed the document to 535px wide and gave
+   the whole page a horizontal scrollbar. Breaking anywhere applies to the link
+   text only; it cannot affect prose, because normal words wrap at spaces long
+   before this rule is reached. */
+.sj-article--blog .sj-prose a { overflow-wrap: anywhere; }
+
+/* Long formulas and shell lines must stay on one line and scroll, not wrap into
+   something unreadable. `min-width: 0` on the main column is what stops this
+   widening the grid. */
+.sj-article--blog .sj-prose pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   "On this page" — desktop rail
+
+   Deliberately not a card: no background, no shadow, no border box. The single
+   hairline on the inline-start edge is the only thing separating it from the
+   article.
+   -------------------------------------------------------------------------- */
+.sj-blog__aside { display: none; }
+
+@media (min-width: 1100px) {
+  .sj-blog--with-toc .sj-blog__aside {
+    display: block;
+    position: sticky;
+    top: calc(var(--sj-header-height) + var(--sj-space-6));
+    /* Leaves room for the sticky header above and a little air below, so a long
+       TOC scrolls inside itself rather than running off the screen. */
+    max-height: calc(100vh - var(--sj-header-height) - var(--sj-space-12));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-inline-start: var(--sj-space-6);
+    border-inline-start: 1px solid var(--sj-border);
+    /* Firefox keeps a scrollbar gutter visible otherwise. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--sj-border-strong) transparent;
+  }
+
+  .sj-blog--with-toc .sj-blog__aside::-webkit-scrollbar { width: 6px; }
+  .sj-blog--with-toc .sj-blog__aside::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+  }
+  .sj-blog--with-toc .sj-blog__aside:hover::-webkit-scrollbar-thumb {
+    background: var(--sj-border-strong);
+  }
+}
+
+.sj-toc-rail__title {
+  margin: 0 0 var(--sj-space-3);
+  font-size: var(--sj-text-2xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sj-text-tertiary);
+}
+
+.sj-toc-rail__body ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.sj-toc-rail__body li { margin: 0; }
+
+.sj-toc-rail__body a {
+  display: block;
+  padding: 5px 0 5px var(--sj-space-3);
+  /* The 2px inline-start border is the active indicator's resting state. It is
+     always present and merely transparent, so nothing shifts when it lights up. */
+  border-inline-start: 2px solid transparent;
+  margin-inline-start: -2px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--sj-text-secondary);
+  text-decoration: none;
+  transition: color var(--sj-duration-fast) var(--sj-ease-out),
+              border-color var(--sj-duration-fast) var(--sj-ease-out);
+}
+
+.sj-toc-rail__body a:hover { color: var(--sj-text-primary); }
+
+.sj-toc-rail__body a:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: -2px;
+  border-radius: var(--sj-radius-sm);
+}
+
+/* Nested (h3) entries: indented, smaller, quieter — hierarchy without a box. */
+.sj-toc-rail__body ul ul a {
+  padding-left: var(--sj-space-6);
+  font-size: 0.8125rem;
+  color: var(--sj-text-tertiary);
+}
+
+/* Active section. Restrained: the accent colour plus the bar that was already
+   reserved above. No background, no weight change, so the rail never competes
+   with the article. */
+.sj-toc-rail__body a.is-active {
+  color: var(--sj-accent);
+  border-inline-start-color: var(--sj-accent);
+  font-weight: 500;
+}
+
+.sj-toc-rail__top {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sj-space-2);
+  margin-top: var(--sj-space-6);
+  padding-top: var(--sj-space-4);
+  border-top: 1px solid var(--sj-border);
+  width: 100%;
+  font-size: 0.875rem;
+  color: var(--sj-text-secondary);
+  text-decoration: none;
+}
+.sj-toc-rail__top:hover { color: var(--sj-accent); }
+.sj-toc-rail__top:focus-visible {
+  outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   "On this page" — small-screen disclosure
+
+   Reuses the .sj-toc component from phase6.css; this only controls when it is
+   shown. Exactly one of the two is ever displayed, so there is never a
+   duplicated table of contents in the accessibility tree.
+   -------------------------------------------------------------------------- */
+.sj-toc--inline { margin-bottom: var(--sj-space-8); }
+
+@media (min-width: 1100px) {
+  .sj-blog--with-toc .sj-toc--inline { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Anchor landing
+
+   html{scroll-padding-top} in custom.css already keeps anchors clear of the
+   sticky header. Headings get a little extra so a linked section lands with
+   some air above it rather than flush against the header.
+   -------------------------------------------------------------------------- */
+.sj-article--blog .sj-prose :is(h2, h3, h4)[id] {
+  scroll-margin-top: var(--sj-space-6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sj-toc-rail__body a,
+  .sj-tag--link,
+  .sj-toc-rail__top { transition: none; }
+}

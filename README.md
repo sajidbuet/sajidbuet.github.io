@@ -93,3 +93,39 @@ that state change is information rather than decoration.
 
 QA drivers and recorded results: `docs/redesign/evidence/phase8-circuit-*.mjs`
 and the matching `.json` files.
+
+## Blog article layout
+
+Individual articles under `/resources/blog/` render with a reading column plus a
+persistent **On this page** rail. Nothing has to be declared per post: the
+section's `_index.md` carries a `cascade` that sets `type: blogpost` on every
+`kind: page` beneath it, which is what selects the template. The blog listing and
+the rest of `/resources/` are unaffected and keep `layouts/single.html`.
+
+The table of contents is Hugo's own `.TableOfContents`, so it follows whatever
+headings a post actually has — no headings are listed anywhere in the template.
+`markup.tableOfContents.startLevel` is 1 rather than Hugo's default of 2, because
+several posts use `#` for their major sections and `##` for subsections; starting
+at 2 silently dropped every major section from their contents list.
+
+**The rail appears only when it is useful.** Fewer than three entries and the
+article renders as a single centred column instead — no stranded sidebar. Set
+`toc: false` in a post's front matter to suppress it regardless, or `toc: true`
+to force it on. Neither is required.
+
+Below 1100px the rail is replaced by a collapsible `<details>` disclosure placed
+after the article metadata, which works with scripting disabled.
+
+### Principal files
+
+| Path | Role |
+|---|---|
+| `layouts/blogpost/single.html` | the article template |
+| `content/resources/blog/_index.md` | the `cascade` that routes posts to it |
+| `assets/css/blog-article.css` | grid, typography, rail, disclosure, both themes |
+| `assets/js/sajid-toc.js` | active-section indicator; exits at once on every other page |
+| `config/_default/hugo.yaml` | `markup.tableOfContents.startLevel` |
+
+QA driver and recorded results: `docs/redesign/evidence/phase9-blog-qa.mjs` and
+`phase9-blog-qa.json`; screenshots in
+`docs/redesign/screenshots/blog-article/`.

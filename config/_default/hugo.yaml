@@ -77,6 +77,20 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+  # Hugo's default table of contents starts at level 2. Several Resources blog
+  # articles structure their body as `#` major sections with `##` subsections —
+  # /resources/blog/20260224-word-lakh-taka-bdt/ has eight of them — so a TOC
+  # starting at level 2 listed only the subsections and silently dropped every
+  # major section.
+  #
+  # Starting at 1 makes .TableOfContents mirror whatever hierarchy a post
+  # actually uses: `#`/`##` posts get sections then subsections, and the more
+  # common `##`/`###` posts are unchanged, because they have no level-1 heading
+  # for this to pick up. The page TITLE is rendered by the template, not by
+  # Goldmark, so it never appears in the TOC.
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
 security:
   _merge: deep
 sitemap:

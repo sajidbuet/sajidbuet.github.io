@@ -94,9 +94,11 @@
   {{ end }}
 
   {{/* tokens.css must precede custom.css: custom.css consumes its variables. */}}
+  {{/* blog-article.css comes after phase6.css because it refines the
+       `.sj-prose` rules defined there, scoped to `.sj-article--blog`. */}}
   {{ range slice "css/tokens.css" "css/custom.css" "css/homepage.css"
                  "css/phase4.css" "css/phase5.css" "css/phase6.css"
-                 "css/phase7.css" "css/phase8.css" }}
+                 "css/phase7.css" "css/phase8.css" "css/blog-article.css" }}
     {{ with resources.Get . }}{{ $css = $css | append . }}{{ end }}
   {{ end }}
 
@@ -395,10 +397,16 @@
        separately so it adds no request. */}}
   {{- $js_sajid_circuit := resources.Get "js/sajid-hero-circuit.js" | resources.Minify -}}
 
+  {{/* SAJID.BD: blog "On this page" active-section indicator. Blog articles
+       only — the module exits at once when `[data-sj-toc]` is absent, so every
+       other route pays one failed querySelector. Bundled, so no extra request. */}}
+  {{- $js_sajid_toc := resources.Get "js/sajid-toc.js" | resources.Minify -}}
+
   {{/* Start with the core scripts */}}
   {{ $js_bundle_contents := slice $js_bundle_head $js_hugoblox $js_theme $js_lang $js_nav $js_sidebar $js_notifier $js_clipboard $js_citation }}
   {{- with $js_sajid_nav }}{{ $js_bundle_contents = $js_bundle_contents | append . }}{{ end -}}
   {{- with $js_sajid_circuit }}{{ $js_bundle_contents = $js_bundle_contents | append . }}{{ end -}}
+  {{- with $js_sajid_toc }}{{ $js_bundle_contents = $js_bundle_contents | append . }}{{ end -}}
 
   {{/* Discover and include block-specific JavaScript */}}
   {{- with partial "functions/get-block-scripts.html" . -}}
