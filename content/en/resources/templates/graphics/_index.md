@@ -1,6 +1,9 @@
 ---
 aliases:
   - /outreach/graphics/
+  # The pre-Phase-5 copy of this page was still published there until the
+  # 2026-10-04 site audit (M1); this is now the only version.
+  - /outreach/templates/graphics/
 title: Graphics
 summary: "BUET and BUET-EEE logo files in vector and raster formats, traced and maintained for institutional and academic use."
 description: "Downloadable BUET and BUET-EEE logos in SVG, PNG, EMF and WMF, in colour, white and black variants, with usage and licensing notes."
