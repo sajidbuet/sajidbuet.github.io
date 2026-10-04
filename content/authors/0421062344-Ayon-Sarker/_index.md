@@ -4,14 +4,14 @@ slug: 0421062344-ayon-sarker
 first_name: Ayon
 last_name: Sarker
 authors:
-  - 0421062344-Ayon-Sarker
-superuser: False
+- 0421062344-Ayon-Sarker
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Graduated with MSc (July 2025)
 user_groups:
-  - Alumni
-graduation_year: 2025.0
+- Alumni
+graduation_year: 2025
 thesis:
   title: Design of Dual-band Plasmonic Absorber for Biomedical Sensing and Environmental Monitoring
 ---

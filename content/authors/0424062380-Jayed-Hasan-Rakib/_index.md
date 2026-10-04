@@ -4,16 +4,13 @@ slug: 0424062380-jayed-hasan-rakib
 first_name: Jayed
 last_name: Hasan Rakib
 authors:
-  - 0424062380-Jayed-Hasan-Rakib
-superuser: False
+- 0424062380-Jayed-Hasan-Rakib
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Masters Student
 user_groups:
-  - MSc Students
-graduation_year: nan
-thesis:
-  title: nan
+- MSc Students
 ---
 
 ## Information
@@ -22,4 +19,3 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2024 April
 * **Research Division:** EP
-* **Thesis Status:** -

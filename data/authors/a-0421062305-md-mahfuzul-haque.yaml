@@ -1,17 +1,19 @@
+schema: hugoblox/author/v1
+slug: a-0421062305-md-mahfuzul-haque
 title: Md. Mahfuzul Haque
 name:
-  first: Md.
-  last: Mahfuzul Haque
+  given: Md.
+  family: Mahfuzul Haque
 role: Graduated with MSc (Jan 2025)
 bio: Design Of Silicon-carbide Based Single-quantum-well White LED
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: SUST
-  year: 2025
-- course: M.Sc. Engg. Research
+- degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
+  year: 2025
 interests:
 - EP
 user_groups:
@@ -21,6 +23,7 @@ params:
     roll: '0421062305'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2021 April
+    graduation_year: 2025
     thesis_status: Thesis Defended and Accepted
     thesis_title: Design Of Silicon-carbide Based Single-quantum-well White LED
     research_division: EP

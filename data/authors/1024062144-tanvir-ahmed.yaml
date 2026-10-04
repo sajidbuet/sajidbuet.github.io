@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 1024062144-tanvir-ahmed
 title: Tanvir Ahmed
 name:
-  first: Tanvir
-  last: Ahmed
+  given: Tanvir
+  family: Ahmed
 role: Masters Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: RUET
+- degree: M.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EEPS
 user_groups:
@@ -18,5 +21,4 @@ params:
     roll: '1024062144'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2024 October
-    thesis_status: '-'
     research_division: EEPS

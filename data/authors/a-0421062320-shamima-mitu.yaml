@@ -1,17 +1,19 @@
+schema: hugoblox/author/v1
+slug: a-0421062320-shamima-mitu
 title: Shamima Akter Mitu
 name:
-  first: Shamima
-  last: Akter Mitu
+  given: Shamima
+  family: Akter Mitu
 role: Graduated with MSc (May 2023)
 bio: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
-  year: 2023
-- course: M.Sc. Engg. Research
+- degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
+  year: 2023
 interests:
 - EP
 user_groups:
@@ -21,6 +23,7 @@ params:
     roll: '0421062320'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2021 April
+    graduation_year: 2023
     thesis_status: Thesis Defended and Accepted
     thesis_title: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
     research_division: EP

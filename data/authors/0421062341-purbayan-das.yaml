@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 0421062341-purbayan-das
 title: Purbayan Das
 name:
-  first: Purbayan
-  last: Das
+  given: Purbayan
+  family: Das
 role: Masters Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: M.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EP
 user_groups:
@@ -18,5 +21,4 @@ params:
     roll: '0421062341'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2021 April
-    thesis_status: '-'
     research_division: EP

@@ -4,14 +4,14 @@ slug: a-0422062302-md-ehsanul-karim
 first_name: Md.
 last_name: Ehsanul Karim
 authors:
-  - A-0422062302-Md-Ehsanul-Karim
-superuser: False
+- A-0422062302-Md-Ehsanul-Karim
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Graduated with MSc (June 2024)
 user_groups:
-  - Alumni
-graduation_year: 2024.0
+- Alumni
+graduation_year: 2024
 thesis:
   title: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
 ---

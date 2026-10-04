@@ -4,16 +4,13 @@ slug: 0421062341-purbayan-das
 first_name: Purbayan
 last_name: Das
 authors:
-  - 0421062341-Purbayan-Das
-superuser: False
+- 0421062341-Purbayan-Das
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Masters Student
 user_groups:
-  - MSc Students
-graduation_year: nan
-thesis:
-  title: nan
+- MSc Students
 ---
 
 ## Information
@@ -22,4 +19,3 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2021 April
 * **Research Division:** EP
-* **Thesis Status:** -

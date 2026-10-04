@@ -1,22 +1,24 @@
+schema: hugoblox/author/v1
+slug: 0424062379-naved-sadat-yamin
 title: Naved Sadat Yamin
 name:
-  first: Naved
-  last: Sadat Yamin
+  given: Naved
+  family: Sadat Yamin
 role: Masters Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: M.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EP
 user_groups:
 - MSc Students
 params:
   student:
-    roll: 0424062379
+    roll: '0424062379'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2024 April
-    thesis_status: '-'
     research_division: EP

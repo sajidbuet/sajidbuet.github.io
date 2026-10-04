@@ -4,16 +4,13 @@ slug: 2106173-ramima-mumtarin
 first_name: Ramima
 last_name: Mumtarin
 authors:
-  - 2106173-ramima-mumtarin
-superuser: False
+- 2106173-ramima-mumtarin
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: UG Student
 user_groups:
-  - Undergrad Students
-graduation_year: nan
-thesis:
-  title: nan
+- Undergrad Students
 ---
 
 ## Information
@@ -22,4 +19,3 @@ thesis:
 * **Working Towards:** B.Sc. Engg.
 * **First Enrollment:** 2021
 * **Research Division:** EP
-* **Thesis Status:** nan

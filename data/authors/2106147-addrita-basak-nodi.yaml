@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 2106147-addrita-basak-nodi
 title: Addrita Basak Nodi
 name:
-  first: Addrita
-  last: Basak Nodi
+  given: Addrita
+  family: Basak Nodi
 role: UG Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: B.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EP
 user_groups:

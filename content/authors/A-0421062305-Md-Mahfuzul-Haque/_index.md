@@ -4,14 +4,14 @@ slug: a-0421062305-md-mahfuzul-haque
 first_name: Md.
 last_name: Mahfuzul Haque
 authors:
-  - A-0421062305-Md-Mahfuzul-Haque
-superuser: False
+- A-0421062305-Md-Mahfuzul-Haque
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Graduated with MSc (Jan 2025)
 user_groups:
-  - Alumni
-graduation_year: 2025.0
+- Alumni
+graduation_year: 2025
 thesis:
   title: Design Of Silicon-carbide Based Single-quantum-well White LED
 ---

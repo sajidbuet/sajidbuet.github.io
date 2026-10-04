@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 1024064011-mir-md-aminuzzaman
 title: Mir Md. Aminuzzaman
 name:
-  first: Mir
-  last: Md. Aminuzzaman
+  given: Mir
+  family: Md. Aminuzzaman
 role: Ph.D. Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: MIST
+- degree: Ph.D.
+  institution: Dept. of EEE, BUET
 interests:
 - EP
 user_groups:
@@ -18,5 +21,4 @@ params:
     roll: 1024064011
     degree_sought: Ph.D.
     first_enrollment: 2024 October
-    thesis_status: '-'
     research_division: EP

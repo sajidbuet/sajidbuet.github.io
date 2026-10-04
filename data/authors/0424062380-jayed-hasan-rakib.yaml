@@ -1,15 +1,15 @@
 schema: hugoblox/author/v1
-slug: 0424062324-shahriar-shakil
-title: Md Al Shahriar Shakil
+slug: 0424062380-jayed-hasan-rakib
+title: Jayed Hasan Rakib
 name:
-  given: Md
-  family: Al Shahriar Shakil
+  given: Jayed
+  family: Hasan Rakib
 role: Masters Student
 affiliations:
 - name: Dept. of EEE, BUET
 education:
 - degree: BSc
-  institution: BUET
+  institution: RUET
 - degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
 interests:
@@ -18,7 +18,7 @@ user_groups:
 - MSc Students
 params:
   student:
-    roll: '0424062324'
+    roll: '0424062380'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2024 April
     research_division: EP

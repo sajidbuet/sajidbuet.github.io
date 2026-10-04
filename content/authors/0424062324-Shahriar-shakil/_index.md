@@ -4,16 +4,13 @@ slug: 0424062324-shahriar-shakil
 first_name: Md
 last_name: Al Shahriar Shakil
 authors:
-  - 0424062324-Shahriar-shakil
-superuser: False
+- 0424062324-Shahriar-shakil
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Masters Student
 user_groups:
-  - MSc Students
-graduation_year: nan
-thesis:
-  title: nan
+- MSc Students
 ---
 
 ## Information
@@ -22,4 +19,3 @@ thesis:
 * **Working Towards:** M.Sc. Engg.
 * **First Enrollment:** 2024 April
 * **Research Division:** EP
-* **Thesis Status:** -

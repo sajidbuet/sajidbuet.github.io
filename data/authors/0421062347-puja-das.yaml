@@ -1,18 +1,20 @@
+schema: hugoblox/author/v1
+slug: 0421062347-puja-das
 title: Puja Das
 name:
-  first: Puja
-  last: Das
+  given: Puja
+  family: Das
 role: Graduated with MSc (September 2025)
 bio: Efficiency Enhancement of HTL-Free Perovskite/Cadmium-Sulfide Heterojunction Solar Cell Incorporating
   Light Trapping Structure
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
-  year: 2025
-- course: M.Sc. Engg. Research
+- degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
+  year: 2025
 interests:
 - EP
 user_groups:
@@ -22,6 +24,7 @@ params:
     roll: '0421062347'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2021 April
+    graduation_year: 2025
     thesis_status: Thesis Defended
     thesis_title: Efficiency Enhancement of HTL-Free Perovskite/Cadmium-Sulfide Heterojunction Solar Cell
       Incorporating Light Trapping Structure

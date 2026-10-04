@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 2106136-gopal-gosh
 title: Gopal Gosh
 name:
-  first: Gopal
-  last: Gosh
+  given: Gopal
+  family: Gosh
 role: UG Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: B.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - CSP
 user_groups:

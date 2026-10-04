@@ -3,6 +3,7 @@ import pandas as pd
 import bibtexparser
 import logging
 import os
+import sys
 from urllib.parse import urlparse, parse_qs
 
 from bibtexparser.bparser import BibTexParser
@@ -42,40 +43,40 @@ def extract_citation_for_view(url: str) -> str | None:
         return None
 
 def main():
-    csv_path = 'PopCites.csv'
+    csv_path = 'PoPCites.csv'
     bib_path = 'papers.bib'
 
     # Check if files exist
     if not os.path.exists(csv_path):
         logging.error(f"CSV file not found: {csv_path}")
-        return
+        return 1
     if not os.path.exists(bib_path):
         logging.error(f"BibTeX file not found: {bib_path}")
-        return
+        return 1
 
     logging.info(f"Loading CSV file: {csv_path}")
     try:
         csv_df = pd.read_csv(csv_path)
     except Exception as e:
         logging.exception(f"Failed to read CSV file: {e}")
-        return
+        return 1
 
     if 'CitationURL' not in csv_df.columns or 'Cites' not in csv_df.columns:
         logging.error("CSV file must contain 'CitationURL' and 'Cites' columns.")
-        return
+        return 1
 
     # Build mapping using ONLY citation_for_view
     url_to_cites = {}
     missing_key = 0
     for raw_url, cites in zip(csv_df['CitationURL'], csv_df['Cites']):
         key = extract_citation_for_view(raw_url)
-        if not key:
+        if not key or pd.isna(cites):
             missing_key += 1
             continue
         # If duplicates exist, last one wins (same as your original dict(zip(...)))
-        url_to_cites[key] = cites
+        url_to_cites[key] = int(cites)
 
-    logging.info(f"Loaded {len(url_to_cites)} citation_for_view keys from CSV. Skipped {missing_key} rows without citation_for_view.")
+    logging.info(f"Loaded {len(url_to_cites)} citation_for_view keys from CSV. Skipped {missing_key} rows without citation_for_view or Cites.")
 
     logging.info(f"Loading BibTeX file: {bib_path}")
     try:
@@ -83,7 +84,7 @@ def main():
             bib_database = bibtexparser.load(bibtex_file, parser=parser)
     except Exception as e:
         logging.exception(f"Failed to read BibTeX file: {e}")
-        return
+        return 1
 
     updated_entries = 0
     for entry in bib_database.entries:
@@ -120,8 +121,10 @@ def main():
         logging.info(f"Successfully wrote updates to BibTeX file: {bib_path}")
     except Exception as e:
         logging.exception(f"Failed to write to BibTeX file: {e}")
+        return 1
 
     print("Execution Successful! Check update_citations_py.log")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

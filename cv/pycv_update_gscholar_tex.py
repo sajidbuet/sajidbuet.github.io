@@ -12,6 +12,7 @@ import pandas as pd
 #import matplotlib.pyplot as plt
 import re
 import math
+import sys
 
 def main():
     # 1) Load the per‑year CSV
@@ -26,8 +27,10 @@ def main():
     metrics = df_metrics.iloc[0].to_dict()
     total_citations = int(metrics.get('c', 0)) #Citations
     total_papers = int(metrics.get('p', 0)) #Papers
-    h_index = int(metrics.get('h', 0))  #h_index  
-    i10_index = int(metrics.get('hc', 0))  #hc_index  
+    h_index = int(metrics.get('h', 0))  #h_index
+    # PoP has no i10 metric ('hc' is the contemporary h-index), so count
+    # papers with at least 10 citations, as Google Scholar does.
+    i10_index = int((pd.read_csv('PoPCites.csv')['Cites'] >= 10).sum())
 
     
 
@@ -77,7 +80,7 @@ def main():
             content = file.read()
     except FileNotFoundError:
         print("           ERROR: File gscholar.tex not found.")
-        exit(1)
+        sys.exit(1)
 
     # Debug original values
     print("\n            Original values preview:")

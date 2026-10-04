@@ -1,22 +1,24 @@
+schema: hugoblox/author/v1
+slug: 0424062139-zaheer-al-jamee
 title: Zaheer Al Jamee
 name:
-  first: Zaheer
-  last: Al Jamee
+  given: Zaheer
+  family: Al Jamee
 role: Masters Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: RUET
+- degree: M.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EEPS
 user_groups:
 - MSc Students
 params:
   student:
-    roll: 0424062139
+    roll: '0424062139'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2024 April
-    thesis_status: '-'
     research_division: EEPS

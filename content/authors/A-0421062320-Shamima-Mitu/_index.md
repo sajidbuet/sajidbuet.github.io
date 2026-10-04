@@ -4,14 +4,14 @@ slug: a-0421062320-shamima-mitu
 first_name: Shamima
 last_name: Akter Mitu
 authors:
-  - A-0421062320-Shamima-Mitu
-superuser: False
+- A-0421062320-Shamima-Mitu
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Graduated with MSc (May 2023)
 user_groups:
-  - Alumni
-graduation_year: 2023.0
+- Alumni
+graduation_year: 2023
 thesis:
   title: Design of an All-optical Plasmonic Modulator for Two Micrometer Waveband
 ---

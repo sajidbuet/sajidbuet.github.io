@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 0423062522-abu-md-raihan
 title: Abu Md. Raihan
 name:
-  first: Abu
-  last: Md. Raihan
+  given: Abu
+  family: Md. Raihan
 role: Masters Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: M.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - CSP
 user_groups:
@@ -18,5 +21,4 @@ params:
     roll: '0423062522'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2023 April
-    thesis_status: '-'
     research_division: CSP

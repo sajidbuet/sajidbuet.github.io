@@ -1,17 +1,19 @@
+schema: hugoblox/author/v1
+slug: a-0422062302-md-ehsanul-karim
 title: Md. Ehsanul Karim
 name:
-  first: Md.
-  last: Ehsanul Karim
+  given: Md.
+  family: Ehsanul Karim
 role: Graduated with MSc (June 2024)
 bio: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
-  year: 2024
-- course: M.Sc. Engg. Research
+- degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
+  year: 2024
 interests:
 - EP
 user_groups:
@@ -21,6 +23,7 @@ params:
     roll: '0422062302'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2022 April
+    graduation_year: 2024
     thesis_status: Thesis Defended and Accepted
     thesis_title: Phase Change Material Based Broadband Multifunctional Metasurface for the Visible Range
     research_division: EP

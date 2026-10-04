@@ -1,14 +1,17 @@
+schema: hugoblox/author/v1
+slug: 2106173-ramima-mumtarin
 title: Ramima Mumtarin
 name:
-  first: Ramima
-  last: Mumtarin
+  given: Ramima
+  family: Mumtarin
 role: UG Student
-bio: ""
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
+- degree: B.Sc. Engg.
+  institution: Dept. of EEE, BUET
 interests:
 - EP
 user_groups:

@@ -4,16 +4,17 @@ slug: a-0422062304-asif-hossain-bhuiyan
 first_name: Md
 last_name: Asif Hossain Bhuiyan
 authors:
-  - A-0422062304-Asif-Hossain-Bhuiyan
-superuser: False
+- A-0422062304-Asif-Hossain-Bhuiyan
+superuser: false
 organizations:
-  - {'name': 'Q‑PACER RG, Dept of EEE, BUET', 'url': ''}
+- name: Dept. of EEE, BUET
 role: Graduated with MSc (May 2025)
 user_groups:
-  - Alumni
-graduation_year: 2025.0
+- Alumni
+graduation_year: 2025
 thesis:
-  title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared Waveband
+  title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared
+    Waveband
 ---
 
 ## Information

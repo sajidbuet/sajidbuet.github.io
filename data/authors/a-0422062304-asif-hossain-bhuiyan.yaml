@@ -1,18 +1,20 @@
+schema: hugoblox/author/v1
+slug: a-0422062304-asif-hossain-bhuiyan
 title: Md Asif Hossain Bhuiyan
 name:
-  first: Md
-  last: Asif Hossain Bhuiyan
+  given: Md
+  family: Asif Hossain Bhuiyan
 role: Graduated with MSc (May 2025)
 bio: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At Near Infrared
   Waveband
-organizations:
+affiliations:
 - name: Dept. of EEE, BUET
 education:
-- course: BSc
+- degree: BSc
   institution: BUET
-  year: 2025
-- course: M.Sc. Engg. Research
+- degree: M.Sc. Engg.
   institution: Dept. of EEE, BUET
+  year: 2025
 interests:
 - EP
 user_groups:
@@ -22,6 +24,7 @@ params:
     roll: '0422062304'
     degree_sought: M.Sc. Engg.
     first_enrollment: 2022 April
+    graduation_year: 2025
     thesis_status: Thesis Defended and Accepted
     thesis_title: Polarization Insensitive Electrically Reconfigurable Metasurface For Metalensing At
       Near Infrared Waveband
