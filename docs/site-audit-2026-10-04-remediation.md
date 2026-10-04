@@ -13,7 +13,7 @@ owner decision) · **EXTERNAL** (could not verify externally) · **OPTIONAL** (f
 |---|---|---|
 | C1 | FIXED | Template "partners" (MIT, Stanford, Google, NSF, Microsoft, NIH, "Become a Partner") on `/bn/` replaced by the four organisations on the English homepage. |
 | C2 | FIXED | English content moved to `content/en/` (git renames); languages defined once in `languages.yaml`. No duplicate target paths. English URLs unchanged. |
-| C3 | FIXED | c-025 title, c-027 DOI `…11276357`, c-028 DOI `…11276528`, each checked against Crossref (title and authors match). Pages re-imported. CV PDFs **not rebuilt** (see Owner actions). |
+| C3 | FIXED | c-025 title, c-027 DOI `…11276357`, c-028 DOI `…11276528`, each checked against Crossref (title and authors match). Pages re-imported; CV and dossier PDFs rebuilt. |
 | H1 | FIXED | `functions/lang_url` replaces `relLangURL` in the footer, navbar and overridden HugoBlox blocks; no `/bn/` link points at a missing page. |
 | H2 | FIXED | Publications list lab members by profile slug (`data/author_aliases.yaml`); old `/authors/<name>/` URLs redirect to the profiles. |
 | H3 | FIXED | Co-author spellings normalised through the same table; "SM Choudhury" → `me`. Grants g-02/g-03 also used the owner's name, now `me`. |
@@ -62,12 +62,15 @@ Resolved by the owner (2026-10-04):
   plans an open-source replacement.
 - **Google Scholar keys:** the owner corrected C028's key (`WbkHhVStYXYC`).
   Every key in `papers.bib` was then checked against `cv/PoPCites.csv`: no
-  duplicates; 55 titles match their Scholar record.
+  duplicates. The owner also corrected C014's key (`K3LRdlH-MEoC`); all 57
+  keyed entries now match their Scholar record.
+- **CV PDFs** rebuilt (`cv\latexrun.ps1 -SkipCitations`, published by
+  `make-all.ps1`) after the missing MiKTeX package `lualatex-math` (needed
+  by `unicode-math` under LuaLaTeX) was installed. Both PDFs carry the C3,
+  M12, J014 and J019 corrections.
 
 Still open:
-1. **CV PDFs.** Not rebuilt. `unicode-math` is now installed; the build stops at the Libertinus fonts (`LibertinusSerif-Regular.otf` not found; MiKTeX package `libertinus-fonts`). After installing, run `.\make-all.ps1 -Cv -CvCompileOnly` so the CVs pick up C3, M12, J014 and J019.
-2. **C014's Scholar key** (`Se3iqnhoufwC`) is not in the current `PoPCites.csv` export (perhaps merged on Scholar), so its citation count is not updated.
-3. **GitHub Pages "Enforce HTTPS"** is off (`https_enforced: false`).
+1. **GitHub Pages "Enforce HTTPS"** is off (`https_enforced: false`).
 
 ## Optional follow-up
 
