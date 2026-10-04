@@ -4,8 +4,19 @@
   {{ range $index, $term := (.GetTerms "authors") }}
     {{- $slug := $term.Data.Term | urlize -}}
     {{- $profile := partial "functions/get_author_profile" (dict "slug" $slug) -}}
-    {{- $displayRaw := $profile.title | default $term.LinkTitle -}}
-{{- $display := $displayRaw | title -}}
+    {{/* A person with a profile (data/authors/<slug>.yaml) shows its name. Anyone
+         else shows the name as written in front matter, which
+         data/author_aliases.yaml keeps canonical. get_author_profile's fallback
+         is the humanised slug ("Alexander v kildishev"); title-casing that is
+         what printed "Alexander v Kildishev" (site audit L6). */}}
+    {{- $display := $term.LinkTitle -}}
+    {{- if $profile.has_data -}}
+      {{- $display = $profile.title -}}
+    {{- else -}}
+      {{- with index $.Params.authors $index -}}
+        {{- if eq ((. | strings.TrimSpace) | urlize) $slug -}}{{ $display = . | strings.TrimSpace }}{{- end -}}
+      {{- end -}}
+    {{- end -}}
 
 {{/* Remove leading "Dr." only for your own author page */}}
 {{- if eq $slug "me" -}}

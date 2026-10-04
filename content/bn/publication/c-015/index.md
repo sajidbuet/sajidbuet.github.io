@@ -5,7 +5,7 @@ authors:
 - Vladimir A. Zenin
 - Soham Saha
 - Vladimir M. Shalaev
-- Sergei Bozhevolnyi
+- Sergey I. Bozhevolnyi
 - Alexandra Boltasseva
 date: '2017-01-01'
 publishDate: '2026-05-02T15:32:10.515148Z'

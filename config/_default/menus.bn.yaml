@@ -1,28 +1,34 @@
+# Bengali navigation. Same structure as menus.yaml (the English menu).
+#
+# URLs are site paths. The navbar (layouts/_partials/components/headers/
+# navbar.html, via functions/lang_url) links to the Bengali page when one
+# exists (/bn/research/, /bn/publication/, /bn/authors/) and otherwise to the
+# English page (/projects/, /teaching/, /resources/), so no item points at a
+# /bn/ page that does not exist. The pre-redesign one-page anchors
+# (/bn/#about, /bn/#teaching, ...) are gone with that homepage layout.
+
 main:
   - name: হোম
-    url: '/bn/#about'
+    url: '/'
     weight: 10
   - name: গবেষণা
-    url: '/bn/#research'
+    url: '/research/'
     weight: 20
-  - name: অর্থায়ন
-    url: '/bn/#projects'
-    weight: 25
-  - name: দল
-    url: '/bn/#team'
-    weight: 30
   - name: প্রকাশনা
-    url: '/bn/#publication'
+    url: '/publication/'
+    weight: 30
+  - name: প্রকল্প
+    url: '/projects/'
     weight: 40
   - name: পাঠদান
-    url: '/bn/#teaching'
-    weight: 45
-  - name: সংবাদ
-    url: '/bn/#news'
+    url: '/teaching/'
     weight: 50
-  - name: আউটরিচ
-    url: '/#outreach'
+  - name: দল
+    url: '/authors/'
     weight: 60
+  - name: রিসোর্স
+    url: '/resources/'
+    weight: 70
   - name: যোগাযোগ
     url: '/#contact'
-    weight: 70
+    weight: 80

@@ -11,7 +11,7 @@ hugoblox:
 
   # ────────────────────────────────────────────────────────────────────────────
   # IDENTITY
-  # Site-level branding (for people/profiles, use the author system in content/authors/)
+  # Site-level branding (for people/profiles, use the author system in content/en/authors/)
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
@@ -23,7 +23,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "Smart and Advanced Junctions of Intelligent Devices. Research Lab of Dr. Sajid Muhaimin Choudhury"
+    description: "Smart & Advanced Junction of Intelligent Devices. Research Lab of Dr. Sajid Muhaimin Choudhury"
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "GetResearchDev"         # Twitter/X handle for Twitter Cards (without @)

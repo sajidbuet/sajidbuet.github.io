@@ -38,14 +38,8 @@
 {{ with $superuser_name }}<meta name="author" content="{{ . }}" />{{ end }}
 
   {{/* Generate page description. */}}
-  {{ $desc := "" }}
-  {{ $desc = partial "functions/get_summary" . }}
-  {{ if site.Params.hugoblox.identity.description | and (not $desc) }}
-    {{ $desc = site.Params.hugoblox.identity.description }}
-  {{ end }}
-  {{ if not $desc }}
-    {{ $desc = $superuser_role }}
-  {{ end }}
+  {{/* Fallback order and length limit: functions/page_description. */}}
+  {{ $desc := partial "functions/page_description" . }}
   <meta name="description" content="{{ $desc | plainify }}" />
 
   {{ range .Translations }}
@@ -227,6 +221,13 @@
     {{ $title = replace . "{brand}" $branding.site_title }}
   {{ else }}
     {{ $title = .Title | default $branding.site_title }}
+    {{/* Author term pages without a content file get a title-cased term key
+         from Hugo ("Alexander v. Kildishev", "0421062341-Purbayan-Das"). Use
+         the profile name, or the name as written on the papers. */}}
+    {{ if and (eq .Kind "term") (eq .Data.Singular "author") (not .File) }}
+      {{ $termProfile := partial "functions/get_author_profile" (dict "slug" (.Data.Term | urlize)) }}
+      {{ $title = cond $termProfile.has_data $termProfile.title (partial "functions/author_term_name" .) }}
+    {{ end }}
     {{ if ne $title $branding.site_title }}{{ $title = printf "%s | %s" $title $branding.site_title }}{{ end }}
   {{ end }}
 

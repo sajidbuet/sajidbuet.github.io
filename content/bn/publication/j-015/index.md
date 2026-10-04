@@ -2,7 +2,7 @@
 title: T Grating on Nano-Cavity Array based Refractive Index Sensor
 authors:
 - Yasir Fatha Abed
-- Md Asif Hossain Bhuiyan
+- a-0422062304-asif-hossain-bhuiyan
 - me
 date: '2021-01-01'
 publishDate: '2026-05-02T15:32:11.093364Z'

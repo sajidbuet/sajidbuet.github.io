@@ -92,10 +92,15 @@
           {{ range $i, $author := . }}
             {{ $authorTrim := $author | strings.TrimSpace }}
             {{ if gt $i 0 }}<span class="mx-2 text-slate-400 dark:text-slate-600">·</span>{{ end }}
+            {{/* Lab members are listed by profile slug (data/author_aliases.yaml):
+                 show their profile name and link to the profile. */}}
+            {{ $profile := partial "functions/get_author_profile" (dict "slug" $authorTrim) }}
             {{ if eq $authorTrim "me" }}
               <a href="{{ "/authors/me" | relLangURL }}" class="font-semibold pub-accent hover:opacity-80">
                 Sajid Muhaimin Choudhury
               </a>
+            {{ else if $profile.has_data }}
+              <a href="{{ printf "/authors/%s/" $profile.slug | relLangURL }}" class="hover:opacity-80">{{ $profile.title }}</a>
             {{ else }}
               <span>{{ $authorTrim }}</span>
             {{ end }}

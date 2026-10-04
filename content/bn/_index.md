@@ -15,7 +15,7 @@ sections:
       title: |
         SAJID Lab 
       text: |
-         আমরা **S**mart & **A**dvanced **J**unctions of **I**ntelligent **D**evices (SAJID) ধারণার অধীনে **কোয়ান্টাম**, **ফোটোনিক্স**, **অ্যান্টেনা**, **কম্পিউটিং ও কৃত্রিম বুদ্ধিমত্তা**, **এম্বেডেড সিস্টেম**, এবং **নবায়নযোগ্য শক্তি** বিষয়ক গবেষণা পরিচালনা করি। হাতে-কলমে উদ্ভাবন ও সমন্বিত গবেষণার মাধ্যমে আমরা উন্নত প্রযুক্তি উন্নয়ন এবং নতুন প্রজন্মের গবেষক ও প্রকৌশলী তৈরিতে প্রতিশ্রুতিবদ্ধ। এই গবেষণা কার্যক্রম পরিচালিত হচ্ছে বুয়েটের তড়িৎ ও ইলেকট্রনিক প্রকৌশল (EEE) বিভাগের ড. সাজিদ মুহাইমিন চৌধুরীর নেতৃত্বে।
+         আমরা **S**mart & **A**dvanced **J**unction of **I**ntelligent **D**evices (SAJID) ধারণার অধীনে **কোয়ান্টাম**, **ফোটোনিক্স**, **অ্যান্টেনা**, **কম্পিউটিং ও কৃত্রিম বুদ্ধিমত্তা**, **এম্বেডেড সিস্টেম**, এবং **নবায়নযোগ্য শক্তি** বিষয়ক গবেষণা পরিচালনা করি। হাতে-কলমে উদ্ভাবন ও সমন্বিত গবেষণার মাধ্যমে আমরা উন্নত প্রযুক্তি উন্নয়ন এবং নতুন প্রজন্মের গবেষক ও প্রকৌশলী তৈরিতে প্রতিশ্রুতিবদ্ধ। এই গবেষণা কার্যক্রম পরিচালিত হচ্ছে বুয়েটের তড়িৎ ও ইলেকট্রনিক প্রকৌশল (EEE) বিভাগের ড. সাজিদ মুহাইমিন চৌধুরীর নেতৃত্বে।
       primary_action:
         text:  আমাদের টিম
         url: '#team'
@@ -53,34 +53,9 @@ sections:
 
 
 
-  - block: stats
-    content:
-      items:
-        - statistic: "50+"
-          description: পিয়ার-রিভিউড প্রকাশনা
-          sub_metric: ফোটোনিক্স, ন্যানোপ্রযুক্তি ও এম্বেডেড সিস্টেম বিষয়ক জার্নাল ও আন্তর্জাতিক সম্মেলন
-          icon: hero/document-text
-
-        - statistic: "1298+"
-          description: একাডেমিক উদ্ধৃতি
-          sub_metric: "h-index: 13 (Google Scholar)"
-          icon: hero/chart-bar
-
-        - statistic: "7"
-          description: তত্ত্বাবধানে সম্পন্ন এমএসসি গবেষণা
-          sub_metric: ফোটোনিক্স, মেটাসারফেস, কোয়ান্টাম ডিভাইস ও শক্তি ব্যবস্থা
-          icon: hero/user-group
-
-        - statistic: "6"
-          description: মূল গবেষণা ক্ষেত্র
-          sub_metric: কোয়ান্টাম, ফোটোনিক্স, অ্যান্টেনা, কম্পিউটিং, এম্বেডেড সিস্টেম, নবায়নযোগ্য শক্তি (Q-PACERS)
-          icon: hero/beaker
-    design:
-      layout: cards
-      # Section background color (CSS class)
-      css_class: "bg-gradient-to-b from-primary-50 to-white dark:from-primary-900/20 dark:to-gray-800"
-      spacing:
-        padding: ["3rem", 0, "3rem", 0]
+  # The stats block (publication count, citations, h-index, ...) was removed
+  # to match the English homepage: hand-typed figures went stale (site audit
+  # 2026-10-04, H5). Current figures are on the CV and the profile page.
 
   - block: research-areas
     id: research
@@ -267,46 +242,35 @@ sections:
       view: card
       columns: 1
 
+  # Same organisations as the English homepage partners block
+  # (English _index.md). Do not add organisations here that are not there.
   - block: logos
+    id: partners
     content:
-      title: Collaborators & Partners
-      subtitle: Leading the way together
-      text: We work with top universities, research institutes, and industry leaders to advance scientific discovery
+      title: সহযোগী প্রতিষ্ঠান
+      subtitle: ''
+      text: ''
       logos:
-        - name: MIT
-          image: partners/placeholder-logo.svg
-          url: https://mit.edu
+        - name: BUET
+          image: partners/BUET_LOGO.svg
+          url: https://eee.buet.ac.bd
           external: true
-          description: Massachusetts Institute of Technology
-        - name: Stanford University
-          image: partners/placeholder-logo.svg
-          url: https://stanford.edu
+          description: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট)
+        - name: Purdue University
+          image: partners/Purdue_University.svg
+          url: https://www.purdue.edu
           external: true
-          description: Stanford Research Collaboration
-        - name: Google Research
-          image: partners/placeholder-logo.svg
-          url: https://research.google
+          description: Purdue University
+        - name: BRAC University
+          image: partners/BRAC_University.svg
+          url: https://www.bracu.ac.bd
           external: true
-          description: AI & Machine Learning Partnership
-        - name: National Science Foundation
-          image: partners/placeholder-logo.svg
-          url: https://nsf.gov
+          description: ব্র্যাক বিশ্ববিদ্যালয়
+        - name: United International University
+          image: partners/UIU.svg
+          url: https://www.uiu.ac.bd
           external: true
-          description: Research Funding Partner
-        - name: Microsoft Research
-          image: partners/placeholder-logo.svg
-          url: https://www.microsoft.com/research
-          external: true
-          description: Computing Research Collaboration
-        - name: NIH
-          image: partners/placeholder-logo.svg
-          url: https://nih.gov
-          external: true
-          description: National Institutes of Health
-      cta:
-        text: Become a Partner
-        url: /#contact
-        icon: hero/user-plus
+          description: ইউনাইটেড ইন্টারন্যাশনাল ইউনিভার্সিটি
     design:
       display_mode: grid
       show_pattern: false
@@ -324,7 +288,7 @@ sections:
       address:
         lines:
           - ড. সাজিদ মুহাইমিন চৌধুরী
-          - সহযোগী অধ্যাপক
+          - অধ্যাপক
           - তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ (EEE)
           - বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট)
           - ইইই ২২২, ইসিই ভবন

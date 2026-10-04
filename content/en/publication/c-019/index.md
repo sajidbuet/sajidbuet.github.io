@@ -1,0 +1,19 @@
+---
+title: Design and Performance Analysis of a c-Si Thin-Film Solar Cell Using Plasmonic
+  Ag Nanostructures
+authors:
+- a-0422062353-soikot
+- me
+date: '2023-01-01'
+publishDate: '2026-09-01T16:20:40.057452Z'
+publication_types:
+- paper-conference
+publication: '*2023 IEEE International Conference on Telecommunications and Photonics
+  (ICTP)*'
+hugoblox:
+  ids:
+    doi: 10.1109/ICTP60248.2023.10490886
+tags:
+- photonics
+- renewable
+---

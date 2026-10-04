@@ -100,3 +100,26 @@ docs/redesign/screenshots/**/*.jpg
 docs/redesign/screenshots/**/*.jpeg
 # ...but keep the written review notes that live alongside them.
 !docs/redesign/screenshots/**/*.md
+
+# ============================================================================
+# Sync / backup leftovers (site audit 2026-10-04, H7)
+# ============================================================================
+
+# File-sync conflict copies named after the machine that made them. Two of
+# these (content/projects/_index-SAJID-PC.md, ...) were published as pages.
+*-SAJID-PC.*
+*-Sajid-Asus-Laptop.*
+# Disabled copies of templates/pages kept by renaming the extension.
+*.md1
+*.html1
+# Office lock/temp files and hand-made backups of the roster workbook.
+~$*
+*.tmp
+*-BAK.xlsx
+
+# Microsoft Edge WebDriver (18.5 MB). No script in the repository uses it; it
+# is a per-machine download matching the installed Edge version.
+cv/msedgedriver.exe
+
+# Python bytecode (_pythonscripts tests and tools)
+__pycache__/

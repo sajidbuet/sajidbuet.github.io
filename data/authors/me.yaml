@@ -46,10 +46,13 @@ education:
     end: "2019-08-05"
   - degree: MSc Engg in EEE
     institution:  Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
-    end: "2011-11-11"
+    end: "2013-01-01"   # CV: Aug 2011 -- 2013 (year only)
   - degree: BSc Engg in EEE
     institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
-    end: "2009-11-11"
+    end: "2010-08-01"   # CV: Dec 2004 -- Aug 2010
+# Dates follow cv/cv-body.tex (authoritative). The CV gives months only:
+# day 01 is a placeholder (the profile page shows "Mon YYYY" for experience
+# and the year for education). 2025-07-21 is the exact date already recorded.
 experience:
   - title: Professor
     department: Department of Electrical and Electronic Engineering (EEE)
@@ -59,14 +62,14 @@ experience:
   - title: Associate Professor
     department: Department of Electrical and Electronic Engineering (EEE)
     institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
-    start: "2022-06-21"
+    start: "2022-07-01"
     end: "2025-07-21"
     description: 
   - title: Assistant Professor
     department: Department of Electrical and Electronic Engineering (EEE)
     institution: Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh
-    start: "2019-01-01"
-    end: "2019-12-31"
+    start: "2013-06-01"
+    end: "2022-07-01"
     description: 
 highlight_name: true
 website: ""

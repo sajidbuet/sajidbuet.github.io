@@ -5,7 +5,7 @@ For every roster row (keyed by the `foldername` column) this writes:
 
   data/authors/<slug>.yaml                 author profile (hugoblox/author/v1)
   assets/media/authors/<slug>.<ext>        avatar, when a photo is found in --img-dir
-  content/authors/<foldername>/_index.md   term page; its Markdown body is shown
+  content/en/authors/<foldername>/_index.md   term page; its Markdown body is shown
                                            on the person's profile page
 
 <slug> is the lower-cased, hyphenated foldername — the key HugoBlox looks up
@@ -18,7 +18,7 @@ Usage
 -----
     python sync_authors.py                      # all-members.xlsx next to this script
     python sync_authors.py roster.xlsx --dry    # preview, write nothing
-    python sync_authors.py --only data          # skip content/authors/*/_index.md
+    python sync_authors.py --only data          # skip content/en/authors/*/_index.md
 
 Required columns: foldername, name.  Recognised optional columns:
   ApplicationID, Roll, Research Division, BSc Instituton, role, user_groups,
@@ -35,6 +35,7 @@ import filecmp
 import re
 import shutil
 import sys
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -50,7 +51,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")
 RESERVED_SLUGS = {"admin", "me"}             # hand-maintained, never generated
-CONTENT_NON_MEMBER = {"admin", "me", "alumni"}  # content/authors subfolders that are not roster rows
+CONTENT_NON_MEMBER = {"admin", "me", "alumni"}  # content/en/authors subfolders that are not roster rows
 PLACEHOLDERS = {"-", "–", "—", "n/a", "na", "nan", "none"}
 
 # (column, icon) pairs for `links`; icon names follow data/authors/me.yaml.
@@ -114,6 +115,34 @@ def normalize_col(name: Any) -> str:
 
 def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", str(text).strip().lower()).strip("-")
+
+
+def hugo_urlize(text: str) -> str:
+    """Approximate Hugo's `urlize` for a person's name: drop accents,
+    lower-case, spaces -> '-', keep [a-z0-9._-]."""
+    text = unicodedata.normalize("NFD", str(text).strip())
+    text = "".join(c for c in text if not unicodedata.combining(c)).lower()
+    return re.sub(r"[^a-z0-9._-]", "", re.sub(r"\s+", "-", text))
+
+
+def load_alias_urls(path: Path) -> dict[str, list[str]]:
+    """{profile slug: ["/authors/<spelling>/", ...]} from data/author_aliases.yaml.
+
+    Publications used to list students by printed name, which created a second,
+    empty /authors/<name>/ page. The importer now writes the profile slug
+    instead; these aliases keep the old URLs working."""
+    if not path.is_file():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    out: dict[str, list[str]] = {}
+    for canonical, spellings in data.items():
+        if str(canonical).startswith("_"):              # e.g. _not_mapped
+            continue
+        urls = sorted({f"/authors/{hugo_urlize(s)}/" for s in spellings or []}
+                      - {f"/authors/{canonical}/"})
+        if urls:
+            out[str(canonical)] = urls
+    return out
 
 
 def split_list(value: Any) -> list[str]:
@@ -237,12 +266,13 @@ def build_profile(m: Member, org: str) -> dict[str, Any]:
     })
 
 
-def build_page(m: Member, org: str) -> str:
-    """content/authors/<foldername>/_index.md — front matter + "Information" list."""
+def build_page(m: Member, org: str, aliases: list[str] | None = None) -> str:
+    """content/en/authors/<foldername>/_index.md — front matter + "Information" list."""
     given, family = m.given_family
     front = prune({
         "title": m.name,
         "slug": m.slug,
+        "aliases": aliases or [],
         "first_name": given,
         "last_name": family,
         "authors": [m.folder],
@@ -382,7 +412,9 @@ def get_args() -> argparse.Namespace:
     p.add_argument("--img-dir", type=Path, default=SCRIPT_DIR / "photos", help="Source photos")
     p.add_argument("--data-dir", type=Path, default=REPO_ROOT / "data" / "authors")
     p.add_argument("--media-dir", type=Path, default=REPO_ROOT / "assets" / "media" / "authors")
-    p.add_argument("--pages-dir", type=Path, default=REPO_ROOT / "content" / "authors")
+    p.add_argument("--pages-dir", type=Path, default=REPO_ROOT / "content" / "en" / "authors")
+    p.add_argument("--alias-file", type=Path, default=REPO_ROOT / "data" / "author_aliases.yaml",
+                   help="Publication-name spellings per profile; written as `aliases` on its page")
     p.add_argument("--org", default="Dept. of EEE, BUET", help="Affiliation when the row has none")
     p.add_argument("--default-avatar", type=Path, help="Fallback image for members with no avatar at all")
     p.add_argument("--only", choices=("data", "pages"), help="Write only data/authors (+avatars) or only content pages")
@@ -406,13 +438,14 @@ def main() -> int:
     members = load_roster(excel, sheet)
     cprint(f"👥 {len(members)} members in {excel.name}{' (dry run)' if args.dry else ''}", CYAN, bold=True)
 
+    alias_urls = load_alias_urls(args.alias_file)
     sync = Sync(args.dry)
     for m in members:
         if args.only != "pages":
             sync.write_text(args.data_dir / f"{m.slug}.yaml", dump_yaml(build_profile(m, args.org)))
             sync.sync_avatar(m, args.img_dir, args.media_dir, args.default_avatar)
         if args.only != "data":
-            sync.write_text(args.pages_dir / m.folder / "_index.md", build_page(m, args.org))
+            sync.write_text(args.pages_dir / m.folder / "_index.md", build_page(m, args.org, alias_urls.get(m.slug)))
 
     report_orphans(members, args.data_dir, args.pages_dir)
     c = sync.counts

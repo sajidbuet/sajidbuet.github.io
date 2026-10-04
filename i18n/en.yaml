@@ -289,3 +289,128 @@
 
 - id: year  
   translation: Year
+
+# Keys used by this site's own templates (site audit 2026-10-04, M9).
+# English values are the defaults the templates already fell back to.
+
+- id: skip_to_main
+  translation: "Skip to main content"
+
+- id: nav_primary
+  translation: "Primary"
+
+- id: nav_toggle
+  translation: "Open menu"
+
+- id: nav_toggle_close
+  translation: "Close menu"
+
+- id: appearance
+  translation: "Appearance"
+
+- id: appearance_toggle
+  translation: "Toggle light and dark appearance"
+
+- id: breadcrumb
+  translation: "Breadcrumb"
+
+- id: footer_links
+  translation: "Footer"
+
+- id: toc
+  translation: "On this page"
+
+- id: teaching
+  translation: "Teaching"
+
+- id: current_courses
+  translation: "Current & Recent Courses"
+
+- id: past_offerings
+  translation: "past offerings"
+
+- id: offered
+  translation: "Offered"
+
+- id: archived_offering
+  translation: "Archived offering"
+
+- id: archived_course_note
+  translation: "This page records a past offering and is kept as it was delivered. Current courses are listed on the Teaching page."
+
+- id: notes_pending
+  translation: "Nothing is published here yet."
+
+- id: resources
+  translation: "Resources"
+
+- id: additional_resources
+  translation: "Additional resources"
+
+- id: view_all
+  translation: "View all"
+
+- id: project
+  translation: "project"
+
+- id: projects_lower
+  translation: "projects"
+
+- id: technologies
+  translation: "Technologies"
+
+- id: collaborators
+  translation: "Collaborators"
+
+- id: related_research
+  translation: "Related research"
+
+- id: code
+  translation: "Code"
+
+- id: repository
+  translation: "Repository"
+
+- id: documentation
+  translation: "Documentation"
+
+- id: download
+  translation: "Download"
+
+- id: license
+  translation: "License"
+
+- id: opens_new_tab
+  translation: "opens in a new tab"
+
+- id: funding_agency
+  translation: "Agency"
+
+- id: role
+  translation: "Role"
+
+- id: period
+  translation: "Period"
+
+- id: award
+  translation: "Award"
+
+- id: scheme
+  translation: "Scheme"
+
+# Meta descriptions (layouts/_partials/functions/page_description.html).
+
+- id: desc_lab
+  translation: "SAJID Lab, Department of EEE, BUET"
+
+- id: desc_authors
+  translation: "Authors:"
+
+- id: desc_coauthor
+  translation: "%s: publications with %s (%d)."
+
+- id: desc_term
+  translation: "%s — %d pages on the website of %s."
+
+- id: desc_course
+  translation: "Course page"

@@ -2,7 +2,7 @@
 
      IMPORTANT, and the reason this block exists at all:
 
-     `content/projects/` currently holds RESEARCH GRANTS (g-01..g-03), not
+     `content/en/projects/` currently holds RESEARCH GRANTS (g-01..g-03), not
      software projects. The real Projects portfolio is created in Phase 4,
      when Funding migrates to /research/funding/ and the `projects`
      namespace is freed.
@@ -28,7 +28,7 @@
 {{ $count := $block.content.count | default 3 }}
 
 {{/* Real portfolio items only: a page that declares `project_category`.
-     Grant bundles in content/projects/ do not, so they can never match. */}}
+     Grant bundles in content/en/projects/ do not, so they can never match. */}}
 {{ $portfolio := where site.RegularPages "Params.project_category" "!=" nil }}
 {{ $portfolio = where $portfolio "Section" "projects" }}
 {{ $featured := where $portfolio "Params.featured" true }}

@@ -4,7 +4,9 @@
 ## Docs: https://gohugo.io/hugo-modules/
 ############################
 
+# The site deploys to GitHub Pages (.github/workflows/publish.yaml). The
+# HugoBlox Netlify module (_headers/_redirects outputs, which Pages ignores)
+# was removed in the 2026-10-04 audit remediation (M7).
 imports:
-  - path: github.com/HugoBlox/kit/modules/integrations/netlify
   - path: github.com/HugoBlox/kit/modules/blox
   - path: github.com/HugoBlox/kit/modules/slides

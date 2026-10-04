@@ -46,7 +46,7 @@
     </p>
 
     <h2 class="mt-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
-      <a href="/authors/me">{{ $name }}</a>
+      <a href="{{ partial "functions/lang_url" "/authors/me/" }}">{{ $name }}</a>
     </h2>
 
     {{ with $role }}
@@ -69,7 +69,7 @@
           {{ $scheme := (urls.Parse $l).Scheme }}
           {{ $target := "" }}
           {{ if not $scheme }}
-            {{ $l = (.url | default .link) | relLangURL }}
+            {{ $l = partial "functions/lang_url" (.url | default .link) }}
             {{ if eq (path.Ext $l) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
           {{ else if in (slice "http" "https" "mailto") $scheme }}
             {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
@@ -114,49 +114,49 @@
         <nav class="mt-5" aria-label="{{ i18n "footer_links" | default "Footer" }}">
             <ul class="space-y-3 text-sm sm:text-base">
               <li>
-                <a href="{{ "/resources/academic/lor/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/resources/academic/lor/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>Letter of Recommendation</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/resources/academic/scientific-typing/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/resources/academic/scientific-typing/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>Scientific Symbols Cheatsheet</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/resources/blog/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/resources/blog/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>Writing &amp; Tutorials</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/publication/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/publication/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>List of All Publications</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/teaching/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/teaching/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>List of Courses</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/resources/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/resources/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>All Resources</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>
                 </a>
               </li>
               <li>
-                <a href="{{ "/news/" | relLangURL }}"
+                <a href="{{ partial "functions/lang_url" "/news/" }}"
                    class="group flex items-start justify-between gap-3 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-primary-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-primary-400">
                   <span>News Archive</span>
                   <span aria-hidden="true" class="text-slate-400 transition group-hover:translate-x-0.5">→</span>

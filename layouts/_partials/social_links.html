@@ -1,0 +1,25 @@
+{{/* Local override of HugoBlox layouts/_partials/social_links.html (blox v0.11.0).
+     Only change: links without a scheme go through functions/lang_url instead of
+     relLangURL, so the Bengali site links to English-only pages at their real
+     URL instead of a non-existent /bn/ copy (site audit 2026-10-04, H1). */}}
+{{ if .Params.profiles }}
+<div class="flex flex-wrap text-neutral-500 dark:text-neutral-300">
+  {{ range $links := .Params.profiles }}
+    {{ $link := .url }}
+    {{ $scheme := (urls.Parse $link).Scheme }}
+    {{ $target := "" }}
+    {{ if not $scheme }}
+      {{ $link = partial "functions/lang_url" .url }}
+    {{ else if in (slice "http" "https") $scheme }}
+      {{ $target = "target=\"_blank\" rel=\"noopener\" rel=\"me noopener noreferrer\"" }}
+    {{ end }}
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="{{ $link | safeURL }}"
+      {{ $target | safeHTMLAttr }}
+      aria-label="{{ .icon | title }}"
+    >{{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"height: 1em;\"") }}</a>
+  {{ end }}
+</div>
+{{ end }}

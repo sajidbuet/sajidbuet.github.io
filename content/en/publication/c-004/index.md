@@ -1,0 +1,17 @@
+---
+title: A Novel Approach for Changing Bandwidth of FSS Filter Using Gradual Circumferential
+  Variation of Loaded Elements
+authors:
+- me
+- Mohammad Asif Zaman
+- Md. Gaffar
+- Md. Abdul Matin
+date: '2010-01-01'
+publishDate: '2026-09-01T16:20:39.853082Z'
+publication_types:
+- paper-conference
+publication: '*Proceedings of Progress in Electromagnetic Research Symposium PIERS,
+  Cambridge, USA*'
+tags:
+- antenna
+---

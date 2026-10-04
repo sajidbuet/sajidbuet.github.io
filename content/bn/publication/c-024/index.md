@@ -2,7 +2,7 @@
 title: DFT Analysis of Strain Effect in Bilayer 2D-SiC on Electrical, Optical, Phonon,
   and Thermodynamic Properties
 authors:
-- Md Mahfuzul Haque
+- a-0421062305-md-mahfuzul-haque
 - me
 date: '2024-01-01'
 publishDate: '2026-05-02T15:32:10.678725Z'

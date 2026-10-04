@@ -134,7 +134,7 @@
                   {{ $scheme := (urls.Parse $l).Scheme }}
                   {{ $target := "" }}
                   {{ if not $scheme }}
-                    {{ $l = (.url | default .link) | relLangURL }}
+                    {{ $l = partial "functions/lang_url" (.url | default .link) }}
                     {{ if eq (path.Ext $l) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                   {{ else if in (slice "http" "https") $scheme }}
                     {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
@@ -213,7 +213,7 @@
                 {{ $scheme := (urls.Parse $l).Scheme }}
                 {{ $target := "" }}
                 {{ if not $scheme }}
-                  {{ $l = (.url | default .link) | relLangURL }}
+                  {{ $l = partial "functions/lang_url" (.url | default .link) }}
                   {{ if eq (path.Ext $l) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                 {{ else if in (slice "http" "https") $scheme }}
                   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}

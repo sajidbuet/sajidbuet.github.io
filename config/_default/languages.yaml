@@ -1,27 +1,24 @@
-# Languages
-#   Create a section for each of your site's languages.
+# Languages — the single source of language configuration for this site.
 #   Documentation: https://docs.hugoblox.com/reference/language/
+#
+# Each language has its own content root. The two roots must not be nested:
+# when English used `content` and Bengali `content/bn`, every Bengali file was
+# also rendered as an English page at the same /bn/... path ("Duplicate target
+# paths", site audit 2026-10-04, C2).
+#
+# English is the default language and is served from the site root
+# (defaultContentLanguageInSubdir: false in hugo.yaml), so content/en/foo/
+# publishes at /foo/. Bengali publishes under /bn/.
 
-# Default language
 en:
   languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  contentDir: content
+  languageName: English
+  weight: 1
+  contentDir: content/en
+
 bn:
-  languageCode: bn
+  languageCode: bn-BD
+  languageName: বাংলা
+  weight: 2
   contentDir: content/bn
-  title: সাজিদ ল্যাব 
-  params:
-    description:   ""
-# Uncomment the lines below to configure your website in a second language.
-#zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1
+  title: সাজিদ ল্যাব

@@ -3,7 +3,7 @@ title: Custom Gold-Patterned Rewritable Optical Disc based Plasmonic Sensor for 
   Hemoglobin Detection
 authors:
 - Himaddri Roy
-- Ehsanul Karim
+- a-0422062302-md-ehsanul-karim
 - Sujoy Mondal
 - me
 date: '2022-01-01'

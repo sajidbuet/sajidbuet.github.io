@@ -7,7 +7,7 @@ authors:
 - Aveek Dutta
 - me
 - Alexander V. Kildishev
-- Andrea Alu
+- Andrea Alù
 - Alexandra Boltasseva
 date: '2014-01-01'
 publishDate: '2026-05-02T15:32:10.429306Z'

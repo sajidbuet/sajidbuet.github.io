@@ -3,8 +3,8 @@ slug: me
 is_owner: true
 name:
   display: ড. সাজিদ মুহাইমিন চৌধুরী
-role: সহযোগী অধ্যাপক
-bio: বুয়েটের বৈদ্যুতিক ও ইলেকট্রনিক কৌশল বিভাগে কর্মরত সহযোগী অধ্যাপক। তাঁর গবেষণার ক্ষেত্রের মধ্যে রয়েছে ফোটনিক কোয়ান্টাম কম্পিউটিং, মেটাসারফেসভিত্তিক ফ্ল্যাট অপটিক্স, ফেজ-চেঞ্জ ফোটনিক ডিভাইস এবং এমবেডেড সিস্টেম ডিজাইন।
+role: অধ্যাপক
+bio: বুয়েটের বৈদ্যুতিক ও ইলেকট্রনিক কৌশল বিভাগে কর্মরত অধ্যাপক। তাঁর গবেষণার ক্ষেত্রের মধ্যে রয়েছে ফোটনিক কোয়ান্টাম কম্পিউটিং, মেটাসারফেসভিত্তিক ফ্ল্যাট অপটিক্স, ফেজ-চেঞ্জ ফোটনিক ডিভাইস এবং এমবেডেড সিস্টেম ডিজাইন।
 
 affiliations:
   - name: বৈদ্যুতিক ও ইলেকট্রনিক কৌশল বিভাগ, বুয়েট
@@ -40,22 +40,32 @@ education:
     end: "2019-08-05"
   - degree: এমএসসি ইঞ্জিনিয়ারিং, ইইই
     institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
-    end: "2011-11-11"
+    end: "2013-01-01"   # CV: Aug 2011 -- 2013 (year only)
   - degree: বিএসসি ইঞ্জিনিয়ারিং, ইইই
     institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
-    end: "2009-11-11"
+    end: "2010-08-01"   # CV: Dec 2004 -- Aug 2010
 
+# Bengali profile (layouts/authors/term.html reads data/authors/bn/<slug>).
+# Mirrors data/authors/me.yaml; keep the two in step.
+# Dates follow cv/cv-body.tex (authoritative). The CV gives months only:
+# day 01 is a placeholder (the profile page shows "Mon YYYY" for experience
+# and the year for education). 2025-07-21 is the exact date already recorded.
 experience:
+  - title: অধ্যাপক
+    department: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ (ইইই)
+    institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
+    start: "2025-07-21"
   - title: সহযোগী অধ্যাপক
     department: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ (ইইই)
     institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
-    start: "2022-06-21"
+    start: "2022-07-01"
+    end: "2025-07-21"
     description: 
   - title: সহকারী অধ্যাপক
     department: তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ (ইইই)
     institution: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট), ঢাকা, বাংলাদেশ
-    start: "2019-01-01"
-    end: "2019-12-31"
+    start: "2013-06-01"
+    end: "2022-07-01"
     description: 
 
 highlight_name: true

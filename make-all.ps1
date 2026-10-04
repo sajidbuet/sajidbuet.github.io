@@ -1,14 +1,14 @@
-﻿################################################################################
+################################################################################
 # 🛠️  FULL CONTENT TOOLCHAIN – SAJID Lab (HugoBlox)
 # ----------------------------------------------------------------------------
 # Regenerates the content that is derived from other sources, then (optionally)
 # builds the site locally. Deployment itself is done by GitHub Actions
 # (.github/workflows/publish.yaml) on every push to main.
 #
-#   1. CV        cv\dsmc-cv.pdf → content\cv.pdf, cv\dsmc-dossier.pdf →
-#                content\cv-dossier.pdf            (recompile both first with -Cv)
-#   2. Papers    cv\papers.bib  → content\publication + content\bn\publication
-#   3. People    _pythonscripts\all-members.xlsx → data\authors, content\authors
+#   1. CV        cv\dsmc-cv.pdf → content\en\cv.pdf, cv\dsmc-dossier.pdf →
+#                content\en\cv-dossier.pdf         (recompile both first with -Cv)
+#   2. Papers    cv\papers.bib  → content\en\publication + content\bn\publication
+#   3. People    _pythonscripts\all-members.xlsx → data\authors, content\en\authors
 #   4. Build     hugo + pagefind into public\        (only with -Build / -Zip)
 #   5. Zip       public\ → public-<timestamp>.zip    (only with -Zip)
 #
@@ -52,11 +52,11 @@ $PSNativeCommandUseErrorActionPreference = $false   # PS 7.4+: we check exit cod
 # Built by cv\latexrun.ps1 → served at /cv.pdf and /cv-dossier.pdf
 # (linked from data\authors\me.yaml: links + documents).
 $CvPdfs       = [ordered]@{
-    'cv\dsmc-cv.pdf'      = 'content\cv.pdf'           # short CV
-    'cv\dsmc-dossier.pdf' = 'content\cv-dossier.pdf'   # full dossier
+    'cv\dsmc-cv.pdf'      = 'content\en\cv.pdf'        # short CV
+    'cv\dsmc-dossier.pdf' = 'content\en\cv-dossier.pdf' # full dossier
 }
 $BibFile      = 'cv\papers.bib'
-$PubDirs      = 'content\publication', 'content\bn\publication'
+$PubDirs      = 'content\en\publication', 'content\bn\publication'
 $AuthorScript = '_pythonscripts\sync_authors.py'
 $PubScript    = '_pythonscripts\import_publications.py'   # wraps `academic import`, keeps hand edits
 $PagefindPkg  = 'pagefind@1.4.0'          # keep in step with publish.yaml / package.json
@@ -134,8 +134,15 @@ function Invoke-HugoBuild {
     Write-Step '🚀  Step 4: hugo --gc --minify (clean public\) + pagefind'
     Assert-Command 'hugo' 'Install Hugo extended (see HUGO_VERSION in .github/workflows/publish.yaml).'
     Assert-Command 'npx'  'Install Node.js (needed for the pagefind search index).'
-    Invoke-Tool 'hugo' 'hugo' @('--gc', '--minify', '--cleanDestinationDir')
+    # Build output is kept in hugo-build.log (ignored by *.log) so the checker
+    # can fail on "Duplicate target paths", exactly as CI does.
+    $global:LASTEXITCODE = 0
+    $ErrorActionPreference = 'Continue'   # Windows PowerShell 5 turns redirected stderr (WARN lines) into errors
+    & hugo --gc --minify --cleanDestinationDir --printPathWarnings --printI18nWarnings 2>&1 | Tee-Object -FilePath 'hugo-build.log'
+    if ($LASTEXITCODE -ne 0) { throw "hugo failed (exit code $LASTEXITCODE)." }
     Invoke-Tool 'pagefind' 'npx' @('--yes', $PagefindPkg, '--site', 'public')
+    Write-Step '🔎  Step 4b: Site integrity checks (_pythonscripts\check_site.py, same as CI)'
+    Invoke-Tool 'check_site.py' 'python' @('_pythonscripts\check_site.py', '--public', 'public', '--build-log', 'hugo-build.log')
     Write-Host '✅  Site built in public\.' -ForegroundColor $Good
 }
 
@@ -155,7 +162,7 @@ function New-PublicZip {
 # ─── Main ────────────────────────────────────────────────────────────────────
 Write-Host ' HUGO Blox SajidLab'                -ForegroundColor $Info
 Write-Host '🔧  Full Content Toolchain'         -ForegroundColor $Step
-Write-Host '🌐  https://www.sajid.org.bd'       -ForegroundColor $Info
+Write-Host '🌐  https://www.sajid.bd'       -ForegroundColor $Info
 
 Push-Location $PSScriptRoot            # all paths above are relative to the repo root
 try {

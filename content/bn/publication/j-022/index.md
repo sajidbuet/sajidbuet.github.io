@@ -2,8 +2,8 @@
 title: Polarization insensitive electrically reconfigurable meta-lens for the 2 $μ$m
   wavelength
 authors:
-- Md. Asif Hossain Bhuiyan
-- Purbayan Das
+- a-0422062304-asif-hossain-bhuiyan
+- 0421062341-purbayan-das
 - me
 date: '2024-12-01'
 publishDate: '2026-05-02T15:32:11.261942Z'

@@ -3,7 +3,7 @@
 
      Uses the section's own .Pages rather than HugoBlox's `collection` block.
      That block filters with `where $query "Section" "in" $folders`, and the
-     Section of content/research/funding/g-01/ is "research", so a
+     Section of content/en/research/funding/g-01/ is "research", so a
      `folders: [research/funding]` filter silently matched nothing and the
      page rendered an empty list. Filtering here is by the pages that actually
      live in this section. */}}

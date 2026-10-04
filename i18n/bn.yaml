@@ -275,3 +275,80 @@
 
 - id: year  
   translation: সন  
+
+# Keys used by this site's own templates (site audit 2026-10-04, M9).
+# English values are the defaults the templates already fell back to.
+
+- id: skip_to_main
+  translation: "মূল বিষয়বস্তুতে যান"
+
+- id: nav_primary
+  translation: "প্রধান মেনু"
+
+- id: nav_toggle
+  translation: "মেনু খুলুন"
+
+- id: nav_toggle_close
+  translation: "মেনু বন্ধ করুন"
+
+- id: appearance
+  translation: "থিম"
+
+- id: appearance_toggle
+  translation: "লাইট ও ডার্ক মোড পরিবর্তন করুন"
+
+- id: breadcrumb
+  translation: "পৃষ্ঠার অবস্থান"
+
+- id: footer_links
+  translation: "গুরুত্বপূর্ণ লিংক"
+
+- id: btn_doi
+  translation: "DOI"
+
+- id: questions
+  translation: "প্রশ্ন"
+
+- id: faq
+  translation: "সাধারণ জিজ্ঞাসা"
+
+- id: docs
+  translation: "ডকুমেন্টেশন"
+
+- id: block_contact_title
+  translation: "যোগাযোগ"
+
+- id: block_contact_visit_title
+  translation: "আমাদের অফিসে আসুন"
+
+- id: block_contact_office_hours
+  translation: "অফিস সময়"
+
+- id: block_contact_view_on_map
+  translation: "মানচিত্রে দেখুন"
+
+- id: block_contact_connect_title
+  translation: "সংযুক্ত থাকুন"
+
+- id: block_contact_follow_us
+  translation: "আমাদের অনুসরণ করুন"
+
+- id: block_contact_prospective_title
+  translation: "আগ্রহী শিক্ষার্থী ও গবেষক"
+
+# Meta descriptions (layouts/_partials/functions/page_description.html).
+
+- id: desc_lab
+  translation: "সাজিদ ল্যাব, তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ, বুয়েট"
+
+- id: desc_authors
+  translation: "লেখক:"
+
+- id: desc_coauthor
+  translation: "%[1]s: %[2]s-এর সঙ্গে প্রকাশনা (%[3]d)।"
+
+- id: desc_term
+  translation: "%[1]s — %[3]s-এর ওয়েবসাইটে %[2]d টি পৃষ্ঠা।"
+
+- id: desc_course
+  translation: "কোর্স পৃষ্ঠা"

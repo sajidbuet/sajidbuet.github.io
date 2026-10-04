@@ -1,13 +1,17 @@
 name: Deploy website to GitHub Pages
 
 env:
-  HUGO_VERSION: '0.152.1'
+  # Keep in step with the Hugo used locally (make-all.ps1 -Build). 0.157.0 is
+  # the version the 2026-10-04 site audit was verified with.
+  HUGO_VERSION: '0.157.0'
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   push:
     branches:
       - main
+  # Pull requests are built and checked but never deployed.
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -16,7 +20,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -30,10 +34,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: recursive
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -56,6 +56,17 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
+      - name: Setup Python (site checks)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install check dependencies
+        run: python -m pip install pyyaml ruamel.yaml
+
+      - name: Test site tooling (importer, author aliases, checker)
+        run: python -m unittest discover -s _pythonscripts -p "test_*.py" -v
+
       - name: Cache Hugo modules
         uses: actions/cache@v4
         with:
@@ -77,11 +88,16 @@ jobs:
           hugo env
           hugo mod graph || true
 
+      # baseURL comes from config/_default/hugo.yaml (https://www.sajid.bd/),
+      # the custom domain GitHub Pages serves, so local and CI builds emit the
+      # same canonical, hreflang, sitemap and feed URLs. (It used to be
+      # overridden here with the Pages base_url.)
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          set -o pipefail
+          hugo --gc --minify --printPathWarnings --printI18nWarnings 2>&1 | tee hugo-build.log
 
       # Phase 8 item 8.20. `header.search: true` (config/_default/params.yaml)
       # ships the search modal and hb-search.js on every page, and that script
@@ -98,13 +114,22 @@ jobs:
           npx --yes pagefind@1.4.0 --site public
           test -f public/pagefind/pagefind.js
 
+      # Fails the build (and so the deploy) on duplicate target paths, broken
+      # internal links/assets, missing titles/descriptions/canonicals, h1 and
+      # id problems, missing alt text, unnamed links and content regressions.
+      # External links are not checked: publishers and DOI resolvers often
+      # answer CI with 403 or time out. See _pythonscripts/check_site.py.
+      - name: Check site integrity
+        run: python _pythonscripts/check_site.py --public public --build-log hugo-build.log
+
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'HugoBlox' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
 
