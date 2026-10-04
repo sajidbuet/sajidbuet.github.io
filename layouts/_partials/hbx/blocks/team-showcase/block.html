@@ -1,8 +1,8 @@
-{{/* Phase 7: readable accessible names for the icon-only profile links.
-     The raw icon id was used as the label, so a screen reader announced
-     "link, hero slash envelope" / "link, brands slash google-scholar".
-     Prefers an authored `label`; otherwise strips the icon namespace and
-     title-cases what is left. */}}{{/* Hugo Blox: Team Showcase Admin */}}
+{{/* Local override of HugoBlox blox/team-showcase/block.html (blox v0.11.0).
+     Only change: links without a scheme go through functions/lang_url instead of
+     relLangURL, so the Bengali site links to English-only pages at their real
+     URL instead of a non-existent /bn/ copy (site audit 2026-10-04, H1). */}}
+{{/* Hugo Blox: Team Showcase */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
 
@@ -68,28 +68,26 @@
       </div>
       {{ end }}
 
-      <div class="grid grid-cols-1 gap-8 w-full {{ if gt (len $groupProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl mx-auto{{ end }}">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
         {{ range $profile := $groupProfiles }}
           {{ $avatar := $profile.avatar }}
           {{ $link := printf "/authors/%s/" $profile.slug }}
           
-          <div class="group relative w-full max-w-xl">
+          <div class="group relative">
             <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               
-<div class="p-6 pt-8 text-center">
-  {{ if $avatar }}
-  <a href="{{ $link }}" class="block mb-5">
-    {{ $image := $avatar.Fill "320x320 Center webp" }}
-    <div class="mx-auto w-1/2 rounded-full overflow-hidden ring-4 ring-gray-100 dark:ring-gray-700 shadow-lg">
-      <img src="{{ $image.RelPermalink }}"
-           alt="{{ $profile.title }}"
-           width="{{ $image.Width }}"
-           height="{{ $image.Height }}"
-           loading="lazy"
-           class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
-    </div>
-  </a>
-  {{ end }}
+              {{ if $avatar }}
+              <a href="{{ $link }}" class="block relative h-64 overflow-hidden">
+                {{ $image := $avatar.Fill "400x400 Center webp" }}
+                <img src="{{ $image.RelPermalink }}" 
+                     alt="{{ $profile.title }}" 
+                     width="{{ $image.Width }}" 
+                     height="{{ $image.Height }}" 
+                     loading="lazy"
+                     class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
+              {{ end }}
               
               <div class="p-6">
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
@@ -110,7 +108,7 @@
                 {{ end }}
                 
                 {{ with $profile.bio }}
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2  mx-auto">
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                   {{ . }}
                 </p>
                 {{ end }}
@@ -118,7 +116,7 @@
                 {{ if and $show_interests $profile.interests }}
                 <div class="mb-4">
                   <div class="flex flex-wrap gap-1">
-                    {{ range first 6 $profile.interests }}
+                    {{ range first 3 $profile.interests }}
                     <span class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded">
                       {{ . }}
                     </span>
@@ -128,7 +126,7 @@
                 {{ end }}
                 
                 {{ if and $show_social $profile.links }}
-                <div class="flex  justify-center gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                   {{ range $profile.links }}
                   {{ $l := .url | default .link }}
                   {{ $scheme := (urls.Parse $l).Scheme }}
@@ -142,7 +140,7 @@
                   
                   <a href="{{ $l | safeURL }}" 
                      {{ $target | safeHTMLAttr }} 
-                     aria-label="{{ $n := .icon | default "" }}{{ if strings.Contains $n "/" }}{{ $n = index (last 1 (split $n "/")) 0 }}{{ end }}{{ .label | default (replace $n "-" " " | title) | default "Profile link" }}"
+                     aria-label="{{ .icon }}"
                      {{ with .label }} title="{{ . }}"{{ end }}
                      class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
                     {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
@@ -158,27 +156,25 @@
     {{ end }}
   {{ else }}
     {{ $allProfiles = sort $allProfiles "title" }}
-    <div class="grid grid-cols-1 gap-8 {{ if gt (len $allProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl mx-auto{{ end }}">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {{ range $profile := $allProfiles }}
         {{ $avatar := $profile.avatar }}
         {{ $link := printf "/authors/%s/" $profile.slug }}
         <div class="group relative">
           <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-<div class="p-6 pt-8 text-center">
-  {{ if $avatar }}
-  <a href="{{ $link }}" class="block mb-5">
-    {{ $image := $avatar.Fill "320x320 Center webp" }}
-    <div class="mx-auto  w-1/2 rounded-full overflow-hidden ring-4 ring-gray-100 dark:ring-gray-700 shadow-lg">
-      <img src="{{ $image.RelPermalink }}"
-           alt="{{ $profile.title }}"
-           width="{{ $image.Width }}"
-           height="{{ $image.Height }}"
-           loading="lazy"
-           class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
-    </div>
-  </a>
-  {{ end }}
-
+            {{ if $avatar }}
+            <a href="{{ $link }}" class="block relative h-64 overflow-hidden">
+              {{ $image := $avatar.Fill "400x400 Center webp" }}
+              <img src="{{ $image.RelPermalink }}" 
+                   alt="{{ $profile.title }}" 
+                   width="{{ $image.Width }}" 
+                   height="{{ $image.Height }}" 
+                   loading="lazy"
+                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </a>
+            {{ end }}
+            <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
                 <a href="{{ $link }}" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                   {{ $profile.title }}
@@ -199,7 +195,7 @@
               {{ end }}
               {{ if and $show_interests $profile.interests }}
               <div class="mb-4">
-                <div class="flex flex-wrap gap-1 justify-center">
+                <div class="flex flex-wrap gap-1">
                   {{ range first 3 $profile.interests }}
                   <span class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded">{{ . }}</span>
                   {{ end }}
@@ -218,7 +214,7 @@
                 {{ else if in (slice "http" "https") $scheme }}
                   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
                 {{ end }}
-                <a href="{{ $l | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $n := .icon | default "" }}{{ if strings.Contains $n "/" }}{{ $n = index (last 1 (split $n "/")) 0 }}{{ end }}{{ .label | default (replace $n "-" " " | title) | default "Profile link" }}" {{ with .label }} title="{{ . }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
+                <a href="{{ $l | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}" {{ with .label }} title="{{ . }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
                   {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
                 </a>
                 {{ end }}

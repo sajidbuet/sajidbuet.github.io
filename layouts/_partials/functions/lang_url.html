@@ -1,0 +1,18 @@
+{{/* Language-aware URL for a site path such as "/resources/blog/".
+
+     If the current language has a page at that path, return its URL
+     (/bn/publication/ on the Bengali site). Otherwise return the
+     default-language URL (/resources/blog/), because many sections exist only
+     in English. `relLangURL` instead prefixes /bn/ unconditionally, which
+     produced footer links to seven Bengali pages that do not exist (site
+     audit 2026-10-04, H1). Files (cv.pdf) also resolve to the default
+     language. */}}
+{{- $path := . -}}
+{{- $url := "" -}}
+{{- if not (strings.HasPrefix $path "/") -}}{{- $path = printf "/%s" $path -}}{{- end -}}
+{{- $key := strings.TrimSuffix "/" $path | default "/" -}}
+{{- if not (path.Ext $key) -}}
+  {{- with site.GetPage $key -}}{{- $url = .RelPermalink -}}{{- end -}}
+{{- end -}}
+{{- if not $url -}}{{- $url = $path | relURL -}}{{- end -}}
+{{- return $url -}}

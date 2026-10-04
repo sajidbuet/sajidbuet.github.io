@@ -53,34 +53,9 @@ sections:
 
 
 
-  - block: stats
-    content:
-      items:
-        - statistic: "50+"
-          description: পিয়ার-রিভিউড প্রকাশনা
-          sub_metric: ফোটোনিক্স, ন্যানোপ্রযুক্তি ও এম্বেডেড সিস্টেম বিষয়ক জার্নাল ও আন্তর্জাতিক সম্মেলন
-          icon: hero/document-text
-
-        - statistic: "1298+"
-          description: একাডেমিক উদ্ধৃতি
-          sub_metric: "h-index: 13 (Google Scholar)"
-          icon: hero/chart-bar
-
-        - statistic: "7"
-          description: তত্ত্বাবধানে সম্পন্ন এমএসসি গবেষণা
-          sub_metric: ফোটোনিক্স, মেটাসারফেস, কোয়ান্টাম ডিভাইস ও শক্তি ব্যবস্থা
-          icon: hero/user-group
-
-        - statistic: "6"
-          description: মূল গবেষণা ক্ষেত্র
-          sub_metric: কোয়ান্টাম, ফোটোনিক্স, অ্যান্টেনা, কম্পিউটিং, এম্বেডেড সিস্টেম, নবায়নযোগ্য শক্তি (Q-PACERS)
-          icon: hero/beaker
-    design:
-      layout: cards
-      # Section background color (CSS class)
-      css_class: "bg-gradient-to-b from-primary-50 to-white dark:from-primary-900/20 dark:to-gray-800"
-      spacing:
-        padding: ["3rem", 0, "3rem", 0]
+  # The stats block (publication count, citations, h-index, ...) was removed
+  # to match the English homepage: hand-typed figures went stale (site audit
+  # 2026-10-04, H5). Current figures are on the CV and the profile page.
 
   - block: research-areas
     id: research
@@ -313,7 +288,7 @@ sections:
       address:
         lines:
           - ড. সাজিদ মুহাইমিন চৌধুরী
-          - সহযোগী অধ্যাপক
+          - অধ্যাপক
           - তড়িৎ ও ইলেকট্রনিক প্রকৌশল বিভাগ (EEE)
           - বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট)
           - ইইই ২২২, ইসিই ভবন

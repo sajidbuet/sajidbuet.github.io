@@ -109,19 +109,26 @@
         {{- $anchor = index (split $raw "#") 1 -}}
       {{- end -}}
 
-      {{/* Resolve the href exactly as before — routes are unchanged. */}}
+      {{/* Menu URLs are written as site paths ("/teaching/", "/#contact"); the
+           current language's page is used when it exists, otherwise the
+           English one (functions/lang_url). relLangURL produced /bn/ links to
+           pages that only exist in English (site audit 2026-10-04, H1/M8). */}}
       {{- $url := "" -}}
       {{- if findRE `^#` $raw -}}
         {{- $url = $raw -}}
+      {{- else if findRE `^[a-z]+:` $raw -}}
+        {{- $url = $raw -}}
       {{- else -}}
-        {{- $url = $raw | relLangURL -}}
+        {{- $url = partial "functions/lang_url" (index (split $raw "#") 0 | default "/") -}}
+        {{- with $anchor }}{{ $url = printf "%s#%s" $url . }}{{ end -}}
       {{- end -}}
 
       {{/* Static active resolution for real page destinations only. */}}
       {{- $active := false -}}
       {{- if not $anchor -}}
-        {{- $itemPath := strings.TrimSuffix "/" (urls.Parse ($raw | relLangURL)).Path -}}
+        {{- $itemPath := strings.TrimSuffix "/" (urls.Parse $url).Path -}}
         {{- if eq $itemPath "" }}{{ $itemPath = "/" }}{{ end -}}
+        {{- if eq $itemPath $homePath }}{{ $itemPath = "/" }}{{ end -}}{{/* /bn home */}}
         {{- if ne $itemPath "/" -}}
           {{- $active = or (eq $pagePath $itemPath) (hasPrefix $pagePath (printf "%s/" $itemPath)) -}}
         {{- else -}}
@@ -156,7 +163,7 @@
           {{- if findRE `^#` .URL -}}
             {{- $curl = .URL -}}
           {{- else -}}
-            {{- $curl = .URL | relLangURL -}}
+            {{- $curl = partial "functions/lang_url" .URL -}}
           {{- end -}}
           <li class="nav-dropdown-item">
             <a
@@ -217,7 +224,7 @@
           type="button"
           class="theme-toggle cursor-pointer"
           accesskey="t"
-          aria-label="{{ i18n "appearance" | default "Toggle light and dark appearance" }}"
+          aria-label="{{ i18n "appearance_toggle" | default "Toggle light and dark appearance" }}"
           title="{{ i18n "appearance" | default "Appearance" }}">
           <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
