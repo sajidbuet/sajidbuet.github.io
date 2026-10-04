@@ -6,13 +6,15 @@ authors:
 - Zabir Ahmed
 - Mohammad Ishfaque Jahan Rafee
 - M A Awal
-- ' me'
+- me
 date: '2014-01-01'
-publishDate: '2026-10-04T08:09:00.405499Z'
+publishDate: '2026-05-02T15:32:10.447822Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'
-doi: 10.1109/ICECE.2014.7026828
+hugoblox:
+  ids:
+    doi: 10.1109/ICECE.2014.7026828
 tags:
 - embedded
 - computing

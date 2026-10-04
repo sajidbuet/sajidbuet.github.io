@@ -4,7 +4,7 @@ authors:
 - Maowen Song
 - Di Wang
 - Samuel Peana
-- ' me'
+- me
 - Piotr Nyga
 - Zhaxylyk A. Kudyshev
 - Honglin Yu
@@ -12,12 +12,14 @@ authors:
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 date: '2019-01-01'
-publishDate: '2026-10-04T08:09:00.624286Z'
+publishDate: '2026-05-02T15:32:10.945844Z'
 publication_types:
 - article-journal
 publication: '*Applied Physics Reviews*'
-doi: 10.1063/1.5110051
-abstract: Since ancient times, plasmonic structural coloring has inspired humanity;
+hugoblox:
+  ids:
+    doi: 10.1063/1.5110051
+abstract: "Since ancient times, plasmonic structural coloring has inspired humanity;
   glassmakers achieved vibrant colors by doping glass with metal nanoparticles to
   craft beautiful objects such as the Roman Lycurgus cup and stained glass. These
   lovely color filtering effects are a consequence of the resonant coupling of light
@@ -36,7 +38,7 @@ abstract: Since ancient times, plasmonic structural coloring has inspired humani
   more color information states than the static systems. Thus, they open an avenue
   to high-density data storage, information encryption, and plasmonic information
   processing. Finally, we discuss the challenges and future perspectives in this exciting
-  research area.
+  research area."
 tags:
 - photonics
 ---

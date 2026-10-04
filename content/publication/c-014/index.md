@@ -2,17 +2,19 @@
 title: Experimental Realization of Color Hologram Using Pancharatnam-Berry Phase Manipulating
   Metasurface
 authors:
-- ' me'
+- me
 - Amr Shaltout
 - Vladimir M. Shalaev
 - Alexander V. Kildishev
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2026-10-04T08:08:59.230615Z'
+publishDate: '2026-09-01T16:20:40.000304Z'
 publication_types:
 - paper-conference
 publication: '*Conference on Lasers and Electro-Optics*'
-doi: 10.1364/CLEO_QELS.2016.FF1D.8
+hugoblox:
+  ids:
+    doi: 10.1364/CLEO_QELS.2016.FF1D.8
 abstract: We design and fabricate a Pancharatnam-Berry phase manipulating metasurface
   to experimentally demonstrate a three-color RGB pattern. The color pattern is produced
   by illuminating a nanostructured silver metasurface hologram with a white light

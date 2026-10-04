@@ -3,13 +3,15 @@ title: Efficiency enhancement of c-Si/TiO2 heterojunction thin film solar cell u
   hybrid metal-dielectric nanostructures
 authors:
 - Soikot Sarkar
-- ' me'
+- me
 date: '2025-01-01'
-publishDate: '2026-10-04T08:08:59.605469Z'
+publishDate: '2026-09-01T16:20:40.610342Z'
 publication_types:
 - article-journal
 publication: '*Solar Energy*'
-doi: 10.1016/j.solener.2025.113535
+hugoblox:
+  ids:
+    doi: 10.1016/j.solener.2025.113535
 abstract: The hybrid metal-dielectric nanostructures (HMDN) are promising candidates
   to address the ohmic loss by conventional nanostructures in photovoltaic applications
   by strong confinement and high scattering directivity. In this study, we present

@@ -1,10 +1,10 @@
 ---
 title: Multiport Analysis of Hexagonal Patch Antenna
 authors:
-- ' me'
+- me
 - MA Matin
 date: '2013-01-01'
-publishDate: '2026-10-04T08:09:00.566060Z'
+publishDate: '2026-05-02T15:32:10.838781Z'
 publication_types:
 - article-journal
 publication: '*IJECCT*'

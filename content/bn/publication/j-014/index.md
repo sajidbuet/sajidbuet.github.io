@@ -4,13 +4,15 @@ authors:
 - Mohammad Muntasir Hassan
 - Farhan Sadik Sium
 - Fariba Islam
-- ' me'
+- me
 date: '2021-01-01'
-publishDate: '2026-10-04T08:09:00.677660Z'
+publishDate: '2026-05-02T15:32:11.067848Z'
 publication_types:
 - article-journal
 publication: '*Sensing and Bio-Sensing Research*'
-doi: 10.1016/j.sbsr.2021.100429
+hugoblox:
+  ids:
+    doi: 10.1016/j.sbsr.2021.100429
 abstract: 'Due to changes in our climate and constant loss of habitat for animals,
   new pathogens for humans are constantly erupting. SARS-CoV-2 virus, become so infectious
   and deadly that they put new challenge to the whole technological advancement of

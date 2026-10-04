@@ -2,7 +2,7 @@
 title: Controlling the Polarization State of Light with Plasmonic Metal Oxide Metasurface
 authors:
 - Jongbum Kim
-- ' me'
+- me
 - Clayton DeVault
 - Yang Zhao
 - Alexander V Kildishev
@@ -10,11 +10,13 @@ authors:
 - Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'
-publishDate: '2026-10-04T08:08:59.390549Z'
+publishDate: '2026-09-01T16:20:40.279378Z'
 publication_types:
 - article-journal
 publication: '*ACS Nano*'
-doi: 10.1021/acsnano.6b03937
+hugoblox:
+  ids:
+    doi: 10.1021/acsnano.6b03937
 abstract: Conventional plasmonic materials, namely, noble metals, hamper the realization
   of practical plasmonic devices due to their intrinsic limitations, such as lack
   of capabilities to tune in real time their optical properties, failure to assimilate

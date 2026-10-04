@@ -4,14 +4,16 @@ title: A Polarization Insensitive Achromatic Metalens Operating at Two Wavelengt
 authors:
 - Kushol Roy Pritom
 - Md. Ehsanul Karim
-- ' me'
+- me
 date: '2023-01-01'
-publishDate: '2026-10-04T08:09:00.449853Z'
+publishDate: '2026-05-02T15:32:10.553665Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
-doi: 10.1109/ICTP60248.2023.10491019
+hugoblox:
+  ids:
+    doi: 10.1109/ICTP60248.2023.10491019
 tags:
 - photonics
 ---

@@ -13,7 +13,7 @@ authors:
 - Michael Chen
 - Nikolay I Zheludev
 - Nikitas Papasimakis
-- ' me'
+- me
 - Zhaxylyk A Kudyshev
 - Soham Saha
 - Harsha Reddy
@@ -35,11 +35,13 @@ authors:
 - Sergei Tretyakov
 - Christophe Craeye
 date: '2019-01-01'
-publishDate: '2026-10-04T08:08:59.470416Z'
+publishDate: '2026-09-01T16:20:40.393195Z'
 publication_types:
 - article-journal
 publication: '*Journal of Optics*'
-doi: 10.1088/2040-8986/ab161d
+hugoblox:
+  ids:
+    doi: 10.1088/2040-8986/ab161d
 abstract: Metasurfaces are thin two-dimensional metamaterial layers that allow or
   inhibit the propagation of electromagnetic waves in desired directions. For example,
   metasurfaces have been demonstrated to produce unusual scattering properties of

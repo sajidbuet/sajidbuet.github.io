@@ -4,13 +4,15 @@ authors:
 - Mehedi Hasan Himel
 - Bejoy Sikder
 - Tanvir Ahmed
-- ' me'
+- me
 date: '2023-01-01'
-publishDate: '2026-10-04T08:09:00.725131Z'
+publishDate: '2026-05-02T15:32:11.165398Z'
 publication_types:
 - article-journal
 publication: '*NanoScale Advances*'
-doi: 10.1039/D2NA00571A
+hugoblox:
+  ids:
+    doi: 10.1039/D2NA00571A
 abstract: Biomimicry has been utilized in many branches of science and engineering
   to develop devices for enhanced and better performance. The application of nanotechnology
   has made life easier in modern times. It has offered a way to manipulate matter

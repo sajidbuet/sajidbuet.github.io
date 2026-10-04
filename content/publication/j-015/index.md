@@ -3,13 +3,15 @@ title: T Grating on Nano-Cavity Array based Refractive Index Sensor
 authors:
 - Yasir Fatha Abed
 - Md Asif Hossain Bhuiyan
-- ' me'
+- me
 date: '2021-01-01'
-publishDate: '2026-10-04T08:08:59.508100Z'
+publishDate: '2026-09-01T16:20:40.452005Z'
 publication_types:
 - article-journal
 publication: '*J. Opt. Soc. Am. B*'
-doi: 10.1364/JOSAB.426526
+hugoblox:
+  ids:
+    doi: 10.1364/JOSAB.426526
 abstract: We report a refractive index sensor comprising of unique T grating on top
   of periodic nano-cavities. The sensor has two resonant modes sensitive to different
   regions of the structure with low inter-region interference, hence allows simultaneous

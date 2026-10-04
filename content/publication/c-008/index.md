@@ -4,10 +4,10 @@ title: Developing A Low-Cost Multiple Motor Switched Photovoltaic Powered Irriga
 authors:
 - S. M. L. Kabir
 - M. S. Hussain
-- ' me'
+- me
 - A. H. Chowdhury
 date: '2011-01-01'
-publishDate: '2026-10-04T08:08:59.183014Z'
+publishDate: '2026-09-01T16:20:39.908276Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of the 3rd International Conference on Water and Flood

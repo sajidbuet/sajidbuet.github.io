@@ -4,15 +4,17 @@ authors:
 - Zhaxylyk A. Kudyshev
 - Ludmila J. Prokopeva
 - Maowen Song
-- ' me'
+- me
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2026-10-04T08:09:00.441092Z'
+publishDate: '2026-05-02T15:32:10.535149Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
   (ACES)*'
-doi: 10.23919/ROPACES.2018.8364134
+hugoblox:
+  ids:
+    doi: 10.23919/ROPACES.2018.8364134
 tags:
 - photonics
 ---

@@ -5,13 +5,15 @@ authors:
 - Himaddri Roy
 - Ehsanul Karim
 - Sujoy Mondal
-- ' me'
+- me
 date: '2022-01-01'
-publishDate: '2026-10-04T08:09:00.693377Z'
+publishDate: '2026-05-02T15:32:11.114362Z'
 publication_types:
 - article-journal
 publication: '*Optics Continuum*'
-doi: 10.1364/OPTCON.473106
+hugoblox:
+  ids:
+    doi: 10.1364/OPTCON.473106
 abstract: 'In this paper, we have presented a novel plasmonic Refractive Index (RI)
   sensing scheme based on a rewritable optical disc structure with customized dimer-like
   nanopatterns. We have performed the finite-difference time-domain (FDTD) simulation

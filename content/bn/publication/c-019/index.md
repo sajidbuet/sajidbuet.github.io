@@ -3,14 +3,16 @@ title: Design and Performance Analysis of a c-Si Thin-Film Solar Cell Using Plas
   Ag Nanostructures
 authors:
 - Soikot Sarkar
-- ' me'
+- me
 date: '2023-01-01'
-publishDate: '2026-10-04T08:09:00.454371Z'
+publishDate: '2026-05-02T15:32:10.574181Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
-doi: 10.1109/ICTP60248.2023.10490886
+hugoblox:
+  ids:
+    doi: 10.1109/ICTP60248.2023.10490886
 tags:
 - photonics
 - renewable

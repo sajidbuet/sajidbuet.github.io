@@ -3,13 +3,15 @@ title: Concentric annular-hexagonal plasmonic resonator with nanorod vertices fo
   dual-band absorption in NIR and MIR for sensing applications
 authors:
 - Ayon Sarker
-- ' me'
+- me
 date: '2025-05-01'
-publishDate: '2026-10-04T08:09:00.789312Z'
+publishDate: '2026-05-02T15:32:11.287452Z'
 publication_types:
 - article-journal
 publication: '*Opt. Continuum*'
-doi: 10.1364/OPTCON.558501
+hugoblox:
+  ids:
+    doi: 10.1364/OPTCON.558501
 abstract: This study introduces a dual-band plasmonic absorber designed for simultaneous
   sensing applications in the near-infrared (NIR) and mid-infrared (MIR) regions.
   The absorber, composed of silver nanostructures on a metal plate with a dielectric

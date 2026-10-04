@@ -3,10 +3,10 @@ title: Harnessing Topological Valley-Hall States in Photonic Crystals for Robust
   Cell Detection
 authors:
 - Junayet Hossain
-- ' me'
+- me
 - Mohammed Imamul Hasan Bhuiyan
 date: '2025-01-01'
-publishDate: '2026-10-04T08:08:59.089263Z'
+publishDate: '2026-09-01T16:20:39.758474Z'
 publication_types:
 - manuscript
 tags:

@@ -4,13 +4,15 @@ title: Lithium niobate photonic topological insulator-based multi-wavelength opt
 authors:
 - Prithu Mahmud
 - Kaniz Fatema Supti
-- ' me'
+- me
 date: '2024-12-01'
-publishDate: '2026-10-04T08:08:59.575941Z'
+publishDate: '2026-09-01T16:20:40.562633Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'
-doi: 10.1364/OE.541271
+hugoblox:
+  ids:
+    doi: 10.1364/OE.541271
 abstract: Photonic topological insulators provide unidirectional, robust, wavelength-selective
   transport of light at an interface while keeping it insulated at the bulk of the
   material. The non-trivial topology results in an immunity to backscattering, sharp

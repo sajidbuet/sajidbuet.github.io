@@ -5,14 +5,16 @@ authors:
 - Sadat Tahmeed Azad
 - Tiasa Mondal
 - Abdullah Jubair Bin Iqbal
-- ' me'
+- me
 date: '2023-01-01'
-publishDate: '2026-10-04T08:08:59.280693Z'
+publishDate: '2026-09-01T16:20:40.073101Z'
 publication_types:
 - paper-conference
 publication: '*2023 26th International Conference on Computer and Information Technology
   (ICCIT)*'
-doi: 10.1109/ICCIT60459.2023.10441436
+hugoblox:
+  ids:
+    doi: 10.1109/ICCIT60459.2023.10441436
 tags:
 - embedded
 ---

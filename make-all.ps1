@@ -53,15 +53,8 @@ $CvTarget     = 'content\cv.pdf'
 $BibFile      = 'cv\papers.bib'
 $PubDirs      = 'content\publication', 'content\bn\publication'
 $AuthorScript = '_pythonscripts\sync_authors.py'
+$PubScript    = '_pythonscripts\import_publications.py'   # wraps `academic import`, keeps hand edits
 $PagefindPkg  = 'pagefind@1.4.0'          # keep in step with publish.yaml / package.json
-# BibTeX spellings of the site owner; each becomes "me" so HugoBlox links the
-# papers to data\authors\me.yaml. Regexes, applied in order (longest first).
-$MyNames = @(
-    'Sajid Muhaimin Choudhury',
-    'Choudhury, Sajid Muhaimin',
-    'Sajid Choudhury',
-    'S\. M\. Choudhury'
-)
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 function Write-Step([string]$Message) {
@@ -116,23 +109,11 @@ function Update-Cv {
 function Update-Publications {
     Write-Step "📚  Step 2: Importing $BibFile into $($PubDirs -join ', ')"
     Assert-Command 'academic' 'Install the HugoBlox importer with:  python -m pip install academic'
-
-    # Work on a temp copy so the CV's own papers.bib is never touched.
-    $bibMe = Join-Path ([IO.Path]::GetTempPath()) "papers-me-$PID.bib"
-    try {
-        $text = [IO.File]::ReadAllText((Resolve-Path $BibFile))
-        foreach ($pattern in $MyNames) { $text = $text -replace $pattern, 'me' }
-        [IO.File]::WriteAllText($bibMe, $text, [Text.UTF8Encoding]::new($false))   # no BOM
-
-        foreach ($dir in $PubDirs) {
-            New-Item -ItemType Directory -Force -Path $dir | Out-Null
-            Write-Host "🔄  academic import → $dir" -ForegroundColor $Info
-            Invoke-Tool "academic import ($dir)" 'academic' @('import', $bibMe, $dir, '--compact', '--overwrite')
-        }
-    } finally {
-        Remove-Item -LiteralPath $bibMe -ErrorAction SilentlyContinue
-    }
-    Write-Host '✅  Publications imported.' -ForegroundColor $Good
+    # Renames the owner to "me" in a temp copy of the .bib, runs `academic import`
+    # per folder, then merges each page back into its previous version so
+    # featured flags, aliases, publishDate and other hand edits survive.
+    $pubArgs = @($PubScript, $BibFile) + ($PubDirs | ForEach-Object { '--out', $_ })
+    Invoke-Tool 'import_publications.py' 'python' $pubArgs
 }
 
 function Update-Authors {

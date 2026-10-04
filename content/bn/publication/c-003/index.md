@@ -3,15 +3,17 @@ title: Modeling the illumination function of a cassegrain reflector for a corrug
   horn feed and calculation of the far field pattern
 authors:
 - Mohammad Asif Zaman
-- ' me'
+- me
 - Md. Gaffar
 - M. A. Matin
 date: '2009-01-01'
-publishDate: '2026-10-04T08:09:00.310915Z'
+publishDate: '2026-05-02T15:32:10.258233Z'
 publication_types:
 - paper-conference
 publication: '*2009 Loughborough Antennas & Propagation Conference*'
-doi: 10.1109/LAPC.2009.5352533
+hugoblox:
+  ids:
+    doi: 10.1109/LAPC.2009.5352533
 tags:
 - antenna
 ---

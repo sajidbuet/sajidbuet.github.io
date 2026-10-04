@@ -4,15 +4,17 @@ title: Optimization and analysis of a Ka band Pickett Potter horn antenna with l
 authors:
 - Mohammad Asif Zaman
 - Md. Gaffar
-- ' me'
+- me
 - M. A. Matin
 date: '2010-01-01'
-publishDate: '2026-10-04T08:09:00.344422Z'
+publishDate: '2026-05-02T15:32:10.328753Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
-doi: 10.1109/ICELCE.2010.5700749
+hugoblox:
+  ids:
+    doi: 10.1109/ICELCE.2010.5700749
 tags:
 - antenna
 ---

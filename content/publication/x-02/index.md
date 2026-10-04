@@ -4,9 +4,9 @@ title: Exploiting Steane-Code Syndrome Redundancy in Hybrid Photonic–Stabilize
 authors:
 - Subhan Zawad Bihan
 - Anindya Kishore Choudhury
-- ' me'
+- me
 date: '2026-01-01'
-publishDate: '2026-10-04T08:08:59.664925Z'
+publishDate: '2026-09-01T16:20:40.727722Z'
 publication_types:
 - manuscript
 tags:

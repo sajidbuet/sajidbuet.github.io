@@ -2,18 +2,20 @@
 title: Sensitivity analysis of a circularly polarized U-slot microstrip antenna
 authors:
 - Md. Gaffar
-- ' me'
+- me
 - Mohammad Asif Zaman
 - Md. Imran Momtaz
 - M. Shah Alam
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2026-10-04T08:08:59.170974Z'
+publishDate: '2026-09-01T16:20:39.894925Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
-doi: 10.1109/ICELCE.2010.5700750
+hugoblox:
+  ids:
+    doi: 10.1109/ICELCE.2010.5700750
 tags:
 - antenna
 ---

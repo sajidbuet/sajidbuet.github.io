@@ -3,13 +3,15 @@ title: Sb2S3/AlGaAs based Reconfigurable Metasurface for Dynamic Polarization an
   Directionality Control of Quantum Emitter Emission
 authors:
 - Md. Ehsanul Karim
-- ' me'
+- me
 date: '2024-01-01'
-publishDate: '2026-10-04T08:09:00.749329Z'
+publishDate: '2026-05-02T15:32:11.212912Z'
 publication_types:
 - article-journal
 publication: '*RSC Advances*'
-doi: 10.1039/D4RA03726J
+hugoblox:
+  ids:
+    doi: 10.1039/D4RA03726J
 abstract: In this article, we report, as per our knowledge, for the first time phase
   change material (PCM) based reconfigurable metasurfaces for tailoring different
   degrees of freedom (DoF) of the quantum emitter (QE) emission, namely polarization
