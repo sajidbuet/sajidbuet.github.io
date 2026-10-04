@@ -1,6 +1,8 @@
 ---
 title: Md Al Shahriar Shakil
 slug: 0424062324-shahriar-shakil
+aliases:
+- /authors/md-al-shahriar-shakil/
 first_name: Md
 last_name: Al Shahriar Shakil
 authors:

@@ -1,6 +1,8 @@
 ---
 title: Naved Sadat Yamin
 slug: 0424062379-naved-sadat-yamin
+aliases:
+- /authors/naved-sadat-yamin/
 first_name: Naved
 last_name: Sadat Yamin
 authors:

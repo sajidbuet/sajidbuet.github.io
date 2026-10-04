@@ -1,6 +1,8 @@
 ---
 title: Ayon Sarker
 slug: 0421062344-ayon-sarker
+aliases:
+- /authors/ayon-sarker/
 first_name: Ayon
 last_name: Sarker
 authors:

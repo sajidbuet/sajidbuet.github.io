@@ -3,9 +3,9 @@ title: A Novel Approach for Changing Bandwidth of FSS Filter Using Gradual Circu
   Variation of Loaded Elements
 authors:
 - me
-- M. A. Zaman
-- M. Gaffar
-- M. A. Matin
+- Mohammad Asif Zaman
+- Md. Gaffar
+- Md. Abdul Matin
 date: '2010-01-01'
 publishDate: '2026-09-01T16:20:39.853082Z'
 publication_types:

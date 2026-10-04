@@ -1,6 +1,9 @@
 ---
 title: Md Asif Hossain Bhuiyan
 slug: a-0422062304-asif-hossain-bhuiyan
+aliases:
+- /authors/md-asif-hossain-bhuiyan/
+- /authors/md.-asif-hossain-bhuiyan/
 first_name: Md
 last_name: Asif Hossain Bhuiyan
 authors:

@@ -2,7 +2,7 @@
 title: Efficiency enhancement of c-Si/TiO2 heterojunction thin film solar cell using
   hybrid metal-dielectric nanostructures
 authors:
-- Soikot Sarkar
+- a-0422062353-soikot
 - me
 date: '2025-01-01'
 publishDate: '2026-10-04T08:09:00.796007Z'

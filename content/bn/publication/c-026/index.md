@@ -2,7 +2,7 @@
 title: 'Towards High-Performance Quantum-Based LEDs: Optoelectronic Modulation of
   2D Silicon Carbide for Tunable and Efficient White Light Emission'
 authors:
-- Md. Mahfuzul Haque
+- a-0421062305-md-mahfuzul-haque
 - me
 date: '2025-01-01'
 publishDate: '2026-05-02T15:32:10.719241Z'

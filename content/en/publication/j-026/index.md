@@ -2,7 +2,7 @@
 title: Synergizing deep learning and phase change materials for four-state broadband
   multifunctional metasurfaces in the visible range
 authors:
-- Md. Ehsanul Karim
+- a-0422062302-md-ehsanul-karim
 - Md. Redwanul Karim
 - me
 date: '2025-01-01'

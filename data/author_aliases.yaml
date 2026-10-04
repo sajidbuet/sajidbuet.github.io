@@ -1,0 +1,61 @@
+# Canonical author identities for publication pages.
+#
+#   <canonical>: [<spelling as printed in cv/papers.bib>, ...]
+#
+# _pythonscripts/import_publications.py rewrites every listed spelling to its
+# canonical value when it generates content/{en,bn}/publication/*/index.md, so
+# one person gets one /authors/<slug>/ page. cv/papers.bib itself is left as
+# published (the CV prints the names as they appear on each paper).
+#
+# Canonical value:
+#   * a lab member with a profile: the profile slug, i.e. the file name of
+#     data/authors/<slug>.yaml. The page shows that profile's name and links
+#     to it. _pythonscripts/sync_authors.py turns the spellings listed here into
+#     `aliases` on the profile, so the old /authors/<spelling>/ URLs redirect.
+#   * anyone else: the fullest form of the name found in the publication
+#     record, initials followed by a full stop.
+#
+# The site owner is handled separately: OWNER_NAMES in import_publications.py
+# maps every spelling of Sajid Muhaimin Choudhury to `me`.
+#
+# _pythonscripts/check_site.py fails when a publication lists a spelling that
+# appears here, or the name of a profile that is not mapped here.
+#
+# Only add a mapping when the record shows it is the same person (same lab,
+# co-authors, ORCID or Crossref record). Do not map on name alone.
+
+# ── Lab members (data/authors/<slug>.yaml) ─────────────────────────────────
+0421062341-purbayan-das: [Purbayan Das]
+0421062344-ayon-sarker: [Ayon Sarker]
+0421062347-puja-das: [Puja Das]
+0424062324-shahriar-shakil: [Md Al Shahriar Shakil]
+0424062379-naved-sadat-yamin: [Naved Sadat Yamin]
+a-0421062305-md-mahfuzul-haque: [Md. Mahfuzul Haque, Md Mahfuzul Haque]
+a-0421062320-shamima-mitu: [Shamima Akter Mitu]
+# "Ehsanul Karim" (j-016): same ORCID 0000-0002-3948-7368 on Crossref as j-019.
+a-0422062302-md-ehsanul-karim: [Md. Ehsanul Karim, Ehsanul Karim]
+a-0422062304-asif-hossain-bhuiyan: [Md Asif Hossain Bhuiyan, Md. Asif Hossain Bhuiyan]
+a-0422062353-soikot: [Soikot Sarkar]
+# Names that match a profile but are NOT known to be that person. They stay as
+# printed and check_site.py does not flag them. Keys starting with _ are
+# ignored by the importer and the roster sync.
+#   Tanvir Ahmed: j-018 (2023; Crossref affiliation BUET EEE and BRAC CSE) vs
+#   profile 1024062144-tanvir-ahmed (BSc RUET, enrolled Oct 2024). Owner to confirm.
+_not_mapped: [Tanvir Ahmed]
+
+# ── Co-authors ──────────────────────────────────────────────────────────────
+Md. Abdul Matin: [M. A. Matin, M.A. Matin, MA Matin, Md A Matin, Md Matin]
+Mohammad Asif Zaman: [M. A. Zaman, MA Zaman]
+Md. Gaffar: [Md Gaffar, M. Gaffar]
+# "Md M Alam" (j-003) has the same co-author team and year as
+# "Md Mushfiqul Alam" (j-001).
+Md Mushfiqul Alam: [Md M Alam]
+Sayed Ashraf Mamun: [SA Mamun]
+Alexander V. Kildishev: [Alexander V Kildishev]
+Vladimir M. Shalaev: [Vladimir M Shalaev, Vladimir Shalaev]
+Zhaxylyk A. Kudyshev: [Zhaxylyk A Kudyshev, Zhaxylyk Kudyshev]
+Sergey I. Bozhevolnyi: [Sergei Bozhevolnyi]
+Andrea Alù: [Andrea Alu]
+George V. Eleftheriades: [George V Eleftheriades]
+Nikolay I. Zheludev: [Nikolay I Zheludev]
+M. A. Awal: [M A Awal]

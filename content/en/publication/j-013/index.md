@@ -1,9 +1,9 @@
 ---
 title: Structurally Tunable Gear-Shaped Plasmonic Sensor
 authors:
-- Ayon Sarker
-- Shamima Akter Mitu
-- Purbayan Das
+- 0421062344-ayon-sarker
+- a-0421062320-shamima-mitu
+- 0421062341-purbayan-das
 - me
 date: '2020-01-01'
 publishDate: '2026-09-01T16:20:40.404708Z'

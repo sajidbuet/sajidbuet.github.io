@@ -2,7 +2,7 @@
 title: 'Investigation of the physical properties through strain effect of monolayer
   silicon carbide material: DFT analysis'
 authors:
-- Md. Mahfuzul Haque
+- a-0421062305-md-mahfuzul-haque
 - Md. Rasidul Islam
 - me
 date: '2025-01-01'

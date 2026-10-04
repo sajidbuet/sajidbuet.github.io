@@ -2,7 +2,7 @@
 title: Multiport Analysis of Hexagonal Patch Antenna
 authors:
 - me
-- MA Matin
+- Md. Abdul Matin
 date: '2013-01-01'
 publishDate: '2026-09-01T16:20:40.262128Z'
 publication_types:

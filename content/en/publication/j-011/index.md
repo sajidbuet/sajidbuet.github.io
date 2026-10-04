@@ -4,11 +4,11 @@ authors:
 - Huan Jiang
 - Harsha Reddy
 - Deesha Shah
-- Zhaxylyk A Kudyshev
+- Zhaxylyk A. Kudyshev
 - me
 - Di Wang
 - Yongyuan Jiang
-- Alexander V Kildishev
+- Alexander V. Kildishev
 date: '2019-01-01'
 publishDate: '2026-09-01T16:20:40.377566Z'
 publication_types:

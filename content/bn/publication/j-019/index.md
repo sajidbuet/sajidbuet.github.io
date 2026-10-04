@@ -2,7 +2,7 @@
 title: Reconfigurable Broadband Metasurface with Switchable Functionalities in the
   Visible Range
 authors:
-- Md. Ehsanul Karim
+- a-0422062302-md-ehsanul-karim
 - me
 date: '2023-01-01'
 publishDate: '2026-05-02T15:32:11.186912Z'

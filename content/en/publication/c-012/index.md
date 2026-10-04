@@ -5,7 +5,7 @@ authors:
 - Parvez Ahmmed
 - Zabir Ahmed
 - Mohammad Ishfaque Jahan Rafee
-- M A Awal
+- M. A. Awal
 - me
 date: '2014-01-01'
 publishDate: '2026-09-01T16:20:39.967844Z'

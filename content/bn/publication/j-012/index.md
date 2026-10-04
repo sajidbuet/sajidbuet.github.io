@@ -9,17 +9,17 @@ authors:
 - Gabriele Minatti
 - Enrica Martini
 - Stefano Maci
-- George V Eleftheriades
+- George V. Eleftheriades
 - Michael Chen
-- Nikolay I Zheludev
+- Nikolay I. Zheludev
 - Nikitas Papasimakis
 - me
-- Zhaxylyk A Kudyshev
+- Zhaxylyk A. Kudyshev
 - Soham Saha
 - Harsha Reddy
 - Alexandra Boltasseva
-- Vladimir M Shalaev
-- Alexander V Kildishev
+- Vladimir M. Shalaev
+- Alexander V. Kildishev
 - Daniel Sievenpiper
 - Christophe Caloz
 - Andrea Alù

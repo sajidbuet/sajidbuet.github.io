@@ -2,7 +2,7 @@
 title: Analysis of a conical corrugated horn operating in the K-band with low cross-polarization
   and high aperture efficiency, and observing its radiation patterns
 authors:
-- M.A. Matin
+- Md. Abdul Matin
 - Mohammad Asif Zaman
 - me
 - Md. Gaffar

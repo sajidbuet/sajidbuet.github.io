@@ -1,6 +1,8 @@
 ---
 title: Puja Das
 slug: 0421062347-puja-das
+aliases:
+- /authors/puja-das/
 first_name: Puja
 last_name: Das
 authors:

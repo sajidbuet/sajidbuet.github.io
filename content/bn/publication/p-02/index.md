@@ -5,11 +5,11 @@ authors:
 - Arnold Toppo
 - me
 - Urcan Guler
-- Zhaxylyk Kudyshev
+- Zhaxylyk A. Kudyshev
 - Joseph Pekny
 - Swati Pol
 - Harsha Reddy
-- Vladimir Shalaev
+- Vladimir M. Shalaev
 date: '2021-07-29'
 publishDate: '2026-05-02T15:32:11.395996Z'
 publication_types:

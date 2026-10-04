@@ -42,8 +42,16 @@
   {{ end }}
 {{ end }}
 
+{{ $hasProfileData := gt (len $profile) 0 }}
 {{ if not $profile }}
   {{ $profile = partial "functions/get_author_profile" (dict "slug" $slug) }}
+{{ end }}
+
+{{/* Co-authors without a profile: show the name as written on their papers
+     (see functions/author_term_name), not the humanised slug. */}}
+{{ $displayName := or $profile.title $profile.name.display }}
+{{ if not $hasProfileData }}
+  {{ $displayName = partial "functions/author_term_name" . }}
 {{ end }}
 
 {{ $avatar := "" }}
@@ -95,7 +103,7 @@
      author page was invisible to the search box. */}}
 <section class="max-w-6xl mx-auto px-6 py-10" data-pagefind-body>
 
-  {{ partial "breadcrumbs.html" (dict "page" . "label" (or $profile.title .Title .Data.Term)) }}
+  {{ partial "breadcrumbs.html" (dict "page" . "label" (or $displayName .Title .Data.Term)) }}
 
   {{/* TEMP DEBUG: remove after testing 
   <div class="mb-4 rounded-lg border border-yellow-300 bg-yellow-50 px-4 py-3 text-sm text-yellow-900">
@@ -147,7 +155,7 @@
               src="{{ $avatarSrc }}"
               width="176"
               height="176"
-              alt="{{ or $profile.title $profile.name.display }}"
+              alt="{{ $displayName }}"
               loading="lazy"
             />
           {{ else }}
@@ -158,7 +166,7 @@
 
           <div class="mt-5 space-y-2">
             <h1 class="text-3xl sm:text-4xl font-bold leading-tight">
-              {{ or $profile.title $profile.name.display }}
+              {{ $displayName }}
             </h1>
 
             {{ with $profile.role }}

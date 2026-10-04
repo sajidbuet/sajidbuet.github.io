@@ -20,7 +20,10 @@ version that existed before it:
   links     merged by `name`: BibTeX entries win, extra hand-added links stay
   doi       always stored as `hugoblox.ids.doi` (top-level `doi` is deprecated
             in HugoBlox v0.11 and renders broken scheme-less links)
-  authors   leading/trailing whitespace stripped
+  authors   leading/trailing whitespace stripped, then each spelling listed in
+            data/author_aliases.yaml replaced by its canonical identity
+            (a profile slug or one canonical name), so a person gets one
+            /authors/ page however the paper printed their name
 
 Pages whose merged content is unchanged are restored byte-for-byte, so a
 re-import only touches papers whose BibTeX actually changed.
@@ -57,7 +60,10 @@ OWNER_NAMES = [
     r"Choudhury, Sajid Muhaimin",
     r"Sajid Choudhury",
     r"S\. M\. Choudhury",
+    r"\bSM Choudhury\b",
 ]
+# Every other person: spelling -> canonical identity (see the file's header).
+AUTHOR_ALIASES_FILE = REPO_ROOT / "data" / "author_aliases.yaml"
 # Importer-generated keys whose hand-set value must survive a re-import.
 STICKY = {"publishDate", "featured"}
 
@@ -103,14 +109,44 @@ def link_key(link: Any) -> Any:
     return link.get("name") if isinstance(link, dict) else link
 
 
+def load_author_aliases(path: Path = AUTHOR_ALIASES_FILE) -> dict[str, str]:
+    """Return {spelling: canonical} from data/author_aliases.yaml."""
+    if not path.is_file():
+        return {}
+    data = YAML(typ="safe").load(path.read_text(encoding="utf-8")) or {}
+    aliases: dict[str, str] = {}
+    for canonical, spellings in data.items():
+        if str(canonical).startswith("_"):          # e.g. _not_mapped
+            continue
+        for spelling in spellings or []:
+            spelling = str(spelling).strip()
+            if aliases.get(spelling, canonical) != canonical:
+                raise ValueError(f"{path.name}: '{spelling}' is listed under both "
+                                 f"'{aliases[spelling]}' and '{canonical}'")
+            aliases[spelling] = str(canonical)
+    return aliases
+
+
+AUTHOR_ALIASES = load_author_aliases()
+
+
+def canonical_author(name: Any) -> Any:
+    if not isinstance(name, str):
+        return name
+    name = name.strip()
+    return AUTHOR_ALIASES.get(name, name)
+
+
 def strip_authors(fm: dict) -> bool:
+    """Trim author names and map them to their canonical identity, in place."""
     authors = fm.get("authors")
     if not isinstance(authors, list):
         return False
     changed = False
     for i, a in enumerate(authors):
-        if isinstance(a, str) and a != a.strip():
-            authors[i] = str(a).strip()
+        canonical = canonical_author(a)
+        if canonical != a:
+            authors[i] = canonical
             changed = True
     return changed
 
@@ -148,7 +184,7 @@ def merge(base: dict, new: dict) -> list[str]:
             new_keys = {link_key(l) for l in value}
             value = list(value) + [l for l in base["links"] if link_key(l) not in new_keys]
         if key == "authors" and isinstance(value, list):
-            value = [str(a).strip() if isinstance(a, str) else a for a in value]
+            value = [canonical_author(a) for a in value]
         if base.get(key) != value:
             base[key] = value
             changed.append(key)
@@ -217,6 +253,38 @@ def postprocess(pub_dir: Path, before: dict[Path, bytes]) -> dict[str, int]:
     return counts
 
 
+BIB_ENTRY = re.compile(r"@\w+\s*\{\s*([^,\s]+)\s*,(.*?)\n\}", re.S)
+BIB_AUTHOR = re.compile(r"(?m)^(\s*author\s*=\s*)\{(.*)\},?\s*$")
+
+
+def bib_authors(bib: Path) -> dict[str, str]:
+    """{citation key (lower case): author field as written in the .bib}."""
+    out = {}
+    for key, body in BIB_ENTRY.findall(bib.read_text(encoding="utf-8")):
+        m = BIB_AUTHOR.search(body)
+        if m:
+            out[key.lower()] = m.group(2)
+    return out
+
+
+def restore_cite_bib(pub_dir: Path, authors: dict[str, str]) -> int:
+    """`academic` writes each cite.bib from the personalised .bib, so the owner
+    appears as the author "me" in every downloadable citation. Put the author
+    field back exactly as cv/papers.bib has it."""
+    fixed = 0
+    for path in pub_dir.glob("*/cite.bib"):
+        text, newline = read_text(path)
+        m = BIB_ENTRY.search(text)
+        original = authors.get(m.group(1).lower()) if m else None
+        if original is None:
+            continue
+        new = BIB_AUTHOR.sub(lambda a: f"{a.group(1)}{{{original}}},", text, count=1)
+        if new != text:
+            write_text(path, new, newline)
+            fixed += 1
+    return fixed
+
+
 def personalise_bib(bib: Path, dest: Path) -> int:
     text = bib.read_text(encoding="utf-8")
     total = 0
@@ -258,6 +326,7 @@ def main() -> int:
             finally:
                 # Merge even after a failed import so partially rewritten pages are repaired.
                 c = postprocess(pub_dir, before)
+                restore_cite_bib(pub_dir, bib_authors(args.bib))
                 cprint(f"✅ {pub_dir.name}: {c['updated']} updated, {c['new']} new, "
                        f"{c['unchanged']} unchanged (hand edits preserved)", GREEN)
     return 0

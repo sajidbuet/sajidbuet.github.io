@@ -1,6 +1,8 @@
 ---
 title: Purbayan Das
 slug: 0421062341-purbayan-das
+aliases:
+- /authors/purbayan-das/
 first_name: Purbayan
 last_name: Das
 authors:

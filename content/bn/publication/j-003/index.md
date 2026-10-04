@@ -1,12 +1,12 @@
 ---
 title: Phased Array Synthesis Using Modified Particle Swarm Optimization
 authors:
-- MA Zaman
-- SA Mamun
-- Md Gaffar
-- SM Choudhury
-- Md M Alam
-- Md Matin
+- Mohammad Asif Zaman
+- Sayed Ashraf Mamun
+- Md. Gaffar
+- me
+- Md Mushfiqul Alam
+- Md. Abdul Matin
 date: '2011-01-01'
 publishDate: '2026-05-02T15:32:10.820782Z'
 publication_types:

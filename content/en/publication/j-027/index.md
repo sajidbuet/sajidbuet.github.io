@@ -2,7 +2,7 @@
 title: 'Tailoring electronic and optoelectronic properties of 2D-SiC via defects and
   doping: a first-principles study toward efficient white light-emitting diodes'
 authors:
-- Md. Mahfuzul Haque
+- a-0421062305-md-mahfuzul-haque
 - me
 date: '2025-01-01'
 publishDate: '2026-09-01T16:20:40.675308Z'

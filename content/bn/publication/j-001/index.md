@@ -3,11 +3,11 @@ title: Approximate Closed-Form Expression of the Electric Field of a Conical Hor
   Antenna
 authors:
 - Mohammad Asif Zaman
-- Md Gaffar
+- Md. Gaffar
 - Md Mushfiqul Alam
 - Sayed Ashraf Mamun
 - me
-- MA Matin
+- Md. Abdul Matin
 date: '2011-01-01'
 publishDate: '2026-05-02T15:32:10.778271Z'
 publication_types:

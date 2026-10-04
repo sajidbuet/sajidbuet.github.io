@@ -2,7 +2,7 @@
 title: Design and Performance Analysis of a c-Si Thin-Film Solar Cell Using Plasmonic
   Ag Nanostructures
 authors:
-- Soikot Sarkar
+- a-0422062353-soikot
 - me
 date: '2023-01-01'
 publishDate: '2026-09-01T16:20:40.057452Z'

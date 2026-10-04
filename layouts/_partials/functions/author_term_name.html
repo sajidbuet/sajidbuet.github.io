@@ -1,0 +1,22 @@
+{{/* Name of an authors-taxonomy term exactly as written in front matter.
+
+     Input: the term page. Hugo title-cases term titles, and HugoBlox's
+     get_author_profile falls back to the humanised slug, so neither keeps
+     "Alexander V. Kildishev" or "Andrea Alù" intact. Read the spelling back
+     from the first page that lists the term instead. */}}
+{{- $term := . -}}
+{{- $key := $term.Data.Term | urlize -}}
+{{- $name := $term.LinkTitle -}}
+{{- $found := false -}}
+{{- range $term.Pages -}}
+  {{- if not $found -}}
+    {{- range .Params.authors -}}
+      {{- $a := . | strings.TrimSpace -}}
+      {{- if and (not $found) (eq ($a | urlize) $key) -}}
+        {{- $name = $a -}}
+        {{- $found = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $name -}}

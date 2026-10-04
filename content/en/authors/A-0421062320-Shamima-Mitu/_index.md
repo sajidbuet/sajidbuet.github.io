@@ -1,6 +1,8 @@
 ---
 title: Shamima Akter Mitu
 slug: a-0421062320-shamima-mitu
+aliases:
+- /authors/shamima-akter-mitu/
 first_name: Shamima
 last_name: Akter Mitu
 authors:

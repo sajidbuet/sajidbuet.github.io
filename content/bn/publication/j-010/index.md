@@ -4,11 +4,11 @@ title: Enhancing sensitivity to ambient refractive index with tunable few-layer 
 authors:
 - Huan Jiang
 - me
-- Zhaxylyk A Kudyshev
+- Zhaxylyk A. Kudyshev
 - Di Wang
 - Peng Xiao
 - Yongyuan Jiang
-- Alexander V Kildishev
+- Alexander V. Kildishev
 date: '2019-01-01'
 publishDate: '2026-05-02T15:32:10.967362Z'
 publication_types:

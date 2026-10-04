@@ -2,7 +2,7 @@
 title: Effect of FSS ground plane on second iteration of hexaflake fractal patch antenna
 authors:
 - me
-- M. A. Matin
+- Md. Abdul Matin
 date: '2012-01-01'
 publishDate: '2026-05-02T15:32:10.388303Z'
 publication_types:

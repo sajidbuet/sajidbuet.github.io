@@ -3,7 +3,7 @@ title: A Polarization Insensitive Achromatic Metalens Operating at Two Wavelengt
   in Visible Regime
 authors:
 - Kushol Roy Pritom
-- Md. Ehsanul Karim
+- a-0422062302-md-ehsanul-karim
 - me
 date: '2023-01-01'
 publishDate: '2026-09-01T16:20:40.041757Z'

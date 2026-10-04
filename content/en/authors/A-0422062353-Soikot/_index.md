@@ -1,6 +1,8 @@
 ---
 title: Soikot Sarkar
 slug: a-0422062353-soikot
+aliases:
+- /authors/soikot-sarkar/
 first_name: Soikot
 last_name: Sarkar
 authors:

@@ -5,9 +5,9 @@ authors:
 - Di Wang
 - Krishnakali Chaudhuri
 - Clayton DeVault
-- Alexander V Kildishev
+- Alexander V. Kildishev
 - Alexandra Boltasseva
-- Vladimir M Shalaev
+- Vladimir M. Shalaev
 date: '2018-01-01'
 publishDate: '2026-09-01T16:20:40.333725Z'
 publication_types:

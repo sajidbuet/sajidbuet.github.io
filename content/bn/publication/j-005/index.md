@@ -5,8 +5,8 @@ authors:
 - me
 - Clayton DeVault
 - Yang Zhao
-- Alexander V Kildishev
-- Vladimir M Shalaev
+- Alexander V. Kildishev
+- Vladimir M. Shalaev
 - Andrea Alù
 - Alexandra Boltasseva
 date: '2016-01-01'

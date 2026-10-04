@@ -1,6 +1,9 @@
 ---
 title: Md. Ehsanul Karim
 slug: a-0422062302-md-ehsanul-karim
+aliases:
+- /authors/ehsanul-karim/
+- /authors/md.-ehsanul-karim/
 first_name: Md.
 last_name: Ehsanul Karim
 authors:

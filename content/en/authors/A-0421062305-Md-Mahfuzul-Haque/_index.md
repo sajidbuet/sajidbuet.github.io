@@ -1,6 +1,9 @@
 ---
 title: Md. Mahfuzul Haque
 slug: a-0421062305-md-mahfuzul-haque
+aliases:
+- /authors/md-mahfuzul-haque/
+- /authors/md.-mahfuzul-haque/
 first_name: Md.
 last_name: Mahfuzul Haque
 authors:

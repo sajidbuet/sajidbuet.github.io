@@ -1,7 +1,7 @@
 ---
 title: Synergizing Deep Learning and Topology Optimization for Tunable Meta-lens Design
 authors:
-- Sajid Muhaimin Choudhury
+- me
 date: '2024-04-01'
 start_date: '2024-04-01'
 end_date: '2025-10-01'
