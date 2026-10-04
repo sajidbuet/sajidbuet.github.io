@@ -46,6 +46,8 @@ owner decision) · **EXTERNAL** (could not verify externally) · **OPTIONAL** (f
 Additional problems found and fixed while working:
 - All 122 `cite.bib` downloads listed the owner as author "me" (importer side effect).
 - `papers.bib` J019 carried J020's abstract; replaced with the Crossref abstract.
+- `papers.bib` J014 had a different title from its published one; corrected to the
+  title Crossref (10.1016/j.sbsr.2021.100429) and Google Scholar both give.
 - `/bn/research/quantum/` listed photonics papers (wrong tag filter).
 
 ## Owner decisions
@@ -58,10 +60,13 @@ Resolved by the owner (2026-10-04):
   recorded under `_not_mapped` in `data/author_aliases.yaml`.
 - **`pop8query.exe` / `pop8metrics.exe`** stay tracked for now; the owner
   plans an open-source replacement.
+- **Google Scholar keys:** the owner corrected C028's key (`WbkHhVStYXYC`).
+  Every key in `papers.bib` was then checked against `cv/PoPCites.csv`: no
+  duplicates; 55 titles match their Scholar record.
 
 Still open:
-1. **Google Scholar key shared by C025 and C028** (`citation_for_view=…:SP6oXDckpogC`); one of them is wrong, so citation counts may be attributed to the wrong paper.
-2. **CV PDFs.** Not rebuilt: local MiKTeX lacks `unicode-math` (and possibly the Libertinus fonts). After installing, run `.\make-all.ps1 -Cv -CvCompileOnly` so the CVs pick up C3, M12 and J019.
+1. **CV PDFs.** Not rebuilt. `unicode-math` is now installed; the build stops at the Libertinus fonts (`LibertinusSerif-Regular.otf` not found; MiKTeX package `libertinus-fonts`). After installing, run `.\make-all.ps1 -Cv -CvCompileOnly` so the CVs pick up C3, M12, J014 and J019.
+2. **C014's Scholar key** (`Se3iqnhoufwC`) is not in the current `PoPCites.csv` export (perhaps merged on Scholar), so its citation count is not updated.
 3. **GitHub Pages "Enforce HTTPS"** is off (`https_enforced: false`).
 
 ## Optional follow-up

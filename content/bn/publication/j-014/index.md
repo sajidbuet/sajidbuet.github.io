@@ -1,5 +1,6 @@
 ---
-title: A Review on Plasmonic Nano-biosensors for Virus Detection with a Focus on Coronavirus
+title: A Review on Plasmonic and Metamaterial Based Biosensing Platforms for Virus
+  Detection
 authors:
 - Mohammad Muntasir Hassan
 - Farhan Sadik Sium
