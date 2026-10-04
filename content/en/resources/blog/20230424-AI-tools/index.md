@@ -42,9 +42,9 @@ https://typeset.io/
 
 ## For taking notes:
 
-### [Lateral](https://www.lateral.io/)
+### Lateral
 A unique app that helps you find common themes across multiple research papers — in minutes.
-https://www.lateral.io/
+_Lateral (lateral.io) is no longer online._
 
 ### [ClioVis](https://cliovis.com/)
 Not an AI-powered app but still much better than many available tools. I am using it for my current research project.

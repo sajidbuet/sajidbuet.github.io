@@ -14,7 +14,7 @@ I used to be a photography enthusiast with my Nikon D5100. Now, mostly I would j
 I taught my self to play guitar and still trying to improve my skills. I try to tab different Bangla songs as I learn them and upload them online. [Ultimate Guitar <i class="fa fa-music"></i>](https://www.ultimate-guitar.com/u/sajidmc) | [YouTube <i class="fa fa-youtube"></i>](https://www.youtube.com/user/barbaricattax)
 
 ## Website Development
-I also like to hack PHP and html files for web development. I had created the new version of the [Department of EEE](https://eee.buet.ac.bd) website with Joomla. [Bangladesh Academy of Sciences](https://www.bas.org.bd/credits), [Purdue BDSA](https://www.bdsapurdue.org), [Nanotechnology Student Advisory Council](https://engineering.purdue.edu/NSAC) are some of the websites that I made. My current website is based on [PicoCMS](https://picocms.org/).
+I also like to hack PHP and html files for web development. I had created the new version of the [Department of EEE](https://eee.buet.ac.bd) website with Joomla. [Bangladesh Academy of Sciences](https://www.bas.org.bd/), [Purdue BDSA](http://www.bdsapurdue.org), [Nanotechnology Student Advisory Council](https://engineering.purdue.edu/NSAC) are some of the websites that I made. My current website is based on [PicoCMS](https://picocms.org/).
 
 Currently, I maintain the following web projects:
 
