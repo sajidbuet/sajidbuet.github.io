@@ -13,13 +13,18 @@
 #                                    exported manually (Tampermonkey fallback) #
 #   .\latexrun.ps1 -SkipCitations    compile only (skip Steps 1–5)             #
 #   .\latexrun.ps1 -KeepAux          keep .aux/.bbl/.log etc. for debugging    #
+#   .\latexrun.ps1 -ShowToolOutput   also print LuaLaTeX/Biber output here     #
+#                                                                              #
+# LuaLaTeX and Biber output goes to latexrun.log (next to this script, reset   #
+# on every run); on a failure the error lines are printed with its path.       #
 ###############################################################################
 
 [CmdletBinding()]
 param(
     [switch]$SkipCitations,
     [switch]$UseExistingCsv,
-    [switch]$KeepAux
+    [switch]$KeepAux,
+    [switch]$ShowToolOutput
 )
 
 # ─── Console prep: force UTF-8 so emojis render in Windows PowerShell 5 ──────
@@ -51,6 +56,7 @@ $metricsCsv     = 'PoPMetrics.csv'
 $authYearCsv    = 'PoPAuthYear.csv'
 $texBaseNames   = @($texFiles | ForEach-Object { [IO.Path]::GetFileNameWithoutExtension($_) })
 $auxExtensions  = 'aux','bbl','bcf','blg','run.xml','out','toc','fls','fdb_latexmk','synctex.gz'
+$toolLog        = 'latexrun.log'       # LuaLaTeX + Biber console output (ignored by *.log)
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 function Stop-Build([string]$Message) {
@@ -65,6 +71,27 @@ function Invoke-Tool([string]$Name, [string]$Exe, [string[]]$Arguments) {
     $ErrorActionPreference = 'Continue'
     & $Exe @Arguments
     if ($LASTEXITCODE -ne 0) { Stop-Build "$Name failed (exit code $LASTEXITCODE)." }
+}
+
+# Like Invoke-Tool, but the program's output is appended to $toolLog instead of
+# the console (unless -ShowToolOutput). On failure, the error lines from this
+# step are printed so the cause is visible without opening the log.
+function Invoke-LoggedTool([string]$Name, [string]$Exe, [string[]]$Arguments) {
+    $ErrorActionPreference = 'Continue'
+    "`n===== $Name : $Exe $($Arguments -join ' ') =====" | Out-File -LiteralPath $toolLog -Append -Encoding utf8
+    $output = & $Exe @Arguments 2>&1 | ForEach-Object { "$_" }
+    $code = $LASTEXITCODE
+    $output | Out-File -LiteralPath $toolLog -Append -Encoding utf8
+    if ($ShowToolOutput) { $output | Write-Host }
+    if ($code -ne 0) {
+        # TeX errors ("! ..." or "file:line: ..." with -file-line-error), Lua
+        # errors ("[\directlua]:1: module ... not found") and Biber "ERROR - ...";
+        # warnings (e.g. biblatex's first-pass "Type ... not found") are skipped.
+        $errors = @($output | Select-String -Pattern '^!|:\d+:|\bERROR\b|\berror\b' |
+                    Where-Object { $_.Line -notmatch 'Warning' } | Select-Object -Last 15)
+        foreach ($line in $errors) { Write-Host "    $($line.Line)" -ForegroundColor $ErrColor }
+        Stop-Build "$Name failed (exit code $code). Full output: $(Join-Path $PWD $toolLog)"
+    }
 }
 
 function Assert-Command([string]$Name) {
@@ -206,7 +233,7 @@ Assert-Command 'biber'
 
 # Every file the run reads or (over)writes must not be open in Excel, a PDF
 # viewer, etc. — Excel's lock even stops pop8metrics from READING a CSV.
-$lockCheck = @($bibFile) + @($texBaseNames | ForEach-Object { "$_.pdf", "$_.log" })
+$lockCheck = @($bibFile, $toolLog) + @($texBaseNames | ForEach-Object { "$_.pdf", "$_.log" })
 if (-not $SkipCitations) {
     $lockCheck += @($citesCsv, $citesCsvNew, $metricsCsv, $authYearCsv, 'metrics.tex', 'update_citations_py.log')
 }
@@ -258,6 +285,9 @@ if (-not $SkipCitations) {
     Write-Host "✅  $authYearCsv is current (last year: $lastYear)." -ForegroundColor $Good
 }
 Write-Host ''
+
+# Fresh tool log for this run.
+"latexrun.ps1 — $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" | Out-File -LiteralPath $toolLog -Encoding utf8
 
 # ═════════════════════ 1️⃣  Update citation CSVs ════════════════════════════
 if (-not $SkipCitations) {
@@ -354,13 +384,13 @@ foreach ($texBaseName in $texBaseNames) {
     $latexArgs  = $latexOpts + $texFile
 
     Write-Host '🖨️   lualatex — first pass' -ForegroundColor $Info
-    Invoke-Tool "lualatex ($texBaseName, pass 1)" 'lualatex' $latexArgs
+    Invoke-LoggedTool "lualatex ($texBaseName, pass 1)" 'lualatex' $latexArgs
     Write-Host '🔗  biber bibliography pass' -ForegroundColor $Info
-    Invoke-Tool "biber ($texBaseName)" 'biber' @($texBaseName)
+    Invoke-LoggedTool "biber ($texBaseName)" 'biber' @($texBaseName)
     Write-Host '🔄  lualatex — second pass' -ForegroundColor $Info
-    Invoke-Tool "lualatex ($texBaseName, pass 2)" 'lualatex' $latexArgs
+    Invoke-LoggedTool "lualatex ($texBaseName, pass 2)" 'lualatex' $latexArgs
     Write-Host '🔄  lualatex — third pass' -ForegroundColor $Info
-    Invoke-Tool "lualatex ($texBaseName, pass 3)" 'lualatex' $latexArgs
+    Invoke-LoggedTool "lualatex ($texBaseName, pass 3)" 'lualatex' $latexArgs
 
     # ═════════════════ 5️⃣  Verify output PDF ═══════════════════════════════
     if ((Test-Path -LiteralPath $pdfFile) -and (Get-Item -LiteralPath $pdfFile).LastWriteTime -ge $buildStart) {
@@ -382,6 +412,7 @@ foreach ($texBaseName in $texBaseNames) {
 }
 
 Write-Host ''
+Write-Host "📄  LuaLaTeX/Biber output: $(Join-Path $PWD $toolLog)" -ForegroundColor $Info
 Write-Host '🎉  End of LaTeX run. Have a productive day!' -ForegroundColor $Step
 
 } finally {
