@@ -267,46 +267,35 @@ sections:
       view: card
       columns: 1
 
+  # Same organisations as the English homepage partners block
+  # (English _index.md). Do not add organisations here that are not there.
   - block: logos
+    id: partners
     content:
-      title: Collaborators & Partners
-      subtitle: Leading the way together
-      text: We work with top universities, research institutes, and industry leaders to advance scientific discovery
+      title: সহযোগী প্রতিষ্ঠান
+      subtitle: ''
+      text: ''
       logos:
-        - name: MIT
-          image: partners/placeholder-logo.svg
-          url: https://mit.edu
+        - name: BUET
+          image: partners/BUET_LOGO.svg
+          url: https://eee.buet.ac.bd
           external: true
-          description: Massachusetts Institute of Technology
-        - name: Stanford University
-          image: partners/placeholder-logo.svg
-          url: https://stanford.edu
+          description: বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয় (বুয়েট)
+        - name: Purdue University
+          image: partners/Purdue_University.svg
+          url: https://www.purdue.edu
           external: true
-          description: Stanford Research Collaboration
-        - name: Google Research
-          image: partners/placeholder-logo.svg
-          url: https://research.google
+          description: Purdue University
+        - name: BRAC University
+          image: partners/BRAC_University.svg
+          url: https://www.bracu.ac.bd
           external: true
-          description: AI & Machine Learning Partnership
-        - name: National Science Foundation
-          image: partners/placeholder-logo.svg
-          url: https://nsf.gov
+          description: ব্র্যাক বিশ্ববিদ্যালয়
+        - name: United International University
+          image: partners/UIU.svg
+          url: https://www.uiu.ac.bd
           external: true
-          description: Research Funding Partner
-        - name: Microsoft Research
-          image: partners/placeholder-logo.svg
-          url: https://www.microsoft.com/research
-          external: true
-          description: Computing Research Collaboration
-        - name: NIH
-          image: partners/placeholder-logo.svg
-          url: https://nih.gov
-          external: true
-          description: National Institutes of Health
-      cta:
-        text: Become a Partner
-        url: /#contact
-        icon: hero/user-plus
+          description: ইউনাইটেড ইন্টারন্যাশনাল ইউনিভার্সিটি
     design:
       display_mode: grid
       show_pattern: false

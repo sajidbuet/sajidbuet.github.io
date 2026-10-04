@@ -23,16 +23,16 @@ abstract: Metasurfaces have become a cornerstone of flat optics, enabling precis
   states with distinct refractive indices. However, the strong optical absorption
   of crystalline GST in the visible to near-infrared range has hindered its widespread
   use in reconfigurable metalenses. In this study, we design an all-dielectric polarization-insensitive
-  metasurface based on hybrid Si&#x2013;GST nanostructures to realize a dynamically
-  tunable bifocal metalens operating at 1.55&#xB5;m. The device achieves a variable
-  focal length from 70 to 200&#xB5;m, with focusing efficiencies of 30% in the amorphous
-  state and 20% in the crystalline state, as validated through finite-difference time-domain
-  (FDTD) simulations. Using COMSOL Multiphysics, we show that flat-top laser excitation
-  enables uniform, reversible phase transitions within tens of nanoseconds, amorphization
-  in 8&#x00A0;ns and crystallization in 90&#x00A0;ns, without mechanical motion or
-  electrical bias. For next-generation metasurfaces intended for uses including beam
-  steering, dynamic holography, optical routing, multi-depth imaging, and optical
-  communication, this method shows great promise due to its control and stability.
+  metasurface based on hybrid Si–GST nanostructures to realize a dynamically tunable
+  bifocal metalens operating at 1.55µm. The device achieves a variable focal length
+  from 70 to 200µm, with focusing efficiencies of 30% in the amorphous state and 20%
+  in the crystalline state, as validated through finite-difference time-domain (FDTD)
+  simulations. Using COMSOL Multiphysics, we show that flat-top laser excitation enables
+  uniform, reversible phase transitions within tens of nanoseconds, amorphization
+  in 8 ns and crystallization in 90 ns, without mechanical motion or electrical bias.
+  For next-generation metasurfaces intended for uses including beam steering, dynamic
+  holography, optical routing, multi-depth imaging, and optical communication, this
+  method shows great promise due to its control and stability.
 tags:
 - photonics
 links:

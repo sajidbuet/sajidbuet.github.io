@@ -1,6 +1,6 @@
 ---
-title: DFT Analysis of Strain Effect in Bilayer 2D-SiC on Electrical, Optical, Phonon,
-  and Thermodynamic Properties
+title: Half-Adder and Full-Adder Implementation with Continuous Variable Quantum Gates
+  in a Photonic Quantum Computer
 authors:
 - Md Al Shahriar Shakil
 - me

@@ -13,7 +13,7 @@ publication_types:
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'
 hugoblox:
   ids:
-    doi: 10.1109/PIERS-Spring66516.2025.11276753
+    doi: 10.1109/PIERS-Spring66516.2025.11276528
 tags:
 - photonics
 ---
