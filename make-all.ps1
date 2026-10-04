@@ -134,8 +134,15 @@ function Invoke-HugoBuild {
     Write-Step '🚀  Step 4: hugo --gc --minify (clean public\) + pagefind'
     Assert-Command 'hugo' 'Install Hugo extended (see HUGO_VERSION in .github/workflows/publish.yaml).'
     Assert-Command 'npx'  'Install Node.js (needed for the pagefind search index).'
-    Invoke-Tool 'hugo' 'hugo' @('--gc', '--minify', '--cleanDestinationDir')
+    # Build output is kept in hugo-build.log (ignored by *.log) so the checker
+    # can fail on "Duplicate target paths", exactly as CI does.
+    $global:LASTEXITCODE = 0
+    $ErrorActionPreference = 'Continue'   # Windows PowerShell 5 turns redirected stderr (WARN lines) into errors
+    & hugo --gc --minify --cleanDestinationDir --printPathWarnings --printI18nWarnings 2>&1 | Tee-Object -FilePath 'hugo-build.log'
+    if ($LASTEXITCODE -ne 0) { throw "hugo failed (exit code $LASTEXITCODE)." }
     Invoke-Tool 'pagefind' 'npx' @('--yes', $PagefindPkg, '--site', 'public')
+    Write-Step '🔎  Step 4b: Site integrity checks (_pythonscripts\check_site.py, same as CI)'
+    Invoke-Tool 'check_site.py' 'python' @('_pythonscripts\check_site.py', '--public', 'public', '--build-log', 'hugo-build.log')
     Write-Host '✅  Site built in public\.' -ForegroundColor $Good
 }
 

@@ -107,6 +107,9 @@ module:
     extended: true
   imports:
     - path: github.com/HugoBlox/kit/modules/analytics
+  # LOCAL PATCH (sajid.bd, 2026-10-04 audit M7): mount filters use `files`
+  # (Hugo >= 0.153) instead of the deprecated `includeFiles`. Same globs.
+  # Re-apply if this module is re-vendored at v0.11.0.
   mounts:
     - source: content
       target: content
@@ -129,13 +132,13 @@ module:
     # BLOX A) Server-rendered block templates (Go HTML)
     - source: blox
       target: layouts/_partials/hbx/blocks
-      includeFiles:
+      files:
         - '**/block.html'
 
     # BLOX B) Client islands (compiled with js.Build/js.Batch)
     - source: blox
       target: assets/js/hbx/blocks
-      includeFiles:
+      files:
         - '**/*.js'
         - '**/*.ts'
         - '**/*.jsx'
@@ -144,7 +147,7 @@ module:
     # BLOX C) Block-specific CSS
     - source: blox
       target: assets/css/hbx/blocks
-      includeFiles:
+      files:
         - '**/*.css'
 
     # BLOX D) Shared assets (optional)
@@ -154,7 +157,7 @@ module:
       target: assets/css/hbx/shared
     - source: blox
       target: assets/img/hbx/blocks
-      includeFiles:
+      files:
         - '**/*.png'
         - '**/*.jpg'
         - '**/*.jpeg'

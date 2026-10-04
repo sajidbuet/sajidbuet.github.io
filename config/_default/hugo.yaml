@@ -47,7 +47,9 @@ disableAliases: false
 #permalinks:
 #  authors: '/people/:slug/'
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
+  # headers/redirects (Netlify _headers/_redirects) removed: GitHub Pages
+  # ignores them. Redirects are Hugo alias pages (disableAliases: false).
+  home: [HTML, RSS, backlinks]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
