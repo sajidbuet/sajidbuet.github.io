@@ -1,5 +1,5 @@
 ---
-title: Mahfuz Defends Final
+title: Mahfuzul Haque Defends MSc Thesis
 date: 2025-03-19
 image:
   focal_point: 'top'

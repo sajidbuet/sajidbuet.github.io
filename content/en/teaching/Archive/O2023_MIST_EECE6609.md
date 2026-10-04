@@ -1,7 +1,7 @@
 ---
-Title: EECE 6609 (MIST) Nano Systems  (October 2023)
-Placing: 20
-Icon: book
+title: EECE 6609 (MIST) Nano Systems  (October 2023)
+placing: 20
+icon: book
 publishDate: '2023-10-01T00:00:00Z'  
 ---
 

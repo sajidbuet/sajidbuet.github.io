@@ -1,7 +1,7 @@
 ---
-Title: EEE Courses before Fall 2013
-Placing: 20
-Icon: book
+title: EEE Courses before Fall 2013
+placing: 20
+icon: book
 publishDate: '2013-10-01T00:00:00Z'
 
 ---

@@ -155,7 +155,7 @@ function New-PublicZip {
 # ─── Main ────────────────────────────────────────────────────────────────────
 Write-Host ' HUGO Blox SajidLab'                -ForegroundColor $Info
 Write-Host '🔧  Full Content Toolchain'         -ForegroundColor $Step
-Write-Host '🌐  https://www.sajid.org.bd'       -ForegroundColor $Info
+Write-Host '🌐  https://www.sajid.bd'       -ForegroundColor $Info
 
 Push-Location $PSScriptRoot            # all paths above are relative to the repo root
 try {

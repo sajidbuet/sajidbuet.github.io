@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20260124-citation-count/
-Title: Getting Citation Count - From Publish or Perish to TamperMonkey
-Placing: 7
+title: Getting Citation Count - From Publish or Perish to TamperMonkey
+placing: 7
 icon: users
 description: Get citation count from google scholar articles.
 date: '2025-05-11'

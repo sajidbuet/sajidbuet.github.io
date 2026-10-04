@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20230424-ai-tools/
-Title: AI Tools to Make an Academic's Life Easy
-Placing: 7
+title: AI Tools to Make an Academic's Life Easy
+placing: 7
 icon: users
 description: Here is a nice list of AI tools especially for an academic
 date: '2023-04-24'

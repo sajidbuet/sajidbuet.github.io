@@ -133,7 +133,7 @@ sections:
     
     - batch: "2015"
       students:
-        - name: "Ayon Sarkar"
+        - name: "Ayon Sarker"
           year: "2021"
           title: "Structurally Tunable Gear-Shaped Plasmonic Sensor"
           note: "Faculty Member, BRAC University"

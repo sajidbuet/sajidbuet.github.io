@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20250511-ct-admin/
-Title: Dr. Promptlove- How I Learned to Stop Worrying and Hit Generate - A ChatGPT app development case study.
-Placing: 7
+title: Dr. Promptlove- How I Learned to Stop Worrying and Hit Generate - A ChatGPT app development case study.
+placing: 7
 icon: users
 description: How I Learned to Stop Worrying and Love the A.I.
 date: '2025-05-11'

@@ -10,7 +10,7 @@ grant_position: 'Principal Investigator'
 funding_award_amount: '14,00,000 BDT'
 funding_agency: 'BUET'
 funding_agency_address: 'Dhaka, Bangladesh'
-funding_agency_url: 'https://rise.buet.ac.bd'
+funding_agency_url: 'https://www.buet.ac.bd'
 publishDate: '2025-04-24T19:14:18.867342Z'
 tags:
 - misc

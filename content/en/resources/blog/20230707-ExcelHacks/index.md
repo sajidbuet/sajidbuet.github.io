@@ -1,12 +1,12 @@
 ---
 aliases:
   - /outreach/blog/20230707-excelhacks/
-Title: Excel Hacks 
-Placing: 7
+title: Excel Hacks 
+placing: 7
 icon: users
 description: List of tips, tricks and functions to use Excel
 date: '2023-07-07'
-Template: blog
+template: blog
 ---
 
 The more senior one gets, probably more useful Word and Excel becomes. It is helpful to quickly search Google to find a correct answer to a problem, but sometimes the first result points to a StackOverflow thread where someone simply says "Why don't you google it?". So, I am posting this blog article to make life easy for me (as well as whoever stumbles onto my website). It would be some helpful macros and functions that I find useful. Some of the functions should also work with Google Sheets without modification.

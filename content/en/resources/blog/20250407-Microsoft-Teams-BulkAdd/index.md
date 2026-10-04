@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20250407-microsoft-teams-bulkadd/
-Title: Bulk Add Users to Microsoft Teams Using PowerShell
-Placing: 7
+title: Bulk Add Users to Microsoft Teams Using PowerShell
+placing: 7
 icon: users
 description: Bulk Add in Microsoft Teams with Powershell
 date: '2025-04-05'

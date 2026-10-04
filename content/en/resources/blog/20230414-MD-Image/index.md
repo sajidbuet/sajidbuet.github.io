@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20230414-md-image/
-Title: Including Images in Markdown
-Placing: 7
+title: Including Images in Markdown
+placing: 7
 icon: users
 description: How to include vector images in markdown
 date: '2023-04-14'

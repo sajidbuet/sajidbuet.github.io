@@ -1,8 +1,8 @@
 ---
 aliases:
   - /outreach/blog/20250427-microsoft-teams-biis-check/
-Title: Difference between Microsoft Teams Users and BIIS Registered Students
-Placing: 7
+title: Difference between Microsoft Teams Users and BIIS Registered Students
+placing: 7
 icon: users
 description: Bulk Add in Microsoft Teams with Powershell
 date: '2025-04-27'

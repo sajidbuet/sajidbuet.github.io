@@ -1,7 +1,7 @@
 ---
 aliases:
   - /outreach/scientific-typing/
-Title: Unicode Scientific Symbols Cheatsheet
+title: Unicode Scientific Symbols Cheatsheet
 summary: Greek letters, subscripts/superscripts, and a broad catalog of mathematical, logical, and operator symbols (Unicode).
 description: "A Unicode reference for scientific writing: the full Greek alphabet, subscripts, superscripts, mathematical operators, logic symbols and arrows, ready to paste into Markdown or HTML."
 weight: 20
