@@ -17,22 +17,12 @@ baseURL: 'https://www.sajid.bd/'
 ## LANGUAGE
 ############################
 
+# The languages themselves (content roots, codes, names) are defined only in
+# config/_default/languages.yaml.
 defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
-languages:
-  en:
-    languageCode: en-us
-    languageName: English
-    weight: 1
-    contentDir: content
-
-  bn:
-    languageCode: bn-BD
-    languageName: বাংলা
-    weight: 2
-    contentDir: content/bn
 ############################
 ## ADVANCED
 ############################

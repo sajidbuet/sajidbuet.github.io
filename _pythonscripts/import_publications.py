@@ -2,7 +2,7 @@
 """Import cv/papers.bib into the publication folders without losing hand edits.
 
 `academic import --overwrite --compact` regenerates every
-content/publication/<id>/index.md from its template. On its own that
+content/en/publication/<id>/index.md from its template. On its own that
 
   * drops every key it does not generate (featured, aliases, hugoblox,
     projects, image, summary, url_code, ...), and the Markdown body;
@@ -27,8 +27,8 @@ re-import only touches papers whose BibTeX actually changed.
 
 Usage
 -----
-    python import_publications.py                  # cv/papers.bib -> content/{,bn/}publication
-    python import_publications.py my.bib --out content/publication
+    python import_publications.py                  # cv/papers.bib -> content/{en,bn}/publication
+    python import_publications.py my.bib --out content/en/publication
 """
 from __future__ import annotations
 
@@ -231,7 +231,7 @@ def get_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Import a .bib into HugoBlox publication pages, keeping hand edits.")
     p.add_argument("bib", nargs="?", type=Path, default=REPO_ROOT / "cv" / "papers.bib")
     p.add_argument("--out", type=Path, action="append",
-                   help="Publication folder (repeatable; default: content/publication and content/bn/publication)")
+                   help="Publication folder (repeatable; default: content/en/publication and content/bn/publication)")
     return p.parse_args()
 
 
@@ -239,7 +239,7 @@ def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     args = get_args()
-    out_dirs = args.out or [REPO_ROOT / "content" / "publication", REPO_ROOT / "content" / "bn" / "publication"]
+    out_dirs = args.out or [REPO_ROOT / "content" / "en" / "publication", REPO_ROOT / "content" / "bn" / "publication"]
     if not args.bib.is_file():
         sys.exit(f"❌ BibTeX file not found: {args.bib}")
     academic = shutil.which("academic")

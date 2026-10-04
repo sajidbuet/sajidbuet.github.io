@@ -5,7 +5,7 @@ For every roster row (keyed by the `foldername` column) this writes:
 
   data/authors/<slug>.yaml                 author profile (hugoblox/author/v1)
   assets/media/authors/<slug>.<ext>        avatar, when a photo is found in --img-dir
-  content/authors/<foldername>/_index.md   term page; its Markdown body is shown
+  content/en/authors/<foldername>/_index.md   term page; its Markdown body is shown
                                            on the person's profile page
 
 <slug> is the lower-cased, hyphenated foldername — the key HugoBlox looks up
@@ -18,7 +18,7 @@ Usage
 -----
     python sync_authors.py                      # all-members.xlsx next to this script
     python sync_authors.py roster.xlsx --dry    # preview, write nothing
-    python sync_authors.py --only data          # skip content/authors/*/_index.md
+    python sync_authors.py --only data          # skip content/en/authors/*/_index.md
 
 Required columns: foldername, name.  Recognised optional columns:
   ApplicationID, Roll, Research Division, BSc Instituton, role, user_groups,
@@ -50,7 +50,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")
 RESERVED_SLUGS = {"admin", "me"}             # hand-maintained, never generated
-CONTENT_NON_MEMBER = {"admin", "me", "alumni"}  # content/authors subfolders that are not roster rows
+CONTENT_NON_MEMBER = {"admin", "me", "alumni"}  # content/en/authors subfolders that are not roster rows
 PLACEHOLDERS = {"-", "–", "—", "n/a", "na", "nan", "none"}
 
 # (column, icon) pairs for `links`; icon names follow data/authors/me.yaml.
@@ -238,7 +238,7 @@ def build_profile(m: Member, org: str) -> dict[str, Any]:
 
 
 def build_page(m: Member, org: str) -> str:
-    """content/authors/<foldername>/_index.md — front matter + "Information" list."""
+    """content/en/authors/<foldername>/_index.md — front matter + "Information" list."""
     given, family = m.given_family
     front = prune({
         "title": m.name,
@@ -382,7 +382,7 @@ def get_args() -> argparse.Namespace:
     p.add_argument("--img-dir", type=Path, default=SCRIPT_DIR / "photos", help="Source photos")
     p.add_argument("--data-dir", type=Path, default=REPO_ROOT / "data" / "authors")
     p.add_argument("--media-dir", type=Path, default=REPO_ROOT / "assets" / "media" / "authors")
-    p.add_argument("--pages-dir", type=Path, default=REPO_ROOT / "content" / "authors")
+    p.add_argument("--pages-dir", type=Path, default=REPO_ROOT / "content" / "en" / "authors")
     p.add_argument("--org", default="Dept. of EEE, BUET", help="Affiliation when the row has none")
     p.add_argument("--default-avatar", type=Path, help="Fallback image for members with no avatar at all")
     p.add_argument("--only", choices=("data", "pages"), help="Write only data/authors (+avatars) or only content pages")

@@ -89,7 +89,7 @@ that state change is information rather than decoration.
 | `layouts/_partials/hbx/blocks/hero-with-stats/block.html` | hero block that renders it |
 | `assets/css/homepage.css` | circuit styling, density tiers, states, dark mode, reduced motion |
 | `assets/js/sajid-hero-circuit.js` | domain activation, pulses, spotlight, viewport gate |
-| `content/_index.md` | hero copy and domain-independent content |
+| `content/en/_index.md` | hero copy and domain-independent content |
 
 QA drivers and recorded results: `docs/redesign/evidence/phase8-circuit-*.mjs`
 and the matching `.json` files.
@@ -141,7 +141,7 @@ Adopting this layout also puts a page into the site search: the body carries
 |---|---|
 | `layouts/_partials/article-toc-layout.html` | the layout itself |
 | `layouts/blogpost/single.html` · `list.html` | one line each; regular vs branch pages |
-| `content/resources/blog/_index.md` | the `cascade` that routes blog posts to it |
+| `content/en/resources/blog/_index.md` | the `cascade` that routes blog posts to it |
 | `assets/css/blog-article.css` | grid, typography, rail, disclosure, both themes |
 | `assets/js/sajid-toc.js` | active-section indicator; exits at once on every other page |
 | `config/_default/hugo.yaml` | `markup.tableOfContents.startLevel` |

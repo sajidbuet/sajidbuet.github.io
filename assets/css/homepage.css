@@ -85,7 +85,7 @@
 
    The hero block's outer <section class="hbb-section blox-hero-with-stats">
    used to carry `padding: 3rem 0 2rem 0` from `design.spacing.padding` in
-   content/_index.md. HugoBlox puts that on the SECTION, but the gradient is on
+   content/en/_index.md. HugoBlox puts that on the SECTION, but the gradient is on
    the inner `.sj-hero`, so those 48px rendered as bare page background between
    the navbar's bottom border and the top of the gradient: a white band, at
    every viewport, in both themes.

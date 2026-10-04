@@ -11,7 +11,7 @@ hugoblox:
 
   # ────────────────────────────────────────────────────────────────────────────
   # IDENTITY
-  # Site-level branding (for people/profiles, use the author system in content/authors/)
+  # Site-level branding (for people/profiles, use the author system in content/en/authors/)
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
