@@ -69,11 +69,12 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
-  # Hugo's default table of contents starts at level 2. Several Resources blog
-  # articles structure their body as `#` major sections with `##` subsections —
-  # /resources/blog/20260224-word-lakh-taka-bdt/ has eight of them — so a TOC
-  # starting at level 2 listed only the subsections and silently dropped every
-  # major section.
+  # Hugo's default table of contents starts at level 2. Some Resources blog
+  # articles were written with `#` major sections and `##` subsections, so a
+  # TOC starting at level 2 listed only the subsections. (Those `#` headings
+  # also gave the page several <h1>s; /resources/blog/20260224-word-lakh-taka-bdt/
+  # was re-levelled to `##`/`###` in the 2026-10-04 audit, and
+  # _pythonscripts/check_site.py now fails on more than one h1.)
   #
   # Starting at 1 makes .TableOfContents mirror whatever hierarchy a post
   # actually uses: `#`/`##` posts get sections then subsections, and the more

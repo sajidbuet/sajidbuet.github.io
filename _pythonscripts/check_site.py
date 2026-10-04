@@ -218,7 +218,11 @@ class PageParser(HTMLParser):
             self.headings.append(int(tag[1]))
         if tag == "a" and a.get("href") is not None:
             self.refs.append(("href", a["href"]))
-            self._links.append({"href": a["href"], "name": bool((a.get("aria-label") or a.get("title") or "").strip())})
+            # A duplicate card link hidden from assistive tech and removed from
+            # the tab order needs no name (the card's title link carries it).
+            hidden_dup = a.get("aria-hidden") == "true" and a.get("tabindex") == "-1"
+            self._links.append({"href": a["href"],
+                                "name": hidden_dup or bool((a.get("aria-label") or a.get("title") or "").strip())})
         elif tag in ("img", "source", "script", "iframe") or (tag == "link" and a.get("rel") in ("stylesheet", "icon", "preload", "modulepreload")):
             for attr in ("src", "href"):
                 if a.get(attr):

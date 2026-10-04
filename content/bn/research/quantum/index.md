@@ -5,7 +5,7 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: hero
+  - block: hero-qpacers
     content:
       title: |
         কোয়ান্টাম সিস্টেমস
@@ -23,7 +23,7 @@ sections:
       filters:
         folders:
           - publication
-        tag: "photonics"
+        tag: "quantum"
     design:
       view: citation
       columns: '1'

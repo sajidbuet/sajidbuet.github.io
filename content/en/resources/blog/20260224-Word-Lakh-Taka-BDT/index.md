@@ -46,7 +46,7 @@ Everything is done using Excel's built-in formatting and worksheet formulas. No 
 
 ---
 
-# 1. Format Numbers in Bangladeshi Crore–Lakh Style
+## 1. Format Numbers in Bangladeshi Crore–Lakh Style
 
 Excel normally displays a large number using the international grouping convention:
 
@@ -69,7 +69,7 @@ Crore | Lakh | Thousand | Units
 
 Excel can display this format while keeping the underlying cell as a normal numeric value.
 
-## Where to Paste the Custom Number Format
+### Where to Paste the Custom Number Format
 
 1. Select the cells containing the numbers.
 2. Press **Ctrl + 1**.
@@ -126,7 +126,7 @@ The value stored in the cell is unchanged. Therefore, functions such as `SUM`, m
 
 ---
 
-## Bangladeshi Number Format Without Decimal Places
+### Bangladeshi Number Format Without Decimal Places
 
 If Paisa or decimal values are not required, use:
 
@@ -148,7 +148,7 @@ will be displayed as:
 
 ---
 
-# 2. Add the ৳ Taka Symbol or BDT
+## 2. Add the ৳ Taka Symbol or BDT
 
 The same custom formatting technique can be used to add a currency identifier.
 
@@ -172,7 +172,7 @@ Again, go to:
 
 ---
 
-## Display the ৳ Taka Symbol
+### Display the ৳ Taka Symbol
 
 Paste:
 
@@ -202,7 +202,7 @@ You can copy the symbol directly from this page and paste it into Excel's Custom
 
 ---
 
-## Display BDT Instead
+### Display BDT Instead
 
 If you prefer the currency abbreviation, use:
 
@@ -218,7 +218,7 @@ BDT 9,99,99,999.99
 
 ---
 
-## Taka Symbol Without Decimal Places
+### Taka Symbol Without Decimal Places
 
 For whole-Taka values:
 
@@ -240,7 +240,7 @@ will display as:
 
 ---
 
-## BDT Without Decimal Places
+### BDT Without Decimal Places
 
 Use:
 
@@ -258,7 +258,7 @@ These formatting codes affect only how the value is **displayed**. They do not a
 
 ---
 
-# 3. Convert Taka and Paisa into Words in English
+## 3. Convert Taka and Paisa into Words in English
 
 Excel does not have a built-in `NUMBERTOWORDS()` or equivalent currency function.
 
@@ -266,7 +266,7 @@ Modern versions of Excel, however, support `LET` and `LAMBDA`, which allow the e
 
 No Name Manager configuration or VBA code is required.
 
-## Requirements
+### Requirements
 
 You need a version of Excel that supports both:
 
@@ -289,7 +289,7 @@ then `LAMBDA` is available.
 
 ---
 
-## English Amount-in-Words Formula
+### English Amount-in-Words Formula
 
 Suppose the amount is stored in cell:
 
@@ -382,7 +382,7 @@ The rest of the formula can remain unchanged.
 
 ---
 
-## English Examples
+### English Examples
 
 If `A1` contains:
 
@@ -410,7 +410,7 @@ Some additional examples:
 
 ---
 
-## Why `totalPaisa` Is Calculated First
+### Why `totalPaisa` Is Calculated First
 
 The formula first converts the complete amount into Paisa:
 
@@ -438,7 +438,7 @@ This avoids floating-point rounding situations in which a value close to the nex
 
 ---
 
-# 4. Convert Taka and Paisa into Words in Bangla
+## 4. Convert Taka and Paisa into Words in Bangla
 
 The same approach can be used to produce the complete amount in Bangla.
 
@@ -470,7 +470,7 @@ The formula below contains the Bangla words for the numbers from 0 to 99 and the
 
 ---
 
-## Bangla Amount-in-Words Formula
+### Bangla Amount-in-Words Formula
 
 If the amount is stored in `A1`, paste:
 
@@ -681,7 +681,7 @@ amount,G13,
 
 ---
 
-## Bangla Examples
+### Bangla Examples
 
 | Amount | Output |
 |---:|---|
@@ -724,7 +724,7 @@ becomes:
 
 ---
 
-# 5. Putting Everything Together
+## 5. Putting Everything Together
 
 Suppose `A1` contains:
 
@@ -785,7 +785,7 @@ This is particularly useful for:
 
 ---
 
-# Formula Limits
+## Formula Limits
 
 The formulas in this post use the following Bangladeshi units:
 
@@ -814,7 +814,7 @@ If still larger values are required, the formulas can be extended with units suc
 
 ---
 
-# A Note on Bangla Number Spellings
+## A Note on Bangla Number Spellings
 
 Some Bangla number words have more than one spelling in common usage.
 
@@ -824,7 +824,7 @@ For example, changing one entry in the list changes that spelling everywhere the
 
 ---
 
-# Conclusion
+## Conclusion
 
 Excel can be adapted quite effectively for Bangladeshi financial documents without using VBA.
 

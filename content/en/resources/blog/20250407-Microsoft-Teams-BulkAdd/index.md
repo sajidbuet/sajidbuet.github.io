@@ -163,7 +163,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ![AddingMembers](AddingMembers.png)
 
 * Here is a screenshot of the teams after all 65 members added.
-![](MembersAdded.png)
+![Microsoft Teams Members tab for the EEE 416 (Jan 2025) B1 + B2 team, showing one owner and 65 members and guests](MembersAdded.png)
 
 ## Step 6: Fetch Team Member list
 **Download [PowerShellScript for Exporting Team Members to Excel](BulkAdd.zip)**

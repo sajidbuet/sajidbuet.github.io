@@ -14,8 +14,8 @@ This tutorial is only applicable for BUET teachers.
 
 ## Step 1: Download BIIS Attendance Sheet
 Log in to your faculty BIIS account, go to View Class Roster, Select Level Term and from the course list, download the csv file of the course.
-![BIIS](image.png)
-![saveas](im2.png)
+![BIIS Class Roster page with View Class Roster and the csv link for a course highlighted](image.png)
+![Save As dialog saving the roster as EEE_416.csv](im2.png)
 
 ## Step 2: Prepare Script
 In the same folder of the `csv` file, either download and copy of [this script file (team-biis-diff.zip)](team-biis-diff.zip) and unzip
@@ -121,9 +121,9 @@ Save the `ps1` file.
 ````
 Replace `YOURTEAMNAME` with the actual display name of your team, and ``EEE_416.csv`` with the name of your csv. For convenience, you can also keep this text in the 1st line of your script as a comment, and copy paste it. 
 Here is a sample output of a successful run in powershell:
-![](shelloutput.png)
+![PowerShell running team-biis-diff.ps1: team members exported and the BIIS_diff.csv file created](shelloutput.png)
 4. You can log into teams with your faculty account. If you have **owner** access to the team, it would create another csv in the folder with all students to be added or dropped from the class. Here is a screenshot of a sample CSV.
-![](CSVoutput.png)
+![The BIIS_diff.csv file open in Excel: student e-mail addresses, each marked ADD or DROP](CSVoutput.png)
 
 ## Step 4: Take Action!
 1. For students who are marked **DROP** in CSV file, ensure that they are indeed registered for the class (sometimes the registration is pending approval from advisor / head). If they are indeed not in the class, remove them from the teams manually.

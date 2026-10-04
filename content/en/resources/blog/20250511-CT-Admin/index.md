@@ -11,7 +11,7 @@ date: '2025-05-11'
 ## The "Bomb"!
 Stanley Kurbic's [Dr. Strangelove or: How I learned to stop worrying and love the bomb](https://www.imdb.com/title/tt0057012) was a 1964 masterpiece of cinema making. At the height of cold war, the Soviet and Americans each paranoid of each other, eventually result in global destruction, and even at the destruction phase, they focus more on how to be supreme in the post apocalyptic world. 
 
-![promptlove.jpg](promptlove.jpg)
+![Poster in the style of a film poster: Dr. Promptlove, or how I learned to stop dreading and hit Generate](promptlove.jpg)
 
 2021 saw the rise of generative AI. Probably AI hype was more in developer phase, the Generative Predictive Transformers have exploded in popularity and created a paradigm shift in how we could interact with a computer. Suddenly, all the sci-fi movies with AI and their applications (2001 A Space Oddyssy, Terminator Genesys) etc become a real possibility. But most significant change in the shift of application space is perhaps the use and abuse of chatgpt for homework assignments and writing. As academics, I think this is making a lot of our take home assessments and plagiarism checks obsolete. There needs to be more research on how It would also cause a long term effect on the human race, but current research seem to suggest that it negetvely impacts our cognitive skills, loss of memory and reduces mental engagement [Dergaa (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11020077/). The AI is also making us hyper-productive. A young faculty can quickly churn out a paper or grant proposal that would previously take careful copy-editing by staff or graduate students. Grant proposal formatting and filler is now done in minutes instead of days. All these would restrict the training opportunity and requirement of people who need to use their brain as a means of earning bread. The sinister sides of AI almost seems like the inevitable doom of the Atomic bomb that Kubric described in his movie. The future seems bleak for the human race. 
 
@@ -30,7 +30,7 @@ While taking a class test last semester, I usually made my students sit on rows 
 ## The App!
 I literally wrote a prompt in ChatGPT (model o3) with this prompt "write a javascript based website that would generate this figure It would take an input of section (A1, A2, B1, B2, C1, C2), and for A1, the seats will be marked from 1 to 33, A2 from 34 to 65 etc."
 
-![](2025-05-12-00-30-53.png)
+![A class-test seat plan for section A1 (seats 01 to 33) with the ChatGPT prompt asking for a website that generates it](2025-05-12-00-30-53.png)
 
 GPT gave me a `index.html` file, an `app.js` fle and a `style.css` file. Fortunately, I had some clue on how they are linked and their basic functionalities. It did a surprisingly decent job as a first try. Although it missed the empty rows in the middle. I started giving it more and more ideas and copied code into my own VSCode versions
 
@@ -46,7 +46,7 @@ I then thought of adding and integrated timer into the code. I mistakenly told C
 ChatGPT actually understood that I meant a timer and wrote a workable modification. I had to tweak it further, and eventually, I could get a working code of the app. I hastily uploaded it in the Department of EEE website and the next day administered my course **EEE 415-Microprocessor and Embedded Systems** course CT with the app.
 
 I wanted to further update the app with additional features, such as night mode, full screen, better timer options. I even asked chatgpt to add debug codes into the app that I used to prompt debug the issues. Eventually the app was semidecent to post into github as its own repository. The [code in GitHub](https://github.com/sajidbuet/CTAdmin/tree/main/docs) is available under MIT license. Here is a working copy of the app [https://sajidbuet.github.io/CTAdmin](https://sajidbuet.github.io/CTAdmin)  
-![](2025-05-12-00-44-04.png)
+![The CT Admin web app: a 20-minute countdown timer over the seat plan, with buttons for seat plan, timer, full screen and dark mode](2025-05-12-00-44-04.png)
 
 The app is designed to run at full screen at 1920x1080p resolution, same as the horion samrt boards used in my class. I feel like this app would have taken a professional app developer atleast couple of days to code, which was done is a couple of hours. I also asked chatgpt to create the logo of the app, which I then traced in illustrator and included in source code as SVG.
 
