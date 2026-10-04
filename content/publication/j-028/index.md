@@ -6,13 +6,11 @@ authors:
 - Sadid Muneer
 - ' me'
 date: '2026-08-01'
-publishDate: '2026-09-01T16:20:40.692742Z'
+publishDate: '2026-10-04T08:08:59.645275Z'
 publication_types:
 - article-journal
 publication: '*J. Opt. Soc. Am. B*'
-hugoblox:
-  ids:
-    doi: 10.1364/JOSAB.591582
+doi: 10.1364/JOSAB.591582
 abstract: Metasurfaces have become a cornerstone of flat optics, enabling precise
   control over light propagation through nanoengineered materials. Dynamic and reconfigurable
   metalenses are key to next-generation flat-optics platforms, yet their practical

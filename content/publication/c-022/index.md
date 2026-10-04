@@ -5,13 +5,11 @@ authors:
 - Shamima Akter Mitu
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-09-01T16:20:40.110198Z'
+publishDate: '2026-10-04T08:08:59.294230Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE Photonics Conference (IPC)*'
-hugoblox:
-  ids:
-    doi: 10.1109/IPC57732.2023.10360477
+doi: 10.1109/IPC57732.2023.10360477
 tags:
 - photonics
 ---

@@ -8,13 +8,11 @@ authors:
 - M A Awal
 - ' me'
 date: '2014-01-01'
-publishDate: '2026-09-01T16:20:39.967844Z'
+publishDate: '2026-10-04T08:08:59.218065Z'
 publication_types:
 - paper-conference
 publication: '*8th International Conference on Electrical and Computer Engineering*'
-hugoblox:
-  ids:
-    doi: 10.1109/ICECE.2014.7026828
+doi: 10.1109/ICECE.2014.7026828
 tags:
 - embedded
 - computing

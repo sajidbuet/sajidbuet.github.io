@@ -6,13 +6,11 @@ authors:
 - Purbayan Das
 - ' me'
 date: '2020-01-01'
-publishDate: '2026-09-01T16:20:40.404708Z'
+publishDate: '2026-10-04T08:08:59.470416Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
-hugoblox:
-  ids:
-    doi: 10.1364/OE.410123
+doi: 10.1364/OE.410123
 abstract: We present a gear-shaped plasmonic nano-structure with structural tunability
   and high RI sensitivity. New tunable geometric parameters of the gear-tooth give
   further flexibility for design. By using FDTD method, the reflection spectrum of

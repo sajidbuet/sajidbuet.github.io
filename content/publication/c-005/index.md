@@ -7,14 +7,12 @@ authors:
 - Mohammad Asif Zaman
 - Md. Abdul Matin
 date: '2010-01-01'
-publishDate: '2026-09-01T16:20:39.867479Z'
+publishDate: '2026-10-04T08:08:59.155673Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
-hugoblox:
-  ids:
-    doi: 10.1109/ICELCE.2010.5700751
+doi: 10.1109/ICELCE.2010.5700751
 tags:
 - antenna
 ---

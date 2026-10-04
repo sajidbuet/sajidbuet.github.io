@@ -3,7 +3,7 @@ title: Roadmap on metasurfaces
 authors:
 - Oscar Quevedo-Teruel
 - Hongsheng Chen
-- Ana DÃ­az-Rubio
+- Ana Díaz-Rubio
 - Gurkan Gok
 - Anthony Grbic
 - Gabriele Minatti
@@ -22,20 +22,20 @@ authors:
 - Alexander V Kildishev
 - Daniel Sievenpiper
 - Christophe Caloz
-- Andrea AlÃ¹
+- Andrea Alù
 - Qiong He
 - Lei Zhou
 - Guido Valerio
 - Eva Rajo-Iglesias
 - Zvonimir Sipus
 - Francisco Mesa
-- Raul RodrÃ­guez-Berral
+- Raul Rodríguez-Berral
 - Francisco Medina
 - Victor Asadchy
 - Sergei Tretyakov
 - Christophe Craeye
 date: '2019-01-01'
-publishDate: '2026-05-02T15:32:11.012873Z'
+publishDate: '2026-10-04T08:09:00.655531Z'
 publication_types:
 - article-journal
 publication: '*Journal of Optics*'

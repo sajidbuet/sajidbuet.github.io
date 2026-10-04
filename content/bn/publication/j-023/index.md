@@ -5,7 +5,7 @@ authors:
 - Ayon Sarker
 - ' me'
 date: '2025-05-01'
-publishDate: '2026-05-02T15:32:11.287452Z'
+publishDate: '2026-10-04T08:09:00.789312Z'
 publication_types:
 - article-journal
 publication: '*Opt. Continuum*'

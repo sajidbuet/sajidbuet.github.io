@@ -7,14 +7,12 @@ authors:
 - ' me'
 - M. A. Matin
 date: '2010-01-01'
-publishDate: '2026-09-01T16:20:39.877611Z'
+publishDate: '2026-10-04T08:08:59.161897Z'
 publication_types:
 - paper-conference
 publication: '*International Conference on Electrical & Computer Engineering (ICECE
   2010)*'
-hugoblox:
-  ids:
-    doi: 10.1109/ICELCE.2010.5700749
+doi: 10.1109/ICELCE.2010.5700749
 tags:
 - antenna
 ---

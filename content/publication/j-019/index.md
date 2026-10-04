@@ -5,13 +5,11 @@ authors:
 - Md. Ehsanul Karim
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-09-01T16:20:40.524304Z'
+publishDate: '2026-10-04T08:08:59.549241Z'
 publication_types:
 - article-journal
 publication: '*Optical Materials Express*'
-hugoblox:
-  ids:
-    doi: 10.1364/OME.489981
+doi: 10.1364/OME.489981
 abstract: 'In this article, we report, as per our knowledge, for the first time phase
   change material (PCM) based reconfigurable metasurfaces for tailoring different
   degrees of freedom (DoF) of the quantum emitter (QE) emission, namely polarization

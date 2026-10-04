@@ -7,14 +7,12 @@ authors:
 - ' me'
 - Alexander V. Kildishev
 date: '2018-01-01'
-publishDate: '2026-09-01T16:20:40.030023Z'
+publishDate: '2026-10-04T08:08:59.249433Z'
 publication_types:
 - paper-conference
 publication: '*2018 International Applied Computational Electromagnetics Society Symposium
   (ACES)*'
-hugoblox:
-  ids:
-    doi: 10.23919/ROPACES.2018.8364134
+doi: 10.23919/ROPACES.2018.8364134
 tags:
 - photonics
 ---

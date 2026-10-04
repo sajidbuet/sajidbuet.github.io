@@ -9,13 +9,11 @@ authors:
 - Hossein Mosallaei
 - Alexandra Boltasseva
 date: '2014-01-01'
-publishDate: '2026-09-01T16:20:39.937874Z'
+publishDate: '2026-10-04T08:08:59.198848Z'
 publication_types:
 - paper-conference
 publication: '*CLEO: 2014*'
-hugoblox:
-  ids:
-    doi: 10.1364/CLEO_QELS.2014.FW1K.4
+doi: 10.1364/CLEO_QELS.2014.FW1K.4
 abstract: A metal/dielectric multilayered metasurface can be used to engineer the
   plasma frequency by controlling the ratio between the metal and dielectric layers.
   In this work, we demonstrate that a multilayered nanodisk metasurface based on semiconductor

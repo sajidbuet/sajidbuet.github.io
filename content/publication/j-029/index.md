@@ -1,17 +1,15 @@
 ---
-title: Steane $[[7,1,3]]$  outer coding for loss-tolerant one-way quantum repeaters
+title: Steane $[[7,1,3]]$ outer coding for loss-tolerant one-way quantum repeaters
 authors:
 - Subhan Zawad Bihan
 - Anindya Kishore Choudhury
 - ' me'
 date: '2026-08-01'
-publishDate: '2026-09-01T16:20:40.704422Z'
+publishDate: '2026-10-04T08:08:59.655847Z'
 publication_types:
 - article-journal
 publication: '*Quantum Information Processing*'
-hugoblox:
-  ids:
-    doi: 10.1007/s11128-026-05327-6
+doi: 10.1007/s11128-026-05327-6
 abstract: Long-distance quantum communication requires architectures that withstand
   photon loss and operational noise without relying on two-way classical signalling
   that incurs round-trip latency. Motivated by recent hybrid designs combining photonic

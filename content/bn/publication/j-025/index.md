@@ -6,7 +6,7 @@ authors:
 - Md. Rasidul Islam
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-05-02T15:32:11.308453Z'
+publishDate: '2026-10-04T08:09:00.811672Z'
 publication_types:
 - article-journal
 publication: '*Physica B: Condensed Matter*'

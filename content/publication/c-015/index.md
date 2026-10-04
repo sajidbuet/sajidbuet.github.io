@@ -8,13 +8,11 @@ authors:
 - Sergei Bozhevolnyi
 - Alexandra Boltasseva
 date: '2017-01-01'
-publishDate: '2026-09-01T16:20:40.014194Z'
+publishDate: '2026-10-04T08:08:59.246323Z'
 publication_types:
 - paper-conference
 publication: '*Frontiers in Optics 2017*'
-hugoblox:
-  ids:
-    doi: 10.1364/FIO.2017.JTu2A.12
+doi: 10.1364/FIO.2017.JTu2A.12
 abstract: A hybrid plasmonic waveguide fabrication technique has been developed and
   waveguides fabricated using this technique have been demonstrated experimentally.
   The developed technique can be utilized for creating similar hybrid waveguide structures

@@ -6,13 +6,11 @@ authors:
 - Purbayan Das
 - ' me'
 date: '2024-12-01'
-publishDate: '2026-09-01T16:20:40.578625Z'
+publishDate: '2026-10-04T08:08:59.581490Z'
 publication_types:
 - article-journal
 publication: '*Opt. Mater. Express*'
-hugoblox:
-  ids:
-    doi: 10.1364/OME.540435
+doi: 10.1364/OME.540435
 abstract: The conventional fiber communication band of 1.55 $μ$m is reaching its limit
   attributable to the escalation in bandwidth requirements for high-speed and bulk
   data transmission. Researchers are exploring a 2 $μ$m waveband for its higher capacity

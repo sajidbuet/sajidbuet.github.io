@@ -6,13 +6,11 @@ authors:
 - Kaniz Fatema Supti
 - ' me'
 date: '2024-12-01'
-publishDate: '2026-05-02T15:32:11.240426Z'
+publishDate: '2026-10-04T08:09:00.763402Z'
 publication_types:
 - article-journal
 publication: '*Opt. Express*'
-hugoblox:
-  ids:
-    doi: 10.1364/OE.541271
+doi: 10.1364/OE.541271
 abstract: Photonic topological insulators provide unidirectional, robust, wavelength-selective
   transport of light at an interface while keeping it insulated at the bulk of the
   material. The non-trivial topology results in an immunity to backscattering, sharp

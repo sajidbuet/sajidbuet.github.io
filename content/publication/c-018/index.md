@@ -6,14 +6,12 @@ authors:
 - Md. Ehsanul Karim
 - ' me'
 date: '2023-01-01'
-publishDate: '2026-09-01T16:20:40.041757Z'
+publishDate: '2026-10-04T08:08:59.262476Z'
 publication_types:
 - paper-conference
 publication: '*2023 IEEE International Conference on Telecommunications and Photonics
   (ICTP)*'
-hugoblox:
-  ids:
-    doi: 10.1109/ICTP60248.2023.10491019
+doi: 10.1109/ICTP60248.2023.10491019
 tags:
 - photonics
 ---

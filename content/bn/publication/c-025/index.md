@@ -5,14 +5,12 @@ authors:
 - Md Al Shahriar Shakil
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-05-02T15:32:10.698242Z'
+publishDate: '2026-10-04T08:09:00.514770Z'
 publication_types:
 - paper-conference
 publication: '*2025 International Conference on Quantum Photonics, Artificial Intelligence,
   and Networking (QPAIN)*'
-hugoblox:
-  ids:
-    doi: 10.1109/QPAIN66474.2025.11172078
+doi: 10.1109/QPAIN66474.2025.11172078
 tags:
 - quantum
 ---

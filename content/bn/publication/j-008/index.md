@@ -9,13 +9,13 @@ authors:
 - Alexandra Boltasseva
 - Vladimir M Shalaev
 date: '2018-01-01'
-publishDate: '2026-05-02T15:32:10.924323Z'
+publishDate: '2026-10-04T08:09:00.613969Z'
 publication_types:
 - article-journal
 publication: '*Nanophotonics*'
 doi: 10.1515/nanoph-2017-0130
 abstract: Optical metasurfaces are judicously engineered electromagnetic interfaces
-  that can control and manipulate many of lightâ€™s quintessential properties, such
+  that can control and manipulate many of light’s quintessential properties, such
   as amplitude, phase, and polarization. These artificial surfaces are composed of
   subwavelength arrays of optical antennas that experience resonant light-matter interaction
   with incoming electromagnetic radiation. Their ability to arbitrarily engineer optical

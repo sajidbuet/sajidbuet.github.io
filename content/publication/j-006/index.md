@@ -8,13 +8,11 @@ authors:
 - Alexandra Boltasseva
 - Sergey I. Bozhevolnyi
 date: '2017-01-01'
-publishDate: '2026-09-01T16:20:40.296860Z'
+publishDate: '2026-10-04T08:08:59.406623Z'
 publication_types:
 - article-journal
 publication: '*Optics Express*'
-hugoblox:
-  ids:
-    doi: 10.1364/OE.25.012295
+doi: 10.1364/OE.25.012295
 abstract: Bound hybrid plasmon-polariton modes supported by waveguides, which are
   formed by gold coating of ridges etched into a silica substrate, are analyzed using
   numerical simulations and investigated experimentally using near-field microscopy

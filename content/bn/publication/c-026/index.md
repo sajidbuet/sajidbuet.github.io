@@ -5,7 +5,7 @@ authors:
 - Md. Mahfuzul Haque
 - ' me'
 date: '2025-01-01'
-publishDate: '2026-05-02T15:32:10.719241Z'
+publishDate: '2026-10-04T08:09:00.523351Z'
 publication_types:
 - paper-conference
 publication: '*2025 Photonics & Electromagnetics Research Symposium - Spring (PIERS-Spring)*'

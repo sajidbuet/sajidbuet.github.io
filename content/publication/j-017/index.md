@@ -6,13 +6,11 @@ authors:
 - Shamima Akter Mitu
 - ' me'
 date: '2022-01-01'
-publishDate: '2026-09-01T16:20:40.483806Z'
+publishDate: '2026-10-04T08:08:59.519489Z'
 publication_types:
 - article-journal
 publication: '*Applied Optics*'
-hugoblox:
-  ids:
-    doi: 10.1364/AO.470247
+doi: 10.1364/AO.470247
 abstract: In this study, we present an all-optical reflection modulator for 2textmu
   m communication band exploiting a nano-gear-array metasurface and a phase-change-material
   Getextsubscript2Sbtextsubscript2Tetextsubscript5 (GST). The reflectance of the structure

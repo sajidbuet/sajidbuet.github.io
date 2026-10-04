@@ -10,13 +10,11 @@ authors:
 - Yongyuan Jiang
 - Alexander V Kildishev
 date: '2019-01-01'
-publishDate: '2026-09-01T16:20:40.377566Z'
+publishDate: '2026-10-04T08:08:59.462137Z'
 publication_types:
 - article-journal
 publication: '*Nanoscale*'
-hugoblox:
-  ids:
-    doi: 10.1039/C9NR00205G
+doi: 10.1039/C9NR00205G
 abstract: Active control over the flow of light is highly desirable because of its
   applicability to information processing, telecommunication, and spectroscopic imaging.
   In this paper, by employing the tunability of carrier density in a $1,mathrmnm$
