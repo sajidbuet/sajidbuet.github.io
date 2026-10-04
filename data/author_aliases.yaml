@@ -36,11 +36,12 @@ a-0421062320-shamima-mitu: [Shamima Akter Mitu]
 a-0422062302-md-ehsanul-karim: [Md. Ehsanul Karim, Ehsanul Karim]
 a-0422062304-asif-hossain-bhuiyan: [Md Asif Hossain Bhuiyan, Md. Asif Hossain Bhuiyan]
 a-0422062353-soikot: [Soikot Sarkar]
-# Names that match a profile but are NOT known to be that person. They stay as
+# Names that match a profile but belong to a DIFFERENT person. They stay as
 # printed and check_site.py does not flag them. Keys starting with _ are
 # ignored by the importer and the roster sync.
-#   Tanvir Ahmed: j-018 (2023; Crossref affiliation BUET EEE and BRAC CSE) vs
-#   profile 1024062144-tanvir-ahmed (BSc RUET, enrolled Oct 2024). Owner to confirm.
+#   Tanvir Ahmed: the j-018 co-author (2023; BUET EEE and BRAC CSE) is not the
+#   lab member 1024062144-tanvir-ahmed (BSc RUET, enrolled Oct 2024); confirmed
+#   by the owner, 2026-10-04.
 _not_mapped: [Tanvir Ahmed]
 
 # ── Co-authors ──────────────────────────────────────────────────────────────
