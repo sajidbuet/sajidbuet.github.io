@@ -397,3 +397,20 @@
 
 - id: scheme
   translation: "Scheme"
+
+# Meta descriptions (layouts/_partials/functions/page_description.html).
+
+- id: desc_lab
+  translation: "SAJID Lab, Department of EEE, BUET"
+
+- id: desc_authors
+  translation: "Authors:"
+
+- id: desc_coauthor
+  translation: "%s: publications with %s (%d)."
+
+- id: desc_term
+  translation: "%s — %d pages on the website of %s."
+
+- id: desc_course
+  translation: "Course page"

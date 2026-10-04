@@ -1,0 +1,81 @@
+{{/* Meta description for a page (site audit 2026-10-04, M10).
+
+     Before this, any page without a summary fell back to the site-wide
+     description, which ended up on 434 of 608 pages. Order:
+       1. front matter `description`, then `summary`
+       2. a publication's `abstract`
+       3. a description built for the page kind: publication citation,
+          author/term/taxonomy pages, course pages
+       4. the page's own text (.Summary); for other list pages, its title
+       5. the site description, as a last resort
+     The result is plain text, whitespace-collapsed, at most ~160 characters. */}}
+{{- $p := . -}}
+{{- $site := site.Params.hugoblox.identity.description | default site.Title -}}
+{{- $lab := i18n "desc_lab" | default "SAJID Lab, Department of EEE, BUET" -}}
+{{- $d := "" -}}
+
+{{- with $p.Params.description }}{{ $d = . }}{{ end -}}
+{{- if not $d }}{{ with $p.Params.summary }}{{ $d = . }}{{ end }}{{ end -}}
+{{- if and (not $d) (eq $p.Type "publication") }}{{ with $p.Params.abstract }}{{ $d = . }}{{ end }}{{ end -}}
+
+{{- if not $d -}}
+  {{- if and $p.IsPage (eq $p.Type "publication") -}}
+    {{/* "Title. Venue, 2019. Authors: ..." from front matter. */}}
+    {{- $names := slice -}}
+    {{- range $p.Params.authors -}}
+      {{- $a := . | strings.TrimSpace -}}
+      {{- $prof := partial "functions/get_author_profile" (dict "slug" $a) -}}
+      {{- if $prof.has_data -}}
+        {{- $names = $names | append (replaceRE `(?i)^dr\.\s+` "" $prof.title) -}}
+      {{- else -}}
+        {{- $names = $names | append $a -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $d = $p.Title -}}
+    {{- with $p.Params.publication }}{{ $d = printf "%s. %s" $d (. | markdownify | plainify) }}{{ end -}}
+    {{- $d = printf "%s, %s." $d ($p.Date.Format "2006") -}}
+    {{- with $names }}{{ $d = printf "%s %s %s." $d (i18n "desc_authors" | default "Authors:") (delimit . ", ") }}{{ end -}}
+  {{- else if and (eq $p.Kind "term") (eq $p.Data.Singular "author") -}}
+    {{- $prof := partial "functions/get_author_profile" (dict "slug" ($p.Data.Term | urlize)) -}}
+    {{- if $prof.has_data -}}
+      {{- $d = $prof.title -}}
+      {{- with $prof.role }}{{ $d = printf "%s, %s" $d (. | plainify) }}{{ end -}}
+      {{- $d = printf "%s — %s." $d $lab -}}
+    {{- else -}}
+      {{- $d = printf (i18n "desc_coauthor" | default "%s: publications with %s (%d).") (partial "functions/author_term_name" $p) $lab (len $p.Pages) -}}
+    {{- end -}}
+  {{- else if eq $p.Kind "term" -}}
+    {{- $d = printf (i18n "desc_term" | default "%s — %d pages on the website of %s.") $p.Title (len $p.Pages) $lab -}}
+  {{- else if eq $p.Kind "taxonomy" -}}
+    {{- $d = printf "%s — %s." $p.Title $lab -}}
+  {{- else if and $p.IsPage (eq $p.Type "grant") -}}
+    {{- $d = $p.Title -}}
+    {{- with $p.Params.grant_name }}{{ $d = printf "%s — %s" $d . }}{{ end -}}
+    {{- with $p.Params.funding_agency }}{{ $d = printf "%s, %s" $d . }}{{ end -}}
+    {{- with $p.Params.start_date }}{{ $d = printf "%s (%s" $d ((time .).Format "2006") }}{{ with $p.Params.end_date }}{{ $d = printf "%s–%s" $d ((time .).Format "2006") }}{{ end }}{{ $d = printf "%s)" $d }}{{ end -}}
+    {{- $d = printf "%s." $d -}}
+  {{- else if $p.Params.sections -}}
+    {{/* Landing pages built from blocks (research areas): the first block
+         with text describes the page. */}}
+    {{- range $p.Params.sections -}}
+      {{- if not $d -}}
+        {{- with .content -}}{{- $d = or .text .subtitle "" -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $d }}{{ $d = printf "%s — %s" $p.Title . }}{{ end -}}
+  {{- else if and $p.IsPage (eq $p.Section "teaching") -}}
+    {{/* Archived course pages open with the same boilerplate ("Welcome to the
+         course...", "This website is not going to be updated..."), so lead
+         with the course title. */}}
+    {{- $d = printf "%s — %s. %s" $p.Title (i18n "desc_course" | default "Course page") ($p.Summary | plainify) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $d }}{{ $d = $p.Summary }}{{ end -}}
+{{- if and (not $d) $p.IsNode (not $p.IsHome) }}{{ $d = printf "%s — %s." $p.Title $lab }}{{ end -}}
+{{- if not $d }}{{ $d = $site }}{{ end -}}
+
+{{- $d = $d | plainify | htmlUnescape -}}
+{{- $d = replaceRE `\$([^$]+)\$` "$1" $d -}}
+{{- $d = replaceRE `\s+` " " $d | strings.TrimSpace -}}
+{{- return ($d | truncate 160 "…") -}}

@@ -168,9 +168,38 @@ def set_doi(fm: Any, doi: Any) -> bool:
     return True
 
 
+# `academic` still writes the url_* keys HugoBlox v0.11 deprecates (BibTeX
+# `url` becomes `url_pdf`); HugoBlox wants them as typed `links` entries.
+DEPRECATED_URL_KEYS = {"url_pdf": "pdf", "url_preprint": "preprint", "url_code": "code",
+                       "url_dataset": "dataset", "url_poster": "poster", "url_project": "project",
+                       "url_slides": "slides", "url_source": "source", "url_video": "video"}
+
+
+def modernise_links(fm: Any) -> bool:
+    """Move url_* keys into `links: [{type, url}]`. Returns True if changed."""
+    changed = False
+    for key, link_type in DEPRECATED_URL_KEYS.items():
+        if key not in fm:
+            continue
+        url = fm.pop(key)
+        changed = True
+        if not url:
+            continue
+        links = fm.get("links")
+        if not isinstance(links, list):
+            links = []
+            fm["links"] = links
+        if not any(isinstance(l, dict) and l.get("url") == url for l in links):
+            links.append({"type": link_type, "url": url})
+    return changed
+
+
 def merge(base: dict, new: dict) -> list[str]:
     """Apply importer values from `new` onto `base` in place; return changed keys."""
     changed: list[str] = []
+    modernise_links(new)
+    if modernise_links(base):
+        changed.append("url_*→links")
     if "doi" in base and set_doi(base, base["doi"]):
         changed.append("doi→hugoblox.ids.doi")
     for key, value in new.items():
@@ -225,6 +254,7 @@ def postprocess(pub_dir: Path, before: dict[Path, bytes]) -> dict[str, int]:
 
         if path not in before:                       # paper added to the .bib
             strip_authors(new_fm)
+            modernise_links(new_fm)
             if "doi" in new_fm:
                 set_doi(new_fm, new_fm["doi"])
             write_text(path, dump_page(yaml, new_fm, new_body), newline)

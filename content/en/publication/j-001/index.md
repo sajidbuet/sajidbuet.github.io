@@ -15,5 +15,7 @@ publication_types:
 publication: '*International Journal of Computer and Electrical Engineering*'
 tags:
 - antenna
-url_pdf: https://ijcee.org/papers/291-E337.pdf
+links:
+- type: pdf
+  url: https://ijcee.org/papers/291-E337.pdf
 ---

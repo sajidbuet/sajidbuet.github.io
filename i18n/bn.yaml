@@ -335,3 +335,20 @@
 
 - id: block_contact_prospective_title
   translation: "আগ্রহী শিক্ষার্থী ও গবেষক"
+
+# Meta descriptions (layouts/_partials/functions/page_description.html).
+
+- id: desc_lab
+  translation: "সাজিদ ল্যাব, তড়িৎ ও ইলেকট্রনিক কৌশল বিভাগ, বুয়েট"
+
+- id: desc_authors
+  translation: "লেখক:"
+
+- id: desc_coauthor
+  translation: "%[1]s: %[2]s-এর সঙ্গে প্রকাশনা (%[3]d)।"
+
+- id: desc_term
+  translation: "%[1]s — %[3]s-এর ওয়েবসাইটে %[2]d টি পৃষ্ঠা।"
+
+- id: desc_course
+  translation: "কোর্স পৃষ্ঠা"
