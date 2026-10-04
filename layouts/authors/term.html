@@ -191,6 +191,22 @@
                 {{ partial "social_links" (dict "Params" (dict "profiles" .)) }}
               </div>
             {{ end }}
+
+            {{/* CV downloads (data/authors/<slug>.yaml → documents). The first
+                 entry is the primary button; the rest are outlined. PDFs are
+                 built by cv/latexrun.ps1 and copied by make-all.ps1. */}}
+            {{ with (index site.Data.authors $profile.slug).documents }}
+              <div class="pt-4 flex flex-wrap justify-center gap-2">
+                {{ range $i, $doc := . }}
+                  <a href="{{ $doc.url | relURL }}" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 {{ if eq $i 0 }}text-white bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700{{ else }}text-primary-700 border border-primary-700 hover:bg-primary-50 dark:text-primary-300 dark:border-primary-400 dark:hover:bg-primary-900/40{{ end }}">
+                    {{ partial "functions/get_icon" (dict "name" ($doc.icon | default "hero/document-text") "attributes" "class=\"w-4 h-4\" aria-hidden=\"true\"") }}
+                    <span>{{ $doc.label }}</span>
+                    {{ with $doc.note }}<span class="sr-only"> ({{ . }})</span>{{ end }}
+                  </a>
+                {{ end }}
+              </div>
+            {{ end }}
           </div>
         </div>
       </div>

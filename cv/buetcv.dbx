@@ -1,0 +1,5 @@
+\ProvidesFile{buetcv.dbx}[2026/10/04 v1.0 extra bibliography fields for buetcv]
+% Fields written into papers.bib by pycv_update_citations_bib.py and by hand.
+\DeclareDatamodelFields[type=field,datatype=integer]{citationnos}
+\DeclareDatamodelFields[type=field,datatype=literal]{sjr,jif}
+\DeclareDatamodelEntryfields{citationnos,sjr,jif}

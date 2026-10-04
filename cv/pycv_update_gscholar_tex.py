@@ -1,143 +1,64 @@
-# Dr. Sajid Muhaimin Choudhury
-# Usage:
-#  this file would need updated PoPMetrics.csv downloaded with Publish or Perish.
-# You also need to manually update the PoPAuthYear.csv by looking at the PoP gui.
-#  (this could not be automated). PoPAuthYear.csv needs to have correct citation-per-year 
-# for all years except the last one. 
-
-
-
 #!/usr/bin/env python3
-import pandas as pd
-#import matplotlib.pyplot as plt
-import re
-import math
+"""Write metrics.tex (citation metrics data) for the CV's metrics panel.
+
+Inputs (all in this folder, produced by latexrun.ps1 Steps 1-2):
+  PoPMetrics.csv   one row of Publish or Perish metrics ('c' = citations, 'h' = h-index)
+  PoPCites.csv     one row per paper (column 'Cites'), used for the i10-index
+  PoPAuthYear.csv  Year,Cites — correct for every year except the last, which is
+                   recalculated here as total citations minus all earlier years.
+
+Output: metrics.tex — plain \\def data only; the layout lives in buetcv.cls
+(\\cvmetricspanel). The file is rewritten from scratch on every run.
+"""
+import datetime as dt
 import sys
 
-def main():
-    # 1) Load the per‑year CSV
-    df_year = pd.read_csv('PoPAuthYear.csv')  
-    #    expects columns: Year,Cites
-    
-    # 2) Load the metrics CSV (single row of values)
-    df_metrics = pd.read_csv('PoPMetrics.csv')  
-    #    header: 34 field names, one data row
-    
-    # 3) Extract total citations
-    metrics = df_metrics.iloc[0].to_dict()
-    total_citations = int(metrics.get('c', 0)) #Citations
-    total_papers = int(metrics.get('p', 0)) #Papers
-    h_index = int(metrics.get('h', 0))  #h_index
+import pandas as pd
+
+YEARS_SHOWN = 8
+
+
+def main() -> int:
+    metrics = pd.read_csv("PoPMetrics.csv").iloc[0].to_dict()
+    total_citations = int(metrics.get("c", 0))
+    h_index = int(metrics.get("h", 0))
     # PoP has no i10 metric ('hc' is the contemporary h-index), so count
     # papers with at least 10 citations, as Google Scholar does.
-    i10_index = int((pd.read_csv('PoPCites.csv')['Cites'] >= 10).sum())
+    i10_index = int((pd.read_csv("PoPCites.csv")["Cites"] >= 10).sum())
 
-    
+    years = pd.read_csv("PoPAuthYear.csv")
+    if len(years) < 2:
+        print("ERROR: PoPAuthYear.csv needs at least two years.")
+        return 1
+    years.loc[years.index[-1], "Cites"] = total_citations - int(years["Cites"][:-1].sum())
+    shown = years.tail(YEARS_SHOWN).astype({"Year": int, "Cites": int})
+    full, partial = shown.iloc[:-1], shown.iloc[-1:]
+    current_year = int(partial["Year"].iloc[0])
 
-    print(f"           Total citations from PoPMetrics: {total_citations}")
-    
-    # 4) Compute sum of all but the last year
-    if len(df_year) < 2:
-        raise ValueError("           Need at least two years of data to recalculation.")
-    sum_except_last = df_year['Cites'][:-1].sum()
-    print(f"           Sum of citations except last year: {sum_except_last}")
-    # 5) Recalculate the last year's value
-    last_idx = df_year.index[-1]
-    df_year.at[last_idx, 'Cites'] = total_citations - sum_except_last
-    print(f"           Recalculated last year ({df_year.at[last_idx,'Year']}) cites: "
-          f"{df_year.at[last_idx,'Cites']}")
-    
-    # 6) Plot Year vs. Cites
-    #plt.figure(figsize=(8,4))
-    plotyears = df_year['Year'][-8:].astype(str)
-    plotcites = df_year['Cites'][-8:]
-    #plt.bar(plotyears, plotcites, width=0.6)
-    #plt.xlabel('Year')
-    #plt.ylabel('Citations')
-    #plt.title('Annual Citations')
-    #plt.xticks(rotation=45)
-    #plt.tight_layout()
-    
-    # 7) Show or save
-    #plt.show()
-    # plt.savefig('annual_citations.png', dpi=300)
+    def table(df: pd.DataFrame) -> str:
+        return "year cites\n" + "".join(f"{y} {c}\n" for y, c in zip(df["Year"], df["Cites"]))
 
-    # Coordinate and tick label strings
-    coordinates_str = " ".join(f"({y},{c})" for y, c in zip(plotyears, plotcites))
-    xticklabels_str = ",".join(str(y) for y in plotyears)
-
-    print("           Starting update of gscholar.tex")
-    # Determine ymax and ytick values
-    ymax = math.ceil(max(plotcites) / 55) * 55
-    yticks = list(range(0, ymax + 1, 55))
-    ytick_str = ",".join(str(y) for y in yticks)
-
-    print(f"           Auto-adjusted ymax = {ymax}")
-    print(f"           Auto-generated yticks = {ytick_str}")
-    # Read the LaTeX file
-    try:
-        with open("gscholar.tex", "r", encoding="utf-8") as file:
-            content = file.read()
-    except FileNotFoundError:
-        print("           ERROR: File gscholar.tex not found.")
-        sys.exit(1)
-
-    # Debug original values
-    print("\n            Original values preview:")
-    match_metrics = re.findall(r"(Total Citations|h.?index|i10.?index)\s*&\s*\d+", content)
-    print("\n".join(match_metrics) if match_metrics else "No metrics found")
-
-    match_coords = re.search(r"\\addplot\[fill=gray\] coordinates \{([^}]*)\}", content)
-    print(f"\n            Old TikZ coordinates: {match_coords.group(1)}" if match_coords else "No plot coordinates found")
-
-    # Safe regex for dashes (accepts regular or non-breaking hyphens)
-    def safe_replace(label, value):
-        pattern = rf"{label}\s*&\s*\d+"
-        return re.sub(pattern, f"{label} & {value}", content)
-
-    # Update the metrics table (support non-breaking hyphen too)
-    content = re.sub(r"Total Citations\s*&\s*\d+", f"Total Citations & {total_citations}", content)
-    content = re.sub(r"h.?index\s*&\s*\d+", f"h-index & {h_index}", content)
-    content = re.sub(r"i10.?index\s*&\s*\d+", f"i10-index & {i10_index}", content)
-
-    # Update xtick labels
-    content = re.sub(
-        r"xticklabels=\{[^}]*\}",
-        f"xticklabels={{ {xticklabels_str} }}",
-        content
+    today = dt.date.today()
+    text = (
+        "% metrics.tex — generated by pycv_update_gscholar_tex.py; do not edit by hand.\n"
+        f"\\def\\gsCitations{{{total_citations:,}}}\n"
+        f"\\def\\gsHindex{{{h_index}}}\n"
+        f"\\def\\gsIten{{{i10_index}}}\n"
+        f"\\def\\gsRetrieved{{{today.day} {today:%B %Y}}}\n"
+        f"\\def\\gsCurrentYear{{{current_year}}}\n"
+        f"\\def\\gsYearTicks{{{','.join(str(y) for y in shown['Year'])}}}\n"
+        f"\\pgfplotstableread{{\n{table(full)}}}\\gsFullYears\n"
+        f"\\pgfplotstableread{{\n{table(partial)}}}\\gsPartialYear\n"
     )
+    with open("metrics.tex", "w", encoding="utf-8") as f:
+        f.write(text)
 
-    # Update bar chart coordinates
-    replacement = "addplot[fill=gray] coordinates { " + coordinates_str + " };"
-    content = re.sub(r"addplot\[fill=gray\] coordinates \{[^}]*\};", replacement, content)
+    print(f"           Citations {total_citations}, h-index {h_index}, i10-index {i10_index}")
+    print(f"           Per year: " + ", ".join(f"{y}: {c}" for y, c in zip(shown["Year"], shown["Cites"]))
+          + f" ({current_year} to date)")
+    print("           metrics.tex written.")
+    return 0
 
 
-        # Replace ymax
-    content = re.sub(
-        r"ymax=\d+",
-        f"ymax={ymax}",
-        content
-    )
-
-    # Replace ytick
-    content = re.sub(
-        r"ytick=\{[^}]*\}",
-        f"ytick={{ {ytick_str} }}",
-        content
-    )
-
-    # Write back
-    with open("gscholar.tex", "w", encoding="utf-8") as file:
-        file.write(content)
-
-    print("\n Update complete. New values:")
-    print(f" Total Citations: {total_citations}")
-    print(f" h-index: {h_index}")
-    print(f" i10-index: {i10_index}")
-    print(f" Coordinates: {coordinates_str}")
-    print(f" xTick Labels: {xticklabels_str}")
-
-    print("gscholar.tex updated successfully.")
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    sys.exit(main())

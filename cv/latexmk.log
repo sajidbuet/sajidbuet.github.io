@@ -1,511 +1,501 @@
-Execution Successful! Check update_citations_py.log
-           Total citations from PoPMetrics: 1308
-           Sum of citations except last year: 1250
-           Recalculated last year (2026) cites: 58
-           Starting update of gscholar.tex
-           Auto-adjusted ymax = 220
-           Auto-generated yticks = 0,55,110,165,220
-
-            Original values preview:
-Total Citations
-h-index
-i10-index
-
-            Old TikZ coordinates:  (2019,67) (2020,151) (2021,171) (2022,207) (2023,168) (2024,184) (2025,194) (2026,58) 
-
- Update complete. New values:
- Total Citations: 1308
- h-index: 14
- i10-index: 12
- Coordinates: (2019,67) (2020,151) (2021,171) (2022,207) (2023,168) (2024,184) (2025,194) (2026,58)
- xTick Labels: 2019,2020,2021,2022,2023,2024,2025,2026
-gscholar.tex updated successfully.
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4)
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4)
  restricted system commands enabled.
 (./dsmc-cv.tex
-LaTeX2e <2024-11-01>
-L3 programming layer <2024-10-09>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
  (./buetcv.cls
-Document Class: buetcv 2024/09/11 Example LaTeX class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
-Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
+Document Class: buetcv 2026/10/04 v2.0 Academic CV: short CV and full dossier
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg
+)) (C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
+Package babel Warning: I couldn't find language.dat. No additional
+(babel)                patterns loaded. Reported on input line 107.
+
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx)
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/dvipsnam.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/en/bab
+el-british.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/british
+.ldf
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/english
+.ldf)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty)))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.rev
-ision.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--common.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--latex.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
-code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.tex)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-libraryfiltered.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
-fg)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-luatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-common-pdf.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-ssoftpath.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-sprotocol.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-e.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
-r.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.basic.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.trigonometric.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.random.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.comparison.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.base.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.round.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.misc.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.integerarithmetics.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcalc.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
-tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epoints.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathconstruct.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathusage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-escopes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-egraphicstate.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransformations.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-equick.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eobjects.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-earrows.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eshade.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eimage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eexternal.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-elayers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransparency.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epatterns.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-erdf.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-shapes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-plot.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-0-65.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-1-18.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.s
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpa
+rse.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-l
+uatex.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-lua
+tex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
+)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math-luatex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l
+3keys2e.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/fix-cm.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1enc.def))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/lualatex/lualatex-math/lual
+atex-math.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math-table.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.s
 ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
-code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/tikz.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplothandlers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-matrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarytopaths.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.cod
-e.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscore
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplots
-sysgeneric.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfplot
-slibrary.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_loader.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryfpu.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype-l
+uatex.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.c
+fg))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawes
+ome5.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawes
+ome5-utex-helper.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbas
+e.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablest
+ack.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontaw
+esomefree.fd)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontaw
+esomebrands.fd)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns-xeluatex.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns-generic.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cf
+g)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.d
+ef)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.lt
+x))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.s
+ty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefi
+nekeys.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape
+.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcm
+ds.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr
+.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gett
+itlestring.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.s
+ty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc
+.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
+) (C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintca
+lc.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunf
+ilecheck.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniqu
+ecounter.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.d
+ef))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage2e.s
+ty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpagemode
+rn.sty) 
+))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.s
+ty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.r
+evision.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics
+.cfg)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tik
+z.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.st
+y
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.
+sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfut
+il-common.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfut
+il-latex.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrc
+s.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.te
+x)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcor
+e.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsy
+s.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+ys.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+yslibraryfiltered.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+.cfg)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys-luatex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys-common-pdf.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+syssoftpath.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sysprotocol.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+ore.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.co
+de.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathuti
+l.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathpar
+ser.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.basic.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.trigonometric.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.random.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.comparison.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.base.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.round.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.misc.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.integerarithmetics.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcal
+c.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathflo
+at.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.cod
+e.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepoints.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathconstruct.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathusage.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orescopes.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oregraphicstate.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oretransformations.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orequick.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreobjects.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathprocessing.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orearrows.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreshade.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreimage.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreexternal.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orelayers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oretransparency.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepatterns.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orerdf.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+leshapes.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+leplot.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgf
+comp-version-0-65.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgf
+comp-version-1-18.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.
+sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys
+.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+ys.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.co
+de.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffo
+r.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/tikz.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryplothandlers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+lematrix.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarytopaths.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.c
+ode.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsco
+re.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplo
+tssysgeneric.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfpl
+otslibrary.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcomp
+atib/pgfplotsoldpgfsupp_loader.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/luamath
-/pgflibraryluamath.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructure.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructureext.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsarray.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsmatrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/pgf
-plotstableshared.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsdeque.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.data.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.verb.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgflibr
-arypgfplots.surfshading.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflibra
-rypgfplots.surfshading.pgfsys-luatex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolormap.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolor.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsstac
-kedplots.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsplot
-handlers.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plothandler.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plotimage.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.sca
-ling.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscoor
-dprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.err
-orbars.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.mar
-kers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotstick
-s.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.pat
-hs.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-decorations.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathmorphing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathreplacing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathreplacing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlib
-rarypgfplots.contourlua.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryplotmarks.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplotmarks.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
-e.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
-x.sty (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3k
-eys2e.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5-utex-helper.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
-k.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omefree.fd)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omebrands.fd)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/academicons
-.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
-For additional information on amsmath, use the `?' option.
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcomp
+atib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/luama
+th/pgflibraryluamath.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsutil.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsliststructure.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsliststructureext.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsarray.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsmatrix.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/p
+gfplotstableshared.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsdeque.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsbinary.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsbinary.data.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsutil.verb.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfli
+brarypgfplots.surfshading.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflib
+rarypgfplots.surfshading.pgfsys-luatex.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otscolormap.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otscolor.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsst
+ackedplots.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotspl
+othandlers.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsme
+shplothandler.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsme
+shplotimage.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.s
+caling.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsco
+ordprocessing.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.e
+rrorbars.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.m
+arkers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsti
+cks.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.p
+aths.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+ledecorations.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decor
+ations/pgflibrarydecorations.pathmorphing.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decor
+ations/pgflibrarydecorations.pathreplacing.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzl
+ibrarypgfplots.contourlua.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibraryplotmarks.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryplotmarks.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
-ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
-lestring.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
-.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty)
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
-echeck.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
-ounter.sty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
 ))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage2e.sty
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpagemodern
-.sty) 
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/changepage/changepage.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/paracol/paracol.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
-f)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
-) (./ext-numeric.bbx (./ext-standard.bbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-biblat
-ex-aux.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
-bx))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
-x)) (./ext-numeric.cbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
-x))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
-
-Package biblatex Warning: 'firstinits' option is deprecated.
-(biblatex)                Please use 'giveninits' instead.
-
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
-.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
+(./buetcv.dbx)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.
+def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.d
+ef)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-nume
+ric.bbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-stan
+dard.bbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-bibl
+atex-aux.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard
+.bbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.
+bbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-nume
+ric.cbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.
+cbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-exp
+l3.sty))) (./cv-setup.tex (./metrics.tex))
 No file dsmc-cv.aux.
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.
+mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
-fg))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf
+-base.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys
+.cfg))
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
-x)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/british.
+lbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.
+lbx))
 No file dsmc-cv.bbl.
+(./cv-body.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-TU-empty
+.cfg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 51.
 
+[1{C:/Users/BUETEEE/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
-
-Overfull \hbox (12.3321pt too wide) in paragraph at lines 83--84
-[]\TU/lmr/bx/n/10 Ph.D. The-sis: \TU/lmr/m/n/10 WAVE-FRONT MA-NIP-U-LA-TION WIT
-H META-
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 90--91
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 99--100
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 124.
-
-[1{C:/Users/Sajid/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 139.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 129.
 
 [2]
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 154.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 180.
 
 [3]
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 180.
-
-[4] (./gscholar.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/tuacademico
-ns.fd))
-
-Package biblatex Warning: Type 'article' not found on input line 194.
+Package biblatex Warning: Type 'article' not found on input line 186.
 
 
-LaTeX Warning: Empty bibliography on input line 194.
+LaTeX Warning: Empty bibliography on input line 186.
 
 
-Package biblatex Warning: Type 'article' not found on input line 195.
+Package biblatex Warning: Type 'article' not found on input line 186.
 
 
-LaTeX Warning: Empty bibliography on input line 195.
+LaTeX Warning: Empty bibliography on input line 186.
 
 
-Package biblatex Warning: Type 'inproceedings' not found on input line 201.
+Package biblatex Warning: Type 'inproceedings' not found on input line 187.
 
 
-LaTeX Warning: Empty bibliography on input line 201.
+LaTeX Warning: Empty bibliography on input line 187.
 
 
-Package biblatex Warning: Type 'inproceedings' not found on input line 202.
+Package biblatex Warning: Type 'inproceedings' not found on input line 187.
 
 
-LaTeX Warning: Empty bibliography on input line 202.
+LaTeX Warning: Empty bibliography on input line 187.
 
 
-Package biblatex Warning: Type 'patent' not found on input line 209.
+Package biblatex Warning: Type 'patent' not found on input line 188.
 
 
-LaTeX Warning: Empty bibliography on input line 209.
+LaTeX Warning: Empty bibliography on input line 188.
 
 
-Package biblatex Warning: Type 'patent' not found on input line 210.
+Package biblatex Warning: Type 'patent' not found on input line 188.
 
 
-LaTeX Warning: Empty bibliography on input line 210.
+LaTeX Warning: Empty bibliography on input line 188.
 
 
-Package biblatex Warning: Type 'unpublished' not found on input line 216.
+Package biblatex Warning: Type 'unpublished' not found on input line 189.
 
 
-LaTeX Warning: Empty bibliography on input line 216.
+LaTeX Warning: Empty bibliography on input line 189.
 
 
-Package biblatex Warning: Type 'unpublished' not found on input line 217.
+Package biblatex Warning: Type 'unpublished' not found on input line 189.
 
 
-LaTeX Warning: Empty bibliography on input line 217.
+LaTeX Warning: Empty bibliography on input line 189.
 
+)
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 7.
 
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 262.
-
-[5]
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 274.
-
-[6] 
-enddocument/afterlastpage: lastpage setting LastPage.
+[4] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./dsmc-cv.aux)
 
 LaTeX Warning: There were undefined references.
@@ -514,7 +504,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 274.
+Package lastpage Warning: Rerun to get the references right on input line 7.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -522,29 +512,25 @@ Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                and rerun LaTeX afterwards.
 
 )
-(see the transcript file for additional information)
- 835 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 10 attribute, 115 glue_sp
-ec, 10 attribute_list, 2 write, 2 pdf_colorstack nodes
-   avail lists: 2:1934,3:1022,4:209,5:589,6:129,7:11056,8:3,9:871,10:20,11:1137
+ 705 words of node memory still in use:
+   7 hlist, 3 vlist, 2 rule, 1 local_par, 4 glue, 5 kern, 1 penalty, 3 glyph, 2
+3 attribute, 74 glue_spec, 13 attribute_list, 2 write nodes
+   avail lists: 1:3,2:2197,3:663,4:368,5:716,6:154,7:9599,8:2,9:550,10:7,11:849
 
-<c:/users/sajid/appdata/local/programs/miktex/fonts/truetype/public/academicons
-/academicons.ttf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/p
-ublic/lm/lmroman9-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fon
-ts/opentype/public/lm/lmroman9-bold.otf><c:/users/sajid/appdata/local/programs/
-miktex/fonts/opentype/public/lm/lmroman9-italic.otf><c:/users/sajid/appdata/loc
-al/programs/miktex/fonts/opentype/public/lm/lmroman10-bold.otf><c:/users/sajid/
-appdata/local/programs/miktex/fonts/opentype/public/fontawesome5/fontawesome5br
-ands-regular-400.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/openty
-pe/public/fontawesome5/fontawesome5free-regular-400.otf><c:/users/sajid/appdata
-/local/programs/miktex/fonts/opentype/public/fontawesome5/fontawesome5free-soli
-d-900.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/l
-m/lmroman10-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/ope
-ntype/public/lm/lmroman12-bold.otf><C:/Users/Sajid/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on dsmc-cv.pdf (6 pages, 93925 bytes).
+<C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/fonts/opentype/public/libertinu
+s-fonts/LibertinusSerif-Italic.otf><//?/c:/users/bueteee/appdata/local/programs
+/miktex/fonts/opentype/public/fontawesome5/fontawesome5brands-regular-400.otf><
+C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/fonts/opentype/public/academicon
+s/academicons.otf><//?/c:/users/bueteee/appdata/local/programs/miktex/fonts/ope
+ntype/public/fontawesome5/fontawesome5free-solid-900.otf><c:/users/bueteee/appd
+ata/local/programs/miktex/fonts/opentype/public/fontawesome5/fontawesome5free-r
+egular-400.otf><C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/fonts/opentype/p
+ublic/libertinus-fonts/LibertinusSerif-Semibold.otf><C:/Users/BUETEEE/AppData/L
+ocal/Programs/MiKTeX/fonts/opentype/public/libertinus-fonts/LibertinusSerif-Reg
+ular.otf>
+Output written on dsmc-cv.pdf (4 pages, 58436 bytes).
 Transcript written on dsmc-cv.log.
-INFO - This is Biber 2.20
+INFO - This is Biber 2.21
 INFO - Logfile is 'dsmc-cv.blg'
 INFO - Reading 'dsmc-cv.bcf'
 INFO - Using all citekeys in bib section 0
@@ -552,942 +538,470 @@ INFO - Processing section 0
 INFO - Looking for bibtex file 'papers.bib' for section 0
 INFO - LaTeX decoding ...
 INFO - Found BibTeX data source 'papers.bib'
-INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Sorting list 'ydnt/global/FF44570ACA8241914870AFBC310CDB85/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-INFO - No sort tailoring available for locale 'en-US'
-INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Sorting list 'ydnt/global/0D61F8370CAD1D412F80B84D143E1257/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-INFO - No sort tailoring available for locale 'en-US'
-INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Sorting list 'ydnt/global/44C29EDB103A2872F519AD0C9A0FDAAA/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-INFO - No sort tailoring available for locale 'en-US'
-INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Sorting list 'ydnt/global/02129BB861061D1A052C592E2DC6B383/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-INFO - No sort tailoring available for locale 'en-US'
-INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-INFO - No sort tailoring available for locale 'en-US'
+INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'ydnt/global/FF44570ACA8241914870AFBC310CDB85/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-GB'
+INFO - No sort tailoring available for locale 'en-GB'
+INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Sorting list 'ydnt/global/0D61F8370CAD1D412F80B84D143E1257/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-GB'
+INFO - No sort tailoring available for locale 'en-GB'
+INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'ydnt/global/44C29EDB103A2872F519AD0C9A0FDAAA/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-GB'
+INFO - No sort tailoring available for locale 'en-GB'
+INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'ydnt/global/02129BB861061D1A052C592E2DC6B383/global/global/global' of type 'entry' with template 'ydnt' and locale 'en-GB'
+INFO - No sort tailoring available for locale 'en-GB'
+INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'en-GB'
+INFO - No sort tailoring available for locale 'en-GB'
 INFO - Writing 'dsmc-cv.bbl' with encoding 'UTF-8'
 INFO - Output to dsmc-cv.bbl
-WARN - legacy month field 'May' in entry 'J023' is not an integer - this will probably not sort properly.
-WARN - legacy month field 'Aug' in entry 'J028' is not an integer - this will probably not sort properly.
-INFO - WARNINGS: 2
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4)
+This is LuaHBTeX, Version 1.22.0 (MiKTeX 25.4)
  restricted system commands enabled.
 (./dsmc-cv.tex
-LaTeX2e <2024-11-01>
-L3 programming layer <2024-10-09>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
  (./buetcv.cls
-Document Class: buetcv 2024/09/11 Example LaTeX class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
-Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
+Document Class: buetcv 2026/10/04 v2.0 Academic CV: short CV and full dossier
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg
+)) (C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
+Package babel Warning: I couldn't find language.dat. No additional
+(babel)                patterns loaded. Reported on input line 107.
+
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx)
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/dvipsnam.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/en/bab
+el-british.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/british
+.ldf
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/english
+.ldf)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty)))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.rev
-ision.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--common.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--latex.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
-code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.tex)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-libraryfiltered.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
-fg)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-luatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-common-pdf.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-ssoftpath.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-sprotocol.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-e.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
-r.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.basic.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.trigonometric.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.random.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.comparison.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.base.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.round.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.misc.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.integerarithmetics.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcalc.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
-tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epoints.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathconstruct.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathusage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-escopes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-egraphicstate.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransformations.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-equick.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eobjects.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-earrows.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eshade.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eimage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eexternal.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-elayers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransparency.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epatterns.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-erdf.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-shapes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-plot.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-0-65.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-1-18.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.s
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpa
+rse.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-l
+uatex.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-lua
+tex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
+)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math-luatex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l
+3keys2e.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/fix-cm.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1enc.def))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/lualatex/lualatex-math/lual
+atex-math.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-
+math-table.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.s
 ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
-code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/tikz.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplothandlers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-matrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarytopaths.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.cod
-e.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscore
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplots
-sysgeneric.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfplot
-slibrary.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_loader.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryfpu.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype-l
+uatex.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/microtype.c
+fg))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawes
+ome5.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawes
+ome5-utex-helper.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbas
+e.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablest
+ack.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontaw
+esomefree.fd)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontaw
+esomebrands.fd)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns-xeluatex.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/fonts/academicons/academico
+ns-generic.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cf
+g)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.d
+ef)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.lt
+x))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.s
+ty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefi
+nekeys.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape
+.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcm
+ds.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr
+.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gett
+itlestring.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.s
+ty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc
+.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
+) (C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintca
+lc.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunf
+ilecheck.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniqu
+ecounter.sty)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.d
+ef))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage2e.s
+ty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpagemode
+rn.sty) 
+))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.s
+ty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.r
+evision.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics
+.cfg)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tik
+z.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.st
+y
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.
+sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfut
+il-common.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfut
+il-latex.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrc
+s.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.te
+x)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcor
+e.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsy
+s.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+ys.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+yslibraryfiltered.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+.cfg)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys-luatex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sys-common-pdf.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+syssoftpath.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf
+sysprotocol.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+ore.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.co
+de.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathuti
+l.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathpar
+ser.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.basic.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.trigonometric.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.random.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.comparison.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.base.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.round.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.misc.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfun
+ctions.integerarithmetics.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcal
+c.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathflo
+at.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.cod
+e.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepoints.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathconstruct.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathusage.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orescopes.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oregraphicstate.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oretransformations.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orequick.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreobjects.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepathprocessing.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orearrows.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreshade.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreimage.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oreexternal.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orelayers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+oretransparency.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orepatterns.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfc
+orerdf.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+leshapes.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+leplot.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgf
+comp-version-0-65.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgf
+comp-version-1-18.sty))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.
+sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys
+.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfke
+ys.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.co
+de.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffo
+r.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/tikz.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryplothandlers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+lematrix.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarytopaths.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.c
+ode.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsco
+re.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplo
+tssysgeneric.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfpl
+otslibrary.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcomp
+atib/pgfplotsoldpgfsupp_loader.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/luamath
-/pgflibraryluamath.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructure.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructureext.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsarray.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsmatrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/pgf
-plotstableshared.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsdeque.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.data.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.verb.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgflibr
-arypgfplots.surfshading.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflibra
-rypgfplots.surfshading.pgfsys-luatex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolormap.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolor.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsstac
-kedplots.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsplot
-handlers.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plothandler.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plotimage.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.sca
-ling.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscoor
-dprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.err
-orbars.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.mar
-kers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotstick
-s.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.pat
-hs.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-decorations.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathmorphing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathreplacing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathreplacing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlib
-rarypgfplots.contourlua.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryplotmarks.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplotmarks.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
-e.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
-x.sty (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3k
-eys2e.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5-utex-helper.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
-k.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omefree.fd)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omebrands.fd)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/academicons
-.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
-For additional information on amsmath, use the `?' option.
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcomp
+atib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/luama
+th/pgflibraryluamath.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsutil.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsliststructure.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsliststructureext.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsarray.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsmatrix.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/p
+gfplotstableshared.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststruct
+ure/pgfplotsdeque.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsbinary.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsbinary.data.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otsutil.verb.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfli
+brarypgfplots.surfshading.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflib
+rarypgfplots.surfshading.pgfsys-luatex.def)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otscolormap.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfpl
+otscolor.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsst
+ackedplots.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotspl
+othandlers.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsme
+shplothandler.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsme
+shplotimage.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.s
+caling.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsco
+ordprocessing.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.e
+rrorbars.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.m
+arkers.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsti
+cks.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.p
+aths.code.tex)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodu
+ledecorations.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decor
+ations/pgflibrarydecorations.pathmorphing.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decor
+ations/pgflibrarydecorations.pathreplacing.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzl
+ibrarypgfplots.contourlua.code.tex))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibraryplotmarks.code.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgfli
+braryplotmarks.code.tex)))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
+
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
-ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
-lestring.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
-.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty)
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
-echeck.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
-ounter.sty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
 ))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage2e.sty
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpagemodern
-.sty) 
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/changepage/changepage.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/paracol/paracol.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
-f)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
-) (./ext-numeric.bbx (./ext-standard.bbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-biblat
-ex-aux.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
-bx))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
-x)) (./ext-numeric.cbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
-x))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
-
-Package biblatex Warning: 'firstinits' option is deprecated.
-(biblatex)                Please use 'giveninits' instead.
-
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
-.sty))) (./dsmc-cv.aux)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
+(./buetcv.dbx)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.
+def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.d
+ef)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-nume
+ric.bbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-stan
+dard.bbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-bibl
+atex-aux.def)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard
+.bbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.
+bbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-nume
+ric.cbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.
+cbx))
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
+)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-exp
+l3.sty))) (./cv-setup.tex (./metrics.tex)) (./dsmc-cv.aux)
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.
+mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 )
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
-fg))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty)
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf
+-base.sty
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys
+.cfg))
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
-x) (./dsmc-cv.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/british.
+lbx
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.
+lbx)) (./dsmc-cv.bbl) (./cv-body.tex
+(C:/Users/BUETEEE/AppData/Local/Programs/MiKTeX/tex/latex/microtype/mt-TU-empty
+.cfg) [1{C:/Users/BUETEEE/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+[2] [3]
+./cv-body.tex:186: TeX capacity exceeded, sorry [input stack size=10000].
+\tl_if_exist:NTF #1->\if_meaning:w #1
+                                     \scan_stop: \use_i:nnnn \else: \fi: \if...
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
-
-Overfull \hbox (12.3321pt too wide) in paragraph at lines 83--84
-[]\TU/lmr/bx/n/10 Ph.D. The-sis: \TU/lmr/m/n/10 WAVE-FRONT MA-NIP-U-LA-TION WIT
-H META-
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 90--91
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 99--100
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-[1{C:/Users/Sajid/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2]
-[3]
-[4] (./gscholar.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/tuacademico
-ns.fd))
-[5]
-Overfull \hbox (9.3226pt too wide) in paragraph at lines 195--195
-\TU/lmr/m/n/10 Alexan-der V Kild-i-shev. ``En-hanc-ing sen-si-tiv-ity to am-bi-
-ent re-frac-tive in-dex with tun-able few-layer graphene/hBN
-
-[6]
-[7]
-[8]
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
-
-
-[10] 
-enddocument/afterlastpage: lastpage setting LastPage.
-(./dsmc-cv.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-
-)
-(see the transcript file for additional information)
- 1095 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 117 glue_sp
-ec, 35 attribute_list, 2 write, 25 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 2:2674,3:1206,4:268,5:728,6:131,7:11550,8:67,9:871,10:20,11:113
-7
-<c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman7
--bold.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/l
-m/lmroman7-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/open
-type/public/lm/lmromancaps10-regular.otf><c:/users/sajid/appdata/local/programs
-/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><c:/users/sajid/appdata/l
-ocal/programs/miktex/fonts/opentype/public/lm/lmroman10-italic.otf><c:/users/sa
-jid/appdata/local/programs/miktex/fonts/truetype/public/academicons/academicons
-.ttf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmr
-oman9-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/
-public/lm/lmroman9-italic.otf><c:/users/sajid/appdata/local/programs/miktex/fon
-ts/opentype/public/lm/lmroman10-bold.otf><c:/users/sajid/appdata/local/programs
-/miktex/fonts/opentype/public/fontawesome5/fontawesome5brands-regular-400.otf><
-c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/fontawesome5
-/fontawesome5free-regular-400.otf><c:/users/sajid/appdata/local/programs/miktex
-/fonts/opentype/public/fontawesome5/fontawesome5free-solid-900.otf><c:/users/sa
-jid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10-regular.ot
-f><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroma
-n12-bold.otf><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on dsmc-cv.pdf (10 pages, 190710 bytes).
-Transcript written on dsmc-cv.log.
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4)
- restricted system commands enabled.
-(./dsmc-cv.tex
-LaTeX2e <2024-11-01>
-L3 programming layer <2024-10-09>
- (./buetcv.cls
-Document Class: buetcv 2024/09/11 Example LaTeX class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
-Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg)
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
-)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx)
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/dvipsnam.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
-)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty)))
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.rev
-ision.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--common.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil
--latex.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfrcs.
-code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/pgf.revision.tex)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-libraryfiltered.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
-fg)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-luatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-s-common-pdf.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-ssoftpath.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
-sprotocol.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-e.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
-r.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.basic.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.trigonometric.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.random.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.comparison.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.base.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.round.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.misc.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunct
-ions.integerarithmetics.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathcalc.
-code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
-tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epoints.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathconstruct.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathusage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-escopes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-egraphicstate.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransformations.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-equick.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eobjects.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epathprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-earrows.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eshade.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eimage.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-eexternal.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-elayers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-etransparency.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-epatterns.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
-erdf.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-shapes.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-plot.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-0-65.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfco
-mp-version-1-18.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.st
-y
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.s
-ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfkeys
-.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/pgf/math/pgfmath.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code
-.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgffor.
-code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/tikz.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplothandlers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-matrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarytopaths.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.cod
-e.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscore
-.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgfplots
-sysgeneric.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgfplot
-slibrary.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_loader.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryfpu.code.tex)
-Package pgfplots: loading complementary utilities for your pgf version...
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/oldpgfcompat
-ib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/luamath
-/pgflibraryluamath.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructure.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsliststructureext.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsarray.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsmatrix.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/numtable/pgf
-plotstableshared.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/liststructur
-e/pgfplotsdeque.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sbinary.data.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-sutil.verb.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/pgflibr
-arypgfplots.surfshading.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/sys/pgflibra
-rypgfplots.surfshading.pgfsys-luatex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolormap.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/util/pgfplot
-scolor.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsstac
-kedplots.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsplot
-handlers.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plothandler.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotsmesh
-plotimage.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.sca
-ling.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotscoor
-dprocessing.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.err
-orbars.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.mar
-kers.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplotstick
-s.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/pgfplots.pat
-hs.code.tex)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
-decorations.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathmorphing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathmorphing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibrarydecorations.pathreplacing.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorat
-ions/pgflibrarydecorations.pathreplacing.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgfplots/libs/tikzlib
-rarypgfplots.contourlua.code.tex))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
-z/libraries/tikzlibraryplotmarks.code.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
-aryplotmarks.code.tex)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
-e.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
-x.sty (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty)
- (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg)
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/l3keys2e/l3k
-eys2e.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/fontawesom
-e5-utex-helper.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
-sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
-k.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omefree.fd)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fontawesome5/tufontawes
-omebrands.fd)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/academicons
-.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
-For additional information on amsmath, use the `?' option.
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
-)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
-ty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
-lestring.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
-.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty)
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
-echeck.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
-ounter.sty)))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/eso-pic/eso-pic.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bookmark.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/bookmark/bkm-pdftex.def
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpage2e.sty
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/lastpage/lastpagemodern
-.sty) 
-))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/changepage/changepage.s
-ty) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/paracol/paracol.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/needspace/needspace.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
-f)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
-) (C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
-) (./ext-numeric.bbx (./ext-standard.bbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex-ext/ext-biblat
-ex-aux.def)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
-bx))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
-x)) (./ext-numeric.cbx
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
-x))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg)
-
-Package biblatex Warning: 'firstinits' option is deprecated.
-(biblatex)                Please use 'giveninits' instead.
-
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
-.sty))) (./dsmc-cv.aux)
-*geometry* driver: auto-detecting
-*geometry* detected driver: luatex
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-)
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
-fg))
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/caption/ltcaption.sty)
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
-
-
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
-x) (./dsmc-cv.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
-
-Overfull \hbox (12.3321pt too wide) in paragraph at lines 83--84
-[]\TU/lmr/bx/n/10 Ph.D. The-sis: \TU/lmr/m/n/10 WAVE-FRONT MA-NIP-U-LA-TION WIT
-H META-
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 90--91
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-Overfull \hbox (9.81612pt too wide) in paragraph at lines 99--100
-[]\TU/lmr/bx/n/10 Bangladesh Uni-ver-sity of En-gi-nee-ing and Tech-nol-ogy (BU
-ET) 
-
-[1{C:/Users/Sajid/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2]
-[3]
-[4] (./gscholar.tex
-(C:/Users/Sajid/AppData/Local/Programs/MiKTeX/tex/latex/academicons/tuacademico
-ns.fd))
-[5]
-[6]
-[7]
-[8]
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
-
-
-[10] 
-enddocument/afterlastpage: lastpage setting LastPage.
-(./dsmc-cv.aux))
-(see the transcript file for additional information)
- 1125 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 38 attribute, 117 glue_sp
-ec, 38 attribute_list, 2 write, 28 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 2:2688,3:1205,4:254,5:696,6:128,7:11114,8:67,9:871,10:20,11:113
-7
-<c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman7
--bold.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/l
-m/lmroman7-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/open
-type/public/lm/lmromancaps10-regular.otf><c:/users/sajid/appdata/local/programs
-/miktex/fonts/opentype/public/lm/lmmono10-regular.otf><c:/users/sajid/appdata/l
-ocal/programs/miktex/fonts/opentype/public/lm/lmroman10-italic.otf><c:/users/sa
-jid/appdata/local/programs/miktex/fonts/truetype/public/academicons/academicons
-.ttf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmr
-oman9-regular.otf><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/
-public/lm/lmroman9-italic.otf><c:/users/sajid/appdata/local/programs/miktex/fon
-ts/opentype/public/lm/lmroman10-bold.otf><c:/users/sajid/appdata/local/programs
-/miktex/fonts/opentype/public/fontawesome5/fontawesome5brands-regular-400.otf><
-c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/fontawesome5
-/fontawesome5free-regular-400.otf><c:/users/sajid/appdata/local/programs/miktex
-/fonts/opentype/public/fontawesome5/fontawesome5free-solid-900.otf><c:/users/sa
-jid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10-regular.ot
-f><c:/users/sajid/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroma
-n12-bold.otf><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Users/Sajid/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on dsmc-cv.pdf (10 pages, 191741 bytes).
+l.186 \pubsection{article}{J}{Journal Articles}
+                                               
+ 18561 words of node memory still in use:
+   237 hlist, 7 vlist, 17 rule, 4 mark, 37 disc, 12 local_par, 2 dir, 16 math, 
+490 glue, 57 kern, 103 penalty, 4 margin_kern, 685 glyph, 1617 attribute, 95 gl
+ue_spec, 810 attribute_list, 2 temp, 1 if_stack, 1 shape, 3 write, 266 pdf_lite
+ral, 1 pdf_start_link, 1 pdf_end_link, 29 pdf_dest, 1 pdf_action, 68 pdf_colors
+tack nodes
+   avail lists: 1:1,3:19,4:296,5:642,6:142,7:8412,8:26,9:271,10:6,11:812
+./cv-body.tex:186:  ==> Fatal error occurred, no output PDF file produced!
 Transcript written on dsmc-cv.log.

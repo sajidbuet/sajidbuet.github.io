@@ -24,6 +24,15 @@ links:
     url: https://www.researchgate.net/profile/Sajid_Choudhury
   - icon: brands/cv
     url: cv.pdf
+# Download buttons on the profile page (layouts/authors/term.html).
+# Built from cv/ by latexrun.ps1; make-all.ps1 copies them into content/.
+documents:
+  - label: CV
+    url: /cv.pdf
+    note: short CV, PDF
+  - label: Full dossier
+    url: /cv-dossier.pdf
+    note: detailed CV with research and teaching statements, PDF
 interests:
   - Quantum
   - Photonics

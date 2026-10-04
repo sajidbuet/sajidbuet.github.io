@@ -5,7 +5,8 @@
 # builds the site locally. Deployment itself is done by GitHub Actions
 # (.github/workflows/publish.yaml) on every push to main.
 #
-#   1. CV        cv\dsmc-cv.pdf → content\cv.pdf   (recompile first with -Cv)
+#   1. CV        cv\dsmc-cv.pdf → content\cv.pdf, cv\dsmc-dossier.pdf →
+#                content\cv-dossier.pdf            (recompile both first with -Cv)
 #   2. Papers    cv\papers.bib  → content\publication + content\bn\publication
 #   3. People    _pythonscripts\all-members.xlsx → data\authors, content\authors
 #   4. Build     hugo + pagefind into public\        (only with -Build / -Zip)
@@ -48,8 +49,12 @@ $ErrorActionPreference = 'Stop'
 $PSNativeCommandUseErrorActionPreference = $false   # PS 7.4+: we check exit codes ourselves
 
 # ─── Config ──────────────────────────────────────────────────────────────────
-$CvPdf        = 'cv\dsmc-cv.pdf'
-$CvTarget     = 'content\cv.pdf'
+# Built by cv\latexrun.ps1 → served at /cv.pdf and /cv-dossier.pdf
+# (linked from data\authors\me.yaml: links + documents).
+$CvPdfs       = [ordered]@{
+    'cv\dsmc-cv.pdf'      = 'content\cv.pdf'           # short CV
+    'cv\dsmc-dossier.pdf' = 'content\cv-dossier.pdf'   # full dossier
+}
 $BibFile      = 'cv\papers.bib'
 $PubDirs      = 'content\publication', 'content\bn\publication'
 $AuthorScript = '_pythonscripts\sync_authors.py'
@@ -89,8 +94,8 @@ function Copy-IfChanged([string]$Source, [string]$Destination) {
 # ─── Steps ───────────────────────────────────────────────────────────────────
 function Update-Cv {
     if ($Cv) {
-        Write-Step '📄  Step 1a: Compiling the CV (cv\latexrun.ps1; tool output → cv\latexmk.log)'
-        $cvArgs = if ($CvCompileOnly) { @('-SkipCitations') } else { @() }
+        Write-Step '📄  Step 1a: Compiling the CV and dossier (cv\latexrun.ps1; tool output → cv\latexmk.log)'
+        $cvArgs = @{ SkipCitations = [bool]$CvCompileOnly }   # hashtable splat: switches by name
         $global:LASTEXITCODE = 0
         & '.\cv\latexrun.ps1' @cvArgs > 'cv\latexmk.log'
         if ($LASTEXITCODE -ne 0) { throw "CV build failed (exit code $LASTEXITCODE) — see cv\latexmk.log." }
@@ -98,11 +103,14 @@ function Update-Cv {
         Write-Host 'ℹ️   CV not recompiled — pass -Cv to run cv\latexrun.ps1.' -ForegroundColor $Warn
     }
 
-    Write-Step "📂  Step 1b: $CvPdf → $CvTarget"
-    if (Copy-IfChanged $CvPdf $CvTarget) {
-        Write-Host '✅  CV copied.' -ForegroundColor $Good
-    } else {
-        Write-Host '✅  CV already up to date.' -ForegroundColor $Good
+    Write-Step '📂  Step 1b: Publishing the CV PDFs'
+    foreach ($source in $CvPdfs.Keys) {
+        $target = $CvPdfs[$source]
+        if (Copy-IfChanged $source $target) {
+            Write-Host "✅  $source → $target" -ForegroundColor $Good
+        } else {
+            Write-Host "✅  $target already up to date." -ForegroundColor $Good
+        }
     }
 }
 

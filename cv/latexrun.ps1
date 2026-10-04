@@ -1,8 +1,9 @@
 ﻿###############################################################################
 # 🛠️  DSMC CV — Full LaTeX + Bibliography Build Script (emoji + colour)       #
 # ----------------------------------------------------------------------------#
-# • Updates citation metrics, regenerates papers.bib, compiles the CV with     #
-#   LuaLaTeX+Biber, then cleans auxiliaries.                                   #
+# • Updates citation metrics, regenerates papers.bib, compiles the short CV   #
+#   (dsmc-cv.pdf) and the full dossier (dsmc-dossier.pdf) with LuaLaTeX+Biber, #
+#   then cleans auxiliaries. Both share buetcv.cls, cv-setup.tex, cv-body.tex.  #
 # • Requires: pop8query.exe, pop8metrics.exe, LuaLaTeX, Biber, Python 3 with   #
 #   pandas and bibtexparser 1.x  (pip install pandas "bibtexparser<2").        #
 #                                                                              #
@@ -40,15 +41,15 @@ $PSNativeCommandUseErrorActionPreference = $false   # PS 7.4+: we check exit cod
 
 # ─── Config ──────────────────────────────────────────────────────────────────
 $GoogleScholarProfileID = 'Fu8Hkb4AAAAJ'
-$texFile        = 'dsmc-cv.tex'
+$texFiles       = @('dsmc-cv.tex', 'dsmc-dossier.tex')   # short CV, full dossier
+$sharedFiles    = @('cv-setup.tex', 'cv-body.tex', 'buetcv.dbx')
 $bibFile        = 'papers.bib'
 $clsFile        = 'buetcv.cls'
 $citesCsv       = 'PoPCites.csv'
 $citesCsvNew    = 'PoPCites.new.csv'   # download target; only replaces $citesCsv once validated
 $metricsCsv     = 'PoPMetrics.csv'
 $authYearCsv    = 'PoPAuthYear.csv'
-$texBaseName    = [IO.Path]::GetFileNameWithoutExtension($texFile)
-$pdfFile        = "$texBaseName.pdf"
+$texBaseNames   = @($texFiles | ForEach-Object { [IO.Path]::GetFileNameWithoutExtension($_) })
 $auxExtensions  = 'aux','bbl','bcf','blg','run.xml','out','toc','fls','fdb_latexmk','synctex.gz'
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -199,15 +200,15 @@ Write-Host ''
 
 # ═════════════════════ 0️⃣  Pre-flight checks ═══════════════════════════════
 Write-Host '🧪  Pre-flight checks' -ForegroundColor $Step
-foreach ($f in @($texFile, $bibFile, $clsFile)) { Assert-File $f }
+foreach ($f in @($texFiles + $sharedFiles + $bibFile + $clsFile)) { Assert-File $f }
 Assert-Command 'lualatex'
 Assert-Command 'biber'
 
 # Every file the run reads or (over)writes must not be open in Excel, a PDF
 # viewer, etc. — Excel's lock even stops pop8metrics from READING a CSV.
-$lockCheck = @($pdfFile, $bibFile, "$texBaseName.log")
+$lockCheck = @($bibFile) + @($texBaseNames | ForEach-Object { "$_.pdf", "$_.log" })
 if (-not $SkipCitations) {
-    $lockCheck += @($citesCsv, $citesCsvNew, $metricsCsv, $authYearCsv, 'gscholar.tex', 'update_citations_py.log')
+    $lockCheck += @($citesCsv, $citesCsvNew, $metricsCsv, $authYearCsv, 'metrics.tex', 'update_citations_py.log')
 }
 Assert-Unlocked $lockCheck
 
@@ -329,8 +330,8 @@ if (-not $SkipCitations) {
     }
     Write-Host "✅  Total $totalCites citations → $currentYear so far: $thisYear." -ForegroundColor $Good
 
-    # ═════════════════════ 3️⃣  Generate gscholar.tex ═══════════════════════
-    Write-Host "🧮  Step 5: Render gscholar.tex from $authYearCsv" -ForegroundColor $Step
+    # ═════════════════════ 3️⃣  Generate metrics.tex ════════════════════════
+    Write-Host "🧮  Step 5: Write metrics.tex (data for the metrics panel)" -ForegroundColor $Step
     Invoke-Tool 'pycv_update_gscholar_tex.py' 'python' @('pycv_update_gscholar_tex.py')
 
 } else {
@@ -338,43 +339,46 @@ if (-not $SkipCitations) {
 }
 
 # ═════════════════════ 4️⃣  LaTeX compilation ═══════════════════════════════
-Write-Host '📚  Step 6: Compiling LaTeX sources…' -ForegroundColor $Step
+$latexOpts = @('-interaction=nonstopmode', '-file-line-error')
+foreach ($texBaseName in $texBaseNames) {
+    $texFile = "$texBaseName.tex"
+    $pdfFile = "$texBaseName.pdf"
+    Write-Host "📚  Step 6: Compiling $texFile…" -ForegroundColor $Step
 
-# Remove stale auxiliaries so biber/biblatex start clean. The old PDF is kept
-# until it is overwritten, so a failed build never leaves you without one.
-foreach ($ext in $auxExtensions + 'log') {
-    Remove-Item -LiteralPath "$texBaseName.$ext" -ErrorAction SilentlyContinue
-}
-$buildStart = Get-Date
-$latexArgs  = @('-interaction=nonstopmode', '-file-line-error', $texFile)
-
-Write-Host '🖨️   lualatex — first pass' -ForegroundColor $Info
-Invoke-Tool 'lualatex (pass 1)' 'lualatex' $latexArgs
-
-Write-Host '🔗  biber bibliography pass' -ForegroundColor $Info
-Invoke-Tool 'biber' 'biber' @($texBaseName)
-
-Write-Host '🔄  lualatex — second pass' -ForegroundColor $Info
-Invoke-Tool 'lualatex (pass 2)' 'lualatex' $latexArgs
-Write-Host '🔄  lualatex — third pass' -ForegroundColor $Info
-Invoke-Tool 'lualatex (pass 3)' 'lualatex' $latexArgs
-
-# ═════════════════════ 5️⃣  Verify output PDF ═══════════════════════════════
-if ((Test-Path -LiteralPath $pdfFile) -and (Get-Item -LiteralPath $pdfFile).LastWriteTime -ge $buildStart) {
-    Write-Host "✅  $pdfFile created successfully." -ForegroundColor $Good
-} else {
-    Stop-Build "Build finished but $pdfFile was not (re)written — see $texBaseName.log."
-}
-
-# ═════════════════════ 6️⃣  Clean auxiliary files ═══════════════════════════
-if ($KeepAux) {
-    Write-Host '🧹  Step 7: -KeepAux given, auxiliaries left in place.' -ForegroundColor $Step
-} else {
-    Write-Host '🧹  Step 7: Cleaning auxiliaries' -ForegroundColor $Step
+    # Remove stale auxiliaries so biber/biblatex start clean. The old PDF is kept
+    # until it is overwritten, so a failed build never leaves you without one.
     foreach ($ext in $auxExtensions + 'log') {
         Remove-Item -LiteralPath "$texBaseName.$ext" -ErrorAction SilentlyContinue
     }
-    Write-Host '🗑️   Cleanup complete.' -ForegroundColor $Info
+    $buildStart = Get-Date
+    $latexArgs  = $latexOpts + $texFile
+
+    Write-Host '🖨️   lualatex — first pass' -ForegroundColor $Info
+    Invoke-Tool "lualatex ($texBaseName, pass 1)" 'lualatex' $latexArgs
+    Write-Host '🔗  biber bibliography pass' -ForegroundColor $Info
+    Invoke-Tool "biber ($texBaseName)" 'biber' @($texBaseName)
+    Write-Host '🔄  lualatex — second pass' -ForegroundColor $Info
+    Invoke-Tool "lualatex ($texBaseName, pass 2)" 'lualatex' $latexArgs
+    Write-Host '🔄  lualatex — third pass' -ForegroundColor $Info
+    Invoke-Tool "lualatex ($texBaseName, pass 3)" 'lualatex' $latexArgs
+
+    # ═════════════════ 5️⃣  Verify output PDF ═══════════════════════════════
+    if ((Test-Path -LiteralPath $pdfFile) -and (Get-Item -LiteralPath $pdfFile).LastWriteTime -ge $buildStart) {
+        Write-Host "✅  $pdfFile created successfully." -ForegroundColor $Good
+    } else {
+        Stop-Build "Build finished but $pdfFile was not (re)written — see $texBaseName.log."
+    }
+
+    # ═════════════════ 6️⃣  Clean auxiliary files ═══════════════════════════
+    if ($KeepAux) {
+        Write-Host '🧹  Step 7: -KeepAux given, auxiliaries left in place.' -ForegroundColor $Step
+    } else {
+        Write-Host '🧹  Step 7: Cleaning auxiliaries' -ForegroundColor $Step
+        foreach ($ext in $auxExtensions + 'log') {
+            Remove-Item -LiteralPath "$texBaseName.$ext" -ErrorAction SilentlyContinue
+        }
+    }
+    Write-Host ''
 }
 
 Write-Host ''
