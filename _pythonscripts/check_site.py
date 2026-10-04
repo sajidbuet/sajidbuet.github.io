@@ -279,9 +279,10 @@ def resolve(public: Path, page_url: str, url: str) -> Path | None:
         return None
     if not path.startswith("/"):
         path = posixpath.join(posixpath.dirname(page_url), path)
+    is_dir_url = path.endswith("/")
     path = posixpath.normpath(path)
     target = public / path.lstrip("/")
-    if path.endswith("/") or target.is_dir():
+    if is_dir_url or target.is_dir():
         target = target / "index.html"
     return target
 

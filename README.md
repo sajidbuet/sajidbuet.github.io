@@ -27,6 +27,45 @@ Node dependencies (Tailwind, and Playwright for the QA drivers):
 pnpm install --frozen-lockfile     # what CI runs
 ```
 
+Hugo version: CI pins `HUGO_VERSION` in `.github/workflows/publish.yaml`
+(0.157.0); use the same or newer extended build locally.
+
+## Site structure and data flow
+
+| What | Where | Notes |
+|---|---|---|
+| English content | `content/en/` | published at the site root (`/research/`, …) |
+| Bengali content | `content/bn/` | published under `/bn/`; the two roots must never be nested |
+| Languages | `config/_default/languages.yaml` | the only place languages are defined |
+| Publications | `cv/papers.bib` → `_pythonscripts/import_publications.py` → `content/{en,bn}/publication/` | never edit generated fields by hand; fix the `.bib` and re-import |
+| Author identities | `data/author_aliases.yaml` | spelling → canonical identity (profile slug or one name), applied by the importer |
+| People | `_pythonscripts/all-members.xlsx` → `_pythonscripts/sync_authors.py` → `data/authors/`, `content/en/authors/` | |
+| Bengali owner profile | `data/authors/bn/me.yaml` | mirrors `data/authors/me.yaml` |
+| CV PDFs | `cv/latexrun.ps1` → `cv/*.pdf` → `make-all.ps1` → `content/en/cv*.pdf` | |
+
+`make-all.ps1` runs these steps; `make-all.ps1 -Build` also builds and checks
+the site.
+
+Links between languages: a link to a site path goes through
+`layouts/_partials/functions/lang_url.html`, which uses the Bengali page when
+one exists and the English page otherwise. Do not use `relLangURL` for
+sections that only exist in English.
+
+## Checks
+
+```bash
+hugo --gc --minify --printPathWarnings --printI18nWarnings > hugo-build.log 2>&1
+python _pythonscripts/check_site.py --public public --build-log hugo-build.log
+python -m unittest discover -s _pythonscripts -p "test_*.py"
+```
+
+`check_site.py` fails on duplicate target paths, broken internal links and
+assets, missing titles/descriptions/canonicals/`lang`, `<h1>` count, duplicate
+ids, images without `alt`, unnamed links, widely shared meta descriptions, and
+content regressions (template demo partners, owner or co-author spellings that
+bypass `data/author_aliases.yaml`, stale Bengali-only papers, machine-copy
+files). CI runs it before every deploy. External links are not checked in CI.
+
 ## Interactive research-circuit hero
 
 The homepage hero renders an abstract PCB / photonic-waveguide schematic behind

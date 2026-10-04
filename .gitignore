@@ -120,3 +120,6 @@ docs/redesign/screenshots/**/*.jpeg
 # Microsoft Edge WebDriver (18.5 MB). No script in the repository uses it; it
 # is a per-machine download matching the installed Edge version.
 cv/msedgedriver.exe
+
+# Python bytecode (_pythonscripts tests and tools)
+__pycache__/
