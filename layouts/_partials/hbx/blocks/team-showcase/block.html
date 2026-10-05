@@ -135,7 +135,7 @@
                 {{ end }}
                 
                 {{ if and $show_social $profile.links }}
-                <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div class="sj-team-card__links flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                   {{ range $profile.links }}
                   {{ $l := .url | default .link }}
                   {{ $scheme := (urls.Parse $l).Scheme }}
@@ -212,7 +212,7 @@
               </div>
               {{ end }}
               {{ if and $show_social $profile.links }}
-              <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div class="sj-team-card__links flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                 {{ range $profile.links }}
                 {{ $l := .url | default .link }}
                 {{ $scheme := (urls.Parse $l).Scheme }}

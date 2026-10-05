@@ -67,7 +67,9 @@
 
       {{/* Text content */}}
       <div class="lg:col-span-6 {{ if and $hasImage $block.content.design.flip }}lg:order-2{{ end }}">
-        <div class="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
+        {{/* Visual polish: left-aligned at every width. Below lg the paragraph was
+             centred, which on a phone is 12–16 ragged-both-sides lines. */}}
+        <div class="max-w-3xl text-left">
 
           {{ with $block.content.title }}
             <h1 class="sj-display-title">
@@ -94,10 +96,10 @@
           {{ end }}
 
           {{ if or $ctaURL $ctaAltURL }}
-            <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row">
               {{ if $ctaURL }}
                 <a
-                  class="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 active:text-white/80"
+                  class="sj-btn sj-btn--primary"
                   href="{{ $ctaURL | safeURL }}"
                   {{ $ctaTarget | safeHTMLAttr }}>
                   <span>{{ $ctaLabel | markdownify | emojify }}</span>
@@ -111,7 +113,7 @@
 
               {{ if $ctaAltURL }}
                 <a
-                  class="inline-flex items-center justify-center rounded-2xl px-6 py-4 text-base font-semibold text-slate-700 ring-1 ring-slate-300 transition duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-900/70"
+                  class="sj-btn sj-btn--secondary"
                   href="{{ $ctaAltURL | safeURL }}"
                   {{ $ctaAltTarget | safeHTMLAttr }}>
                   <span>{{ $ctaAltLabel | markdownify | emojify }}</span>

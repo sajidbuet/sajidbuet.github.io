@@ -11,6 +11,55 @@
 | **Phase 6 — Detail templates** | ✅ Complete (2026-09-22). Twelve detail types; one `_vendor` shadow. |
 | **Phase 7 — Responsive / a11y / cross-browser** | ✅ **PASS WITH MANUAL CHECKS REMAINING** (2026-09-22). See [`phase-7-validation.md`](phase-7-validation.md). |
 | **Phase 8 — Polish & performance** | ✅ **COMPLETE WITH NON-BLOCKING LIMITATIONS** (2026-09-23). Validation complete: 22/22 checklist, no Phase 1–7 regressions. See [`phase-8-validation.md`](phase-8-validation.md). |
+| **Visual Polish / Aesthetic Audit** | ✅ **Complete on branch `visual-polish`, not merged** (2026-10-05). 22 of 25 findings fixed; 3 P3 items deliberately deferred. See [`../visual-polish-audit-2026-10-05.md`](../visual-polish-audit-2026-10-05.md). |
+
+### Visual Polish / Aesthetic Audit (2026-10)
+
+**Status:** complete on `visual-polish`, awaiting manual review before merge.
+
+The site had two visual systems. The redesign's own sections used the token layer, while the reused
+HugoBlox blocks still carried upstream styling:
+- 48 px centred headings
+- `shadow-xl` and `rounded-2xl`
+- hover lift
+- pill tags
+- a placeholder image on every news item
+
+This pass moved those blocks onto the existing primitives. It introduced **no new colours, radii,
+shadows or motion vocabulary**: only two type tokens (`--sj-text-page`, `--sj-text-display`) and one
+stylesheet (`assets/css/visual-polish.css`, loaded last).
+
+**Completed work:**
+
+| Area | Change |
+|---|---|
+| Typography | One page-title size (39 px/700, left) on every interior page, from 31–60 px at 700–800; 48 px display title for research heroes; no 800/900 text |
+| Sections | One section header (31 px, left, shared container) for every homepage block; collection titles are real `h2`s |
+| Cards | Contact, team, listing and profile panels use the card anatomy: border, 8 px, no shadow, border-colour hover |
+| Footer | One quiet band; the empty 80 px strip, the card-in-card, the logo hover motion and the near-black dark surface are gone |
+| Navigation | Scroll-spy no longer leaves "Contact" lit beside "Home" |
+| Accessibility | Last contrast failure fixed (3.30 → 5.02 : 1). Publication-filter focus ring restored (was 1.29 : 1) |
+| Density | Homepage 6,947 → 5,885 px at 1440 and 10,195 → 8,514 px at 390 |
+
+**Validation performed:**
+- `evidence/visual-polish-qa.mjs`, before and after:
+  - contrast failures 2 → 0, with 0 horizontal scroll across 172 cells
+  - card shadows 81 → 0
+  - off-scale radii 102 → 0
+- Phase 7 keyboard, zoom, motion and semantics drivers re-run with no regressions.
+- Before/after captures are regenerated into `screenshots/visual-polish/`. Per `.gitignore` they are
+  kept on disk, not committed; that folder's README has the commands.
+
+**Remaining optional improvements:**
+- VP-23: port the Bengali homepage to the English block set.
+- VP-24: IBM Plex experiment, not recommended.
+- VP-25: circuit-trace section dividers.
+
+**Known limitations:**
+- Lighthouse, Firefox and Brave were not re-run.
+- Windows display scaling was emulated, not tested on hardware.
+- `/bn/` still shows the legacy gradient cards (VP-23) and an empty news block caused by a content query.
+- Footer labels are English on Bengali pages.
 
 ### Phase 8
 
@@ -109,6 +158,7 @@ Phase 2A evidence: `screenshots/phase2a/` (39 captures + 6 inspectable crops),
 | [`phase-6-detail-template-map.md`](phase-6-detail-template-map.md) · [`phase-6-detail-template-qa.md`](phase-6-detail-template-qa.md) | Detail-template inventory and QA |
 | [`phase-7-validation.md`](phase-7-validation.md) | **Phase 7 gate report** — responsive matrix, keyboard, contrast, motion, zoom, touch, Chromium/Firefox/Brave, Lighthouse, and what remains manual |
 | [`phase-8-validation.md`](phase-8-validation.md) | **Phase 8 gate report** — what was wrong and what changed, Phase 1–7 regression evidence, per-route Lighthouse, why the Performance target was missed, findings left open, and the exact git commands |
+| [`../visual-polish-audit-2026-10-05.md`](../visual-polish-audit-2026-10-05.md) | **Visual polish audit** — 25 findings (P0–P3) against the design-system proposal, disposition, and before/after validation |
 
 **Read in this order for review:** `visual-audit` → `information-architecture` →
 `design-system-proposal` → `implementation-roadmap`.

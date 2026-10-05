@@ -583,3 +583,12 @@ a:hover > .sj-tag {
     padding-bottom: var(--sj-section-md) !important;
   }
 }
+
+/* Profile link rows wrap instead of running past the card edge (seven
+   links overflowed the PI card at 360 px — pre-existing, found in final QA).
+   The divider uses the border token rather than gray-200/700. */
+.sj-team-card__links {
+  flex-wrap: wrap;
+  row-gap: var(--sj-space-2);
+  border-top-color: var(--sj-border);
+}
