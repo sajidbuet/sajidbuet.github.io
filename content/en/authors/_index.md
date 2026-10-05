@@ -41,6 +41,9 @@ sections:
         computing, antenna and RF design, embedded systems and renewable energy,
         combining device modelling and simulation with hands-on hardware work.
     design:
+      # Visual polish VP-21: page-title + lede treatment shared with every
+      # other interior page (assets/css/visual-polish.css, .sj-page-intro).
+      css_class: 'sj-page-intro'
       spacing:
         padding: ["3rem", 0, "1rem", 0]
 

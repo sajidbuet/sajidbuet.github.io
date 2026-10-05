@@ -8,6 +8,12 @@
      emission sites, delegating to `functions/svg_dimensions`, which reads the
      numbers out of each file's own viewBox. Nothing is guessed and no other
      line of this file is modified. */}}
+{{/* VISUAL POLISH (2026-10) — docs/visual-polish-audit-2026-10-05.md.
+     VP-04/VP-15: the header was a centred 48 px <h2>, and the wrapper added
+     py-16/20/24 on top of the section's own padding, so four 40 px logos
+     filled a 458 px band. The header is now the shared section furniture on
+     the shared container, and the block adds no vertical padding of its own.
+     Logo rendering below is unchanged. */}}
 {{/* Hugo Blox: Logos Block */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -21,7 +27,7 @@
 {{ $subtitle := $block.content.subtitle | emojify | $page.RenderString }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<div class="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
+<div class="relative overflow-hidden">
   {{/* Background Pattern */}}
   {{ if $block.design.show_pattern }}
   <div class="absolute inset-0 opacity-5">
@@ -29,24 +35,24 @@
   </div>
   {{ end }}
   
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative sj-container-content">
     
     {{/* Section Header */}}
-    <div class="text-center max-w-3xl mx-auto mb-12">
+    <div class="sj-section__head">
       {{ with $title }}
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+      <h2 class="sj-section__title">
         {{ . }}
       </h2>
       {{ end }}
       
       {{ with $subtitle }}
-      <p class="text-xl text-primary-600 dark:text-primary-400 font-medium mb-2">
+      <p class="sj-section__subtitle">
         {{ . }}
       </p>
       {{ end }}
       
       {{ with $text }}
-      <p class="text-lg text-gray-600 dark:text-gray-400">
+      <p class="sj-section__subtitle">
         {{ . }}
       </p>
       {{ end }}

@@ -1,4 +1,12 @@
 {{/* Hugo Blox: Contact Info Block */}}
+{{/* VISUAL POLISH (2026-10) — docs/visual-polish-audit-2026-10-05.md.
+     VP-04/VP-22: centred 48 px header → shared section furniture.
+     VP-09: shadow-xl/rounded-2xl cards (gray-800 in dark, off-palette) →
+            .sj-contact-card, the site card anatomy; 48 px tinted icon discs →
+            a plain accent icon beside the heading; the block's own
+            py-12/16/20 removed (the section already pads itself).
+     VP-19: filled grey social discs → outlined, same 40 px target.
+     Content, links and accessible names are unchanged. */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
 
@@ -9,40 +17,38 @@
 {{ $title := $block.content.title | default (i18n "block_contact_title" | default "Contact Us") | emojify | $page.RenderString }}
 {{ $subtitle := $block.content.subtitle | emojify | $page.RenderString }}
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+<div class="sj-container-content">
   
   {{/* Section Header */}}
-  <div class="text-center mb-12">
+  <div class="sj-section__head">
     {{ with $title }}
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
+    <h2 class="sj-section__title">
       {{ . }}
     </h2>
     {{ end }}
     
     {{ with $subtitle }}
-    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+    <p class="sj-section__subtitle">
       {{ . }}
     </p>
     {{ end }}
   </div>
 
   {{/* Contact Cards Grid */}}
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+  <div class="sj-contact-grid">
     
     {{/* Visit Us Card */}}
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-      <div class="flex items-center mb-6">
-        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-          {{ partial "functions/get_icon" (dict "name" "hero/map-pin" "attributes" "class=\"w-6 h-6 text-primary-600 dark:text-primary-400\"") }}
-        </div>
-        <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+    <div class="sj-contact-card">
+      <div class="sj-contact-card__head">
+        {{ partial "functions/get_icon" (dict "name" "hero/map-pin" "attributes" "class=\"sj-contact-card__icon\" aria-hidden=\"true\"") }}
+        <h3 class="sj-contact-card__title">
           {{ $block.content.visit_title | default (i18n "block_contact_visit_title" | default "Visit Us") }}
         </h3>
       </div>
       
       <div class="space-y-4">
         {{ with $block.content.address }}
-        <div class="text-gray-600 dark:text-gray-300">
+        <div class="sj-contact-card__text">
           {{ range .lines }}
           <p>{{ . }}</p>
           {{ end }}
@@ -71,12 +77,10 @@
     </div>
 
     {{/* Connect Card */}}
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-      <div class="flex items-center mb-6">
-        <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-          {{ partial "functions/get_icon" (dict "name" "hero/chat-bubble-left-right" "attributes" "class=\"w-6 h-6 text-primary-600 dark:text-primary-400\"") }}
-        </div>
-        <h3 class="ml-4 text-2xl font-bold text-gray-900 dark:text-white">
+    <div class="sj-contact-card">
+      <div class="sj-contact-card__head">
+        {{ partial "functions/get_icon" (dict "name" "hero/chat-bubble-left-right" "attributes" "class=\"sj-contact-card__icon\" aria-hidden=\"true\"") }}
+        <h3 class="sj-contact-card__title">
           {{ $block.content.connect_title | default (i18n "block_contact_connect_title" | default "Connect") }}
         </h3>
       </div>
@@ -87,7 +91,7 @@
           {{ with $block.content.email }}
           <div class="flex items-center">
             {{ partial "functions/get_icon" (dict "name" "hero/envelope" "attributes" "class=\"w-5 h-5 text-gray-500 dark:text-gray-400 mr-3\"") }}
-            <a href="mailto:{{ . }}" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+            <a href="mailto:{{ . }}" class="sj-contact-card__link">
               {{ . }}
             </a>
           </div>
@@ -96,7 +100,7 @@
           {{ with $block.content.phone }}
           <div class="flex items-center">
             {{ partial "functions/get_icon" (dict "name" "hero/phone" "attributes" "class=\"w-5 h-5 text-gray-500 dark:text-gray-400 mr-3\"") }}
-            <a href="tel:{{ . }}" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+            <a href="tel:{{ . }}" class="sj-contact-card__link">
               {{ . }}
             </a>
           </div>
@@ -104,8 +108,8 @@
           
           {{/* Social Media */}}
           {{ with $block.content.social }}
-          <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-            <h4 class="font-semibold text-gray-900 dark:text-white mb-3">{{ i18n "block_contact_follow_us" | default "Follow Us" }}</h4>
+          <div class="sj-contact-card__group">
+            <h4 class="sj-contact-card__label">{{ i18n "block_contact_follow_us" | default "Follow Us" }}</h4>
             <div class="flex gap-3">
               {{/* PHASE 7 SHADOW — see docs/redesign/phase-7-validation.md.
                    Upstream: _vendor/.../blox/blox/contact-info/block.html
@@ -126,7 +130,7 @@
               {{ $name := .label | default .name | default $fallback | default "Social profile" }}
               <a href="{{ .url }}" target="_blank" rel="noopener"
                  aria-label="{{ printf "%s (opens in a new tab)" $name }}"
-                 class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/50 hover:text-primary-600 dark:hover:text-primary-400 transition-all">
+                 class="sj-icon-link">
                 {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\" aria-hidden=\"true\" focusable=\"false\"") }}
               </a>
               {{ end }}

@@ -14,8 +14,11 @@
 {{/* Phase 3: densified. The section header no longer reserves a 12-16 unit
      gap before the grid, and the cards below are flat surfaces rather than
      192px gradient headers. */}}
-<div class="sj-research px-4 sm:px-6 lg:px-8">
-  <div class="max-w-6xl mx-auto">
+{{/* Visual polish VP-04: on the shared content container, so this section's
+     heading and grid start on the same left edge as every other homepage
+     section (it was max-w-6xl: x=144 against x=192 elsewhere at 1440). */}}
+<div class="sj-research">
+  <div class="sj-container-content">
 
     {{/* Section Header */}}
     <div class="sj-research__header">

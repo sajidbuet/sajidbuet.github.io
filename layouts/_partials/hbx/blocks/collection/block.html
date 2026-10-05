@@ -1,0 +1,188 @@
+{{/* VISUAL POLISH SHADOW (2026-10) — see docs/visual-polish-audit-2026-10-05.md.
+     Upstream: _vendor/github.com/HugoBlox/kit/modules/blox/blox/collection/block.html
+     Query, filter, sort and archive logic are upstream verbatim. Only the
+     three presentation wrappers changed:
+       VP-03  the block title was a <div class="text-3xl">, so "Selected
+              Publications", "Teaching", "Latest News" and every research
+              area's "Papers on …" were missing from the heading outline.
+              It is now <h2 class="sj-section__title">.
+       VP-04  title and list sat in a centred max-w-prose column, 200 px to
+              the right of the Research and Projects headings on the same
+              page. Everything now hangs off .sj-container-content, the same
+              left edge as every other homepage section.
+       VP-14  the archive link was a bordered button (research areas) or a
+              loose text link (homepage); it is now .sj-more-link, the
+              circuit-trace tertiary affordance used by Projects. */}}
+{{/* Hugo Blox: Collection */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $view := $block.design.view | default "card" }}
+
+{{ $items_offset := $block.content.offset | default 0 }}
+{{ $items_count := $block.content.count }}
+{{ if eq $items_count 0 }}
+  {{ $items_count = 65535 }}
+{{ else }}
+  {{ $items_count = $items_count | default 5 }}
+{{ end }}
+
+{{/* Query */}}
+{{ $query := site.Pages }}
+{{ $archive_page := "" }}
+
+{{/* Filters */}}
+{{ $kinds := $block.content.filters.kinds | default (slice "page") }}
+{{ $query = where $query "Kind" "in" $kinds }}
+
+{{ if $block.content.page_type }}
+  {{ $query = where $query "Type" $block.content.page_type }}
+  {{ $archive_page = site.GetPage "Section" $block.content.page_type }}
+{{ end }}
+{{ if $block.content.filters.folders }}
+  {{ $folders := $block.content.filters.folders }}
+  {{ $query = where $query "Section" "in" $folders }}
+  {{/* Init archive page to main folder */}}
+  {{ $main_folder := index $folders 0 }}
+  {{ $archive_page = site.GetPage "Section" $main_folder }}
+{{ end }}
+{{ if $block.content.filters.tags }}
+  {{ $tags := $block.content.filters.tags }}
+  {{ $selected := slice }}
+  {{ range $tags }}
+    {{ $tag_page := site.GetPage (printf "tags/%s" (urlize .)) }}
+    {{ if $tag_page }}
+      {{ $selected = $selected | union $tag_page.Pages }}
+    {{ end }}
+  {{ end }}
+  {{ if gt (len $selected) 0 }}
+    {{ $query = $query | intersect $selected }}
+    {{ $archive_page = site.GetPage (printf "tags/%s" (urlize (index $tags 0))) }}
+  {{ end }}
+{{ end }}
+{{ if $block.content.filters.tag }}
+  {{ $archive_page = site.GetPage (printf "tags/%s" (urlize $block.content.filters.tag)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $block.content.filters.category }}
+  {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $block.content.filters.category)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $block.content.filters.publication_type }}
+  {{ $archive_page = site.GetPage (printf "publication_types/%s" $block.content.filters.publication_type) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $block.content.filters.exclude_publication_type }}
+  {{ $query = $query | complement (site.GetPage (printf "publication_types/%s" $block.content.filters.exclude_publication_type)).Pages }}
+{{ end }}
+{{ if $block.content.filters.author }}
+  {{ $archive_page = site.GetPage (printf "authors/%s" (urlize $block.content.filters.author)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $block.content.filters.featured_only }}
+  {{ $query = where $query "Params.featured" "==" true }}
+{{ end }}
+{{ if $block.content.filters.exclude_featured }}
+  {{ $query = where $query "Params.featured" "!=" true }}
+{{ end }}
+{{ if $block.content.filters.exclude_past }}
+  {{ $query = where $query "Date" ">=" now }}
+{{ end }}
+{{ if $block.content.filters.exclude_future }}
+  {{ $query = where $query "Date" "<" now }}
+{{ end }}
+
+{{ $count := len $query }}
+
+{{/* Sort */}}
+{{ $sort_by := $block.content.sort_by | default "Date" }}
+{{ $sort_by = partial "functions/get_sort_by_parameter" $sort_by }}
+{{ $sort_ascending := $block.content.sort_ascending | default (eq $block.content.order "asc") | default false }}
+{{ $sort_order := cond $sort_ascending "asc" "desc" }}
+{{ $query = sort $query $sort_by $sort_order }}
+
+{{/* Offset and Limit */}}
+{{ if gt $items_offset 0 }}
+  {{ $query = first $items_count (after $items_offset $query) }}
+{{ else }}
+  {{ $query = first $items_count $query }}
+{{ end }}
+
+{{/* Check if any items have author_notes to enable Alpine.js */}}
+{{ range $query }}
+  {{ if isset .Params "author_notes" }}
+    {{ $page.Store.Set "has_alpine" true }}
+    <script>console.log('Author notes found in collection - Alpine.js enabled');</script>
+    {{ break }}
+  {{ end }}
+{{ end }}
+
+{{ $columns := $block.design.columns | default "2" }}
+
+<div class="sj-container-content sj-collection">
+{{ if $block.content.title }}
+<div class="sj-section__head">
+
+  <h2 class="sj-section__title">
+    {{ $block.content.title | emojify | $page.RenderString }}
+  </h2>
+
+  {{ with $block.content.text }}<p class="sj-section__subtitle">{{ . | emojify | $page.RenderString }}</p>{{ end }}
+</div>
+{{ end }}
+
+<div class="sj-collection__body">
+
+  {{ $config := dict 
+      "columns" ($block.design.columns | default 2) 
+      "len" (len $query) 
+      "fill_image" ($block.design.fill_image | default true)
+      "show_date" ($block.design.show_date | default true)
+      "show_read_time" ($block.design.show_read_time | default true)
+      "show_read_more" ($block.design.show_read_more | default true)
+    }}
+  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
+
+  {{ range $index, $item := $query }}
+    {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
+  {{end}}
+
+  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+
+</div>
+
+{{/* Archive link */}}
+{{ $show_archive_link := $block.content.archive.enable | default (gt $count $items_count) }}
+{{ if $show_archive_link | and $archive_page }}
+
+  {{ $archive_link := "" }}
+  {{ if $block.content.archive.link }}
+    {{ $archive_link = $block.content.archive.link | relLangURL }}
+  {{ else }}
+    {{ $archive_link = $archive_page.RelPermalink }}
+  {{ end }}
+
+  {{/* Localisation */}}
+  {{ $items_type := $archive_page.Type }}
+  {{ $i18n := "" }}
+  {{ if eq $items_type "blog" }}
+    {{ $i18n = "more_posts" }}
+  {{ else if eq $items_type "event" }}
+    {{ $i18n = "more_talks" }}
+  {{ else if eq $items_type "publication" }}
+    {{ $i18n = "more_publications" }}
+  {{ else }}
+    {{ $i18n = "more_pages" }}
+  {{ end }}
+
+  {{ $archive_text := $block.content.archive.text | default (i18n $i18n) | default "See all" }}
+
+  <p class="sj-section__more">
+    <a class="sj-more-link" href="{{ $archive_link }}">{{ $archive_text | emojify }}</a>
+  </p>
+
+{{ end }}
+</div>

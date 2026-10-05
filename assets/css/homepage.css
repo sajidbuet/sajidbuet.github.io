@@ -855,60 +855,12 @@
 }
 
 /* --------------------------------------------------------------------------
-   Collection block corrections (homepage only)
-
-   The upstream collection block wraps items in
-   `flex flex-col items-center max-w-prose mx-auto`. `items-center` shrinks
-   each row to its own content width, which rendered the Teaching and News
-   lists as a ~210px ribbon floating in the middle of a 1440px viewport with
-   large dead space above and below. Stretch them instead.
+   Collection blocks (Publications, Teaching, News)
+   The rules that used to live here widened upstream's centred max-w-prose
+   column and restyled its bordered archive button. The block is now shadowed
+   (layouts/_partials/hbx/blocks/collection/block.html) and emits the shared
+   section furniture directly; its layout is in visual-polish.css §5.
    -------------------------------------------------------------------------- */
-.sj-compact-list .max-w-prose,
-#publication .max-w-prose {
-  align-items: stretch;
-  max-width: 46rem;
-  width: 100%;
-  gap: 0;
-}
-
-/* The block's own archive link ("View all publications" etc.) is used as the
-   single section CTA, restyled from a bordered button into the tertiary
-   text affordance the design system specifies. */
-#publication .max-w-screen-lg,
-.sj-compact-list .max-w-screen-lg {
-  padding-bottom: 0;
-}
-
-#publication .max-w-screen-lg .mt-10,
-.sj-compact-list .max-w-screen-lg .mt-10 {
-  margin-top: var(--sj-space-6);
-  justify-content: flex-start;
-}
-
-#publication .max-w-screen-lg a,
-.sj-compact-list .max-w-screen-lg a {
-  border: 0;
-  background: none;
-  padding: 0;
-  min-height: 44px;
-  font-size: var(--sj-text-sm);
-  font-weight: 600;
-  color: var(--sj-accent);
-}
-
-#publication .max-w-screen-lg a:hover,
-.sj-compact-list .max-w-screen-lg a:hover {
-  background: none;
-  color: var(--sj-accent-hover);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-/* Keep the archive link aligned with the list it belongs to. */
-#publication .max-w-screen-lg,
-.sj-compact-list .max-w-screen-lg {
-  max-width: 46rem;
-}
 
 /* --------------------------------------------------------------------------
    Team snapshot
@@ -916,20 +868,11 @@
    producing a ~290px portrait and a ~650px card for a single PI. On the
    homepage it becomes a compact horizontal snapshot.
    -------------------------------------------------------------------------- */
-.sj-team-compact .rounded-2xl {
-  border-radius: var(--sj-radius-md);
-  box-shadow: var(--sj-shadow-none);
-  border: 1px solid var(--sj-border);
-  background-color: var(--sj-surface);
-}
-
-.sj-team-compact .rounded-2xl:hover {
-  box-shadow: var(--sj-shadow-none);
-  border-color: var(--sj-border-strong);
-}
+/* Card surface, border and hover now come from .sj-team-card
+   (visual-polish.css §7), which applies on /authors/ too. */
 
 /* Portrait: 1:1, modest footprint. */
-.sj-team-compact .rounded-full {
+.sj-team-compact .sj-portrait {
   width: 112px !important;
   max-width: 112px;
   aspect-ratio: 1 / 1;
@@ -937,7 +880,7 @@
   box-shadow: var(--sj-shadow-none);
 }
 
-.sj-team-compact .rounded-full img {
+.sj-team-compact .sj-portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -945,7 +888,7 @@
 
 @media (min-width: 768px) {
   /* Horizontal layout: portrait beside the details rather than stacked. */
-  .sj-team-compact .rounded-2xl > div:first-child {
+  .sj-team-compact .sj-team-card > div:first-child {
     display: flex;
     align-items: center;
     gap: var(--sj-space-6);
@@ -953,7 +896,7 @@
     padding: var(--sj-space-6);
   }
 
-  .sj-team-compact .rounded-full {
+  .sj-team-compact .sj-portrait {
     margin-inline: 0;
     flex: 0 0 auto;
   }

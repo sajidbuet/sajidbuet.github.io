@@ -35,8 +35,11 @@
 {{ $items := cond (gt (len $featured) 0) $featured $portfolio }}
 {{ $items = first $count ($items.ByDate.Reverse) }}
 
-<div class="sj-projects px-4 sm:px-6 lg:px-8">
-  <div class="max-w-6xl mx-auto">
+{{/* Visual polish VP-04: on the shared content container, so this section's
+     heading and grid start on the same left edge as every other homepage
+     section (it was max-w-6xl: x=144 against x=192 elsewhere at 1440). */}}
+<div class="sj-projects">
+  <div class="sj-container-content">
 
     <div class="sj-section__head">
       {{ with $block.content.title }}<h2 class="sj-section__title">{{ . }}</h2>{{ end }}
