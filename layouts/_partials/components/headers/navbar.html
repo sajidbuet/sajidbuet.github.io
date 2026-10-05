@@ -204,7 +204,15 @@
       {{ end }}
     </ul>
 
-    <div class="order-1 ml-auto flex items-center gap-1 md:order-2 lg:ml-0">
+    <div class="sj-header-controls order-1 ml-auto flex items-center gap-1 md:order-2 lg:ml-0">
+
+      {{/* Language switch (EN | BN). The upstream chooser was gated on
+           `.IsTranslated` AND on `header.language_switcher`, which params.yaml
+           sets to false — so it never rendered. It is now a project partial
+           shown on every page; turn it off with language_switcher: false. */}}
+      {{ if and hugo.IsMultilingual (ne site.Params.hugoblox.header.language_switcher false) }}
+        {{ partial "components/language-switch.html" . }}
+      {{ end }}
 
       {{/* Show site search? */}}
       {{ $show_search := site.Params.hugoblox.header.search | default false }}
@@ -268,13 +276,6 @@
             }
           })();
         </script>
-      </div>
-      {{ end }}
-
-      {{ $show_translations := site.Params.hugoblox.header.language_switcher | default true }}
-      {{ if .IsTranslated | and $show_translations }}
-      <div class="pl-1 mr-2 text-[var(--hb-color-header-fg)]">
-        {{- partial "components/language-chooser.html" (dict "page" .) -}}
       </div>
       {{ end }}
 

@@ -305,6 +305,9 @@
 - id: nav_toggle_close
   translation: "Close menu"
 
+- id: lang_switch
+  translation: "Language"
+
 - id: appearance
   translation: "Appearance"
 

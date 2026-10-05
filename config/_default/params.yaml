@@ -97,7 +97,8 @@ hugoblox:
     search: true
     theme_toggle: true
     theme_picker: false
-    language_switcher: false
+    # EN | BN switch in the header (layouts/_partials/components/language-switch.html)
+    language_switcher: true
     # Call-to-action button
     cta:
       enable: false

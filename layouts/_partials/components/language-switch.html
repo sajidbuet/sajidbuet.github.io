@@ -1,0 +1,48 @@
+{{/* Header language switch — EN | BN.
+
+     Replaces HugoBlox's components/language-chooser.html in the navbar. That
+     chooser rendered only when `.IsTranslated`, so it disappeared on every
+     English-only page (/teaching/, /projects/, /resources/ …), and it was a
+     JS popover in upstream grey styling.
+
+     This is two plain links that are always present:
+       - the current language is plain text (aria-current), never a link to
+         itself;
+       - the other language links to THIS page's translation when one exists,
+         otherwise to that language's homepage, and its tooltip says so.
+
+     Text codes, not flags. A flag names a country, not a language — English
+     is not the UK's alone, and Bengali is also the language of West Bengal —
+     and flag emoji render as letter pairs on Windows.
+
+     The tooltip strings are in the TARGET language (a Bengali reader on an
+     English page should read the BN tooltip in Bengali), which i18n — keyed to
+     the current page's language — cannot provide, hence the dict below. */}}
+{{- $page := . -}}
+{{- $names := dict "en" "English" "bn" "বাংলা" -}}
+{{- $missing := dict
+      "en" "This page has no English version — opens the English homepage"
+      "bn" "এই পৃষ্ঠার বাংলা সংস্করণ নেই — বাংলা হোমপেজ খুলবে" -}}
+
+<div class="sj-lang" role="group" aria-label="{{ i18n "lang_switch" | default "Language" }}">
+  {{- range $i, $l := site.Languages -}}
+    {{- $code := $l.Lang -}}
+    {{- $label := upper $code -}}
+    {{- $name := index $names $code | default $l.LanguageName -}}
+    {{- if $i }}<span class="sj-lang__sep" aria-hidden="true"></span>{{ end -}}
+    {{- if eq $code $page.Lang -}}
+      <span class="sj-lang__item is-current" lang="{{ $code }}" aria-current="true">{{ $label }}<span class="sj-sr-only"> — {{ $name }}</span></span>
+    {{- else -}}
+      {{- $href := "" -}}
+      {{- range $page.AllTranslations }}{{ if eq .Lang $code }}{{ $href = .RelPermalink }}{{ end }}{{ end -}}
+      {{- $title := $name -}}
+      {{- if not $href -}}
+        {{- range site.Home.AllTranslations }}{{ if eq .Lang $code }}{{ $href = .RelPermalink }}{{ end }}{{ end -}}
+        {{- $title = index $missing $code | default $name -}}
+      {{- end -}}
+      {{- with $href -}}
+      <a class="sj-lang__item" href="{{ . }}" lang="{{ $code }}" hreflang="{{ $code }}" title="{{ $title }}">{{ $label }}<span class="sj-sr-only"> — {{ $name }}</span></a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</div>
