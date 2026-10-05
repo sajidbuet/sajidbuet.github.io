@@ -11,6 +11,7 @@ categories:
   - Tutorials
 
 tags:
+  - Tutorial
   - Microsoft Teams
   - SharePoint
   - PowerShell

@@ -9,6 +9,17 @@ icon: file-text
 
 aliases:
   - /outreach/blog/20260224-word-lakh-taka-bdt/
+
+authors:
+  - me
+
+tags:
+  - Tutorial
+  - Microsoft Excel
+  - Number Formatting
+  - Bangladeshi Taka
+  - Amount in Words
+  - Bangla
 ---
 
 *Bangladesh Crore–Lakh format · ৳ / BDT currency display · English and Bangla amount in words · No VBA*

@@ -6,6 +6,17 @@ placing: 7
 icon: users
 description: Bulk Add in Microsoft Teams with Powershell
 date: '2025-04-05'
+
+authors:
+  - me
+
+tags:
+  - Tutorial
+  - Microsoft Teams
+  - PowerShell
+  - Microsoft Excel
+  - Course Administration
+  - Automation
 ---
 
 Adding multiple users to a Microsoft Teams group manually can be tedious and error-prone, especially for large groups. As we use Teams to manage class, we need to add upto 35 students for each sessional class, 65 students for theory and 195 students if we want to add the entire batch in a team. Fortunately, we can automate this task using PowerShell simplifies the task, reducing time and mistakes. Also, it is not straight forward to export the list of members from a team to a Excel file.

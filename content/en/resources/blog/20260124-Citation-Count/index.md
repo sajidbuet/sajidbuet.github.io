@@ -5,7 +5,18 @@ title: Getting Citation Count - From Publish or Perish to TamperMonkey
 placing: 7
 icon: users
 description: Get citation count from google scholar articles.
-date: '2025-05-11'
+date: '2026-01-24'
+
+authors:
+  - me
+
+tags:
+  - Story
+  - Google Scholar
+  - Citation Metrics
+  - Publish or Perish
+  - Tampermonkey
+  - Userscript
 ---
 
 ## Background

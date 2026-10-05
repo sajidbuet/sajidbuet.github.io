@@ -4,8 +4,19 @@ aliases:
 title: Difference between Microsoft Teams Users and BIIS Registered Students
 placing: 7
 icon: users
-description: Bulk Add in Microsoft Teams with Powershell
+description: Automatically Differentiate the Microsoft Teams Users and BIIS Registered Students
 date: '2025-04-27'
+
+authors:
+  - me
+
+tags:
+  - Tutorial
+  - Microsoft Teams
+  - PowerShell
+  - BIIS
+  - BUET
+  - Course Administration
 ---
 
 BUET uses a BIIS system, that tracks registered students on a course. Course teachers can download their attendance sheet in `.csv` format. Teachers also use Teams for sharing class materials and assignments. Unfortunately, registration deadline is almost 2 weeks into the classes, and letting unregistered students do class causes later administrative problems. So, teachers often add all students in team of the section. It is a tedious process to check if a member teams is also registered in BIIS. In an ideal world, BIIS should have integrated Canva / Moodle for each class. However, at present, we can use this method to quickly cross check Teams and BIIS members. Please check my [previous tutorial on PowerShell](/resources/blog/20250407-microsoft-teams-bulkadd/) to see how it is installed and used. 

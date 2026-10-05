@@ -6,6 +6,17 @@ placing: 7
 icon: users
 description: How I Learned to Stop Worrying and Love the A.I.
 date: '2025-05-11'
+
+authors:
+  - me
+
+tags:
+  - Story
+  - Generative AI
+  - ChatGPT
+  - Web App Development
+  - Teaching
+  - Class Tests
 ---
 
 ## The "Bomb"!
