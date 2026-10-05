@@ -7,10 +7,12 @@
    Shared page furniture
    -------------------------------------------------------------------------- */
 .sj-page-title {
-  font-size: var(--sj-text-3xl);
+  /* Was text-3xl (31 px) — the same size as a homepage section h2, so a page
+     title read as a section heading (visual polish VP-05). */
+  font-size: var(--sj-text-page);
   font-weight: 700;
-  line-height: var(--sj-leading-tight);
-  letter-spacing: -0.02em;
+  line-height: var(--sj-leading-heading);
+  letter-spacing: var(--sj-tracking-heading);
   color: var(--sj-text-primary);
   margin: 0 0 var(--sj-space-3);
 }

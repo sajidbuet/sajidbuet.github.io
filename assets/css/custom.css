@@ -548,6 +548,13 @@ body {
   background-size: 100% 2px;
 }
 
+/* `strong { font-weight: bolder }` inside a 600-weight link resolves to 900,
+   which is how the Q-PACERS initials on /research/ came out Black (visual
+   polish VP-17). Pin it to the approved 700. */
+.hero-richtext strong {
+  font-weight: 700;
+}
+
 /* --------------------------------------------------------------------------
    10. Motion discipline
    -------------------------------------------------------------------------- */

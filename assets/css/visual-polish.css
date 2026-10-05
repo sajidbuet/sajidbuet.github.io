@@ -1,0 +1,70 @@
+/* ==========================================================================
+   SAJID.BD — Visual polish (2026-10)
+
+   Audit: docs/visual-polish-audit-2026-10-05.md (finding ids VP-xx below).
+
+   The redesign's own sections already consume the token layer. The HugoBlox
+   blocks it reuses (contact, partners, team, collection, listing cards,
+   footer) still carried upstream styling: 48 px centred headings, shadow-xl,
+   rounded-2xl, hover lift. This file moves them onto the SAME primitives —
+   no new colours, radii, shadows or motion vocabulary are introduced here.
+
+   Loaded last in the bundle (site_head.html). Tailwind v4 emits its
+   utilities inside @layer, so these unlayered rules win without !important.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Display title — research two-column hero (VP-05)
+   Was text-6xl / tracking-tighter (60 px, -3 px): the largest type on the
+   site outside the homepage wordmark.
+   -------------------------------------------------------------------------- */
+.sj-display-title {
+  margin: 0;
+  font-size: var(--sj-text-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--sj-text-primary);
+}
+
+/* Lede beside it. Negative tracking removed: it tightens display type, not
+   running text. */
+.sj-display-lede {
+  font-size: var(--sj-text-lg);
+  line-height: var(--sj-leading-body);
+  color: var(--sj-text-secondary);
+}
+
+@media (min-width: 640px) {
+  .sj-display-lede { font-size: var(--sj-text-xl); }
+}
+
+/* --------------------------------------------------------------------------
+   2. Status text on the legacy research-areas badge (VP-01, /bn/)
+   -------------------------------------------------------------------------- */
+.sj-status-text--active   { color: var(--sj-success); }
+.sj-status-text--emerging { color: var(--sj-warning); }
+.sj-status-text--planning { color: var(--sj-accent); }
+
+/* --------------------------------------------------------------------------
+   3. Publication filter toolbar (VP-11)
+   -------------------------------------------------------------------------- */
+.sj-pub-toolbar-panel {
+  padding: var(--sj-space-4);
+  background-color: var(--sj-background-subtle);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+}
+
+@media (min-width: 768px) {
+  .sj-pub-toolbar-panel { padding: var(--sj-space-4) var(--sj-space-6); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero → Research band seam (VP-12)
+   With the hero section's bottom padding removed, the hero's border-bottom
+   and the band's border-top would meet as a 2 px double rule. Keep one.
+   -------------------------------------------------------------------------- */
+.sj-hero-section + .sj-band {
+  border-top: 0;
+}
