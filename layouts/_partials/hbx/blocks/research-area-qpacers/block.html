@@ -67,7 +67,10 @@
     <ul class="sj-research__grid">
       {{ range $idx, $item := $block.content.items }}
       {{ $href := $item.cta.url | default $item.url }}
-      <li class="sj-card">
+      {{/* `research-<icon>` is the target of the matching hero domain link
+           (custom/hero-circuit.html). Keyed on the icon because that is the
+           one name the hero and the card already share. */}}
+      <li class="sj-card"{{ with $item.icon }} id="research-{{ path.Base . }}"{{ end }}>
         <div class="sj-card__rule" aria-hidden="true"></div>
 
         <div class="sj-card__head">

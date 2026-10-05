@@ -2,13 +2,15 @@
 
    Verifies idle restraint, the six-domain interaction on hover / focus / tap,
    per-domain trace highlighting, the pointer spotlight, finite pulses, the
-   viewport gate, reduced motion, click safety and keyboard access.
+   viewport gate, reduced motion, click safety and keyboard access — and that
+   each domain is a link that lands on its Research card by mouse, Enter and
+   touch.
 
    node docs/redesign/evidence/phase8-circuit-qa.mjs [base]
 */
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { launch, attach, go, sleep, tab, HERE, BASE as DEFAULT_BASE } from './phase7-cdp.mjs';
+import { launch, attach, go, sleep, tab, key, HERE, BASE as DEFAULT_BASE } from './phase7-cdp.mjs';
 
 const BASE = process.argv[2] || DEFAULT_BASE;
 const OUT = resolve(HERE, 'phase8-circuit-qa.json');
@@ -60,9 +62,9 @@ const domainState = (id) => `(() => {
   const other = c.querySelector('.sj-net--base [data-trace-domain="ambient"] .sj-trace');
   return JSON.stringify({
     isActive: el.classList.contains('is-active'),
-    ariaExpanded: btn.getAttribute('aria-expanded'),
     activeAttr: c.getAttribute('data-active'),
     iconOpacity: +getComputedStyle(icon).opacity,
+    iconColor: getComputedStyle(icon).color,
     iconTransform: getComputedStyle(icon).transform,
     titleOpacity: +getComputedStyle(title).opacity,
     descVisibility: getComputedStyle(desc).visibility,
@@ -206,26 +208,60 @@ R.keyboard = {
   order: parsed.map(x => x.name),
 };
 
-/* ---------- 9. touch: tap to activate, tap away to reset ---------- */
+/* Where a domain link landed: the hash, the target card, and whether the card
+   came to rest in view and clear of the sticky header. */
+const landing = (id) => `(() => {
+  const a = document.querySelector('[data-research-domain="${id}"] .sj-domain__hit');
+  const href = a.getAttribute('href');
+  const t = document.getElementById(href.slice(1));
+  const r = t ? t.getBoundingClientRect() : null;
+  const pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+  return JSON.stringify({ tag: a.tagName, href, hash: location.hash,
+    target: t ? String(t.className).split(' ')[0] : null,
+    targetTitle: t ? ((t.querySelector('h3') || {}).textContent || '').trim() : null,
+    targetTop: r ? Math.round(r.top) : null, scrollPaddingTop: pad,
+    inView: !!(r && r.top >= 0 && r.top < innerHeight), clearOfHeader: !!(r && r.top >= pad - 1) }); })()`;
+const landedOk = (v) => !!(v && v.hash === v.href && v.target && v.inView && v.clearOfHeader);
+
+/* ---------- 8b. each domain is a link to its Research card ---------- */
+R.links = {};
+await go(s, BASE + '/', { w: 1440, h: 900, theme: 'light', settle: 2000 });
+{
+  const c = await centreOf('antennas');
+  await s.send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: c.x, y: c.y, button: 'none', buttons: 0, pointerType: 'mouse' });
+  await sleep(300);
+  await s.send('Input.dispatchMouseEvent', { type: 'mousePressed', x: c.x, y: c.y, button: 'left', buttons: 1, clickCount: 1, pointerType: 'mouse' });
+  await s.send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: c.x, y: c.y, button: 'left', buttons: 0, clickCount: 1, pointerType: 'mouse' });
+  await sleep(1500);
+  R.links.mouse = JSON.parse(await s.ev(landing('antennas')));
+}
+await go(s, BASE + '/', { w: 1440, h: 900, theme: 'light', settle: 2000 });
+await s.ev(`document.querySelector('[data-research-domain="energy"] .sj-domain__hit').focus()`);
+await sleep(300);
+await key(s, 'Enter', 'Enter', 13);
+await sleep(1500);
+R.links.keyboard = JSON.parse(await s.ev(landing('energy')));
+
+/* ---------- 9. touch: a tap follows the link to the card ---------- */
 await go(s, BASE + '/', { w: 390, h: 844, mobile: true, theme: 'light', settle: 2800 });
-/* `Input.synthesizeTapGesture`, not a hand-rolled touchStart/touchEnd pair:
-   the raw pair does not produce the follow-up `click` the component listens
-   for, so a working tap interaction reported as broken. */
+/* A raw touchStart/touchEnd pair, not `Input.synthesizeTapGesture`. Re-measured
+   2026-10-05 in this harness (headless Chrome, mobile emulation): the
+   synthesised gesture emits pointer and touch events but never the compatibility
+   mousedown/click — not even on the hero's primary CTA, an ordinary link — so
+   it cannot follow a link at all. The raw pair produces the full sequence a
+   phone does (pointer, touch, mousedown, focus, mouseup, click). */
 const tapAt = async (x, y) => {
-  await s.send('Input.synthesizeTapGesture', { x, y, duration: 80, tapCount: 1, gestureSourceType: 'touch' }, 20000)
-    .catch(async () => {
-      await s.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y, id: 1 }] });
-      await s.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
-    });
+  await s.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y, id: 1 }] });
+  await sleep(60);
+  await s.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
   await sleep(700);
 };
 {
   const box = JSON.parse(await s.ev(`(() => { const e = document.querySelector('[data-research-domain="photonics"] .sj-domain__hit');
     const r = e.getBoundingClientRect(); return JSON.stringify({ x: Math.round(r.left + r.width/2), y: Math.round(r.top + r.height/2) }); })()`));
   await tapAt(box.x, box.y);
-  R.touchAfterTap = JSON.parse(await s.ev(domainState('photonics')));
-  await tapAt(195, 700);
-  R.touchAfterTapAway = JSON.parse(await s.ev(domainState('photonics')));
+  await sleep(800);
+  R.links.touch = JSON.parse(await s.ev(landing('photonics')));
 }
 
 /* ---------- 10. reduced motion ---------- */
@@ -258,7 +294,7 @@ console.log(`  traces=${i0.traces} pulsePaths=${i0.pulsePaths} quietZoneMask=${i
 console.log(`  pointer-events: container=${i0.containerPointerEvents} svg=${i0.svgPointerEvents} button=${i0.buttonPointerEvents}`);
 console.log('\n=== hover ===');
 for (const [id, v] of Object.entries(R.hover)) {
-  console.log(`  ${id.padEnd(11)} active=${String(v.isActive).padEnd(5)} aria=${v.ariaExpanded} icon=${v.iconOpacity} title=${v.titleOpacity} ` +
+  console.log(`  ${id.padEnd(11)} active=${String(v.isActive).padEnd(5)} icon=${v.iconOpacity} iconColor=${v.iconColor} title=${v.titleOpacity} ` +
     `desc=${v.descVisibility}/${v.descOpacity} ownStroke=${v.ownTraceStroke} net=${v.netOpacity} | afterLeave active=${v.afterLeave.isActive} desc=${v.afterLeave.descVisibility}`);
 }
 console.log('\n=== exclusivity ===\n  ' + JSON.stringify(R.exclusivity));
@@ -270,7 +306,10 @@ console.log('  stops=' + R.keyboard.stops + ' domainStops=' + R.keyboard.domainS
 console.log('  domain stops with focus ring: ' + R.keyboard.domainStopsWithRing + '/' + R.keyboard.domainStops.length + '  ' + ok(R.keyboard.domainStopsWithRing === R.keyboard.domainStops.length));
 console.log('  domain stops revealing description: ' + R.keyboard.domainStopsRevealingDesc + '  ' + ok(R.keyboard.domainStopsRevealingDesc > 0));
 console.log('  stops without a ring: ' + (R.keyboard.anyStopWithoutRing.join(', ') || '(none)'));
-console.log('\n=== touch ===\n  after tap: ' + JSON.stringify(R.touchAfterTap).slice(0, 220) + '\n  after tap away: active=' + R.touchAfterTapAway.isActive + ' desc=' + R.touchAfterTapAway.descVisibility);
+console.log('\n=== domain links -> Research cards ===');
+for (const [how, v] of Object.entries(R.links)) {
+  console.log(`  ${how.padEnd(9)} ${v.tag} ${v.href} -> hash=${v.hash} target=${v.target} "${v.targetTitle}" top=${v.targetTop} (header ${v.scrollPaddingTop}) ${ok(landedOk(v))}`);
+}
 console.log('\n=== reduced motion ===');
 console.log('  idle inf=' + R.reducedMotionIdle.infiniteAnimations + ' cssInfinite=' + R.reducedMotionIdle.usesInfiniteCss);
 console.log('  hover still reveals: active=' + R.reducedMotionHover.isActive + ' desc=' + R.reducedMotionHover.descVisibility + ' iconTransform=' + R.reducedMotionHover.iconTransform);

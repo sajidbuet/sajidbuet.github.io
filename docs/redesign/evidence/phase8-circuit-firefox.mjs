@@ -60,6 +60,7 @@ for (const [label, w, h] of [['1440', 1440, 900], ['1024', 1024, 768], ['390', 3
       active: el.classList.contains('is-active'),
       activeAttr: c.getAttribute('data-active'),
       icon: +getComputedStyle(el.querySelector('.sj-domain__icon')).opacity,
+      iconColor: getComputedStyle(el.querySelector('.sj-domain__icon')).color,
       desc: getComputedStyle(el.querySelector('.sj-domain__desc')).visibility,
       ownStroke: getComputedStyle(c.querySelector('.sj-net--base [data-trace-domain="quantum"] .sj-trace')).stroke,
       otherGroup: +getComputedStyle(c.querySelector('.sj-net--base [data-trace-domain="energy"]')).opacity,
@@ -92,6 +93,19 @@ for (const [label, w, h] of [['1440', 1440, 900], ['1024', 1024, 768], ['390', 3
     const t = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2);
     return { primaryReachable: !!(t && t.closest('.sj-btn--primary')),
       overHeroText: !!(document.elementFromPoint(720, 300) || {}).tagName };
+  })));
+
+  // Each domain is a link to its Research card.
+  await page.mouse.move(720, 120);
+  await page.click('[data-research-domain="computing"] .sj-domain__hit');
+  await page.waitForTimeout(1500);
+  console.log('link computing: ' + JSON.stringify(await page.evaluate(() => {
+    const href = document.querySelector('[data-research-domain="computing"] .sj-domain__hit').getAttribute('href');
+    const t = document.getElementById(href.slice(1));
+    const r = t && t.getBoundingClientRect();
+    const pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    return { href, hash: location.hash, title: t ? ((t.querySelector('h3') || {}).textContent || '').trim() : null,
+      top: r ? Math.round(r.top) : null, landed: !!(r && location.hash === href && r.top >= pad - 1 && r.top < innerHeight) };
   })));
   await ctx.close();
 }

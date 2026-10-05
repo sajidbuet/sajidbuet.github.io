@@ -2,7 +2,8 @@
      Only change: the card's image/icon header link had no accessible name (site
      audit 2026-10-04, L1). When the card has a text CTA to the same page the
      header link is hidden from assistive tech and the tab order (it is a
-     duplicate); otherwise it is named after the research area. */}}
+     duplicate); otherwise it is named after the research area. Also: each
+     card carries id="research-<icon>" as the hero domain links' target. */}}
 {{/* Hugo Blox: Research Areas Block */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -44,7 +45,8 @@
     {{ if eq $layout "cards" }}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
       {{ range $idx, $item := $block.content.items }}
-      <div class="group relative">
+      {{/* Target of the matching hero domain link (custom/hero-circuit.html). */}}
+      <div class="group relative"{{ with $item.icon }} id="research-{{ path.Base . }}"{{ end }}>
         <div class="h-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col">
           
           {{/* Card Image/Icon Header */}}

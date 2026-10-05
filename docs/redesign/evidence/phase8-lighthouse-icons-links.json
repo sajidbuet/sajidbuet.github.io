@@ -1,0 +1,56 @@
+{
+ "label": "icons-links",
+ "url": "http://127.0.0.1:1338/",
+ "at": "2026-10-05T07:41:22.524Z",
+ "runs": 5,
+ "lighthouseVersion": "13.5.0",
+ "median": {
+  "performance": 91,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "fcpMs": 1205,
+  "lcpMs": 1655,
+  "tbtMs": 0,
+  "cls": 0.0027,
+  "speedIndexMs": 1205,
+  "mainThreadMs": 1056,
+  "transferKB": 113
+ },
+ "allScores": [
+  {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100
+  },
+  {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100
+  }
+ ],
+ "failedAudits": [
+  "first-contentful-paint",
+  "largest-contentful-paint",
+  "speed-index",
+  "interactive",
+  "network-dependency-tree-insight",
+  "render-blocking-insight",
+  "max-potential-fid",
+  "forced-reflow-insight"
+ ]
+}

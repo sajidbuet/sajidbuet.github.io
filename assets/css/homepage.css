@@ -292,6 +292,10 @@
   text-align: start;
   color: inherit;
   font: inherit;
+  text-decoration: none; /* a link to the domain's Research card */
+  /* Shrink to the icon + title like the <button> this used to be; a block-level
+     link would stretch to the description's width and widen the focus ring. */
+  width: fit-content;
 }
 
 /* Left domains read title-then-icon so the label sits outboard; right domains
@@ -305,28 +309,23 @@
   display: block;
   flex: 0 0 auto;
   width: var(--sj-icon-w);
+  /* The icons are the canonical assets/media/icons/hero/*.svg files (shared
+     with the Research cards), drawn with fill="currentColor", so the circuit
+     ink is set here rather than in the artwork. */
+  color: var(--sj-circuit-ink, #94a9c4);
   opacity: 0.14;
   transform: scale(1);
   transition:
     opacity 340ms var(--sj-ease-out),
-    transform 340ms var(--sj-ease-out);
+    transform 340ms var(--sj-ease-out),
+    color 340ms var(--sj-ease-out);
 }
 
-.sj-domain__icon svg { display: block; width: 100%; height: auto; }
-
-.sj-ico__line {
-  fill: none;
-  stroke: var(--sj-circuit-ink, #94a9c4);
-  stroke-width: 1.4;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-.sj-ico__pin  { fill: none; stroke: var(--sj-circuit-ink, #94a9c4); stroke-width: 1.4; stroke-linecap: round; }
-.sj-ico__rf   { fill: none; stroke: var(--sj-accent); stroke-width: 1.4; stroke-linecap: round; opacity: 0.8; }
-.sj-ico__bits { fill: none; stroke: var(--sj-accent); stroke-width: 1.4; stroke-linecap: round; opacity: 0.7; }
-.sj-ico__solid { fill: var(--sj-circuit-ink, #94a9c4); opacity: 0.5; }
-.sj-ico__spark { fill: var(--sj-accent); }
+/* The slot stays 4:3, the shape the domain layout and description inset were
+   tuned for. The assets are 24x24, so without this they would render square
+   and push every title and description down; with it, the default
+   `preserveAspectRatio` centres the square artwork inside the old box. */
+.sj-domain__icon svg { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; }
 
 .sj-domain__title {
   display: block;
@@ -372,7 +371,9 @@
 }
 
 /* --- active domain ------------------------------------------------------- */
-.sj-domain.is-active .sj-domain__icon { opacity: 0.88; transform: scale(1.03); }
+/* The active icon takes the accent, matching its highlighted traces and the
+   accent icon on the Research card it links to. */
+.sj-domain.is-active .sj-domain__icon { opacity: 0.88; transform: scale(1.03); color: var(--sj-accent); }
 .sj-domain.is-active .sj-domain__title { opacity: 1; color: var(--sj-text-primary); }
 
 .sj-domain.is-active .sj-domain__desc {
@@ -438,10 +439,10 @@
   .sj-domain--antennas  { --sj-dx: 2%; --sj-dy: 8%; }
   .sj-domain.is-active .sj-domain__icon { opacity: 0.6; transform: none; }
 
-  /* A tap has to say something. Brightening a 12%-opacity icon to 60% is not a
-     discoverable response on a phone, so the label appears too — the
-     descriptions stay hidden, which is what keeps the mobile hero from
-     becoming six stacked lists. */
+  /* When a domain is active on a phone (focus — a tap itself goes straight to
+     the Research card), brightening a 12%-opacity icon to 60% is not much of a
+     response, so the label appears too — the descriptions stay hidden, which
+     is what keeps the mobile hero from becoming six stacked lists. */
   .sj-domain.is-active .sj-domain__title {
     display: block;
     opacity: 1;
