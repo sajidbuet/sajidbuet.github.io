@@ -323,8 +323,10 @@
     color: var(--pub-text);
   }
 
+  /* Visual polish: 32 px between citations made a 61-item list ~8,700 px
+     tall; 24 px keeps each entry distinct and the list scannable. */
   #pub-list > .pub-item + .pub-item {
-    margin-top: 2rem;
+    margin-top: var(--sj-space-6);
   }
 </style>
 

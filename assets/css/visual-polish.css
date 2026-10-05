@@ -551,3 +551,17 @@ a:hover > .sj-tag {
   line-height: var(--sj-leading-body);
   color: var(--sj-text-secondary);
 }
+
+/* --------------------------------------------------------------------------
+   13. Author profile panels — /authors/<slug>/
+   -------------------------------------------------------------------------- */
+.sj-profile-panel {
+  padding: var(--sj-space-6);
+  background-color: var(--sj-surface);
+  border: 1px solid var(--sj-border);
+  border-radius: var(--sj-radius-md);
+}
+
+.sj-profile-lang {
+  border-radius: var(--sj-radius-sm);
+}
