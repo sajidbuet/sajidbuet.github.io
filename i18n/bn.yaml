@@ -291,6 +291,9 @@
 - id: nav_toggle_close
   translation: "মেনু বন্ধ করুন"
 
+- id: lang_switch
+  translation: "ভাষা"
+
 - id: appearance
   translation: "থিম"
 

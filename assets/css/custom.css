@@ -273,6 +273,79 @@ section[id],
   margin-top: 0;
 }
 
+/* Language switch (EN | BN) -------------------------------------------------
+   Two text codes, quiet like the icon controls beside it. The current language
+   is primary text; the other is a link. 44 px tall to match the icon targets;
+   each code is at least 32 px wide (WCAG 2.5.8 needs 24). */
+.sj-lang {
+  display: inline-flex;
+  align-items: center;
+  margin-inline-end: var(--sj-space-1);
+}
+
+.sj-lang__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 44px;
+  padding-inline: 6px;
+  font-size: var(--sj-text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--sj-text-secondary);
+  text-decoration: none;
+  border-radius: var(--sj-radius-sm);
+  transition: color var(--sj-duration-instant) var(--sj-ease-out);
+}
+
+a.sj-lang__item:hover {
+  color: var(--sj-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sj-lang__item.is-current {
+  color: var(--sj-text-primary);
+}
+
+.sj-lang__sep {
+  width: 1px;
+  height: 14px;
+  background-color: var(--sj-border-strong);
+}
+
+/* Phones: the bar already holds the wordmark and three 44 px controls, so
+   only the language you can switch TO is shown, and the space for it comes
+   from spacing rather than from target size. Measured at 360 px, the bar was
+   22 px too wide and the menu button dropped to a second row (header 65 ->
+   97 px): the 8 px navbar gap becomes 4, the controls lose their 4 px gaps
+   (each is already a padded 44 px box), and the wordmark is capped at 44vw
+   instead of 46vw. Every control stays 44 x 44. */
+@media (max-width: 479.98px) {
+  .sj-lang__item.is-current,
+  .sj-lang__sep {
+    display: none;
+  }
+
+  .sj-lang {
+    margin-inline-end: 0;
+  }
+
+  #site-header.header .navbar {
+    gap: var(--sj-space-1);
+  }
+
+  #site-header .sj-header-controls {
+    gap: 0;
+  }
+
+  #site-header .navbar-brand > div {
+    max-width: 44vw;
+  }
+}
+
 /* --------------------------------------------------------------------------
    4. Mobile navigation panel
    -------------------------------------------------------------------------- */
