@@ -4,7 +4,8 @@
    layouts/_partials/custom/hero-circuit.html. Styling: assets/css/homepage.css.
 
    WHAT IT DOES
-     1. Domain activation on hover, focus and tap — one domain at a time.
+     1. Domain preview on hover and focus — one domain at a time. Each domain
+        is a link to its Research card; navigation is native.
      2. Idle signal pulses: a small number of traces, on a jittered timer, each
         run finite.
      3. A pointer spotlight that brightens traces near the cursor.
@@ -45,40 +46,16 @@
 
   /* ---------------------------------------------------------------- domains */
 
-  /* Below 768px the description list is `display: none`, so nothing actually
-     expands when a domain is activated — the tap reveals the label instead.
-     Advertising `aria-expanded` / `aria-controls` there would be a lie, so the
-     disclosure semantics are attached only at widths where a disclosure really
-     exists. Re-evaluated on a debounced resize. */
-  function syncDisclosureSemantics() {
-    for (var i = 0; i < domains.length; i++) {
-      var el = domains[i];
-      var btn = el.querySelector(".sj-domain__hit");
-      var desc = el.querySelector(".sj-domain__desc");
-      if (!btn || !desc) continue;
-      var expandable = getComputedStyle(desc).display !== "none";
-      if (expandable) {
-        btn.setAttribute("aria-controls", desc.id);
-        btn.setAttribute("aria-expanded", el.classList.contains("is-active") ? "true" : "false");
-      } else {
-        btn.removeAttribute("aria-controls");
-        btn.removeAttribute("aria-expanded");
-      }
-    }
-  }
-
+  /* Each domain is a plain link to its Research card further down the page.
+     Activation here is only the preview shown on hover and focus; following
+     the link (click, Enter, tap) is left entirely to the browser. */
   function setActive(id) {
     if (activeId === id) return;
     activeId = id;
 
     for (var i = 0; i < domains.length; i++) {
       var el = domains[i];
-      var on = el.getAttribute("data-research-domain") === id;
-      el.classList.toggle("is-active", on);
-      var btn = el.querySelector(".sj-domain__hit");
-      if (btn && btn.hasAttribute("aria-expanded")) {
-        btn.setAttribute("aria-expanded", on ? "true" : "false");
-      }
+      el.classList.toggle("is-active", el.getAttribute("data-research-domain") === id);
     }
 
     if (id) {
@@ -128,33 +105,6 @@
     // Keyboard focus reveals exactly what hover reveals.
     btn.addEventListener("focus", function () { setActive(id); });
     btn.addEventListener("blur", function () { if (activeId === id) setActive(null); });
-
-    /* Tap to open, tap again (or elsewhere) to close.
-
-       Touch is handled on `pointerup`, not on `click`. A tap on this button
-       reliably produces pointerdown/touchstart/pointerup/touchend but NOT a
-       synthesised click — verified with Input.synthesizeTapGesture — so a
-       click-only implementation silently did nothing on a phone. `click` is
-       still handled, because that is what Enter and Space produce on a button
-       and what a mouse produces; `suppressClick` stops a tap that does manage
-       to synthesise a click from toggling the state twice. */
-    var suppressClick = 0;
-
-    btn.addEventListener("pointerup", function (e) {
-      if (e.pointerType !== "touch") return;
-      suppressClick = Date.now() + 600;
-      setActive(activeId === id ? null : id);
-    });
-
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (Date.now() < suppressClick) return;
-      /* A keyboard-generated click reports detail 0. Focus has already opened
-         this domain, so toggling here would close it the instant the user
-         pressed Enter on it. */
-      if (e.detail === 0) return;
-      setActive(activeId === id ? null : id);
-    });
   });
 
   // Tapping or clicking away closes the open domain, and Escape does too.
@@ -217,14 +167,6 @@
       resizeTimer = setTimeout(function () { rect = null; }, 200);
     }, { passive: true });
   }
-
-  syncDisclosureSemantics();
-
-  var semanticsTimer = null;
-  window.addEventListener("resize", function () {
-    if (semanticsTimer) clearTimeout(semanticsTimer);
-    semanticsTimer = setTimeout(syncDisclosureSemantics, 220);
-  }, { passive: true });
 
   /* ------------------------------------------------------------ idle pulses */
 

@@ -1,0 +1,143 @@
+{
+ "meta": {
+  "base": "http://127.0.0.1:1338",
+  "at": "2026-10-05T07:37:56.213Z"
+ },
+ "failures": [],
+ "mapping": [
+  {
+   "id": "photonics",
+   "icon": "hero/photonics",
+   "asset": "assets/media/icons/hero/photonics.svg",
+   "exists": true
+  },
+  {
+   "id": "quantum",
+   "icon": "hero/quantum",
+   "asset": "assets/media/icons/hero/quantum.svg",
+   "exists": true
+  },
+  {
+   "id": "embedded",
+   "icon": "hero/embedded",
+   "asset": "assets/media/icons/hero/embedded.svg",
+   "exists": true
+  },
+  {
+   "id": "antennas",
+   "icon": "hero/antenna",
+   "asset": "assets/media/icons/hero/antenna.svg",
+   "exists": true
+  },
+  {
+   "id": "computing",
+   "icon": "hero/computing",
+   "asset": "assets/media/icons/hero/computing.svg",
+   "exists": true
+  },
+  {
+   "id": "energy",
+   "icon": "hero/renewable",
+   "asset": "assets/media/icons/hero/renewable.svg",
+   "exists": true
+  }
+ ],
+ "rendered": [
+  {
+   "id": "photonics",
+   "card": "Photonics & Nanophotonics",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 7,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Photonics",
+   "href": "#research-photonics",
+   "linksToCard": true
+  },
+  {
+   "id": "quantum",
+   "card": "Quantum Computing & Quantum Photonics",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 4,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Quantum",
+   "href": "#research-quantum",
+   "linksToCard": true
+  },
+  {
+   "id": "embedded",
+   "card": "Embedded Systems & IoT",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 8,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Embedded Systems",
+   "href": "#research-embedded",
+   "linksToCard": true
+  },
+  {
+   "id": "antennas",
+   "card": "Antenna & Electromagnetic Systems",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 2,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Antennas",
+   "href": "#research-antenna",
+   "linksToCard": true
+  },
+  {
+   "id": "computing",
+   "card": "Computing & AI for Physical Systems",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 1,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Computing",
+   "href": "#research-computing",
+   "linksToCard": true
+  },
+  {
+   "id": "energy",
+   "card": "Renewable Energy & Sustainable Systems",
+   "heroViewBox": "0 0 24 24",
+   "cardViewBox": "0 0 24 24",
+   "sameArtwork": true,
+   "heroShapes": 32,
+   "usesSymbol": false,
+   "decorative": true,
+   "focusable": "false",
+   "tabbable": false,
+   "svgLabelled": false,
+   "buttonName": "Energy",
+   "href": "#research-renewable",
+   "linksToCard": true
+  }
+ ]
+}
