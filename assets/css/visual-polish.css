@@ -289,8 +289,10 @@
   filter: grayscale(1);
 }
 
+/* Same resting opacity in dark mode: at 0.55 the grey seal all but vanished
+   into the navy band. */
 .dark .sj-footer__logo {
-  opacity: 0.55;
+  opacity: 0.7;
 }
 
 .sj-footer__who { min-width: 0; }
@@ -564,4 +566,20 @@ a:hover > .sj-tag {
 
 .sj-profile-lang {
   border-radius: var(--sj-radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   14. Homepage section rhythm on phones
+   content/en/_index.md sets `spacing.padding: 4.5rem` per block, which
+   HugoBlox writes as an INLINE style — so the 72 px desktop default also
+   applied at 390 px, where the token scale specifies 48 px
+   (--sj-section-md). An inline style can only be overridden with
+   !important; it is confined to phone widths and to padded blocks (the hero
+   is excluded: its padding is 0 by design and supplied inside it).
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .sj-home main .hbb-section:not(.sj-hero-section) {
+    padding-top: var(--sj-section-md) !important;
+    padding-bottom: var(--sj-section-md) !important;
+  }
 }
