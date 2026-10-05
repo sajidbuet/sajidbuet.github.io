@@ -1,3 +1,11 @@
+{{/* VISUAL POLISH (2026-10) — docs/visual-polish-audit-2026-10-05.md.
+     VP-10: cards were rounded-2xl + shadow-lg + hover:shadow-xl +
+     hover:-translate-y-1, portraits zoomed on hover under a dark gradient
+     scrim. Cards now use .sj-team-card (site card anatomy: border, 8 px,
+     no shadow, border-colour hover) and portraits .sj-portrait / .sj-team-photo.
+     VP-04: centred 48 px header → shared section furniture.
+     VP-14: filled primary CTA (competing with the hero's) → .sj-more-link.
+     Profile data, links and accessible names are unchanged. */}}
 {{/* Local override of HugoBlox blox/team-showcase/block.html (blox v0.11.0).
      Only change: links without a scheme go through functions/lang_url instead of
      relLangURL, so the Bengali site links to English-only pages at their real
@@ -18,28 +26,30 @@
 {{ $subtitle := $block.content.subtitle | emojify | $page.RenderString }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="sj-container-content">
   
   {{/* Section Header */}}
-  <div class="flex flex-col items-center text-center mb-12">
+  {{ if or $title $subtitle $text }}
+  <div class="sj-section__head">
     {{ with $title }}
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+    <h2 class="sj-section__title">
       {{ . }}
     </h2>
     {{ end }}
     
     {{ with $subtitle }}
-    <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+    <p class="sj-section__subtitle">
       {{ . }}
     </p>
     {{ end }}
     
     {{ with $text }}
-    <div class="mt-6 prose prose-lg lg:prose-xl dark:prose-invert max-w-3xl">
+    <div class="sj-section__subtitle">
       {{ . }}
     </div>
     {{ end }}
   </div>
+  {{ end }}
 
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
@@ -62,7 +72,7 @@
 
       {{ if and $groupProfiles (gt (len $groups) 1) }}
       <div class="col-span-full mb-4">
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+        <h3 class="sj-team-group__title">
           {{ $group | markdownify }}
         </h3>
       </div>
@@ -74,18 +84,17 @@
           {{ $link := printf "/authors/%s/" $profile.slug }}
           
           <div class="group relative">
-            <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="relative overflow-hidden sj-team-card">
               
               {{ if $avatar }}
-              <a href="{{ $link }}" class="block relative h-64 overflow-hidden">
+              <a href="{{ $link }}" class="sj-team-photo block relative h-64 overflow-hidden" tabindex="-1" aria-hidden="true">
                 {{ $image := $avatar.Fill "400x400 Center webp" }}
                 <img src="{{ $image.RelPermalink }}" 
                      alt="{{ $profile.title }}" 
                      width="{{ $image.Width }}" 
                      height="{{ $image.Height }}" 
                      loading="lazy"
-                     class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                     class="w-full h-full object-cover">
               </a>
               {{ end }}
               
@@ -126,7 +135,7 @@
                 {{ end }}
                 
                 {{ if and $show_social $profile.links }}
-                <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div class="sj-team-card__links flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                   {{ range $profile.links }}
                   {{ $l := .url | default .link }}
                   {{ $scheme := (urls.Parse $l).Scheme }}
@@ -161,16 +170,16 @@
         {{ $avatar := $profile.avatar }}
         {{ $link := printf "/authors/%s/" $profile.slug }}
         <div class="group relative">
-          <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div class="relative overflow-hidden sj-team-card">
             {{ if $avatar }}
-            <a href="{{ $link }}" class="block relative h-64 overflow-hidden">
+            <a href="{{ $link }}" class="sj-team-photo block relative h-64 overflow-hidden" tabindex="-1" aria-hidden="true">
               {{ $image := $avatar.Fill "400x400 Center webp" }}
               <img src="{{ $image.RelPermalink }}" 
                    alt="{{ $profile.title }}" 
                    width="{{ $image.Width }}" 
                    height="{{ $image.Height }}" 
                    loading="lazy"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                   class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             {{ end }}
@@ -203,7 +212,7 @@
               </div>
               {{ end }}
               {{ if and $show_social $profile.links }}
-              <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div class="sj-team-card__links flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                 {{ range $profile.links }}
                 {{ $l := .url | default .link }}
                 {{ $scheme := (urls.Parse $l).Scheme }}
@@ -229,14 +238,9 @@
   
   {{/* Call to Action */}}
   {{ with $block.content.cta }}
-  <div class="mt-12 text-center">
-    <a href="{{ .url }}" class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-      {{ .text }}
-      {{ with .icon }}
-      {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"ml-2 w-5 h-5\"") }}
-      {{ end }}
-    </a>
-  </div>
+  <p class="sj-section__more">
+    <a href="{{ .url }}" class="sj-more-link">{{ .text }}</a>
+  </p>
   {{ end }}
   
 </div>

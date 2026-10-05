@@ -125,8 +125,14 @@
 
       // When no section occupies the band — between sections, or briefly
       // during a programmatic scroll — hold the previous selection rather
-      // than blanking the navigation.
-      if (bestId === null) bestId = lastId;
+      // than blanking the navigation. But only while that section is still
+      // on screen: holding it unconditionally left "Contact" lit for the rest
+      // of the visit once it had been seen, next to "Home", even back at the
+      // top of the page (visual polish VP-13).
+      if (bestId === null && lastId !== null) {
+        var held = document.getElementById(lastId).getBoundingClientRect();
+        if (held.bottom > 0 && held.top < window.innerHeight) bestId = lastId;
+      }
       lastId = bestId;
       anchorLinks.forEach(function (link) {
         var on = link.getAttribute("data-nav-anchor") === bestId;
@@ -137,6 +143,11 @@
           link.removeAttribute("aria-current");
         }
       });
+      // One marker at a time. While a homepage section item is active, the
+      // statically active "Home" keeps aria-current="page" (still true) but
+      // drops its trace, so the navbar never shows two active states.
+      var menu = document.getElementById("nav-menu");
+      if (menu) menu.classList.toggle("sj-spy-active", bestId !== null);
     }
 
     var observer = new IntersectionObserver(
@@ -151,6 +162,14 @@
 
     sections.forEach(function (section) {
       observer.observe(section);
+    });
+
+    // The band observer above only fires when a section crosses the band, so
+    // nothing re-renders when a held section later scrolls off screen. This
+    // one fires on viewport entry/exit, which is when the hold must end.
+    var viewport = new IntersectionObserver(render, { threshold: 0 });
+    sections.forEach(function (section) {
+      viewport.observe(section);
     });
   }
 

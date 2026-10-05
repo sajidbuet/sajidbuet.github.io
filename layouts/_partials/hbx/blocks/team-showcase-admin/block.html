@@ -1,3 +1,13 @@
+{{/* VISUAL POLISH (2026-10) — docs/visual-polish-audit-2026-10-05.md.
+     VP-10: cards were rounded-2xl + shadow-lg + hover:shadow-xl +
+     hover:-translate-y-1, portraits zoomed on hover under a dark gradient
+     scrim. Cards now use .sj-team-card (site card anatomy: border, 8 px,
+     no shadow, border-colour hover) and portraits .sj-portrait / .sj-team-photo.
+     VP-04: centred 48 px header → shared section furniture.
+     VP-14: filled primary CTA (competing with the hero's) → .sj-more-link.
+     VP-04: a single profile is no longer centred (mx-auto) under a
+            left-aligned section heading.
+     Profile data, links and accessible names are unchanged. */}}
 {{/* Phase 7: readable accessible names for the icon-only profile links.
      The raw icon id was used as the label, so a screen reader announced
      "link, hero slash envelope" / "link, brands slash google-scholar".
@@ -18,28 +28,30 @@
 {{ $subtitle := $block.content.subtitle | emojify | $page.RenderString }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="sj-container-content">
   
   {{/* Section Header */}}
-  <div class="flex flex-col items-center text-center mb-12">
+  {{ if or $title $subtitle $text }}
+  <div class="sj-section__head">
     {{ with $title }}
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+    <h2 class="sj-section__title">
       {{ . }}
     </h2>
     {{ end }}
     
     {{ with $subtitle }}
-    <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+    <p class="sj-section__subtitle">
       {{ . }}
     </p>
     {{ end }}
     
     {{ with $text }}
-    <div class="mt-6 prose prose-lg lg:prose-xl dark:prose-invert max-w-3xl">
+    <div class="sj-section__subtitle">
       {{ . }}
     </div>
     {{ end }}
   </div>
+  {{ end }}
 
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
@@ -62,31 +74,31 @@
 
       {{ if and $groupProfiles (gt (len $groups) 1) }}
       <div class="col-span-full mb-4">
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+        <h3 class="sj-team-group__title">
           {{ $group | markdownify }}
         </h3>
       </div>
       {{ end }}
 
-      <div class="grid grid-cols-1 gap-8 w-full {{ if gt (len $groupProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl mx-auto{{ end }}">
+      <div class="grid grid-cols-1 gap-8 w-full {{ if gt (len $groupProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl{{ end }}">
         {{ range $profile := $groupProfiles }}
           {{ $avatar := $profile.avatar }}
           {{ $link := printf "/authors/%s/" $profile.slug }}
           
           <div class="group relative w-full max-w-xl">
-            <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="relative overflow-hidden sj-team-card">
               
 <div class="p-6 pt-8 text-center">
   {{ if $avatar }}
   <a href="{{ $link }}" class="block mb-5">
     {{ $image := $avatar.Fill "320x320 Center webp" }}
-    <div class="mx-auto w-1/2 rounded-full overflow-hidden ring-4 ring-gray-100 dark:ring-gray-700 shadow-lg">
+    <div class="sj-portrait mx-auto w-1/2 rounded-full overflow-hidden">
       <img src="{{ $image.RelPermalink }}"
            alt="{{ $profile.title }}"
            width="{{ $image.Width }}"
            height="{{ $image.Height }}"
            loading="lazy"
-           class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+           class="w-full h-full object-cover object-center">
     </div>
   </a>
   {{ end }}
@@ -128,7 +140,7 @@
                 {{ end }}
                 
                 {{ if and $show_social $profile.links }}
-                <div class="flex  justify-center gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div class="sj-team-card__links flex justify-center gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                   {{ range $profile.links }}
                   {{ $l := .url | default .link }}
                   {{ $scheme := (urls.Parse $l).Scheme }}
@@ -158,23 +170,23 @@
     {{ end }}
   {{ else }}
     {{ $allProfiles = sort $allProfiles "title" }}
-    <div class="grid grid-cols-1 gap-8 {{ if gt (len $allProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl mx-auto{{ end }}">
+    <div class="grid grid-cols-1 gap-8 {{ if gt (len $allProfiles) 1 }}lg:grid-cols-2{{ else }}max-w-2xl{{ end }}">
       {{ range $profile := $allProfiles }}
         {{ $avatar := $profile.avatar }}
         {{ $link := printf "/authors/%s/" $profile.slug }}
         <div class="group relative">
-          <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div class="relative overflow-hidden sj-team-card">
 <div class="p-6 pt-8 text-center">
   {{ if $avatar }}
   <a href="{{ $link }}" class="block mb-5">
     {{ $image := $avatar.Fill "320x320 Center webp" }}
-    <div class="mx-auto  w-1/2 rounded-full overflow-hidden ring-4 ring-gray-100 dark:ring-gray-700 shadow-lg">
+    <div class="sj-portrait mx-auto w-1/2 rounded-full overflow-hidden">
       <img src="{{ $image.RelPermalink }}"
            alt="{{ $profile.title }}"
            width="{{ $image.Width }}"
            height="{{ $image.Height }}"
            loading="lazy"
-           class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+           class="w-full h-full object-cover object-center">
     </div>
   </a>
   {{ end }}
@@ -207,7 +219,7 @@
               </div>
               {{ end }}
               {{ if and $show_social $profile.links }}
-              <div class="flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div class="sj-team-card__links flex gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
                 {{ range $profile.links }}
                 {{ $l := .url | default .link }}
                 {{ $scheme := (urls.Parse $l).Scheme }}
@@ -233,14 +245,9 @@
   
   {{/* Call to Action */}}
   {{ with $block.content.cta }}
-  <div class="mt-12 text-center">
-    <a href="{{ .url }}" class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-      {{ .text }}
-      {{ with .icon }}
-      {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"ml-2 w-5 h-5\"") }}
-      {{ end }}
-    </a>
-  </div>
+  <p class="sj-section__more">
+    <a href="{{ .url }}" class="sj-more-link">{{ .text }}</a>
+  </p>
   {{ end }}
   
 </div>

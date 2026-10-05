@@ -1,3 +1,14 @@
+{{/* VISUAL POLISH (2026-10) — docs/visual-polish-audit-2026-10-05.md.
+     VP-06: the card was bg-white/90 + backdrop-blur + rounded-2xl + shadow-lg
+     + hover:-translate-y-2 + hover shadow bloom — the floating-card pattern
+     design-system-proposal §10 rejects. It is now .sj-listcard, the same
+     anatomy as the project card (surface, 1 px border, 8 px, no shadow,
+     border-colour hover). Tags use the .sj-tag rectangle, not a cyan pill;
+     the author name is no longer truncated at 9rem.
+     VP-07: an item with no featured image rendered a 16:9 blue→purple
+     gradient with a generic picture glyph — on /news/ that was every item.
+     The media block is now emitted only when there is an image.
+     Data, links, headings and accessible names are unchanged. */}}
 {{ $item := .item }}
 
 {{ $link := $item.RelPermalink }}
@@ -24,9 +35,10 @@
 {{ $event_dates = partial "functions/get_event_dates" $item }}
 {{ end }}
 
-<div class="group bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-lg overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 focus-within:ring-2 focus-within:ring-blue-500/50" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
+<div class="group sj-listcard" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
     <!-- Image Section -->
-    <div class="relative overflow-hidden aspect-[16/9] bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900">
+    {{ if $resource }}
+    <div class="sj-listcard__media">
       {{ with $item.Params.content_meta }}
         {{ if .trending }}
           <div class="absolute top-3 right-3 z-10 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-black/55 backdrop-blur-sm text-white shadow-sm">
@@ -50,7 +62,7 @@
               "formats" (slice "avif" "webp" "jpg")
           ) }}
           <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
-            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}" 
+            <img class="w-full h-full {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}" 
                  srcset="{{ $responsive.srcset }}"
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                  src="{{ $responsive.fallback.RelPermalink }}" 
@@ -64,7 +76,7 @@
           </a>
         {{ else }}
           <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
-            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}"
+            <img class="w-full h-full {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}"
                  src="{{ .RelPermalink }}"
                  width="{{ .Width }}"
                  height="{{ .Height }}"
@@ -74,41 +86,17 @@
                  alt="{{ $item.Title | plainify }} featured image">
           </a>
         {{ end }}
-      {{ else }}
-        {{/* PHASE 7 SHADOW — see docs/redesign/phase-7-validation.md.
-             Upstream: _vendor/.../blox/layouts/_partials/views/card.html
-             When a card has no featured image this anchor wraps a purely
-             decorative gradient placeholder. It has no text, no image and no
-             label, so Chromium's accessibility tree reported 10 unnamed links on
-             /news/, and each one was a redundant tab stop pointing at exactly
-             the same URL as the card title immediately below it.
-             Removing it from the accessibility tree and the tab order is the
-             correct fix: the destination is still reachable (twice over, by the
-             title link), the pointer affordance is unchanged, and 10 meaningless
-             stops leave the keyboard path. Nothing else in this file is changed. */}}
-        <!-- Fallback gradient with subtle pattern - make clickable for consistency -->
-        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block w-full h-full" aria-hidden="true" tabindex="-1">
-          <div class="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center hover:from-blue-500/30 hover:to-purple-500/30 transition-colors duration-300">
-            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white/60" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-          </div>
-        </a>
       {{end}}
-      
-      <!-- Subtle overlay for better text contrast (allow clicks to pass through) -->
-      <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
+    {{ end }}
 
     <!-- Content Section -->
-    <div class="p-8 space-y-4">
+    <div class="sj-listcard__body">
       {{ with $item.Params.content_meta }}
         {{ if or .content_type .difficulty }}
         <div class="flex items-center gap-x-4">
           {{ with .content_type }}
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+          <span class="sj-tag">
             {{ . }}
           </span>
           {{ end }}
@@ -123,7 +111,7 @@
       <div class="flex items-center gap-2">
         {{ with index ($item.GetTerms "tags") 0 }}
         <a href="{{ .RelPermalink }}">
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">
+          <span class="sj-tag">
             {{ .Page.LinkTitle }}
           </span>
         </a>
@@ -131,8 +119,8 @@
       </div>
       {{ end }}
 
-      <h3 id="card-title-{{ $item.File.UniqueID }}" class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 leading-tight">
-        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hover:underline">
+      <h3 id="card-title-{{ $item.File.UniqueID }}" class="sj-listcard__title">
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
           {{ $item.Title }}
           {{ if $item.Params.external_link }}
             {{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em;\" class=\"inline-flex h-4 w-4 ml-1 align-text-top\"") }}
@@ -140,7 +128,7 @@
         </a>
       </h3>
       
-      <p class="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed line-clamp-3">
+      <p class="sj-listcard__summary">
         {{ (partial "functions/get_summary" $item) | plainify | htmlUnescape | truncate 180 }}
       </p>
 
@@ -160,7 +148,7 @@
 
       <!-- Metadata section -->
       {{ if $hasMeta }}
-      <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800">
+      <div class="sj-listcard__meta">
         {{/* Phase 7: dark was `text-zinc-500` on the dark card surface — 3.69:1,
              below AA for the date and read-time metadata on /news/ (`view: card`).
              zinc-400 measures 6.97:1 on --sj-background. Light is unchanged. */}}
@@ -180,7 +168,7 @@
                 </div>
               {{ end }}
             </div>
-            <span class="truncate max-w-[9rem] text-sm">{{ $profile.title }}</span>
+            <span class="text-sm">{{ $profile.title }}</span>
           </div>
           <span class="opacity-40">•</span>
           {{ end }}
@@ -207,15 +195,12 @@
         
         <!-- Read More with arrow - properly separated -->
         {{ if $showReadMore }}
-        <div class="pt-2 border-t border-zinc-200/50 dark:border-zinc-700/50">
-          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="sj-readmore inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-all duration-300 group/link">
+        <div class="sj-listcard__more">
+          <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="sj-readmore sj-more-link">
             {{/* Phase 7 (X14): "Read more" x10 on /news/ was not meaningful out of
                  context. The card title is appended for assistive technology only,
                  so the visible label and layout are unchanged. */}}
             <span>{{ i18n "read_more" | default "Read more" }}<span class="sr-only"> — {{ $item.Title | plainify }}</span></span>
-            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
           </a>
         </div>
         {{ end }}

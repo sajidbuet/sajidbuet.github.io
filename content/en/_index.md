@@ -51,9 +51,14 @@ sections:
       # `sj-hero-section` scopes that internal padding to this block instance,
       # so the Bengali homepage (which keeps the default section padding) and
       # every inner page are unaffected.
+      #
+      # Visual polish VP-12: the bottom is 0 as well. The 2rem rendered as a
+      # white strip between the hero's border-bottom and the Research band's
+      # border-top — two parallel hairlines at every width. The band supplies
+      # its own top padding, so the strip was pure gap.
       css_class: 'sj-hero-section'
       spacing:
-        padding: [0, 0, '2rem', 0]
+        padding: [0, 0, 0, 0]
 
   # ── 2. Research at a Glance ───────────────────────────────────────────
   - block: research-area-qpacers

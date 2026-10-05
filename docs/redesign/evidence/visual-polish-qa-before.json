@@ -1,0 +1,1553 @@
+{
+ "meta": {
+  "base": "http://127.0.0.1:1340",
+  "tag": "before",
+  "at": "2026-10-05T08:45:13.370Z"
+ },
+ "contrast": {
+  "1440 light /": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /research/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /research/photonics/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /publication/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /projects/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /authors/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /teaching/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /resources/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /resources/academic/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /resources/blog/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /resources/blog/20260124-Citation-Count/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /news/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /bn/": {
+   "failCount": 1,
+   "fails": [
+    {
+     "el": "span.px-3.py-1.bg-white/90.dark:bg-gray-900/90",
+     "txt": "Active",
+     "fg": "rgb(22, 163, 74)",
+     "bg": "rgb(255,255,255)",
+     "size": "12px",
+     "ratio": 3.3,
+     "need": 4.5
+    }
+   ],
+   "hscroll": false
+  },
+  "1440 light /teaching/jul2025_eee303/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 light /authors/me/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /research/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /research/photonics/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /publication/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /projects/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /authors/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /teaching/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /resources/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /resources/academic/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /resources/blog/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /resources/blog/20260124-Citation-Count/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /news/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /bn/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /teaching/jul2025_eee303/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "1440 dark /authors/me/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /research/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /research/photonics/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /publication/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /projects/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /authors/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /teaching/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /resources/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /resources/academic/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /resources/blog/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /resources/blog/20260124-Citation-Count/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /news/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /bn/": {
+   "failCount": 1,
+   "fails": [
+    {
+     "el": "span.px-3.py-1.bg-white/90.dark:bg-gray-900/90",
+     "txt": "Active",
+     "fg": "rgb(22, 163, 74)",
+     "bg": "rgb(255,255,255)",
+     "size": "12px",
+     "ratio": 3.3,
+     "need": 4.5
+    }
+   ],
+   "hscroll": false
+  },
+  "390 light /teaching/jul2025_eee303/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 light /authors/me/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /research/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /research/photonics/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /publication/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /projects/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /authors/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /teaching/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /resources/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /resources/academic/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /resources/blog/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /resources/blog/20260124-Citation-Count/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /news/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /bn/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /teaching/jul2025_eee303/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  },
+  "390 dark /authors/me/": {
+   "failCount": 0,
+   "fails": [],
+   "hscroll": false
+  }
+ },
+ "overflow": {
+  "1920@1 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1920@1 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1536@1.25 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1366@1 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1280@1.5 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1100@1 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "1097@1.75 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "768@1 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /research/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /publication/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /projects/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /authors/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /teaching/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /resources/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /resources/blog/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /resources/blog/20260124-Citation-Count/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /news/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /bn/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /bn/research/photonics/": {
+   "hscroll": false,
+   "navWrapped": false
+  },
+  "360@2 /authors/me/": {
+   "hscroll": false,
+   "navWrapped": false
+  }
+ },
+ "census": {
+  "light /": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "span.sj-status__dot": 1,
+    "a.inline-flex.items-center.px-6.py-3": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl r=16px": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {
+    "div.sj-hero.relative.overflow-hidden": 1
+   },
+   "transition": {},
+   "h1": [
+    "SAJID Lab — Smart & Advanced J | 16px/400 center"
+   ]
+  },
+  "light /research/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "span.sj-status__dot": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "strong w=900": 6
+   },
+   "gradient": {
+    "a": 6
+   },
+   "transition": {},
+   "h1": [
+    "Research | 60px/700 left"
+   ]
+  },
+  "light /research/photonics/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Photonic Systems | 60px/700 left"
+   ]
+  },
+  "light /publication/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "section.mb-8.rounded-2xl.border.border-black/10": 1,
+    "div.pub-filter-menu": 3,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "section.mb-8.rounded-2xl.border.border-black/10 r=16px": 1,
+    "PILL summary.pub-filter-button": 3,
+    "div.pub-filter-menu r=16px": 3,
+    "button.pub-filter-option.is-active r=12.8px": 3,
+    "PILL button#pub-clear-filters.pub-clear-btn.text-sm": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Publications | 48px/700 center"
+   ]
+  },
+  "light /projects/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Projects | 31px/700 start"
+   ]
+  },
+  "light /authors/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white": 12,
+    "div.mx-auto.w-1/2.rounded-full.overflow-hidden": 1,
+    "a.inline-flex.items-center.px-6.py-3": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.relative.overflow-hidden.rounded-2xl.bg-white r=16px": 12,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1#team-intro w=800": 1
+   },
+   "gradient": {
+    "div.absolute.inset-0.bg-gradient-to-t.from-black/60": 11
+   },
+   "transition": {},
+   "h1": [
+    "Team | 56px/800 start"
+   ]
+  },
+  "light /teaching/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL span.sj-course__term": 4,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Teaching | 31px/700 start"
+   ]
+  },
+  "light /resources/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Resources | 31px/700 start"
+   ]
+  },
+  "light /resources/academic/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Academic Resources | 48px/700 start"
+   ]
+  },
+  "light /resources/blog/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm r=16px": 10,
+    "PILL span.inline-flex.items-center.px-3.py-1": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1.lg:text-6xl w=800": 1
+   },
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Writing & Tutorials | 60px/800 start"
+   ]
+  },
+  "light /resources/blog/20260124-Citation-Count/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Getting Citation Count - From  | 40px/700 start"
+   ]
+  },
+  "light /news/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm r=16px": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1.lg:text-6xl w=800": 1
+   },
+   "gradient": {
+    "div.relative.overflow-hidden.aspect-[16/9].bg-gradient-to-br": 10,
+    "div.w-full.h-full.bg-gradient-to-br.from-blue-500/20": 10,
+    "div.absolute.inset-0.pointer-events-none.bg-gradient-to-t": 10
+   },
+   "transition": {},
+   "h1": [
+    "Latest News | 60px/800 start"
+   ]
+  },
+  "light /bn/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.bg-white.dark:bg-gray-800.rounded-2xl": 6,
+    "a.inline-flex.items-center.px-6.py-3": 2,
+    "div.relative.overflow-hidden.bg-primary-300.dark:bg-primary-700": 3,
+    "div.absolute.inset-0.bg-white/95.dark:bg-gray-900/95": 3,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl": 2,
+    "a.inline-flex.items-center.px-4.py-2": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.bg-white.dark:bg-gray-800.rounded-2xl r=16px": 6,
+    "PILL span.px-3.py-1.bg-white/90.dark:bg-gray-900/90": 6,
+    "div.relative.overflow-hidden.bg-primary-300.dark:bg-primary-700 r=24px": 3,
+    "div.absolute.inset-0.bg-white/95.dark:bg-gray-900/95 r=16px": 3,
+    "div.absolute.inset-0.bg-white/20.dark:bg-white/10 r=16px": 3,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white r=16px": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl r=16px": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "div.text-gray-900.dark:text-white/80.mt-6.text-lg w=300": 3
+   },
+   "gradient": {
+    "div.absolute.inset-0.bg-gradient-to-br.from-primary-500/30": 1,
+    "div.sj-hero.relative.overflow-hidden": 1,
+    "section#research.relative.hbb-section.blox-research-areas.bg-gradient-to-b": 1,
+    "a.block.relative.h-48.bg-gradient-to-br": 6,
+    "div.absolute.inset-0.bg-gradient-to-t.from-black/60": 1,
+    "section#partners.relative.hbb-section.blox-logos.bg-gradient-to-b": 1,
+    "section#contact.relative.hbb-section.blox-contact-info.bg-gradient-to-b": 1
+   },
+   "transition": {},
+   "h1": [
+    "SAJID Lab\n.sj-logo-loader{--lo | 16px/400 center"
+   ]
+  },
+  "light /teaching/jul2025_eee303/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL span.sj-course__term": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "EEE 303 (Jul 2025) | 31px/700 start"
+   ]
+  },
+  "light /authors/me/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.bg-white.dark:bg-neutral-900.rounded-2xl.shadow-sm": 6,
+    "div.mt-6.bg-white.dark:bg-neutral-900.rounded-2xl": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL a.rounded-full.border.px-3.py-1": 2,
+    "div.bg-white.dark:bg-neutral-900.rounded-2xl.shadow-sm r=16px": 6,
+    "div.mt-6.bg-white.dark:bg-neutral-900.rounded-2xl r=16px": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Dr. Sajid Muhaimin Choudhury | 36px/700 center"
+   ]
+  },
+  "light /research/quantum/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Quantum-Systems | 60px/700 left"
+   ]
+  },
+  "light /resources/templates/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Templates & Tools | 48px/700 start"
+   ]
+  },
+  "light /projects/omrflow/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "OMRFlow | 31px/700 start"
+   ]
+  },
+  "light /research/funding/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Funding & Grants | 31px/700 start"
+   ]
+  },
+  "dark /": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "span.sj-status__dot": 1,
+    "a.inline-flex.items-center.px-6.py-3": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl r=16px": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {
+    "div.sj-hero.relative.overflow-hidden": 1
+   },
+   "transition": {},
+   "h1": [
+    "SAJID Lab — Smart & Advanced J | 16px/400 center"
+   ]
+  },
+  "dark /research/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "span.sj-status__dot": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "strong w=900": 6
+   },
+   "gradient": {
+    "a": 6
+   },
+   "transition": {},
+   "h1": [
+    "Research | 60px/700 left"
+   ]
+  },
+  "dark /research/photonics/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Photonic Systems | 60px/700 left"
+   ]
+  },
+  "dark /publication/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "section.mb-8.rounded-2xl.border.border-black/10": 1,
+    "div.pub-filter-menu": 3,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "section.mb-8.rounded-2xl.border.border-black/10 r=16px": 1,
+    "PILL summary.pub-filter-button": 3,
+    "div.pub-filter-menu r=16px": 3,
+    "button.pub-filter-option.is-active r=12.8px": 3,
+    "PILL button#pub-clear-filters.pub-clear-btn.text-sm": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Publications | 48px/700 center"
+   ]
+  },
+  "dark /projects/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Projects | 31px/700 start"
+   ]
+  },
+  "dark /authors/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white": 12,
+    "div.mx-auto.w-1/2.rounded-full.overflow-hidden": 1,
+    "a.inline-flex.items-center.px-6.py-3": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.relative.overflow-hidden.rounded-2xl.bg-white r=16px": 12,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1#team-intro w=800": 1
+   },
+   "gradient": {
+    "div.absolute.inset-0.bg-gradient-to-t.from-black/60": 11
+   },
+   "transition": {},
+   "h1": [
+    "Team | 56px/800 start"
+   ]
+  },
+  "dark /teaching/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL span.sj-course__term": 4,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Teaching | 31px/700 start"
+   ]
+  },
+  "dark /resources/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Resources | 31px/700 start"
+   ]
+  },
+  "dark /resources/academic/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Academic Resources | 48px/700 start"
+   ]
+  },
+  "dark /resources/blog/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm r=16px": 10,
+    "PILL span.inline-flex.items-center.px-3.py-1": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1.lg:text-6xl w=800": 1
+   },
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Writing & Tutorials | 60px/800 start"
+   ]
+  },
+  "dark /resources/blog/20260124-Citation-Count/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Getting Citation Count - From  | 40px/700 start"
+   ]
+  },
+  "dark /news/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.group.bg-white/90.dark:bg-zinc-900/90.backdrop-blur-sm r=16px": 10,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "h1.lg:text-6xl w=800": 1
+   },
+   "gradient": {
+    "div.relative.overflow-hidden.aspect-[16/9].bg-gradient-to-br": 10,
+    "div.w-full.h-full.bg-gradient-to-br.from-blue-500/20": 10,
+    "div.absolute.inset-0.pointer-events-none.bg-gradient-to-t": 10
+   },
+   "transition": {},
+   "h1": [
+    "Latest News | 60px/800 start"
+   ]
+  },
+  "dark /bn/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.bg-white.dark:bg-gray-800.rounded-2xl": 6,
+    "a.inline-flex.items-center.px-6.py-3": 2,
+    "div.relative.overflow-hidden.bg-primary-300.dark:bg-primary-700": 3,
+    "div.absolute.inset-0.bg-white/95.dark:bg-gray-900/95": 3,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl": 2,
+    "a.inline-flex.items-center.px-4.py-2": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.bg-white.dark:bg-gray-800.rounded-2xl r=16px": 6,
+    "PILL span.px-3.py-1.bg-white/90.dark:bg-gray-900/90": 6,
+    "div.relative.overflow-hidden.bg-primary-300.dark:bg-primary-700 r=24px": 3,
+    "div.absolute.inset-0.bg-white/95.dark:bg-gray-900/95 r=16px": 3,
+    "div.absolute.inset-0.bg-white/20.dark:bg-white/10 r=16px": 3,
+    "div.relative.overflow-hidden.rounded-2xl.bg-white r=16px": 1,
+    "div.bg-white.dark:bg-gray-800.rounded-2xl.shadow-xl r=16px": 2,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {
+    "div.text-gray-900.dark:text-white/80.mt-6.text-lg w=300": 3
+   },
+   "gradient": {
+    "div.absolute.inset-0.bg-gradient-to-br.from-primary-500/30": 1,
+    "div.sj-hero.relative.overflow-hidden": 1,
+    "section#research.relative.hbb-section.blox-research-areas.bg-gradient-to-b": 1,
+    "a.block.relative.h-48.bg-gradient-to-br": 6,
+    "div.absolute.inset-0.bg-gradient-to-t.from-black/60": 1,
+    "section#partners.relative.hbb-section.blox-logos.bg-gradient-to-b": 1,
+    "section#contact.relative.hbb-section.blox-contact-info.bg-gradient-to-b": 1
+   },
+   "transition": {},
+   "h1": [
+    "SAJID Lab\n.sj-logo-loader{--lo | 16px/400 center"
+   ]
+  },
+  "dark /teaching/jul2025_eee303/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL span.sj-course__term": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "EEE 303 (Jul 2025) | 31px/700 start"
+   ]
+  },
+  "dark /authors/me/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.bg-white.dark:bg-neutral-900.rounded-2xl.shadow-sm": 6,
+    "div.mt-6.bg-white.dark:bg-neutral-900.rounded-2xl": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "PILL a.rounded-full.border.px-3.py-1": 2,
+    "div.bg-white.dark:bg-neutral-900.rounded-2xl.shadow-sm r=16px": 6,
+    "div.mt-6.bg-white.dark:bg-neutral-900.rounded-2xl r=16px": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Dr. Sajid Muhaimin Choudhury | 36px/700 center"
+   ]
+  },
+  "dark /research/quantum/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Quantum-Systems | 60px/700 left"
+   ]
+  },
+  "dark /resources/templates/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Templates & Tools | 48px/700 start"
+   ]
+  },
+  "dark /projects/omrflow/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "OMRFlow | 31px/700 start"
+   ]
+  },
+  "dark /research/funding/": {
+   "shadow": {
+    "a.sj-skip-link": 1,
+    "div.h-full.rounded-2xl.border.border-slate-200/70": 2
+   },
+   "radius": {
+    "div.h-full.rounded-2xl.border.border-slate-200/70 r=16px": 2
+   },
+   "weight": {},
+   "gradient": {},
+   "transition": {},
+   "h1": [
+    "Funding & Grants | 31px/700 start"
+   ]
+  }
+ },
+ "scrollSpy": {
+  "load": "Home*",
+  "bottom": "Home*+Contact*",
+  "team": "Home*+Contact*",
+  "top": "Home*+Contact*"
+ },
+ "summary": {
+  "contrastCells": 60,
+  "contrastFailures": 2,
+  "hscrollCells": 0,
+  "navWrapCells": 0,
+  "scaledCells": 112,
+  "censusExcludingBn": {
+   "shadow": {
+    "light": 81,
+    "dark": 81
+   },
+   "radius": {
+    "light": 102,
+    "dark": 102
+   },
+   "weight": {
+    "light": 9,
+    "dark": 9
+   },
+   "gradient": {
+    "light": 48,
+    "dark": 48
+   },
+   "transition": {
+    "light": 0,
+    "dark": 0
+   }
+  },
+  "h1": {
+   "/": "SAJID Lab — Smart & Advanced J | 16px/400 center",
+   "/research/": "Research | 60px/700 left",
+   "/research/photonics/": "Photonic Systems | 60px/700 left",
+   "/publication/": "Publications | 48px/700 center",
+   "/projects/": "Projects | 31px/700 start",
+   "/authors/": "Team | 56px/800 start",
+   "/teaching/": "Teaching | 31px/700 start",
+   "/resources/": "Resources | 31px/700 start",
+   "/resources/academic/": "Academic Resources | 48px/700 start",
+   "/resources/blog/": "Writing & Tutorials | 60px/800 start",
+   "/resources/blog/20260124-Citation-Count/": "Getting Citation Count - From  | 40px/700 start",
+   "/news/": "Latest News | 60px/800 start",
+   "/bn/": "SAJID Lab\n.sj-logo-loader{--lo | 16px/400 center",
+   "/teaching/jul2025_eee303/": "EEE 303 (Jul 2025) | 31px/700 start",
+   "/authors/me/": "Dr. Sajid Muhaimin Choudhury | 36px/700 center",
+   "/research/quantum/": "Quantum-Systems | 60px/700 left",
+   "/resources/templates/": "Templates & Tools | 48px/700 start",
+   "/projects/omrflow/": "OMRFlow | 31px/700 start",
+   "/research/funding/": "Funding & Grants | 31px/700 start"
+  },
+  "scrollSpy": {
+   "load": "Home*",
+   "bottom": "Home*+Contact*",
+   "team": "Home*+Contact*",
+   "top": "Home*+Contact*"
+  }
+ }
+}

@@ -113,13 +113,17 @@
     has_en={{ if index site.Data.authors $slug }}yes{{ else }}no{{ end }}
   </div>
 */}}
+  {{/* Visual polish (2026-10): the profile panels were rounded-2xl +
+       shadow-sm on neutral-900 (off-palette in dark mode); they are now
+       .sj-profile-panel, the site's flat surface. The language switch loses
+       its pill radius (pills are for avatars on the radius scale). */}}
   {{ if .IsTranslated }}
     <div class="mb-6 flex items-center justify-end gap-2 text-sm text-neutral-600 dark:text-neutral-300">
       <span class="font-medium">{{ index $t "language" }}:</span>
       {{ range .AllTranslations }}
         <a
           href="{{ .RelPermalink }}"
-          class="rounded-full border px-3 py-1 transition
+          class="sj-profile-lang border px-3 py-1 transition
                  {{ if eq .Language.Lang $.Language.Lang }}
                    border-primary-500 text-primary-600 dark:text-primary-400
                  {{ else }}
@@ -133,7 +137,7 @@
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
     <div class="lg:col-span-1">
-      <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+      <div class="sj-profile-panel">
         <div class="flex flex-col items-center text-center">
 
           {{ if $avatar }}
@@ -220,7 +224,7 @@
       </div>
 
       {{ with $interests }}
-        <div class="mt-6 bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="mt-6 sj-profile-panel">
           <h2 class="text-xl font-semibold mb-4">{{ index $t "research_interests" }}</h2>
           <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
             {{ range . }}
@@ -236,7 +240,7 @@
 
     <div class="lg:col-span-2 space-y-6">
       {{ with .Content }}
-        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="sj-profile-panel">
           <div class="prose prose-slate dark:prose-invert max-w-none article-style">
             {{ . }}
           </div>
@@ -244,7 +248,7 @@
       {{ end }}
 
       {{ with $education }}
-        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="sj-profile-panel">
           <h2 class="text-xl font-semibold mb-5">{{ index $t "education" }}</h2>
           <div class="space-y-5">
             {{ range . }}
@@ -296,7 +300,7 @@
 
       {{ with $authored }}
         {{ $sorted := sort . "Date" "desc" }}
-        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="sj-profile-panel">
           <h2 class="text-xl font-semibold mb-5">{{ index $t "publications" }}</h2>
           <ul class="sj-profile-rel__list">
             {{ range first 8 $sorted }}
@@ -337,7 +341,7 @@
       {{ end }}
 
       {{ with $built }}
-        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="sj-profile-panel">
           <h2 class="text-xl font-semibold mb-5">{{ index $t "projects" }}</h2>
           <ul class="sj-profile-rel__list">
             {{ range sort . "Date" "desc" }}
@@ -351,7 +355,7 @@
       {{ end }}
 
       {{ with $experience }}
-        <div class="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6">
+        <div class="sj-profile-panel">
           <h2 class="text-xl font-semibold mb-5">{{ index $t "experience" }}</h2>
           <div class="space-y-5">
             {{ range . }}

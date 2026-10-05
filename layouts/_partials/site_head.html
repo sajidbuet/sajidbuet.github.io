@@ -90,10 +90,13 @@
   {{/* tokens.css must precede custom.css: custom.css consumes its variables. */}}
   {{/* blog-article.css comes after phase6.css because it refines the
        `.sj-prose` rules defined there, scoped to `.sj-article--blog`. */}}
+  {{/* visual-polish.css is last: it moves reused HugoBlox blocks (contact,
+       partners, listing cards, footer) onto the token primitives defined
+       above, so it must win against both Tailwind and the phase files. */}}
   {{ range slice "css/tokens.css" "css/custom.css" "css/homepage.css"
                  "css/phase4.css" "css/phase5.css" "css/phase6.css"
                  "css/phase7.css" "css/phase8.css" "css/blog-article.css"
-                 "css/resources-category.css" }}
+                 "css/resources-category.css" "css/visual-polish.css" }}
     {{ with resources.Get . }}{{ $css = $css | append . }}{{ end }}
   {{ end }}
 

@@ -150,9 +150,11 @@
 .sj-course__term {
   display: inline-block;
   border: 1px solid var(--sj-border-strong);
-  border-radius: var(--sj-radius-full);
+  /* Visual polish: the tag radius, matching .sj-tag on research and project
+     cards. Full rounding is reserved for avatars. */
+  border-radius: var(--sj-radius-sm);
   padding: 0 var(--sj-space-2);
-  font-size: 0.75rem;
+  font-size: var(--sj-text-2xs);
   color: var(--sj-text-secondary);
   white-space: nowrap;
 }

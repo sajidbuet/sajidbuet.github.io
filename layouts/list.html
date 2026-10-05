@@ -1,11 +1,15 @@
 {{ define "main" }}
 
-<div class="max-w-prose mx-auto flex justify-center">
-  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">{{ .Title }}</h1>
-    {{ .Content }}
-  </article>
-</div>
+{{/* Visual polish VP-05/VP-20: the title was a prose-xl `lg:text-6xl` h1 at
+     weight 800 (60 px, "Writing & Tutorials" wrapped to two lines), centred
+     over a 560 px column. It now uses the same shell, title and lede as
+     Teaching and Resources, and the list hangs off the same left edge. */}}
+<div class="sj-container-wide sj-listing">
+
+<header class="sj-listing__head">
+  <h1 class="sj-page-title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="sj-page-lede prose prose-slate dark:prose-invert">{{ . }}</div>{{ end }}
+</header>
 
 {{ $view := .Params.view | default "citation" }}
 {{ $block := . }}
@@ -29,7 +33,7 @@
   {{ end }}
 {{ end }}
 
-<div class="flex flex-col items-center">
+<div class="sj-listing__body">
 
   {{/* Phase 5: the card views render each entry title as <h3>, so without a
        heading here the document jumps h1 -> h3. A visually hidden <h2> names
@@ -47,6 +51,8 @@
   {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
 
   {{ partial "components/paginator" . }}
+
+</div>
 
 </div>
 

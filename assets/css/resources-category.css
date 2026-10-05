@@ -39,10 +39,12 @@
      No text-wrap: balance — "Academic Resources" and "Templates & Tools" both
      fit on one line at every desktop width, and balancing can break them. */
   margin: 0;
-  font-size: clamp(2rem, 1.35rem + 2.1vw, 3rem);
+  /* Visual polish VP-05: the shared page-title token (39 px max) rather than
+     a local 48 px clamp, so category pages match their parent /resources/. */
+  font-size: var(--sj-text-page);
   font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  line-height: var(--sj-leading-heading);
+  letter-spacing: var(--sj-tracking-heading);
   color: var(--sj-text-primary);
 }
 

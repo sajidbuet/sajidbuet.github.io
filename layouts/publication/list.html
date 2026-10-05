@@ -65,30 +65,23 @@
 }}
 
 <style>
+  /* Visual polish VP-11: these used to be a parallel palette built from
+     Canvas/CanvasText colour-mix, with muted text at 58% opacity. They are now
+     aliases of the site tokens, so this page follows tokens.css in both
+     themes and no colour on it is derived from opacity. */
   :root {
-    --pub-accent: var(--color-primary-600, var(--hb-color-primary, #0ea5e9));
-    --pub-accent-soft: color-mix(in srgb, var(--pub-accent) 12%, transparent);
-    --pub-accent-soft-strong: color-mix(in srgb, var(--pub-accent) 18%, transparent);
+    --pub-accent: var(--sj-accent);
+    --pub-accent-soft: var(--sj-accent-soft);
+    --pub-accent-soft-strong: color-mix(in srgb, var(--sj-accent) 16%, transparent);
 
-    --pub-bg: color-mix(in srgb, Canvas 98%, CanvasText 2%);
-    --pub-bg-soft: color-mix(in srgb, Canvas 96%, CanvasText 4%);
-    --pub-bg-popover: color-mix(in srgb, Canvas 96%, var(--pub-accent) 4%);
-    --pub-border: color-mix(in srgb, CanvasText 16%, transparent);
-    --pub-border-strong: color-mix(in srgb, CanvasText 24%, transparent);
-    --pub-text: CanvasText;
-    --pub-text-muted: color-mix(in srgb, CanvasText 58%, transparent);
-    --pub-shadow: 0 12px 28px color-mix(in srgb, CanvasText 10%, transparent);
-  }
-
-  .dark,
-  [data-theme="dark"] {
-    --pub-bg: color-mix(in srgb, Canvas 88%, CanvasText 12%);
-    --pub-bg-soft: color-mix(in srgb, Canvas 92%, CanvasText 8%);
-    --pub-bg-popover: color-mix(in srgb, Canvas 94%, CanvasText 6%);
-    --pub-border: color-mix(in srgb, CanvasText 18%, transparent);
-    --pub-border-strong: color-mix(in srgb, CanvasText 28%, transparent);
-    --pub-text-muted: color-mix(in srgb, CanvasText 62%, transparent);
-    --pub-shadow: 0 18px 40px color-mix(in srgb, CanvasText 28%, transparent);
+    --pub-bg: var(--sj-surface);
+    --pub-bg-soft: var(--sj-surface);
+    --pub-bg-popover: var(--sj-surface-raised);
+    --pub-border: var(--sj-border-strong);
+    --pub-border-strong: var(--sj-border-strong);
+    --pub-text: var(--sj-text-primary);
+    --pub-text-muted: var(--sj-text-secondary);
+    --pub-shadow: var(--sj-shadow-overlay);
   }
 
   .pub-hidden {
@@ -148,14 +141,14 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.8rem;
-    border-radius: 9999px;
+    border-radius: var(--sj-radius-md);
     border: 1px solid var(--pub-border);
     background: var(--pub-bg-soft);
     color: var(--pub-text);
     padding: 0.8rem 1rem;
     font-size: 0.97rem;
     line-height: 1.15;
-    transition: border-color .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+    transition: border-color var(--sj-duration-instant) var(--sj-ease-out), background var(--sj-duration-instant) var(--sj-ease-out), color var(--sj-duration-instant) var(--sj-ease-out);
   }
 
   .pub-filter-button:hover {
@@ -164,9 +157,8 @@
   }
 
   .pub-filter[open] .pub-filter-button {
-    border-color: color-mix(in srgb, var(--pub-accent) 55%, var(--pub-border));
+    border-color: var(--pub-accent);
     background: var(--pub-accent-soft);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--pub-accent) 12%, transparent);
   }
 
   .pub-filter-label-wrap {
@@ -215,12 +207,11 @@
     width: min(22rem, calc(100vw - 2.5rem));
     max-height: 22rem;
     overflow: auto;
-    border-radius: 1rem;
+    border-radius: var(--sj-radius-md);
     border: 1px solid var(--pub-border-strong);
     background: var(--pub-bg-popover);
     box-shadow: var(--pub-shadow);
     padding: .55rem;
-    backdrop-filter: blur(10px);
   }
 
   .pub-filter-option {
@@ -230,7 +221,7 @@
     justify-content: space-between;
     gap: 1rem;
     text-align: left;
-    border-radius: .8rem;
+    border-radius: var(--sj-radius-sm);
     padding: .72rem .8rem;
     color: var(--pub-text);
     background: transparent;
@@ -263,7 +254,7 @@
   }
 
   .pub-clear-btn {
-    border-radius: 9999px;
+    border-radius: var(--sj-radius-md);
     border: 1px solid var(--pub-border);
     padding: .72rem 1rem;
     color: var(--pub-text);
@@ -277,12 +268,20 @@
     border-color: var(--pub-border-strong);
   }
 
+  /* Visual polish VP-02: this used to be `outline: none` plus a 3px ring at an
+     18% accent mix — 1.29:1 on the page in light mode, 1.46:1 in dark, so
+     keyboard focus was effectively invisible on the only controls that opted
+     out of the site focus token. They now use it. */
   .pub-clear-btn:focus-visible,
   .pub-filter-button:focus-visible,
   .pub-filter-option:focus-visible,
   .pub-pill-remove:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--pub-accent) 18%, transparent);
+    outline: var(--sj-focus-width) solid var(--sj-focus-ring);
+    outline-offset: var(--sj-focus-offset);
+  }
+
+  .pub-filter-option:focus-visible {
+    outline-offset: -2px;
   }
 
   .pub-result-count {
@@ -302,7 +301,7 @@
     align-items: center;
     gap: .5rem;
     padding: .48rem .8rem;
-    border-radius: 9999px;
+    border-radius: var(--sj-radius-sm);
     border: 1px solid color-mix(in srgb, var(--pub-accent) 28%, var(--pub-border));
     background: var(--pub-accent-soft);
     color: var(--pub-text);
@@ -324,24 +323,31 @@
     color: var(--pub-text);
   }
 
+  /* Visual polish: 32 px between citations made a 61-item list ~8,700 px
+     tall; 24 px keeps each entry distinct and the list scannable. */
   #pub-list > .pub-item + .pub-item {
-    margin-top: 2rem;
+    margin-top: var(--sj-space-6);
   }
 </style>
 
 <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+  {{/* Visual polish VP-05: the shared page-title treatment (left-aligned,
+       --sj-text-page) instead of a centred 48 px title, matching every other
+       interior page. */}}
   <header class="mb-8">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-center">
+    <h1 class="sj-page-title">
       {{ .Title }}
     </h1>
     {{ with .Content }}
-      <div class="prose prose-invert mx-auto mt-4 max-w-3xl text-center">
+      <div class="sj-page-lede">
         {{ . }}
       </div>
     {{ end }}
   </header>
 
-  <section class="mb-8 rounded-2xl border border-black/10 bg-white/50 p-4 md:p-5 shadow-sm dark:border-white/10 dark:bg-white/5">
+  {{/* Visual polish VP-11: a bordered toolbar on the page surface, not a
+       floating translucent panel with a shadow. */}}
+  <section class="sj-pub-toolbar-panel mb-8">
     <div class="pub-toolbar">
       <div class="pub-toolbar-left">
         {{/* Phase 7: the aria-label was removed from each filter <summary>.

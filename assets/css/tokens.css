@@ -117,6 +117,17 @@
   --sj-leading-body: 1.65;
   --sj-leading-tight: 1.25;
 
+  /* Visual polish (2026-10, VP-05). Page titles ranged 31–60 px at three
+     weights across sibling routes. Two roles, fluid between phone and desktop:
+       page    — every interior h1: 30 px → 39 px (text-4xl)
+       display — the research two-column hero, which sits beside a ~500 px
+                 Q-PACERS figure: 36 px → 48 px (text-5xl)
+     Only the homepage wordmark is larger, and it is artwork, not type. */
+  --sj-text-page: clamp(1.875rem, 1.25rem + 1.6vw, 2.4375rem);
+  --sj-text-display: clamp(2.25rem, 1.5rem + 2vw, 3rem);
+  --sj-leading-heading: 1.15;
+  --sj-tracking-heading: -0.02em;
+
   /* --- Shell ----------------------------------------------------------- */
   --sj-header-height: 64px;
 
