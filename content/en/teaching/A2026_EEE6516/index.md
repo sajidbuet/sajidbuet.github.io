@@ -17,6 +17,8 @@ featured: false
 >
 > **Zoom link:** <https://bdren.zoom.us/j/5689856083?omn=93714118132>
 
+> Handout for Week 02 is now uploaded.
+
 > **Course announcements:** For the latest announcements, materials and submissions, please use the class Team in your **Microsoft Teams** account. If you have not been added to the class Team, please e-mail the course instructor.
 
 In 2025 the Nobel Prize in Physics was awarded for showing that an *electrical circuit* (a superconducting chip with a Josephson junction) can behave as a single quantum object, with quantised energy levels and quantum tunnelling. Circuits of this kind are the ancestors of today's superconducting qubits. Quantum computing is therefore not only a subject for physicists. Its hardest problems are electrical-engineering problems: microwave control and readout, cryogenic electronics, photonics, signal processing, coding theory and the security of communication systems.
@@ -61,8 +63,8 @@ Classes are on Tuesdays. Class tests are held outside lecture time.
 
 | Week | Lectures | Topics |
 |---|---|---|
-| 1 | 0 | Introduction to quantum computing and to the course **(online)** |
-| 2 | 1–2 | Chapter 1: why quantum computing; complex vectors, Dirac notation, operators, eigenvalues |
+| 1 | 0 | Introduction to quantum computing and to the course **(online)** [Slides](EEE6516-Lecture-00-CourseInfo.pdf)|
+| 2 | 1–2 | Chapter 1: why quantum computing; complex vectors, Dirac notation, operators, eigenvalues [Handout](EEE6516-chapter01.pdf)|
 | 3 | 3–4 | Chapter 2: states and measurement; single-qubit gates, Bloch sphere |
 | 4 | 5–6 | Chapter 2: dynamics, observables, shot noise · Chapter 3: composite systems, two-qubit gates |
 | 5 | 7–8 | Chapter 3: circuit model, universality; Qiskit, Cirq, PennyLane · Chapter 4: entanglement |
