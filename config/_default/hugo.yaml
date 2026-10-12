@@ -11,7 +11,7 @@ title: 'SAJID Lab'
 # .github/workflows/publish.yaml overrides --baseURL with the GitHub Pages
 # base_url; any build without that override emitted canonical, hreflang,
 # sitemap, RSS and Open Graph URLs pointing at a dead host.
-baseURL: 'https://www.sajid.bd/'
+baseURL: 'https://sajidbuet.github.io'
 
 ############################
 ## LANGUAGE
