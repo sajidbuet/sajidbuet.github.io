@@ -10,6 +10,9 @@ weight: 30
 # means an author adding a chapter never has to set `type` by hand.
 cascade:
   type: notes
-summary: "A planned home for long-form lecture notes and textbook-style course material."
-description: "A planned home for long-form lecture notes and textbook-style course material."
+summary: "Lecture notes, slides and textbook-style course material, kept at permanent links independent of any one term."
+description: "Books and lecture notes by Sajid Muhaimin Choudhury: public lecture slides, lecture plans and sample chapters, kept at permanent links independent of any one course offering."
 ---
+
+Course material that outlives a single term lives here, at a permanent link.
+Each course offering page links to the material it uses.

@@ -13,5 +13,7 @@ banner:
 ---
 
 Courses are listed by their most recent offering. Each course page carries the
-syllabus, grading policy, course outcomes and reading list for that term;
-earlier offerings are kept in the archive rather than overwritten.
+announcements and course information for that term; earlier offerings are kept
+in the archive rather than overwritten. Lecture notes, slides and other course
+material that outlive a single term are kept at permanent links under
+[Books & Lecture Notes](/teaching/notes/).
