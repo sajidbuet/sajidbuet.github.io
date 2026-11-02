@@ -7,7 +7,7 @@
 
 {{ $links := .Params.project_links }}
 {{ $hasLinks := false }}
-{{ with $links }}{{ if or .repository .demo .documentation .release .package }}{{ $hasLinks = true }}{{ end }}{{ end }}
+{{ with $links }}{{ if or .repository .demo .live .documentation .release .package }}{{ $hasLinks = true }}{{ end }}{{ end }}
 
 {{ $img := "" }}
 {{ with .Params.image.filename }}{{ with $.Resources.GetMatch . }}{{ $img = . }}{{ end }}{{ end }}
@@ -40,6 +40,7 @@
     {{ if $hasLinks }}
       <p class="sj-project__links">
         {{ with $links.repository }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repository" | default "Repository" }}</a>{{ end }}
+        {{ with $links.live }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "live" | default "Live" }}</a>{{ end }}
         {{ with $links.demo }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "demo" | default "Demo" }}</a>{{ end }}
         {{ with $links.documentation }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "documentation" | default "Documentation" }}</a>{{ end }}
         {{ with $links.release }}<a class="sj-btn sj-btn--secondary" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "download" | default "Download" }}</a>{{ end }}
@@ -52,7 +53,7 @@
     {{ $t := . }}
     {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fit "1200x900 webp" }}{{ end }}
     <figure class="sj-project__figure">
-      <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+      <img src="{{ $t.RelPermalink }}" {{ if ne $t.MediaType.SubType "svg" }}width="{{ $t.Width }}" height="{{ $t.Height }}"{{ end }}
            alt="{{ $.Params.image.caption | default (printf "%s screenshot" $.Title) }}" />
       {{ with $.Params.image.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
     </figure>

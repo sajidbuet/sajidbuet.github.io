@@ -49,5 +49,15 @@ Below images have transparent background and are suitable to be used in powerpoi
 | **Admin EEE**           | [PNG](admin_EEE.png)               | <img src="admin_EEE.png" width="100" alt="Admin EEE logo">               |
 
 
+### SajidLab Logos
+
+| Purpose                 | Files                              | Preview                                             |
+| ----------------------- | ---------------------------------- | --------------------------------------------------- |
+| **Website Logo**        | [SVG](sajidlab-logo-fixed.svg) | <img src="sajidlab-logo-fixed.svg" width="100" alt="Sajid Lab Logo, Vector SVG"> |
+| **Square Icon**         | [PNG](sajidlab_icon.png) | <img src="sajidlab_icon.png" width="100" alt="Sajid Lab Logo"> |
+| **JPG Logo**         | [JPG](sajidlab_logo.jpg) | <img src="sajidlab_logo.jpg" width="100" alt="Sajid Lab Logo"> |
+| **PNG Logo**         | [PNG](sajidlab_logo.png) | <img src="sajidlab_logo.png" width="100" alt="Sajid Lab Logo"> |
+| **PNG Logo Square**         | [PNG](sajidlab_logo-square.png) | <img src="sajidlab_logo-square.png" width="100" alt="Sajid Lab Logo"> |
+| **PNG Logo Square White BG**         | [PNG](sajidlab_logo-square-whitebg.png) | <img src="sajidlab_logo-square-whitebg.png" width="100" alt="Sajid Lab Logo"> |
 
 

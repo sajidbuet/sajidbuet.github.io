@@ -25,7 +25,7 @@
     {{ $t := . }}
     {{ if ne .MediaType.SubType "svg" }}{{ $t = .Fill "640x360 Center webp" }}{{ end }}
     <a class="sj-card__media" href="{{ $item.RelPermalink }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}"
+      <img src="{{ $t.RelPermalink }}"{{ if ne $t.MediaType.SubType "svg" }} width="{{ $t.Width }}" height="{{ $t.Height }}"{{ end }}
            alt="" loading="lazy" />
     </a>
   {{ end }}
@@ -57,10 +57,13 @@
   {{ end }}
 
   {{ $links := $item.Params.project_links }}
-  {{ if or $links.repository $links.demo }}
+  {{ if or $links.repository $links.demo $links.live }}
     <p class="sj-card__links">
       {{ with $links.repository }}
         <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "code" | default "Code" }}<span class="sj-ext" aria-hidden="true">↗</span><span class="sj-sr-only"> ({{ i18n "opens_new_tab" | default "opens in a new tab" }})</span></a>
+      {{ end }}
+      {{ with $links.live }}
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "live" | default "Live" }}<span class="sj-ext" aria-hidden="true">↗</span><span class="sj-sr-only"> ({{ i18n "opens_new_tab" | default "opens in a new tab" }})</span></a>
       {{ end }}
       {{ with $links.demo }}
         <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "demo" | default "Demo" }}<span class="sj-ext" aria-hidden="true">↗</span><span class="sj-sr-only"> ({{ i18n "opens_new_tab" | default "opens in a new tab" }})</span></a>
