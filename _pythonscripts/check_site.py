@@ -235,7 +235,7 @@ class PageParser(HTMLParser):
         if tag == "img":
             if "alt" not in a:
                 self.images_without_alt.append(a.get("src", "?"))
-            elif self._links and a["alt"].strip():
+            elif self._links and (a["alt"] or "").strip():
                 self._links[-1]["name"] = True
         if tag == "svg" and self._links and (a.get("aria-label") or "").strip():
             self._links[-1]["name"] = True
